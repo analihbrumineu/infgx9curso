@@ -1,0 +1,15 @@
+current_obj_i(2,scr,18).
+ 
+called_tree_i(4,18,4,18).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wconscidade,[],[ subwconscidade02 ],[],18).
+ 
+ 
+obj_parms_i([ 'int aP0_CidCodigoRet' ],[ [ 'Cidcodigoret',out ] ]).
+ 
+ 

@@ -1,0 +1,176 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>66</ObjId>
+<ObjName>ConfTipMidia</ObjName>
+<ObjDesc>Configurações tipo de mídia.</ObjDesc>
+<ObjPgmName>WConfTipMidia</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>0</GenId>
+<GenName>(Default)</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters></Parameters>
+<StandAloneRules></StandAloneRules>
+<Event>
+<EventName>Load</EventName>
+<LoadMethod>Auto</LoadMethod>
+<ImplicitForEach>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>1</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>11</TableId>
+<TableName>CONFTIPMIDIA</TableName>
+<Description>Configurações tipo de mídia.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>35</AttriId>
+<AttriName>MidTipo</AttriName>
+<Description>Tipo da mídia</Description></Attribute>
+<Token>,</Token>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>ICONFTIPMIDIA</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Token>FirstRecord</Token></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Token>NotEndOfTable</Token></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>35</AttriId>
+<AttriName>MidTipo</AttriName>
+<Description>Tipo da mídia</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Midtipo</VarId>
+<VarName>&amp;MidTipo</VarName></Variable></Constraint>
+<Condition>
+<Variable>
+<VarId>Midtipo</VarId>
+<VarName>&amp;MidTipo</VarName></Variable>
+<Token>&lt;&gt;</Token>
+<Token>0</Token></Condition></ConditionalConstraint>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>33</AttriId>
+<AttriName>CatNome</AttriName>
+<Description>Nome da categoria do filme</Description></Attribute>
+<Token>like</Token>
+<Variable>
+<VarId>Catnome</VarId>
+<VarName>&amp;CatNome</VarName></Variable></Constraint>
+<Condition>
+<Token>.NOT.</Token>
+<Variable>
+<VarId>Catnome</VarId>
+<VarName>&amp;CatNome</VarName></Variable>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></ConditionalConstraint></NonOptimizedWhere>
+<JoinLocation>0</JoinLocation>
+<NavigationTree>
+<Table>
+<TableId>11</TableId>
+<TableName>CONFTIPMIDIA</TableName>
+<Description>Configurações tipo de mídia.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>35</AttriId>
+<AttriName>MidTipo</AttriName>
+<Description>Tipo da mídia</Description></Attribute>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>85</AttriId>
+<AttriName>ConfTipValor</AttriName>
+<Description>Valor da configuração</Description></Attribute>
+<Attribute>
+<AttriId>35</AttriId>
+<AttriName>MidTipo</AttriName>
+<Description>Tipo da mídia</Description></Attribute>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></Into>
+<Tables>
+<Table>
+<TableId>6</TableId>
+<TableName>CATEGORIA</TableName>
+<Description>Cadastro de categorias.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>33</AttriId>
+<AttriName>CatNome</AttriName>
+<Description>Nome da categoria do filme</Description></Attribute></Into>
+<Tables></Tables></Table></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas></ImplicitForEach></Event>
+<Event>
+<EventName>'Marcado'</EventName></Event>
+<Event>
+<EventName>'Desmarcado'</EventName></Event>
+<Event>
+<EventName>'Novo'</EventName>
+<CALL>
+<Object>
+<ObjCls>0</ObjCls>
+<ObjId>9</ObjId>
+<ObjName>ConfTipMidia</ObjName>
+<ObjPgmName>TConfTipMidia</ObjPgmName>
+<ObjClsName>Transaction</ObjClsName></Object>
+<Parameters>
+<Token>'INS'</Token></Parameters>
+<IF></IF></CALL></Event>
+<Event>
+<EventName>'Gravar'</EventName>
+<CALL>
+<Object>
+<ObjCls>1</ObjCls>
+<ObjId>15</ObjId>
+<ObjName>GraConfTipMidia</ObjName>
+<ObjPgmName>PGraConfTipMidia</ObjPgmName>
+<ObjClsName>Procedure</ObjClsName></Object>
+<Parameters>
+<Attribute>
+<AttriId>35</AttriId>
+<AttriName>MidTipo</AttriName>
+<Description>Tipo da mídia</Description></Attribute>
+<Token>,</Token>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute>
+<Token>,</Token>
+<Variable>
+<VarId>Conftipvalnovo</VarId>
+<VarName>&amp;ConfTipValNovo</VarName></Variable></Parameters>
+<IF></IF></CALL></Event>
+<Suggests></Suggests></ObjectSpec>

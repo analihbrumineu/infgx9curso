@@ -1,0 +1,85 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>88</ObjId>
+<ObjName>Gx00A0</ObjName>
+<ObjDesc>Lista de Seleção Cadastro de astros.</ObjDesc>
+<ObjPgmName>WGx00A0</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>18</GenId>
+<GenName>.NET - Win</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>out</IO>
+<Variable>
+<VarId>Pastcodigo</VarId>
+<VarName>&amp;pAstCodigo</VarName></Variable></Parameter></Parameters>
+<StandAloneRules></StandAloneRules>
+<Event>
+<EventName>Enter</EventName></Event>
+<Event>
+<EventName>Load</EventName>
+<ImplicitForEach>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>1</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>10</TableId>
+<TableName>ASTRO</TableName>
+<Description>Cadastro de astros.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>49</AttriId>
+<AttriName>AstCodigo</AttriName>
+<Description>Código do astro de cinema</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>IASTRO</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Attribute>
+<AttriId>49</AttriId>
+<AttriName>AstCodigo</AttriName>
+<Description>Código do astro de cinema</Description></Attribute>
+<Token>&gt;=</Token>
+<Variable>
+<VarId>Castcodigo</VarId>
+<VarName>&amp;cAstCodigo</VarName></Variable></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Token>NotEndOfTable</Token></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>10</TableId>
+<TableName>ASTRO</TableName>
+<Description>Cadastro de astros.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>49</AttriId>
+<AttriName>AstCodigo</AttriName>
+<Description>Código do astro de cinema</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>113</AttriId>
+<AttriName>AstDatNascimento</AttriName>
+<Description>Data de nascimento do astro de cinema</Description></Attribute>
+<Attribute>
+<AttriId>49</AttriId>
+<AttriName>AstCodigo</AttriName>
+<Description>Código do astro de cinema</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas></ImplicitForEach></Event>
+<Suggests></Suggests></ObjectSpec>

@@ -1,0 +1,14 @@
+current_obj_i(2,scr,77).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wgx00g1,[],[ subwgx00g120 ],[],77).
+ 
+ 
+obj_parms_i([ 'int aP0_LocCodigo','int aP1_pLocMidMidCodigo' ],[ [ 86,in ],[ 'Plocmidmidcodigo',out ] ]).
+ 
+ 

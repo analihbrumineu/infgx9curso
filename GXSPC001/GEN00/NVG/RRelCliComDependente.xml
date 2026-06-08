@@ -1,0 +1,266 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>2</ObjCls>
+<ObjId>10</ObjId>
+<ObjName>RelCliComDependente</ObjName>
+<ObjDesc>Relatório de clientes com dependentes.</ObjDesc>
+<ObjPgmName>RRelCliComDependente</ObjPgmName>
+<ObjClsName>Report</ObjClsName></Object>
+<Result>specfailed</Result>
+<Warnings>
+<Warning>
+<MsgCode>spc0038</MsgCode>
+<Token>There is no index for order </Token>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>PesDepNome</AttriName>
+<Description>Nome do dependente</Description></Attribute>
+<Token>; poor performance may be noticed</Token>
+<Token> in group starting at line </Token>
+<Token>17</Token>
+<Token></Token>
+<Token>.</Token></Warning></Warnings>
+<Errors>
+<Error>
+<MsgCode>spc0116</MsgCode>
+<Token>Group cannot be ordered by </Token>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>PesDepNome</AttriName>
+<Description>Nome do dependente</Description></Attribute>
+<Token></Token>
+<Token> in group starting at line </Token>
+<Token>17</Token>
+<Token></Token>
+<Token>.</Token></Error></Errors>
+<OutputDevices>
+<Device>Screen</Device>
+<Device>Printer</Device></OutputDevices>
+<Generator>
+<GenId>0</GenId>
+<GenName>(Default)</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Pescodinicial</VarId>
+<VarName>&amp;PesCodInicial</VarName></Variable></Parameter>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Pescodfinal</VarId>
+<VarName>&amp;PesCodFinal</VarName></Variable></Parameter></Parameters>
+<Levels>
+<Level>
+<LevelNumber>3</LevelNumber>
+<Optimizations></Optimizations>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>13</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>ICLIENTE</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Token>&gt;=</Token>
+<Variable>
+<VarId>Pescodinicial</VarId>
+<VarName>&amp;PesCodInicial</VarName></Variable></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Token>&lt;=</Token>
+<Variable>
+<VarId>Pescodfinal</VarId>
+<VarName>&amp;PesCodFinal</VarName></Variable></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>83</AttriId>
+<AttriName>Depende</AttriName>
+<Description>Esse cliente é dependente de outro?</Description></Attribute>
+<Attribute>
+<AttriId>14</AttriId>
+<AttriName>PesNome</AttriName>
+<Description>Nome da pessoa</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas>
+<Formula>
+<FormulaAttri>
+<Attribute>
+<AttriId>48</AttriId>
+<AttriName>PesDepTotal</AttriName>
+<Description>Total de dependentes</Description></Attribute></FormulaAttri>
+<FormulaType>count(</FormulaType>
+<FormulaOutputAttri>
+<Attribute>
+<AttriId>46</AttriId>
+<AttriName>PesDepCodigo</AttriName>
+<Description>Código do dependente</Description></Attribute></FormulaOutputAttri>
+<FormulaWhere></FormulaWhere>
+<FormulaGivenAttris>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></FormulaGivenAttris>
+<FormulaIndex>ICLIENTEDEPENDENTE</FormulaIndex>
+<StartFrom>
+<Condition>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>@PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>@PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></Condition></LoopWhile>
+<NavigationTree>
+<Table>
+<TableId>2</TableId>
+<TableName>CLIENTEDEPENDENTE</TableName>
+<Description>Dependente</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>46</AttriId>
+<AttriName>PesDepCodigo</AttriName>
+<Description>Código do dependente</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate></Formula></AggSelFormulas></Formulas>
+<Levels>
+<Level>
+<LevelNumber>4</LevelNumber>
+<Optimizations></Optimizations>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>25</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>2</TableId>
+<TableName>CLIENTEDEPENDENTE</TableName>
+<Description>Dependente</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>PesDepNome</AttriName>
+<Description>Nome do dependente</Description></Attribute></Order>
+<Condition></Condition>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Token>FirstRecord</Token></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Token>NotEndOfTable</Token></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<Condition>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>@PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></Condition></NonOptimizedWhere>
+<JoinLocation>0</JoinLocation>
+<NavigationTree>
+<Table>
+<TableId>2</TableId>
+<TableName>CLIENTEDEPENDENTE</TableName>
+<Description>Dependente</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>46</AttriId>
+<AttriName>PesDepCodigo</AttriName>
+<Description>Código do dependente</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>46</AttriId>
+<AttriName>PesDepCodigo</AttriName>
+<Description>Código do dependente</Description></Attribute>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></Into>
+<Tables>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>46</AttriId>
+<AttriName>PesDepCodigo</AttriName>
+<Description>Código do dependente</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>PesDepNome</AttriName>
+<Description>Nome do dependente</Description></Attribute></Into>
+<Tables></Tables></Table></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<Levels></Levels></Level></Levels></Level></Levels></ObjectSpec>

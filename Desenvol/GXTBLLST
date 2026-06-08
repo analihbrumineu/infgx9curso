@@ -1,0 +1,461 @@
+
+<TableList>
+   <Table>
+      <TableId>13</TableId>
+      <TableName>LocacaoLocacaoMidia</TableName>
+      <TableShortName>LocacaoLocacaoMidia</TableShortName>
+      <TableDesc>Dados da mídia locada</TableDesc>
+   </Table>
+   <TblAtts>
+      <TblAtt>
+<Attribute>
+  <AttriName>LocCodigo</AttriName>
+  <AttriShortName>LocCodigo</AttriShortName>
+  <AttriId>86</AttriId>
+  <AttriDesc>Código da locação</AttriDesc>
+  <Type>N</Type>
+  <TypeStr>N(9)</TypeStr>
+  <Length>9</Length>
+  <Decimals>0</Decimals>
+  <Picture>ZZZZZZZZ9</Picture>
+  <Domain>
+    <Attribute>
+      <AttriName>Codigo</AttriName>
+      <AttriShortName>Codigo</AttriShortName>
+      <AttriId>2</AttriId>
+      <AttriDesc>Código</AttriDesc>
+      <AttriIsDomain/>
+      <Type>N</Type>
+      <TypeStr>N(9)</TypeStr>
+      <Length>9</Length>
+      <Decimals>0</Decimals>
+      <Picture>ZZZZZZZZ9</Picture>
+    </Attribute>
+  </Domain>
+</Attribute>
+
+         <TblAttIsKey></TblAttIsKey>
+      </TblAtt>
+      <TblAtt>
+<Attribute>
+  <AttriName>LocMidMidCodigo</AttriName>
+  <AttriShortName>LocMidMidCodigo</AttriShortName>
+  <AttriId>102</AttriId>
+  <AttriDesc>Código da mídia a ser locada</AttriDesc>
+  <Type>N</Type>
+  <TypeStr>N(9)</TypeStr>
+  <Length>9</Length>
+  <Decimals>0</Decimals>
+  <Picture>ZZZZZZZZ9</Picture>
+  <Domain>
+    <Attribute>
+      <AttriName>Codigo</AttriName>
+      <AttriShortName>Codigo</AttriShortName>
+      <AttriId>2</AttriId>
+      <AttriDesc>Código</AttriDesc>
+      <AttriIsDomain/>
+      <Type>N</Type>
+      <TypeStr>N(9)</TypeStr>
+      <Length>9</Length>
+      <Decimals>0</Decimals>
+      <Picture>ZZZZZZZZ9</Picture>
+    </Attribute>
+  </Domain>
+</Attribute>
+
+         <TblAttIsKey></TblAttIsKey>
+      </TblAtt>
+      <TblAtt>
+<Attribute>
+  <AttriName>LocMidFilCodigo</AttriName>
+  <AttriShortName>LocMidFilCodigo</AttriShortName>
+  <AttriId>103</AttriId>
+  <AttriDesc>Código do filme a ser locado</AttriDesc>
+  <Type>N</Type>
+  <TypeStr>N(9)</TypeStr>
+  <Length>9</Length>
+  <Decimals>0</Decimals>
+  <Picture>ZZZZZZZZ9</Picture>
+  <Domain>
+    <Attribute>
+      <AttriName>Codigo</AttriName>
+      <AttriShortName>Codigo</AttriShortName>
+      <AttriId>2</AttriId>
+      <AttriDesc>Código</AttriDesc>
+      <AttriIsDomain/>
+      <Type>N</Type>
+      <TypeStr>N(9)</TypeStr>
+      <Length>9</Length>
+      <Decimals>0</Decimals>
+      <Picture>ZZZZZZZZ9</Picture>
+    </Attribute>
+  </Domain>
+</Attribute>
+
+         <AllowNulls>Yes</AllowNulls>
+      </TblAtt>
+      <TblAtt>
+<Attribute>
+  <AttriName>LocMidFilNome</AttriName>
+  <AttriShortName>LocMidFilNome</AttriShortName>
+  <AttriId>104</AttriId>
+  <AttriDesc>Nome do filme a ser locado</AttriDesc>
+  <Type>V</Type>
+  <TypeStr>V(50)</TypeStr>
+  <MaxLen>50</MaxLen>
+  <AvgLen>0</AvgLen>
+  <Picture>@!</Picture>
+  <Domain>
+    <Attribute>
+      <AttriName>Nome</AttriName>
+      <AttriShortName>Nome</AttriShortName>
+      <AttriId>5</AttriId>
+      <AttriDesc>Nome</AttriDesc>
+      <AttriIsDomain/>
+      <Type>V</Type>
+      <TypeStr>V(50)</TypeStr>
+      <MaxLen>50</MaxLen>
+      <AvgLen>0</AvgLen>
+      <Picture>@!</Picture>
+    </Attribute>
+  </Domain>
+</Attribute>
+
+         <AllowNulls>Yes</AllowNulls>
+      </TblAtt>
+      <TblAtt>
+<Attribute>
+  <AttriName>LocMidCatCodigo</AttriName>
+  <AttriShortName>LocMidCatCodigo</AttriShortName>
+  <AttriId>105</AttriId>
+  <AttriDesc>Código da categoria do filme a ser locado</AttriDesc>
+  <Type>N</Type>
+  <TypeStr>N(9)</TypeStr>
+  <Length>9</Length>
+  <Decimals>0</Decimals>
+  <Picture>ZZZZZZZZ9</Picture>
+  <Domain>
+    <Attribute>
+      <AttriName>Codigo</AttriName>
+      <AttriShortName>Codigo</AttriShortName>
+      <AttriId>2</AttriId>
+      <AttriDesc>Código</AttriDesc>
+      <AttriIsDomain/>
+      <Type>N</Type>
+      <TypeStr>N(9)</TypeStr>
+      <Length>9</Length>
+      <Decimals>0</Decimals>
+      <Picture>ZZZZZZZZ9</Picture>
+    </Attribute>
+  </Domain>
+</Attribute>
+
+         <AllowNulls>Yes</AllowNulls>
+      </TblAtt>
+      <TblAtt>
+<Attribute>
+  <AttriName>LocMidMidTipo</AttriName>
+  <AttriShortName>LocMidMidTipo</AttriShortName>
+  <AttriId>106</AttriId>
+  <AttriDesc>Tipo da mídia a ser locada</AttriDesc>
+  <Type>N</Type>
+  <TypeStr>N(1)</TypeStr>
+  <Length>1</Length>
+  <Decimals>0</Decimals>
+  <Picture>9</Picture>
+</Attribute>
+
+         <AllowNulls>Yes</AllowNulls>
+      </TblAtt>
+      <TblAtt>
+<Attribute>
+  <AttriName>LocMidMidSituacao</AttriName>
+  <AttriShortName>LocMidMidSituacao</AttriShortName>
+  <AttriId>107</AttriId>
+  <AttriDesc>Situação da mídia a ser locada</AttriDesc>
+  <AttriSuper>
+    <Group>
+      <GroupId>10</GroupId>
+      <GroupName>LocMidMidLocCodigo</GroupName>
+    </Group>
+    <Attribute>
+      <AttriName>MidSituacao</AttriName>
+      <AttriShortName>MidSituacao</AttriShortName>
+      <AttriId>36</AttriId>
+      <AttriDesc>Situação da mídia</AttriDesc>
+      <Type>N</Type>
+      <TypeStr>N(1)</TypeStr>
+      <Length>1</Length>
+      <Decimals>0</Decimals>
+    </Attribute>
+  </AttriSuper>
+  <Type>N</Type>
+  <TypeStr>N(1)</TypeStr>
+  <Length>1</Length>
+  <Decimals>0</Decimals>
+  <Picture>9</Picture>
+</Attribute>
+
+         <TblAttInf></TblAttInf>
+      </TblAtt>
+      <TblAtt>
+<Attribute>
+  <AttriName>LocMidMidLocCodigo</AttriName>
+  <AttriShortName>LocMidMidLocCodigo</AttriShortName>
+  <AttriId>108</AttriId>
+  <AttriDesc>Código da locação da mídia a ser locada</AttriDesc>
+  <AttriSuper>
+    <Group>
+      <GroupId>10</GroupId>
+      <GroupName>LocMidMidLocCodigo</GroupName>
+    </Group>
+    <Attribute>
+      <AttriName>MidCodigo</AttriName>
+      <AttriShortName>MidCodigo</AttriShortName>
+      <AttriId>37</AttriId>
+      <AttriDesc>Código da mídia</AttriDesc>
+      <Type>N</Type>
+      <TypeStr>N(9)</TypeStr>
+      <Length>9</Length>
+      <Decimals>0</Decimals>
+    </Attribute>
+  </AttriSuper>
+  <Type>N</Type>
+  <TypeStr>N(9)</TypeStr>
+  <Length>9</Length>
+  <Decimals>0</Decimals>
+  <Picture>ZZZZZZZZ9</Picture>
+</Attribute>
+
+         <AllowNulls>Yes</AllowNulls>
+      </TblAtt>
+      <TblAtt>
+<Attribute>
+  <AttriName>LocMidMidConfValor</AttriName>
+  <AttriShortName>LocMidMidConfValor</AttriShortName>
+  <AttriId>109</AttriId>
+  <AttriDesc>Valor da configuração da mídia a ser locada</AttriDesc>
+  <Type>N</Type>
+  <TypeStr>N(12.2)</TypeStr>
+  <Length>12</Length>
+  <Decimals>2</Decimals>
+  <Picture>ZZZ,ZZZ,ZZ9.99</Picture>
+  <Domain>
+    <Attribute>
+      <AttriName>Valor</AttriName>
+      <AttriShortName>Valor</AttriShortName>
+      <AttriId>45</AttriId>
+      <AttriDesc>Valor</AttriDesc>
+      <AttriIsDomain/>
+      <Type>N</Type>
+      <TypeStr>N(12.2)</TypeStr>
+      <Length>12</Length>
+      <Decimals>2</Decimals>
+      <Picture>ZZZ,ZZZ,ZZ9.99</Picture>
+    </Attribute>
+  </Domain>
+</Attribute>
+
+         <AllowNulls>Yes</AllowNulls>
+      </TblAtt>
+   </TblAtts>
+   <TblIdxs>
+      <Index>
+         <IdxId>1</IdxId>
+         <IdxName>ILocacaoLocacaoMidia</IdxName>
+         <IdxShortName>ILocacaoLocacaoMidia</IdxShortName>
+         <IdxType>Primary Key</IdxType>
+         <IdxAtts>
+            <IdxAtt>
+<Attribute>
+  <AttriName>LocCodigo</AttriName>
+  <AttriShortName>LocCodigo</AttriShortName>
+  <AttriId>86</AttriId>
+  <AttriDesc>Código da locação</AttriDesc>
+  <Type>N</Type>
+  <TypeStr>N(9)</TypeStr>
+  <Length>9</Length>
+  <Decimals>0</Decimals>
+</Attribute>
+
+               <IdxOrder>A</IdxOrder>
+            </IdxAtt>
+            <IdxAtt>
+<Attribute>
+  <AttriName>LocMidMidCodigo</AttriName>
+  <AttriShortName>LocMidMidCodigo</AttriShortName>
+  <AttriId>102</AttriId>
+  <AttriDesc>Código da mídia a ser locada</AttriDesc>
+  <Type>N</Type>
+  <TypeStr>N(9)</TypeStr>
+  <Length>9</Length>
+  <Decimals>0</Decimals>
+</Attribute>
+
+               <IdxOrder>A</IdxOrder>
+            </IdxAtt>
+         </IdxAtts>
+      </Index>
+      <Index>
+         <IdxId>2</IdxId>
+         <IdxName>ILocacaoLocacaoMidia1</IdxName>
+         <IdxShortName>ILocacaoLocacaoMidia1</IdxShortName>
+         <IdxType>Foreign Key</IdxType>
+         <IdxAtts>
+            <IdxAtt>
+<Attribute>
+  <AttriName>LocMidMidLocCodigo</AttriName>
+  <AttriShortName>LocMidMidLocCodigo</AttriShortName>
+  <AttriId>108</AttriId>
+  <AttriDesc>Código da locação da mídia a ser locada</AttriDesc>
+  <AttriSuper>
+    <Group>
+      <GroupId>10</GroupId>
+      <GroupName>LocMidMidLocCodigo</GroupName>
+    </Group>
+    <Attribute>
+      <AttriName>MidCodigo</AttriName>
+      <AttriShortName>MidCodigo</AttriShortName>
+      <AttriId>37</AttriId>
+      <AttriDesc>Código da mídia</AttriDesc>
+      <Type>N</Type>
+      <TypeStr>N(9)</TypeStr>
+      <Length>9</Length>
+      <Decimals>0</Decimals>
+    </Attribute>
+  </AttriSuper>
+  <Type>N</Type>
+  <TypeStr>N(9)</TypeStr>
+  <Length>9</Length>
+  <Decimals>0</Decimals>
+</Attribute>
+
+               <IdxOrder>A</IdxOrder>
+            </IdxAtt>
+         </IdxAtts>
+      </Index>
+      <Index>
+         <IdxId>3</IdxId>
+         <IdxName>ILocacaoLocacaoMidia2</IdxName>
+         <IdxShortName>ILocacaoLocacaoMidia2</IdxShortName>
+         <IdxType>Foreign Key</IdxType>
+         <IdxAtts>
+            <IdxAtt>
+<Attribute>
+  <AttriName>LocCodigo</AttriName>
+  <AttriShortName>LocCodigo</AttriShortName>
+  <AttriId>86</AttriId>
+  <AttriDesc>Código da locação</AttriDesc>
+  <Type>N</Type>
+  <TypeStr>N(9)</TypeStr>
+  <Length>9</Length>
+  <Decimals>0</Decimals>
+</Attribute>
+
+               <IdxOrder>A</IdxOrder>
+            </IdxAtt>
+         </IdxAtts>
+      </Index>
+   </TblIdxs>
+   <TblCKeys>
+      <CKey>
+<Attribute>
+  <AttriName>LocCodigo</AttriName>
+  <AttriShortName>LocCodigo</AttriShortName>
+  <AttriId>86</AttriId>
+  <AttriDesc>Código da locação</AttriDesc>
+  <Type>N</Type>
+  <TypeStr>N(9)</TypeStr>
+  <Length>9</Length>
+  <Decimals>0</Decimals>
+</Attribute>
+
+<Attribute>
+  <AttriName>LocMidMidCodigo</AttriName>
+  <AttriShortName>LocMidMidCodigo</AttriShortName>
+  <AttriId>102</AttriId>
+  <AttriDesc>Código da mídia a ser locada</AttriDesc>
+  <Type>N</Type>
+  <TypeStr>N(9)</TypeStr>
+  <Length>9</Length>
+  <Decimals>0</Decimals>
+</Attribute>
+
+         <KeyIsPrimary></KeyIsPrimary>
+      </CKey>
+   </TblCKeys>
+   <SubToTbls>
+      <TblSubor>
+         <Table>
+            <TableId>9</TableId>
+            <TableName>Midia</TableName>
+            <TableShortName>Midia</TableShortName>
+            <TableDesc>Cadastro de mídias.</TableDesc>
+         </Table>
+         <TblSubBy>
+<Attribute>
+  <AttriName>LocMidMidLocCodigo</AttriName>
+  <AttriShortName>LocMidMidLocCodigo</AttriShortName>
+  <AttriId>108</AttriId>
+  <AttriDesc>Código da locação da mídia a ser locada</AttriDesc>
+  <AttriSuper>
+    <Group>
+      <GroupId>10</GroupId>
+      <GroupName>LocMidMidLocCodigo</GroupName>
+    </Group>
+    <Attribute>
+      <AttriName>MidCodigo</AttriName>
+      <AttriShortName>MidCodigo</AttriShortName>
+      <AttriId>37</AttriId>
+      <AttriDesc>Código da mídia</AttriDesc>
+      <Type>N</Type>
+      <TypeStr>N(9)</TypeStr>
+      <Length>9</Length>
+      <Decimals>0</Decimals>
+    </Attribute>
+  </AttriSuper>
+  <Type>N</Type>
+  <TypeStr>N(9)</TypeStr>
+  <Length>9</Length>
+  <Decimals>0</Decimals>
+</Attribute>
+
+         </TblSubBy>
+      </TblSubor>
+      <TblSubor>
+         <Table>
+            <TableId>12</TableId>
+            <TableName>Locacao</TableName>
+            <TableShortName>Locacao</TableShortName>
+            <TableDesc>Cadastro de locações.</TableDesc>
+         </Table>
+         <TblSubBy>
+<Attribute>
+  <AttriName>LocCodigo</AttriName>
+  <AttriShortName>LocCodigo</AttriShortName>
+  <AttriId>86</AttriId>
+  <AttriDesc>Código da locação</AttriDesc>
+  <Type>N</Type>
+  <TypeStr>N(9)</TypeStr>
+  <Length>9</Length>
+  <Decimals>0</Decimals>
+</Attribute>
+
+         </TblSubBy>
+      </TblSubor>
+   </SubToTbls>
+   <TblPrompts>
+      <TblPrompt>
+<Object>
+  <ObjCls>12</ObjCls>
+  <ObjId>91</ObjId>
+  <ObjName>Gx00D1</ObjName>
+  <ObjShortName>Gx00D1</ObjShortName>
+  <ObjTitle>Lista de Seleção Dados da mídia locada</ObjTitle>
+</Object>
+
+      </TblPrompt>
+   </TblPrompts><PropPart>
+</PropPart>
+
+</TableList>

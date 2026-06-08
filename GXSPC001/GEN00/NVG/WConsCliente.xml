@@ -1,0 +1,335 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>27</ObjId>
+<ObjName>ConsCliente</ObjName>
+<ObjDesc>Consulta de cliente.</ObjDesc>
+<ObjPgmName>WConsCliente</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings>
+<Warning>
+<MsgCode>spc0053</MsgCode>
+<Token>Conditional constraint &quot;</Token>
+<Attribute>
+<AttriId>48</AttriId>
+<AttriName>PesDepTotal</AttriName>
+<Description>Total de dependentes</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Pesdeptotal</VarId>
+<VarName>&amp;PesDepTotal</VarName></Variable>
+<Token>&quot; cannot be generated</Token>
+<Token> in grid '</Token>
+<Token>Gxsf10</Token>
+<Token>'</Token>
+<Token>. Changed to standard constraint.</Token></Warning></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>0</GenId>
+<GenName>(Default)</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>inout</IO>
+<Variable>
+<VarId>Traterro</VarId>
+<VarName>&amp;TratErro</VarName></Variable></Parameter>
+<Parameter>
+<IO>out</IO>
+<Variable>
+<VarId>Pescodigoret</VarId>
+<VarName>&amp;PesCodigoRet</VarName></Variable></Parameter></Parameters>
+<StandAloneRules></StandAloneRules>
+<Event>
+<EventName>Start</EventName></Event>
+<Event>
+<EventName>Exit</EventName>
+<Level>
+<Optimizations></Optimizations>
+<LevelType>For First</LevelType>
+<LevelBeginRow>8</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>ICLIENTE</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Pesdepcodigo</VarId>
+<VarName>&amp;PesDepCodigo</VarName></Variable></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Pesdepcodigo</VarId>
+<VarName>&amp;PesDepCodigo</VarName></Variable></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>15</AttriId>
+<AttriName>PesCPF</AttriName>
+<Description>CPF da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>83</AttriId>
+<AttriName>Depende</AttriName>
+<Description>Esse cliente é dependente de outro?</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas></Level></Event>
+<Event>
+<EventName>PesCodigo.Click</EventName></Event>
+<Event>
+<EventName>Enter</EventName></Event>
+<Event>
+<EventName>Load</EventName>
+<ImplicitForEach>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>1</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>ICLIENTE</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Token>FirstRecord</Token></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Token>NotEndOfTable</Token></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<Condition>
+<Variable>
+<VarId>Pesdeptotal</VarId>
+<VarName>&amp;PesDepTotal</VarName></Variable>
+<Token>=</Token>
+<Token>0</Token>
+<Token>or</Token>
+<Token>(</Token>
+<Attribute>
+<AttriId>48</AttriId>
+<AttriName>PesDepTotal</AttriName>
+<Description>Total de dependentes</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Pesdeptotal</VarId>
+<VarName>&amp;PesDepTotal</VarName></Variable>
+<Token>)</Token></Condition>
+<Condition>
+<Attribute>
+<AttriId>38</AttriId>
+<AttriName>PesTipo</AttriName>
+<Description>Tipo de pessoa</Description></Attribute>
+<Token>=</Token>
+<Token>1</Token></Condition>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Pescodigo</VarId>
+<VarName>&amp;PesCodigo</VarName></Variable></Constraint>
+<Condition>
+<Variable>
+<VarId>Pescodigo</VarId>
+<VarName>&amp;PesCodigo</VarName></Variable>
+<Token>&lt;&gt;</Token>
+<Token>0</Token></Condition></ConditionalConstraint>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>14</AttriId>
+<AttriName>PesNome</AttriName>
+<Description>Nome da pessoa</Description></Attribute>
+<Token>like</Token>
+<Variable>
+<VarId>Pesnome</VarId>
+<VarName>&amp;PesNome</VarName></Variable></Constraint>
+<Condition>
+<Token>.NOT.</Token>
+<Variable>
+<VarId>Pesnome</VarId>
+<VarName>&amp;PesNome</VarName></Variable>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></ConditionalConstraint>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>19</AttriId>
+<AttriName>PesBairro</AttriName>
+<Description>Bairro da pessoa</Description></Attribute>
+<Token>like</Token>
+<Variable>
+<VarId>Pesbairro</VarId>
+<VarName>&amp;PesBairro</VarName></Variable></Constraint>
+<Condition>
+<Token>.NOT.</Token>
+<Variable>
+<VarId>Pesbairro</VarId>
+<VarName>&amp;PesBairro</VarName></Variable>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></ConditionalConstraint>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>23</AttriId>
+<AttriName>PesSituacao</AttriName>
+<Description>Situação da pessoa</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Pessituacao</VarId>
+<VarName>&amp;PesSituacao</VarName></Variable></Constraint>
+<Condition>
+<Variable>
+<VarId>Pessituacao</VarId>
+<VarName>&amp;PesSituacao</VarName></Variable>
+<Token>&lt;&gt;</Token>
+<Token>9</Token></Condition></ConditionalConstraint></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>38</AttriId>
+<AttriName>PesTipo</AttriName>
+<Description>Tipo de pessoa</Description></Attribute>
+<Attribute>
+<AttriId>23</AttriId>
+<AttriName>PesSituacao</AttriName>
+<Description>Situação da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>19</AttriId>
+<AttriName>PesBairro</AttriName>
+<Description>Bairro da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>14</AttriId>
+<AttriName>PesNome</AttriName>
+<Description>Nome da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas>
+<Formula>
+<FormulaAttri>
+<Attribute>
+<AttriId>48</AttriId>
+<AttriName>PesDepTotal</AttriName>
+<Description>Total de dependentes</Description></Attribute></FormulaAttri>
+<FormulaType>count(</FormulaType>
+<FormulaOutputAttri>
+<Attribute>
+<AttriId>46</AttriId>
+<AttriName>PesDepCodigo</AttriName>
+<Description>Código do dependente</Description></Attribute></FormulaOutputAttri>
+<FormulaWhere></FormulaWhere>
+<FormulaGivenAttris>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></FormulaGivenAttris>
+<FormulaIndex>ICLIENTEDEPENDENTE</FormulaIndex>
+<StartFrom>
+<Condition>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>@PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>@PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></Condition></LoopWhile>
+<NavigationTree>
+<Table>
+<TableId>2</TableId>
+<TableName>CLIENTEDEPENDENTE</TableName>
+<Description>Dependente</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>46</AttriId>
+<AttriName>PesDepCodigo</AttriName>
+<Description>Código do dependente</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate></Formula></AggSelFormulas></Formulas></ImplicitForEach></Event>
+<Suggests></Suggests></ObjectSpec>

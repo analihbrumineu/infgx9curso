@@ -1,0 +1,127 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>84</ObjId>
+<ObjName>Gx0051</ObjName>
+<ObjDesc>Lista de Seleção Elenco do filme</ObjDesc>
+<ObjPgmName>WGx0051</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>18</GenId>
+<GenName>.NET - Win</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>in</IO>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></Parameter>
+<Parameter>
+<IO>out</IO>
+<Variable>
+<VarId>Pfilatocodigo</VarId>
+<VarName>&amp;pFilAtoCodigo</VarName></Variable></Parameter></Parameters>
+<StandAloneRules></StandAloneRules>
+<Event>
+<EventName>Enter</EventName></Event>
+<Event>
+<EventName>Load</EventName>
+<ImplicitForEach>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>1</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>5</TableId>
+<TableName>FILMEELENCO</TableName>
+<Description>Elenco do filme</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Token>,</Token>
+<Attribute>
+<AttriId>77</AttriId>
+<AttriName>FilAtoCodigo</AttriName>
+<Description>Código do ator do filme</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>IFILMEELENCO</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>@FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></Condition>
+<Condition>
+<Attribute>
+<AttriId>77</AttriId>
+<AttriName>FilAtoCodigo</AttriName>
+<Description>Código do ator do filme</Description></Attribute>
+<Token>&gt;=</Token>
+<Variable>
+<VarId>Cfilatocodigo</VarId>
+<VarName>&amp;cFilAtoCodigo</VarName></Variable></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>@FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<Condition>
+<Attribute>
+<AttriId>81</AttriId>
+<AttriName>FilAtoProt</AttriName>
+<Description>Esse ator é protagonista?</Description></Attribute>
+<Token>&gt;=</Token>
+<Variable>
+<VarId>Cfilatoprot</VarId>
+<VarName>&amp;cFilAtoProt</VarName></Variable></Condition></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>5</TableId>
+<TableName>FILMEELENCO</TableName>
+<Description>Elenco do filme</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Attribute>
+<AttriId>77</AttriId>
+<AttriName>FilAtoCodigo</AttriName>
+<Description>Código do ator do filme</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>81</AttriId>
+<AttriName>FilAtoProt</AttriName>
+<Description>Esse ator é protagonista?</Description></Attribute>
+<Attribute>
+<AttriId>77</AttriId>
+<AttriName>FilAtoCodigo</AttriName>
+<Description>Código do ator do filme</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas></ImplicitForEach></Event>
+<Suggests></Suggests></ObjectSpec>

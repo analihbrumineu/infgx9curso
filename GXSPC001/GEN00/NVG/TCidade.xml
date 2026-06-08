@@ -1,0 +1,266 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>0</ObjCls>
+<ObjId>5</ObjId>
+<ObjName>Cidade</ObjName>
+<ObjDesc>Cadastro de cidades.</ObjDesc>
+<ObjPgmName>TCidade</ObjPgmName>
+<ObjClsName>Transaction</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>0</GenId>
+<GenName>(Default)</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>in</IO>
+<Attribute>
+<AttriId>26</AttriId>
+<AttriName>CidCodigo</AttriName>
+<Description>Código da cidade da pessoa</Description></Attribute></Parameter>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Mode</VarId>
+<VarName>&amp;Gx_mode</VarName></Variable></Parameter></Parameters>
+<Levels>
+<Level>
+<LevelType>Trn</LevelType>
+<LevelNumber>8</LevelNumber>
+<BaseTable>
+<Table>
+<TableId>8</TableId>
+<TableName>CIDADE</TableName>
+<Description>Cadastro de cidades.</Description></Table></BaseTable>
+<StandAloneRules>
+<Action>
+<ActionType>ReadBaseTable</ActionType>
+<Table>
+<TableId>8</TableId>
+<TableName>CIDADE</TableName>
+<Description>Cadastro de cidades.</Description></Table>
+<JoinConditions>
+<Table>
+<TableId>8</TableId>
+<TableName>CIDADE</TableName>
+<Description>Cadastro de cidades.</Description></Table>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>26</AttriId>
+<AttriName>CidCodigo</AttriName>
+<Description>Código da cidade da pessoa</Description></Attribute></AttributeTo>
+<Table></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>26</AttriId>
+<AttriName>CidCodigo</AttriName>
+<Description>Código da cidade da pessoa</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
+<Into>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>CidNome</AttriName>
+<Description>Nome da cidade da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>24</AttriId>
+<AttriName>EstCodigo</AttriName>
+<Description>Código do Estado da pessoa</Description></Attribute></Into></Action></StandAloneRules>
+<BaseTableRule>
+<Action>
+<ActionType>ReadBaseTable</ActionType>
+<Table>
+<TableId>8</TableId>
+<TableName>CIDADE</TableName>
+<Description>Cadastro de cidades.</Description></Table>
+<JoinConditions>
+<Table>
+<TableId>8</TableId>
+<TableName>CIDADE</TableName>
+<Description>Cadastro de cidades.</Description></Table>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>26</AttriId>
+<AttriName>CidCodigo</AttriName>
+<Description>Código da cidade da pessoa</Description></Attribute></AttributeTo>
+<Table></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>26</AttriId>
+<AttriName>CidCodigo</AttriName>
+<Description>Código da cidade da pessoa</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
+<Into>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>CidNome</AttriName>
+<Description>Nome da cidade da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>24</AttriId>
+<AttriName>EstCodigo</AttriName>
+<Description>Código do Estado da pessoa</Description></Attribute></Into></Action></BaseTableRule>
+<Rules>
+<Action>
+<ActionType>BusinessRule</ActionType>
+<RuleType>ErrorRule</RuleType>
+<Expression>
+<Token>'Nome da cidade deve ser informado!'</Token></Expression>
+<Condition>
+<Token>after(</Token>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>CidNome</AttriName>
+<Description>Nome da cidade da pessoa</Description></Attribute>
+<Token>)</Token>
+<Token>and</Token>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>CidNome</AttriName>
+<Description>Nome da cidade da pessoa</Description></Attribute>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></Action>
+<Action>
+<ActionType>ReadTable</ActionType>
+<JoinType>Outer</JoinType>
+<Table>
+<TableId>7</TableId>
+<TableName>ESTADO</TableName>
+<Description>Cadastro de Estados.</Description></Table>
+<JoinConditions>
+<Table>
+<TableId>7</TableId>
+<TableName>ESTADO</TableName>
+<Description>Cadastro de Estados.</Description></Table>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>24</AttriId>
+<AttriName>EstCodigo</AttriName>
+<Description>Código do Estado da pessoa</Description></Attribute></AttributeTo>
+<Table>
+<TableId>8</TableId>
+<TableName>CIDADE</TableName>
+<Description>Cadastro de cidades.</Description></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>24</AttriId>
+<AttriName>EstCodigo</AttriName>
+<Description>Código do Estado da pessoa</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
+<Into>
+<Attribute>
+<AttriId>25</AttriId>
+<AttriName>EstUF</AttriName>
+<Description>UF do Estado da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>12</AttriId>
+<AttriName>EstNome</AttriName>
+<Description>Nome do Estado da pessoa</Description></Attribute></Into></Action>
+<Action>
+<ActionType>BusinessRule</ActionType>
+<RuleType>ErrorRule</RuleType>
+<Expression>
+<Token>'Código de Estado deve ser informado!'</Token></Expression>
+<Condition>
+<Token>after(</Token>
+<Attribute>
+<AttriId>24</AttriId>
+<AttriName>EstCodigo</AttriName>
+<Description>Código do Estado da pessoa</Description></Attribute>
+<Token>)</Token>
+<Token>and</Token>
+<Attribute>
+<AttriId>24</AttriId>
+<AttriName>EstCodigo</AttriName>
+<Description>Código do Estado da pessoa</Description></Attribute>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></Action></Rules>
+<BeforeConfirmRules></BeforeConfirmRules>
+<AfterConfirmRules></AfterConfirmRules>
+<TablesToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>8</TableId>
+<TableName>CIDADE</TableName>
+<Description>Cadastro de cidades.</Description></Table>
+<TableAction>insert</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>26</AttriId>
+<AttriName>CidCodigo</AttriName>
+<Description>Código da cidade da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>CidNome</AttriName>
+<Description>Nome da cidade da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>24</AttriId>
+<AttriName>EstCodigo</AttriName>
+<Description>Código do Estado da pessoa</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>8</TableId>
+<TableName>CIDADE</TableName>
+<Description>Cadastro de cidades.</Description></Table>
+<TableAction>update</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>CidNome</AttriName>
+<Description>Nome da cidade da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>24</AttriId>
+<AttriName>EstCodigo</AttriName>
+<Description>Código do Estado da pessoa</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>8</TableId>
+<TableName>CIDADE</TableName>
+<Description>Cadastro de cidades.</Description></Table>
+<TableAction>delete</TableAction>
+<AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
+<BeforeInsertRules></BeforeInsertRules>
+<AfterInsertRules></AfterInsertRules>
+<BeforeUpdateRules></BeforeUpdateRules>
+<AfterUpdateRules></AfterUpdateRules>
+<BeforeDeleteRules></BeforeDeleteRules>
+<AfterDeleteRules></AfterDeleteRules>
+<TablesToControlOnDelete>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>26</AttriId>
+<AttriName>CidCodigo</AttriName>
+<Description>Código da cidade da pessoa</Description></Attribute></KeyAttributes></Table></TablesToControlOnDelete>
+<Levels></Levels>
+<BeforeTrnRules></BeforeTrnRules>
+<AfterTrnRules></AfterTrnRules>
+<AfterLevelRules></AfterLevelRules></Level></Levels>
+<Prompts>
+<Prompt>
+<Table>
+<TableId>7</TableId>
+<TableName>ESTADO</TableName>
+<Description>Cadastro de Estados.</Description></Table>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>86</ObjId>
+<ObjName>Gx0070</ObjName>
+<ObjPgmName>WGx0070</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<InputParameters></InputParameters>
+<OutputParameters>
+<Attribute>
+<AttriId>24</AttriId>
+<AttriName>EstCodigo</AttriName>
+<Description>Código do Estado da pessoa</Description></Attribute></OutputParameters>
+<PromptType>System</PromptType></Prompt></Prompts>
+<Suggests></Suggests></ObjectSpec>

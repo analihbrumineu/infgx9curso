@@ -1,0 +1,16 @@
+current_obj_i(2,scr,78).
+ 
+called_tree_i(4,78,0,11).
+called_tree_i(4,78,1,17).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wpelocacao,[],[ subwpelocacao11 ],[ type_SdtSDTFuncionario,'GxObjectCollection' ],78).
+ 
+ 
+obj_parms_i([],[]).
+ 
+ 

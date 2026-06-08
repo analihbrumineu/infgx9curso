@@ -1,0 +1,15 @@
+current_obj_i(2,scr,20).
+ 
+called_tree_i(4,20,4,20).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wconsestado,[],[ subwconsestado08 ],[],20).
+ 
+ 
+obj_parms_i([ 'int aP0_EstCodigoRet' ],[ [ 'Estcodigoret',out ] ]).
+ 
+ 

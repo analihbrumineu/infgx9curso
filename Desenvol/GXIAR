@@ -1,0 +1,11 @@
+
+<Object>
+<ReorgCls>c</ReorgCls>
+<Mod>1</Mod>
+<OldMod>2</OldMod>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description></Table>
+<ReorgAction>#</ReorgAction>
+<ObjNavig>Desenvol\MDL002\GEN18\C1.xml</ObjNavig></Object>

@@ -1,0 +1,185 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>0</ObjCls>
+<ObjId>3</ObjId>
+<ObjName>Categoria</ObjName>
+<ObjDesc>Cadastro de categorias.</ObjDesc>
+<ObjPgmName>TCategoria</ObjPgmName>
+<ObjClsName>Transaction</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>0</GenId>
+<GenName>(Default)</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>in</IO>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></Parameter>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Mode</VarId>
+<VarName>&amp;Gx_mode</VarName></Variable></Parameter></Parameters>
+<Levels>
+<Level>
+<LevelType>Trn</LevelType>
+<LevelNumber>6</LevelNumber>
+<BaseTable>
+<Table>
+<TableId>6</TableId>
+<TableName>CATEGORIA</TableName>
+<Description>Cadastro de categorias.</Description></Table></BaseTable>
+<StandAloneRules>
+<Action>
+<ActionType>ReadBaseTable</ActionType>
+<Table>
+<TableId>6</TableId>
+<TableName>CATEGORIA</TableName>
+<Description>Cadastro de categorias.</Description></Table>
+<JoinConditions>
+<Table>
+<TableId>6</TableId>
+<TableName>CATEGORIA</TableName>
+<Description>Cadastro de categorias.</Description></Table>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></AttributeTo>
+<Table></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
+<Into>
+<Attribute>
+<AttriId>33</AttriId>
+<AttriName>CatNome</AttriName>
+<Description>Nome da categoria do filme</Description></Attribute></Into></Action></StandAloneRules>
+<BaseTableRule>
+<Action>
+<ActionType>ReadBaseTable</ActionType>
+<Table>
+<TableId>6</TableId>
+<TableName>CATEGORIA</TableName>
+<Description>Cadastro de categorias.</Description></Table>
+<JoinConditions>
+<Table>
+<TableId>6</TableId>
+<TableName>CATEGORIA</TableName>
+<Description>Cadastro de categorias.</Description></Table>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></AttributeTo>
+<Table></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
+<Into>
+<Attribute>
+<AttriId>33</AttriId>
+<AttriName>CatNome</AttriName>
+<Description>Nome da categoria do filme</Description></Attribute></Into></Action></BaseTableRule>
+<Rules>
+<Action>
+<ActionType>BusinessRule</ActionType>
+<RuleType>ErrorRule</RuleType>
+<Expression>
+<Token>'O nome da categoria deve ser informado!'</Token></Expression>
+<Condition>
+<Token>after(</Token>
+<Attribute>
+<AttriId>33</AttriId>
+<AttriName>CatNome</AttriName>
+<Description>Nome da categoria do filme</Description></Attribute>
+<Token>)</Token>
+<Token>and</Token>
+<Attribute>
+<AttriId>33</AttriId>
+<AttriName>CatNome</AttriName>
+<Description>Nome da categoria do filme</Description></Attribute>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></Action></Rules>
+<BeforeConfirmRules></BeforeConfirmRules>
+<AfterConfirmRules></AfterConfirmRules>
+<TablesToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>6</TableId>
+<TableName>CATEGORIA</TableName>
+<Description>Cadastro de categorias.</Description></Table>
+<TableAction>insert</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute>
+<Attribute>
+<AttriId>33</AttriId>
+<AttriName>CatNome</AttriName>
+<Description>Nome da categoria do filme</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>6</TableId>
+<TableName>CATEGORIA</TableName>
+<Description>Cadastro de categorias.</Description></Table>
+<TableAction>update</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>33</AttriId>
+<AttriName>CatNome</AttriName>
+<Description>Nome da categoria do filme</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>6</TableId>
+<TableName>CATEGORIA</TableName>
+<Description>Cadastro de categorias.</Description></Table>
+<TableAction>delete</TableAction>
+<AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
+<BeforeInsertRules></BeforeInsertRules>
+<AfterInsertRules></AfterInsertRules>
+<BeforeUpdateRules></BeforeUpdateRules>
+<AfterUpdateRules></AfterUpdateRules>
+<BeforeDeleteRules></BeforeDeleteRules>
+<AfterDeleteRules></AfterDeleteRules>
+<TablesToControlOnDelete>
+<Table>
+<TableId>3</TableId>
+<TableName>FILME</TableName>
+<Description>Cadastro de filmes.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></KeyAttributes></Table>
+<Table>
+<TableId>11</TableId>
+<TableName>CONFTIPMIDIA</TableName>
+<Description>Configurações tipo de mídia.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></KeyAttributes></Table></TablesToControlOnDelete>
+<Levels></Levels>
+<BeforeTrnRules></BeforeTrnRules>
+<AfterTrnRules></AfterTrnRules>
+<AfterLevelRules></AfterLevelRules></Level></Levels>
+<Suggests></Suggests></ObjectSpec>

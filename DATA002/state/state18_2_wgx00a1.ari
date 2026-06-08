@@ -1,0 +1,14 @@
+current_obj_i(2,scr,74).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wgx00a1,[],[ subwgx00a110 ],[],74).
+ 
+ 
+obj_parms_i([ 'int aP0_FilCodigo','int aP1_pFilDirCodigo' ],[ [ 28,in ],[ 'Pfildircodigo',out ] ]).
+ 
+ 

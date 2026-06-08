@@ -1,0 +1,15 @@
+current_obj_i(2,scr,64).
+ 
+called_tree_i(4,64,2,10).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wrelclicomdependente,[],[],[],64).
+ 
+ 
+obj_parms_i([],[]).
+ 
+ 

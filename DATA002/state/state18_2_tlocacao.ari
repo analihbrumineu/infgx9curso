@@ -1,0 +1,22 @@
+current_obj_i(2,trn,11).
+ 
+called_tree_i(0,11,1,14).
+called_tree_i(0,11,4,27).
+called_tree_i(0,11,4,23).
+called_tree_i(0,11,1,17).
+called_tree_i(0,11,4,90).
+called_tree_i(0,11,4,80).
+called_tree_i(0,11,4,91).
+called_tree_i(0,11,4,92).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(tlocacao,[],[ subtlocacao30 ],[ type_SdtSDTFuncionario,'GxObjectCollection' ],11).
+ 
+ 
+obj_parms_i([ 'int aP0_LocCodigo','String aP1_Gx_mode' ],[ [ 'Loccodigo',in ],[ 'Mode',in ] ]).
+ 
+ 

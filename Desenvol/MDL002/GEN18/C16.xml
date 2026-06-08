@@ -1,0 +1,339 @@
+
+<ReorgSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Table>
+<TableId>16</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Atributos da grid.</Description></Table>
+<ReorgCls>c</ReorgCls>
+<ReorgCode>pk</ReorgCode>
+<ReorgMsg>LOCACAOLOCACAOMIDIA needs conversion</ReorgMsg>
+<ReorgAction>!</ReorgAction>
+<TableAttributes>
+<AttrisInTable>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description>
+<TakesValueFrom>
+<Table>
+<TableId>16</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Atributos da grid.</Description></Table>
+<FromValue>
+<Token>.</Token>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></FromValue></TakesValueFrom>
+<OnPrimaryKey>Yes</OnPrimaryKey>
+<AttriType>
+<DataType>N</DataType>
+<Presicion>9</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>No</Value></Property></Properties></AttriType></Attribute>
+<Attribute>
+<AttriId>102</AttriId>
+<AttriName>LocMidMidCodigo</AttriName>
+<Description>Código da mídia a ser locada</Description>
+<TakesValueFrom>
+<Table>
+<TableId>16</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Atributos da grid.</Description></Table>
+<FromValue>
+<Token>.</Token>
+<Attribute>
+<AttriId>102</AttriId>
+<AttriName>LocMidMidCodigo</AttriName>
+<Description>Código da mídia a ser locada</Description></Attribute></FromValue></TakesValueFrom>
+<OnPrimaryKey>Yes</OnPrimaryKey>
+<AttriType>
+<DataType>N</DataType>
+<Presicion>9</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>No</Value></Property></Properties></AttriType></Attribute>
+<Attribute>
+<AttriId>103</AttriId>
+<AttriName>LocMidFilCodigo</AttriName>
+<Description>Código do filme a ser locado</Description>
+<TakesValueFrom>
+<Table>
+<TableId>16</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Atributos da grid.</Description></Table>
+<FromValue>
+<Token>.</Token>
+<Attribute>
+<AttriId>103</AttriId>
+<AttriName>LocMidFilCodigo</AttriName>
+<Description>Código do filme a ser locado</Description></Attribute></FromValue></TakesValueFrom>
+<AttriType>
+<DataType>N</DataType>
+<Presicion>9</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>Yes</Value></Property></Properties></AttriType></Attribute>
+<Attribute>
+<AttriId>104</AttriId>
+<AttriName>LocMidFilNome</AttriName>
+<Description>Nome do filme a ser locado</Description>
+<TakesValueFrom>
+<Table>
+<TableId>16</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Atributos da grid.</Description></Table>
+<FromValue>
+<Token>.</Token>
+<Attribute>
+<AttriId>104</AttriId>
+<AttriName>LocMidFilNome</AttriName>
+<Description>Nome do filme a ser locado</Description></Attribute></FromValue></TakesValueFrom>
+<AttriType>
+<DataType>V</DataType>
+<Presicion>50</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>Yes</Value></Property></Properties></AttriType></Attribute>
+<Attribute>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description>
+<TakesValueFrom>
+<Table>
+<TableId>16</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Atributos da grid.</Description></Table>
+<FromValue>
+<Token>.</Token>
+<Attribute>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute></FromValue></TakesValueFrom>
+<AttriType>
+<DataType>N</DataType>
+<Presicion>9</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>Yes</Value></Property></Properties></AttriType></Attribute>
+<Attribute>
+<AttriId>106</AttriId>
+<AttriName>LocMidMidTipo</AttriName>
+<Description>Tipo da mídia a ser locada</Description>
+<TakesValueFrom>
+<Table>
+<TableId>16</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Atributos da grid.</Description></Table>
+<FromValue>
+<Token>.</Token>
+<Attribute>
+<AttriId>106</AttriId>
+<AttriName>LocMidMidTipo</AttriName>
+<Description>Tipo da mídia a ser locada</Description></Attribute></FromValue></TakesValueFrom>
+<AttriType>
+<DataType>N</DataType>
+<Presicion>1</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>Yes</Value></Property></Properties></AttriType></Attribute>
+<Attribute>
+<AttriId>108</AttriId>
+<AttriName>LocMidMidLocCodigo</AttriName>
+<Description>Código da locação da mídia a ser locada</Description>
+<TakesValueFrom>
+<Table>
+<TableId>16</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Atributos da grid.</Description></Table>
+<FromValue>
+<Token>.</Token>
+<Attribute>
+<AttriId>108</AttriId>
+<AttriName>LocMidMidLocCodigo</AttriName>
+<Description>Código da locação da mídia a ser locada</Description></Attribute></FromValue></TakesValueFrom>
+<AttriType>
+<DataType>N</DataType>
+<Presicion>9</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>Yes</Value></Property></Properties></AttriType></Attribute>
+<Attribute>
+<AttriId>110</AttriId>
+<AttriName>LocMidLocMidValor</AttriName>
+<Description>Valor da locação da mídia</Description>
+<TakesValueFrom>
+<Table>
+<TableId>16</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Atributos da grid.</Description></Table>
+<FromValue>
+<Token>.</Token>
+<Attribute>
+<AttriId>110</AttriId>
+<AttriName>LocMidLocMidValor</AttriName>
+<Description>Valor da locação da mídia</Description></Attribute></FromValue></TakesValueFrom>
+<AttriType>
+<DataType>N</DataType>
+<Presicion>12</Presicion>
+<Scale>2</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>Yes</Value></Property></Properties></AttriType></Attribute></AttrisInTable>
+<AttrisNoLongerInTable>
+<Attribute>
+<AttriId>109</AttriId>
+<AttriName>LocMidMidConfValor</AttriName>
+<Description>Valor da configuração da mídia a ser locada</Description>
+<AttriType>
+<DataType>N</DataType>
+<Presicion>12</Presicion>
+<Scale>2</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>Yes</Value></Property></Properties></AttriType>
+<AttriChangeType>del</AttriChangeType></Attribute></AttrisNoLongerInTable>
+<AttrisInManyTables></AttrisInManyTables></TableAttributes>
+<NavigationTree>
+<Table>
+<TableId>16</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Atributos da grid.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute>
+<Attribute>
+<AttriId>102</AttriId>
+<AttriName>LocMidMidCodigo</AttriName>
+<Description>Código da mídia a ser locada</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<TableIndices>
+<Indices>
+<Index>
+<IndexName>ILOCACAOLOCACAOMIDIA</IndexName>
+<IndexType>u</IndexType>
+<IndexAttris>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute>
+<Attribute>
+<AttriId>102</AttriId>
+<AttriName>LocMidMidCodigo</AttriName>
+<Description>Código da mídia a ser locada</Description></Attribute></IndexAttris>
+<IndexExistance>AlreadyExist</IndexExistance>
+<Clustered>Yes</Clustered></Index>
+<Index>
+<IndexName>ILOCACAOLOCACAOMIDIA2</IndexName>
+<IndexType>d</IndexType>
+<IndexAttris>
+<Attribute>
+<AttriId>108</AttriId>
+<AttriName>LocMidMidLocCodigo</AttriName>
+<Description>Código da locação da mídia a ser locada</Description></Attribute></IndexAttris>
+<IndexExistance>AlreadyExist</IndexExistance>
+<Clustered>No</Clustered></Index></Indices></TableIndices>
+<FKConstraints>
+<FKConstraint>
+<ChangeType>none</ChangeType>
+<Table>
+<TableId>7</TableId>
+<TableName>MIDIA</TableName>
+<Description>Cadastro de mídias.</Description></Table>
+<Attributes>
+<Attribute>
+<AttriId>108</AttriId>
+<AttriName>LocMidMidLocCodigo</AttriName>
+<Description>Código da locação da mídia a ser locada</Description></Attribute></Attributes></FKConstraint>
+<FKConstraint>
+<ChangeType>none</ChangeType>
+<Table>
+<TableId>15</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description></Table>
+<Attributes>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></Attributes></FKConstraint></FKConstraints>
+<Warnings>
+<Warning>
+<MsgCode>rgz0009</MsgCode>
+<Token>AutoNumber=True ignored. Attribute </Token>
+<Attribute>
+<AttriId>102</AttriId>
+<AttriName>LocMidMidCodigo</AttriName>
+<Description>Código da mídia a ser locada</Description></Attribute>
+<Token> is not table </Token>
+<Token>LOCACAOLOCACAOMIDIA</Token>
+<Token>'s primary key.</Token></Warning>
+<Warning>
+<MsgCode>rgz0009</MsgCode>
+<Token>AutoNumber=True ignored. Attribute </Token>
+<Attribute>
+<AttriId>103</AttriId>
+<AttriName>LocMidFilCodigo</AttriName>
+<Description>Código do filme a ser locado</Description></Attribute>
+<Token> is not table </Token>
+<Token>LOCACAOLOCACAOMIDIA</Token>
+<Token>'s primary key.</Token></Warning>
+<Warning>
+<MsgCode>rgz0009</MsgCode>
+<Token>AutoNumber=True ignored. Attribute </Token>
+<Attribute>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute>
+<Token> is not table </Token>
+<Token>LOCACAOLOCACAOMIDIA</Token>
+<Token>'s primary key.</Token></Warning></Warnings>
+<Errors></Errors></ReorgSpec>

@@ -1,0 +1,14 @@
+current_obj_i(2,proc,18).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(plocconfirmacao,[],[],[],18).
+ 
+ 
+obj_parms_i([ 'int aP0_LocCodigo' ],[ [ 'Loccodigo',in ] ]).
+ 
+ 

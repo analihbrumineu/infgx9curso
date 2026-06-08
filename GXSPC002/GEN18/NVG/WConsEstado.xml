@@ -1,0 +1,151 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>20</ObjId>
+<ObjName>ConsEstado</ObjName>
+<ObjDesc>Consulta de Estados.</ObjDesc>
+<ObjPgmName>WConsEstado</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>18</GenId>
+<GenName>.NET - Win</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>out</IO>
+<Variable>
+<VarId>Estcodigoret</VarId>
+<VarName>&amp;EstCodigoRet</VarName></Variable></Parameter></Parameters>
+<StandAloneRules></StandAloneRules>
+<Event>
+<EventName>Exit</EventName></Event>
+<Event>
+<EventName>EstCodigo.Click</EventName></Event>
+<Event>
+<EventName>'Pesquisa'</EventName>
+<CALL>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>20</ObjId>
+<ObjName>ConsEstado</ObjName>
+<ObjPgmName>WConsEstado</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Parameters>
+<Attribute>
+<AttriId>24</AttriId>
+<AttriName>EstCodigo</AttriName>
+<Description>Código do Estado da pessoa</Description></Attribute></Parameters>
+<IF></IF></CALL></Event>
+<Event>
+<EventName>Load</EventName>
+<ImplicitForEach>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>1</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>7</TableId>
+<TableName>ESTADO</TableName>
+<Description>Cadastro de Estados.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>24</AttriId>
+<AttriName>EstCodigo</AttriName>
+<Description>Código do Estado da pessoa</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>IESTADO</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Token>FirstRecord</Token></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Token>NotEndOfTable</Token></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<ConditionalConstraint>
+<Constraint>
+<Variable>
+<VarId>Estuf</VarId>
+<VarName>&amp;EstUF</VarName></Variable>
+<Token>=</Token>
+<Attribute>
+<AttriId>25</AttriId>
+<AttriName>EstUF</AttriName>
+<Description>UF do Estado da pessoa</Description></Attribute></Constraint>
+<Condition>
+<Token>.NOT.</Token>
+<Variable>
+<VarId>Estuf</VarId>
+<VarName>&amp;EstUF</VarName></Variable>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></ConditionalConstraint>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>24</AttriId>
+<AttriName>EstCodigo</AttriName>
+<Description>Código do Estado da pessoa</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Estcodigo</VarId>
+<VarName>&amp;EstCodigo</VarName></Variable></Constraint>
+<Condition>
+<Variable>
+<VarId>Estcodigo</VarId>
+<VarName>&amp;EstCodigo</VarName></Variable>
+<Token>&lt;&gt;</Token>
+<Token>0</Token></Condition></ConditionalConstraint>
+<ConditionalConstraint>
+<Constraint>
+<Variable>
+<VarId>Estnome</VarId>
+<VarName>&amp;EstNome</VarName></Variable>
+<Token>like</Token>
+<Attribute>
+<AttriId>12</AttriId>
+<AttriName>EstNome</AttriName>
+<Description>Nome do Estado da pessoa</Description></Attribute></Constraint>
+<Condition>
+<Token>.NOT.</Token>
+<Variable>
+<VarId>Estnome</VarId>
+<VarName>&amp;EstNome</VarName></Variable>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></ConditionalConstraint></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>7</TableId>
+<TableName>ESTADO</TableName>
+<Description>Cadastro de Estados.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>24</AttriId>
+<AttriName>EstCodigo</AttriName>
+<Description>Código do Estado da pessoa</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>12</AttriId>
+<AttriName>EstNome</AttriName>
+<Description>Nome do Estado da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>25</AttriId>
+<AttriName>EstUF</AttriName>
+<Description>UF do Estado da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>24</AttriId>
+<AttriName>EstCodigo</AttriName>
+<Description>Código do Estado da pessoa</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas></ImplicitForEach></Event>
+<Suggests></Suggests></ObjectSpec>

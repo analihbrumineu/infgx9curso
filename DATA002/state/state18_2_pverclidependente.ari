@@ -1,0 +1,14 @@
+current_obj_i(2,proc,8).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(pverclidependente,[],[],[],8).
+ 
+ 
+obj_parms_i([ 'int aP0_Pescodigo','String aP1_Validacao' ],[ [ 'Pescodigo',in ],[ 'Validacao',out ] ]).
+ 
+ 

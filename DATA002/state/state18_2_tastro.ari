@@ -1,0 +1,14 @@
+current_obj_i(2,trn,8).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(tastro,[],[],[],8).
+ 
+ 
+obj_parms_i([ 'int aP0_AstCodigo','String aP1_Gx_mode' ],[ [ 49,in ],[ 'Mode',in ] ]).
+ 
+ 

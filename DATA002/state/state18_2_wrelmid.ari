@@ -1,0 +1,16 @@
+current_obj_i(2,scr,65).
+ 
+called_tree_i(4,65,2,11).
+called_tree_i(4,65,2,12).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wrelmid,[],[],[],65).
+ 
+ 
+obj_parms_i([],[]).
+ 
+ 

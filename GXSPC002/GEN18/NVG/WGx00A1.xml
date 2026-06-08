@@ -1,0 +1,114 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>74</ObjId>
+<ObjName>Gx00A1</ObjName>
+<ObjDesc>Lista de Seleção Direcao</ObjDesc>
+<ObjPgmName>WGx00A1</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>18</GenId>
+<GenName>.NET - Win</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>in</IO>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></Parameter>
+<Parameter>
+<IO>out</IO>
+<Variable>
+<VarId>Pfildircodigo</VarId>
+<VarName>&amp;pFilDirCodigo</VarName></Variable></Parameter></Parameters>
+<StandAloneRules></StandAloneRules>
+<Event>
+<EventName>Enter</EventName></Event>
+<Event>
+<EventName>Load</EventName>
+<ImplicitForEach>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>1</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>10</TableId>
+<TableName>FILMEDIRECAO</TableName>
+<Description>Direcao</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Token>,</Token>
+<Attribute>
+<AttriId>79</AttriId>
+<AttriName>FilDirCodigo</AttriName>
+<Description>Código do diretor do filme</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>IFILMEDIRECAO</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>@FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></Condition>
+<Condition>
+<Attribute>
+<AttriId>79</AttriId>
+<AttriName>FilDirCodigo</AttriName>
+<Description>Código do diretor do filme</Description></Attribute>
+<Token>&gt;=</Token>
+<Variable>
+<VarId>Cfildircodigo</VarId>
+<VarName>&amp;cFilDirCodigo</VarName></Variable></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>@FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>10</TableId>
+<TableName>FILMEDIRECAO</TableName>
+<Description>Direcao</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Attribute>
+<AttriId>79</AttriId>
+<AttriName>FilDirCodigo</AttriName>
+<Description>Código do diretor do filme</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>79</AttriId>
+<AttriName>FilDirCodigo</AttriName>
+<Description>Código do diretor do filme</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas></ImplicitForEach></Event>
+<Suggests></Suggests></ObjectSpec>

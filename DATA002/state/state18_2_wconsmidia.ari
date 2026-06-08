@@ -1,0 +1,15 @@
+current_obj_i(2,scr,23).
+ 
+called_tree_i(4,23,4,58).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wconsmidia,[],[ subwconsmidia08 ],[],23).
+ 
+ 
+obj_parms_i([ 'int aP0_MidCodRetornado','int aP1_FilCodRetornado','String aP2_FilNomRetornado','int aP3_CatCodRetornado','short aP4_MidTipRetornado','decimal aP5_LocMidValRetornado' ],[ [ 'Midcodretornado',out ],[ 'Filcodretornado',out ],[ 'Filnomretornado',out ],[ 'Catcodretornado',out ],[ 'Midtipretornado',out ],[ 'Locmidvalretornado',out ] ]).
+ 
+ 

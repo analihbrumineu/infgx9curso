@@ -1,0 +1,97 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>93</ObjId>
+<ObjName>MovDoCliente</ObjName>
+<ObjDesc>Movimentos dos clientes e seus dependentes.</ObjDesc>
+<ObjPgmName>WMovDoCliente</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>18</GenId>
+<GenName>.NET - Win</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Pescodigo</VarId>
+<VarName>&amp;PesCodigo</VarName></Variable></Parameter>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Depende</VarId>
+<VarName>&amp;Depende</VarName></Variable></Parameter></Parameters>
+<StandAloneRules></StandAloneRules>
+<Event>
+<EventName>Load</EventName>
+<LoadMethod>Auto</LoadMethod>
+<Level>
+<Optimizations></Optimizations>
+<LevelType>For First</LevelType>
+<LevelBeginRow>4</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>ICLIENTE</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Pescodnagrid</VarId>
+<VarName>&amp;PesCodNaGrid</VarName></Variable></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Pescodnagrid</VarId>
+<VarName>&amp;PesCodNaGrid</VarName></Variable></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>14</AttriId>
+<AttriName>PesNome</AttriName>
+<Description>Nome da pessoa</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas></Level></Event>
+<Suggests></Suggests></ObjectSpec>

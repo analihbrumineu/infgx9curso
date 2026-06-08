@@ -1,0 +1,33 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>62</ObjId>
+<ObjName>RelFilCategoria</ObjName>
+<ObjDesc>Impressão de relatório de filmes por categoria.</ObjDesc>
+<ObjPgmName>WRelFilCategoria</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>18</GenId>
+<GenName>.NET - Win</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters></Parameters>
+<StandAloneRules></StandAloneRules>
+<Event>
+<EventName>'Imprimir'</EventName>
+<CALL>
+<Object>
+<ObjCls>2</ObjCls>
+<ObjId>9</ObjId>
+<ObjName>RelFilCategoria</ObjName>
+<ObjPgmName>RRelFilCategoria</ObjPgmName>
+<ObjClsName>Report</ObjClsName></Object>
+<Parameters></Parameters>
+<IF></IF></CALL></Event>
+<Event>
+<EventName>Load</EventName></Event>
+<Suggests></Suggests></ObjectSpec>

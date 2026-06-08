@@ -1,0 +1,15 @@
+current_obj_i(2,proc,17).
+ 
+called_tree_i(1,17,1,19).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(patzlocacao,[],[],[],17).
+ 
+ 
+obj_parms_i([ 'short aP0_Y','int aP1_LocCodigo','short aP2_AtzLocacao','short aP3_LocSituacao','String aP4_MsgErro' ],[ [ 'Y',in ],[ 'Loccodigo',inout ],[ 'Atzlocacao',in ],[ 'Locsituacao',inout ],[ 'Msgerro',out ] ]).
+ 
+ 

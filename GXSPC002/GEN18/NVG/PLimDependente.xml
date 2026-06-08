@@ -1,0 +1,150 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>1</ObjCls>
+<ObjId>22</ObjId>
+<ObjName>LimDependente</ObjName>
+<ObjDesc>Limpar dependentes</ObjDesc>
+<ObjPgmName>PLimDependente</ObjPgmName>
+<ObjClsName>Procedure</ObjClsName></Object>
+<Result>specfailed</Result>
+<Warnings>
+<Warning>
+<MsgCode>spc0060</MsgCode>
+<Token>The program may be called by another program and the Commit on Exit property is set to YES</Token></Warning></Warnings>
+<Errors>
+<Error>
+<MsgCode>spc0029</MsgCode>
+<Token>Attribute </Token>
+<Attribute>
+<AttriId>46</AttriId>
+<AttriName>PesDepCodigo</AttriName>
+<Description>Código do dependente</Description></Attribute>
+<Token> is part of the primary key. It cannot be updated.</Token></Error></Errors>
+<OutputDevices>
+<Device>None</Device></OutputDevices>
+<Generator>
+<GenId>18</GenId>
+<GenName>.NET - Win</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>inout</IO>
+<Attribute>
+<AttriId>83</AttriId>
+<AttriName>Depende</AttriName>
+<Description>Esse cliente é dependente de outro?</Description></Attribute></Parameter>
+<Parameter>
+<IO>inout</IO>
+<Variable>
+<VarId>Pesdepcodigo</VarId>
+<VarName>&amp;PesDepCodigo</VarName></Variable></Parameter></Parameters>
+<Levels>
+<Level>
+<LevelNumber>2</LevelNumber>
+<Optimizations></Optimizations>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>3</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>2</TableId>
+<TableName>CLIENTEDEPENDENTE</TableName>
+<Description>Dependente</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Token>,</Token>
+<Attribute>
+<AttriId>46</AttriId>
+<AttriName>PesDepCodigo</AttriName>
+<Description>Código do dependente</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>ICLIENTEDEPENDENTE</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Token>FirstRecord</Token></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Token>NotEndOfTable</Token></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<Condition>
+<Attribute>
+<AttriId>46</AttriId>
+<AttriName>PesDepCodigo</AttriName>
+<Description>Código do dependente</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Pesdepcodigo</VarId>
+<VarName>&amp;PesDepCodigo</VarName></Variable></Condition></NonOptimizedWhere>
+<JoinLocation>1</JoinLocation>
+<NavigationTree>
+<Table>
+<TableId>2</TableId>
+<TableName>CLIENTEDEPENDENTE</TableName>
+<Description>Dependente</Description>
+<Updated>Yes</Updated>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>46</AttriId>
+<AttriName>PesDepCodigo</AttriName>
+<Description>Código do dependente</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>46</AttriId>
+<AttriName>PesDepCodigo</AttriName>
+<Description>Código do dependente</Description></Attribute></Into>
+<Tables>
+<Table>
+<TableId>1</TableId>
+<TableName>CLIENTE</TableName>
+<Description>Cadastro de clientes.</Description>
+<Updated>Yes</Updated>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>46</AttriId>
+<AttriName>PesDepCodigo</AttriName>
+<Description>Código do dependente</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>PesDepNome</AttriName>
+<Description>Nome do dependente</Description></Attribute></Into>
+<Tables></Tables></Table></Tables></Table></NavigationTree>
+<TablesToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>2</TableId>
+<TableName>CLIENTEDEPENDENTE</TableName>
+<Description>Dependente</Description></Table>
+<TableAction>update</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>46</AttriId>
+<AttriName>PesDepCodigo</AttriName>
+<Description>Código do dependente</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>1</TableId>
+<TableName>CLIENTE</TableName>
+<Description>Cadastro de clientes.</Description></Table>
+<TableAction>update</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>PesDepNome</AttriName>
+<Description>Nome do dependente</Description></Attribute></AttrisToUpdate></TableToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<Levels></Levels></Level></Levels></ObjectSpec>

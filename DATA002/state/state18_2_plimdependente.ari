@@ -1,0 +1,14 @@
+current_obj_i(2,proc,21).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(plimdependente,[],[],[],21).
+ 
+ 
+obj_parms_i([ 'short aP0_Depende' ],[ [ 'Depende',inout ] ]).
+ 
+ 

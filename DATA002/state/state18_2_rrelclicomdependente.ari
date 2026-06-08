@@ -1,0 +1,14 @@
+current_obj_i(2,rpt,10).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(rrelclicomdependente,[],[],[],10).
+ 
+ 
+obj_parms_i([ 'int aP0_PesCodInicial','int aP1_PesCodFinal' ],[ [ 'Pescodinicial',in ],[ 'Pescodfinal',in ] ]).
+ 
+ 

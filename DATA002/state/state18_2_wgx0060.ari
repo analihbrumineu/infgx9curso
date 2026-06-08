@@ -1,0 +1,14 @@
+current_obj_i(2,scr,85).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wgx0060,[],[ subwgx006008 ],[],85).
+ 
+ 
+obj_parms_i([ 'int aP0_pCatCodigo' ],[ [ 'Pcatcodigo',out ] ]).
+ 
+ 

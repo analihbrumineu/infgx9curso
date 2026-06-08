@@ -1,0 +1,14 @@
+current_obj_i(2,rpt,11).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(rrelmidporcategoria,[],[],[],11).
+ 
+ 
+obj_parms_i([ 'short aP0_MidTipo','int aP1_CatCodInicial','int aP2_CatCodFinal' ],[ [ 'Midtipo',in ],[ 'Catcodinicial',in ],[ 'Catcodfinal',in ] ]).
+ 
+ 

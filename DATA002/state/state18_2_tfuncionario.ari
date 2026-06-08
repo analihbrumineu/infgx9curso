@@ -1,0 +1,18 @@
+current_obj_i(2,trn,7).
+ 
+called_tree_i(0,7,1,2).
+called_tree_i(0,7,1,7).
+called_tree_i(0,7,4,18).
+called_tree_i(0,7,4,87).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(tfuncionario,[],[],[],7).
+ 
+ 
+obj_parms_i([ 'int aP0_PesCodigo','String aP1_Gx_mode' ],[ [ 13,in ],[ 'Mode',in ] ]).
+ 
+ 

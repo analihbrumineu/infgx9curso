@@ -1,0 +1,715 @@
+spec_i([ proc,17,'Atualizar locação','AtzLocacao',96,por,'9_0_6-009' ]).
+ 
+struct_i(11,1,[],[]).
+struct_i(10,1,[],[]).
+struct_i(7,1,[],[]).
+struct_i(9,7,[ 86 ],[]).
+struct_i(8,7,[ 86 ],[]).
+struct_i(4,1,[],[]).
+struct_i(6,4,[ 86 ],[]).
+struct_i(5,4,[ 86 ],[]).
+struct_i(2,1,[],[]).
+struct_i(3,2,[ 86 ],[]).
+ 
+level_i(11,[ 9,[ [ 9,many ] ],[],[],[ [ [ 9 ],[ 37,36,116 ] ] ],[ [ [ 9 ],[] ] ],[ 37 ],'IMIDIA',[ 9,[ [ [],'Locmidmidcodigo',37 ] ] ],[] ]).
+level_i(10,[ 9,[ [ 9,many ] ],[],[],[ [ [ 9 ],[ 37,36,116 ] ] ],[ [ [ 9 ],[] ] ],[ 37 ],'IMIDIA',[ 9,[ [ [],'Locmidmidcodigo',37 ] ] ],[] ]).
+level_i(7,[ 12,[ [ 12,many ] ],[],[],[ [ [ 12 ],[ 86,87,90 ] ] ],[ [ [ 12 ],[] ] ],[ 86 ],'ILOCACAO',[ 12,[ [ [],'Loccodigo',86 ] ] ],[] ]).
+level_i(9,[ 13,[ [ 13,many ],[ 520,one ] ],[],[],[ [ [ 13,520 ],[ 86,103,107,108,102 ] ] ],[ [ [ 13,520 ],[] ] ],[ 86 ],'ILOCACAOLOCACAOMIDIA',[ 13,[ [ [],86,86 ] ] ],[] ]).
+level_i(8,[ 13,[ [ 13,many ] ],[],[],[ [ [ 13 ],[ 86,103 ] ] ],[ [ [ 13 ],[] ] ],[ 86 ],'ILOCACAOLOCACAOMIDIA',[ 13,[ [ [],86,86 ] ] ],[] ]).
+level_i(4,[ 12,[ [ 12,many ] ],[],[],[ [ [ 12 ],[ 86,87,89 ] ] ],[ [ [ 12 ],[] ] ],[ 86 ],'ILOCACAO',[ 12,[ [ [],'Loccodigo',86 ] ] ],[] ]).
+level_i(6,[ 13,[ [ 13,many ],[ 520,one ] ],[],[],[ [ [ 13,520 ],[ 86,103,107,108,102 ] ] ],[ [ [ 13,520 ],[] ] ],[ 86 ],'ILOCACAOLOCACAOMIDIA',[ 13,[ [ [],86,86 ] ] ],[] ]).
+level_i(5,[ 13,[ [ 13,many ],[ 520,one ] ],[],[],[ [ [ 13,520 ],[ 86,103,107,108,102 ] ] ],[ [ [ 13,520 ],[] ] ],[ 86 ],'ILOCACAOLOCACAOMIDIA',[ 13,[ [ [],86,86 ] ] ],[] ]).
+level_i(2,[ 12,[ [ 12,many ] ],[],[],[ [ [ 12 ],[ 86,87 ] ] ],[ [ [ 12 ],[] ] ],[ 86 ],'ILOCACAO',[ 12,[ [ [],'Loccodigo',86 ] ] ],[] ]).
+level_i(3,[ 13,[ [ 13,many ],[ 520,one ] ],[],[],[ [ [ 13,520 ],[ 86,103,107,108,102 ] ] ],[ [ [ 13,520 ],[] ] ],[ 86 ],'ILOCACAOLOCACAOMIDIA',[ 13,[ [ [],86,86 ] ] ],[] ]).
+ 
+tw_i(11,[]).
+tw_i(10,[]).
+tw_i(7,[]).
+tw_i(9,[ [ 520,[ [ 13,102,37 ] ] ] ]).
+tw_i(8,[]).
+tw_i(4,[]).
+tw_i(6,[ [ 520,[ [ 13,102,37 ] ] ] ]).
+tw_i(5,[ [ 520,[ [ 13,102,37 ] ] ] ]).
+tw_i(2,[]).
+tw_i(3,[ [ 520,[ [ 13,102,37 ] ] ] ]).
+ 
+lwi_i(11,[ [] ]).
+lwi_i(10,[ [] ]).
+lwi_i(7,[ [ c([ t(87,2),t(=,10),t('Locsituacao',23) ],[ 87 ]) ] ]).
+lwi_i(9,[ [] ]).
+lwi_i(8,[ [] ]).
+lwi_i(4,[ [ c([ t(87,2),t(=,10),t('Locsituacao',23) ],[ 87 ]) ] ]).
+lwi_i(6,[ [] ]).
+lwi_i(5,[ [] ]).
+lwi_i(2,[ [ c([ t(87,2),t(=,10),t('Locsituacao',23) ],[ 87 ]) ] ]).
+lwi_i(3,[ [] ]).
+ 
+ 
+ 
+level_option_i(2,usr_condition,y).
+level_option_i(4,usr_condition,y).
+level_option_i(7,usr_condition,y).
+level_option_i(10,usr_condition,y).
+level_option_i(11,usr_condition,y).
+ 
+ta_i(11,[ [ [ 9,37 ],[ 9,36 ],[ 9,116 ] ] ]).
+ta_i(10,[ [ [ 9,37 ],[ 9,36 ],[ 9,116 ] ] ]).
+ta_i(7,[ [ [ 12,86 ],[ 12,87 ],[ 12,90 ] ] ]).
+ta_i(9,[ [ [ 13,86 ],[ 13,103 ],[ 520,107 ],[ 13,108 ],[ 13,102 ] ] ]).
+ta_i(8,[ [ [ 13,86 ],[ 13,103 ] ] ]).
+ta_i(4,[ [ [ 12,86 ],[ 12,87 ],[ 12,89 ] ] ]).
+ta_i(6,[ [ [ 13,86 ],[ 13,103 ],[ 520,107 ],[ 13,108 ],[ 13,102 ] ] ]).
+ta_i(5,[ [ [ 13,86 ],[ 13,103 ],[ 520,107 ],[ 13,108 ],[ 13,102 ] ] ]).
+ta_i(2,[ [ [ 12,86 ],[ 12,87 ] ] ]).
+ta_i(3,[ [ [ 13,86 ],[ 13,103 ],[ 520,107 ],[ 13,108 ],[ 13,102 ] ] ]).
+ 
+las_i(11,[ [ 37,36,116 ] ]).
+las_i(10,[ [ 37,36,116 ] ]).
+las_i(7,[ [ 86,87,90 ] ]).
+las_i(9,[ [ 86,103,107,108,102 ] ]).
+las_i(8,[ [ 86,103 ] ]).
+las_i(4,[ [ 86,87,89 ] ]).
+las_i(6,[ [ 86,103,107,108,102 ] ]).
+las_i(5,[ [ 86,103,107,108,102 ] ]).
+las_i(2,[ [ 86,87 ] ]).
+las_i(3,[ [ 86,103,107,108,102 ] ]).
+ 
+lac_i(11,[ [] ]).
+lac_i(10,[ [] ]).
+lac_i(7,[ [] ]).
+lac_i(9,[ [] ]).
+lac_i(8,[ [] ]).
+lac_i(4,[ [] ]).
+lac_i(6,[ [] ]).
+lac_i(5,[ [] ]).
+lac_i(2,[ [] ]).
+lac_i(3,[ [] ]).
+ 
+ 
+ 
+ 
+ 
+ 
+default_i(e('Output',2,2,'''SCR''')).
+default_i(e('Today',2,2,'''today''')).
+ 
+rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
+rule_i(0,datastore(1,'LOCK_RETRY','10')).
+rule_i(0,datastore(1,'WAIT_RECORD','0')).
+rule_i(0,datastore(1,'SQLSERVER_VERSION','9')).
+rule_i(0,datastore(1,'DB_NLS_SUPPORT','No')).
+rule_i(0,datastore(1,'COMMENT_ON','No')).
+rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
+rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
+rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
+rule_i(0,datastore(1,'DCL_REF_INT_DB','No')).
+rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
+rule_i(0,datastore(1,'CS_SCHEMA','')).
+rule_i(0,datastore(1,'CC_USER_PASS','')).
+rule_i(0,datastore(1,'CC_USER_ID','')).
+rule_i(0,datastore(1,'CC_SERVER','INF-ANALIH\SQLEXPRESS')).
+rule_i(0,datastore(1,'CC_DBNAME',xlm)).
+rule_i(0,datastore(1,'RecycleRWMin','30')).
+rule_i(0,datastore(1,'RecycleRWType','1')).
+rule_i(0,datastore(1,'RecycleRW','-1')).
+rule_i(0,datastore(1,'POOL_STARTUP','No')).
+rule_i(0,datastore(1,'POOLSIZE_RW','10')).
+rule_i(0,datastore(1,'UnlimitedRWPool','-1')).
+rule_i(0,datastore(1,'PoolRWEnabled','-1')).
+rule_i(0,datastore(1,'CS_RPCPGML','')).
+rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
+rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
+rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
+rule_i(0,datastore(1,'USER_PASSWORD','')).
+rule_i(0,datastore(1,'USER_ID','')).
+rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
+rule_i(0,datastore(1,'CS_CONNECT','First')).
+rule_i(0,datastore(1,'DBMS_PORT','')).
+rule_i(0,datastore(1,'CS_SERVER','INF-ANALIH\SQLEXPRESS')).
+rule_i(0,datastore(1,'CS_DBNAME',xlm)).
+rule_i(0,datastore(1,'CS_FLEDSNAME','')).
+rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DSNAME','')).
+rule_i(0,datastore(1,'DB_URL','')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
+rule_i(0,datastore(1,'JDBC_DRIVER','com.inet.tds.TdsDriver')).
+rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
+rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
+rule_i(0,datastore(1,'MAIN_DS','-1')).
+rule_i(0,datastore(1,'REORG_GEN','8')).
+rule_i(0,datastore(1,'HelpKeyword','23')).
+rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'NAME','Default')).
+rule_i(0,prop('NULLS_BEHAVIOR','CURRENT')).
+rule_i(0,prop('COMPRESS_HTML','UMPV')).
+rule_i(0,prop('CS_ORA_FORUPD','UMPV')).
+rule_i(0,prop('Optimize_copy','UMPV')).
+rule_i(0,prop('NULLVALUE_AS_NULL','UMPV')).
+rule_i(0,prop('INITIALIZE_NEW','UMPV')).
+rule_i(0,prop('JOIN_TYPE','UMPV')).
+rule_i(0,prop('DBMS_JOINS','UMPV')).
+rule_i(0,prop('BEEPONMSG','UMPV')).
+rule_i(0,prop('PRT_DDS','UMPV')).
+rule_i(0,prop('TRNCMT','YES')).
+rule_i(0,prop('EnhancedFindNavigation','UMPV')).
+rule_i(0,prop('SPC_WARNINGS_DISABLED',spc0096)).
+rule_i(0,prop('STD_FUNC_OBJECT','UMPV')).
+rule_i(0,prop('TRNEND','Yes')).
+rule_i(0,prop(idDEST_JNDI_Name,'')).
+rule_i(0,prop(idCON_FACTORY_JNDI_Name,'')).
+rule_i(0,prop(idDEST_Type,idDEST_Type_QUEUE)).
+rule_i(0,prop(idJNDI_Name,'ejb/aAtzLocacao')).
+rule_i(0,prop(idTRN_Attribute,idTRN_Attribute_REQUIRED)).
+rule_i(0,prop(idTRN_Type,idTRN_Type_CONTAINER)).
+rule_i(0,prop('EXECUTE_IN_NEW_UTL','0')).
+rule_i(0,prop('SOAP_NAMESPACE','AgoraVaiCurso')).
+rule_i(0,prop('SOAP_CANCELERROR','YES')).
+rule_i(0,prop('AUTOCENTER','UMPV')).
+rule_i(0,prop('LSTPFOOT','YES')).
+rule_i(0,prop('CANCEL','YES')).
+rule_i(0,prop('CONFIRM','UMPV')).
+rule_i(0,prop('TRNCFM','UMPV')).
+rule_i(0,prop('OUTPUT','ASK')).
+rule_i(0,prop('DKL_BIG_IMAGE','')).
+rule_i(0,prop('DKL_SMALL_IMAGE','')).
+rule_i(0,prop('DKL_IMAGE','')).
+rule_i(0,prop('DKL_STOREDPROCEDURE','')).
+rule_i(0,prop('DKL_ACTIONS','')).
+rule_i(0,prop('DKL_READ_UNCOMMITED_DP','No')).
+rule_i(0,prop('DKL_DATASET_TOUSE','')).
+rule_i(0,prop('DKL_PERMISSION_BASE_ID','0')).
+rule_i(0,prop('DKL_VERSION','2100')).
+rule_i(0,prop('DKL_REF_BY_CANDIDATE','0')).
+rule_i(0,prop('DKL_BUILTIN_PROPERTIES','')).
+rule_i(0,prop('DKL_ROLES','')).
+rule_i(0,prop('DKL_CUSTOM_PROPERTIES','')).
+rule_i(0,prop('USER_METADATA','')).
+rule_i(0,prop('WORKFLOW_METADATA','')).
+rule_i(0,prop('DEKLARIT_TYPE','-1')).
+rule_i(0,prop('DKL_LAYOUT','')).
+rule_i(0,prop('DKL_DEPENDENCIES_PROPS','')).
+rule_i(0,prop('OBJECT_METADATA','')).
+rule_i(0,prop('DEKLARIT_METADATA','')).
+rule_i(0,prop('HelpKeyword','5')).
+rule_i(0,prop('ObjPurpose','')).
+rule_i(0,prop('ObjBuyer','')).
+rule_i(0,prop('ObjCopyright','')).
+rule_i(0,prop('ObjIsPrivate','0')).
+rule_i(0,prop('ObjAlreadyPrivate','0')).
+rule_i(0,prop('AppGenerator','Default')).
+rule_i(0,prop('AppLocation','')).
+rule_i(0,prop('AppIcon','')).
+rule_i(0,prop('AppTitle','')).
+rule_i(0,prop('CALL_PROTOCOL','INTERNAL')).
+rule_i(0,prop('IsMain','0')).
+rule_i(0,prop(idISBCEJB,'0')).
+rule_i(0,prop('ObjStyle','Default')).
+rule_i(0,prop('ObjFolder','Default')).
+rule_i(0,prop('ObjIsStyle','0')).
+rule_i(0,prop('ObjDesc','')).
+rule_i(0,prop('ObjName','AtzLocacao')).
+rule_i(0,prop('ObjId','0')).
+rule_i(0,maingen(18)).
+rule_i(0,parm([ 'Y','Loccodigo','Atzlocacao','Locsituacao','Msgerro' ],[])).
+rule_i(0,parmio([ [ 'Y',in ],[ 'Loccodigo',inout ],[ 'Atzlocacao',in ],[ 'Locsituacao',inout ],[ 'Msgerro',out ] ])).
+rule_i(0,output('SCR')).
+rule_i(0,output('PRN')).
+rule_i(0,output('ASK')).
+ 
+a_i(1,1,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
+a_i(2,1,f,'Err',[],[ [],[ t('0',3) ] ]).
+a_i(3,3,t,13,[],[ [ [ [],86,86 ] ],'ILOCACAOLOCACAOMIDIA',[] ]).
+a_i(4,3,r,520,[],[ [ [ 13,102,37 ] ],'IMIDIA',[] ]).
+a_i(5,2,t,12,[],[ [ [ [],'Loccodigo',86 ] ],'ILOCACAO',[] ]).
+a_i(6,2,c,0,[],[ c([ t(87,2),t(=,10),t('Locsituacao',23) ],[ 87 ]) ]).
+a_i(7,5,t,13,[],[ [ [ [],86,86 ] ],'ILOCACAOLOCACAOMIDIA',[] ]).
+a_i(8,5,r,520,[],[ [ [ 13,102,37 ] ],'IMIDIA',[] ]).
+a_i(9,6,t,13,[],[ [ [ [],86,86 ] ],'ILOCACAOLOCACAOMIDIA',[] ]).
+a_i(10,6,r,520,[],[ [ [ 13,102,37 ] ],'IMIDIA',[] ]).
+a_i(11,4,t,12,[],[ [ [ [],'Loccodigo',86 ] ],'ILOCACAO',[] ]).
+a_i(12,4,c,0,[],[ c([ t(87,2),t(=,10),t('Locsituacao',23) ],[ 87 ]) ]).
+a_i(13,8,t,13,[],[ [ [ [],86,86 ] ],'ILOCACAOLOCACAOMIDIA',[] ]).
+a_i(14,9,t,13,[],[ [ [ [],86,86 ] ],'ILOCACAOLOCACAOMIDIA',[] ]).
+a_i(15,9,r,520,[],[ [ [ 13,102,37 ] ],'IMIDIA',[] ]).
+a_i(16,7,t,12,[],[ [ [ [],'Loccodigo',86 ] ],'ILOCACAO',[] ]).
+a_i(17,7,c,0,[],[ c([ t(87,2),t(=,10),t('Locsituacao',23) ],[ 87 ]) ]).
+a_i(18,10,t,9,[],[ [ [ [],'Locmidmidcodigo',37 ] ],'IMIDIA',[] ]).
+a_i(19,11,t,9,[],[ [ [ [],'Locmidmidcodigo',37 ] ],'IMIDIA',[] ]).
+ 
+v_i(f,i,1,[]).
+v_i(f,o,1,'Today').
+v_i(f,i,2,[]).
+v_i(f,o,2,'Err').
+v_i(t,i,3,86).
+v_i(t,o,3,103).
+v_i(t,o,3,108).
+v_i(t,o,3,102).
+v_i(r,i,4,102).
+v_i(r,o,4,107).
+v_i(t,i,5,'Loccodigo').
+v_i(t,o,5,86).
+v_i(t,o,5,87).
+v_i(c,i,6,87).
+v_i(c,o,6,[]).
+v_i(t,i,7,86).
+v_i(t,o,7,103).
+v_i(t,o,7,108).
+v_i(t,o,7,102).
+v_i(r,i,8,102).
+v_i(r,o,8,107).
+v_i(t,i,9,86).
+v_i(t,o,9,103).
+v_i(t,o,9,108).
+v_i(t,o,9,102).
+v_i(r,i,10,102).
+v_i(r,o,10,107).
+v_i(t,i,11,'Loccodigo').
+v_i(t,o,11,86).
+v_i(t,o,11,87).
+v_i(t,o,11,89).
+v_i(c,i,12,87).
+v_i(c,o,12,[]).
+v_i(t,i,13,86).
+v_i(t,o,13,103).
+v_i(t,i,14,86).
+v_i(t,o,14,103).
+v_i(t,o,14,108).
+v_i(t,o,14,102).
+v_i(r,i,15,102).
+v_i(r,o,15,107).
+v_i(t,i,16,'Loccodigo').
+v_i(t,o,16,86).
+v_i(t,o,16,87).
+v_i(t,o,16,90).
+v_i(c,i,17,87).
+v_i(c,o,17,[]).
+v_i(t,i,18,'Locmidmidcodigo').
+v_i(t,o,18,37).
+v_i(t,o,18,36).
+v_i(t,o,18,116).
+v_i(t,i,19,'Locmidmidcodigo').
+v_i(t,o,19,37).
+v_i(t,o,19,36).
+v_i(t,o,19,116).
+ 
+ 
+ 
+ 
+ 
+attri_i('Output',[ 'Gx_out',char,3,0,'',1,'','',33 ]).
+attri_i(37,[ 'MidCodigo',int,9,0,'ZZZZZZZZ9',0,'Código da mídia','',0 ]).
+attri_i(36,[ 'MidSituacao',int,1,0,'9',0,'Situação da mídia','',0 ]).
+attri_i(116,[ 'LocCodLocCodigo',int,9,0,'ZZZZZZZZ9',0,'Código da locação','',0 ]).
+attri_i(90,[ 'LocDatCancelamento',date,8,0,'99/99/9999',0,'Data de cancelamento','',0 ]).
+attri_i(89,[ 'LocDatDevolucao',date,8,0,'99/99/9999',0,'Data da devolução','',0 ]).
+attri_i('Today',[ 'Gx_date',date,8,0,'99/99/99',1,'','',26 ]).
+attri_i(87,[ 'LocSituacao',int,1,0,'9',0,'Situação da locação','',0 ]).
+attri_i(103,[ 'LocMidFilCodigo',int,9,0,'ZZZZZZZZ9',0,'Código do filme a ser locado','',0 ]).
+attri_i(107,[ 'LocMidMidSituacao',int,1,0,'9',0,'Situação da mídia a ser locada','',0 ]).
+attri_i(108,[ 'LocMidMidLocCodigo',int,9,0,'ZZZZZZZZ9',0,'Código da locação da mídia a ser locada','',0 ]).
+attri_i(86,[ 'LocCodigo',int,9,0,'ZZZZZZZZ9',0,'Código da locação','',0 ]).
+attri_i(102,[ 'LocMidMidCodigo',int,9,0,'ZZZZZZZZ9',0,'Código da mídia a ser locada','',0 ]).
+attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',21 ]).
+attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',20 ]).
+attri_i('Msgerro',[ 'MsgErro',svchar,300,0,'',0,'Msg Erro','',19 ]).
+attri_i('Locmidmidconfvalor',[ 'LocMidMidConfValor',int,12,2,'ZZZ,ZZZ,ZZ9.99',0,'Loc Mid Mid Conf Valor','',18 ]).
+attri_i('Total',[ 'Total',int,12,2,'ZZZ,ZZZ,ZZ9.99',0,'Total','',17 ]).
+attri_i('Podelocar',[ 'PodeLocar',int,1,0,'9',0,'Pode Locar','',16 ]).
+attri_i('Loccodloccodigo',[ 'LocCodLocCodigo',int,9,0,'ZZZZZZZZ9',0,'Loc Cod Loc Codigo','',15 ]).
+attri_i('Y',[ 'Y',int,1,0,'9',0,'Y','',14 ]).
+attri_i('Locmidmidcodigo',[ 'LocMidMidCodigo',int,9,0,'ZZZZZZZZ9',0,'Loc Mid Mid Codigo','',13 ]).
+attri_i('Locou',[ 'Locou',int,1,0,'9',0,'Locou','',12 ]).
+attri_i('Locsituacao',[ 'LocSituacao',int,1,0,'9',0,'Loc Situacao','',11 ]).
+attri_i('Marcado',[ 'Marcado',char,1,0,'@!',0,'Marcado','',10 ]).
+attri_i('Loccodigo',[ 'LocCodigo',int,9,0,'ZZZZZZZZ9',0,'Loc Codigo','',9 ]).
+attri_i('Atzlocacao',[ 'AtzLocacao',int,1,0,'9',0,'Atz Locacao','',8 ]).
+ 
+table_i(520,[ 'MIDIA',[ 102,107 ],'Cadastro de mídias.','Midia' ]).
+table_i(13,[ 'LOCACAOLOCACAOMIDIA',[ 86,102,103,108 ],'Dados da mídia locada','LocacaoLocacaoMidia' ]).
+table_i(12,[ 'LOCACAO',[ 86,87,89,90 ],'Cadastro de locações.','Locacao' ]).
+table_i(9,[ 'MIDIA',[ 37,36,116 ],'Cadastro de mídias.','Midia' ]).
+ 
+index_i(13,[ 'ILOCACAOLOCACAOMIDIA',u,[ 86,102 ],'ILocacaoLocacaoMidia' ]).
+index_i(520,[ 'IMIDIA',u,[ 102 ],'IMidia' ]).
+index_i(12,[ 'ILOCACAO',u,[ 86 ],'ILocacao' ]).
+index_i(9,[ 'IMIDIA',u,[ 37 ],'IMidia' ]).
+ 
+ 
+ 
+ 
+upd_i(3,520,u,[ [ 107 ],[],'IMIDIA',[ [ 13,102,37 ] ] ]).
+upd_i(3,13,u,[ [ 108 ],[],'ILOCACAOLOCACAOMIDIA',[] ]).
+upd_i(2,12,u,[ [ 87 ],[],'ILOCACAO',[] ]).
+upd_i(5,520,u,[ [ 107 ],[],'IMIDIA',[ [ 13,102,37 ] ] ]).
+upd_i(5,13,u,[ [ 108 ],[],'ILOCACAOLOCACAOMIDIA',[] ]).
+upd_i(6,520,u,[ [ 107 ],[],'IMIDIA',[ [ 13,102,37 ] ] ]).
+upd_i(6,13,u,[ [ 108 ],[],'ILOCACAOLOCACAOMIDIA',[] ]).
+upd_i(4,12,u,[ [ 87,89 ],[],'ILOCACAO',[] ]).
+upd_i(8,13,d,[ [],[],'ILOCACAOLOCACAOMIDIA',[] ]).
+upd_i(9,520,u,[ [ 107 ],[],'IMIDIA',[ [ 13,102,37 ] ] ]).
+upd_i(9,13,u,[ [ 108 ],[],'ILOCACAOLOCACAOMIDIA',[] ]).
+upd_i(7,12,d,[ [],[],'ILOCACAO',[] ]).
+upd_i(7,12,u,[ [ 87,90 ],[],'ILOCACAO',[] ]).
+upd_i(10,9,u,[ [ 36,116 ],[],'IMIDIA',[] ]).
+upd_i(11,9,u,[ [ 36,116 ],[],'IMIDIA',[] ]).
+ 
+ 
+start_i(11,0,0,[ [ [ 37,23,'Locmidmidcodigo',= ] ],one ]).
+start_i(10,0,0,[ [ [ 37,23,'Locmidmidcodigo',= ] ],one ]).
+start_i(7,0,0,[ [ [ 86,23,'Loccodigo',= ] ],one ]).
+start_i(9,0,0,[ [ [ 86,2,86,= ] ],many ]).
+start_i(8,0,0,[ [ [ 86,2,86,= ] ],many ]).
+start_i(4,0,0,[ [ [ 86,23,'Loccodigo',= ] ],one ]).
+start_i(6,0,0,[ [ [ 86,2,86,= ] ],many ]).
+start_i(5,0,0,[ [ [ 86,2,86,= ] ],many ]).
+start_i(2,0,0,[ [ [ 86,23,'Loccodigo',= ] ],one ]).
+start_i(3,0,0,[ [ [ 86,2,86,= ] ],many ]).
+ 
+end_i(11,0,0,[ [ [ t(37,2),t(=,10),t('Locmidmidcodigo',23) ] ] ]).
+end_i(10,0,0,[ [ [ t(37,2),t(=,10),t('Locmidmidcodigo',23) ] ] ]).
+end_i(7,0,0,[ [ [ t(86,2),t(=,10),t('Loccodigo',23) ] ] ]).
+end_i(9,0,0,[ [ [ t(86,2),t(=,10),t(86,23) ] ] ]).
+end_i(8,0,0,[ [ [ t(86,2),t(=,10),t(86,23) ] ] ]).
+end_i(4,0,0,[ [ [ t(86,2),t(=,10),t('Loccodigo',23) ] ] ]).
+end_i(6,0,0,[ [ [ t(86,2),t(=,10),t(86,23) ] ] ]).
+end_i(5,0,0,[ [ [ t(86,2),t(=,10),t(86,23) ] ] ]).
+end_i(2,0,0,[ [ [ t(86,2),t(=,10),t('Loccodigo',23) ] ] ]).
+end_i(3,0,0,[ [ [ t(86,2),t(=,10),t(86,23) ] ] ]).
+ 
+ 
+map_i(520,a,107,[ 'MidSituacao' ]).
+map_i(520,a,102,[ 'MidCodigo' ]).
+ 
+ 
+ 
+ 
+ 
+break_i(3,nvg,2,[],[ [ 102,86,108,107,103 ],[],[] ]).
+break_i(2,nvg,1,[],[ [ 87 ],[ 86,87 ],[] ]).
+break_i(5,nvg,4,[],[ [ 86,102,108,107,103 ],[],[] ]).
+break_i(6,nvg,4,[],[ [ 86,102,108,107,103 ],[],[] ]).
+break_i(4,nvg,1,[],[ [ 89,86,87 ],[ 86,87 ],[] ]).
+break_i(8,nvg,7,[],[ [ 103 ],[],[] ]).
+break_i(9,nvg,7,[],[ [ 102,86,108,107,103 ],[],[] ]).
+break_i(7,nvg,1,[],[ [ 90,87 ],[ 87,86 ],[] ]).
+break_i(10,nvg,1,[],[ [ 116,36 ],[ 37 ],[] ]).
+break_i(11,nvg,1,[],[ [ 116,36 ],[ 37 ],[] ]).
+break_i(1,rpt,0,[],[ [],[],[] ]).
+ 
+b_group_i(1,1,lit,0,1,0).
+b_group_i(1,2,nvg,2,2,2).
+b_group_i(2,1,lit,0,3,3).
+b_group_i(2,2,nvg,3,8,8).
+b_group_i(3,1,lit,0,9,9).
+b_group_i(2,3,lit,0,22,17).
+b_group_i(1,3,lit,0,24,22).
+b_group_i(1,4,nvg,4,28,28).
+b_group_i(4,1,lit,0,29,29).
+b_group_i(4,2,nvg,5,38,38).
+b_group_i(5,1,lit,0,39,39).
+b_group_i(4,3,lit,0,48,39).
+b_group_i(4,4,nvg,6,58,58).
+b_group_i(6,1,lit,0,59,59).
+b_group_i(4,5,lit,0,68,49).
+b_group_i(1,5,lit,0,72,66).
+b_group_i(1,6,nvg,7,75,75).
+b_group_i(7,1,lit,0,76,76).
+b_group_i(7,2,nvg,8,80,80).
+b_group_i(8,1,lit,0,81,81).
+b_group_i(7,3,lit,0,84,80).
+b_group_i(7,4,nvg,9,91,91).
+b_group_i(9,1,lit,0,92,92).
+b_group_i(7,5,lit,0,101,90).
+b_group_i(1,7,lit,0,105,96).
+b_group_i(1,8,nvg,10,109,109).
+b_group_i(10,1,lit,0,110,110).
+b_group_i(1,9,lit,0,115,102).
+b_group_i(1,10,nvg,11,120,120).
+b_group_i(11,1,lit,0,121,121).
+b_group_i(1,11,lit,0,126,0).
+ 
+b_line_i(0,1,1,cmd,0,[ t('',109,0,0),t('Y',23,0,3),t(=,10,0,6),t('1',3,0,8) ]).
+b_line_i(1,1,1,cmd,0,[]).
+b_line_i(2,2,1,cmd,3,[ t('',121,2,0) ]).
+b_line_i(5,2,1,cmd,3,[]).
+b_line_i(6,2,1,cmd,3,[ t('',107,3,0),t(87,2,3,0),t(=,10,3,0),t('2',3,3,0) ]).
+b_line_i(7,2,1,cmd,3,[]).
+b_line_i(8,3,1,cmd,9,[ t('',121,8,0) ]).
+b_line_i(9,3,1,cmd,9,[ t('',112,9,0),t(103,2,9,23) ]).
+b_line_i(10,3,1,cmd,9,[]).
+b_line_i(11,3,1,cmd,9,[ t('',109,9,0),t(107,2,9,15),t(<>,10,9,33),t('2',3,9,36) ]).
+b_line_i(12,3,1,cmd,9,[ t('',107,9,0),t(107,2,9,0),t(=,10,9,0),t('2',3,9,0) ]).
+b_line_i(13,3,1,cmd,9,[ t('',107,9,0),t(108,2,9,0),t(=,10,9,0),t('Loccodigo',23,9,0) ]).
+b_line_i(14,3,1,cmd,9,[]).
+b_line_i(15,3,1,cmd,9,[ t('',107,9,0),t('Loccodloccodigo',23,9,0),t(=,10,9,0),t(86,2,9,0) ]).
+b_line_i(16,3,1,cmd,9,[ t('',107,9,0),t('Locmidmidcodigo',23,9,0),t(=,10,9,0),t(102,2,9,0) ]).
+b_line_i(17,3,1,cmd,9,[]).
+b_line_i(18,3,1,cmd,9,[ t('',145,9,0),t('''LOCARMIDIA''',3,18,19) ]).
+b_line_i(19,3,1,cmd,9,[ t('',111,9,0) ]).
+b_line_i(20,3,1,cmd,9,[]).
+b_line_i(21,3,1,cmd,9,[ t('',128,9,0) ]).
+b_line_i(22,2,3,cmd,17,[]).
+b_line_i(23,2,3,cmd,17,[ t('',128,17,0) ]).
+b_line_i(24,1,3,cmd,22,[]).
+b_line_i(25,1,3,cmd,22,[ t('',111,22,0) ]).
+b_line_i(26,1,3,cmd,22,[]).
+b_line_i(27,1,3,cmd,22,[ t('',109,22,0),t('Atzlocacao',23,22,3),t(=,10,22,15),t('1',3,22,17) ]).
+b_line_i(28,4,1,cmd,29,[ t('',121,28,0) ]).
+b_line_i(31,4,1,cmd,29,[]).
+b_line_i(32,4,1,cmd,29,[ t('',109,29,0),t(87,2,29,11),t(=,10,29,23),t('1',3,29,25) ]).
+b_line_i(33,4,1,cmd,29,[]).
+b_line_i(34,4,1,cmd,29,[ t('',104,29,0),t(o(1,'PeValMidias'),28,29,11),t(86,2,29,29),t(',',7,29,38),t('Msgerro',23,29,40) ]).
+b_line_i(35,4,1,cmd,29,[]).
+b_line_i(36,4,1,cmd,29,[ t('',109,29,0),t('null(',1,36,23),t('Msgerro',23,29,14),t(')',4,29,31) ]).
+b_line_i(37,4,1,cmd,29,[]).
+b_line_i(38,5,1,cmd,39,[ t('',121,38,0) ]).
+b_line_i(39,5,1,cmd,39,[ t('',112,39,0),t(103,2,39,31) ]).
+b_line_i(40,5,1,cmd,39,[ t('',107,39,0),t(107,2,39,0),t(=,10,39,0),t('2',3,39,0) ]).
+b_line_i(41,5,1,cmd,39,[ t('',107,39,0),t(108,2,39,0),t(=,10,39,0),t('Loccodigo',23,39,0) ]).
+b_line_i(42,5,1,cmd,39,[]).
+b_line_i(43,5,1,cmd,39,[ t('',107,39,0),t('Locmidmidcodigo',23,39,0),t(=,10,39,0),t(102,2,39,0) ]).
+b_line_i(44,5,1,cmd,39,[ t('',107,39,0),t('Loccodloccodigo',23,39,0),t(=,10,39,0),t(86,2,39,0) ]).
+b_line_i(45,5,1,cmd,39,[ t('',145,39,0),t('''LOCARMIDIA''',3,45,23) ]).
+b_line_i(46,5,1,cmd,39,[]).
+b_line_i(47,5,1,cmd,39,[ t('',128,39,0) ]).
+b_line_i(48,4,3,cmd,39,[]).
+b_line_i(49,4,3,cmd,39,[ t('',107,39,0),t(87,2,39,0),t(=,10,39,0),t('2',3,39,0) ]).
+b_line_i(50,4,3,cmd,39,[]).
+b_line_i(51,4,3,cmd,39,[ t('',111,39,0) ]).
+b_line_i(52,4,3,cmd,39,[]).
+b_line_i(53,4,3,cmd,39,[ t('',110,39,0) ]).
+b_line_i(54,4,3,cmd,39,[ t('',109,39,0),t(87,2,39,15),t(=,10,39,27),t('2',3,39,29) ]).
+b_line_i(55,4,3,cmd,39,[ t('',107,39,0),t(87,2,39,0),t(=,10,39,0),t('3',3,39,0) ]).
+b_line_i(56,4,3,cmd,39,[ t('',107,39,0),t(89,2,39,0),t(=,10,39,0),t('Today',23,39,0) ]).
+b_line_i(57,4,3,cmd,39,[]).
+b_line_i(58,6,1,cmd,59,[ t('',121,58,0) ]).
+b_line_i(59,6,1,cmd,59,[ t('',112,59,0),t(103,2,59,31) ]).
+b_line_i(60,6,1,cmd,59,[]).
+b_line_i(61,6,1,cmd,59,[ t('',107,59,0),t(107,2,59,0),t(=,10,59,0),t('1',3,59,0) ]).
+b_line_i(62,6,1,cmd,59,[ t('',107,59,0),t(108,2,59,0),t(=,10,59,0),t('0',3,59,0) ]).
+b_line_i(63,6,1,cmd,59,[]).
+b_line_i(64,6,1,cmd,59,[ t('',107,59,0),t('Locmidmidcodigo',23,59,0),t(=,10,59,0),t(102,2,59,0) ]).
+b_line_i(65,6,1,cmd,59,[ t('',107,59,0),t('Loccodloccodigo',23,59,0),t(=,10,59,0),t(86,2,59,0) ]).
+b_line_i(66,6,1,cmd,59,[ t('',145,59,0),t('''LIBERARMIDIA''',3,66,23) ]).
+b_line_i(67,6,1,cmd,59,[ t('',128,59,0) ]).
+b_line_i(68,4,5,cmd,49,[ t('',111,49,0) ]).
+b_line_i(69,4,5,cmd,49,[]).
+b_line_i(70,4,5,cmd,49,[ t('',111,49,0) ]).
+b_line_i(71,4,5,cmd,49,[ t('',128,49,0) ]).
+b_line_i(72,1,5,cmd,66,[ t('',111,66,0) ]).
+b_line_i(73,1,5,cmd,66,[]).
+b_line_i(74,1,5,cmd,66,[ t('',109,66,0),t('Atzlocacao',23,66,3),t(=,10,66,15),t('2',3,66,17) ]).
+b_line_i(75,7,1,cmd,76,[ t('',121,75,0) ]).
+b_line_i(78,7,1,cmd,76,[]).
+b_line_i(79,7,1,cmd,76,[ t('',109,76,0),t(87,2,76,11),t(=,10,76,23),t('1',3,76,25) ]).
+b_line_i(80,8,1,cmd,81,[ t('',121,80,0) ]).
+b_line_i(81,8,1,cmd,81,[ t('',112,81,0),t(103,2,81,27) ]).
+b_line_i(82,8,1,cmd,81,[ t('',113,81,0) ]).
+b_line_i(83,8,1,cmd,81,[ t('',128,81,0) ]).
+b_line_i(84,7,3,cmd,80,[]).
+b_line_i(85,7,3,cmd,80,[ t('',113,80,0) ]).
+b_line_i(86,7,3,cmd,80,[ t('',110,80,0) ]).
+b_line_i(87,7,3,cmd,80,[ t('',109,80,0),t(87,2,80,15),t(=,10,80,27),t('2',3,80,29) ]).
+b_line_i(88,7,3,cmd,80,[ t('',107,80,0),t(87,2,80,0),t(=,10,80,0),t('4',3,80,0) ]).
+b_line_i(89,7,3,cmd,80,[ t('',107,80,0),t(90,2,80,0),t(=,10,80,0),t('Today',23,80,0) ]).
+b_line_i(90,7,3,cmd,80,[]).
+b_line_i(91,9,1,cmd,92,[ t('',121,91,0) ]).
+b_line_i(92,9,1,cmd,92,[ t('',112,92,0),t(103,2,92,31) ]).
+b_line_i(93,9,1,cmd,92,[]).
+b_line_i(94,9,1,cmd,92,[ t('',107,92,0),t(107,2,92,0),t(=,10,92,0),t('1',3,92,0) ]).
+b_line_i(95,9,1,cmd,92,[ t('',107,92,0),t(108,2,92,0),t(=,10,92,0),t('0',3,92,0) ]).
+b_line_i(96,9,1,cmd,92,[]).
+b_line_i(97,9,1,cmd,92,[ t('',107,92,0),t('Loccodloccodigo',23,92,0),t(=,10,92,0),t(86,2,92,0) ]).
+b_line_i(98,9,1,cmd,92,[ t('',107,92,0),t('Locmidmidcodigo',23,92,0),t(=,10,92,0),t(102,2,92,0) ]).
+b_line_i(99,9,1,cmd,92,[ t('',145,92,0),t('''LIBERARMIDIA''',3,99,23) ]).
+b_line_i(100,9,1,cmd,92,[ t('',128,92,0) ]).
+b_line_i(101,7,5,cmd,90,[ t('',111,90,0) ]).
+b_line_i(102,7,5,cmd,90,[ t('',111,90,0) ]).
+b_line_i(103,7,5,cmd,90,[]).
+b_line_i(104,7,5,cmd,90,[ t('',128,90,0) ]).
+b_line_i(105,1,7,cmd,96,[]).
+b_line_i(106,1,7,cmd,96,[ t('',111,96,0) ]).
+b_line_i(107,1,7,cmd,96,[]).
+b_line_i(108,1,7,cmd,96,[ t('',143,96,0),t('''LOCARMIDIA''',3,108,4) ]).
+b_line_i(109,10,1,cmd,110,[ t('',121,109,0) ]).
+b_line_i(111,10,1,cmd,110,[]).
+b_line_i(112,10,1,cmd,110,[ t('',107,110,0),t(36,2,110,0),t(=,10,110,0),t('2',3,110,0) ]).
+b_line_i(113,10,1,cmd,110,[ t('',107,110,0),t(116,2,110,0),t(=,10,110,0),t('Loccodloccodigo',23,110,0) ]).
+b_line_i(114,10,1,cmd,110,[ t('',128,110,0) ]).
+b_line_i(115,1,9,cmd,102,[]).
+b_line_i(116,1,9,cmd,102,[ t('',132,102,0) ]).
+b_line_i(117,1,9,cmd,102,[ t('',144,102,0) ]).
+b_line_i(118,1,9,cmd,102,[]).
+b_line_i(119,1,9,cmd,102,[ t('',143,102,0),t('''LIBERARMIDIA''',3,119,4) ]).
+b_line_i(120,11,1,cmd,121,[ t('',121,120,0) ]).
+b_line_i(122,11,1,cmd,121,[]).
+b_line_i(123,11,1,cmd,121,[ t('',107,121,0),t(36,2,121,0),t(=,10,121,0),t('1',3,121,0) ]).
+b_line_i(124,11,1,cmd,121,[ t('',107,121,0),t(116,2,121,0),t(=,10,121,0),t('0',3,121,0) ]).
+b_line_i(125,11,1,cmd,121,[ t('',128,121,0) ]).
+b_line_i(126,1,11,cmd,108,[ t('',144,108,0) ]).
+ 
+ 
+ 
+ 
+page_layout_i([ 66,0,6 ]).
+ 
+ 
+ 
+paper_info_i([ 0,9,'A4',11906,16838,0,0,0,0,1 ]).
+ 
+ppi_i([ 96,96 ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+warn_gen_i(msg(spc0060,[ 'The program may be called by another program and the Commit on Exit property is set to YES' ])).
+ 
+ 
+grid_i(7,15).
+ 
+ 
+ 
+form_class_i(1,'Graphic').
+ 
+ 
+ 
+ 
+calling_main_i(4,1).
+ 
+att_prop_i(2,102,'AUTONUMBER','-1',d).
+att_prop_i(2,102,'AUTONUMBER_START','1',d).
+att_prop_i(2,102,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,102,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,102,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,102,'AUTOGENERATE_GUID','0',d).
+att_prop_i(2,102,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,102,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
+att_prop_i(2,102,'FullName','LocMidMidCodigo',v).
+att_prop_i(2,86,'AUTONUMBER','-1',d).
+att_prop_i(2,86,'AUTONUMBER_START','1',d).
+att_prop_i(2,86,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,86,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,86,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,86,'AUTOGENERATE_GUID','0',d).
+att_prop_i(2,86,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,86,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
+att_prop_i(2,86,'FullName','LocCodigo',v).
+att_prop_i(2,108,'AUTONUMBER','0',d).
+att_prop_i(2,108,'AUTONUMBER_START','1',d).
+att_prop_i(2,108,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,108,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,108,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,108,'AUTOGENERATE_GUID','0',d).
+att_prop_i(2,108,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,108,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
+att_prop_i(2,108,'FullName','LocMidMidLocCodigo',v).
+att_prop_i(2,107,'AUTONUMBER','0',d).
+att_prop_i(2,107,'AUTONUMBER_START','1',d).
+att_prop_i(2,107,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,107,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,107,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,107,'AUTOGENERATE_GUID','0',d).
+att_prop_i(2,107,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,107,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
+att_prop_i(2,107,'FullName','LocMidMidSituacao',v).
+att_prop_i(2,103,'AUTONUMBER','-1',d).
+att_prop_i(2,103,'AUTONUMBER_START','1',d).
+att_prop_i(2,103,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,103,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,103,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,103,'AUTOGENERATE_GUID','0',d).
+att_prop_i(2,103,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,103,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
+att_prop_i(2,103,'FullName','LocMidFilCodigo',v).
+att_prop_i(2,87,'AUTONUMBER','0',d).
+att_prop_i(2,87,'AUTONUMBER_START','1',d).
+att_prop_i(2,87,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,87,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,87,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,87,'AUTOGENERATE_GUID','0',d).
+att_prop_i(2,87,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,87,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
+att_prop_i(2,87,'FullName','LocSituacao',v).
+att_prop_i(2,89,'AUTONUMBER_START','1',d).
+att_prop_i(2,89,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,89,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,89,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,89,'AUTOGENERATE_GUID','0',d).
+att_prop_i(2,89,idDATEFORMAT,idDATEFORMAT_LONG,d).
+att_prop_i(2,89,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
+att_prop_i(2,89,'FullName','LocDatDevolucao',v).
+att_prop_i(2,90,'AUTONUMBER_START','1',d).
+att_prop_i(2,90,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,90,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,90,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,90,'AUTOGENERATE_GUID','0',d).
+att_prop_i(2,90,idDATEFORMAT,idDATEFORMAT_LONG,d).
+att_prop_i(2,90,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
+att_prop_i(2,90,'FullName','LocDatCancelamento',v).
+att_prop_i(2,116,'AUTONUMBER','-1',d).
+att_prop_i(2,116,'AUTONUMBER_START','1',d).
+att_prop_i(2,116,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,116,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,116,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,116,'AUTOGENERATE_GUID','0',d).
+att_prop_i(2,116,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,116,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
+att_prop_i(2,116,'FullName','LocCodLocCodigo',v).
+att_prop_i(2,36,'AUTONUMBER','0',d).
+att_prop_i(2,36,'AUTONUMBER_START','1',d).
+att_prop_i(2,36,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,36,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,36,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,36,'AUTOGENERATE_GUID','0',d).
+att_prop_i(2,36,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,36,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
+att_prop_i(2,36,'FullName','MidSituacao',v).
+att_prop_i(2,37,'AUTONUMBER','-1',d).
+att_prop_i(2,37,'AUTONUMBER_START','1',d).
+att_prop_i(2,37,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,37,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,37,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,37,'AUTOGENERATE_GUID','0',d).
+att_prop_i(2,37,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,37,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
+att_prop_i(2,37,'FullName','MidCodigo',v).
+ 
+tbl_prop_i(2,13,'AllDirSuper',[ [ 520,[ 102 ] ],[ 12,[ 86 ] ] ],v).
+tbl_prop_i(2,520,'DirSubor',[ [ 13,[ 102 ] ] ],v).
+tbl_prop_i(2,12,'DirSubor',[ [ 13,[ 86 ] ],[ 9,[ 116 ] ] ],v).
+tbl_prop_i(2,9,'DirSubor',[ [ 13,[ 102 ] ] ],v).
+tbl_prop_i(2,13,'DirSuper',[ [ 520,[ 102 ] ],[ 12,[ 86 ] ] ],v).
+ 
+tbl_att_prop_i(2,13,86,'AllowNulls',n).
+tbl_att_prop_i(2,13,102,'AllowNulls',n).
+tbl_att_prop_i(2,520,102,'AllowNulls',n).
+tbl_att_prop_i(2,12,86,'AllowNulls',n).
+tbl_att_prop_i(2,12,86,'AUTONUMBER',y).
+tbl_att_prop_i(2,9,37,'AllowNulls',n).
+tbl_att_prop_i(2,9,37,'AUTONUMBER',y).
+ 
+ 
+ 
+a_alias_i(102,'LocMidMidCodigo').
+a_alias_i(107,'LocMidMidSituacao').
+ 
+ 
+ 
+ 
+ 
+pgm_parm_i(proc,19,'PPEVALMIDIAS',[ [ int,9,0,0 ],[ svchar,300,0,0 ] ],[ [ 'LocCodigo',in,[] ],[ 'MsgErro',out,[] ] ]).
+ 
+ 
+ 
+ 
+ 

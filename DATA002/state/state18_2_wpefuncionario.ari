@@ -1,0 +1,15 @@
+current_obj_i(2,scr,56).
+ 
+called_tree_i(4,56,0,7).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wpefuncionario,[],[ subwpefuncionario02 ],[ type_SdtSDTFuncionario,'GxObjectCollection' ],56).
+ 
+ 
+obj_parms_i([],[]).
+ 
+ 

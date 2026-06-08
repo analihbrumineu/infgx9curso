@@ -1,0 +1,14 @@
+current_obj_i(2,rpt,9).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(rrelfilporcategoria,[],[],[],9).
+ 
+ 
+obj_parms_i([ 'int aP0_CatCodInicial','int aP1_CatCodFinal','int aP2_FilCodInicial','int aP3_FilCodFinal' ],[ [ 'Catcodinicial',in ],[ 'Catcodfinal',in ],[ 'Filcodinicial',in ],[ 'Filcodfinal',in ] ]).
+ 
+ 

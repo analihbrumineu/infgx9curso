@@ -1,0 +1,373 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>2</ObjCls>
+<ObjId>12</ObjId>
+<ObjName>RelMidPorCatFilme</ObjName>
+<ObjDesc>Relatório de mídia por categoria/filme.</ObjDesc>
+<ObjPgmName>RRelMidPorCatFilme</ObjPgmName>
+<ObjClsName>Report</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings>
+<Warning>
+<MsgCode>spc0038</MsgCode>
+<Token>There is no index for order </Token>
+<Attribute>
+<AttriId>33</AttriId>
+<AttriName>CatNome</AttriName>
+<Description>Nome da categoria do filme</Description></Attribute>
+<Token>, </Token>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute>
+<Token>, </Token>
+<Attribute>
+<AttriId>29</AttriId>
+<AttriName>FilNome</AttriName>
+<Description>Nome do filme</Description></Attribute>
+<Token>, </Token>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Token>; poor performance may be noticed</Token>
+<Token> in group starting at line </Token>
+<Token>27</Token>
+<Token></Token>
+<Token>.</Token></Warning></Warnings>
+<Errors></Errors>
+<OutputDevices>
+<Device>Screen</Device>
+<Device>Printer</Device></OutputDevices>
+<Generator>
+<GenId>0</GenId>
+<GenName>(Default)</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Midtipo</VarId>
+<VarName>&amp;MidTipo</VarName></Variable></Parameter>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Catcodinicial</VarId>
+<VarName>&amp;CatCodInicial</VarName></Variable></Parameter>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Catcodfinal</VarId>
+<VarName>&amp;CatCodFinal</VarName></Variable></Parameter></Parameters>
+<Levels>
+<Level>
+<LevelNumber>3</LevelNumber>
+<Optimizations></Optimizations>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>28</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>3</TableId>
+<TableName>FILME</TableName>
+<Description>Cadastro de filmes.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>33</AttriId>
+<AttriName>CatNome</AttriName>
+<Description>Nome da categoria do filme</Description></Attribute>
+<Token>,</Token>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute>
+<Token>,</Token>
+<Attribute>
+<AttriId>29</AttriId>
+<AttriName>FilNome</AttriName>
+<Description>Nome do filme</Description></Attribute>
+<Token>,</Token>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></Order>
+<Condition></Condition>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Token>FirstRecord</Token></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Token>NotEndOfTable</Token></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<Condition>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute>
+<Token>&gt;=</Token>
+<Variable>
+<VarId>Catcodinicial</VarId>
+<VarName>&amp;CatCodInicial</VarName></Variable>
+<Token>and</Token>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute>
+<Token>&lt;=</Token>
+<Variable>
+<VarId>Catcodfinal</VarId>
+<VarName>&amp;CatCodFinal</VarName></Variable></Condition></NonOptimizedWhere>
+<JoinLocation>0</JoinLocation>
+<NavigationTree>
+<Table>
+<TableId>3</TableId>
+<TableName>FILME</TableName>
+<Description>Cadastro de filmes.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute>
+<Attribute>
+<AttriId>30</AttriId>
+<AttriName>FilSituacao</AttriName>
+<Description>Situação do filme</Description></Attribute>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Attribute>
+<AttriId>29</AttriId>
+<AttriName>FilNome</AttriName>
+<Description>Nome do filme</Description></Attribute></Into>
+<Tables>
+<Table>
+<TableId>6</TableId>
+<TableName>CATEGORIA</TableName>
+<Description>Cadastro de categorias.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>33</AttriId>
+<AttriName>CatNome</AttriName>
+<Description>Nome da categoria do filme</Description></Attribute></Into>
+<JoinType>Outer</JoinType>
+<Tables></Tables></Table></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<Levels>
+<Level>
+<LevelNumber>4</LevelNumber>
+<Optimizations></Optimizations>
+<LevelType>Break</LevelType>
+<LevelBeginRow>37</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>3</TableId>
+<TableName>FILME</TableName>
+<Description>Cadastro de filmes.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>33</AttriId>
+<AttriName>CatNome</AttriName>
+<Description>Nome da categoria do filme</Description></Attribute>
+<Token>,</Token>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute>
+<Token>,</Token>
+<Attribute>
+<AttriId>29</AttriId>
+<AttriName>FilNome</AttriName>
+<Description>Nome do filme</Description></Attribute>
+<Token>,</Token>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></Order>
+<Condition></Condition>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Token>FirstRecord</Token></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Attribute>
+<AttriId>33</AttriId>
+<AttriName>CatNome</AttriName>
+<Description>Nome da categoria do filme</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>33</AttriId>
+<AttriName>@CatNome</AttriName>
+<Description>Nome da categoria do filme</Description></Attribute>
+<Token>and</Token>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>@CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<Condition>
+<Variable>
+<VarId>Catcodigo</VarId>
+<VarName>&amp;CatCodigo</VarName></Variable>
+<Token>=</Token>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></Condition></NonOptimizedWhere>
+<JoinLocation>0</JoinLocation>
+<NavigationTree>
+<Table>
+<TableId>3</TableId>
+<TableName>FILME</TableName>
+<Description>Cadastro de filmes.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Attribute>
+<AttriId>30</AttriId>
+<AttriName>FilSituacao</AttriName>
+<Description>Situação do filme</Description></Attribute>
+<Attribute>
+<AttriId>29</AttriId>
+<AttriName>FilNome</AttriName>
+<Description>Nome do filme</Description></Attribute></Into>
+<Tables>
+<Table>
+<TableId>6</TableId>
+<TableName>CATEGORIA</TableName>
+<Description>Cadastro de categorias.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>33</AttriId>
+<AttriName>CatNome</AttriName>
+<Description>Nome da categoria do filme</Description></Attribute></Into>
+<JoinType>Outer</JoinType>
+<Tables></Tables></Table></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<Levels>
+<Level>
+<LevelNumber>5</LevelNumber>
+<Optimizations></Optimizations>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>46</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>9</TableId>
+<TableName>MIDIA</TableName>
+<Description>Cadastro de mídias.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>IMIDIA2</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>@FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>@FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>35</AttriId>
+<AttriName>MidTipo</AttriName>
+<Description>Tipo da mídia</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Midtipo</VarId>
+<VarName>&amp;MidTipo</VarName></Variable></Constraint>
+<Condition>
+<Variable>
+<VarId>Midtipo</VarId>
+<VarName>&amp;MidTipo</VarName></Variable>
+<Token>&lt;&gt;</Token>
+<Token>0</Token></Condition></ConditionalConstraint></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>9</TableId>
+<TableName>MIDIA</TableName>
+<Description>Cadastro de mídias.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>37</AttriId>
+<AttriName>MidCodigo</AttriName>
+<Description>Código da mídia</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>35</AttriId>
+<AttriName>MidTipo</AttriName>
+<Description>Tipo da mídia</Description></Attribute>
+<Attribute>
+<AttriId>36</AttriId>
+<AttriName>MidSituacao</AttriName>
+<Description>Situação da mídia</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<Levels></Levels></Level></Levels></Level></Levels></Level></Levels></ObjectSpec>

@@ -1,0 +1,989 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>0</ObjCls>
+<ObjId>11</ObjId>
+<ObjName>Locacao</ObjName>
+<ObjDesc>Cadastro de locações.</ObjDesc>
+<ObjPgmName>TLocacao</ObjPgmName>
+<ObjClsName>Transaction</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings>
+<Warning>
+<MsgCode>spc0033</MsgCode>
+<Token></Token>
+<Attribute>
+<AttriId>93</AttriId>
+<AttriName>LocVenPesCodigo</AttriName>
+<Description>Código do vendedor locador</Description></Attribute>
+<Token> will be read-only in update mode.</Token></Warning></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>0</GenId>
+<GenName>(Default)</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Loccodigo</VarId>
+<VarName>&amp;LocCodigo</VarName></Variable></Parameter>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Mode</VarId>
+<VarName>&amp;Gx_mode</VarName></Variable></Parameter></Parameters>
+<Levels>
+<Level>
+<LevelType>Trn</LevelType>
+<LevelNumber>12</LevelNumber>
+<BaseTable>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description></Table></BaseTable>
+<StandAloneRules>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>87</AttriId>
+<AttriName>LocSituacao</AttriName>
+<Description>Situação da locação</Description></Attribute></FormulaName>
+<FormulaExpression>
+<Token>1</Token>
+<Token>IF</Token>
+<Token>insert</Token>
+<Token>and</Token>
+<Token>null1(</Token>
+<Attribute>
+<AttriId>87</AttriId>
+<AttriName>LocSituacao</AttriName>
+<Description>Situação da locação</Description></Attribute>
+<Token>)</Token>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute>
+<Token>.</Token>
+<Token>Enabled</Token></FormulaName>
+<FormulaExpression>
+<Token>0</Token>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>87</AttriId>
+<AttriName>LocSituacao</AttriName>
+<Description>Situação da locação</Description></Attribute>
+<Token>.</Token>
+<Token>Enabled</Token></FormulaName>
+<FormulaExpression>
+<Token>0</Token>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>93</AttriId>
+<AttriName>LocVenPesCodigo</AttriName>
+<Description>Código do vendedor locador</Description></Attribute>
+<Token>.</Token>
+<Token>Enabled</Token></FormulaName>
+<FormulaExpression>
+<Token>0</Token>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>94</AttriId>
+<AttriName>LocVenPesNome</AttriName>
+<Description>Nome do vendedor locador</Description></Attribute>
+<Token>.</Token>
+<Token>Enabled</Token></FormulaName>
+<FormulaExpression>
+<Token>0</Token>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>88</AttriId>
+<AttriName>LocDatLocacao</AttriName>
+<Description>Data da locação</Description></Attribute>
+<Token>.</Token>
+<Token>Enabled</Token></FormulaName>
+<FormulaExpression>
+<Token>0</Token>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>89</AttriId>
+<AttriName>LocDatDevolucao</AttriName>
+<Description>Data da devolução</Description></Attribute>
+<Token>.</Token>
+<Token>Enabled</Token></FormulaName>
+<FormulaExpression>
+<Token>0</Token>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute>
+<Token>.</Token>
+<Token>Enabled</Token></FormulaName>
+<FormulaExpression>
+<Token>0</Token>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>95</AttriId>
+<AttriName>LocTotValor</AttriName>
+<Description>Valor total da locação</Description></Attribute>
+<Token>.</Token>
+<Token>Enabled</Token></FormulaName>
+<FormulaExpression>
+<Token>0</Token>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Variable>
+<VarId>Today</VarId>
+<VarName>&amp;Gx_date</VarName></Variable></FormulaName>
+<FormulaExpression>
+<Token>today(</Token>
+<Token>)</Token></FormulaExpression></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>88</AttriId>
+<AttriName>LocDatLocacao</AttriName>
+<Description>Data da locação</Description></Attribute></FormulaName>
+<FormulaExpression>
+<Variable>
+<VarId>Today</VarId>
+<VarName>&amp;Gx_date</VarName></Variable>
+<Token>IF</Token>
+<Token>insert</Token>
+<Token>and</Token>
+<Attribute>
+<AttriId>88</AttriId>
+<AttriName>LocDatLocacao</AttriName>
+<Description>Data da locação</Description></Attribute>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>BusinessRule</ActionType>
+<RuleType>NoacceptRule</RuleType>
+<Parameters>
+<Attribute>
+<AttriId>93</AttriId>
+<AttriName>LocVenPesCodigo</AttriName>
+<Description>Código do vendedor locador</Description></Attribute></Parameters>
+<Condition>
+<Token>update</Token></Condition></Action>
+<Action>
+<ActionType>BusinessRule</ActionType>
+<CALL>
+<Object>
+<ObjCls>1</ObjCls>
+<ObjId>14</ObjId>
+<ObjName>RetFunLogDados</ObjName>
+<ObjPgmName>PRetFunLogDados</ObjPgmName>
+<ObjClsName>Procedure</ObjClsName></Object>
+<Parameters>
+<Variable>
+<VarId>Funcionario</VarId>
+<VarName>&amp;Funcionario</VarName></Variable></Parameters>
+<IF></IF></CALL></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>93</AttriId>
+<AttriName>LocVenPesCodigo</AttriName>
+<Description>Código do vendedor locador</Description></Attribute></FormulaName>
+<FormulaExpression>
+<Variable>
+<VarId>Funcionario</VarId>
+<VarName>&amp;Funcionario</VarName></Variable>
+<Token>.</Token>
+<Token>Pescodigo</Token>
+<Token>IF</Token>
+<Token>insert</Token>
+<Token>and</Token>
+<Token>null1(</Token>
+<Attribute>
+<AttriId>93</AttriId>
+<AttriName>LocVenPesCodigo</AttriName>
+<Description>Código do vendedor locador</Description></Attribute>
+<Token>)</Token>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>ReadTable</ActionType>
+<JoinType>Outer</JoinType>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description></Table>
+<JoinConditions>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description></Table>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></AttributeTo>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>93</AttriId>
+<AttriName>LocVenPesCodigo</AttriName>
+<Description>Código do vendedor locador</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
+<Into>
+<Attribute>
+<AttriId>94</AttriId>
+<AttriName>LocVenPesNome</AttriName>
+<Description>Nome do vendedor locador</Description></Attribute></Into></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>94</AttriId>
+<AttriName>LocVenPesNome</AttriName>
+<Description>Nome do vendedor locador</Description></Attribute></FormulaName>
+<FormulaExpression>
+<Variable>
+<VarId>Funcionario</VarId>
+<VarName>&amp;Funcionario</VarName></Variable>
+<Token>.</Token>
+<Token>Pesnome</Token>
+<Token>IF</Token>
+<Token>insert</Token>
+<Token>and</Token>
+<Token>null1(</Token>
+<Attribute>
+<AttriId>94</AttriId>
+<AttriName>LocVenPesNome</AttriName>
+<Description>Nome do vendedor locador</Description></Attribute>
+<Token>)</Token>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></FormulaName>
+<FormulaExpression>
+<Variable>
+<VarId>Loccodigo</VarId>
+<VarName>&amp;LocCodigo</VarName></Variable>
+<Token>IF</Token>
+<Variable>
+<VarId>Mode</VarId>
+<VarName>&amp;Gx_mode</VarName></Variable>
+<Token>&lt;&gt;</Token>
+<Token>'INS'</Token>
+<Token>;</Token></FormulaExpression></Action></StandAloneRules>
+<BaseTableRule>
+<Action>
+<ActionType>ReadBaseTable</ActionType>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description></Table>
+<JoinConditions>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description></Table>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></AttributeTo>
+<Table></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
+<Into>
+<Attribute>
+<AttriId>87</AttriId>
+<AttriName>LocSituacao</AttriName>
+<Description>Situação da locação</Description></Attribute>
+<Attribute>
+<AttriId>88</AttriId>
+<AttriName>LocDatLocacao</AttriName>
+<Description>Data da locação</Description></Attribute>
+<Attribute>
+<AttriId>89</AttriId>
+<AttriName>LocDatDevolucao</AttriName>
+<Description>Data da devolução</Description></Attribute>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute>
+<Attribute>
+<AttriId>93</AttriId>
+<AttriName>LocVenPesCodigo</AttriName>
+<Description>Código do vendedor locador</Description></Attribute></Into></Action></BaseTableRule>
+<Rules>
+<Action>
+<ActionType>VerticalFormulas</ActionType>
+<VerticalFormulasToCalc>
+<Attribute>
+<AttriId>95</AttriId>
+<AttriName>LocTotValor</AttriName>
+<Description>Valor total da locação</Description></Attribute></VerticalFormulasToCalc></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Variable>
+<VarId>Loctotvalor</VarId>
+<VarName>&amp;LocTotValor</VarName></Variable></FormulaName>
+<FormulaExpression>
+<Attribute>
+<AttriId>95</AttriId>
+<AttriName>LocTotValor</AttriName>
+<Description>Valor total da locação</Description></Attribute>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>ReadTable</ActionType>
+<JoinType>Outer</JoinType>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description></Table>
+<JoinConditions>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description></Table>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></AttributeTo>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
+<Into>
+<Attribute>
+<AttriId>92</AttriId>
+<AttriName>LocCliPesNome</AttriName>
+<Description>Nome do cliente locatário</Description></Attribute></Into></Action></Rules>
+<BeforeConfirmRules>
+<After>bconfirm</After>
+<Action>
+<ActionType>BusinessRule</ActionType>
+<RuleType>ErrorRule</RuleType>
+<Expression>
+<Token>'Um cliente deve ser informado!'</Token></Expression>
+<Condition>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute>
+<Token>=</Token>
+<Token>0</Token></Condition></Action>
+<Action>
+<ActionType>BusinessRule</ActionType>
+<RuleType>ErrorRule</RuleType>
+<Expression>
+<Token>'Pelo menos uma mídia deve ser adicionada!'</Token></Expression>
+<Condition>
+<Variable>
+<VarId>Loctotvalor</VarId>
+<VarName>&amp;LocTotValor</VarName></Variable>
+<Token>=</Token>
+<Token>0</Token>
+<Token>or</Token>
+<Variable>
+<VarId>Loctotvalor</VarId>
+<VarName>&amp;LocTotValor</VarName></Variable>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></Action></BeforeConfirmRules>
+<AfterConfirmRules></AfterConfirmRules>
+<TablesToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description></Table>
+<TableAction>insert</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute>
+<Attribute>
+<AttriId>87</AttriId>
+<AttriName>LocSituacao</AttriName>
+<Description>Situação da locação</Description></Attribute>
+<Attribute>
+<AttriId>88</AttriId>
+<AttriName>LocDatLocacao</AttriName>
+<Description>Data da locação</Description></Attribute>
+<Attribute>
+<AttriId>89</AttriId>
+<AttriName>LocDatDevolucao</AttriName>
+<Description>Data da devolução</Description></Attribute>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute>
+<Attribute>
+<AttriId>93</AttriId>
+<AttriName>LocVenPesCodigo</AttriName>
+<Description>Código do vendedor locador</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description></Table>
+<TableAction>update</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>87</AttriId>
+<AttriName>LocSituacao</AttriName>
+<Description>Situação da locação</Description></Attribute>
+<Attribute>
+<AttriId>88</AttriId>
+<AttriName>LocDatLocacao</AttriName>
+<Description>Data da locação</Description></Attribute>
+<Attribute>
+<AttriId>89</AttriId>
+<AttriName>LocDatDevolucao</AttriName>
+<Description>Data da devolução</Description></Attribute>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute>
+<Attribute>
+<AttriId>93</AttriId>
+<AttriName>LocVenPesCodigo</AttriName>
+<Description>Código do vendedor locador</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description></Table>
+<TableAction>delete</TableAction>
+<AttrisToUpdate></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description></Table>
+<TableAction>update</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>94</AttriId>
+<AttriName>LocVenPesNome</AttriName>
+<Description>Nome do vendedor locador</Description></Attribute></AttrisToUpdate></TableToUpdate></TablesToUpdate>
+<BeforeInsertRules></BeforeInsertRules>
+<AfterInsertRules></AfterInsertRules>
+<BeforeUpdateRules></BeforeUpdateRules>
+<AfterUpdateRules></AfterUpdateRules>
+<BeforeDeleteRules></BeforeDeleteRules>
+<AfterDeleteRules></AfterDeleteRules>
+<TablesToControlOnDelete>
+<Table>
+<TableId>9</TableId>
+<TableName>MIDIA</TableName>
+<Description>Cadastro de mídias.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>116</AttriId>
+<AttriName>LocCodLocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></KeyAttributes></Table></TablesToControlOnDelete>
+<Levels>
+<Level>
+<LevelType>Trn</LevelType>
+<LevelNumber>13</LevelNumber>
+<BaseTable>
+<Table>
+<TableId>13</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Dados da mídia locada</Description></Table></BaseTable>
+<StandAloneRules>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>106</AttriId>
+<AttriName>LocMidMidTipo</AttriName>
+<Description>Tipo da mídia a ser locada</Description></Attribute>
+<Token>.</Token>
+<Token>Enabled</Token></FormulaName>
+<FormulaExpression>
+<Token>0</Token>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>109</AttriId>
+<AttriName>LocMidMidConfValor</AttriName>
+<Description>Valor da configuração da mídia a ser locada</Description></Attribute>
+<Token>.</Token>
+<Token>Enabled</Token></FormulaName>
+<FormulaExpression>
+<Token>0</Token>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>104</AttriId>
+<AttriName>LocMidFilNome</AttriName>
+<Description>Nome do filme a ser locado</Description></Attribute>
+<Token>.</Token>
+<Token>Enabled</Token></FormulaName>
+<FormulaExpression>
+<Token>0</Token>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>95</AttriId>
+<AttriName>LocTotValor</AttriName>
+<Description>Valor total da locação</Description></Attribute>
+<Token>.</Token>
+<Token>Enabled</Token></FormulaName>
+<FormulaExpression>
+<Token>0</Token>
+<Token>;</Token></FormulaExpression></Action></StandAloneRules>
+<BaseTableRule>
+<Action>
+<ActionType>ReadBaseTable</ActionType>
+<Table>
+<TableId>13</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Dados da mídia locada</Description></Table>
+<JoinConditions>
+<Table>
+<TableId>13</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Dados da mídia locada</Description></Table>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></AttributeTo>
+<Table></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></AttributeFrom></JoinCondition>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>102</AttriId>
+<AttriName>LocMidMidCodigo</AttriName>
+<Description>Código da mídia a ser locada</Description></Attribute></AttributeTo>
+<Table></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>102</AttriId>
+<AttriName>LocMidMidCodigo</AttriName>
+<Description>Código da mídia a ser locada</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
+<Into>
+<Attribute>
+<AttriId>103</AttriId>
+<AttriName>LocMidFilCodigo</AttriName>
+<Description>Código do filme a ser locado</Description></Attribute>
+<Attribute>
+<AttriId>104</AttriId>
+<AttriName>LocMidFilNome</AttriName>
+<Description>Nome do filme a ser locado</Description></Attribute>
+<Attribute>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute>
+<Attribute>
+<AttriId>106</AttriId>
+<AttriName>LocMidMidTipo</AttriName>
+<Description>Tipo da mídia a ser locada</Description></Attribute>
+<Attribute>
+<AttriId>108</AttriId>
+<AttriName>LocMidMidLocCodigo</AttriName>
+<Description>Código da locação da mídia a ser locada</Description></Attribute>
+<Attribute>
+<AttriId>109</AttriId>
+<AttriName>LocMidMidConfValor</AttriName>
+<Description>Valor da configuração da mídia a ser locada</Description></Attribute></Into></Action></BaseTableRule>
+<StandAloneWithModeRules></StandAloneWithModeRules>
+<Rules>
+<Action>
+<ActionType>ReadTable</ActionType>
+<Table>
+<TableId>9</TableId>
+<TableName>MIDIA</TableName>
+<Description>Cadastro de mídias.</Description></Table>
+<JoinConditions>
+<Table>
+<TableId>9</TableId>
+<TableName>MIDIA</TableName>
+<Description>Cadastro de mídias.</Description></Table>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>37</AttriId>
+<AttriName>MidCodigo</AttriName>
+<Description>Código da mídia</Description></Attribute></AttributeTo>
+<Table>
+<TableId>13</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Dados da mídia locada</Description></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>102</AttriId>
+<AttriName>LocMidMidCodigo</AttriName>
+<Description>Código da mídia a ser locada</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
+<Into>
+<Attribute>
+<AttriId>107</AttriId>
+<AttriName>LocMidMidSituacao</AttriName>
+<Description>Situação da mídia a ser locada</Description></Attribute></Into></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>95</AttriId>
+<AttriName>LocTotValor</AttriName>
+<Description>Valor total da locação</Description></Attribute></FormulaName>
+<FormulaExpression>
+<Attribute>
+<AttriId>95</AttriId>
+<AttriName>LocTotValor</AttriName>
+<Description>Valor total da locação</Description></Attribute>
+<Token>.</Token>
+<Token>getoldvalue(</Token>
+<Token>)</Token>
+<Token>+</Token>
+<Attribute>
+<AttriId>109</AttriId>
+<AttriName>LocMidMidConfValor</AttriName>
+<Description>Valor da configuração da mídia a ser locada</Description></Attribute>
+<Token>IF</Token>
+<Token>insert</Token>
+<Token>;</Token>
+<Attribute>
+<AttriId>95</AttriId>
+<AttriName>LocTotValor</AttriName>
+<Description>Valor total da locação</Description></Attribute>
+<Token>.</Token>
+<Token>getoldvalue(</Token>
+<Token>)</Token>
+<Token>+</Token>
+<Attribute>
+<AttriId>109</AttriId>
+<AttriName>LocMidMidConfValor</AttriName>
+<Description>Valor da configuração da mídia a ser locada</Description></Attribute>
+<Token>-</Token>
+<Attribute>
+<AttriId>109</AttriId>
+<AttriName>LocMidMidConfValor</AttriName>
+<Description>Valor da configuração da mídia a ser locada</Description></Attribute>
+<Token>.</Token>
+<Token>getoldvalue(</Token>
+<Token>)</Token>
+<Token>IF</Token>
+<Token>update</Token>
+<Token>;</Token>
+<Attribute>
+<AttriId>95</AttriId>
+<AttriName>LocTotValor</AttriName>
+<Description>Valor total da locação</Description></Attribute>
+<Token>.</Token>
+<Token>getoldvalue(</Token>
+<Token>)</Token>
+<Token>-</Token>
+<Attribute>
+<AttriId>109</AttriId>
+<AttriName>LocMidMidConfValor</AttriName>
+<Description>Valor da configuração da mídia a ser locada</Description></Attribute>
+<Token>.</Token>
+<Token>getoldvalue(</Token>
+<Token>)</Token>
+<Token>IF</Token>
+<Token>delete</Token>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Variable>
+<VarId>Loctotvalor</VarId>
+<VarName>&amp;LocTotValor</VarName></Variable></FormulaName>
+<FormulaExpression>
+<Attribute>
+<AttriId>95</AttriId>
+<AttriName>LocTotValor</AttriName>
+<Description>Valor total da locação</Description></Attribute>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>BusinessRule</ActionType>
+<RuleType>ErrorRule</RuleType>
+<Expression>
+<Token>'A mídia selecionada não possui um valor (R$) cadastrado.'</Token>
+<Token>+</Token>
+<Token>newline(</Token>
+<Token>)</Token>
+<Token>+</Token>
+<Token>'Favor, reportar a um funcionário!'</Token></Expression>
+<Condition>
+<Token>after(</Token>
+<Attribute>
+<AttriId>109</AttriId>
+<AttriName>LocMidMidConfValor</AttriName>
+<Description>Valor da configuração da mídia a ser locada</Description></Attribute>
+<Token>)</Token>
+<Token>and</Token>
+<Attribute>
+<AttriId>109</AttriId>
+<AttriName>LocMidMidConfValor</AttriName>
+<Description>Valor da configuração da mídia a ser locada</Description></Attribute>
+<Token>&lt;</Token>
+<Token>0</Token></Condition></Action></Rules>
+<BeforeConfirmRules>
+<After>bconfirm</After>
+<Action>
+<ActionType>BusinessRule</ActionType>
+<RuleType>ErrorRule</RuleType>
+<Expression>
+<Token>'Pelo menos uma mídia deve ser adicionada!'</Token></Expression>
+<Condition>
+<Variable>
+<VarId>Loctotvalor</VarId>
+<VarName>&amp;LocTotValor</VarName></Variable>
+<Token>=</Token>
+<Token>0</Token>
+<Token>or</Token>
+<Variable>
+<VarId>Loctotvalor</VarId>
+<VarName>&amp;LocTotValor</VarName></Variable>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></Action></BeforeConfirmRules>
+<AfterConfirmRules></AfterConfirmRules>
+<TablesToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>13</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Dados da mídia locada</Description></Table>
+<TableAction>insert</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute>
+<Attribute>
+<AttriId>103</AttriId>
+<AttriName>LocMidFilCodigo</AttriName>
+<Description>Código do filme a ser locado</Description></Attribute>
+<Attribute>
+<AttriId>104</AttriId>
+<AttriName>LocMidFilNome</AttriName>
+<Description>Nome do filme a ser locado</Description></Attribute>
+<Attribute>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute>
+<Attribute>
+<AttriId>106</AttriId>
+<AttriName>LocMidMidTipo</AttriName>
+<Description>Tipo da mídia a ser locada</Description></Attribute>
+<Attribute>
+<AttriId>108</AttriId>
+<AttriName>LocMidMidLocCodigo</AttriName>
+<Description>Código da locação da mídia a ser locada</Description></Attribute>
+<Attribute>
+<AttriId>109</AttriId>
+<AttriName>LocMidMidConfValor</AttriName>
+<Description>Valor da configuração da mídia a ser locada</Description></Attribute>
+<Attribute>
+<AttriId>102</AttriId>
+<AttriName>LocMidMidCodigo</AttriName>
+<Description>Código da mídia a ser locada</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>13</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Dados da mídia locada</Description></Table>
+<TableAction>update</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>103</AttriId>
+<AttriName>LocMidFilCodigo</AttriName>
+<Description>Código do filme a ser locado</Description></Attribute>
+<Attribute>
+<AttriId>104</AttriId>
+<AttriName>LocMidFilNome</AttriName>
+<Description>Nome do filme a ser locado</Description></Attribute>
+<Attribute>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute>
+<Attribute>
+<AttriId>106</AttriId>
+<AttriName>LocMidMidTipo</AttriName>
+<Description>Tipo da mídia a ser locada</Description></Attribute>
+<Attribute>
+<AttriId>108</AttriId>
+<AttriName>LocMidMidLocCodigo</AttriName>
+<Description>Código da locação da mídia a ser locada</Description></Attribute>
+<Attribute>
+<AttriId>109</AttriId>
+<AttriName>LocMidMidConfValor</AttriName>
+<Description>Valor da configuração da mídia a ser locada</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>13</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Dados da mídia locada</Description></Table>
+<TableAction>delete</TableAction>
+<AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
+<BeforeInsertRules></BeforeInsertRules>
+<AfterInsertRules></AfterInsertRules>
+<BeforeUpdateRules></BeforeUpdateRules>
+<AfterUpdateRules></AfterUpdateRules>
+<BeforeDeleteRules></BeforeDeleteRules>
+<AfterDeleteRules></AfterDeleteRules>
+<TablesToControlOnDelete></TablesToControlOnDelete>
+<Levels></Levels>
+<AfterLevelRules></AfterLevelRules></Level></Levels>
+<BeforeTrnRules></BeforeTrnRules>
+<AfterTrnRules></AfterTrnRules>
+<AfterLevelRules></AfterLevelRules></Level></Levels>
+<Prompts>
+<Prompt>
+<Table>
+<TableId>9</TableId>
+<TableName>MIDIA</TableName>
+<Description>Cadastro de mídias.</Description></Table>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>92</ObjId>
+<ObjName>Gx0090</ObjName>
+<ObjPgmName>WGx0090</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<InputParameters></InputParameters>
+<OutputParameters>
+<Attribute>
+<AttriId>102</AttriId>
+<AttriName>LocMidMidCodigo</AttriName>
+<Description>Código da mídia a ser locada</Description></Attribute></OutputParameters>
+<PromptType>System</PromptType></Prompt>
+<Prompt>
+<Table>
+<TableId>13</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Dados da mídia locada</Description></Table>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>91</ObjId>
+<ObjName>Gx00D1</ObjName>
+<ObjPgmName>WGx00D1</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<InputParameters>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></InputParameters>
+<OutputParameters>
+<Attribute>
+<AttriId>102</AttriId>
+<AttriName>LocMidMidCodigo</AttriName>
+<Description>Código da mídia a ser locada</Description></Attribute></OutputParameters>
+<PromptType>System</PromptType></Prompt>
+<Prompt>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description></Table>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>80</ObjId>
+<ObjName>Gx0010</ObjName>
+<ObjPgmName>WGx0010</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<InputParameters></InputParameters>
+<OutputParameters>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute></OutputParameters>
+<PromptType>System</PromptType></Prompt>
+<Prompt>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description></Table>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>90</ObjId>
+<ObjName>Gx00C0</ObjName>
+<ObjPgmName>WGx00C0</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<InputParameters></InputParameters>
+<OutputParameters>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></OutputParameters>
+<PromptType>System</PromptType></Prompt></Prompts>
+<Suggests></Suggests></ObjectSpec>

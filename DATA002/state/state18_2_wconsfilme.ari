@@ -1,0 +1,15 @@
+current_obj_i(2,scr,22).
+ 
+called_tree_i(4,22,4,22).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wconsfilme,[],[ subwconsfilme08 ],[],22).
+ 
+ 
+obj_parms_i([ 'int aP0_FilCodigoRet' ],[ [ 'Filcodigoret',out ] ]).
+ 
+ 

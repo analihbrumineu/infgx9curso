@@ -1,0 +1,14 @@
+current_obj_i(2,scr,67).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wgx00c1,[],[ subwgx00c112 ],[],67).
+ 
+ 
+obj_parms_i([ 'short aP0_MidTipo','int aP1_pCatCodigo' ],[ [ 35,in ],[ 'Pcatcodigo',out ] ]).
+ 
+ 

@@ -1,0 +1,66 @@
+var  bmenuprincipalXML =
+' <pad> '+
+   ' <id>Id_configuracao</id> '+
+   ' <caption>Configuração</caption> '+
+   ' <pad> '+
+      ' <id>Id_mov</id> '+
+      ' <caption>Movimentação</caption> '+
+   ' </pad> '+
+   ' <pad> '+
+      ' <id>Id_precos</id> '+
+      ' <caption>Preços</caption> '+
+   ' </pad> '+
+' </pad> '+
+' <pad> '+
+   ' <id>Id_clientes</id> '+
+   ' <caption>Cadastro</caption> '+
+   ' <pad> '+
+      ' <id>Id_estados</id> '+
+      ' <caption>Estados</caption> '+
+   ' </pad> '+
+   ' <pad> '+
+      ' <id>Id_cidades</id> '+
+      ' <caption>Cidades</caption> '+
+   ' </pad> '+
+   ' <pad> '+
+      ' <id>Id_categorias</id> '+
+      ' <caption>Categorias</caption> '+
+   ' </pad> '+
+   ' <pad> '+
+      ' <id>Id_astros</id> '+
+      ' <caption>Astros</caption> '+
+   ' </pad> '+
+   ' <pad> '+
+      ' <id>Id_filmes</id> '+
+      ' <caption>Filmes</caption> '+
+   ' </pad> '+
+   ' <pad> '+
+      ' <id>Id_midias</id> '+
+      ' <caption>Mídias</caption> '+
+   ' </pad> '+
+   ' <pad> '+
+      ' <id>Id_clientes</id> '+
+      ' <caption>Clientes</caption> '+
+   ' </pad> '+
+   ' <pad> '+
+      ' <id>Id_funcionarios</id> '+
+      ' <caption>Funcionários</caption> '+
+   ' </pad> '+
+' </pad> '+
+' <pad> '+
+   ' <id>Id_relatorio</id> '+
+   ' <caption>Relatório</caption> '+
+   ' <pad> '+
+      ' <id>Id_fil_p_categoria</id> '+
+      ' <caption>Total de filmes por categoria</caption> '+
+   ' </pad> '+
+   ' <pad> '+
+      ' <id>Id_cli_c_dependente</id> '+
+      ' <caption>Clientes com dependentes</caption> '+
+   ' </pad> '+
+   ' <pad> '+
+      ' <id>Id_tot_mid_p_cat</id> '+
+      ' <caption>Total de mídias por categoria</caption> '+
+   ' </pad> '+
+' </pad> '+
+''

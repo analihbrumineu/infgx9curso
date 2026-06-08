@@ -1,0 +1,18 @@
+Compiling Reorganization...
+gxexec "C:\KB\DATA002\bldReorganization.cs" -r:GxBaseBuilder.dll -arg:csc="C:\Windows\Microsoft.NET\Framework\v2.0.50727\csc.exe" -arg:mdlpath="C:\KB\DATA002\"
+Building bin\messages.por.dll
+Read in 339 resources from 'messages.por.txt'
+Writing resource file...  Done.
+Compilador do Microsoft (R) Visual C# 2005 versão 8.00.50727.9157
+para a versão do Microsoft (R) Windows (R) 2005 Framework 2.0.50727
+Copyright (C) Microsoft Corporation 2001-2005. Todos os direitos reservados.
+Building bin\Reorganization.dll
+Compilador do Microsoft (R) Visual C# 2005 versão 8.00.50727.9157
+para a versão do Microsoft (R) Windows (R) 2005 Framework 2.0.50727
+Copyright (C) Microsoft Corporation 2001-2005. Todos os direitos reservados.
+Compilation Successful
+
+Executing Reorganization...
+C:\KB\DATA002\bin\reor.exe
+Execution Successful
+2 Success - 0 Errors

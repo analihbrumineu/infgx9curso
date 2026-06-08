@@ -1,0 +1,233 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>0</ObjCls>
+<ObjId>8</ObjId>
+<ObjName>Astro</ObjName>
+<ObjDesc>Cadastro de astros.</ObjDesc>
+<ObjPgmName>TAstro</ObjPgmName>
+<ObjClsName>Transaction</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>0</GenId>
+<GenName>(Default)</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>in</IO>
+<Attribute>
+<AttriId>49</AttriId>
+<AttriName>AstCodigo</AttriName>
+<Description>Código do astro de cinema</Description></Attribute></Parameter>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Mode</VarId>
+<VarName>&amp;Gx_mode</VarName></Variable></Parameter></Parameters>
+<Levels>
+<Level>
+<LevelType>Trn</LevelType>
+<LevelNumber>10</LevelNumber>
+<BaseTable>
+<Table>
+<TableId>10</TableId>
+<TableName>ASTRO</TableName>
+<Description>Cadastro de astros.</Description></Table></BaseTable>
+<StandAloneRules>
+<Action>
+<ActionType>ReadBaseTable</ActionType>
+<Table>
+<TableId>10</TableId>
+<TableName>ASTRO</TableName>
+<Description>Cadastro de astros.</Description></Table>
+<JoinConditions>
+<Table>
+<TableId>10</TableId>
+<TableName>ASTRO</TableName>
+<Description>Cadastro de astros.</Description></Table>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>49</AttriId>
+<AttriName>AstCodigo</AttriName>
+<Description>Código do astro de cinema</Description></Attribute></AttributeTo>
+<Table></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>49</AttriId>
+<AttriName>AstCodigo</AttriName>
+<Description>Código do astro de cinema</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
+<Into>
+<Attribute>
+<AttriId>50</AttriId>
+<AttriName>AstNome</AttriName>
+<Description>Nome do astro de cinema</Description></Attribute>
+<Attribute>
+<AttriId>113</AttriId>
+<AttriName>AstDatNascimento</AttriName>
+<Description>Data de nascimento do astro de cinema</Description></Attribute>
+<Attribute>
+<AttriId>114</AttriId>
+<AttriName>AstDatFalecimento</AttriName>
+<Description>Data de falecimento do astro de cinema</Description></Attribute>
+<Attribute>
+<AttriId>53</AttriId>
+<AttriName>AstDescricao</AttriName>
+<Description>Descrição do astro de cinema</Description></Attribute></Into></Action></StandAloneRules>
+<BaseTableRule>
+<Action>
+<ActionType>ReadBaseTable</ActionType>
+<Table>
+<TableId>10</TableId>
+<TableName>ASTRO</TableName>
+<Description>Cadastro de astros.</Description></Table>
+<JoinConditions>
+<Table>
+<TableId>10</TableId>
+<TableName>ASTRO</TableName>
+<Description>Cadastro de astros.</Description></Table>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>49</AttriId>
+<AttriName>AstCodigo</AttriName>
+<Description>Código do astro de cinema</Description></Attribute></AttributeTo>
+<Table></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>49</AttriId>
+<AttriName>AstCodigo</AttriName>
+<Description>Código do astro de cinema</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
+<Into>
+<Attribute>
+<AttriId>50</AttriId>
+<AttriName>AstNome</AttriName>
+<Description>Nome do astro de cinema</Description></Attribute>
+<Attribute>
+<AttriId>113</AttriId>
+<AttriName>AstDatNascimento</AttriName>
+<Description>Data de nascimento do astro de cinema</Description></Attribute>
+<Attribute>
+<AttriId>114</AttriId>
+<AttriName>AstDatFalecimento</AttriName>
+<Description>Data de falecimento do astro de cinema</Description></Attribute>
+<Attribute>
+<AttriId>53</AttriId>
+<AttriName>AstDescricao</AttriName>
+<Description>Descrição do astro de cinema</Description></Attribute></Into></Action></BaseTableRule>
+<Rules>
+<Action>
+<ActionType>BusinessRule</ActionType>
+<RuleType>ErrorRule</RuleType>
+<Expression>
+<Token>'Nome deve ser informado!'</Token></Expression>
+<Condition>
+<Token>after(</Token>
+<Attribute>
+<AttriId>50</AttriId>
+<AttriName>AstNome</AttriName>
+<Description>Nome do astro de cinema</Description></Attribute>
+<Token>)</Token>
+<Token>and</Token>
+<Attribute>
+<AttriId>50</AttriId>
+<AttriName>AstNome</AttriName>
+<Description>Nome do astro de cinema</Description></Attribute>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></Action></Rules>
+<BeforeConfirmRules></BeforeConfirmRules>
+<AfterConfirmRules></AfterConfirmRules>
+<TablesToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>10</TableId>
+<TableName>ASTRO</TableName>
+<Description>Cadastro de astros.</Description></Table>
+<TableAction>insert</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>49</AttriId>
+<AttriName>AstCodigo</AttriName>
+<Description>Código do astro de cinema</Description></Attribute>
+<Attribute>
+<AttriId>50</AttriId>
+<AttriName>AstNome</AttriName>
+<Description>Nome do astro de cinema</Description></Attribute>
+<Attribute>
+<AttriId>113</AttriId>
+<AttriName>AstDatNascimento</AttriName>
+<Description>Data de nascimento do astro de cinema</Description></Attribute>
+<Attribute>
+<AttriId>114</AttriId>
+<AttriName>AstDatFalecimento</AttriName>
+<Description>Data de falecimento do astro de cinema</Description></Attribute>
+<Attribute>
+<AttriId>53</AttriId>
+<AttriName>AstDescricao</AttriName>
+<Description>Descrição do astro de cinema</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>10</TableId>
+<TableName>ASTRO</TableName>
+<Description>Cadastro de astros.</Description></Table>
+<TableAction>update</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>50</AttriId>
+<AttriName>AstNome</AttriName>
+<Description>Nome do astro de cinema</Description></Attribute>
+<Attribute>
+<AttriId>113</AttriId>
+<AttriName>AstDatNascimento</AttriName>
+<Description>Data de nascimento do astro de cinema</Description></Attribute>
+<Attribute>
+<AttriId>114</AttriId>
+<AttriName>AstDatFalecimento</AttriName>
+<Description>Data de falecimento do astro de cinema</Description></Attribute>
+<Attribute>
+<AttriId>53</AttriId>
+<AttriName>AstDescricao</AttriName>
+<Description>Descrição do astro de cinema</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>10</TableId>
+<TableName>ASTRO</TableName>
+<Description>Cadastro de astros.</Description></Table>
+<TableAction>delete</TableAction>
+<AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
+<BeforeInsertRules></BeforeInsertRules>
+<AfterInsertRules></AfterInsertRules>
+<BeforeUpdateRules></BeforeUpdateRules>
+<AfterUpdateRules></AfterUpdateRules>
+<BeforeDeleteRules></BeforeDeleteRules>
+<AfterDeleteRules></AfterDeleteRules>
+<TablesToControlOnDelete>
+<Table>
+<TableId>4</TableId>
+<TableName>FILMEDIRECAO</TableName>
+<Description>Direção do filme</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>79</AttriId>
+<AttriName>FilDirCodigo</AttriName>
+<Description>Código do diretor do filme</Description></Attribute></KeyAttributes></Table>
+<Table>
+<TableId>5</TableId>
+<TableName>FILMEELENCO</TableName>
+<Description>Elenco do filme</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>77</AttriId>
+<AttriName>FilAtoCodigo</AttriName>
+<Description>Código do ator do filme</Description></Attribute></KeyAttributes></Table></TablesToControlOnDelete>
+<Levels></Levels>
+<BeforeTrnRules></BeforeTrnRules>
+<AfterTrnRules></AfterTrnRules>
+<AfterLevelRules></AfterLevelRules></Level></Levels>
+<Suggests></Suggests></ObjectSpec>

@@ -1,0 +1,208 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>57</ObjId>
+<ObjName>PeAstro</ObjName>
+<ObjDesc>Cadastro de astros.</ObjDesc>
+<ObjPgmName>WPeAstro</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings>
+<Warning>
+<MsgCode>spc0053</MsgCode>
+<Token>Conditional constraint &quot;</Token>
+<Attribute>
+<AttriId>114</AttriId>
+<AttriName>AstDatFalecimento</AttriName>
+<Description>Data de falecimento do astro de cinema</Description></Attribute>
+<Token>&lt;&gt;</Token>
+<Token>ctod(</Token>
+<Token>'0'</Token>
+<Token>)</Token>
+<Token>&quot; cannot be generated</Token>
+<Token> in grid '</Token>
+<Token>Gxsf7</Token>
+<Token>'</Token>
+<Token>. Changed to standard constraint.</Token></Warning></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>0</GenId>
+<GenName>(Default)</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters></Parameters>
+<StandAloneRules></StandAloneRules>
+<Event>
+<EventName>Load</EventName>
+<LoadMethod>Auto</LoadMethod>
+<ImplicitForEach>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>1</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>10</TableId>
+<TableName>ASTRO</TableName>
+<Description>Cadastro de astros.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>49</AttriId>
+<AttriName>AstCodigo</AttriName>
+<Description>Código do astro de cinema</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>IASTRO</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Token>FirstRecord</Token></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Token>NotEndOfTable</Token></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<Condition>
+<Variable>
+<VarId>Astdatfalecimento</VarId>
+<VarName>&amp;AstDatFalecimento</VarName></Variable>
+<Token>&lt;&gt;</Token>
+<Token>1</Token>
+<Token>or</Token>
+<Token>(</Token>
+<Attribute>
+<AttriId>114</AttriId>
+<AttriName>AstDatFalecimento</AttriName>
+<Description>Data de falecimento do astro de cinema</Description></Attribute>
+<Token>&lt;&gt;</Token>
+<Token>ctod(</Token>
+<Token>'0'</Token>
+<Token>)</Token>
+<Token>)</Token></Condition>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>49</AttriId>
+<AttriName>AstCodigo</AttriName>
+<Description>Código do astro de cinema</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Astcodigo</VarId>
+<VarName>&amp;AstCodigo</VarName></Variable></Constraint>
+<Condition>
+<Variable>
+<VarId>Astcodigo</VarId>
+<VarName>&amp;AstCodigo</VarName></Variable>
+<Token>&lt;&gt;</Token>
+<Token>0</Token></Condition></ConditionalConstraint>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>50</AttriId>
+<AttriName>AstNome</AttriName>
+<Description>Nome do astro de cinema</Description></Attribute>
+<Token>like</Token>
+<Variable>
+<VarId>Astnome</VarId>
+<VarName>&amp;AstNome</VarName></Variable></Constraint>
+<Condition>
+<Token>.NOT.</Token>
+<Variable>
+<VarId>Astnome</VarId>
+<VarName>&amp;AstNome</VarName></Variable>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></ConditionalConstraint></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>10</TableId>
+<TableName>ASTRO</TableName>
+<Description>Cadastro de astros.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>49</AttriId>
+<AttriName>AstCodigo</AttriName>
+<Description>Código do astro de cinema</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>114</AttriId>
+<AttriName>AstDatFalecimento</AttriName>
+<Description>Data de falecimento do astro de cinema</Description></Attribute>
+<Attribute>
+<AttriId>50</AttriId>
+<AttriName>AstNome</AttriName>
+<Description>Nome do astro de cinema</Description></Attribute>
+<Attribute>
+<AttriId>49</AttriId>
+<AttriName>AstCodigo</AttriName>
+<Description>Código do astro de cinema</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas></ImplicitForEach></Event>
+<Event>
+<EventName>&amp;Visualizar.Click</EventName>
+<CALL>
+<Object>
+<ObjCls>0</ObjCls>
+<ObjId>8</ObjId>
+<ObjName>Astro</ObjName>
+<ObjPgmName>TAstro</ObjPgmName>
+<ObjClsName>Transaction</ObjClsName></Object>
+<Parameters>
+<Attribute>
+<AttriId>49</AttriId>
+<AttriName>AstCodigo</AttriName>
+<Description>Código do astro de cinema</Description></Attribute>
+<Token>,</Token>
+<Token>'DSP'</Token></Parameters>
+<IF></IF></CALL></Event>
+<Event>
+<EventName>&amp;Editar.Click</EventName>
+<CALL>
+<Object>
+<ObjCls>0</ObjCls>
+<ObjId>8</ObjId>
+<ObjName>Astro</ObjName>
+<ObjPgmName>TAstro</ObjPgmName>
+<ObjClsName>Transaction</ObjClsName></Object>
+<Parameters>
+<Attribute>
+<AttriId>49</AttriId>
+<AttriName>AstCodigo</AttriName>
+<Description>Código do astro de cinema</Description></Attribute>
+<Token>,</Token>
+<Token>'UPD'</Token></Parameters>
+<IF></IF></CALL></Event>
+<Event>
+<EventName>&amp;Excluir.Click</EventName>
+<CALL>
+<Object>
+<ObjCls>0</ObjCls>
+<ObjId>8</ObjId>
+<ObjName>Astro</ObjName>
+<ObjPgmName>TAstro</ObjPgmName>
+<ObjClsName>Transaction</ObjClsName></Object>
+<Parameters>
+<Attribute>
+<AttriId>49</AttriId>
+<AttriName>AstCodigo</AttriName>
+<Description>Código do astro de cinema</Description></Attribute>
+<Token>,</Token>
+<Token>'DLT'</Token></Parameters>
+<IF></IF></CALL></Event>
+<Event>
+<EventName>'Novo'</EventName>
+<CALL>
+<Object>
+<ObjCls>0</ObjCls>
+<ObjId>8</ObjId>
+<ObjName>Astro</ObjName>
+<ObjPgmName>TAstro</ObjPgmName>
+<ObjClsName>Transaction</ObjClsName></Object>
+<Parameters>
+<Token>0</Token>
+<Token>,</Token>
+<Token>'INS'</Token></Parameters>
+<IF></IF></CALL></Event>
+<Suggests></Suggests></ObjectSpec>

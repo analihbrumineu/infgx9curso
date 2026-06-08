@@ -1,0 +1,15 @@
+current_obj_i(2,scr,21).
+ 
+called_tree_i(4,21,4,21).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wconscategoria,[],[ subwconscategoria06 ],[],21).
+ 
+ 
+obj_parms_i([ 'int aP0_CatCodigoRet' ],[ [ 'Catcodigoret',out ] ]).
+ 
+ 

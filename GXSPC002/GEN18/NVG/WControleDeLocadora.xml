@@ -1,0 +1,108 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>1</ObjId>
+<ObjName>ControleDeLocadora</ObjName>
+<ObjDesc>Controle de locadora.</ObjDesc>
+<ObjPgmName>WControleDeLocadora</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings>
+<Warning>
+<MsgCode>spc0038</MsgCode>
+<Token>There is no index for order </Token>
+<Attribute>
+<AttriId>15</AttriId>
+<AttriName>PesCPF</AttriName>
+<Description>CPF da pessoa</Description></Attribute>
+<Token>; poor performance may be noticed</Token>
+<Token> in group starting at line </Token>
+<Token>6</Token>
+<Token></Token>
+<Token>.</Token></Warning></Warnings>
+<Errors></Errors>
+<Main>Yes</Main>
+<Generator>
+<GenId>18</GenId>
+<GenName>.NET - Win</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters></Parameters>
+<StandAloneRules></StandAloneRules>
+<Event>
+<EventName>Start</EventName>
+<Level>
+<Optimizations>
+<Optimization>
+<Type>FirstRows</Type>
+<MaxRows>1</MaxRows></Optimization></Optimizations>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>6</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>15</AttriId>
+<AttriName>PesCPF</AttriName>
+<Description>CPF da pessoa</Description></Attribute></Order>
+<Condition></Condition>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Token>FirstRecord</Token></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Token>NotEndOfTable</Token></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<Condition>
+<Attribute>
+<AttriId>38</AttriId>
+<AttriName>PesTipo</AttriName>
+<Description>Tipo de pessoa</Description></Attribute>
+<Token>=</Token>
+<Token>2</Token></Condition></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>38</AttriId>
+<AttriName>PesTipo</AttriName>
+<Description>Tipo de pessoa</Description></Attribute>
+<Attribute>
+<AttriId>15</AttriId>
+<AttriName>PesCPF</AttriName>
+<Description>CPF da pessoa</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas></Level>
+<CALL>
+<Object>
+<ObjCls>1</ObjCls>
+<ObjId>5</ObjId>
+<ObjName>ValPesFunLogin</ObjName>
+<ObjPgmName>PValPesFunLogin</ObjPgmName>
+<ObjClsName>Procedure</ObjClsName></Object>
+<Parameters>
+<Variable>
+<VarId>Logar</VarId>
+<VarName>&amp;Logar</VarName></Variable></Parameters>
+<IF></IF></CALL></Event>
+<Event>
+<EventName>Load</EventName></Event>
+<Suggests></Suggests></ObjectSpec>

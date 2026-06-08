@@ -1,0 +1,14 @@
+current_obj_i(2,proc,23).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(pdeldependente,[],[],[],23).
+ 
+ 
+obj_parms_i([ 'int aP0_PesDepCodigo' ],[ [ 'Pesdepcodigo',inout ] ]).
+ 
+ 

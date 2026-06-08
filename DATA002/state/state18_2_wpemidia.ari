@@ -1,0 +1,15 @@
+current_obj_i(2,scr,14).
+ 
+called_tree_i(4,14,0,6).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wpemidia,[],[ subwpemidia02 ],[],14).
+ 
+ 
+obj_parms_i([],[]).
+ 
+ 

@@ -1,0 +1,15 @@
+current_obj_i(2,scr,29).
+ 
+called_tree_i(4,29,4,29).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wconsfuncionario,[],[ subwconsfuncionario12 ],[],29).
+ 
+ 
+obj_parms_i([ 'int aP0_PesCodigoRet' ],[ [ 'Pescodigoret',out ] ]).
+ 
+ 

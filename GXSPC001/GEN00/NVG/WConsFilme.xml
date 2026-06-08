@@ -1,0 +1,159 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>22</ObjId>
+<ObjName>ConsFilme</ObjName>
+<ObjDesc>Consulta de filmes.</ObjDesc>
+<ObjPgmName>WConsFilme</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>0</GenId>
+<GenName>(Default)</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>out</IO>
+<Variable>
+<VarId>Filcodigoret</VarId>
+<VarName>&amp;FilCodigoRet</VarName></Variable></Parameter></Parameters>
+<StandAloneRules></StandAloneRules>
+<Event>
+<EventName>Exit</EventName></Event>
+<Event>
+<EventName>FilCodigo.Click</EventName></Event>
+<Event>
+<EventName>'Pesquisa'</EventName>
+<CALL>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>22</ObjId>
+<ObjName>ConsFilme</ObjName>
+<ObjPgmName>WConsFilme</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Parameters>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></Parameters>
+<IF></IF></CALL></Event>
+<Event>
+<EventName>Load</EventName>
+<ImplicitForEach>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>1</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>3</TableId>
+<TableName>FILME</TableName>
+<Description>Cadastro de filmes.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>IFILME</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Token>FirstRecord</Token></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Token>NotEndOfTable</Token></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Filcodigo</VarId>
+<VarName>&amp;FilCodigo</VarName></Variable></Constraint>
+<Condition>
+<Variable>
+<VarId>Filcodigo</VarId>
+<VarName>&amp;FilCodigo</VarName></Variable>
+<Token>&lt;&gt;</Token>
+<Token>0</Token></Condition></ConditionalConstraint>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>29</AttriId>
+<AttriName>FilNome</AttriName>
+<Description>Nome do filme</Description></Attribute>
+<Token>like</Token>
+<Variable>
+<VarId>Filnome</VarId>
+<VarName>&amp;FilNome</VarName></Variable></Constraint>
+<Condition>
+<Token>.NOT.</Token>
+<Variable>
+<VarId>Filnome</VarId>
+<VarName>&amp;FilNome</VarName></Variable>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></ConditionalConstraint>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>31</AttriId>
+<AttriName>FilData</AttriName>
+<Description>Data de lançamento do filme</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Fildata</VarId>
+<VarName>&amp;FilData</VarName></Variable></Constraint>
+<Condition>
+<Variable>
+<VarId>Fildata</VarId>
+<VarName>&amp;FilData</VarName></Variable>
+<Token>&lt;&gt;</Token>
+<Token>ctod(</Token>
+<Token>'0'</Token>
+<Token>)</Token></Condition></ConditionalConstraint></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>3</TableId>
+<TableName>FILME</TableName>
+<Description>Cadastro de filmes.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>34</AttriId>
+<AttriName>FilDescricao</AttriName>
+<Description>Descrição do filme</Description></Attribute>
+<Attribute>
+<AttriId>31</AttriId>
+<AttriName>FilData</AttriName>
+<Description>Data de lançamento do filme</Description></Attribute>
+<Attribute>
+<AttriId>30</AttriId>
+<AttriName>FilSituacao</AttriName>
+<Description>Situação do filme</Description></Attribute>
+<Attribute>
+<AttriId>29</AttriId>
+<AttriName>FilNome</AttriName>
+<Description>Nome do filme</Description></Attribute>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas></ImplicitForEach></Event>
+<Suggests></Suggests></ObjectSpec>

@@ -1,0 +1,17 @@
+current_obj_i(2,trn,9).
+ 
+called_tree_i(0,9,4,21).
+called_tree_i(0,9,4,89).
+called_tree_i(0,9,4,85).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(tconftipmidia,[],[],[],9).
+ 
+ 
+obj_parms_i([ 'String aP0_Gx_mode' ],[ [ 'Mode',in ] ]).
+ 
+ 

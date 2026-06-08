@@ -1,0 +1,14 @@
+current_obj_i(2,scr,81).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wgx0021,[],[ subwgx002110 ],[],81).
+ 
+ 
+obj_parms_i([ 'int aP0_PesCodigo','int aP1_pPesDepCodigo' ],[ [ 13,in ],[ 'Ppesdepcodigo',out ] ]).
+ 
+ 

@@ -1,0 +1,24 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>10</ObjCls>
+<ObjId>0</ObjId>
+<ObjName>SubTypes</ObjName>
+<ObjDesc>Subtype groups analysis report</ObjDesc>
+<ObjPgmName>SubTypes</ObjPgmName>
+<ObjClsName>Subtype group</ObjClsName></Object>
+<Warnings>
+<Warning>
+<MsgCode>spc0079</MsgCode>
+<Token>Attribute(s) </Token>
+<Attribute>
+<AttriId>100</AttriId>
+<AttriName>MidFilCodigo</AttriName>
+<Description>Mid Fil Codigo</Description></Attribute>
+<Token> in subtype group '</Token>
+<SubtypeGroup>
+<SubtypeGroupId>6</SubtypeGroupId>
+<SubtypeGroupName>MidFilCodigo</SubtypeGroupName></SubtypeGroup>
+<Token>' is(are) not associated to any table.</Token></Warning></Warnings>
+<Errors></Errors></ObjectSpec>

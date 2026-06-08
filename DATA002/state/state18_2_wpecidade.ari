@@ -1,0 +1,15 @@
+current_obj_i(2,scr,11).
+ 
+called_tree_i(4,11,0,5).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wpecidade,[],[ subwpecidade02 ],[],11).
+ 
+ 
+obj_parms_i([],[]).
+ 
+ 

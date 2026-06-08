@@ -1,0 +1,96 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>1</ObjCls>
+<ObjId>7</ObjId>
+<ObjName>VerCidCodigo</ObjName>
+<ObjDesc>Verificar validade do código da cidade.</ObjDesc>
+<ObjPgmName>PVerCidCodigo</ObjPgmName>
+<ObjClsName>Procedure</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<OutputDevices>
+<Device>None</Device></OutputDevices>
+<Generator>
+<GenId>18</GenId>
+<GenName>.NET - Win</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Cidcodigo</VarId>
+<VarName>&amp;CidCodigo</VarName></Variable></Parameter>
+<Parameter>
+<IO>out</IO>
+<Variable>
+<VarId>Erro</VarId>
+<VarName>&amp;Erro</VarName></Variable></Parameter></Parameters>
+<Levels>
+<Level>
+<LevelNumber>2</LevelNumber>
+<Optimizations>
+<Optimization>
+<Type>FirstRows</Type>
+<MaxRows>1</MaxRows></Optimization></Optimizations>
+<LevelType>For First</LevelType>
+<LevelBeginRow>3</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>8</TableId>
+<TableName>CIDADE</TableName>
+<Description>Cadastro de cidades.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>26</AttriId>
+<AttriName>CidCodigo</AttriName>
+<Description>Código da cidade da pessoa</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>ICIDADE</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Attribute>
+<AttriId>26</AttriId>
+<AttriName>CidCodigo</AttriName>
+<Description>Código da cidade da pessoa</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Cidcodigo</VarId>
+<VarName>&amp;CidCodigo</VarName></Variable></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Attribute>
+<AttriId>26</AttriId>
+<AttriName>CidCodigo</AttriName>
+<Description>Código da cidade da pessoa</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Cidcodigo</VarId>
+<VarName>&amp;CidCodigo</VarName></Variable></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>8</TableId>
+<TableName>CIDADE</TableName>
+<Description>Cadastro de cidades.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>26</AttriId>
+<AttriName>CidCodigo</AttriName>
+<Description>Código da cidade da pessoa</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>26</AttriId>
+<AttriName>CidCodigo</AttriName>
+<Description>Código da cidade da pessoa</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<Levels></Levels></Level></Levels></ObjectSpec>

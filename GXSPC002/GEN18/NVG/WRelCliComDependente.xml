@@ -1,0 +1,42 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>64</ObjId>
+<ObjName>RelCliComDependente</ObjName>
+<ObjDesc>Impressão de relatório de clientes com dependentes.</ObjDesc>
+<ObjPgmName>WRelCliComDependente</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>18</GenId>
+<GenName>.NET - Win</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters></Parameters>
+<StandAloneRules></StandAloneRules>
+<Event>
+<EventName>Start</EventName></Event>
+<Event>
+<EventName>'Imprimir'</EventName>
+<CALL>
+<Object>
+<ObjCls>2</ObjCls>
+<ObjId>10</ObjId>
+<ObjName>RelCliComDependente</ObjName>
+<ObjPgmName>RRelCliComDependente</ObjPgmName>
+<ObjClsName>Report</ObjClsName></Object>
+<Parameters>
+<Variable>
+<VarId>Pescodinicial</VarId>
+<VarName>&amp;PesCodInicial</VarName></Variable>
+<Token>,</Token>
+<Variable>
+<VarId>Pescodfinal</VarId>
+<VarName>&amp;PesCodFinal</VarName></Variable></Parameters>
+<IF></IF></CALL></Event>
+<Event>
+<EventName>Load</EventName></Event>
+<Suggests></Suggests></ObjectSpec>

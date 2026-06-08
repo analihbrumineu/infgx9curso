@@ -1,0 +1,17 @@
+current_obj_i(2,trn,6).
+ 
+called_tree_i(0,6,4,22).
+called_tree_i(0,6,0,11).
+called_tree_i(0,6,4,82).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(tmidia,[],[],[ type_SdtSDTFuncionario,'GxObjectCollection' ],6).
+ 
+ 
+obj_parms_i([ 'int aP0_MidCodigo','String aP1_Gx_mode' ],[ [ 37,in ],[ 'Mode',in ] ]).
+ 
+ 

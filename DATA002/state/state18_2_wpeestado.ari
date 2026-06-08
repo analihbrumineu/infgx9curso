@@ -1,0 +1,15 @@
+current_obj_i(2,scr,9).
+ 
+called_tree_i(4,9,0,4).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wpeestado,[],[ subwpeestado02 ],[],9).
+ 
+ 
+obj_parms_i([],[]).
+ 
+ 

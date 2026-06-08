@@ -1,0 +1,16 @@
+current_obj_i(2,scr,66).
+ 
+called_tree_i(4,66,0,9).
+called_tree_i(4,66,1,15).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wconftipmidia,[],[ subwconftipmidia02 ],[],66).
+ 
+ 
+obj_parms_i([],[]).
+ 
+ 

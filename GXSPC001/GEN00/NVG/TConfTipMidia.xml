@@ -1,0 +1,195 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>0</ObjCls>
+<ObjId>9</ObjId>
+<ObjName>ConfTipMidia</ObjName>
+<ObjDesc>Configurações tipo de mídia.</ObjDesc>
+<ObjPgmName>TConfTipMidia</ObjPgmName>
+<ObjClsName>Transaction</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>0</GenId>
+<GenName>(Default)</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Mode</VarId>
+<VarName>&amp;Gx_mode</VarName></Variable></Parameter></Parameters>
+<Levels>
+<Level>
+<LevelType>Trn</LevelType>
+<LevelNumber>11</LevelNumber>
+<BaseTable>
+<Table>
+<TableId>11</TableId>
+<TableName>CONFTIPMIDIA</TableName>
+<Description>Configurações tipo de mídia.</Description></Table></BaseTable>
+<StandAloneRules></StandAloneRules>
+<BaseTableRule>
+<Action>
+<ActionType>ReadBaseTable</ActionType>
+<Table>
+<TableId>11</TableId>
+<TableName>CONFTIPMIDIA</TableName>
+<Description>Configurações tipo de mídia.</Description></Table>
+<JoinConditions>
+<Table>
+<TableId>11</TableId>
+<TableName>CONFTIPMIDIA</TableName>
+<Description>Configurações tipo de mídia.</Description></Table>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>35</AttriId>
+<AttriName>MidTipo</AttriName>
+<Description>Tipo da mídia</Description></Attribute></AttributeTo>
+<Table></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>35</AttriId>
+<AttriName>MidTipo</AttriName>
+<Description>Tipo da mídia</Description></Attribute></AttributeFrom></JoinCondition>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></AttributeTo>
+<Table></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
+<Into>
+<Attribute>
+<AttriId>85</AttriId>
+<AttriName>ConfTipValor</AttriName>
+<Description>Valor da configuração</Description></Attribute></Into></Action></BaseTableRule>
+<Rules>
+<Action>
+<ActionType>ReadTable</ActionType>
+<Table>
+<TableId>6</TableId>
+<TableName>CATEGORIA</TableName>
+<Description>Cadastro de categorias.</Description></Table>
+<JoinConditions>
+<Table>
+<TableId>6</TableId>
+<TableName>CATEGORIA</TableName>
+<Description>Cadastro de categorias.</Description></Table>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></AttributeTo>
+<Table>
+<TableId>11</TableId>
+<TableName>CONFTIPMIDIA</TableName>
+<Description>Configurações tipo de mídia.</Description></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
+<Into></Into></Action></Rules>
+<BeforeConfirmRules></BeforeConfirmRules>
+<AfterConfirmRules></AfterConfirmRules>
+<TablesToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>11</TableId>
+<TableName>CONFTIPMIDIA</TableName>
+<Description>Configurações tipo de mídia.</Description></Table>
+<TableAction>insert</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>35</AttriId>
+<AttriName>MidTipo</AttriName>
+<Description>Tipo da mídia</Description></Attribute>
+<Attribute>
+<AttriId>85</AttriId>
+<AttriName>ConfTipValor</AttriName>
+<Description>Valor da configuração</Description></Attribute>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>11</TableId>
+<TableName>CONFTIPMIDIA</TableName>
+<Description>Configurações tipo de mídia.</Description></Table>
+<TableAction>update</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>85</AttriId>
+<AttriName>ConfTipValor</AttriName>
+<Description>Valor da configuração</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>11</TableId>
+<TableName>CONFTIPMIDIA</TableName>
+<Description>Configurações tipo de mídia.</Description></Table>
+<TableAction>delete</TableAction>
+<AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
+<BeforeInsertRules></BeforeInsertRules>
+<AfterInsertRules></AfterInsertRules>
+<BeforeUpdateRules></BeforeUpdateRules>
+<AfterUpdateRules></AfterUpdateRules>
+<BeforeDeleteRules></BeforeDeleteRules>
+<AfterDeleteRules></AfterDeleteRules>
+<TablesToControlOnDelete></TablesToControlOnDelete>
+<Levels></Levels>
+<BeforeTrnRules></BeforeTrnRules>
+<AfterTrnRules></AfterTrnRules>
+<AfterLevelRules></AfterLevelRules></Level></Levels>
+<Prompts>
+<Prompt>
+<Table>
+<TableId>6</TableId>
+<TableName>CATEGORIA</TableName>
+<Description>Cadastro de categorias.</Description></Table>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>85</ObjId>
+<ObjName>Gx0060</ObjName>
+<ObjPgmName>WGx0060</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<InputParameters></InputParameters>
+<OutputParameters>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></OutputParameters>
+<PromptType>System</PromptType></Prompt>
+<Prompt>
+<Table>
+<TableId>11</TableId>
+<TableName>CONFTIPMIDIA</TableName>
+<Description>Configurações tipo de mídia.</Description></Table>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>89</ObjId>
+<ObjName>Gx00B0</ObjName>
+<ObjPgmName>WGx00B0</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<InputParameters></InputParameters>
+<OutputParameters>
+<Attribute>
+<AttriId>35</AttriId>
+<AttriName>MidTipo</AttriName>
+<Description>Tipo da mídia</Description></Attribute>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></OutputParameters>
+<PromptType>System</PromptType></Prompt></Prompts>
+<Suggests></Suggests></ObjectSpec>

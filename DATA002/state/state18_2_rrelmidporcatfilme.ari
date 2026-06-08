@@ -1,0 +1,14 @@
+current_obj_i(2,rpt,12).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(rrelmidporcatfilme,[],[],[],12).
+ 
+ 
+obj_parms_i([ 'short aP0_MidTipo','int aP1_CatCodInicial','int aP2_CatCodFinal' ],[ [ 'Midtipo',in ],[ 'Catcodinicial',in ],[ 'Catcodfinal',in ] ]).
+ 
+ 

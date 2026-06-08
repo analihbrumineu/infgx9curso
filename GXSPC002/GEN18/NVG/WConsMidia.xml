@@ -1,0 +1,709 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>23</ObjId>
+<ObjName>ConsMidia</ObjName>
+<ObjDesc>Consulta de mídias.</ObjDesc>
+<ObjPgmName>WConsMidia</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>18</GenId>
+<GenName>.NET - Win</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>out</IO>
+<Variable>
+<VarId>Midcodretornado</VarId>
+<VarName>&amp;MidCodRetornado</VarName></Variable></Parameter>
+<Parameter>
+<IO>out</IO>
+<Variable>
+<VarId>Filcodretornado</VarId>
+<VarName>&amp;FilCodRetornado</VarName></Variable></Parameter>
+<Parameter>
+<IO>out</IO>
+<Variable>
+<VarId>Filnomretornado</VarId>
+<VarName>&amp;FilNomRetornado</VarName></Variable></Parameter>
+<Parameter>
+<IO>out</IO>
+<Variable>
+<VarId>Catcodretornado</VarId>
+<VarName>&amp;CatCodRetornado</VarName></Variable></Parameter>
+<Parameter>
+<IO>out</IO>
+<Variable>
+<VarId>Midtipretornado</VarId>
+<VarName>&amp;MidTipRetornado</VarName></Variable></Parameter>
+<Parameter>
+<IO>out</IO>
+<Variable>
+<VarId>Locmidvalretornado</VarId>
+<VarName>&amp;LocMidValRetornado</VarName></Variable></Parameter></Parameters>
+<StandAloneRules></StandAloneRules>
+<Event>
+<EventName>Start</EventName></Event>
+<Event>
+<EventName>Exit</EventName>
+<Level>
+<Optimizations>
+<Optimization>
+<Type>FirstRows</Type>
+<MaxRows>1</MaxRows></Optimization></Optimizations>
+<LevelType>For First</LevelType>
+<LevelBeginRow>11</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>3</TableId>
+<TableName>FILME</TableName>
+<Description>Cadastro de filmes.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>IFILME</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Filcodretornado</VarId>
+<VarName>&amp;FilCodRetornado</VarName></Variable></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Filcodretornado</VarId>
+<VarName>&amp;FilCodRetornado</VarName></Variable></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>3</TableId>
+<TableName>FILME</TableName>
+<Description>Cadastro de filmes.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas></Level>
+<Level>
+<Optimizations>
+<Optimization>
+<Type>FirstRows</Type>
+<MaxRows>1</MaxRows></Optimization></Optimizations>
+<LevelType>For First</LevelType>
+<LevelBeginRow>20</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>11</TableId>
+<TableName>CONFTIPMIDIA</TableName>
+<Description>Configurações tipo de mídia.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>35</AttriId>
+<AttriName>MidTipo</AttriName>
+<Description>Tipo da mídia</Description></Attribute>
+<Token>,</Token>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>ICONFTIPMIDIA</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Attribute>
+<AttriId>35</AttriId>
+<AttriName>MidTipo</AttriName>
+<Description>Tipo da mídia</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Midtipretornado</VarId>
+<VarName>&amp;MidTipRetornado</VarName></Variable></Condition>
+<Condition>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Catcodretornado</VarId>
+<VarName>&amp;CatCodRetornado</VarName></Variable></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Attribute>
+<AttriId>35</AttriId>
+<AttriName>MidTipo</AttriName>
+<Description>Tipo da mídia</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Midtipretornado</VarId>
+<VarName>&amp;MidTipRetornado</VarName></Variable></Condition>
+<Condition>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Catcodretornado</VarId>
+<VarName>&amp;CatCodRetornado</VarName></Variable></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>11</TableId>
+<TableName>CONFTIPMIDIA</TableName>
+<Description>Configurações tipo de mídia.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>35</AttriId>
+<AttriName>MidTipo</AttriName>
+<Description>Tipo da mídia</Description></Attribute>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute>
+<Attribute>
+<AttriId>35</AttriId>
+<AttriName>MidTipo</AttriName>
+<Description>Tipo da mídia</Description></Attribute>
+<Attribute>
+<AttriId>85</AttriId>
+<AttriName>ConfTipValor</AttriName>
+<Description>Valor da configuração</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas></Level></Event>
+<Event>
+<EventName>MidCodigo.Click</EventName></Event>
+<Event>
+<EventName>'Pesquisa'</EventName>
+<CALL>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>58</ObjId>
+<ObjName>ConsAstro</ObjName>
+<ObjPgmName>WConsAstro</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Parameters>
+<Variable>
+<VarId>Filatocodigo</VarId>
+<VarName>&amp;FilAtoCodigo</VarName></Variable></Parameters>
+<IF></IF></CALL>
+<CALL>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>58</ObjId>
+<ObjName>ConsAstro</ObjName>
+<ObjPgmName>WConsAstro</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Parameters>
+<Variable>
+<VarId>Fildircodigo</VarId>
+<VarName>&amp;FilDirCodigo</VarName></Variable></Parameters>
+<IF></IF></CALL></Event>
+<Event>
+<EventName>&amp;FilAtoCodigo.Isvalid</EventName></Event>
+<Event>
+<EventName>Load</EventName>
+<LoadMethod>Auto</LoadMethod>
+<ImplicitForEach>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>1</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>9</TableId>
+<TableName>MIDIA</TableName>
+<Description>Cadastro de mídias.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>37</AttriId>
+<AttriName>MidCodigo</AttriName>
+<Description>Código da mídia</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>IMIDIA</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Token>FirstRecord</Token></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Token>NotEndOfTable</Token></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<Condition>
+<Attribute>
+<AttriId>85</AttriId>
+<AttriName>ConfTipValor</AttriName>
+<Description>Valor da configuração</Description></Attribute>
+<Token>&gt;</Token>
+<Token>0</Token></Condition>
+<Condition>
+<Attribute>
+<AttriId>36</AttriId>
+<AttriName>MidSituacao</AttriName>
+<Description>Situação da mídia</Description></Attribute>
+<Token>=</Token>
+<Token>1</Token></Condition>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>37</AttriId>
+<AttriName>MidCodigo</AttriName>
+<Description>Código da mídia</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Midcodigo</VarId>
+<VarName>&amp;MidCodigo</VarName></Variable></Constraint>
+<Condition>
+<Variable>
+<VarId>Midcodigo</VarId>
+<VarName>&amp;MidCodigo</VarName></Variable>
+<Token>&lt;&gt;</Token>
+<Token>0</Token></Condition></ConditionalConstraint>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>29</AttriId>
+<AttriName>FilNome</AttriName>
+<Description>Nome do filme</Description></Attribute>
+<Token>like</Token>
+<Variable>
+<VarId>Filnome</VarId>
+<VarName>&amp;FilNome</VarName></Variable></Constraint>
+<Condition>
+<Token>.NOT.</Token>
+<Variable>
+<VarId>Filnome</VarId>
+<VarName>&amp;FilNome</VarName></Variable>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></ConditionalConstraint>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>35</AttriId>
+<AttriName>MidTipo</AttriName>
+<Description>Tipo da mídia</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Midtipo</VarId>
+<VarName>&amp;MidTipo</VarName></Variable></Constraint>
+<Condition>
+<Variable>
+<VarId>Midtipo</VarId>
+<VarName>&amp;MidTipo</VarName></Variable>
+<Token>&lt;&gt;</Token>
+<Token>0</Token></Condition></ConditionalConstraint>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>31</AttriId>
+<AttriName>FilData</AttriName>
+<Description>Data de lançamento do filme</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Fildata</VarId>
+<VarName>&amp;FilData</VarName></Variable></Constraint>
+<Condition>
+<Variable>
+<VarId>Fildata</VarId>
+<VarName>&amp;FilData</VarName></Variable>
+<Token>&lt;&gt;</Token>
+<Token>ctod(</Token>
+<Token>'0'</Token>
+<Token>)</Token></Condition></ConditionalConstraint>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>33</AttriId>
+<AttriName>CatNome</AttriName>
+<Description>Nome da categoria do filme</Description></Attribute>
+<Token>like</Token>
+<Variable>
+<VarId>Catnome</VarId>
+<VarName>&amp;CatNome</VarName></Variable></Constraint>
+<Condition>
+<Token>.NOT.</Token>
+<Variable>
+<VarId>Catnome</VarId>
+<VarName>&amp;CatNome</VarName></Variable>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></ConditionalConstraint></NonOptimizedWhere>
+<JoinLocation>1</JoinLocation>
+<NavigationTree>
+<Table>
+<TableId>9</TableId>
+<TableName>MIDIA</TableName>
+<Description>Cadastro de mídias.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>37</AttriId>
+<AttriName>MidCodigo</AttriName>
+<Description>Código da mídia</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>36</AttriId>
+<AttriName>MidSituacao</AttriName>
+<Description>Situação da mídia</Description></Attribute>
+<Attribute>
+<AttriId>35</AttriId>
+<AttriName>MidTipo</AttriName>
+<Description>Tipo da mídia</Description></Attribute>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Attribute>
+<AttriId>37</AttriId>
+<AttriName>MidCodigo</AttriName>
+<Description>Código da mídia</Description></Attribute></Into>
+<Tables>
+<Table>
+<TableId>3</TableId>
+<TableName>FILME</TableName>
+<Description>Cadastro de filmes.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute>
+<Attribute>
+<AttriId>31</AttriId>
+<AttriName>FilData</AttriName>
+<Description>Data de lançamento do filme</Description></Attribute>
+<Attribute>
+<AttriId>29</AttriId>
+<AttriName>FilNome</AttriName>
+<Description>Nome do filme</Description></Attribute></Into>
+<JoinType>Outer</JoinType>
+<Tables>
+<Table>
+<TableId>6</TableId>
+<TableName>CATEGORIA</TableName>
+<Description>Cadastro de categorias.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>33</AttriId>
+<AttriName>CatNome</AttriName>
+<Description>Nome da categoria do filme</Description></Attribute></Into>
+<JoinType>Outer</JoinType>
+<Tables></Tables></Table>
+<Table>
+<TableId>11</TableId>
+<TableName>CONFTIPMIDIA</TableName>
+<Description>Configurações tipo de mídia.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>35</AttriId>
+<AttriName>MidTipo</AttriName>
+<Description>Tipo da mídia</Description></Attribute>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>85</AttriId>
+<AttriName>ConfTipValor</AttriName>
+<Description>Valor da configuração</Description></Attribute></Into>
+<JoinType>Outer</JoinType>
+<Tables></Tables></Table></Tables></Table></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<Level>
+<Optimizations></Optimizations>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>57</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>5</TableId>
+<TableName>FILMEELENCO</TableName>
+<Description>Elenco do filme</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>IFILMEELENCO</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Filatocoddagrid</VarId>
+<VarName>&amp;FilAtoCodDaGrid</VarName></Variable></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Filatocoddagrid</VarId>
+<VarName>&amp;FilAtoCodDaGrid</VarName></Variable></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>77</AttriId>
+<AttriName>FilAtoCodigo</AttriName>
+<Description>Código do ator do filme</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Filatocodigo</VarId>
+<VarName>&amp;FilAtoCodigo</VarName></Variable></Constraint>
+<Condition>
+<Variable>
+<VarId>Filatocodigo</VarId>
+<VarName>&amp;FilAtoCodigo</VarName></Variable>
+<Token>&lt;&gt;</Token>
+<Token>0</Token></Condition></ConditionalConstraint>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>81</AttriId>
+<AttriName>FilAtoProt</AttriName>
+<Description>Esse ator é protagonista?</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Filatoprot</VarId>
+<VarName>&amp;FilAtoProt</VarName></Variable></Constraint>
+<Condition>
+<Variable>
+<VarId>Filatoprot</VarId>
+<VarName>&amp;FilAtoProt</VarName></Variable>
+<Token>&lt;&gt;</Token>
+<Token>0</Token>
+<Token>and</Token>
+<Token>.NOT.</Token>
+<Variable>
+<VarId>Filatocodigo</VarId>
+<VarName>&amp;FilAtoCodigo</VarName></Variable>
+<Token>=</Token>
+<Token>0</Token>
+<Token>or</Token>
+<Token>.NOT.</Token>
+<Variable>
+<VarId>Filatonome</VarId>
+<VarName>&amp;FilAtoNome</VarName></Variable>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></ConditionalConstraint></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>5</TableId>
+<TableName>FILMEELENCO</TableName>
+<Description>Elenco do filme</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Attribute>
+<AttriId>77</AttriId>
+<AttriName>FilAtoCodigo</AttriName>
+<Description>Código do ator do filme</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Attribute>
+<AttriId>81</AttriId>
+<AttriName>FilAtoProt</AttriName>
+<Description>Esse ator é protagonista?</Description></Attribute>
+<Attribute>
+<AttriId>77</AttriId>
+<AttriName>FilAtoCodigo</AttriName>
+<Description>Código do ator do filme</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<Level>
+<Optimizations></Optimizations>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>65</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>4</TableId>
+<TableName>FILMEDIRECAO</TableName>
+<Description>Direção do filme</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>IFILMEDIRECAO</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>@FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>@FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>79</AttriId>
+<AttriName>FilDirCodigo</AttriName>
+<Description>Código do diretor do filme</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Fildircodigo</VarId>
+<VarName>&amp;FilDirCodigo</VarName></Variable></Constraint>
+<Condition>
+<Variable>
+<VarId>Fildircodigo</VarId>
+<VarName>&amp;FilDirCodigo</VarName></Variable>
+<Token>&lt;&gt;</Token>
+<Token>0</Token></Condition></ConditionalConstraint>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>80</AttriId>
+<AttriName>FilDirNome</AttriName>
+<Description>Nome do diretor do filme</Description></Attribute>
+<Token>like</Token>
+<Variable>
+<VarId>Fildirnome</VarId>
+<VarName>&amp;FilDirNome</VarName></Variable></Constraint>
+<Condition>
+<Token>.NOT.</Token>
+<Variable>
+<VarId>Fildirnome</VarId>
+<VarName>&amp;FilDirNome</VarName></Variable>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></ConditionalConstraint></NonOptimizedWhere>
+<JoinLocation>1</JoinLocation>
+<NavigationTree>
+<Table>
+<TableId>4</TableId>
+<TableName>FILMEDIRECAO</TableName>
+<Description>Direção do filme</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>28</AttriId>
+<AttriName>FilCodigo</AttriName>
+<Description>Código do filme</Description></Attribute>
+<Attribute>
+<AttriId>79</AttriId>
+<AttriName>FilDirCodigo</AttriName>
+<Description>Código do diretor do filme</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>79</AttriId>
+<AttriName>FilDirCodigo</AttriName>
+<Description>Código do diretor do filme</Description></Attribute></Into>
+<Tables>
+<Table>
+<TableId>10</TableId>
+<TableName>ASTRO</TableName>
+<Description>Cadastro de astros.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>79</AttriId>
+<AttriName>FilDirCodigo</AttriName>
+<Description>Código do diretor do filme</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>80</AttriId>
+<AttriName>FilDirNome</AttriName>
+<Description>Nome do diretor do filme</Description></Attribute></Into>
+<Tables></Tables></Table></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas></Level></Level></ImplicitForEach></Event>
+<Suggests></Suggests></ObjectSpec>

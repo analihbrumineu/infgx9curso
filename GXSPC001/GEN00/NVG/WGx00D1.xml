@@ -1,0 +1,179 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>91</ObjId>
+<ObjName>Gx00D1</ObjName>
+<ObjDesc>Lista de Seleção Dados da mídia locada</ObjDesc>
+<ObjPgmName>WGx00D1</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>0</GenId>
+<GenName>(Default)</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>in</IO>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></Parameter>
+<Parameter>
+<IO>out</IO>
+<Variable>
+<VarId>Plocmidmidcodigo</VarId>
+<VarName>&amp;pLocMidMidCodigo</VarName></Variable></Parameter></Parameters>
+<StandAloneRules></StandAloneRules>
+<Event>
+<EventName>Enter</EventName></Event>
+<Event>
+<EventName>Load</EventName>
+<ImplicitForEach>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>1</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>13</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Dados da mídia locada</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute>
+<Token>,</Token>
+<Attribute>
+<AttriId>102</AttriId>
+<AttriName>LocMidMidCodigo</AttriName>
+<Description>Código da mídia a ser locada</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>ILOCACAOLOCACAOMIDIA</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>@LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></Condition>
+<Condition>
+<Attribute>
+<AttriId>102</AttriId>
+<AttriName>LocMidMidCodigo</AttriName>
+<Description>Código da mídia a ser locada</Description></Attribute>
+<Token>&gt;=</Token>
+<Variable>
+<VarId>Clocmidmidcodigo</VarId>
+<VarName>&amp;cLocMidMidCodigo</VarName></Variable></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>@LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<Condition>
+<Attribute>
+<AttriId>103</AttriId>
+<AttriName>LocMidFilCodigo</AttriName>
+<Description>Código do filme a ser locado</Description></Attribute>
+<Token>&gt;=</Token>
+<Variable>
+<VarId>Clocmidfilcodigo</VarId>
+<VarName>&amp;cLocMidFilCodigo</VarName></Variable></Condition>
+<Condition>
+<Attribute>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute>
+<Token>&gt;=</Token>
+<Variable>
+<VarId>Clocmidcatcodigo</VarId>
+<VarName>&amp;cLocMidCatCodigo</VarName></Variable></Condition>
+<Condition>
+<Attribute>
+<AttriId>106</AttriId>
+<AttriName>LocMidMidTipo</AttriName>
+<Description>Tipo da mídia a ser locada</Description></Attribute>
+<Token>&gt;=</Token>
+<Variable>
+<VarId>Clocmidmidtipo</VarId>
+<VarName>&amp;cLocMidMidTipo</VarName></Variable></Condition>
+<Condition>
+<Attribute>
+<AttriId>108</AttriId>
+<AttriName>LocMidMidLocCodigo</AttriName>
+<Description>Código da locação da mídia a ser locada</Description></Attribute>
+<Token>&gt;=</Token>
+<Variable>
+<VarId>Clocmidmidloccodigo</VarId>
+<VarName>&amp;cLocMidMidLocCodigo</VarName></Variable></Condition>
+<Condition>
+<Attribute>
+<AttriId>109</AttriId>
+<AttriName>LocMidMidConfValor</AttriName>
+<Description>Valor da configuração da mídia a ser locada</Description></Attribute>
+<Token>&gt;=</Token>
+<Variable>
+<VarId>Clocmidmidconfvalor</VarId>
+<VarName>&amp;cLocMidMidConfValor</VarName></Variable></Condition></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>13</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Dados da mídia locada</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute>
+<Attribute>
+<AttriId>102</AttriId>
+<AttriName>LocMidMidCodigo</AttriName>
+<Description>Código da mídia a ser locada</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute>
+<Attribute>
+<AttriId>106</AttriId>
+<AttriName>LocMidMidTipo</AttriName>
+<Description>Tipo da mídia a ser locada</Description></Attribute>
+<Attribute>
+<AttriId>108</AttriId>
+<AttriName>LocMidMidLocCodigo</AttriName>
+<Description>Código da locação da mídia a ser locada</Description></Attribute>
+<Attribute>
+<AttriId>109</AttriId>
+<AttriName>LocMidMidConfValor</AttriName>
+<Description>Valor da configuração da mídia a ser locada</Description></Attribute>
+<Attribute>
+<AttriId>103</AttriId>
+<AttriName>LocMidFilCodigo</AttriName>
+<Description>Código do filme a ser locado</Description></Attribute>
+<Attribute>
+<AttriId>102</AttriId>
+<AttriName>LocMidMidCodigo</AttriName>
+<Description>Código da mídia a ser locada</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas></ImplicitForEach></Event>
+<Suggests></Suggests></ObjectSpec>

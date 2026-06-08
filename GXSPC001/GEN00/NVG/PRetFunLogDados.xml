@@ -1,0 +1,99 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>1</ObjCls>
+<ObjId>14</ObjId>
+<ObjName>RetFunLogDados</ObjName>
+<ObjDesc>Retornar dados do funcionário logado.</ObjDesc>
+<ObjPgmName>PRetFunLogDados</ObjPgmName>
+<ObjClsName>Procedure</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<OutputDevices>
+<Device>None</Device></OutputDevices>
+<Generator>
+<GenId>0</GenId>
+<GenName>(Default)</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>out</IO>
+<Variable>
+<VarId>Funcionario</VarId>
+<VarName>&amp;Funcionario</VarName></Variable></Parameter></Parameters>
+<Levels>
+<Level>
+<LevelNumber>2</LevelNumber>
+<Optimizations></Optimizations>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>9</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>ICLIENTE</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Token>FirstRecord</Token></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Token>NotEndOfTable</Token></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<Condition>
+<Attribute>
+<AttriId>43</AttriId>
+<AttriName>PesFunLogin</AttriName>
+<Description>Login do funcionário</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Pesfunlogin</VarId>
+<VarName>&amp;PesFunLogin</VarName></Variable></Condition></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>43</AttriId>
+<AttriName>PesFunLogin</AttriName>
+<Description>Login do funcionário</Description></Attribute>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>14</AttriId>
+<AttriName>PesNome</AttriName>
+<Description>Nome da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>39</AttriId>
+<AttriName>PesFunCargo</AttriName>
+<Description>Cargo do funcionário</Description></Attribute>
+<Attribute>
+<AttriId>44</AttriId>
+<AttriName>PesFunSenha</AttriName>
+<Description>Senha do funcionário</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<Levels></Levels></Level></Levels></ObjectSpec>

@@ -1,0 +1,169 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>18</ObjId>
+<ObjName>ConsCidade</ObjName>
+<ObjDesc>Consulta de cidades.</ObjDesc>
+<ObjPgmName>WConsCidade</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>0</GenId>
+<GenName>(Default)</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>out</IO>
+<Variable>
+<VarId>Cidcodigoret</VarId>
+<VarName>&amp;CidCodigoRet</VarName></Variable></Parameter></Parameters>
+<StandAloneRules></StandAloneRules>
+<Event>
+<EventName>Exit</EventName></Event>
+<Event>
+<EventName>CidCodigo.Click</EventName></Event>
+<Event>
+<EventName>'Pesquisa'</EventName>
+<CALL>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>18</ObjId>
+<ObjName>ConsCidade</ObjName>
+<ObjPgmName>WConsCidade</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Parameters>
+<Attribute>
+<AttriId>26</AttriId>
+<AttriName>CidCodigo</AttriName>
+<Description>Código da cidade da pessoa</Description></Attribute></Parameters>
+<IF></IF></CALL></Event>
+<Event>
+<EventName>Load</EventName>
+<ImplicitForEach>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>1</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>8</TableId>
+<TableName>CIDADE</TableName>
+<Description>Cadastro de cidades.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>26</AttriId>
+<AttriName>CidCodigo</AttriName>
+<Description>Código da cidade da pessoa</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>ICIDADE</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Token>FirstRecord</Token></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Token>NotEndOfTable</Token></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>25</AttriId>
+<AttriName>EstUF</AttriName>
+<Description>UF do Estado da pessoa</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Estuf</VarId>
+<VarName>&amp;EstUF</VarName></Variable></Constraint>
+<Condition>
+<Token>.NOT.</Token>
+<Variable>
+<VarId>Estuf</VarId>
+<VarName>&amp;EstUF</VarName></Variable>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></ConditionalConstraint>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>26</AttriId>
+<AttriName>CidCodigo</AttriName>
+<Description>Código da cidade da pessoa</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Cidcodigo</VarId>
+<VarName>&amp;CidCodigo</VarName></Variable></Constraint>
+<Condition>
+<Variable>
+<VarId>Cidcodigo</VarId>
+<VarName>&amp;CidCodigo</VarName></Variable>
+<Token>&lt;&gt;</Token>
+<Token>0</Token></Condition></ConditionalConstraint>
+<ConditionalConstraint>
+<Constraint>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>CidNome</AttriName>
+<Description>Nome da cidade da pessoa</Description></Attribute>
+<Token>like</Token>
+<Variable>
+<VarId>Cidnome</VarId>
+<VarName>&amp;CidNome</VarName></Variable></Constraint>
+<Condition>
+<Token>.NOT.</Token>
+<Variable>
+<VarId>Cidnome</VarId>
+<VarName>&amp;CidNome</VarName></Variable>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></ConditionalConstraint></NonOptimizedWhere>
+<JoinLocation>0</JoinLocation>
+<NavigationTree>
+<Table>
+<TableId>8</TableId>
+<TableName>CIDADE</TableName>
+<Description>Cadastro de cidades.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>26</AttriId>
+<AttriName>CidCodigo</AttriName>
+<Description>Código da cidade da pessoa</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>24</AttriId>
+<AttriName>EstCodigo</AttriName>
+<Description>Código do Estado da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>CidNome</AttriName>
+<Description>Nome da cidade da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>26</AttriId>
+<AttriName>CidCodigo</AttriName>
+<Description>Código da cidade da pessoa</Description></Attribute></Into>
+<Tables>
+<Table>
+<TableId>7</TableId>
+<TableName>ESTADO</TableName>
+<Description>Cadastro de Estados.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>24</AttriId>
+<AttriName>EstCodigo</AttriName>
+<Description>Código do Estado da pessoa</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>25</AttriId>
+<AttriName>EstUF</AttriName>
+<Description>UF do Estado da pessoa</Description></Attribute></Into>
+<JoinType>Outer</JoinType>
+<Tables></Tables></Table></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas></ImplicitForEach></Event>
+<Suggests></Suggests></ObjectSpec>

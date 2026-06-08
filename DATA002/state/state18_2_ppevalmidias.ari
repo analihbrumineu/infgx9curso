@@ -1,0 +1,14 @@
+current_obj_i(2,proc,19).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(ppevalmidias,[],[],[],19).
+ 
+ 
+obj_parms_i([ 'int aP0_LocCodigo','String aP1_MsgErro' ],[ [ 'Loccodigo',in ],[ 'Msgerro',out ] ]).
+ 
+ 

@@ -1,0 +1,17 @@
+current_obj_i(2,scr,1).
+ 
+called_tree_i(4,1,1,5).
+called_tree_i(4,1,17,1).
+ 
+ 
+ij_main_object(ucontroledelocadora,'Controle de locadora.','','""','').
+ 
+ 
+ 
+ 
+ij_object_dependency(ucontroledelocadora,[],[],[],1).
+ 
+ 
+obj_parms_i([],[]).
+ 
+ 

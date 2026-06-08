@@ -1,0 +1,15 @@
+current_obj_i(2,scr,12).
+ 
+called_tree_i(4,12,0,3).
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(wpecategoria,[],[ subwpecategoria04 ],[],12).
+ 
+ 
+obj_parms_i([],[]).
+ 
+ 
