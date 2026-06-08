@@ -2,7 +2,7 @@
                File: Gx00A0
         Description: Lista de Seleção Cadastro de astros.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/3/2026 10:48:12.33
+       Generated on: 6/8/2026 9:5:20.29
        Program type: Callable routine
           Main DBMS: sqlserver
 */

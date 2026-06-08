@@ -62,5 +62,9 @@ var  bmenuprincipalXML =
       ' <id>Id_tot_mid_p_cat</id> '+
       ' <caption>Total de mídias por categoria</caption> '+
    ' </pad> '+
+   ' <pad> '+
+      ' <id>Id_topdelista</id> '+
+      ' <caption>Topo de lista</caption> '+
+   ' </pad> '+
 ' </pad> '+
 ''

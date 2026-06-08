@@ -1,0 +1,65 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>94</ObjId>
+<ObjName>RelTopList</ObjName>
+<ObjDesc>Relatório de topo de lista.</ObjDesc>
+<ObjPgmName>WRelTopList</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings>
+<Warning>
+<MsgCode>spc0025</MsgCode>
+<Token>Events (</Token>
+<Token>21</Token>
+<Token>):</Token>
+<Token>Too many parameters </Token>
+<Token>calling</Token>
+<Token> </Token>
+<Token>RRELTOPLISDEVOLUCOES</Token>
+<Token>.</Token></Warning>
+<Warning>
+<MsgCode>spc0047</MsgCode>
+<Token>Variable </Token>
+<Token>Assunto</Token>
+<Token> not defined; </Token>
+<Token>N(10.2)</Token>
+<Token> assumed.</Token></Warning></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>18</GenId>
+<GenName>.NET - Win</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters></Parameters>
+<StandAloneRules></StandAloneRules>
+<Event>
+<EventName>Start</EventName></Event>
+<Event>
+<EventName>Refresh</EventName></Event>
+<Event>
+<EventName>'Imprimir'</EventName>
+<CALL>
+<Object>
+<ObjCls>2</ObjCls>
+<ObjId>24</ObjId>
+<ObjName>RelTopLisDevolucoes</ObjName>
+<ObjPgmName>RRelTopLisDevolucoes</ObjPgmName>
+<ObjClsName>Report</ObjClsName></Object>
+<Parameters>
+<Variable>
+<VarId>Datinicial</VarId>
+<VarName>&amp;DatInicial</VarName></Variable>
+<Token>,</Token>
+<Variable>
+<VarId>Datfinal</VarId>
+<VarName>&amp;DatFinal</VarName></Variable>
+<Token>,</Token>
+<Variable>
+<VarId>Selecao</VarId>
+<VarName>&amp;Selecao</VarName></Variable></Parameters>
+<IF></IF></CALL></Event>
+<Event>
+<EventName>Load</EventName></Event>
+<Suggests></Suggests></ObjectSpec>

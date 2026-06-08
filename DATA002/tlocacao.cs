@@ -2,7 +2,7 @@
                File: Locacao
         Description: Cadastro de locações.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/3/2026 10:48:9.41
+       Generated on: 6/8/2026 9:5:17.42
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -64,6 +64,8 @@ namespace GeneXus.Programs {
 
       protected void InitializeNonKey0B12( )
       {
+         A95LocTotV = (decimal)(0M) ;
+         n95LocTotV = false ;
          A87LocSitu = 1 ;
          n87LocSitu = false ;
          A88LocDatL = Gx_date ;
@@ -83,15 +85,11 @@ namespace GeneXus.Programs {
          n93LocVenP = false ;
          A94LocVenP = AV7Funcion.gxTpr_Pesnome ;
          n94LocVenP = false ;
-         X95LocTotV = O95LocTotV ;
-         O95LocTotV = (decimal)(0M) ;
       }
 
       protected void InitAll0B12( )
       {
          A86LocCodi = 0 ;
-         A95LocTotV = (decimal)(0M) ;
-         AV20LocTot = (decimal)(0M) ;
          K86LocCodi = A86LocCodi ;
          geteqAfterKey = 1 ;
          clear( ) ;
@@ -125,10 +123,6 @@ namespace GeneXus.Programs {
          n108LocMid = false ;
          A109LocMid = (decimal)(0M) ;
          n109LocMid = false ;
-         O109LocMid = A109LocMid ;
-         n109LocMid = false ;
-         X109LocMid = O109LocMid ;
-         O109LocMid = (decimal)(0M) ;
       }
 
       protected void InitAll0B13( )
@@ -143,8 +137,6 @@ namespace GeneXus.Programs {
 
       protected void StandaloneModalInsert0B13( )
       {
-         A95LocTotV = i95LocTotV ;
-         edtLocTotValor.setValue(A95LocTotV);
       }
 
       protected void ResetCaption0B0( )
@@ -299,10 +291,10 @@ namespace GeneXus.Programs {
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         edtLocTotValor = new GUIObjectDecimal2 ( new GXEdit(12, "ZZZ,ZZZ,ZZ9.99", UIFactory.getFont( "Courier New", 0, 9),91, 496, 108, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), true) , GXPanel1 , 91 , 496 , 108 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A95LocTotV" );
-         ((GXEdit) edtLocTotValor.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
-         edtLocTotValor.addFocusListener(this);
-         edtLocTotValor.getGXComponent().setHelpId("HLP_TLocacao.htm");
+         edtavLoctotvalor = new GUIObjectDecimal2 ( new GXEdit(12, "ZZZ,ZZZ,ZZ9.99", UIFactory.getFont( "Courier New", 0, 9),91, 496, 108, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), true) , GXPanel1 , 91 , 496 , 108 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV20LocTot" );
+         ((GXEdit) edtavLoctotvalor.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
+         edtavLoctotvalor.addFocusListener(this);
+         edtavLoctotvalor.getGXComponent().setHelpId("HLP_TLocacao.htm");
          bttEnter = UIFactory.getGXButton( GXPanel1 , "Confirmar" ,  689 ,  494 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttEnter.setTooltip("Confirmar");
          bttEnter.addActionListener(this);
@@ -392,7 +384,7 @@ namespace GeneXus.Programs {
                    edtLocVenPesCodigo ,
                    edtLocVenPesNome ,
                    subGrd ,
-                   edtLocTotValor ,
+                   edtavLoctotvalor ,
                    bttEnter
          });
       }
@@ -433,7 +425,7 @@ namespace GeneXus.Programs {
             subGrd.getColumn(1).setEnabled(0);
             subGrd.getColumn(2).setEnabled(0);
             subGrd.getColumn(3).setEnabled(0);
-            edtLocTotValor.setEnabled(0);
+            edtavLoctotvalor.setEnabled(0);
             setFocus(bttEnter, true);
          }
       }
@@ -732,8 +724,8 @@ namespace GeneXus.Programs {
             setGXCursor( edtLocCliPesNome.getGXCursor() );
             return;
          }
-         if ( edtLocTotValor.isEventSource(eventSource) ) {
-            setGXCursor( edtLocTotValor.getGXCursor() );
+         if ( edtavLoctotvalor.isEventSource(eventSource) ) {
+            setGXCursor( edtavLoctotvalor.getGXCursor() );
             return;
          }
       }
@@ -745,16 +737,12 @@ namespace GeneXus.Programs {
       public override void focusEventDispatch( Object eventSource )
       {
          AnyError = 0 ;
-         if ( edtLocTotValor.isEventSource(eventSource) ) {
-            Valid_Loctotvalor ();
+         if ( edtavLoctotvalor.isEventSource(eventSource) ) {
+            Validv_Loctotvalor ();
             return;
          }
          if ( edtLocCliPesCodigo.isEventSource(eventSource) ) {
             Valid_Locclipescodigo ();
-            return;
-         }
-         if ( edtLocCodigo.isEventSource(eventSource) ) {
-            Valid_Loccodigo ();
             return;
          }
          if ( subGrd.getColumn(3).isEventSource(eventSource) ) {
@@ -767,6 +755,10 @@ namespace GeneXus.Programs {
                Valid_Locmidmidconfvalor ();
                Gx_mode = sMode13 ;
             }
+            return;
+         }
+         if ( edtLocCodigo.isEventSource(eventSource) ) {
+            Valid_Loccodigo ();
             return;
          }
          if ( edtLocVenPesCodigo.isEventSource(eventSource) ) {
@@ -836,8 +828,8 @@ namespace GeneXus.Programs {
             A92LocCliP = edtLocCliPesNome.getValue() ;
             return;
          }
-         if ( edtLocTotValor.isEventSource(eventSource) ) {
-            A95LocTotV = edtLocTotValor.getValue() ;
+         if ( edtavLoctotvalor.isEventSource(eventSource) ) {
+            AV20LocTot = edtavLoctotvalor.getValue() ;
             return;
          }
       }
@@ -930,10 +922,6 @@ namespace GeneXus.Programs {
          {
             return true;
          }
-         if ( ( edtLocTotValor.isEventSource(eventSource) ) && ( ( A95LocTotV != edtLocTotValor.getValue() ) ) )
-         {
-            return true;
-         }
          if (subGrd.elementsEventSource(eventSource))
          {
             return true;
@@ -1003,8 +991,6 @@ namespace GeneXus.Programs {
                Gx_mode = "INS" ;
             }
             validate_on_delete13 ();
-            O95LocTotV = A95LocTotV ;
-            OV20LocTot = AV20LocTot ;
             Gx_mode = sMode13 ;
          }
       }
@@ -1027,8 +1013,6 @@ namespace GeneXus.Programs {
          subtlocacao30.setLocMidMidSituacao(A107LocMid);
          subtlocacao30.setLocMidMidLocCodigo(A108LocMid);
          subtlocacao30.setLocMidMidConfValor(A109LocMid);
-         subtlocacao30.setOLocMidMidConfValor(O109LocMid);
-         subtlocacao30.setOOLocMidMidConfValor(X109LocMid);
          subtlocacao30.setZLocMidFilCodigo(Z103LocMid);
          subtlocacao30.setZLocMidFilNome(Z104LocMid);
          subtlocacao30.setZLocMidCatCodigo(Z105LocMid);
@@ -1050,8 +1034,6 @@ namespace GeneXus.Programs {
          A108LocMid = subtlocacao30.getLocMidMidLocCodigo();
          A109LocMid = subtlocacao30.getLocMidMidConfValor();
          n109LocMid = (((Convert.ToDecimal(0M)==A109LocMid)) ? true : false) ;
-         O109LocMid = subtlocacao30.getOLocMidMidConfValor();
-         X109LocMid = subtlocacao30.getOOLocMidMidConfValor();
          Z103LocMid = subtlocacao30.getZLocMidFilCodigo();
          Z104LocMid = subtlocacao30.getZLocMidFilNome();
          Z105LocMid = subtlocacao30.getZLocMidCatCodigo();
@@ -1074,7 +1056,7 @@ namespace GeneXus.Programs {
          edtLocVenPesNome.setValue( A94LocVenP );
          edtLocCliPesCodigo.setValue( A91LocCliP );
          edtLocCliPesNome.setValue( A92LocCliP );
-         edtLocTotValor.setValue( A95LocTotV );
+         edtavLoctotvalor.setValue( AV20LocTot );
       }
 
       public override void ControlsToVariables( )
@@ -1115,8 +1097,8 @@ namespace GeneXus.Programs {
          A92LocCliP = (String)(edtLocCliPesNome.getValue()) ;
          edtLocCliPesNome.setValue(A92LocCliP);
          n92LocCliP = false ;
-         A95LocTotV = (decimal)(edtLocTotValor.getValue()) ;
-         edtLocTotValor.setValue(A95LocTotV);
+         AV20LocTot = (decimal)(edtavLoctotvalor.getValue()) ;
+         edtavLoctotvalor.setValue(AV20LocTot);
       }
 
       protected void eventNoLevelContext( )
@@ -1189,10 +1171,6 @@ namespace GeneXus.Programs {
                }
                VariablesToControls();
             }
-            GetLocTotValor( A86LocCodi) ;
-            edtLocTotValor.setValue(A95LocTotV);
-            edtLocTotValor.setValue( A95LocTotV );
-            AV20LocTot = A95LocTotV ;
             if ( ( AnyError == 0 ) )
             {
                geteqAfterKey = 0 ;
@@ -1201,7 +1179,6 @@ namespace GeneXus.Programs {
             {
                geteqAfterKey = 1 ;
             }
-            O95LocTotV = A95LocTotV ;
          }
          IsConfirmed = 0 ;
          set_caption( ) ;
@@ -1236,12 +1213,9 @@ namespace GeneXus.Programs {
       {
       }
 
-      protected void Valid_Loctotvalor( )
+      protected void Validv_Loctotvalor( )
       {
          reloadGridRow();
-         O109LocMid = A109LocMid ;
-         n109LocMid = false ;
-         O95LocTotV = A95LocTotV ;
       }
 
       protected void Valid_Locmidmidcodigo( )
@@ -1277,11 +1251,6 @@ namespace GeneXus.Programs {
       protected void Valid_Locmidmidconfvalor( )
       {
          reloadGridRow();
-         O109LocMid = A109LocMid ;
-         n109LocMid = false ;
-         ((subtlocacao30)subGrd.getCurrentElement()).setOLocMidMidConfValor(O109LocMid);
-         O95LocTotV = A95LocTotV ;
-         OV20LocTot = AV20LocTot ;
       }
 
       protected void validate_on_delete13( )
@@ -1302,6 +1271,8 @@ namespace GeneXus.Programs {
          eventNoLevelContext();
          /* Start Routine */
          tctrlCadastrodelocacao.setActivePage(1);
+         AV20LocTot = A95LocTotV ;
+         edtavLoctotvalor.setValue(AV20LocTot);
       }
 
       protected void E130B2( )
@@ -1310,7 +1281,7 @@ namespace GeneXus.Programs {
          /* 'Pesquisar' Routine */
          if ( GXCursor("A91LocCliP") )
          {
-            GXt_svchar1 = "X" ;
+            GXt_svchar1 = "Locacao" ;
             new wconscliente(context, base.remoteHandle, base.context).execute( ref  GXt_svchar1, out  A91LocCliP) ;
             edtLocCliPesCodigo.setValue( A91LocCliP );
             n91LocCliP = false ;
@@ -1333,6 +1304,8 @@ namespace GeneXus.Programs {
             subGrd.refreshLineValue(subGrd.getSelectedElement());
             subGrd.repaint();
             n109LocMid = false ;
+            AV20LocTot = (decimal)(AV20LocTot+A109LocMid) ;
+            edtavLoctotvalor.setValue(AV20LocTot);
          }
          eventLevelResetContext();
       }
@@ -1360,21 +1333,6 @@ namespace GeneXus.Programs {
       /* Server side code */
       /* Aggregate/select formulas */
       /* Vertical formulas */
-      protected void GetLocTotValor( int A86LocCodi )
-      {
-         /* Create private dbobjects */
-         /* Navigation */
-         A95LocTotV = (decimal)(0M) ;
-         /* Using cursor T000B4 */
-         pr_default.execute(2, new Object[] {A86LocCodi});
-         while ( (pr_default.getStatus(2) != 101) && ( T000B4_A86LocCodi[0] == A86LocCodi ) )
-         {
-            A95LocTotV = (decimal)(A95LocTotV+T000B4_A109LocMid[0]) ;
-            pr_default.readNext(2);
-         }
-         pr_default.close(2);
-      }
-
       public override void standaloneStartupServer( )
       {
          if ( ( AnyError == 0 ) )
@@ -1410,19 +1368,21 @@ namespace GeneXus.Programs {
 
       protected void ZM0B12( int GX_JID )
       {
-         if ( ( GX_JID == 28 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 22 ) || ( GX_JID == 0 ) )
          {
             if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) != 0 ) )
             {
-               Z87LocSitu = T000B8_A87LocSitu[0] ;
-               Z88LocDatL = T000B8_A88LocDatL[0] ;
-               Z89LocDatD = T000B8_A89LocDatD[0] ;
-               Z90LocDatC = T000B8_A90LocDatC[0] ;
-               Z91LocCliP = T000B8_A91LocCliP[0] ;
-               Z93LocVenP = T000B8_A93LocVenP[0] ;
+               Z95LocTotV = T000B7_A95LocTotV[0] ;
+               Z87LocSitu = T000B7_A87LocSitu[0] ;
+               Z88LocDatL = T000B7_A88LocDatL[0] ;
+               Z89LocDatD = T000B7_A89LocDatD[0] ;
+               Z90LocDatC = T000B7_A90LocDatC[0] ;
+               Z91LocCliP = T000B7_A91LocCliP[0] ;
+               Z93LocVenP = T000B7_A93LocVenP[0] ;
             }
             else
             {
+               Z95LocTotV = A95LocTotV ;
                Z87LocSitu = A87LocSitu ;
                Z88LocDatL = A88LocDatL ;
                Z89LocDatD = A89LocDatD ;
@@ -1431,13 +1391,14 @@ namespace GeneXus.Programs {
                Z93LocVenP = A93LocVenP ;
             }
          }
-         if ( ( GX_JID == 30 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 24 ) || ( GX_JID == 0 ) )
          {
-            Z94LocVenP = T000B10_A94LocVenP[0] ;
+            Z94LocVenP = T000B9_A94LocVenP[0] ;
          }
-         if ( ( GX_JID == -28 ) )
+         if ( ( GX_JID == -22 ) )
          {
             Z86LocCodi = A86LocCodi ;
+            Z95LocTotV = A95LocTotV ;
             Z87LocSitu = A87LocSitu ;
             Z88LocDatL = A88LocDatL ;
             Z89LocDatD = A89LocDatD ;
@@ -1457,7 +1418,6 @@ namespace GeneXus.Programs {
          edtLocDatLocacao.setEnabled(0);
          edtLocDatDevolucao.setEnabled(0);
          edtLocDatCancelamento.setEnabled(0);
-         edtLocTotValor.setEnabled(0);
          Gx_date = DateTimeUtil.Today( ) ;
          Gx_BScreen = 0 ;
          new pretfunlogdados(context, base.remoteHandle, base.context).execute( out  AV7Funcion) ;
@@ -1490,16 +1450,12 @@ namespace GeneXus.Programs {
          }
          if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) == 0 ) && ( Gx_BScreen == 0 ) )
          {
-            GetLocTotValor( A86LocCodi) ;
-            O95LocTotV = A95LocTotV ;
-            edtLocTotValor.setValue(A95LocTotV);
-            AV20LocTot = A95LocTotV ;
-            /* Using cursor T000B10 */
-            pr_default.execute(8, new Object[] {n93LocVenP, A93LocVenP});
-            ZM0B12( 30) ;
-            A94LocVenP = T000B10_A94LocVenP[0] ;
-            n94LocVenP = T000B10_n94LocVenP[0] ;
-            pr_default.close(8);
+            /* Using cursor T000B9 */
+            pr_default.execute(7, new Object[] {n93LocVenP, A93LocVenP});
+            ZM0B12( 24) ;
+            A94LocVenP = T000B9_A94LocVenP[0] ;
+            n94LocVenP = T000B9_n94LocVenP[0] ;
+            pr_default.close(7);
          }
          if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "DLT".TrimEnd(' ') ) == 0 ) )
          {
@@ -1509,40 +1465,37 @@ namespace GeneXus.Programs {
 
       protected void Load0B12( )
       {
-         /* Using cursor T000B11 */
-         pr_default.execute(9, new Object[] {A86LocCodi});
-         if ( (pr_default.getStatus(9) != 101) )
+         /* Using cursor T000B10 */
+         pr_default.execute(8, new Object[] {A86LocCodi});
+         if ( (pr_default.getStatus(8) != 101) )
          {
             RcdFound12 = 1 ;
-            A87LocSitu = T000B11_A87LocSitu[0] ;
-            n87LocSitu = T000B11_n87LocSitu[0] ;
-            A88LocDatL = T000B11_A88LocDatL[0] ;
-            n88LocDatL = T000B11_n88LocDatL[0] ;
-            A89LocDatD = T000B11_A89LocDatD[0] ;
-            n89LocDatD = T000B11_n89LocDatD[0] ;
-            A90LocDatC = T000B11_A90LocDatC[0] ;
-            n90LocDatC = T000B11_n90LocDatC[0] ;
-            A92LocCliP = T000B11_A92LocCliP[0] ;
-            n92LocCliP = T000B11_n92LocCliP[0] ;
-            A94LocVenP = T000B11_A94LocVenP[0] ;
-            n94LocVenP = T000B11_n94LocVenP[0] ;
-            A91LocCliP = T000B11_A91LocCliP[0] ;
-            n91LocCliP = T000B11_n91LocCliP[0] ;
-            A93LocVenP = T000B11_A93LocVenP[0] ;
-            n93LocVenP = T000B11_n93LocVenP[0] ;
-            ZM0B12( -28) ;
+            A95LocTotV = T000B10_A95LocTotV[0] ;
+            n95LocTotV = T000B10_n95LocTotV[0] ;
+            A87LocSitu = T000B10_A87LocSitu[0] ;
+            n87LocSitu = T000B10_n87LocSitu[0] ;
+            A88LocDatL = T000B10_A88LocDatL[0] ;
+            n88LocDatL = T000B10_n88LocDatL[0] ;
+            A89LocDatD = T000B10_A89LocDatD[0] ;
+            n89LocDatD = T000B10_n89LocDatD[0] ;
+            A90LocDatC = T000B10_A90LocDatC[0] ;
+            n90LocDatC = T000B10_n90LocDatC[0] ;
+            A92LocCliP = T000B10_A92LocCliP[0] ;
+            n92LocCliP = T000B10_n92LocCliP[0] ;
+            A94LocVenP = T000B10_A94LocVenP[0] ;
+            n94LocVenP = T000B10_n94LocVenP[0] ;
+            A91LocCliP = T000B10_A91LocCliP[0] ;
+            n91LocCliP = T000B10_n91LocCliP[0] ;
+            A93LocVenP = T000B10_A93LocVenP[0] ;
+            n93LocVenP = T000B10_n93LocVenP[0] ;
+            ZM0B12( -22) ;
          }
-         pr_default.close(9);
+         pr_default.close(8);
          OnLoadActions0B12( ) ;
-         X95LocTotV = O95LocTotV ;
       }
 
       protected void OnLoadActions0B12( )
       {
-         GetLocTotValor( A86LocCodi) ;
-         O95LocTotV = A95LocTotV ;
-         edtLocTotValor.setValue(A95LocTotV);
-         AV20LocTot = A95LocTotV ;
          if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) == 0 )  && ((String.CompareOrdinal("".TrimEnd(' '), StringUtil.RTrim( A94LocVenP).TrimEnd(' ') )==0)) && ( Gx_BScreen == 0 ) )
          {
             A94LocVenP = AV7Funcion.gxTpr_Pesnome ;
@@ -1553,14 +1506,9 @@ namespace GeneXus.Programs {
 
       protected void CheckExtendedTable0B12( )
       {
-         O95LocTotV = X95LocTotV ;
-         A95LocTotV = X95LocTotV ;
          Gx_BScreen = 1 ;
          standaloneModal( ) ;
          Gx_BScreen = 0 ;
-         GetLocTotValor( A86LocCodi) ;
-         edtLocTotValor.setValue(A95LocTotV);
-         AV20LocTot = A95LocTotV ;
          /* Using cursor T000B2 */
          pr_default.execute(0, new Object[] {n91LocCliP, A91LocCliP});
          if ( (pr_default.getStatus(0) == 101) )
@@ -1575,9 +1523,9 @@ namespace GeneXus.Programs {
          A92LocCliP = T000B2_A92LocCliP[0] ;
          n92LocCliP = T000B2_n92LocCliP[0] ;
          pr_default.close(0);
-         /* Using cursor T000B10 */
-         pr_default.execute(8, new Object[] {n93LocVenP, A93LocVenP});
-         if ( (pr_default.getStatus(8) == 101) )
+         /* Using cursor T000B9 */
+         pr_default.execute(7, new Object[] {n93LocVenP, A93LocVenP});
+         if ( (pr_default.getStatus(7) == 101) )
          {
             if ( ! ( ((0==A93LocVenP)) ) )
             {
@@ -1586,9 +1534,9 @@ namespace GeneXus.Programs {
                setNextFocus( edtLocVenPesCodigo );
             }
          }
-         A94LocVenP = T000B10_A94LocVenP[0] ;
-         n94LocVenP = T000B10_n94LocVenP[0] ;
-         pr_default.close(8);
+         A94LocVenP = T000B9_A94LocVenP[0] ;
+         n94LocVenP = T000B9_n94LocVenP[0] ;
+         pr_default.close(7);
          if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) == 0 )  && ((String.CompareOrdinal("".TrimEnd(' '), StringUtil.RTrim( A94LocVenP).TrimEnd(' ') )==0)) && ( Gx_BScreen == 0 ) )
          {
             A94LocVenP = AV7Funcion.gxTpr_Pesnome ;
@@ -1601,7 +1549,7 @@ namespace GeneXus.Programs {
       protected void CloseExtendedTableCursors0B12( )
       {
          pr_default.close(0);
-         pr_default.close(8);
+         pr_default.close(7);
       }
 
       protected void enableDisable( )
@@ -1610,9 +1558,9 @@ namespace GeneXus.Programs {
 
       protected void GetKey0B12( )
       {
-         /* Using cursor T000B12 */
-         pr_default.execute(10, new Object[] {A86LocCodi});
-         if ( (pr_default.getStatus(10) != 101) )
+         /* Using cursor T000B11 */
+         pr_default.execute(9, new Object[] {A86LocCodi});
+         if ( (pr_default.getStatus(9) != 101) )
          {
             RcdFound12 = 1 ;
          }
@@ -1620,30 +1568,32 @@ namespace GeneXus.Programs {
          {
             RcdFound12 = 0 ;
          }
-         pr_default.close(10);
+         pr_default.close(9);
       }
 
       public override void getByPrimaryKey( )
       {
-         /* Using cursor T000B8 */
-         pr_default.execute(6, new Object[] {A86LocCodi});
-         if ( (pr_default.getStatus(6) != 101) )
+         /* Using cursor T000B7 */
+         pr_default.execute(5, new Object[] {A86LocCodi});
+         if ( (pr_default.getStatus(5) != 101) )
          {
-            ZM0B12( 28) ;
+            ZM0B12( 22) ;
             RcdFound12 = 1 ;
-            A86LocCodi = T000B8_A86LocCodi[0] ;
-            A87LocSitu = T000B8_A87LocSitu[0] ;
-            n87LocSitu = T000B8_n87LocSitu[0] ;
-            A88LocDatL = T000B8_A88LocDatL[0] ;
-            n88LocDatL = T000B8_n88LocDatL[0] ;
-            A89LocDatD = T000B8_A89LocDatD[0] ;
-            n89LocDatD = T000B8_n89LocDatD[0] ;
-            A90LocDatC = T000B8_A90LocDatC[0] ;
-            n90LocDatC = T000B8_n90LocDatC[0] ;
-            A91LocCliP = T000B8_A91LocCliP[0] ;
-            n91LocCliP = T000B8_n91LocCliP[0] ;
-            A93LocVenP = T000B8_A93LocVenP[0] ;
-            n93LocVenP = T000B8_n93LocVenP[0] ;
+            A86LocCodi = T000B7_A86LocCodi[0] ;
+            A95LocTotV = T000B7_A95LocTotV[0] ;
+            n95LocTotV = T000B7_n95LocTotV[0] ;
+            A87LocSitu = T000B7_A87LocSitu[0] ;
+            n87LocSitu = T000B7_n87LocSitu[0] ;
+            A88LocDatL = T000B7_A88LocDatL[0] ;
+            n88LocDatL = T000B7_n88LocDatL[0] ;
+            A89LocDatD = T000B7_A89LocDatD[0] ;
+            n89LocDatD = T000B7_n89LocDatD[0] ;
+            A90LocDatC = T000B7_A90LocDatC[0] ;
+            n90LocDatC = T000B7_n90LocDatC[0] ;
+            A91LocCliP = T000B7_A91LocCliP[0] ;
+            n91LocCliP = T000B7_n91LocCliP[0] ;
+            A93LocVenP = T000B7_A93LocVenP[0] ;
+            n93LocVenP = T000B7_n93LocVenP[0] ;
             Z86LocCodi = A86LocCodi ;
             sMode12 = Gx_mode ;
             Gx_mode = "DSP" ;
@@ -1660,7 +1610,7 @@ namespace GeneXus.Programs {
             Gx_mode = sMode12 ;
          }
          K86LocCodi = A86LocCodi ;
-         pr_default.close(6);
+         pr_default.close(5);
          subGrd.startLoad();
          subtlocacao30 = new subtlocacao30 ();
          if ( ( RcdFound12 == 1 ) )
@@ -1669,10 +1619,6 @@ namespace GeneXus.Programs {
             while ( ( RcdFound13 != 0 ) )
             {
                getByPrimaryKey0B13( ) ;
-               O109LocMid = A109LocMid ;
-               n109LocMid = false ;
-               O95LocTotV = A95LocTotV ;
-               OV20LocTot = AV20LocTot ;
                AddRow0B13( ) ;
                ScanNext0B13( ) ;
             }
@@ -1696,41 +1642,41 @@ namespace GeneXus.Programs {
       protected void move_next( )
       {
          RcdFound12 = 0 ;
+         /* Using cursor T000B12 */
+         pr_default.execute(10, new Object[] {A86LocCodi});
+         if ( (pr_default.getStatus(10) != 101) )
+         {
+            while ( (pr_default.getStatus(10) != 101) && ( ( T000B12_A86LocCodi[0] < A86LocCodi ) ) )
+            {
+               pr_default.readNext(10);
+            }
+            if ( (pr_default.getStatus(10) != 101) && ( ( T000B12_A86LocCodi[0] > A86LocCodi ) ) )
+            {
+               A86LocCodi = T000B12_A86LocCodi[0] ;
+               RcdFound12 = 1 ;
+            }
+         }
+         pr_default.close(10);
+      }
+
+      protected void move_previous( )
+      {
+         RcdFound12 = 0 ;
          /* Using cursor T000B13 */
          pr_default.execute(11, new Object[] {A86LocCodi});
          if ( (pr_default.getStatus(11) != 101) )
          {
-            while ( (pr_default.getStatus(11) != 101) && ( ( T000B13_A86LocCodi[0] < A86LocCodi ) ) )
+            while ( (pr_default.getStatus(11) != 101) && ( ( T000B13_A86LocCodi[0] > A86LocCodi ) ) )
             {
                pr_default.readNext(11);
             }
-            if ( (pr_default.getStatus(11) != 101) && ( ( T000B13_A86LocCodi[0] > A86LocCodi ) ) )
+            if ( (pr_default.getStatus(11) != 101) && ( ( T000B13_A86LocCodi[0] < A86LocCodi ) ) )
             {
                A86LocCodi = T000B13_A86LocCodi[0] ;
                RcdFound12 = 1 ;
             }
          }
          pr_default.close(11);
-      }
-
-      protected void move_previous( )
-      {
-         RcdFound12 = 0 ;
-         /* Using cursor T000B14 */
-         pr_default.execute(12, new Object[] {A86LocCodi});
-         if ( (pr_default.getStatus(12) != 101) )
-         {
-            while ( (pr_default.getStatus(12) != 101) && ( ( T000B14_A86LocCodi[0] > A86LocCodi ) ) )
-            {
-               pr_default.readNext(12);
-            }
-            if ( (pr_default.getStatus(12) != 101) && ( ( T000B14_A86LocCodi[0] < A86LocCodi ) ) )
-            {
-               A86LocCodi = T000B14_A86LocCodi[0] ;
-               RcdFound12 = 1 ;
-            }
-         }
-         pr_default.close(12);
       }
 
       public override void btn_enter( )
@@ -1762,10 +1708,6 @@ namespace GeneXus.Programs {
             else
             {
                /* Update record */
-               O95LocTotV = X95LocTotV ;
-               A95LocTotV = O95LocTotV ;
-               edtLocTotValor.setValue(A95LocTotV);
-               AV20LocTot = OV20LocTot ;
                Update0B12( ) ;
                setNextFocus( edtLocCodigo );
             }
@@ -1775,10 +1717,6 @@ namespace GeneXus.Programs {
             if ( ( A86LocCodi != Z86LocCodi ) )
             {
                /* Insert record */
-               O95LocTotV = X95LocTotV ;
-               A95LocTotV = O95LocTotV ;
-               edtLocTotValor.setValue(A95LocTotV);
-               AV20LocTot = OV20LocTot ;
                Insert0B12( ) ;
                setNextFocus( edtLocCodigo );
             }
@@ -1793,10 +1731,6 @@ namespace GeneXus.Programs {
                else
                {
                   /* Insert record */
-                  O95LocTotV = X95LocTotV ;
-                  A95LocTotV = O95LocTotV ;
-                  edtLocTotValor.setValue(A95LocTotV);
-                  AV20LocTot = OV20LocTot ;
                   Insert0B12( ) ;
                   setNextFocus( edtLocCodigo );
                }
@@ -1825,10 +1759,6 @@ namespace GeneXus.Programs {
          }
          else
          {
-            O95LocTotV = X95LocTotV ;
-            A95LocTotV = O95LocTotV ;
-            edtLocTotValor.setValue(A95LocTotV);
-            AV20LocTot = OV20LocTot ;
             delete( ) ;
             handleErrors();
             AfterTrn( ) ;
@@ -1848,9 +1778,9 @@ namespace GeneXus.Programs {
       {
          if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) != 0 ) )
          {
-            /* Using cursor T000B7 */
-            pr_default.execute(5, new Object[] {A86LocCodi});
-            if ( ! (pr_default.getStatus(5) != 103) )
+            /* Using cursor T000B6 */
+            pr_default.execute(4, new Object[] {A86LocCodi});
+            if ( ! (pr_default.getStatus(4) != 103) )
             {
                pushError( (String)(GXResourceManager.GetMessage("lock", new   object[]  {"LOCACAO"})) );
                AnyError = 1 ;
@@ -1858,11 +1788,11 @@ namespace GeneXus.Programs {
                return  ;
             }
             Gx_longc = false ;
-            if ( (pr_default.getStatus(5) == 101) || ( Z87LocSitu != T000B7_A87LocSitu[0] ) || ( Z88LocDatL != T000B7_A88LocDatL[0] ) || ( Z89LocDatD != T000B7_A89LocDatD[0] ) || ( Z90LocDatC != T000B7_A90LocDatC[0] ) || ( Z91LocCliP != T000B7_A91LocCliP[0] ) )
+            if ( (pr_default.getStatus(4) == 101) || ( Z95LocTotV != T000B6_A95LocTotV[0] ) || ( Z87LocSitu != T000B6_A87LocSitu[0] ) || ( Z88LocDatL != T000B6_A88LocDatL[0] ) || ( Z89LocDatD != T000B6_A89LocDatD[0] ) || ( Z90LocDatC != T000B6_A90LocDatC[0] ) )
             {
                Gx_longc = true ;
             }
-            if ( Gx_longc || ( Z93LocVenP != T000B7_A93LocVenP[0] ) )
+            if ( Gx_longc || ( Z91LocCliP != T000B6_A91LocCliP[0] ) || ( Z93LocVenP != T000B6_A93LocVenP[0] ) )
             {
                pushError( (String)(GXResourceManager.GetMessage("waschg", new   object[]  {"LOCACAO"})) );
                AnyError = 1 ;
@@ -1870,16 +1800,16 @@ namespace GeneXus.Programs {
                return  ;
             }
          }
-         /* Using cursor T000B9 */
-         pr_default.execute(7, new Object[] {n93LocVenP, A93LocVenP});
-         if ( ! (pr_default.getStatus(7) != 103) )
+         /* Using cursor T000B8 */
+         pr_default.execute(6, new Object[] {n93LocVenP, A93LocVenP});
+         if ( ! (pr_default.getStatus(6) != 103) )
          {
             pushError( (String)(GXResourceManager.GetMessage("lock", new   object[]  {"PESSOA"})) );
             AnyError = 1 ;
             keepFocus();
             return  ;
          }
-         if ( false || ( String.CompareOrdinal(Z94LocVenP.TrimEnd(' '), T000B9_A94LocVenP[0].TrimEnd(' ') ) != 0 ) )
+         if ( false || ( String.CompareOrdinal(Z94LocVenP.TrimEnd(' '), T000B8_A94LocVenP[0].TrimEnd(' ') ) != 0 ) )
          {
             pushError( (String)(GXResourceManager.GetMessage("waschg", new   object[]  {"PESSOA"})) );
             AnyError = 1 ;
@@ -1907,14 +1837,14 @@ namespace GeneXus.Programs {
                   BeforeInsert0B12( ) ;
                   if ( ( AnyError == 0 ) )
                   {
-                     /* Using cursor T000B15 */
-                     pr_default.execute(13, new Object[] {n87LocSitu, A87LocSitu, n88LocDatL, A88LocDatL, n89LocDatD, A89LocDatD, n90LocDatC, A90LocDatC, n91LocCliP, A91LocCliP, n93LocVenP, A93LocVenP});
-                     pr_default.close(13);
+                     /* Using cursor T000B14 */
+                     pr_default.execute(12, new Object[] {n95LocTotV, A95LocTotV, n87LocSitu, A87LocSitu, n88LocDatL, A88LocDatL, n89LocDatD, A89LocDatD, n90LocDatC, A90LocDatC, n91LocCliP, A91LocCliP, n93LocVenP, A93LocVenP});
+                     pr_default.close(12);
                      /* Retrieving last key number assigned */
-                     /* Using cursor T000B16 */
-                     pr_default.execute(14);
-                     A86LocCodi = T000B16_A86LocCodi[0] ;
-                     pr_default.close(14);
+                     /* Using cursor T000B15 */
+                     pr_default.execute(13);
+                     A86LocCodi = T000B15_A86LocCodi[0] ;
+                     pr_default.close(13);
                      if ( ( AnyError == 0 ) )
                      {
                         UpdateTablesN10B12( ) ;
@@ -1970,9 +1900,9 @@ namespace GeneXus.Programs {
                   BeforeUpdate0B12( ) ;
                   if ( ( AnyError == 0 ) )
                   {
-                     /* Using cursor T000B17 */
-                     pr_default.execute(15, new Object[] {n87LocSitu, A87LocSitu, n88LocDatL, A88LocDatL, n89LocDatD, A89LocDatD, n90LocDatC, A90LocDatC, n91LocCliP, A91LocCliP, n93LocVenP, A93LocVenP, A86LocCodi});
-                     pr_default.close(15);
+                     /* Using cursor T000B16 */
+                     pr_default.execute(14, new Object[] {n95LocTotV, A95LocTotV, n87LocSitu, A87LocSitu, n88LocDatL, A88LocDatL, n89LocDatD, A89LocDatD, n90LocDatC, A90LocDatC, n91LocCliP, A91LocCliP, n93LocVenP, A93LocVenP, A86LocCodi});
+                     pr_default.close(14);
                      DeferredUpdate0B12( ) ;
                      if ( ( AnyError == 0 ) )
                      {
@@ -2016,17 +1946,12 @@ namespace GeneXus.Programs {
          if ( ( AnyError == 0 ) )
          {
             OnDeleteControls0B12( ) ;
-            A95LocTotV = O95LocTotV ;
-            edtLocTotValor.setValue(A95LocTotV);
-            AV20LocTot = OV20LocTot ;
             ScanStart0B13( ) ;
             while ( ( RcdFound13 != 0 ) )
             {
                getByPrimaryKey0B13( ) ;
                Delete0B13( ) ;
                ScanNext0B13( ) ;
-               O95LocTotV = A95LocTotV ;
-               OV20LocTot = AV20LocTot ;
             }
             ScanEnd0B13( ) ;
             if ( ( AnyError == 0 ) )
@@ -2037,9 +1962,9 @@ namespace GeneXus.Programs {
                   BeforeDelete0B12( ) ;
                   if ( ( AnyError == 0 ) )
                   {
-                     /* Using cursor T000B18 */
-                     pr_default.execute(16, new Object[] {A86LocCodi});
-                     pr_default.close(16);
+                     /* Using cursor T000B17 */
+                     pr_default.execute(15, new Object[] {A86LocCodi});
+                     pr_default.close(15);
                      if ( ( AnyError == 0 ) )
                      {
                         UpdateTablesN10B12( ) ;
@@ -2072,20 +1997,17 @@ namespace GeneXus.Programs {
          if ( ( AnyError == 0 ) )
          {
             /* Delete mode formulas */
-            GetLocTotValor( A86LocCodi) ;
-            edtLocTotValor.setValue(A95LocTotV);
-            AV20LocTot = A95LocTotV ;
+            /* Using cursor T000B18 */
+            pr_default.execute(16, new Object[] {n91LocCliP, A91LocCliP});
+            A92LocCliP = T000B18_A92LocCliP[0] ;
+            n92LocCliP = T000B18_n92LocCliP[0] ;
+            pr_default.close(16);
             /* Using cursor T000B19 */
-            pr_default.execute(17, new Object[] {n91LocCliP, A91LocCliP});
-            A92LocCliP = T000B19_A92LocCliP[0] ;
-            n92LocCliP = T000B19_n92LocCliP[0] ;
+            pr_default.execute(17, new Object[] {n93LocVenP, A93LocVenP});
+            Z94LocVenP = T000B19_A94LocVenP[0] ;
+            A94LocVenP = T000B19_A94LocVenP[0] ;
+            n94LocVenP = T000B19_n94LocVenP[0] ;
             pr_default.close(17);
-            /* Using cursor T000B20 */
-            pr_default.execute(18, new Object[] {n93LocVenP, A93LocVenP});
-            Z94LocVenP = T000B20_A94LocVenP[0] ;
-            A94LocVenP = T000B20_A94LocVenP[0] ;
-            n94LocVenP = T000B20_n94LocVenP[0] ;
-            pr_default.close(18);
             if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) == 0 )  && ((String.CompareOrdinal("".TrimEnd(' '), StringUtil.RTrim( A94LocVenP).TrimEnd(' ') )==0)) && ( Gx_BScreen == 0 ) )
             {
                A94LocVenP = AV7Funcion.gxTpr_Pesnome ;
@@ -2095,22 +2017,20 @@ namespace GeneXus.Programs {
          }
          if ( ( AnyError == 0 ) )
          {
-            /* Using cursor T000B21 */
-            pr_default.execute(19, new Object[] {A86LocCodi});
-            if ( (pr_default.getStatus(19) != 101) )
+            /* Using cursor T000B20 */
+            pr_default.execute(18, new Object[] {A86LocCodi});
+            if ( (pr_default.getStatus(18) != 101) )
             {
                pushError( GXResourceManager.GetMessage("del", new   object[]  {"Cadastro de mídias."}) );
                AnyError = 1 ;
                keepFocus();
             }
-            pr_default.close(19);
+            pr_default.close(18);
          }
       }
 
       protected void ProcessNestedLevel0B13( )
       {
-         s95LocTotV = O95LocTotV ;
-         sV20LocTot = OV20LocTot ;
          nGXsfl_30_idx = 0 ;
          while ( ( nGXsfl_30_idx < subGrd.getItemCount() ) )
          {
@@ -2147,10 +2067,7 @@ namespace GeneXus.Programs {
                         if ( ( subtlocacao30.isChanged() != 0 ) && ( subtlocacao30.isLoaded() != 0 ) )
                         {
                            Gx_mode = "UPD" ;
-                           Y109LocMid = X109LocMid ;
                            Update0B13( ) ;
-                           O109LocMid = Y109LocMid ;
-                           X109LocMid = Y109LocMid ;
                         }
                      }
                   }
@@ -2164,8 +2081,6 @@ namespace GeneXus.Programs {
                      }
                   }
                }
-               O95LocTotV = A95LocTotV ;
-               OV20LocTot = AV20LocTot ;
             }
          }
          subGrd.endLoad(new subtlocacao30());
@@ -2180,8 +2095,6 @@ namespace GeneXus.Programs {
          ProcessNestedLevel0B13( ) ;
          if ( ( AnyError != 0 ) )
          {
-            O95LocTotV = s95LocTotV ;
-            OV20LocTot = sV20LocTot ;
          }
          /* Restore parent mode. */
          Gx_mode = sMode12 ;
@@ -2190,29 +2103,29 @@ namespace GeneXus.Programs {
 
       protected void UpdateTablesN10B12( )
       {
-         /* Using cursor T000B22 */
-         pr_default.execute(20, new Object[] {n94LocVenP, A94LocVenP, n93LocVenP, A93LocVenP});
-         pr_default.close(20);
+         /* Using cursor T000B21 */
+         pr_default.execute(19, new Object[] {n94LocVenP, A94LocVenP, n93LocVenP, A93LocVenP});
+         pr_default.close(19);
       }
 
       protected void EndLevel0B12( )
       {
          if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) != 0 ) )
          {
-            pr_default.close(5);
+            pr_default.close(4);
          }
-         pr_default.close(7);
+         pr_default.close(6);
          if ( ( AnyError == 0 ) )
          {
             BeforeComplete0B12( ) ;
          }
          if ( ( AnyError == 0 ) && ( sanomodError == 0 ) )
          {
-            pr_default.close(6);
-            pr_default.close(4);
+            pr_default.close(5);
             pr_default.close(3);
+            pr_default.close(2);
+            pr_default.close(16);
             pr_default.close(17);
-            pr_default.close(18);
             pr_default.close(1);
             context.CommitDataStores("TLocacao");
             /* After transaction rules */
@@ -2221,29 +2134,29 @@ namespace GeneXus.Programs {
          }
          else
          {
-            pr_default.close(6);
-            pr_default.close(4);
+            pr_default.close(5);
             pr_default.close(3);
+            pr_default.close(2);
+            pr_default.close(16);
             pr_default.close(17);
-            pr_default.close(18);
             pr_default.close(1);
             context.RollbackDataStores("TLocacao");
             nGXsfl_30_idx = 0 ;
             while ( ( nGXsfl_30_idx < subGrd.getItemCount() ) )
             {
                ReadRow0B13( ) ;
-               /* Using cursor T000B6 */
-               pr_default.execute(4, new Object[] {A86LocCodi, A102LocMid});
-               if ( (pr_default.getStatus(4) != 101) )
+               /* Using cursor T000B5 */
+               pr_default.execute(3, new Object[] {A86LocCodi, A102LocMid});
+               if ( (pr_default.getStatus(3) != 101) )
                {
                   if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) != 0 ) )
                   {
-                     Z103LocMid = T000B6_A103LocMid[0] ;
-                     Z104LocMid = T000B6_A104LocMid[0] ;
-                     Z105LocMid = T000B6_A105LocMid[0] ;
-                     Z106LocMid = T000B6_A106LocMid[0] ;
-                     Z108LocMid = T000B6_A108LocMid[0] ;
-                     Z109LocMid = T000B6_A109LocMid[0] ;
+                     Z103LocMid = T000B5_A103LocMid[0] ;
+                     Z104LocMid = T000B5_A104LocMid[0] ;
+                     Z105LocMid = T000B5_A105LocMid[0] ;
+                     Z106LocMid = T000B5_A106LocMid[0] ;
+                     Z108LocMid = T000B5_A108LocMid[0] ;
+                     Z109LocMid = T000B5_A109LocMid[0] ;
                   }
                   else
                   {
@@ -2256,7 +2169,7 @@ namespace GeneXus.Programs {
                   }
                   variablesToSubfile30 ();
                }
-               pr_default.close(4);
+               pr_default.close(3);
             }
          }
          IsModified = 0 ;
@@ -2264,36 +2177,38 @@ namespace GeneXus.Programs {
 
       protected void ScanStart0B12( )
       {
-         /* Using cursor T000B23 */
-         pr_default.execute(21);
+         /* Using cursor T000B22 */
+         pr_default.execute(20);
          RcdFound12 = 0 ;
-         if ( (pr_default.getStatus(21) != 101) )
+         if ( (pr_default.getStatus(20) != 101) )
          {
             RcdFound12 = 1 ;
-            A86LocCodi = T000B23_A86LocCodi[0] ;
+            A86LocCodi = T000B22_A86LocCodi[0] ;
          }
          /* Load Subordinate Levels */
       }
 
       protected void ScanNext0B12( )
       {
-         pr_default.readNext(21);
+         pr_default.readNext(20);
          RcdFound12 = 0 ;
-         if ( (pr_default.getStatus(21) != 101) )
+         if ( (pr_default.getStatus(20) != 101) )
          {
             RcdFound12 = 1 ;
-            A86LocCodi = T000B23_A86LocCodi[0] ;
+            A86LocCodi = T000B22_A86LocCodi[0] ;
          }
       }
 
       protected void ScanEnd0B12( )
       {
-         pr_default.close(21);
+         pr_default.close(20);
       }
 
       protected void AfterConfirm0B12( )
       {
          /* After Confirm Rules */
+         A95LocTotV = AV20LocTot ;
+         n95LocTotV = false ;
       }
 
       protected void BeforeInsert0B12( )
@@ -2335,16 +2250,16 @@ namespace GeneXus.Programs {
 
       protected void ZM0B13( int GX_JID )
       {
-         if ( ( GX_JID == 31 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 25 ) || ( GX_JID == 0 ) )
          {
             if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) != 0 ) )
             {
-               Z103LocMid = T000B6_A103LocMid[0] ;
-               Z104LocMid = T000B6_A104LocMid[0] ;
-               Z105LocMid = T000B6_A105LocMid[0] ;
-               Z106LocMid = T000B6_A106LocMid[0] ;
-               Z108LocMid = T000B6_A108LocMid[0] ;
-               Z109LocMid = T000B6_A109LocMid[0] ;
+               Z103LocMid = T000B5_A103LocMid[0] ;
+               Z104LocMid = T000B5_A104LocMid[0] ;
+               Z105LocMid = T000B5_A105LocMid[0] ;
+               Z106LocMid = T000B5_A106LocMid[0] ;
+               Z108LocMid = T000B5_A108LocMid[0] ;
+               Z109LocMid = T000B5_A109LocMid[0] ;
             }
             else
             {
@@ -2356,7 +2271,7 @@ namespace GeneXus.Programs {
                Z109LocMid = A109LocMid ;
             }
          }
-         if ( ( GX_JID == -31 ) )
+         if ( ( GX_JID == -25 ) )
          {
             Z86LocCodi = A86LocCodi ;
             Z103LocMid = A103LocMid ;
@@ -2374,33 +2289,10 @@ namespace GeneXus.Programs {
          subGrd.getColumn(2).setEnabled(0);
          subGrd.getColumn(3).setEnabled(0);
          subGrd.getColumn(1).setEnabled(0);
-         edtLocTotValor.setEnabled(0);
       }
 
       protected void standaloneModal0B13( )
       {
-         if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) == 0 )  )
-         {
-            A95LocTotV = (decimal)(O95LocTotV+A109LocMid) ;
-            edtLocTotValor.setValue(A95LocTotV);
-         }
-         else
-         {
-            if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "UPD".TrimEnd(' ') ) == 0 )  )
-            {
-               A95LocTotV = (decimal)(O95LocTotV+A109LocMid-O109LocMid) ;
-               edtLocTotValor.setValue(A95LocTotV);
-            }
-            else
-            {
-               if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "DLT".TrimEnd(' ') ) == 0 )  )
-               {
-                  A95LocTotV = (decimal)(O95LocTotV-O109LocMid) ;
-                  edtLocTotValor.setValue(A95LocTotV);
-               }
-            }
-         }
-         AV20LocTot = A95LocTotV ;
          if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "DLT".TrimEnd(' ') ) == 0 ) )
          {
             subGrd.setEnabled(0);
@@ -2409,30 +2301,29 @@ namespace GeneXus.Programs {
 
       protected void Load0B13( )
       {
-         /* Using cursor T000B24 */
-         pr_default.execute(22, new Object[] {A86LocCodi, A102LocMid});
-         if ( (pr_default.getStatus(22) != 101) )
+         /* Using cursor T000B23 */
+         pr_default.execute(21, new Object[] {A86LocCodi, A102LocMid});
+         if ( (pr_default.getStatus(21) != 101) )
          {
             RcdFound13 = 1 ;
-            A103LocMid = T000B24_A103LocMid[0] ;
-            n103LocMid = T000B24_n103LocMid[0] ;
-            A104LocMid = T000B24_A104LocMid[0] ;
-            n104LocMid = T000B24_n104LocMid[0] ;
-            A105LocMid = T000B24_A105LocMid[0] ;
-            n105LocMid = T000B24_n105LocMid[0] ;
-            A106LocMid = T000B24_A106LocMid[0] ;
-            n106LocMid = T000B24_n106LocMid[0] ;
-            A107LocMid = T000B24_A107LocMid[0] ;
-            n107LocMid = T000B24_n107LocMid[0] ;
-            A108LocMid = T000B24_A108LocMid[0] ;
-            n108LocMid = T000B24_n108LocMid[0] ;
-            A109LocMid = T000B24_A109LocMid[0] ;
-            n109LocMid = T000B24_n109LocMid[0] ;
-            ZM0B13( -31) ;
+            A103LocMid = T000B23_A103LocMid[0] ;
+            n103LocMid = T000B23_n103LocMid[0] ;
+            A104LocMid = T000B23_A104LocMid[0] ;
+            n104LocMid = T000B23_n104LocMid[0] ;
+            A105LocMid = T000B23_A105LocMid[0] ;
+            n105LocMid = T000B23_n105LocMid[0] ;
+            A106LocMid = T000B23_A106LocMid[0] ;
+            n106LocMid = T000B23_n106LocMid[0] ;
+            A107LocMid = T000B23_A107LocMid[0] ;
+            n107LocMid = T000B23_n107LocMid[0] ;
+            A108LocMid = T000B23_A108LocMid[0] ;
+            n108LocMid = T000B23_n108LocMid[0] ;
+            A109LocMid = T000B23_A109LocMid[0] ;
+            n109LocMid = T000B23_n109LocMid[0] ;
+            ZM0B13( -25) ;
          }
-         pr_default.close(22);
+         pr_default.close(21);
          OnLoadActions0B13( ) ;
-         X109LocMid = O109LocMid ;
       }
 
       protected void OnLoadActions0B13( )
@@ -2441,7 +2332,6 @@ namespace GeneXus.Programs {
 
       protected void CheckExtendedTable0B13( )
       {
-         O109LocMid = X109LocMid ;
          Gx_BScreen = 1 ;
          standaloneModal0B13( ) ;
          Gx_BScreen = 0 ;
@@ -2470,9 +2360,9 @@ namespace GeneXus.Programs {
 
       protected void GetKey0B13( )
       {
-         /* Using cursor T000B25 */
-         pr_default.execute(23, new Object[] {A86LocCodi, A102LocMid});
-         if ( (pr_default.getStatus(23) != 101) )
+         /* Using cursor T000B24 */
+         pr_default.execute(22, new Object[] {A86LocCodi, A102LocMid});
+         if ( (pr_default.getStatus(22) != 101) )
          {
             RcdFound13 = 1 ;
          }
@@ -2480,33 +2370,31 @@ namespace GeneXus.Programs {
          {
             RcdFound13 = 0 ;
          }
-         pr_default.close(23);
+         pr_default.close(22);
       }
 
       protected void getByPrimaryKey0B13( )
       {
-         /* Using cursor T000B6 */
-         pr_default.execute(4, new Object[] {A86LocCodi, A102LocMid});
-         if ( (pr_default.getStatus(4) != 101) )
+         /* Using cursor T000B5 */
+         pr_default.execute(3, new Object[] {A86LocCodi, A102LocMid});
+         if ( (pr_default.getStatus(3) != 101) )
          {
-            ZM0B13( 31) ;
+            ZM0B13( 25) ;
             RcdFound13 = 1 ;
             InitializeNonKey0B13( ) ;
-            A103LocMid = T000B6_A103LocMid[0] ;
-            n103LocMid = T000B6_n103LocMid[0] ;
-            A104LocMid = T000B6_A104LocMid[0] ;
-            n104LocMid = T000B6_n104LocMid[0] ;
-            A105LocMid = T000B6_A105LocMid[0] ;
-            n105LocMid = T000B6_n105LocMid[0] ;
-            A106LocMid = T000B6_A106LocMid[0] ;
-            n106LocMid = T000B6_n106LocMid[0] ;
-            A108LocMid = T000B6_A108LocMid[0] ;
-            n108LocMid = T000B6_n108LocMid[0] ;
-            A109LocMid = T000B6_A109LocMid[0] ;
-            n109LocMid = T000B6_n109LocMid[0] ;
-            A102LocMid = T000B6_A102LocMid[0] ;
-            O109LocMid = A109LocMid ;
-            n109LocMid = false ;
+            A103LocMid = T000B5_A103LocMid[0] ;
+            n103LocMid = T000B5_n103LocMid[0] ;
+            A104LocMid = T000B5_A104LocMid[0] ;
+            n104LocMid = T000B5_n104LocMid[0] ;
+            A105LocMid = T000B5_A105LocMid[0] ;
+            n105LocMid = T000B5_n105LocMid[0] ;
+            A106LocMid = T000B5_A106LocMid[0] ;
+            n106LocMid = T000B5_n106LocMid[0] ;
+            A108LocMid = T000B5_A108LocMid[0] ;
+            n108LocMid = T000B5_n108LocMid[0] ;
+            A109LocMid = T000B5_A109LocMid[0] ;
+            n109LocMid = T000B5_n109LocMid[0] ;
+            A102LocMid = T000B5_A102LocMid[0] ;
             Z86LocCodi = A86LocCodi ;
             Z102LocMid = A102LocMid ;
             sMode13 = Gx_mode ;
@@ -2524,16 +2412,16 @@ namespace GeneXus.Programs {
             Gx_mode = sMode13 ;
          }
          K102LocMid = A102LocMid ;
-         pr_default.close(4);
+         pr_default.close(3);
       }
 
       protected void CheckOptimisticConcurrency0B13( )
       {
          if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) != 0 ) )
          {
-            /* Using cursor T000B5 */
-            pr_default.execute(3, new Object[] {A86LocCodi, A102LocMid});
-            if ( ! (pr_default.getStatus(3) != 103) )
+            /* Using cursor T000B4 */
+            pr_default.execute(2, new Object[] {A86LocCodi, A102LocMid});
+            if ( ! (pr_default.getStatus(2) != 103) )
             {
                pushError( (String)(GXResourceManager.GetMessage("lock", new   object[]  {"LOCACAOLOCACAOMIDIA"})) );
                AnyError = 1 ;
@@ -2541,11 +2429,11 @@ namespace GeneXus.Programs {
                return  ;
             }
             Gx_longc = false ;
-            if ( (pr_default.getStatus(3) == 101) || ( Z103LocMid != T000B5_A103LocMid[0] ) || ( String.CompareOrdinal(Z104LocMid.TrimEnd(' '), T000B5_A104LocMid[0].TrimEnd(' ') ) != 0 ) || ( Z105LocMid != T000B5_A105LocMid[0] ) || ( Z106LocMid != T000B5_A106LocMid[0] ) || ( Z108LocMid != T000B5_A108LocMid[0] ) )
+            if ( (pr_default.getStatus(2) == 101) || ( Z103LocMid != T000B4_A103LocMid[0] ) || ( String.CompareOrdinal(Z104LocMid.TrimEnd(' '), T000B4_A104LocMid[0].TrimEnd(' ') ) != 0 ) || ( Z105LocMid != T000B4_A105LocMid[0] ) || ( Z106LocMid != T000B4_A106LocMid[0] ) || ( Z108LocMid != T000B4_A108LocMid[0] ) )
             {
                Gx_longc = true ;
             }
-            if ( Gx_longc || ( Z109LocMid != T000B5_A109LocMid[0] ) )
+            if ( Gx_longc || ( Z109LocMid != T000B4_A109LocMid[0] ) )
             {
                pushError( (String)(GXResourceManager.GetMessage("waschg", new   object[]  {"LOCACAOLOCACAOMIDIA"})) );
                AnyError = 1 ;
@@ -2574,10 +2462,10 @@ namespace GeneXus.Programs {
                   BeforeInsert0B13( ) ;
                   if ( ( AnyError == 0 ) )
                   {
-                     /* Using cursor T000B26 */
-                     pr_default.execute(24, new Object[] {A86LocCodi, n103LocMid, A103LocMid, n104LocMid, A104LocMid, n105LocMid, A105LocMid, n106LocMid, A106LocMid, n108LocMid, A108LocMid, n109LocMid, A109LocMid, A102LocMid});
-                     pr_default.close(24);
-                     if ( (pr_default.getStatus(24) == 1) )
+                     /* Using cursor T000B25 */
+                     pr_default.execute(23, new Object[] {A86LocCodi, n103LocMid, A103LocMid, n104LocMid, A104LocMid, n105LocMid, A105LocMid, n106LocMid, A106LocMid, n108LocMid, A108LocMid, n109LocMid, A109LocMid, A102LocMid});
+                     pr_default.close(23);
+                     if ( (pr_default.getStatus(23) == 1) )
                      {
                         pushError( GXResourceManager.GetMessage("noupdate") );
                         AnyError = 1 ;
@@ -2628,9 +2516,9 @@ namespace GeneXus.Programs {
                   BeforeUpdate0B13( ) ;
                   if ( ( AnyError == 0 ) )
                   {
-                     /* Using cursor T000B27 */
-                     pr_default.execute(25, new Object[] {n103LocMid, A103LocMid, n104LocMid, A104LocMid, n105LocMid, A105LocMid, n106LocMid, A106LocMid, n108LocMid, A108LocMid, n109LocMid, A109LocMid, A86LocCodi, A102LocMid});
-                     pr_default.close(25);
+                     /* Using cursor T000B26 */
+                     pr_default.execute(24, new Object[] {n103LocMid, A103LocMid, n104LocMid, A104LocMid, n105LocMid, A105LocMid, n106LocMid, A106LocMid, n108LocMid, A108LocMid, n109LocMid, A109LocMid, A86LocCodi, A102LocMid});
+                     pr_default.close(24);
                      DeferredUpdate0B13( ) ;
                      if ( ( AnyError == 0 ) )
                      {
@@ -2677,9 +2565,9 @@ namespace GeneXus.Programs {
                BeforeDelete0B13( ) ;
                if ( ( AnyError == 0 ) )
                {
-                  /* Using cursor T000B28 */
-                  pr_default.execute(26, new Object[] {A86LocCodi, A102LocMid});
-                  pr_default.close(26);
+                  /* Using cursor T000B27 */
+                  pr_default.execute(25, new Object[] {A86LocCodi, A102LocMid});
+                  pr_default.close(25);
                   if ( ( AnyError == 0 ) )
                   {
                      /* Start of After( delete) rules */
@@ -2706,11 +2594,11 @@ namespace GeneXus.Programs {
          if ( ( AnyError == 0 ) )
          {
             /* Delete mode formulas */
-            /* Using cursor T000B29 */
-            pr_default.execute(27, new Object[] {A102LocMid});
-            A107LocMid = T000B29_A107LocMid[0] ;
-            n107LocMid = T000B29_n107LocMid[0] ;
-            pr_default.close(27);
+            /* Using cursor T000B28 */
+            pr_default.execute(26, new Object[] {A102LocMid});
+            A107LocMid = T000B28_A107LocMid[0] ;
+            n107LocMid = T000B28_n107LocMid[0] ;
+            pr_default.close(26);
          }
       }
 
@@ -2718,37 +2606,37 @@ namespace GeneXus.Programs {
       {
          if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) != 0 ) )
          {
-            pr_default.close(3);
+            pr_default.close(2);
          }
       }
 
       protected void ScanStart0B13( )
       {
-         /* Using cursor T000B30 */
-         pr_default.execute(28, new Object[] {A86LocCodi});
+         /* Using cursor T000B29 */
+         pr_default.execute(27, new Object[] {A86LocCodi});
          RcdFound13 = 0 ;
-         if ( (pr_default.getStatus(28) != 101) )
+         if ( (pr_default.getStatus(27) != 101) )
          {
             RcdFound13 = 1 ;
-            A102LocMid = T000B30_A102LocMid[0] ;
+            A102LocMid = T000B29_A102LocMid[0] ;
          }
          /* Load Subordinate Levels */
       }
 
       protected void ScanNext0B13( )
       {
-         pr_default.readNext(28);
+         pr_default.readNext(27);
          RcdFound13 = 0 ;
-         if ( (pr_default.getStatus(28) != 101) )
+         if ( (pr_default.getStatus(27) != 101) )
          {
             RcdFound13 = 1 ;
-            A102LocMid = T000B30_A102LocMid[0] ;
+            A102LocMid = T000B29_A102LocMid[0] ;
          }
       }
 
       protected void ScanEnd0B13( )
       {
-         pr_default.close(28);
+         pr_default.close(27);
       }
 
       protected void AfterConfirm0B13( )
@@ -2779,12 +2667,6 @@ namespace GeneXus.Programs {
       protected void BeforeValidate0B13( )
       {
          /* Before Validate Rules */
-         if ( ( AV20LocTot == Convert.ToDecimal( 0 )) || ((Convert.ToDecimal(0M)==AV20LocTot)) )
-         {
-            pushError( "Pelo menos uma mídia deve ser adicionada!" );
-            AnyError = 1 ;
-            keepFocus();
-         }
       }
 
       protected void AddRow0B13( )
@@ -2834,8 +2716,6 @@ namespace GeneXus.Programs {
 
       protected void CONFIRM_0B13( )
       {
-         s95LocTotV = O95LocTotV ;
-         sV20LocTot = OV20LocTot ;
          nGXsfl_30_idx = 0 ;
          while ( ( nGXsfl_30_idx < subGrd.getItemCount() ) )
          {
@@ -2859,8 +2739,6 @@ namespace GeneXus.Programs {
                            PreviousTooltip = bttEnter.getTooltip() ;
                            IsConfirmed = 1 ;
                         }
-                        O95LocTotV = A95LocTotV ;
-                        OV20LocTot = AV20LocTot ;
                      }
                   }
                   else
@@ -2883,8 +2761,6 @@ namespace GeneXus.Programs {
                         if ( ( AnyError == 0 ) )
                         {
                            OnDeleteControls0B13( ) ;
-                           O95LocTotV = A95LocTotV ;
-                           OV20LocTot = AV20LocTot ;
                         }
                      }
                      else
@@ -2903,8 +2779,6 @@ namespace GeneXus.Programs {
                                  PreviousTooltip = bttEnter.getTooltip() ;
                                  IsConfirmed = 1 ;
                               }
-                              O95LocTotV = A95LocTotV ;
-                              OV20LocTot = AV20LocTot ;
                            }
                         }
                      }
@@ -2922,8 +2796,6 @@ namespace GeneXus.Programs {
             }
          }
          subGrd.endLoad();
-         O95LocTotV = s95LocTotV ;
-         OV20LocTot = sV20LocTot ;
          /* Start of After( level) rules */
          /* End of After( level) rules */
       }
@@ -2945,11 +2817,11 @@ namespace GeneXus.Programs {
 
       protected void CloseOpenCursors( )
       {
-         pr_default.close(4);
-         pr_default.close(27);
-         pr_default.close(6);
+         pr_default.close(3);
+         pr_default.close(26);
+         pr_default.close(5);
+         pr_default.close(16);
          pr_default.close(17);
-         pr_default.close(18);
       }
 
       public override void initialize( )
@@ -2960,6 +2832,8 @@ namespace GeneXus.Programs {
          nKeyPressed = 0 ;
          PreviousTooltip = "" ;
          PreviousCaption = "" ;
+         A95LocTotV = (decimal)(0M) ;
+         n95LocTotV = false ;
          A87LocSitu = 0 ;
          n87LocSitu = false ;
          A88LocDatL = (DateTime)(DateTime.MinValue) ;
@@ -2978,11 +2852,7 @@ namespace GeneXus.Programs {
          n93LocVenP = false ;
          A94LocVenP = "" ;
          n94LocVenP = false ;
-         X95LocTotV = (decimal)(0M) ;
-         A95LocTotV = (decimal)(0M) ;
-         O95LocTotV = (decimal)(0M) ;
          A86LocCodi = 0 ;
-         AV20LocTot = (decimal)(0M) ;
          K86LocCodi = 0 ;
          i87LocSitu = 0 ;
          i93LocVenP = 0 ;
@@ -2999,17 +2869,14 @@ namespace GeneXus.Programs {
          n108LocMid = false ;
          A109LocMid = (decimal)(0M) ;
          n109LocMid = false ;
-         O109LocMid = (decimal)(0M) ;
-         X109LocMid = (decimal)(0M) ;
          A102LocMid = 0 ;
          A107LocMid = 0 ;
          n107LocMid = false ;
          K102LocMid = 0 ;
-         i95LocTotV = (decimal)(0M) ;
          subtlocacao30 = new subtlocacao30();
          sMode13 = "" ;
          lastAnyError = 0 ;
-         OV20LocTot = (decimal)(0M) ;
+         AV20LocTot = (decimal)(0M) ;
          Z103LocMid = 0 ;
          Z104LocMid = "" ;
          Z105LocMid = 0 ;
@@ -3026,12 +2893,9 @@ namespace GeneXus.Programs {
          AV14AtzLoc = 0 ;
          AV25MsgErr = "" ;
          returnInSub = false ;
-         T000B4_A86LocCodi = new int[1] ;
-         T000B4_A102LocMid = new int[1] ;
-         T000B4_A109LocMid = new decimal[1] ;
-         T000B4_n109LocMid = new bool[] {false} ;
          sMode12 = "" ;
          RcdFound12 = 0 ;
+         Z95LocTotV = (decimal)(0M) ;
          Z87LocSitu = 0 ;
          Z88LocDatL = (DateTime)(DateTime.MinValue) ;
          Z89LocDatD = (DateTime)(DateTime.MinValue) ;
@@ -3042,43 +2906,31 @@ namespace GeneXus.Programs {
          GX_JID = 0 ;
          Z86LocCodi = 0 ;
          Gx_BScreen = 0 ;
+         T000B9_A94LocVenP = new String[] {""} ;
+         T000B9_n94LocVenP = new bool[] {false} ;
+         T000B10_A86LocCodi = new int[1] ;
+         T000B10_A95LocTotV = new decimal[1] ;
+         T000B10_n95LocTotV = new bool[] {false} ;
+         T000B10_A87LocSitu = new short[1] ;
+         T000B10_n87LocSitu = new bool[] {false} ;
+         T000B10_A88LocDatL = new DateTime[] {DateTime.MinValue} ;
+         T000B10_n88LocDatL = new bool[] {false} ;
+         T000B10_A89LocDatD = new DateTime[] {DateTime.MinValue} ;
+         T000B10_n89LocDatD = new bool[] {false} ;
+         T000B10_A90LocDatC = new DateTime[] {DateTime.MinValue} ;
+         T000B10_n90LocDatC = new bool[] {false} ;
+         T000B10_A92LocCliP = new String[] {""} ;
+         T000B10_n92LocCliP = new bool[] {false} ;
          T000B10_A94LocVenP = new String[] {""} ;
          T000B10_n94LocVenP = new bool[] {false} ;
+         T000B10_A91LocCliP = new int[1] ;
+         T000B10_n91LocCliP = new bool[] {false} ;
+         T000B10_A93LocVenP = new int[1] ;
+         T000B10_n93LocVenP = new bool[] {false} ;
          T000B11_A86LocCodi = new int[1] ;
-         T000B11_A87LocSitu = new short[1] ;
-         T000B11_n87LocSitu = new bool[] {false} ;
-         T000B11_A88LocDatL = new DateTime[] {DateTime.MinValue} ;
-         T000B11_n88LocDatL = new bool[] {false} ;
-         T000B11_A89LocDatD = new DateTime[] {DateTime.MinValue} ;
-         T000B11_n89LocDatD = new bool[] {false} ;
-         T000B11_A90LocDatC = new DateTime[] {DateTime.MinValue} ;
-         T000B11_n90LocDatC = new bool[] {false} ;
-         T000B11_A92LocCliP = new String[] {""} ;
-         T000B11_n92LocCliP = new bool[] {false} ;
-         T000B11_A94LocVenP = new String[] {""} ;
-         T000B11_n94LocVenP = new bool[] {false} ;
-         T000B11_A91LocCliP = new int[1] ;
-         T000B11_n91LocCliP = new bool[] {false} ;
-         T000B11_A93LocVenP = new int[1] ;
-         T000B11_n93LocVenP = new bool[] {false} ;
-         T000B12_A86LocCodi = new int[1] ;
-         T000B8_A86LocCodi = new int[1] ;
-         T000B8_A87LocSitu = new short[1] ;
-         T000B8_n87LocSitu = new bool[] {false} ;
-         T000B8_A88LocDatL = new DateTime[] {DateTime.MinValue} ;
-         T000B8_n88LocDatL = new bool[] {false} ;
-         T000B8_A89LocDatD = new DateTime[] {DateTime.MinValue} ;
-         T000B8_n89LocDatD = new bool[] {false} ;
-         T000B8_A90LocDatC = new DateTime[] {DateTime.MinValue} ;
-         T000B8_n90LocDatC = new bool[] {false} ;
-         T000B8_A91LocCliP = new int[1] ;
-         T000B8_n91LocCliP = new bool[] {false} ;
-         T000B8_A93LocVenP = new int[1] ;
-         T000B8_n93LocVenP = new bool[] {false} ;
-         RcdFound13 = 0 ;
-         T000B13_A86LocCodi = new int[1] ;
-         T000B14_A86LocCodi = new int[1] ;
          T000B7_A86LocCodi = new int[1] ;
+         T000B7_A95LocTotV = new decimal[1] ;
+         T000B7_n95LocTotV = new bool[] {false} ;
          T000B7_A87LocSitu = new short[1] ;
          T000B7_n87LocSitu = new bool[] {false} ;
          T000B7_A88LocDatL = new DateTime[] {DateTime.MinValue} ;
@@ -3091,52 +2943,33 @@ namespace GeneXus.Programs {
          T000B7_n91LocCliP = new bool[] {false} ;
          T000B7_A93LocVenP = new int[1] ;
          T000B7_n93LocVenP = new bool[] {false} ;
-         Gx_longc = false ;
-         T000B9_A94LocVenP = new String[] {""} ;
-         T000B9_n94LocVenP = new bool[] {false} ;
-         T000B16_A86LocCodi = new int[1] ;
-         T000B19_A92LocCliP = new String[] {""} ;
-         T000B19_n92LocCliP = new bool[] {false} ;
-         T000B20_A94LocVenP = new String[] {""} ;
-         T000B20_n94LocVenP = new bool[] {false} ;
-         T000B21_A37MidCodi = new int[1] ;
-         s95LocTotV = (decimal)(0M) ;
-         sV20LocTot = (decimal)(0M) ;
-         Y109LocMid = (decimal)(0M) ;
+         RcdFound13 = 0 ;
+         T000B12_A86LocCodi = new int[1] ;
+         T000B13_A86LocCodi = new int[1] ;
          T000B6_A86LocCodi = new int[1] ;
-         T000B6_A103LocMid = new int[1] ;
-         T000B6_n103LocMid = new bool[] {false} ;
-         T000B6_A104LocMid = new String[] {""} ;
-         T000B6_n104LocMid = new bool[] {false} ;
-         T000B6_A105LocMid = new int[1] ;
-         T000B6_n105LocMid = new bool[] {false} ;
-         T000B6_A106LocMid = new short[1] ;
-         T000B6_n106LocMid = new bool[] {false} ;
-         T000B6_A108LocMid = new int[1] ;
-         T000B6_n108LocMid = new bool[] {false} ;
-         T000B6_A109LocMid = new decimal[1] ;
-         T000B6_n109LocMid = new bool[] {false} ;
-         T000B6_A102LocMid = new int[1] ;
-         T000B23_A86LocCodi = new int[1] ;
-         Z102LocMid = 0 ;
-         T000B24_A86LocCodi = new int[1] ;
-         T000B24_A103LocMid = new int[1] ;
-         T000B24_n103LocMid = new bool[] {false} ;
-         T000B24_A104LocMid = new String[] {""} ;
-         T000B24_n104LocMid = new bool[] {false} ;
-         T000B24_A105LocMid = new int[1] ;
-         T000B24_n105LocMid = new bool[] {false} ;
-         T000B24_A106LocMid = new short[1] ;
-         T000B24_n106LocMid = new bool[] {false} ;
-         T000B24_A107LocMid = new short[1] ;
-         T000B24_n107LocMid = new bool[] {false} ;
-         T000B24_A108LocMid = new int[1] ;
-         T000B24_n108LocMid = new bool[] {false} ;
-         T000B24_A109LocMid = new decimal[1] ;
-         T000B24_n109LocMid = new bool[] {false} ;
-         T000B24_A102LocMid = new int[1] ;
-         T000B25_A86LocCodi = new int[1] ;
-         T000B25_A102LocMid = new int[1] ;
+         T000B6_A95LocTotV = new decimal[1] ;
+         T000B6_n95LocTotV = new bool[] {false} ;
+         T000B6_A87LocSitu = new short[1] ;
+         T000B6_n87LocSitu = new bool[] {false} ;
+         T000B6_A88LocDatL = new DateTime[] {DateTime.MinValue} ;
+         T000B6_n88LocDatL = new bool[] {false} ;
+         T000B6_A89LocDatD = new DateTime[] {DateTime.MinValue} ;
+         T000B6_n89LocDatD = new bool[] {false} ;
+         T000B6_A90LocDatC = new DateTime[] {DateTime.MinValue} ;
+         T000B6_n90LocDatC = new bool[] {false} ;
+         T000B6_A91LocCliP = new int[1] ;
+         T000B6_n91LocCliP = new bool[] {false} ;
+         T000B6_A93LocVenP = new int[1] ;
+         T000B6_n93LocVenP = new bool[] {false} ;
+         Gx_longc = false ;
+         T000B8_A94LocVenP = new String[] {""} ;
+         T000B8_n94LocVenP = new bool[] {false} ;
+         T000B15_A86LocCodi = new int[1] ;
+         T000B18_A92LocCliP = new String[] {""} ;
+         T000B18_n92LocCliP = new bool[] {false} ;
+         T000B19_A94LocVenP = new String[] {""} ;
+         T000B19_n94LocVenP = new bool[] {false} ;
+         T000B20_A37MidCodi = new int[1] ;
          T000B5_A86LocCodi = new int[1] ;
          T000B5_A103LocMid = new int[1] ;
          T000B5_n103LocMid = new bool[] {false} ;
@@ -3151,10 +2984,44 @@ namespace GeneXus.Programs {
          T000B5_A109LocMid = new decimal[1] ;
          T000B5_n109LocMid = new bool[] {false} ;
          T000B5_A102LocMid = new int[1] ;
-         T000B29_A107LocMid = new short[1] ;
-         T000B29_n107LocMid = new bool[] {false} ;
-         T000B30_A86LocCodi = new int[1] ;
-         T000B30_A102LocMid = new int[1] ;
+         T000B22_A86LocCodi = new int[1] ;
+         Z102LocMid = 0 ;
+         T000B23_A86LocCodi = new int[1] ;
+         T000B23_A103LocMid = new int[1] ;
+         T000B23_n103LocMid = new bool[] {false} ;
+         T000B23_A104LocMid = new String[] {""} ;
+         T000B23_n104LocMid = new bool[] {false} ;
+         T000B23_A105LocMid = new int[1] ;
+         T000B23_n105LocMid = new bool[] {false} ;
+         T000B23_A106LocMid = new short[1] ;
+         T000B23_n106LocMid = new bool[] {false} ;
+         T000B23_A107LocMid = new short[1] ;
+         T000B23_n107LocMid = new bool[] {false} ;
+         T000B23_A108LocMid = new int[1] ;
+         T000B23_n108LocMid = new bool[] {false} ;
+         T000B23_A109LocMid = new decimal[1] ;
+         T000B23_n109LocMid = new bool[] {false} ;
+         T000B23_A102LocMid = new int[1] ;
+         T000B24_A86LocCodi = new int[1] ;
+         T000B24_A102LocMid = new int[1] ;
+         T000B4_A86LocCodi = new int[1] ;
+         T000B4_A103LocMid = new int[1] ;
+         T000B4_n103LocMid = new bool[] {false} ;
+         T000B4_A104LocMid = new String[] {""} ;
+         T000B4_n104LocMid = new bool[] {false} ;
+         T000B4_A105LocMid = new int[1] ;
+         T000B4_n105LocMid = new bool[] {false} ;
+         T000B4_A106LocMid = new short[1] ;
+         T000B4_n106LocMid = new bool[] {false} ;
+         T000B4_A108LocMid = new int[1] ;
+         T000B4_n108LocMid = new bool[] {false} ;
+         T000B4_A109LocMid = new decimal[1] ;
+         T000B4_n109LocMid = new bool[] {false} ;
+         T000B4_A102LocMid = new int[1] ;
+         T000B28_A107LocMid = new short[1] ;
+         T000B28_n107LocMid = new bool[] {false} ;
+         T000B29_A86LocCodi = new int[1] ;
+         T000B29_A102LocMid = new int[1] ;
          A94LocVenP = AV7Funcion.gxTpr_Pesnome ;
          n94LocVenP = false ;
          A93LocVenP = AV7Funcion.gxTpr_Pescodigo ;
@@ -3173,33 +3040,33 @@ namespace GeneXus.Programs {
                T000B3_A107LocMid, T000B3_n107LocMid
                }
                , new Object[] {
-               T000B4_A86LocCodi, T000B4_A102LocMid, T000B4_A109LocMid, T000B4_n109LocMid
+               T000B4_A86LocCodi, T000B4_A103LocMid, T000B4_n103LocMid, T000B4_A104LocMid, T000B4_n104LocMid, T000B4_A105LocMid, T000B4_n105LocMid, T000B4_A106LocMid, T000B4_n106LocMid, T000B4_A108LocMid,
+               T000B4_n108LocMid, T000B4_A109LocMid, T000B4_n109LocMid, T000B4_A102LocMid
                }
                , new Object[] {
                T000B5_A86LocCodi, T000B5_A103LocMid, T000B5_n103LocMid, T000B5_A104LocMid, T000B5_n104LocMid, T000B5_A105LocMid, T000B5_n105LocMid, T000B5_A106LocMid, T000B5_n106LocMid, T000B5_A108LocMid,
                T000B5_n108LocMid, T000B5_A109LocMid, T000B5_n109LocMid, T000B5_A102LocMid
                }
                , new Object[] {
-               T000B6_A86LocCodi, T000B6_A103LocMid, T000B6_n103LocMid, T000B6_A104LocMid, T000B6_n104LocMid, T000B6_A105LocMid, T000B6_n105LocMid, T000B6_A106LocMid, T000B6_n106LocMid, T000B6_A108LocMid,
-               T000B6_n108LocMid, T000B6_A109LocMid, T000B6_n109LocMid, T000B6_A102LocMid
+               T000B6_A86LocCodi, T000B6_A95LocTotV, T000B6_n95LocTotV, T000B6_A87LocSitu, T000B6_n87LocSitu, T000B6_A88LocDatL, T000B6_n88LocDatL, T000B6_A89LocDatD, T000B6_n89LocDatD, T000B6_A90LocDatC,
+               T000B6_n90LocDatC, T000B6_A91LocCliP, T000B6_n91LocCliP, T000B6_A93LocVenP, T000B6_n93LocVenP
                }
                , new Object[] {
-               T000B7_A86LocCodi, T000B7_A87LocSitu, T000B7_n87LocSitu, T000B7_A88LocDatL, T000B7_n88LocDatL, T000B7_A89LocDatD, T000B7_n89LocDatD, T000B7_A90LocDatC, T000B7_n90LocDatC, T000B7_A91LocCliP,
-               T000B7_n91LocCliP, T000B7_A93LocVenP, T000B7_n93LocVenP
+               T000B7_A86LocCodi, T000B7_A95LocTotV, T000B7_n95LocTotV, T000B7_A87LocSitu, T000B7_n87LocSitu, T000B7_A88LocDatL, T000B7_n88LocDatL, T000B7_A89LocDatD, T000B7_n89LocDatD, T000B7_A90LocDatC,
+               T000B7_n90LocDatC, T000B7_A91LocCliP, T000B7_n91LocCliP, T000B7_A93LocVenP, T000B7_n93LocVenP
                }
                , new Object[] {
-               T000B8_A86LocCodi, T000B8_A87LocSitu, T000B8_n87LocSitu, T000B8_A88LocDatL, T000B8_n88LocDatL, T000B8_A89LocDatD, T000B8_n89LocDatD, T000B8_A90LocDatC, T000B8_n90LocDatC, T000B8_A91LocCliP,
-               T000B8_n91LocCliP, T000B8_A93LocVenP, T000B8_n93LocVenP
+               T000B8_A94LocVenP, T000B8_n94LocVenP
                }
                , new Object[] {
                T000B9_A94LocVenP, T000B9_n94LocVenP
                }
                , new Object[] {
-               T000B10_A94LocVenP, T000B10_n94LocVenP
+               T000B10_A86LocCodi, T000B10_A95LocTotV, T000B10_n95LocTotV, T000B10_A87LocSitu, T000B10_n87LocSitu, T000B10_A88LocDatL, T000B10_n88LocDatL, T000B10_A89LocDatD, T000B10_n89LocDatD, T000B10_A90LocDatC,
+               T000B10_n90LocDatC, T000B10_A92LocCliP, T000B10_n92LocCliP, T000B10_A94LocVenP, T000B10_n94LocVenP, T000B10_A91LocCliP, T000B10_n91LocCliP, T000B10_A93LocVenP, T000B10_n93LocVenP
                }
                , new Object[] {
-               T000B11_A86LocCodi, T000B11_A87LocSitu, T000B11_n87LocSitu, T000B11_A88LocDatL, T000B11_n88LocDatL, T000B11_A89LocDatD, T000B11_n89LocDatD, T000B11_A90LocDatC, T000B11_n90LocDatC, T000B11_A92LocCliP,
-               T000B11_n92LocCliP, T000B11_A94LocVenP, T000B11_n94LocVenP, T000B11_A91LocCliP, T000B11_n91LocCliP, T000B11_A93LocVenP, T000B11_n93LocVenP
+               T000B11_A86LocCodi
                }
                , new Object[] {
                T000B12_A86LocCodi
@@ -3208,37 +3075,34 @@ namespace GeneXus.Programs {
                T000B13_A86LocCodi
                }
                , new Object[] {
-               T000B14_A86LocCodi
                }
                , new Object[] {
-               }
-               , new Object[] {
-               T000B16_A86LocCodi
+               T000B15_A86LocCodi
                }
                , new Object[] {
                }
                , new Object[] {
                }
                , new Object[] {
-               T000B19_A92LocCliP, T000B19_n92LocCliP
+               T000B18_A92LocCliP, T000B18_n92LocCliP
                }
                , new Object[] {
-               T000B20_A94LocVenP, T000B20_n94LocVenP
+               T000B19_A94LocVenP, T000B19_n94LocVenP
                }
                , new Object[] {
-               T000B21_A37MidCodi
+               T000B20_A37MidCodi
                }
                , new Object[] {
                }
                , new Object[] {
-               T000B23_A86LocCodi
+               T000B22_A86LocCodi
                }
                , new Object[] {
-               T000B24_A86LocCodi, T000B24_A103LocMid, T000B24_n103LocMid, T000B24_A104LocMid, T000B24_n104LocMid, T000B24_A105LocMid, T000B24_n105LocMid, T000B24_A106LocMid, T000B24_n106LocMid, T000B24_A107LocMid,
-               T000B24_n107LocMid, T000B24_A108LocMid, T000B24_n108LocMid, T000B24_A109LocMid, T000B24_n109LocMid, T000B24_A102LocMid
+               T000B23_A86LocCodi, T000B23_A103LocMid, T000B23_n103LocMid, T000B23_A104LocMid, T000B23_n104LocMid, T000B23_A105LocMid, T000B23_n105LocMid, T000B23_A106LocMid, T000B23_n106LocMid, T000B23_A107LocMid,
+               T000B23_n107LocMid, T000B23_A108LocMid, T000B23_n108LocMid, T000B23_A109LocMid, T000B23_n109LocMid, T000B23_A102LocMid
                }
                , new Object[] {
-               T000B25_A86LocCodi, T000B25_A102LocMid
+               T000B24_A86LocCodi, T000B24_A102LocMid
                }
                , new Object[] {
                }
@@ -3247,10 +3111,10 @@ namespace GeneXus.Programs {
                , new Object[] {
                }
                , new Object[] {
-               T000B29_A107LocMid, T000B29_n107LocMid
+               T000B28_A107LocMid, T000B28_n107LocMid
                }
                , new Object[] {
-               T000B30_A86LocCodi, T000B30_A102LocMid
+               T000B29_A86LocCodi, T000B29_A102LocMid
                }
             }
          );
@@ -3309,19 +3173,11 @@ namespace GeneXus.Programs {
       protected int GX_JID ;
       protected int Z86LocCodi ;
       protected int Z102LocMid ;
-      protected decimal X95LocTotV ;
       protected decimal A95LocTotV ;
-      protected decimal O95LocTotV ;
-      protected decimal AV20LocTot ;
       protected decimal A109LocMid ;
-      protected decimal O109LocMid ;
-      protected decimal X109LocMid ;
-      protected decimal i95LocTotV ;
-      protected decimal OV20LocTot ;
+      protected decimal AV20LocTot ;
       protected decimal Z109LocMid ;
-      protected decimal s95LocTotV ;
-      protected decimal sV20LocTot ;
-      protected decimal Y109LocMid ;
+      protected decimal Z95LocTotV ;
       protected String PreviousTooltip ;
       protected String PreviousCaption ;
       protected String sMode13 ;
@@ -3335,6 +3191,7 @@ namespace GeneXus.Programs {
       protected DateTime Z88LocDatL ;
       protected DateTime Z89LocDatD ;
       protected DateTime Z90LocDatC ;
+      protected bool n95LocTotV ;
       protected bool n87LocSitu ;
       protected bool n88LocDatL ;
       protected bool n89LocDatD ;
@@ -3363,7 +3220,7 @@ namespace GeneXus.Programs {
       protected IGxContext context ;
       protected bool IsMain ;
       protected GXPanel GXPanel1 ;
-      protected GUIObjectDecimal2 edtLocTotValor ;
+      protected GUIObjectDecimal2 edtavLoctotvalor ;
       protected IGXButton bttEnter ;
       protected ILabel lbllbl36 ;
       protected GXTabControl tctrlCadastrodelocacao ;
@@ -3404,56 +3261,38 @@ namespace GeneXus.Programs {
       protected short[] T000B3_A107LocMid ;
       protected bool[] T000B3_n107LocMid ;
       protected IDataReader T000B4 ;
-      protected int[] T000B4_A86LocCodi ;
-      protected int[] T000B4_A102LocMid ;
-      protected decimal[] T000B4_A109LocMid ;
-      protected bool[] T000B4_n109LocMid ;
       protected IDataReader T000B5 ;
       protected IDataReader T000B6 ;
       protected IDataReader T000B7 ;
       protected IDataReader T000B8 ;
       protected IDataReader T000B9 ;
+      protected String[] T000B9_A94LocVenP ;
+      protected bool[] T000B9_n94LocVenP ;
       protected IDataReader T000B10 ;
+      protected int[] T000B10_A86LocCodi ;
+      protected decimal[] T000B10_A95LocTotV ;
+      protected bool[] T000B10_n95LocTotV ;
+      protected short[] T000B10_A87LocSitu ;
+      protected bool[] T000B10_n87LocSitu ;
+      protected DateTime[] T000B10_A88LocDatL ;
+      protected bool[] T000B10_n88LocDatL ;
+      protected DateTime[] T000B10_A89LocDatD ;
+      protected bool[] T000B10_n89LocDatD ;
+      protected DateTime[] T000B10_A90LocDatC ;
+      protected bool[] T000B10_n90LocDatC ;
+      protected String[] T000B10_A92LocCliP ;
+      protected bool[] T000B10_n92LocCliP ;
       protected String[] T000B10_A94LocVenP ;
       protected bool[] T000B10_n94LocVenP ;
+      protected int[] T000B10_A91LocCliP ;
+      protected bool[] T000B10_n91LocCliP ;
+      protected int[] T000B10_A93LocVenP ;
+      protected bool[] T000B10_n93LocVenP ;
       protected IDataReader T000B11 ;
       protected int[] T000B11_A86LocCodi ;
-      protected short[] T000B11_A87LocSitu ;
-      protected bool[] T000B11_n87LocSitu ;
-      protected DateTime[] T000B11_A88LocDatL ;
-      protected bool[] T000B11_n88LocDatL ;
-      protected DateTime[] T000B11_A89LocDatD ;
-      protected bool[] T000B11_n89LocDatD ;
-      protected DateTime[] T000B11_A90LocDatC ;
-      protected bool[] T000B11_n90LocDatC ;
-      protected String[] T000B11_A92LocCliP ;
-      protected bool[] T000B11_n92LocCliP ;
-      protected String[] T000B11_A94LocVenP ;
-      protected bool[] T000B11_n94LocVenP ;
-      protected int[] T000B11_A91LocCliP ;
-      protected bool[] T000B11_n91LocCliP ;
-      protected int[] T000B11_A93LocVenP ;
-      protected bool[] T000B11_n93LocVenP ;
-      protected IDataReader T000B12 ;
-      protected int[] T000B12_A86LocCodi ;
-      protected int[] T000B8_A86LocCodi ;
-      protected short[] T000B8_A87LocSitu ;
-      protected bool[] T000B8_n87LocSitu ;
-      protected DateTime[] T000B8_A88LocDatL ;
-      protected bool[] T000B8_n88LocDatL ;
-      protected DateTime[] T000B8_A89LocDatD ;
-      protected bool[] T000B8_n89LocDatD ;
-      protected DateTime[] T000B8_A90LocDatC ;
-      protected bool[] T000B8_n90LocDatC ;
-      protected int[] T000B8_A91LocCliP ;
-      protected bool[] T000B8_n91LocCliP ;
-      protected int[] T000B8_A93LocVenP ;
-      protected bool[] T000B8_n93LocVenP ;
-      protected IDataReader T000B13 ;
-      protected int[] T000B13_A86LocCodi ;
-      protected IDataReader T000B14 ;
-      protected int[] T000B14_A86LocCodi ;
       protected int[] T000B7_A86LocCodi ;
+      protected decimal[] T000B7_A95LocTotV ;
+      protected bool[] T000B7_n95LocTotV ;
       protected short[] T000B7_A87LocSitu ;
       protected bool[] T000B7_n87LocSitu ;
       protected DateTime[] T000B7_A88LocDatL ;
@@ -3466,54 +3305,37 @@ namespace GeneXus.Programs {
       protected bool[] T000B7_n91LocCliP ;
       protected int[] T000B7_A93LocVenP ;
       protected bool[] T000B7_n93LocVenP ;
-      protected String[] T000B9_A94LocVenP ;
-      protected bool[] T000B9_n94LocVenP ;
-      protected IDataReader T000B16 ;
-      protected int[] T000B16_A86LocCodi ;
-      protected IDataReader T000B19 ;
-      protected String[] T000B19_A92LocCliP ;
-      protected bool[] T000B19_n92LocCliP ;
-      protected IDataReader T000B20 ;
-      protected String[] T000B20_A94LocVenP ;
-      protected bool[] T000B20_n94LocVenP ;
-      protected IDataReader T000B21 ;
-      protected int[] T000B21_A37MidCodi ;
+      protected IDataReader T000B12 ;
+      protected int[] T000B12_A86LocCodi ;
+      protected IDataReader T000B13 ;
+      protected int[] T000B13_A86LocCodi ;
       protected int[] T000B6_A86LocCodi ;
-      protected int[] T000B6_A103LocMid ;
-      protected bool[] T000B6_n103LocMid ;
-      protected String[] T000B6_A104LocMid ;
-      protected bool[] T000B6_n104LocMid ;
-      protected int[] T000B6_A105LocMid ;
-      protected bool[] T000B6_n105LocMid ;
-      protected short[] T000B6_A106LocMid ;
-      protected bool[] T000B6_n106LocMid ;
-      protected int[] T000B6_A108LocMid ;
-      protected bool[] T000B6_n108LocMid ;
-      protected decimal[] T000B6_A109LocMid ;
-      protected bool[] T000B6_n109LocMid ;
-      protected int[] T000B6_A102LocMid ;
-      protected IDataReader T000B23 ;
-      protected int[] T000B23_A86LocCodi ;
-      protected IDataReader T000B24 ;
-      protected int[] T000B24_A86LocCodi ;
-      protected int[] T000B24_A103LocMid ;
-      protected bool[] T000B24_n103LocMid ;
-      protected String[] T000B24_A104LocMid ;
-      protected bool[] T000B24_n104LocMid ;
-      protected int[] T000B24_A105LocMid ;
-      protected bool[] T000B24_n105LocMid ;
-      protected short[] T000B24_A106LocMid ;
-      protected bool[] T000B24_n106LocMid ;
-      protected short[] T000B24_A107LocMid ;
-      protected bool[] T000B24_n107LocMid ;
-      protected int[] T000B24_A108LocMid ;
-      protected bool[] T000B24_n108LocMid ;
-      protected decimal[] T000B24_A109LocMid ;
-      protected bool[] T000B24_n109LocMid ;
-      protected int[] T000B24_A102LocMid ;
-      protected IDataReader T000B25 ;
-      protected int[] T000B25_A86LocCodi ;
-      protected int[] T000B25_A102LocMid ;
+      protected decimal[] T000B6_A95LocTotV ;
+      protected bool[] T000B6_n95LocTotV ;
+      protected short[] T000B6_A87LocSitu ;
+      protected bool[] T000B6_n87LocSitu ;
+      protected DateTime[] T000B6_A88LocDatL ;
+      protected bool[] T000B6_n88LocDatL ;
+      protected DateTime[] T000B6_A89LocDatD ;
+      protected bool[] T000B6_n89LocDatD ;
+      protected DateTime[] T000B6_A90LocDatC ;
+      protected bool[] T000B6_n90LocDatC ;
+      protected int[] T000B6_A91LocCliP ;
+      protected bool[] T000B6_n91LocCliP ;
+      protected int[] T000B6_A93LocVenP ;
+      protected bool[] T000B6_n93LocVenP ;
+      protected String[] T000B8_A94LocVenP ;
+      protected bool[] T000B8_n94LocVenP ;
+      protected IDataReader T000B15 ;
+      protected int[] T000B15_A86LocCodi ;
+      protected IDataReader T000B18 ;
+      protected String[] T000B18_A92LocCliP ;
+      protected bool[] T000B18_n92LocCliP ;
+      protected IDataReader T000B19 ;
+      protected String[] T000B19_A94LocVenP ;
+      protected bool[] T000B19_n94LocVenP ;
+      protected IDataReader T000B20 ;
+      protected int[] T000B20_A37MidCodi ;
       protected int[] T000B5_A86LocCodi ;
       protected int[] T000B5_A103LocMid ;
       protected bool[] T000B5_n103LocMid ;
@@ -3528,12 +3350,48 @@ namespace GeneXus.Programs {
       protected decimal[] T000B5_A109LocMid ;
       protected bool[] T000B5_n109LocMid ;
       protected int[] T000B5_A102LocMid ;
+      protected IDataReader T000B22 ;
+      protected int[] T000B22_A86LocCodi ;
+      protected IDataReader T000B23 ;
+      protected int[] T000B23_A86LocCodi ;
+      protected int[] T000B23_A103LocMid ;
+      protected bool[] T000B23_n103LocMid ;
+      protected String[] T000B23_A104LocMid ;
+      protected bool[] T000B23_n104LocMid ;
+      protected int[] T000B23_A105LocMid ;
+      protected bool[] T000B23_n105LocMid ;
+      protected short[] T000B23_A106LocMid ;
+      protected bool[] T000B23_n106LocMid ;
+      protected short[] T000B23_A107LocMid ;
+      protected bool[] T000B23_n107LocMid ;
+      protected int[] T000B23_A108LocMid ;
+      protected bool[] T000B23_n108LocMid ;
+      protected decimal[] T000B23_A109LocMid ;
+      protected bool[] T000B23_n109LocMid ;
+      protected int[] T000B23_A102LocMid ;
+      protected IDataReader T000B24 ;
+      protected int[] T000B24_A86LocCodi ;
+      protected int[] T000B24_A102LocMid ;
+      protected int[] T000B4_A86LocCodi ;
+      protected int[] T000B4_A103LocMid ;
+      protected bool[] T000B4_n103LocMid ;
+      protected String[] T000B4_A104LocMid ;
+      protected bool[] T000B4_n104LocMid ;
+      protected int[] T000B4_A105LocMid ;
+      protected bool[] T000B4_n105LocMid ;
+      protected short[] T000B4_A106LocMid ;
+      protected bool[] T000B4_n106LocMid ;
+      protected int[] T000B4_A108LocMid ;
+      protected bool[] T000B4_n108LocMid ;
+      protected decimal[] T000B4_A109LocMid ;
+      protected bool[] T000B4_n109LocMid ;
+      protected int[] T000B4_A102LocMid ;
+      protected IDataReader T000B28 ;
+      protected short[] T000B28_A107LocMid ;
+      protected bool[] T000B28_n107LocMid ;
       protected IDataReader T000B29 ;
-      protected short[] T000B29_A107LocMid ;
-      protected bool[] T000B29_n107LocMid ;
-      protected IDataReader T000B30 ;
-      protected int[] T000B30_A86LocCodi ;
-      protected int[] T000B30_A102LocMid ;
+      protected int[] T000B29_A86LocCodi ;
+      protected int[] T000B29_A102LocMid ;
       protected SdtSDTFuncionario AV7Funcion ;
    }
 
@@ -3555,23 +3413,22 @@ namespace GeneXus.Programs {
          ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[9])
          ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[10])
          ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[11])
-         ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[12])
-         ,new GeneXus.Data.NTier.ADO.UpdateCursor(def[13])
-         ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[14])
+         ,new GeneXus.Data.NTier.ADO.UpdateCursor(def[12])
+         ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[13])
+         ,new GeneXus.Data.NTier.ADO.UpdateCursor(def[14])
          ,new GeneXus.Data.NTier.ADO.UpdateCursor(def[15])
-         ,new GeneXus.Data.NTier.ADO.UpdateCursor(def[16])
+         ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[16])
          ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[17])
          ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[18])
-         ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[19])
-         ,new GeneXus.Data.NTier.ADO.UpdateCursor(def[20])
+         ,new GeneXus.Data.NTier.ADO.UpdateCursor(def[19])
+         ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[20])
          ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[21])
          ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[22])
-         ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[23])
+         ,new GeneXus.Data.NTier.ADO.UpdateCursor(def[23])
          ,new GeneXus.Data.NTier.ADO.UpdateCursor(def[24])
          ,new GeneXus.Data.NTier.ADO.UpdateCursor(def[25])
-         ,new GeneXus.Data.NTier.ADO.UpdateCursor(def[26])
+         ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[26])
          ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[27])
-         ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[28])
        };
     }
 
@@ -3580,48 +3437,45 @@ namespace GeneXus.Programs {
     {
        if ( ( def == null ) )
        {
-          Object[] prmT000B4 ;
-          prmT000B4 = new Object[] {
-          new Object[] {"@LocCodigo",SqlDbType.Int,9,0}
-          } ;
-          Object[] prmT000B11 ;
-          prmT000B11 = new Object[] {
+          Object[] prmT000B10 ;
+          prmT000B10 = new Object[] {
           new Object[] {"@LocCodigo",SqlDbType.Int,9,0}
           } ;
           Object[] prmT000B2 ;
           prmT000B2 = new Object[] {
           new Object[] {"@LocCliPesCodigo",SqlDbType.Int,9,0}
           } ;
-          Object[] prmT000B10 ;
-          prmT000B10 = new Object[] {
+          Object[] prmT000B9 ;
+          prmT000B9 = new Object[] {
           new Object[] {"@LocVenPesCodigo",SqlDbType.Int,9,0}
           } ;
-          Object[] prmT000B12 ;
-          prmT000B12 = new Object[] {
-          new Object[] {"@LocCodigo",SqlDbType.Int,9,0}
-          } ;
-          Object[] prmT000B8 ;
-          prmT000B8 = new Object[] {
-          new Object[] {"@LocCodigo",SqlDbType.Int,9,0}
-          } ;
-          Object[] prmT000B13 ;
-          prmT000B13 = new Object[] {
-          new Object[] {"@LocCodigo",SqlDbType.Int,9,0}
-          } ;
-          Object[] prmT000B14 ;
-          prmT000B14 = new Object[] {
+          Object[] prmT000B11 ;
+          prmT000B11 = new Object[] {
           new Object[] {"@LocCodigo",SqlDbType.Int,9,0}
           } ;
           Object[] prmT000B7 ;
           prmT000B7 = new Object[] {
           new Object[] {"@LocCodigo",SqlDbType.Int,9,0}
           } ;
-          Object[] prmT000B9 ;
-          prmT000B9 = new Object[] {
+          Object[] prmT000B12 ;
+          prmT000B12 = new Object[] {
+          new Object[] {"@LocCodigo",SqlDbType.Int,9,0}
+          } ;
+          Object[] prmT000B13 ;
+          prmT000B13 = new Object[] {
+          new Object[] {"@LocCodigo",SqlDbType.Int,9,0}
+          } ;
+          Object[] prmT000B6 ;
+          prmT000B6 = new Object[] {
+          new Object[] {"@LocCodigo",SqlDbType.Int,9,0}
+          } ;
+          Object[] prmT000B8 ;
+          prmT000B8 = new Object[] {
           new Object[] {"@LocVenPesCodigo",SqlDbType.Int,9,0}
           } ;
-          Object[] prmT000B15 ;
-          prmT000B15 = new Object[] {
+          Object[] prmT000B14 ;
+          prmT000B14 = new Object[] {
+          new Object[] {"@LocTotValor",SqlDbType.Decimal,12,2} ,
           new Object[] {"@LocSituacao",SqlDbType.SmallInt,1,0} ,
           new Object[] {"@LocDatLocacao",SqlDbType.DateTime,8,0} ,
           new Object[] {"@LocDatDevolucao",SqlDbType.DateTime,8,0} ,
@@ -3629,11 +3483,12 @@ namespace GeneXus.Programs {
           new Object[] {"@LocCliPesCodigo",SqlDbType.Int,9,0} ,
           new Object[] {"@LocVenPesCodigo",SqlDbType.Int,9,0}
           } ;
+          Object[] prmT000B15 ;
+          prmT000B15 = new Object[] {
+          } ;
           Object[] prmT000B16 ;
           prmT000B16 = new Object[] {
-          } ;
-          Object[] prmT000B17 ;
-          prmT000B17 = new Object[] {
+          new Object[] {"@LocTotValor",SqlDbType.Decimal,12,2} ,
           new Object[] {"@LocSituacao",SqlDbType.SmallInt,1,0} ,
           new Object[] {"@LocDatLocacao",SqlDbType.DateTime,8,0} ,
           new Object[] {"@LocDatDevolucao",SqlDbType.DateTime,8,0} ,
@@ -3642,32 +3497,32 @@ namespace GeneXus.Programs {
           new Object[] {"@LocVenPesCodigo",SqlDbType.Int,9,0} ,
           new Object[] {"@LocCodigo",SqlDbType.Int,9,0}
           } ;
+          Object[] prmT000B17 ;
+          prmT000B17 = new Object[] {
+          new Object[] {"@LocCodigo",SqlDbType.Int,9,0}
+          } ;
           Object[] prmT000B18 ;
           prmT000B18 = new Object[] {
-          new Object[] {"@LocCodigo",SqlDbType.Int,9,0}
+          new Object[] {"@LocCliPesCodigo",SqlDbType.Int,9,0}
           } ;
           Object[] prmT000B19 ;
           prmT000B19 = new Object[] {
-          new Object[] {"@LocCliPesCodigo",SqlDbType.Int,9,0}
+          new Object[] {"@LocVenPesCodigo",SqlDbType.Int,9,0}
           } ;
           Object[] prmT000B20 ;
           prmT000B20 = new Object[] {
-          new Object[] {"@LocVenPesCodigo",SqlDbType.Int,9,0}
+          new Object[] {"@LocCodigo",SqlDbType.Int,9,0}
           } ;
           Object[] prmT000B21 ;
           prmT000B21 = new Object[] {
-          new Object[] {"@LocCodigo",SqlDbType.Int,9,0}
-          } ;
-          Object[] prmT000B22 ;
-          prmT000B22 = new Object[] {
           new Object[] {"@LocVenPesNome",SqlDbType.VarChar,50,0} ,
           new Object[] {"@LocVenPesCodigo",SqlDbType.Int,9,0}
           } ;
+          Object[] prmT000B22 ;
+          prmT000B22 = new Object[] {
+          } ;
           Object[] prmT000B23 ;
           prmT000B23 = new Object[] {
-          } ;
-          Object[] prmT000B24 ;
-          prmT000B24 = new Object[] {
           new Object[] {"@LocCodigo",SqlDbType.Int,9,0} ,
           new Object[] {"@LocMidMidCodigo",SqlDbType.Int,9,0}
           } ;
@@ -3675,13 +3530,8 @@ namespace GeneXus.Programs {
           prmT000B3 = new Object[] {
           new Object[] {"@LocMidMidCodigo",SqlDbType.Int,9,0}
           } ;
-          Object[] prmT000B25 ;
-          prmT000B25 = new Object[] {
-          new Object[] {"@LocCodigo",SqlDbType.Int,9,0} ,
-          new Object[] {"@LocMidMidCodigo",SqlDbType.Int,9,0}
-          } ;
-          Object[] prmT000B6 ;
-          prmT000B6 = new Object[] {
+          Object[] prmT000B24 ;
+          prmT000B24 = new Object[] {
           new Object[] {"@LocCodigo",SqlDbType.Int,9,0} ,
           new Object[] {"@LocMidMidCodigo",SqlDbType.Int,9,0}
           } ;
@@ -3690,8 +3540,13 @@ namespace GeneXus.Programs {
           new Object[] {"@LocCodigo",SqlDbType.Int,9,0} ,
           new Object[] {"@LocMidMidCodigo",SqlDbType.Int,9,0}
           } ;
-          Object[] prmT000B26 ;
-          prmT000B26 = new Object[] {
+          Object[] prmT000B4 ;
+          prmT000B4 = new Object[] {
+          new Object[] {"@LocCodigo",SqlDbType.Int,9,0} ,
+          new Object[] {"@LocMidMidCodigo",SqlDbType.Int,9,0}
+          } ;
+          Object[] prmT000B25 ;
+          prmT000B25 = new Object[] {
           new Object[] {"@LocCodigo",SqlDbType.Int,9,0} ,
           new Object[] {"@LocMidFilCodigo",SqlDbType.Int,9,0} ,
           new Object[] {"@LocMidFilNome",SqlDbType.VarChar,50,0} ,
@@ -3701,60 +3556,59 @@ namespace GeneXus.Programs {
           new Object[] {"@LocMidMidConfValor",SqlDbType.Decimal,12,2} ,
           new Object[] {"@LocMidMidCodigo",SqlDbType.Int,9,0}
           } ;
-          Object[] prmT000B27 ;
-          prmT000B27 = new Object[] {
+          Object[] prmT000B26 ;
+          prmT000B26 = new Object[] {
           new Object[] {"@LocMidFilCodigo",SqlDbType.Int,9,0} ,
           new Object[] {"@LocMidFilNome",SqlDbType.VarChar,50,0} ,
           new Object[] {"@LocMidCatCodigo",SqlDbType.Int,9,0} ,
           new Object[] {"@LocMidMidTipo",SqlDbType.SmallInt,1,0} ,
           new Object[] {"@LocMidMidLocCodigo",SqlDbType.Int,9,0} ,
           new Object[] {"@LocMidMidConfValor",SqlDbType.Decimal,12,2} ,
+          new Object[] {"@LocCodigo",SqlDbType.Int,9,0} ,
+          new Object[] {"@LocMidMidCodigo",SqlDbType.Int,9,0}
+          } ;
+          Object[] prmT000B27 ;
+          prmT000B27 = new Object[] {
           new Object[] {"@LocCodigo",SqlDbType.Int,9,0} ,
           new Object[] {"@LocMidMidCodigo",SqlDbType.Int,9,0}
           } ;
           Object[] prmT000B28 ;
           prmT000B28 = new Object[] {
-          new Object[] {"@LocCodigo",SqlDbType.Int,9,0} ,
           new Object[] {"@LocMidMidCodigo",SqlDbType.Int,9,0}
           } ;
           Object[] prmT000B29 ;
           prmT000B29 = new Object[] {
-          new Object[] {"@LocMidMidCodigo",SqlDbType.Int,9,0}
-          } ;
-          Object[] prmT000B30 ;
-          prmT000B30 = new Object[] {
           new Object[] {"@LocCodigo",SqlDbType.Int,9,0}
           } ;
           def= new GeneXus.Data.NTier.ADO.CursorDef[] {
               new GeneXus.Data.NTier.ADO.CursorDef("T000B2", "SELECT [PesNome] AS LocCliPesNome FROM [PESSOA] WITH (NOLOCK) WHERE [PesCodigo] = @LocCliPesCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B2,1,0,true,false )
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000B3", "SELECT [MidSituacao] AS LocMidMidSituacao FROM [MIDIA] WITH (NOLOCK) WHERE [MidCodigo] = @LocMidMidCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B3,1,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B4", "SELECT [LocCodigo], [LocMidMidCodigo] AS LocMidMidCodigo, [LocMidMidConfValor] FROM [LOCACAOLOCACAOMIDIA] WITH (NOLOCK) WHERE [LocCodigo] = @LocCodigo ORDER BY [LocCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B4,100,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B5", "SELECT [LocCodigo], [LocMidFilCodigo], [LocMidFilNome], [LocMidCatCodigo], [LocMidMidTipo], [LocMidMidLocCodigo], [LocMidMidConfValor], [LocMidMidCodigo] AS LocMidMidCodigo FROM [LOCACAOLOCACAOMIDIA] WITH (UPDLOCK) WHERE [LocCodigo] = @LocCodigo AND [LocMidMidCodigo] = @LocMidMidCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B5,1,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B6", "SELECT [LocCodigo], [LocMidFilCodigo], [LocMidFilNome], [LocMidCatCodigo], [LocMidMidTipo], [LocMidMidLocCodigo], [LocMidMidConfValor], [LocMidMidCodigo] AS LocMidMidCodigo FROM [LOCACAOLOCACAOMIDIA] WITH (NOLOCK) WHERE [LocCodigo] = @LocCodigo AND [LocMidMidCodigo] = @LocMidMidCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B6,1,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B7", "SELECT [LocCodigo], [LocSituacao], [LocDatLocacao], [LocDatDevolucao], [LocDatCancelamento], [LocCliPesCodigo] AS LocCliPesCodigo, [LocVenPesCodigo] AS LocVenPesCodigo FROM [LOCACAO] WITH (UPDLOCK) WHERE [LocCodigo] = @LocCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B7,1,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B8", "SELECT [LocCodigo], [LocSituacao], [LocDatLocacao], [LocDatDevolucao], [LocDatCancelamento], [LocCliPesCodigo] AS LocCliPesCodigo, [LocVenPesCodigo] AS LocVenPesCodigo FROM [LOCACAO] WITH (NOLOCK) WHERE [LocCodigo] = @LocCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B8,1,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B9", "SELECT [PesNome] AS LocVenPesNome FROM [PESSOA] WITH (UPDLOCK) WHERE [PesCodigo] = @LocVenPesCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B9,1,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B10", "SELECT [PesNome] AS LocVenPesNome FROM [PESSOA] WITH (NOLOCK) WHERE [PesCodigo] = @LocVenPesCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B10,1,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B11", "SELECT TM1.[LocCodigo], TM1.[LocSituacao], TM1.[LocDatLocacao], TM1.[LocDatDevolucao], TM1.[LocDatCancelamento], T3.[PesNome] AS LocCliPesNome, T2.[PesNome] AS LocVenPesNome, TM1.[LocCliPesCodigo] AS LocCliPesCodigo, TM1.[LocVenPesCodigo] AS LocVenPesCodigo FROM (([LOCACAO] TM1 WITH (NOLOCK) LEFT JOIN [PESSOA] T2 WITH (NOLOCK) ON T2.[PesCodigo] = TM1.[LocVenPesCodigo]) LEFT JOIN [PESSOA] T3 WITH (NOLOCK) ON T3.[PesCodigo] = TM1.[LocCliPesCodigo]) WHERE TM1.[LocCodigo] = @LocCodigo ORDER BY TM1.[LocCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B11,100,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B12", "SELECT [LocCodigo] FROM [LOCACAO] WITH (NOLOCK) WHERE [LocCodigo] = @LocCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B12,1,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B13", "SELECT TOP 1 [LocCodigo] FROM [LOCACAO] WITH (NOLOCK) WHERE ( [LocCodigo] > @LocCodigo) ORDER BY [LocCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B13,100,0,true,true )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B14", "SELECT TOP 1 [LocCodigo] FROM [LOCACAO] WITH (NOLOCK) WHERE ( [LocCodigo] < @LocCodigo) ORDER BY [LocCodigo] DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B14,100,0,true,true )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B15", "INSERT INTO [LOCACAO] ([LocSituacao], [LocDatLocacao], [LocDatDevolucao], [LocDatCancelamento], [LocCliPesCodigo], [LocVenPesCodigo]) VALUES (@LocSituacao, @LocDatLocacao, @LocDatDevolucao, @LocDatCancelamento, @LocCliPesCodigo, @LocVenPesCodigo)", GxErrorMask.GX_NOMASK,prmT000B15)
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B16", "SELECT @@IDENTITY ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B16,1,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B17", "UPDATE [LOCACAO] SET [LocSituacao]=@LocSituacao, [LocDatLocacao]=@LocDatLocacao, [LocDatDevolucao]=@LocDatDevolucao, [LocDatCancelamento]=@LocDatCancelamento, [LocCliPesCodigo]=@LocCliPesCodigo, [LocVenPesCodigo]=@LocVenPesCodigo  WHERE [LocCodigo] = @LocCodigo", GxErrorMask.GX_NOMASK,prmT000B17)
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B18", "DELETE FROM [LOCACAO]  WHERE [LocCodigo] = @LocCodigo", GxErrorMask.GX_NOMASK,prmT000B18)
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B19", "SELECT [PesNome] AS LocCliPesNome FROM [PESSOA] WITH (NOLOCK) WHERE [PesCodigo] = @LocCliPesCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B19,1,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B20", "SELECT [PesNome] AS LocVenPesNome FROM [PESSOA] WITH (NOLOCK) WHERE [PesCodigo] = @LocVenPesCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B20,1,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B21", "SELECT TOP 1 [MidCodigo] FROM [MIDIA] WITH (NOLOCK) WHERE [LocCodLocCodigo] = @LocCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B21,1,0,true,true )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B22", "UPDATE [PESSOA] SET [PesNome]=@LocVenPesNome  WHERE [PesCodigo] = @LocVenPesCodigo", GxErrorMask.GX_NOMASK,prmT000B22)
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B23", "SELECT [LocCodigo] FROM [LOCACAO] WITH (NOLOCK) ORDER BY [LocCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B23,100,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B24", "SELECT T1.[LocCodigo], T1.[LocMidFilCodigo], T1.[LocMidFilNome], T1.[LocMidCatCodigo], T1.[LocMidMidTipo], T2.[MidSituacao] AS LocMidMidSituacao, T1.[LocMidMidLocCodigo], T1.[LocMidMidConfValor], T1.[LocMidMidCodigo] AS LocMidMidCodigo FROM ([LOCACAOLOCACAOMIDIA] T1 WITH (NOLOCK) INNER JOIN [MIDIA] T2 WITH (NOLOCK) ON T2.[MidCodigo] = T1.[LocMidMidCodigo]) WHERE T1.[LocCodigo] = @LocCodigo and T1.[LocMidMidCodigo] = @LocMidMidCodigo ORDER BY T1.[LocCodigo], T1.[LocMidMidCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B24,16,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B25", "SELECT [LocCodigo], [LocMidMidCodigo] AS LocMidMidCodigo FROM [LOCACAOLOCACAOMIDIA] WITH (NOLOCK) WHERE [LocCodigo] = @LocCodigo AND [LocMidMidCodigo] = @LocMidMidCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B25,1,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B26", "INSERT INTO [LOCACAOLOCACAOMIDIA] ([LocCodigo], [LocMidFilCodigo], [LocMidFilNome], [LocMidCatCodigo], [LocMidMidTipo], [LocMidMidLocCodigo], [LocMidMidConfValor], [LocMidMidCodigo]) VALUES (@LocCodigo, @LocMidFilCodigo, @LocMidFilNome, @LocMidCatCodigo, @LocMidMidTipo, @LocMidMidLocCodigo, @LocMidMidConfValor, @LocMidMidCodigo)", GxErrorMask.GX_NOMASK,prmT000B26)
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B27", "UPDATE [LOCACAOLOCACAOMIDIA] SET [LocMidFilCodigo]=@LocMidFilCodigo, [LocMidFilNome]=@LocMidFilNome, [LocMidCatCodigo]=@LocMidCatCodigo, [LocMidMidTipo]=@LocMidMidTipo, [LocMidMidLocCodigo]=@LocMidMidLocCodigo, [LocMidMidConfValor]=@LocMidMidConfValor  WHERE [LocCodigo] = @LocCodigo AND [LocMidMidCodigo] = @LocMidMidCodigo", GxErrorMask.GX_NOMASK,prmT000B27)
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B28", "DELETE FROM [LOCACAOLOCACAOMIDIA]  WHERE [LocCodigo] = @LocCodigo AND [LocMidMidCodigo] = @LocMidMidCodigo", GxErrorMask.GX_NOMASK,prmT000B28)
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B29", "SELECT [MidSituacao] AS LocMidMidSituacao FROM [MIDIA] WITH (NOLOCK) WHERE [MidCodigo] = @LocMidMidCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B29,1,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B30", "SELECT [LocCodigo], [LocMidMidCodigo] AS LocMidMidCodigo FROM [LOCACAOLOCACAOMIDIA] WITH (NOLOCK) WHERE [LocCodigo] = @LocCodigo ORDER BY [LocCodigo], [LocMidMidCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B30,16,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B4", "SELECT [LocCodigo], [LocMidFilCodigo], [LocMidFilNome], [LocMidCatCodigo], [LocMidMidTipo], [LocMidMidLocCodigo], [LocMidMidConfValor], [LocMidMidCodigo] AS LocMidMidCodigo FROM [LOCACAOLOCACAOMIDIA] WITH (UPDLOCK) WHERE [LocCodigo] = @LocCodigo AND [LocMidMidCodigo] = @LocMidMidCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B4,1,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B5", "SELECT [LocCodigo], [LocMidFilCodigo], [LocMidFilNome], [LocMidCatCodigo], [LocMidMidTipo], [LocMidMidLocCodigo], [LocMidMidConfValor], [LocMidMidCodigo] AS LocMidMidCodigo FROM [LOCACAOLOCACAOMIDIA] WITH (NOLOCK) WHERE [LocCodigo] = @LocCodigo AND [LocMidMidCodigo] = @LocMidMidCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B5,1,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B6", "SELECT [LocCodigo], [LocTotValor], [LocSituacao], [LocDatLocacao], [LocDatDevolucao], [LocDatCancelamento], [LocCliPesCodigo] AS LocCliPesCodigo, [LocVenPesCodigo] AS LocVenPesCodigo FROM [LOCACAO] WITH (UPDLOCK) WHERE [LocCodigo] = @LocCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B6,1,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B7", "SELECT [LocCodigo], [LocTotValor], [LocSituacao], [LocDatLocacao], [LocDatDevolucao], [LocDatCancelamento], [LocCliPesCodigo] AS LocCliPesCodigo, [LocVenPesCodigo] AS LocVenPesCodigo FROM [LOCACAO] WITH (NOLOCK) WHERE [LocCodigo] = @LocCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B7,1,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B8", "SELECT [PesNome] AS LocVenPesNome FROM [PESSOA] WITH (UPDLOCK) WHERE [PesCodigo] = @LocVenPesCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B8,1,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B9", "SELECT [PesNome] AS LocVenPesNome FROM [PESSOA] WITH (NOLOCK) WHERE [PesCodigo] = @LocVenPesCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B9,1,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B10", "SELECT TM1.[LocCodigo], TM1.[LocTotValor], TM1.[LocSituacao], TM1.[LocDatLocacao], TM1.[LocDatDevolucao], TM1.[LocDatCancelamento], T3.[PesNome] AS LocCliPesNome, T2.[PesNome] AS LocVenPesNome, TM1.[LocCliPesCodigo] AS LocCliPesCodigo, TM1.[LocVenPesCodigo] AS LocVenPesCodigo FROM (([LOCACAO] TM1 WITH (NOLOCK) LEFT JOIN [PESSOA] T2 WITH (NOLOCK) ON T2.[PesCodigo] = TM1.[LocVenPesCodigo]) LEFT JOIN [PESSOA] T3 WITH (NOLOCK) ON T3.[PesCodigo] = TM1.[LocCliPesCodigo]) WHERE TM1.[LocCodigo] = @LocCodigo ORDER BY TM1.[LocCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B10,100,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B11", "SELECT [LocCodigo] FROM [LOCACAO] WITH (NOLOCK) WHERE [LocCodigo] = @LocCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B11,1,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B12", "SELECT TOP 1 [LocCodigo] FROM [LOCACAO] WITH (NOLOCK) WHERE ( [LocCodigo] > @LocCodigo) ORDER BY [LocCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B12,100,0,true,true )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B13", "SELECT TOP 1 [LocCodigo] FROM [LOCACAO] WITH (NOLOCK) WHERE ( [LocCodigo] < @LocCodigo) ORDER BY [LocCodigo] DESC ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B13,100,0,true,true )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B14", "INSERT INTO [LOCACAO] ([LocTotValor], [LocSituacao], [LocDatLocacao], [LocDatDevolucao], [LocDatCancelamento], [LocCliPesCodigo], [LocVenPesCodigo]) VALUES (@LocTotValor, @LocSituacao, @LocDatLocacao, @LocDatDevolucao, @LocDatCancelamento, @LocCliPesCodigo, @LocVenPesCodigo)", GxErrorMask.GX_NOMASK,prmT000B14)
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B15", "SELECT @@IDENTITY ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B15,1,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B16", "UPDATE [LOCACAO] SET [LocTotValor]=@LocTotValor, [LocSituacao]=@LocSituacao, [LocDatLocacao]=@LocDatLocacao, [LocDatDevolucao]=@LocDatDevolucao, [LocDatCancelamento]=@LocDatCancelamento, [LocCliPesCodigo]=@LocCliPesCodigo, [LocVenPesCodigo]=@LocVenPesCodigo  WHERE [LocCodigo] = @LocCodigo", GxErrorMask.GX_NOMASK,prmT000B16)
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B17", "DELETE FROM [LOCACAO]  WHERE [LocCodigo] = @LocCodigo", GxErrorMask.GX_NOMASK,prmT000B17)
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B18", "SELECT [PesNome] AS LocCliPesNome FROM [PESSOA] WITH (NOLOCK) WHERE [PesCodigo] = @LocCliPesCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B18,1,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B19", "SELECT [PesNome] AS LocVenPesNome FROM [PESSOA] WITH (NOLOCK) WHERE [PesCodigo] = @LocVenPesCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B19,1,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B20", "SELECT TOP 1 [MidCodigo] FROM [MIDIA] WITH (NOLOCK) WHERE [LocCodLocCodigo] = @LocCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B20,1,0,true,true )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B21", "UPDATE [PESSOA] SET [PesNome]=@LocVenPesNome  WHERE [PesCodigo] = @LocVenPesCodigo", GxErrorMask.GX_NOMASK,prmT000B21)
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B22", "SELECT [LocCodigo] FROM [LOCACAO] WITH (NOLOCK) ORDER BY [LocCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B22,100,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B23", "SELECT T1.[LocCodigo], T1.[LocMidFilCodigo], T1.[LocMidFilNome], T1.[LocMidCatCodigo], T1.[LocMidMidTipo], T2.[MidSituacao] AS LocMidMidSituacao, T1.[LocMidMidLocCodigo], T1.[LocMidMidConfValor], T1.[LocMidMidCodigo] AS LocMidMidCodigo FROM ([LOCACAOLOCACAOMIDIA] T1 WITH (NOLOCK) INNER JOIN [MIDIA] T2 WITH (NOLOCK) ON T2.[MidCodigo] = T1.[LocMidMidCodigo]) WHERE T1.[LocCodigo] = @LocCodigo and T1.[LocMidMidCodigo] = @LocMidMidCodigo ORDER BY T1.[LocCodigo], T1.[LocMidMidCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B23,16,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B24", "SELECT [LocCodigo], [LocMidMidCodigo] AS LocMidMidCodigo FROM [LOCACAOLOCACAOMIDIA] WITH (NOLOCK) WHERE [LocCodigo] = @LocCodigo AND [LocMidMidCodigo] = @LocMidMidCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B24,1,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B25", "INSERT INTO [LOCACAOLOCACAOMIDIA] ([LocCodigo], [LocMidFilCodigo], [LocMidFilNome], [LocMidCatCodigo], [LocMidMidTipo], [LocMidMidLocCodigo], [LocMidMidConfValor], [LocMidMidCodigo]) VALUES (@LocCodigo, @LocMidFilCodigo, @LocMidFilNome, @LocMidCatCodigo, @LocMidMidTipo, @LocMidMidLocCodigo, @LocMidMidConfValor, @LocMidMidCodigo)", GxErrorMask.GX_NOMASK,prmT000B25)
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B26", "UPDATE [LOCACAOLOCACAOMIDIA] SET [LocMidFilCodigo]=@LocMidFilCodigo, [LocMidFilNome]=@LocMidFilNome, [LocMidCatCodigo]=@LocMidCatCodigo, [LocMidMidTipo]=@LocMidMidTipo, [LocMidMidLocCodigo]=@LocMidMidLocCodigo, [LocMidMidConfValor]=@LocMidMidConfValor  WHERE [LocCodigo] = @LocCodigo AND [LocMidMidCodigo] = @LocMidMidCodigo", GxErrorMask.GX_NOMASK,prmT000B26)
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B27", "DELETE FROM [LOCACAOLOCACAOMIDIA]  WHERE [LocCodigo] = @LocCodigo AND [LocMidMidCodigo] = @LocMidMidCodigo", GxErrorMask.GX_NOMASK,prmT000B27)
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B28", "SELECT [MidSituacao] AS LocMidMidSituacao FROM [MIDIA] WITH (NOLOCK) WHERE [MidCodigo] = @LocMidMidCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B28,1,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000B29", "SELECT [LocCodigo], [LocMidMidCodigo] AS LocMidMidCodigo FROM [LOCACAOLOCACAOMIDIA] WITH (NOLOCK) WHERE [LocCodigo] = @LocCodigo ORDER BY [LocCodigo], [LocMidMidCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000B29,16,0,true,false )
           };
        }
     }
@@ -3776,8 +3630,18 @@ namespace GeneXus.Programs {
              case 2 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
-                ((decimal[]) buf[2])[0] = rslt.getDecimal(3) ;
-                ((bool[]) buf[3])[0] = rslt.wasNull(3);
+                ((bool[]) buf[2])[0] = rslt.wasNull(2);
+                ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
+                ((bool[]) buf[4])[0] = rslt.wasNull(3);
+                ((int[]) buf[5])[0] = rslt.getInt(4) ;
+                ((bool[]) buf[6])[0] = rslt.wasNull(4);
+                ((short[]) buf[7])[0] = rslt.getShort(5) ;
+                ((bool[]) buf[8])[0] = rslt.wasNull(5);
+                ((int[]) buf[9])[0] = rslt.getInt(6) ;
+                ((bool[]) buf[10])[0] = rslt.wasNull(6);
+                ((decimal[]) buf[11])[0] = rslt.getDecimal(7) ;
+                ((bool[]) buf[12])[0] = rslt.wasNull(7);
+                ((int[]) buf[13])[0] = rslt.getInt(8) ;
                 break;
              case 3 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
@@ -3797,76 +3661,69 @@ namespace GeneXus.Programs {
                 break;
              case 4 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                ((int[]) buf[1])[0] = rslt.getInt(2) ;
+                ((decimal[]) buf[1])[0] = rslt.getDecimal(2) ;
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
-                ((String[]) buf[3])[0] = rslt.getVarchar(3) ;
+                ((short[]) buf[3])[0] = rslt.getShort(3) ;
                 ((bool[]) buf[4])[0] = rslt.wasNull(3);
-                ((int[]) buf[5])[0] = rslt.getInt(4) ;
+                ((DateTime[]) buf[5])[0] = rslt.getGXDate(4) ;
                 ((bool[]) buf[6])[0] = rslt.wasNull(4);
-                ((short[]) buf[7])[0] = rslt.getShort(5) ;
+                ((DateTime[]) buf[7])[0] = rslt.getGXDate(5) ;
                 ((bool[]) buf[8])[0] = rslt.wasNull(5);
-                ((int[]) buf[9])[0] = rslt.getInt(6) ;
+                ((DateTime[]) buf[9])[0] = rslt.getGXDate(6) ;
                 ((bool[]) buf[10])[0] = rslt.wasNull(6);
-                ((decimal[]) buf[11])[0] = rslt.getDecimal(7) ;
+                ((int[]) buf[11])[0] = rslt.getInt(7) ;
                 ((bool[]) buf[12])[0] = rslt.wasNull(7);
                 ((int[]) buf[13])[0] = rslt.getInt(8) ;
+                ((bool[]) buf[14])[0] = rslt.wasNull(8);
                 break;
              case 5 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                ((short[]) buf[1])[0] = rslt.getShort(2) ;
+                ((decimal[]) buf[1])[0] = rslt.getDecimal(2) ;
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
-                ((DateTime[]) buf[3])[0] = rslt.getGXDate(3) ;
+                ((short[]) buf[3])[0] = rslt.getShort(3) ;
                 ((bool[]) buf[4])[0] = rslt.wasNull(3);
                 ((DateTime[]) buf[5])[0] = rslt.getGXDate(4) ;
                 ((bool[]) buf[6])[0] = rslt.wasNull(4);
                 ((DateTime[]) buf[7])[0] = rslt.getGXDate(5) ;
                 ((bool[]) buf[8])[0] = rslt.wasNull(5);
-                ((int[]) buf[9])[0] = rslt.getInt(6) ;
+                ((DateTime[]) buf[9])[0] = rslt.getGXDate(6) ;
                 ((bool[]) buf[10])[0] = rslt.wasNull(6);
                 ((int[]) buf[11])[0] = rslt.getInt(7) ;
                 ((bool[]) buf[12])[0] = rslt.wasNull(7);
+                ((int[]) buf[13])[0] = rslt.getInt(8) ;
+                ((bool[]) buf[14])[0] = rslt.wasNull(8);
                 break;
              case 6 :
-                ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                ((short[]) buf[1])[0] = rslt.getShort(2) ;
-                ((bool[]) buf[2])[0] = rslt.wasNull(2);
-                ((DateTime[]) buf[3])[0] = rslt.getGXDate(3) ;
-                ((bool[]) buf[4])[0] = rslt.wasNull(3);
-                ((DateTime[]) buf[5])[0] = rslt.getGXDate(4) ;
-                ((bool[]) buf[6])[0] = rslt.wasNull(4);
-                ((DateTime[]) buf[7])[0] = rslt.getGXDate(5) ;
-                ((bool[]) buf[8])[0] = rslt.wasNull(5);
-                ((int[]) buf[9])[0] = rslt.getInt(6) ;
-                ((bool[]) buf[10])[0] = rslt.wasNull(6);
-                ((int[]) buf[11])[0] = rslt.getInt(7) ;
-                ((bool[]) buf[12])[0] = rslt.wasNull(7);
+                ((String[]) buf[0])[0] = rslt.getVarchar(1) ;
+                ((bool[]) buf[1])[0] = rslt.wasNull(1);
                 break;
              case 7 :
                 ((String[]) buf[0])[0] = rslt.getVarchar(1) ;
                 ((bool[]) buf[1])[0] = rslt.wasNull(1);
                 break;
              case 8 :
-                ((String[]) buf[0])[0] = rslt.getVarchar(1) ;
-                ((bool[]) buf[1])[0] = rslt.wasNull(1);
-                break;
-             case 9 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                ((short[]) buf[1])[0] = rslt.getShort(2) ;
+                ((decimal[]) buf[1])[0] = rslt.getDecimal(2) ;
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
-                ((DateTime[]) buf[3])[0] = rslt.getGXDate(3) ;
+                ((short[]) buf[3])[0] = rslt.getShort(3) ;
                 ((bool[]) buf[4])[0] = rslt.wasNull(3);
                 ((DateTime[]) buf[5])[0] = rslt.getGXDate(4) ;
                 ((bool[]) buf[6])[0] = rslt.wasNull(4);
                 ((DateTime[]) buf[7])[0] = rslt.getGXDate(5) ;
                 ((bool[]) buf[8])[0] = rslt.wasNull(5);
-                ((String[]) buf[9])[0] = rslt.getVarchar(6) ;
+                ((DateTime[]) buf[9])[0] = rslt.getGXDate(6) ;
                 ((bool[]) buf[10])[0] = rslt.wasNull(6);
                 ((String[]) buf[11])[0] = rslt.getVarchar(7) ;
                 ((bool[]) buf[12])[0] = rslt.wasNull(7);
-                ((int[]) buf[13])[0] = rslt.getInt(8) ;
+                ((String[]) buf[13])[0] = rslt.getVarchar(8) ;
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
                 ((int[]) buf[15])[0] = rslt.getInt(9) ;
                 ((bool[]) buf[16])[0] = rslt.wasNull(9);
+                ((int[]) buf[17])[0] = rslt.getInt(10) ;
+                ((bool[]) buf[18])[0] = rslt.wasNull(10);
+                break;
+             case 9 :
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 break;
              case 10 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
@@ -3874,27 +3731,24 @@ namespace GeneXus.Programs {
              case 11 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 break;
-             case 12 :
+             case 13 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 break;
-             case 14 :
-                ((int[]) buf[0])[0] = rslt.getInt(1) ;
+             case 16 :
+                ((String[]) buf[0])[0] = rslt.getVarchar(1) ;
+                ((bool[]) buf[1])[0] = rslt.wasNull(1);
                 break;
              case 17 :
                 ((String[]) buf[0])[0] = rslt.getVarchar(1) ;
                 ((bool[]) buf[1])[0] = rslt.wasNull(1);
                 break;
              case 18 :
-                ((String[]) buf[0])[0] = rslt.getVarchar(1) ;
-                ((bool[]) buf[1])[0] = rslt.wasNull(1);
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 break;
-             case 19 :
+             case 20 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 break;
              case 21 :
-                ((int[]) buf[0])[0] = rslt.getInt(1) ;
-                break;
-             case 22 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 ((bool[]) buf[2])[0] = rslt.wasNull(2);
@@ -3912,15 +3766,15 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
                 ((int[]) buf[15])[0] = rslt.getInt(9) ;
                 break;
-             case 23 :
+             case 22 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 break;
-             case 27 :
+             case 26 :
                 ((short[]) buf[0])[0] = rslt.getShort(1) ;
                 ((bool[]) buf[1])[0] = rslt.wasNull(1);
                 break;
-             case 28 :
+             case 27 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 break;
@@ -3948,6 +3802,7 @@ namespace GeneXus.Programs {
                 break;
              case 2 :
                 stmt.SetParameter(1, (int)parms[0]);
+                stmt.SetParameter(2, (int)parms[1]);
                 break;
              case 3 :
                 stmt.SetParameter(1, (int)parms[0]);
@@ -3955,13 +3810,19 @@ namespace GeneXus.Programs {
                 break;
              case 4 :
                 stmt.SetParameter(1, (int)parms[0]);
-                stmt.SetParameter(2, (int)parms[1]);
                 break;
              case 5 :
                 stmt.SetParameter(1, (int)parms[0]);
                 break;
              case 6 :
-                stmt.SetParameter(1, (int)parms[0]);
+                if ( (bool)parms[0] )
+                {
+                   stmt.setNull( 1 , SqlDbType.Int );
+                }
+                else
+                {
+                   stmt.SetParameter(1, (int)parms[1]);
+                }
                 break;
              case 7 :
                 if ( (bool)parms[0] )
@@ -3974,14 +3835,7 @@ namespace GeneXus.Programs {
                 }
                 break;
              case 8 :
-                if ( (bool)parms[0] )
-                {
-                   stmt.setNull( 1 , SqlDbType.Int );
-                }
-                else
-                {
-                   stmt.SetParameter(1, (int)parms[1]);
-                }
+                stmt.SetParameter(1, (int)parms[0]);
                 break;
              case 9 :
                 stmt.SetParameter(1, (int)parms[0]);
@@ -3993,24 +3847,21 @@ namespace GeneXus.Programs {
                 stmt.SetParameter(1, (int)parms[0]);
                 break;
              case 12 :
-                stmt.SetParameter(1, (int)parms[0]);
-                break;
-             case 13 :
                 if ( (bool)parms[0] )
                 {
-                   stmt.setNull( 1 , SqlDbType.SmallInt );
+                   stmt.setNull( 1 , SqlDbType.Decimal );
                 }
                 else
                 {
-                   stmt.SetParameter(1, (short)parms[1]);
+                   stmt.SetParameter(1, (decimal)parms[1]);
                 }
                 if ( (bool)parms[2] )
                 {
-                   stmt.setNull( 2 , SqlDbType.DateTime );
+                   stmt.setNull( 2 , SqlDbType.SmallInt );
                 }
                 else
                 {
-                   stmt.SetParameter(2, (DateTime)parms[3]);
+                   stmt.SetParameter(2, (short)parms[3]);
                 }
                 if ( (bool)parms[4] )
                 {
@@ -4030,11 +3881,11 @@ namespace GeneXus.Programs {
                 }
                 if ( (bool)parms[8] )
                 {
-                   stmt.setNull( 5 , SqlDbType.Int );
+                   stmt.setNull( 5 , SqlDbType.DateTime );
                 }
                 else
                 {
-                   stmt.SetParameter(5, (int)parms[9]);
+                   stmt.SetParameter(5, (DateTime)parms[9]);
                 }
                 if ( (bool)parms[10] )
                 {
@@ -4044,60 +3895,86 @@ namespace GeneXus.Programs {
                 {
                    stmt.SetParameter(6, (int)parms[11]);
                 }
+                if ( (bool)parms[12] )
+                {
+                   stmt.setNull( 7 , SqlDbType.Int );
+                }
+                else
+                {
+                   stmt.SetParameter(7, (int)parms[13]);
+                }
+                break;
+             case 14 :
+                if ( (bool)parms[0] )
+                {
+                   stmt.setNull( 1 , SqlDbType.Decimal );
+                }
+                else
+                {
+                   stmt.SetParameter(1, (decimal)parms[1]);
+                }
+                if ( (bool)parms[2] )
+                {
+                   stmt.setNull( 2 , SqlDbType.SmallInt );
+                }
+                else
+                {
+                   stmt.SetParameter(2, (short)parms[3]);
+                }
+                if ( (bool)parms[4] )
+                {
+                   stmt.setNull( 3 , SqlDbType.DateTime );
+                }
+                else
+                {
+                   stmt.SetParameter(3, (DateTime)parms[5]);
+                }
+                if ( (bool)parms[6] )
+                {
+                   stmt.setNull( 4 , SqlDbType.DateTime );
+                }
+                else
+                {
+                   stmt.SetParameter(4, (DateTime)parms[7]);
+                }
+                if ( (bool)parms[8] )
+                {
+                   stmt.setNull( 5 , SqlDbType.DateTime );
+                }
+                else
+                {
+                   stmt.SetParameter(5, (DateTime)parms[9]);
+                }
+                if ( (bool)parms[10] )
+                {
+                   stmt.setNull( 6 , SqlDbType.Int );
+                }
+                else
+                {
+                   stmt.SetParameter(6, (int)parms[11]);
+                }
+                if ( (bool)parms[12] )
+                {
+                   stmt.setNull( 7 , SqlDbType.Int );
+                }
+                else
+                {
+                   stmt.SetParameter(7, (int)parms[13]);
+                }
+                stmt.SetParameter(8, (int)parms[14]);
                 break;
              case 15 :
-                if ( (bool)parms[0] )
-                {
-                   stmt.setNull( 1 , SqlDbType.SmallInt );
-                }
-                else
-                {
-                   stmt.SetParameter(1, (short)parms[1]);
-                }
-                if ( (bool)parms[2] )
-                {
-                   stmt.setNull( 2 , SqlDbType.DateTime );
-                }
-                else
-                {
-                   stmt.SetParameter(2, (DateTime)parms[3]);
-                }
-                if ( (bool)parms[4] )
-                {
-                   stmt.setNull( 3 , SqlDbType.DateTime );
-                }
-                else
-                {
-                   stmt.SetParameter(3, (DateTime)parms[5]);
-                }
-                if ( (bool)parms[6] )
-                {
-                   stmt.setNull( 4 , SqlDbType.DateTime );
-                }
-                else
-                {
-                   stmt.SetParameter(4, (DateTime)parms[7]);
-                }
-                if ( (bool)parms[8] )
-                {
-                   stmt.setNull( 5 , SqlDbType.Int );
-                }
-                else
-                {
-                   stmt.SetParameter(5, (int)parms[9]);
-                }
-                if ( (bool)parms[10] )
-                {
-                   stmt.setNull( 6 , SqlDbType.Int );
-                }
-                else
-                {
-                   stmt.SetParameter(6, (int)parms[11]);
-                }
-                stmt.SetParameter(7, (int)parms[12]);
+                stmt.SetParameter(1, (int)parms[0]);
                 break;
              case 16 :
-                stmt.SetParameter(1, (int)parms[0]);
+                if ( (bool)parms[0] )
+                {
+                   stmt.setNull( 1 , SqlDbType.Int );
+                }
+                else
+                {
+                   stmt.SetParameter(1, (int)parms[1]);
+                }
                 break;
              case 17 :
                 if ( (bool)parms[0] )
@@ -4110,19 +3987,9 @@ namespace GeneXus.Programs {
                 }
                 break;
              case 18 :
-                if ( (bool)parms[0] )
-                {
-                   stmt.setNull( 1 , SqlDbType.Int );
-                }
-                else
-                {
-                   stmt.SetParameter(1, (int)parms[1]);
-                }
-                break;
-             case 19 :
                 stmt.SetParameter(1, (int)parms[0]);
                 break;
-             case 20 :
+             case 19 :
                 if ( (bool)parms[0] )
                 {
                    stmt.setNull( 1 , SqlDbType.VarChar );
@@ -4140,15 +4007,15 @@ namespace GeneXus.Programs {
                    stmt.SetParameter(2, (int)parms[3]);
                 }
                 break;
+             case 21 :
+                stmt.SetParameter(1, (int)parms[0]);
+                stmt.SetParameter(2, (int)parms[1]);
+                break;
              case 22 :
                 stmt.SetParameter(1, (int)parms[0]);
                 stmt.SetParameter(2, (int)parms[1]);
                 break;
              case 23 :
-                stmt.SetParameter(1, (int)parms[0]);
-                stmt.SetParameter(2, (int)parms[1]);
-                break;
-             case 24 :
                 stmt.SetParameter(1, (int)parms[0]);
                 if ( (bool)parms[1] )
                 {
@@ -4200,7 +4067,7 @@ namespace GeneXus.Programs {
                 }
                 stmt.SetParameter(8, (int)parms[13]);
                 break;
-             case 25 :
+             case 24 :
                 if ( (bool)parms[0] )
                 {
                    stmt.setNull( 1 , SqlDbType.Int );
@@ -4252,14 +4119,14 @@ namespace GeneXus.Programs {
                 stmt.SetParameter(7, (int)parms[12]);
                 stmt.SetParameter(8, (int)parms[13]);
                 break;
-             case 26 :
+             case 25 :
                 stmt.SetParameter(1, (int)parms[0]);
                 stmt.SetParameter(2, (int)parms[1]);
                 break;
-             case 27 :
+             case 26 :
                 stmt.SetParameter(1, (int)parms[0]);
                 break;
-             case 28 :
+             case 27 :
                 stmt.SetParameter(1, (int)parms[0]);
                 break;
        }

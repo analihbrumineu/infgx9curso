@@ -2,7 +2,7 @@
                File: RelCliComDependente
         Description: Impressão de relatório de clientes com dependentes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/3/2026 10:48:13.50
+       Generated on: 6/8/2026 9:5:21.55
        Program type: Callable routine
           Main DBMS: sqlserver
 */

@@ -7,9 +7,9 @@ called_tree_i(4,93,17,1).
  
  
  
-ij_object_dependency(wmovdocliente,[],[ subwmovdocliente07 ],[],93).
+ij_object_dependency(wmovdocliente,[],[ subwmovdocliente06 ],[],93).
  
  
-obj_parms_i([ 'int aP0_PesCodigo','short aP1_Depende' ],[ [ 'Pescodigo',in ],[ 'Depende',in ] ]).
+obj_parms_i([ 'int aP0_PesCodigo' ],[ [ 'Pescodigo',in ] ]).
  
  

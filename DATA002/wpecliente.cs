@@ -2,7 +2,7 @@
                File: PeCliente
         Description: Cadastro de clientes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/3/2026 10:48:12.88
+       Generated on: 6/8/2026 9:5:20.94
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -583,9 +583,9 @@ namespace GeneXus.Programs {
          , new GXColumnDefinition( new GUIObjectString ( new SubfileImage() , null ,  0 , 0 , 25 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV11Exclui" ), ""  , UIFactory.getColor(18) , UIFactory.getColor(15) , 25 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 52, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 51 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A13PesCodi" ), "Código"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 51 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 289, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 288 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A14PesNome" ), "Nome"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 288 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         , new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 90, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 89 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A48PesDepT" ), "Dependente(s)"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 89 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         , new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 93, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 92 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A48PesDepT" ), "Dependente(s)"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 92 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectShort ( new GXComboBox(GXPanel1, false) , null ,  0 , 0 , 122 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A23PesSitu" ), "Situação"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 122 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         }, 32 , 18 , GXPanel1 , 65 , 156 , 690 , 598 ,  18 ));
+         }, 32 , 18 , GXPanel1 , 65 , 156 , 693 , 598 ,  18 ));
          ((GXComboBox) subGxsf11.getColumn(6).getGXComponent()).addItem( new java.lang.Short(1),"Ativo");
          ((GXComboBox) subGxsf11.getColumn(6).getGXComponent()).addItem( new java.lang.Short(0),"Inativo");
          subGxsf11.addActionListener(this);

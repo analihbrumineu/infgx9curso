@@ -56,8 +56,8 @@ namespace GeneXus.Programs {
             Rename auxiliary tables to the appropriate name.
          */
          GeneXus.Reorg.GXReorganization.AddMsg( GXResourceManager.GetMessage("rgzrnmtbl", new   object[]  {"6"}) , null);
-         GeneXus.Reorg.GXReorganization.AddMsg( GXResourceManager.GetMessage("fileren", new   object[]  {"CLIENTE", "PESSOA"}) , null);
-         cmdBuffer=" DROP TABLE [PESSOA] "
+         GeneXus.Reorg.GXReorganization.AddMsg( GXResourceManager.GetMessage("fileren", new   object[]  {"GXA0012", "LOCACAO"}) , null);
+         cmdBuffer=" DROP TABLE [LOCACAO] "
          ;
          RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
          RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
@@ -65,13 +65,46 @@ namespace GeneXus.Programs {
          RGZ.Drop();
          RGZ = new GxCommand(dsDefault.Db, "sp_rename", dsDefault,0,true,false,null);
          RGZ.CommandType = CommandType.StoredProcedure;
-         RGZ.AddParameter("@objname","[CLIENTE]");
-         RGZ.AddParameter("@newname","PESSOA");
+         RGZ.AddParameter("@objname","[GXA0012]");
+         RGZ.AddParameter("@newname","LOCACAO");
          RGZ.ExecuteStmt();
+         cmdBuffer=" ALTER TABLE [LOCACAO] ADD PRIMARY KEY([LocCodigo]) "
+         ;
+         RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+         RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+         RGZ.ExecuteStmt() ;
+         RGZ.Drop();
          /* Adding attributes to tables' structure. */
          GeneXus.Reorg.GXReorganization.AddMsg( GXResourceManager.GetMessage("rgzbldidx", new   object[]  {"7"}) , null);
-         /* Indices for table PESSOA */
-         /* Referential constraints on table PESSOA */
+         /* Indices for table LOCACAO */
+         GeneXus.Reorg.GXReorganization.AddMsg( GXResourceManager.GetMessage("creaindx", new   object[]  {"ILOCACAO"}) , null);
+         GeneXus.Reorg.GXReorganization.AddMsg( GXResourceManager.GetMessage("creaindx", new   object[]  {"ILOCACAO1"}) , null);
+         cmdBuffer=" DROP INDEX [LOCACAO].[ILOCACAO1] "
+         ;
+         RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+         RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+         RGZ.ExecuteStmt() ;
+         RGZ.Drop();
+         cmdBuffer=" CREATE NONCLUSTERED INDEX [ILOCACAO1] ON [LOCACAO] ([LocCliPesCodigo] ) "
+         ;
+         RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+         RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+         RGZ.ExecuteStmt() ;
+         RGZ.Drop();
+         GeneXus.Reorg.GXReorganization.AddMsg( GXResourceManager.GetMessage("creaindx", new   object[]  {"ILOCACAO2"}) , null);
+         cmdBuffer=" DROP INDEX [LOCACAO].[ILOCACAO2] "
+         ;
+         RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+         RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+         RGZ.ExecuteStmt() ;
+         RGZ.Drop();
+         cmdBuffer=" CREATE NONCLUSTERED INDEX [ILOCACAO2] ON [LOCACAO] ([LocVenPesCodigo] ) "
+         ;
+         RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+         RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+         RGZ.ExecuteStmt() ;
+         RGZ.Drop();
+         /* Referential constraints on table LOCACAO */
          GeneXus.Reorg.GXReorganization.AddMsg( GXResourceManager.GetMessage("rgzdroptbl", new   object[]  {"8"}) , null);
          /* Dropping attributes from tables' structure. */
          /* Dropping removed tables */

@@ -131,18 +131,6 @@
 <Action>
 <ActionType>Formula</ActionType>
 <FormulaName>
-<Attribute>
-<AttriId>95</AttriId>
-<AttriName>LocTotValor</AttriName>
-<Description>Valor total da locação</Description></Attribute>
-<Token>.</Token>
-<Token>Enabled</Token></FormulaName>
-<FormulaExpression>
-<Token>0</Token>
-<Token>;</Token></FormulaExpression></Action>
-<Action>
-<ActionType>Formula</ActionType>
-<FormulaName>
 <Variable>
 <VarId>Today</VarId>
 <VarName>&amp;Gx_date</VarName></Variable></FormulaName>
@@ -367,6 +355,10 @@
 <Description>Código da locação</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
 <Into>
 <Attribute>
+<AttriId>95</AttriId>
+<AttriName>LocTotValor</AttriName>
+<Description>Valor total da locação</Description></Attribute>
+<Attribute>
 <AttriId>87</AttriId>
 <AttriName>LocSituacao</AttriName>
 <Description>Situação da locação</Description></Attribute>
@@ -391,25 +383,6 @@
 <AttriName>LocVenPesCodigo</AttriName>
 <Description>Código do vendedor locador</Description></Attribute></Into></Action></BaseTableRule>
 <Rules>
-<Action>
-<ActionType>VerticalFormulas</ActionType>
-<VerticalFormulasToCalc>
-<Attribute>
-<AttriId>95</AttriId>
-<AttriName>LocTotValor</AttriName>
-<Description>Valor total da locação</Description></Attribute></VerticalFormulasToCalc></Action>
-<Action>
-<ActionType>Formula</ActionType>
-<FormulaName>
-<Variable>
-<VarId>Loctotvalor</VarId>
-<VarName>&amp;LocTotValor</VarName></Variable></FormulaName>
-<FormulaExpression>
-<Attribute>
-<AttriId>95</AttriId>
-<AttriName>LocTotValor</AttriName>
-<Description>Valor total da locação</Description></Attribute>
-<Token>;</Token></FormulaExpression></Action>
 <Action>
 <ActionType>ReadTable</ActionType>
 <JoinType>Outer</JoinType>
@@ -474,7 +447,20 @@
 <Token>.</Token>
 <Token>isempty(</Token>
 <Token>)</Token></Condition></Action></BeforeConfirmRules>
-<AfterConfirmRules></AfterConfirmRules>
+<AfterConfirmRules>
+<After>confirm</After>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>95</AttriId>
+<AttriName>LocTotValor</AttriName>
+<Description>Valor total da locação</Description></Attribute></FormulaName>
+<FormulaExpression>
+<Variable>
+<VarId>Loctotvalor</VarId>
+<VarName>&amp;LocTotValor</VarName></Variable>
+<Token>;</Token></FormulaExpression></Action></AfterConfirmRules>
 <TablesToUpdate>
 <TableToUpdate>
 <Table>
@@ -483,6 +469,10 @@
 <Description>Cadastro de locações.</Description></Table>
 <TableAction>insert</TableAction>
 <AttrisToUpdate>
+<Attribute>
+<AttriId>95</AttriId>
+<AttriName>LocTotValor</AttriName>
+<Description>Valor total da locação</Description></Attribute>
 <Attribute>
 <AttriId>87</AttriId>
 <AttriName>LocSituacao</AttriName>
@@ -514,6 +504,10 @@
 <Description>Cadastro de locações.</Description></Table>
 <TableAction>update</TableAction>
 <AttrisToUpdate>
+<Attribute>
+<AttriId>95</AttriId>
+<AttriName>LocTotValor</AttriName>
+<Description>Valor total da locação</Description></Attribute>
 <Attribute>
 <AttriId>87</AttriId>
 <AttriName>LocSituacao</AttriName>
@@ -618,18 +612,6 @@
 <Token>Enabled</Token></FormulaName>
 <FormulaExpression>
 <Token>0</Token>
-<Token>;</Token></FormulaExpression></Action>
-<Action>
-<ActionType>Formula</ActionType>
-<FormulaName>
-<Attribute>
-<AttriId>95</AttriId>
-<AttriName>LocTotValor</AttriName>
-<Description>Valor total da locação</Description></Attribute>
-<Token>.</Token>
-<Token>Enabled</Token></FormulaName>
-<FormulaExpression>
-<Token>0</Token>
 <Token>;</Token></FormulaExpression></Action></StandAloneRules>
 <BaseTableRule>
 <Action>
@@ -726,82 +708,6 @@
 <AttriName>LocMidMidSituacao</AttriName>
 <Description>Situação da mídia a ser locada</Description></Attribute></Into></Action>
 <Action>
-<ActionType>Formula</ActionType>
-<FormulaName>
-<Attribute>
-<AttriId>95</AttriId>
-<AttriName>LocTotValor</AttriName>
-<Description>Valor total da locação</Description></Attribute></FormulaName>
-<FormulaExpression>
-<Attribute>
-<AttriId>95</AttriId>
-<AttriName>LocTotValor</AttriName>
-<Description>Valor total da locação</Description></Attribute>
-<Token>.</Token>
-<Token>getoldvalue(</Token>
-<Token>)</Token>
-<Token>+</Token>
-<Attribute>
-<AttriId>109</AttriId>
-<AttriName>LocMidMidConfValor</AttriName>
-<Description>Valor da configuração da mídia a ser locada</Description></Attribute>
-<Token>IF</Token>
-<Token>insert</Token>
-<Token>;</Token>
-<Attribute>
-<AttriId>95</AttriId>
-<AttriName>LocTotValor</AttriName>
-<Description>Valor total da locação</Description></Attribute>
-<Token>.</Token>
-<Token>getoldvalue(</Token>
-<Token>)</Token>
-<Token>+</Token>
-<Attribute>
-<AttriId>109</AttriId>
-<AttriName>LocMidMidConfValor</AttriName>
-<Description>Valor da configuração da mídia a ser locada</Description></Attribute>
-<Token>-</Token>
-<Attribute>
-<AttriId>109</AttriId>
-<AttriName>LocMidMidConfValor</AttriName>
-<Description>Valor da configuração da mídia a ser locada</Description></Attribute>
-<Token>.</Token>
-<Token>getoldvalue(</Token>
-<Token>)</Token>
-<Token>IF</Token>
-<Token>update</Token>
-<Token>;</Token>
-<Attribute>
-<AttriId>95</AttriId>
-<AttriName>LocTotValor</AttriName>
-<Description>Valor total da locação</Description></Attribute>
-<Token>.</Token>
-<Token>getoldvalue(</Token>
-<Token>)</Token>
-<Token>-</Token>
-<Attribute>
-<AttriId>109</AttriId>
-<AttriName>LocMidMidConfValor</AttriName>
-<Description>Valor da configuração da mídia a ser locada</Description></Attribute>
-<Token>.</Token>
-<Token>getoldvalue(</Token>
-<Token>)</Token>
-<Token>IF</Token>
-<Token>delete</Token>
-<Token>;</Token></FormulaExpression></Action>
-<Action>
-<ActionType>Formula</ActionType>
-<FormulaName>
-<Variable>
-<VarId>Loctotvalor</VarId>
-<VarName>&amp;LocTotValor</VarName></Variable></FormulaName>
-<FormulaExpression>
-<Attribute>
-<AttriId>95</AttriId>
-<AttriName>LocTotValor</AttriName>
-<Description>Valor total da locação</Description></Attribute>
-<Token>;</Token></FormulaExpression></Action>
-<Action>
 <ActionType>BusinessRule</ActionType>
 <RuleType>ErrorRule</RuleType>
 <Expression>
@@ -810,7 +716,7 @@
 <Token>newline(</Token>
 <Token>)</Token>
 <Token>+</Token>
-<Token>'Favor, reportar a um funcionário!'</Token></Expression>
+<Token>'Favor, reportar a um gerente!'</Token></Expression>
 <Condition>
 <Token>after(</Token>
 <Attribute>
@@ -825,26 +731,7 @@
 <Description>Valor da configuração da mídia a ser locada</Description></Attribute>
 <Token>&lt;</Token>
 <Token>0</Token></Condition></Action></Rules>
-<BeforeConfirmRules>
-<After>bconfirm</After>
-<Action>
-<ActionType>BusinessRule</ActionType>
-<RuleType>ErrorRule</RuleType>
-<Expression>
-<Token>'Pelo menos uma mídia deve ser adicionada!'</Token></Expression>
-<Condition>
-<Variable>
-<VarId>Loctotvalor</VarId>
-<VarName>&amp;LocTotValor</VarName></Variable>
-<Token>=</Token>
-<Token>0</Token>
-<Token>or</Token>
-<Variable>
-<VarId>Loctotvalor</VarId>
-<VarName>&amp;LocTotValor</VarName></Variable>
-<Token>.</Token>
-<Token>isempty(</Token>
-<Token>)</Token></Condition></Action></BeforeConfirmRules>
+<BeforeConfirmRules></BeforeConfirmRules>
 <AfterConfirmRules></AfterConfirmRules>
 <TablesToUpdate>
 <TableToUpdate>

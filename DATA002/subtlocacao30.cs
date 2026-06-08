@@ -37,8 +37,6 @@ namespace GeneXus.Programs {
       private int LocMidCatCodigo ;
       private short LocMidMidSituacao ;
       private int LocMidMidLocCodigo ;
-      private decimal OLocMidMidConfValor ;
-      private decimal OOLocMidMidConfValor ;
       private int ZLocMidFilCodigo ;
       private String ZLocMidFilNome ;
       private int ZLocMidCatCodigo ;
@@ -135,26 +133,6 @@ namespace GeneXus.Programs {
          LocMidMidLocCodigo = value;
       }
 
-      public decimal getOLocMidMidConfValor( )
-      {
-         return OLocMidMidConfValor ;
-      }
-
-      public void setOLocMidMidConfValor( decimal value )
-      {
-         OLocMidMidConfValor = value;
-      }
-
-      public decimal getOOLocMidMidConfValor( )
-      {
-         return OOLocMidMidConfValor ;
-      }
-
-      public void setOOLocMidMidConfValor( decimal value )
-      {
-         OOLocMidMidConfValor = value;
-      }
-
       public int getZLocMidFilCodigo( )
       {
          return ZLocMidFilCodigo ;
@@ -225,8 +203,6 @@ namespace GeneXus.Programs {
          LocMidCatCodigo = 0 ;
          LocMidMidSituacao = 0 ;
          LocMidMidLocCodigo = 0 ;
-         OLocMidMidConfValor = 0M ;
-         OOLocMidMidConfValor = 0M ;
          ZLocMidFilCodigo = 0 ;
          ZLocMidFilNome = "" ;
          ZLocMidCatCodigo = 0 ;

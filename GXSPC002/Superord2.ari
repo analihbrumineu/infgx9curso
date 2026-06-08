@@ -5,17 +5,17 @@ dir_superordinates_i(2,2,[ [ 1,[ 13 ] ],[ 514,[ 46 ] ] ]).
 dir_superordinates_i(2,514,[ [ 8,[ 26 ] ] ]).
 dir_superordinates_i(2,11,[ [ 6,[ 32 ] ] ]).
 dir_superordinates_i(2,9,[ [ 519,[ 116 ] ],[ 3,[ 28 ] ] ]).
+dir_superordinates_i(2,12,[ [ 517,[ 91 ] ],[ 518,[ 93 ] ] ]).
+dir_superordinates_i(2,517,[ [ 8,[ 26 ] ] ]).
 dir_superordinates_i(2,8,[ [ 7,[ 24 ] ] ]).
 dir_superordinates_i(2,13,[ [ 520,[ 102 ] ],[ 12,[ 86 ] ] ]).
 dir_superordinates_i(2,520,[ [ 519,[ 116 ] ],[ 3,[ 28 ] ] ]).
-dir_superordinates_i(2,12,[ [ 517,[ 91 ] ],[ 518,[ 93 ] ] ]).
 dir_superordinates_i(2,10,[]).
 dir_superordinates_i(2,5,[ [ 516,[ 77 ] ],[ 3,[ 28 ] ] ]).
 dir_superordinates_i(2,4,[ [ 515,[ 79 ] ],[ 3,[ 28 ] ] ]).
 dir_superordinates_i(2,7,[]).
 dir_superordinates_i(2,515,[]).
 dir_superordinates_i(2,516,[]).
-dir_superordinates_i(2,517,[ [ 8,[ 26 ] ] ]).
 dir_superordinates_i(2,518,[ [ 8,[ 26 ] ] ]).
 dir_superordinates_i(2,519,[ [ 517,[ 91 ] ],[ 518,[ 93 ] ] ]).
  

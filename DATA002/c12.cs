@@ -2,7 +2,7 @@
                File: C12
         Description: Conversion for table LOCACAO
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 5/29/2026 11:18:11.57
+       Generated on: 6/5/2026 11:25:27.8
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -140,6 +140,7 @@ namespace GeneXus.Programs {
             A87LocSitu = C122_A87LocSitu[0] ;
             n87LocSitu = C122_n87LocSitu[0] ;
             A86LocCodi = C122_A86LocCodi[0] ;
+            GetLocTotValor( A86LocCodi) ;
             /*
                INSERT RECORD ON TABLE GXA0012
 
@@ -211,8 +212,19 @@ namespace GeneXus.Programs {
                AV8LocVenP = A93LocVenP ;
                nV8LocVenP = false ;
             }
+            if ( ((Convert.ToDecimal(0M)==A95LocTotV)) )
+            {
+               AV9LocTotV = (decimal)(0M) ;
+               nV9LocTotV = false ;
+               nV9LocTotV = true ;
+            }
+            else
+            {
+               AV9LocTotV = A95LocTotV ;
+               nV9LocTotV = false ;
+            }
             /* Using cursor C123 */
-            pr_default.execute(1, new Object[] {AV2LocCodi, nV3LocSitu, AV3LocSitu, nV4LocDatL, AV4LocDatL, nV5LocDatD, AV5LocDatD, nV6LocDatC, AV6LocDatC, nV7LocCliP, AV7LocCliP, nV8LocVenP, AV8LocVenP});
+            pr_default.execute(1, new Object[] {AV2LocCodi, nV3LocSitu, AV3LocSitu, nV4LocDatL, AV4LocDatL, nV5LocDatD, AV5LocDatD, nV6LocDatC, AV6LocDatC, nV7LocCliP, AV7LocCliP, nV8LocVenP, AV8LocVenP, nV9LocTotV, AV9LocTotV});
             pr_default.close(1);
             if ( (pr_default.getStatus(1) == 1) )
             {
@@ -240,6 +252,21 @@ namespace GeneXus.Programs {
       public override int getOutputType( )
       {
          return GxReportUtils.OUTPUT_RVIEWER_DLL ;
+      }
+
+      protected void GetLocTotValor( int A86LocCodi )
+      {
+         /* Create private dbobjects */
+         /* Navigation */
+         A95LocTotV = (decimal)(0M) ;
+         /* Using cursor C124 */
+         pr_default.execute(2, new Object[] {A86LocCodi});
+         while ( (pr_default.getStatus(2) != 101) && ( C124_A86LocCodi[0] == A86LocCodi ) )
+         {
+            A95LocTotV = (decimal)(A95LocTotV+C124_A109LocMid[0]) ;
+            pr_default.readNext(2);
+         }
+         pr_default.close(2);
       }
 
       protected void cleanup( )
@@ -300,7 +327,14 @@ namespace GeneXus.Programs {
          nV7LocCliP = false ;
          AV8LocVenP = 0 ;
          nV8LocVenP = false ;
+         A95LocTotV = (decimal)(0M) ;
+         AV9LocTotV = (decimal)(0M) ;
+         nV9LocTotV = false ;
          Gx_emsg = "" ;
+         C124_A86LocCodi = new int[1] ;
+         C124_A102LocMid = new int[1] ;
+         C124_A109LocMid = new decimal[1] ;
+         C124_n109LocMid = new bool[] {false} ;
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.c12__default(),
             new Object[][] {
                 new Object[] {
@@ -308,6 +342,9 @@ namespace GeneXus.Programs {
                C122_A87LocSitu, C122_n87LocSitu, C122_A86LocCodi
                }
                , new Object[] {
+               }
+               , new Object[] {
+               C124_A86LocCodi, C124_A102LocMid, C124_A109LocMid, C124_n109LocMid
                }
             }
          );
@@ -324,6 +361,8 @@ namespace GeneXus.Programs {
       private int AV2LocCodi ;
       private int AV7LocCliP ;
       private int AV8LocVenP ;
+      private decimal A95LocTotV ;
+      private decimal AV9LocTotV ;
       private String cmdBuffer ;
       private String scmdbuf ;
       private String Gx_emsg ;
@@ -345,6 +384,7 @@ namespace GeneXus.Programs {
       private bool nV6LocDatC ;
       private bool nV7LocCliP ;
       private bool nV8LocVenP ;
+      private bool nV9LocTotV ;
       private IGxDataStore dsDefault ;
       private GxCommand RGZ ;
       private IDataReader C122 ;
@@ -362,6 +402,11 @@ namespace GeneXus.Programs {
       private short[] C122_A87LocSitu ;
       private bool[] C122_n87LocSitu ;
       private int[] C122_A86LocCodi ;
+      private IDataReader C124 ;
+      private int[] C124_A86LocCodi ;
+      private int[] C124_A102LocMid ;
+      private decimal[] C124_A109LocMid ;
+      private bool[] C124_n109LocMid ;
    }
 
    public class c12__default : DataStoreHelperBase, IDataStoreHelper
@@ -372,6 +417,7 @@ namespace GeneXus.Programs {
          return new GeneXus.Data.NTier.ADO.Cursor[] {
           new GeneXus.Data.NTier.ADO.ForEachCursor(def[0])
          ,new GeneXus.Data.NTier.ADO.UpdateCursor(def[1])
+         ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[2])
        };
     }
 
@@ -391,11 +437,17 @@ namespace GeneXus.Programs {
           new Object[] {"@AV5LocDatD",SqlDbType.DateTime,8,0} ,
           new Object[] {"@AV6LocDatC",SqlDbType.DateTime,8,0} ,
           new Object[] {"@AV7LocCliP",SqlDbType.Int,9,0} ,
-          new Object[] {"@AV8LocVenP",SqlDbType.Int,9,0}
+          new Object[] {"@AV8LocVenP",SqlDbType.Int,9,0} ,
+          new Object[] {"@AV9LocTotV",SqlDbType.Decimal,12,2}
+          } ;
+          Object[] prmC124 ;
+          prmC124 = new Object[] {
+          new Object[] {"@LocCodigo",SqlDbType.Int,9,0}
           } ;
           def= new GeneXus.Data.NTier.ADO.CursorDef[] {
               new GeneXus.Data.NTier.ADO.CursorDef("C122", "SELECT [LocVenPesCodigo], [LocCliPesCodigo], [LocDatCancelamento], [LocDatDevolucao], [LocDatLocacao], [LocSituacao], [LocCodigo] FROM [LOCACAO] WITH (NOLOCK) ORDER BY [LocCodigo] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmC122,100,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("C123", "INSERT INTO [GXA0012] ([LocCodigo], [LocSituacao], [LocDatLocacao], [LocDatDevolucao], [LocDatCancelamento], [LocCliPesCodigo], [LocVenPesCodigo]) VALUES (@AV2LocCodi, @AV3LocSitu, @AV4LocDatL, @AV5LocDatD, @AV6LocDatC, @AV7LocCliP, @AV8LocVenP)", GxErrorMask.GX_NOMASK,prmC123)
+             ,new GeneXus.Data.NTier.ADO.CursorDef("C123", "INSERT INTO [GXA0012] ([LocCodigo], [LocSituacao], [LocDatLocacao], [LocDatDevolucao], [LocDatCancelamento], [LocCliPesCodigo], [LocVenPesCodigo], [LocTotValor]) VALUES (@AV2LocCodi, @AV3LocSitu, @AV4LocDatL, @AV5LocDatD, @AV6LocDatC, @AV7LocCliP, @AV8LocVenP, @AV9LocTotV)", GxErrorMask.GX_NOMASK,prmC123)
+             ,new GeneXus.Data.NTier.ADO.CursorDef("C124", "SELECT [LocCodigo], [LocMidMidCodigo], [LocMidMidConfValor] FROM [LOCACAOLOCACAOMIDIA] WITH (NOLOCK) WHERE [LocCodigo] = @LocCodigo ORDER BY [LocCodigo] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmC124,100,0,true,false )
           };
        }
     }
@@ -420,6 +472,12 @@ namespace GeneXus.Programs {
                 ((short[]) buf[10])[0] = rslt.getShort(6) ;
                 ((bool[]) buf[11])[0] = rslt.wasNull(6);
                 ((int[]) buf[12])[0] = rslt.getInt(7) ;
+                break;
+             case 2 :
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
+                ((int[]) buf[1])[0] = rslt.getInt(2) ;
+                ((decimal[]) buf[2])[0] = rslt.getDecimal(3) ;
+                ((bool[]) buf[3])[0] = rslt.wasNull(3);
                 break;
        }
     }
@@ -480,6 +538,17 @@ namespace GeneXus.Programs {
                 {
                    stmt.SetParameter(7, (int)parms[12]);
                 }
+                if ( (bool)parms[13] )
+                {
+                   stmt.setNull( 8 , SqlDbType.Decimal );
+                }
+                else
+                {
+                   stmt.SetParameter(8, (decimal)parms[14]);
+                }
+                break;
+             case 2 :
+                stmt.SetParameter(1, (int)parms[0]);
                 break;
        }
     }

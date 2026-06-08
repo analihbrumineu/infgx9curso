@@ -2,7 +2,7 @@
                File: ConsMidia
         Description: Consulta de mídias.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/3/2026 10:48:11.60
+       Generated on: 6/8/2026 9:5:19.55
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -661,10 +661,6 @@ namespace GeneXus.Programs {
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         edtavAstcodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 0 , 0 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV10AstCod" );
-         ((GXEdit) edtavAstcodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
-         edtavAstcodigo.addFocusListener(this);
-         edtavAstcodigo.getGXComponent().setHelpId("HLP_WConsMidia.htm");
          edtavMidcodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),52, 78, 104, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 52 , 78 , 104 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6MidCodi" );
          ((GXEdit) edtavMidcodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavMidcodigo.addFocusListener(this);
@@ -741,14 +737,13 @@ namespace GeneXus.Programs {
          lbllbl3 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 52 , 65 , 40 , 13 );
          lbllbl6 = UIFactory.getLabel(GXPanel1, "Tipo", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 169 , 65 , 26 , 13 );
          lbllbl4 = UIFactory.getLabel(GXPanel1, "Nome da mídia", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 247 , 65 , 86 , 13 );
-         lbllbl34 = UIFactory.getLabel(GXPanel1, "Estreia", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 52 , 104 , 40 , 13 );
-         lbllbl35 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 143 , 104 , 55 , 13 );
+         lbllbl33 = UIFactory.getLabel(GXPanel1, "Estreia", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 52 , 104 , 40 , 13 );
+         lbllbl34 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 143 , 104 , 55 , 13 );
          lbllbl22 = UIFactory.getLabel(GXPanel1, "Código do ator", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 52 , 143 , 84 , 13 );
          lbllbl23 = UIFactory.getLabel(GXPanel1, "Nome do ator", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 169 , 143 , 77 , 13 );
          lbllbl29 = UIFactory.getLabel(GXPanel1, "Código do diretor", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 52 , 182 , 98 , 13 );
          lbllbl30 = UIFactory.getLabel(GXPanel1, "Nome do diretor", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 169 , 182 , 91 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
-                   edtavAstcodigo ,
                    edtavMidcodigo ,
                    cmbavMidtipo ,
                    edtavFilnome ,
@@ -819,7 +814,6 @@ namespace GeneXus.Programs {
          edtavFildirnome.setValue( AV18FilDir );
          edtavFildata.setValue( AV44FilDat );
          edtavCatnome.setValue( AV45CatNom );
-         edtavAstcodigo.setValue( AV10AstCod );
       }
 
       public override void ControlsToVariables( )
@@ -847,8 +841,6 @@ namespace GeneXus.Programs {
          edtavFildata.setValue(AV44FilDat);
          AV45CatNom = (String)(edtavCatnome.getValue()) ;
          edtavCatnome.setValue(AV45CatNom);
-         AV10AstCod = (int)(edtavAstcodigo.getValue()) ;
-         edtavAstcodigo.setValue(AV10AstCod);
       }
 
       protected void eventNoLevelContext( )
@@ -943,10 +935,6 @@ namespace GeneXus.Programs {
             setGXCursor( edtavCatnome.getGXCursor() );
             return;
          }
-         if ( edtavAstcodigo.isEventSource(eventSource) ) {
-            setGXCursor( edtavAstcodigo.getGXCursor() );
-            return;
-         }
       }
 
       public override void gotFocusEventDispatch( Object eventSource )
@@ -1002,10 +990,6 @@ namespace GeneXus.Programs {
          }
          if ( edtavCatnome.isEventSource(eventSource) ) {
             AV45CatNom = edtavCatnome.getValue() ;
-            return;
-         }
-         if ( edtavAstcodigo.isEventSource(eventSource) ) {
-            AV10AstCod = edtavAstcodigo.getValue() ;
             return;
          }
       }
@@ -1163,7 +1147,6 @@ namespace GeneXus.Programs {
          W000N6_n80FilDirN = new bool[] {false} ;
          W000N6_A79FilDirC = new int[1] ;
          n80FilDirN = false ;
-         AV10AstCod = 0 ;
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.wconsmidia__default(),
             new Object[][] {
                 new Object[] {
@@ -1208,7 +1191,6 @@ namespace GeneXus.Programs {
       protected int A77FilAtoC ;
       protected int AV19FilAto ;
       protected int A79FilDirC ;
-      protected int AV10AstCod ;
       protected decimal A85ConfTip ;
       protected decimal AV35LocMid ;
       protected String scmdbuf ;
@@ -1282,7 +1264,6 @@ namespace GeneXus.Programs {
       protected bool[] W000N6_n80FilDirN ;
       protected int[] W000N6_A79FilDirC ;
       protected GXPanel GXPanel1 ;
-      protected GUIObjectInt edtavAstcodigo ;
       protected GUIObjectInt edtavMidcodigo ;
       protected GUIObjectShort cmbavMidtipo ;
       protected GUIObjectString edtavFilnome ;
@@ -1298,8 +1279,8 @@ namespace GeneXus.Programs {
       protected ILabel lbllbl3 ;
       protected ILabel lbllbl6 ;
       protected ILabel lbllbl4 ;
+      protected ILabel lbllbl33 ;
       protected ILabel lbllbl34 ;
-      protected ILabel lbllbl35 ;
       protected ILabel lbllbl22 ;
       protected ILabel lbllbl23 ;
       protected ILabel lbllbl29 ;

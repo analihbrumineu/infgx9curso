@@ -114,65 +114,68 @@ break_i(2,nvg,1,[],[ [],[],[] ]).
  
 b_group_i(2,1,lit,0,1,0).
  
-b_line_i(0,2,1,cmd,0,[ t('',146,0,0),t([ t('Menubar',3,0,6),t('Id_astros',3,0,14) ],29,0,14) ]).
-b_line_i(1,2,1,cmd,0,[ t('',104,0,0),t(o(4,'PeAstro'),28,0,4) ]).
-b_line_i(2,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(4,2,1,cmd,0,[ t('',146,0,0),t([ t('Menubar',3,4,6),t('Id_categorias',3,4,14) ],29,4,14) ]).
-b_line_i(5,2,1,cmd,0,[ t('',104,0,0),t(o(4,'PeCategoria'),28,0,4) ]).
-b_line_i(6,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(8,2,1,cmd,0,[ t('',146,0,0),t([ t('Menubar',3,8,6),t('Id_cidades',3,8,14) ],29,8,14) ]).
-b_line_i(9,2,1,cmd,0,[ t('',104,0,0),t(o(4,'PeCidade'),28,0,4) ]).
-b_line_i(10,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(12,2,1,cmd,0,[ t('',146,0,0),t([ t('Menubar',3,12,6),t('Id_clientes',3,12,14) ],29,12,14) ]).
-b_line_i(13,2,1,cmd,0,[ t('',104,0,0),t(o(4,'PeCliente'),28,0,4) ]).
-b_line_i(14,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(16,2,1,cmd,0,[ t('',146,0,0),t([ t('Menubar',3,16,6),t('Id_estados',3,16,14) ],29,16,14) ]).
-b_line_i(17,2,1,cmd,0,[ t('',104,0,0),t(o(4,'PeEstado'),28,0,4) ]).
-b_line_i(18,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(20,2,1,cmd,0,[ t('',146,0,0),t([ t('Menubar',3,20,6),t('Id_filmes',3,20,14) ],29,20,14) ]).
-b_line_i(21,2,1,cmd,0,[ t('',104,0,0),t(o(1,'RetFunLogDados'),28,0,4),t('Funcionario',23,0,25) ]).
-b_line_i(23,2,1,cmd,0,[ t('',109,0,0),t([ t('Funcionario',23,23,7),t('Pesfuncargo',3,23,20) ],29,23,20),t(<>,10,0,32),t('1',3,0,35) ]).
-b_line_i(24,2,1,cmd,0,[ t('',141,0,0),t('''Apenas gerentes podem acessar este menu!''',3,24,12),t(')',4,0,54) ]).
-b_line_i(25,2,1,cmd,0,[ t('',110,0,0) ]).
-b_line_i(26,2,1,cmd,0,[ t('',104,0,0),t(o(4,'PeFilme'),28,0,8) ]).
-b_line_i(27,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(29,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(31,2,1,cmd,0,[ t('',146,0,0),t([ t('Menubar',3,31,6),t('Id_funcionarios',3,31,14) ],29,31,14) ]).
-b_line_i(32,2,1,cmd,0,[ t('',104,0,0),t(o(1,'RetFunLogDados'),28,0,4),t('Funcionario',23,0,25) ]).
-b_line_i(34,2,1,cmd,0,[ t('',109,0,0),t([ t('Funcionario',23,34,7),t('Pesfuncargo',3,34,20) ],29,34,20),t(<>,10,0,32),t('1',3,0,35) ]).
-b_line_i(35,2,1,cmd,0,[ t('',141,0,0),t('''Apenas gerentes podem acessar este menu!''',3,35,12),t(')',4,0,54) ]).
-b_line_i(36,2,1,cmd,0,[ t('',110,0,0) ]).
-b_line_i(37,2,1,cmd,0,[ t('',104,0,0),t(o(4,'PeFuncionario'),28,0,8) ]).
-b_line_i(38,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(40,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(42,2,1,cmd,0,[ t('',146,0,0),t([ t('Menubar',3,42,6),t('Id_mov',3,42,14) ],29,42,14) ]).
-b_line_i(43,2,1,cmd,0,[ t('',104,0,0),t(o(4,'PeLocacao'),28,0,4) ]).
-b_line_i(44,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(46,2,1,cmd,0,[ t('',146,0,0),t([ t('Menubar',3,46,6),t('Id_midias',3,46,14) ],29,46,14) ]).
-b_line_i(47,2,1,cmd,0,[ t('',104,0,0),t(o(1,'RetFunLogDados'),28,0,4),t('Funcionario',23,0,25) ]).
-b_line_i(49,2,1,cmd,0,[ t('',109,0,0),t([ t('Funcionario',23,49,7),t('Pesfuncargo',3,49,20) ],29,49,20),t(<>,10,0,32),t('1',3,0,35) ]).
-b_line_i(50,2,1,cmd,0,[ t('',141,0,0),t('''Apenas gerentes podem acessar este menu!''',3,50,12),t(')',4,0,54) ]).
-b_line_i(51,2,1,cmd,0,[ t('',110,0,0) ]).
-b_line_i(52,2,1,cmd,0,[ t('',104,0,0),t(o(4,'PeMidia'),28,0,8) ]).
-b_line_i(53,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(55,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(57,2,1,cmd,0,[ t('',146,0,0),t([ t('Menubar',3,57,6),t('Id_fil_p_categoria',3,57,14) ],29,57,14) ]).
-b_line_i(58,2,1,cmd,0,[ t('',104,0,0),t(o(4,'RelFilPorCategoria'),28,0,4) ]).
-b_line_i(59,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(61,2,1,cmd,0,[ t('',146,0,0),t([ t('Menubar',3,61,6),t('Id_cli_c_dependente',3,61,14) ],29,61,14) ]).
-b_line_i(62,2,1,cmd,0,[ t('',104,0,0),t(o(4,'RelCliComDependente'),28,0,4) ]).
-b_line_i(63,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(65,2,1,cmd,0,[ t('',146,0,0),t([ t('Menubar',3,65,6),t('Id_tot_mid_p_cat',3,65,14) ],29,65,14) ]).
-b_line_i(66,2,1,cmd,0,[ t('',104,0,0),t(o(4,'RelMid'),28,0,4) ]).
-b_line_i(67,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(69,2,1,cmd,0,[ t('',146,0,0),t([ t('Menubar',3,69,6),t('Id_precos',3,69,14) ],29,69,14) ]).
-b_line_i(70,2,1,cmd,0,[ t('',104,0,0),t(o(1,'RetFunLogDados'),28,0,4),t('Funcionario',23,0,25) ]).
-b_line_i(72,2,1,cmd,0,[ t('',109,0,0),t([ t('Funcionario',23,72,7),t('Pesfuncargo',3,72,20) ],29,72,20),t(<>,10,0,32),t('1',3,0,35) ]).
-b_line_i(73,2,1,cmd,0,[ t('',141,0,0),t('''Apenas gerentes podem acessar este menu!''',3,73,12),t(')',4,0,54) ]).
-b_line_i(74,2,1,cmd,0,[ t('',110,0,0) ]).
-b_line_i(75,2,1,cmd,0,[ t('',104,0,0),t(o(4,'ConfTipMidia'),28,0,8) ]).
-b_line_i(76,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(78,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(2,2,1,cmd,2,[ t('',146,2,0),t([ t('Menubar',3,2,6),t('Id_astros',3,2,14) ],29,2,14) ]).
+b_line_i(3,2,1,cmd,2,[ t('',104,2,0),t(o(4,'PeAstro'),28,2,4) ]).
+b_line_i(4,2,1,cmd,2,[ t('',147,2,0) ]).
+b_line_i(6,2,1,cmd,2,[ t('',146,2,0),t([ t('Menubar',3,6,6),t('Id_categorias',3,6,14) ],29,6,14) ]).
+b_line_i(7,2,1,cmd,2,[ t('',104,2,0),t(o(4,'PeCategoria'),28,2,4) ]).
+b_line_i(8,2,1,cmd,2,[ t('',147,2,0) ]).
+b_line_i(10,2,1,cmd,2,[ t('',146,2,0),t([ t('Menubar',3,10,6),t('Id_cidades',3,10,14) ],29,10,14) ]).
+b_line_i(11,2,1,cmd,2,[ t('',104,2,0),t(o(4,'PeCidade'),28,2,4) ]).
+b_line_i(12,2,1,cmd,2,[ t('',147,2,0) ]).
+b_line_i(14,2,1,cmd,2,[ t('',146,2,0),t([ t('Menubar',3,14,6),t('Id_clientes',3,14,14) ],29,14,14) ]).
+b_line_i(15,2,1,cmd,2,[ t('',104,2,0),t(o(4,'PeCliente'),28,2,4) ]).
+b_line_i(16,2,1,cmd,2,[ t('',147,2,0) ]).
+b_line_i(18,2,1,cmd,2,[ t('',146,2,0),t([ t('Menubar',3,18,6),t('Id_estados',3,18,14) ],29,18,14) ]).
+b_line_i(19,2,1,cmd,2,[ t('',104,2,0),t(o(4,'PeEstado'),28,2,4) ]).
+b_line_i(20,2,1,cmd,2,[ t('',147,2,0) ]).
+b_line_i(22,2,1,cmd,2,[ t('',146,2,0),t([ t('Menubar',3,22,6),t('Id_filmes',3,22,14) ],29,22,14) ]).
+b_line_i(23,2,1,cmd,2,[ t('',104,2,0),t(o(1,'RetFunLogDados'),28,2,4),t('Funcionario',23,2,25) ]).
+b_line_i(25,2,1,cmd,2,[ t('',109,2,0),t([ t('Funcionario',23,25,7),t('Pesfuncargo',3,25,20) ],29,25,20),t(<>,10,2,32),t('1',3,2,35) ]).
+b_line_i(26,2,1,cmd,2,[ t('',141,2,0),t('''Apenas gerentes podem acessar este menu!''',3,26,12),t(')',4,2,54) ]).
+b_line_i(27,2,1,cmd,2,[ t('',110,2,0) ]).
+b_line_i(28,2,1,cmd,2,[ t('',104,2,0),t(o(4,'PeFilme'),28,2,8) ]).
+b_line_i(29,2,1,cmd,2,[ t('',111,2,0) ]).
+b_line_i(31,2,1,cmd,2,[ t('',147,2,0) ]).
+b_line_i(33,2,1,cmd,2,[ t('',146,2,0),t([ t('Menubar',3,33,6),t('Id_funcionarios',3,33,14) ],29,33,14) ]).
+b_line_i(34,2,1,cmd,2,[ t('',104,2,0),t(o(1,'RetFunLogDados'),28,2,4),t('Funcionario',23,2,25) ]).
+b_line_i(36,2,1,cmd,2,[ t('',109,2,0),t([ t('Funcionario',23,36,7),t('Pesfuncargo',3,36,20) ],29,36,20),t(<>,10,2,32),t('1',3,2,35) ]).
+b_line_i(37,2,1,cmd,2,[ t('',141,2,0),t('''Apenas gerentes podem acessar este menu!''',3,37,12),t(')',4,2,54) ]).
+b_line_i(38,2,1,cmd,2,[ t('',110,2,0) ]).
+b_line_i(39,2,1,cmd,2,[ t('',104,2,0),t(o(4,'PeFuncionario'),28,2,8) ]).
+b_line_i(40,2,1,cmd,2,[ t('',111,2,0) ]).
+b_line_i(42,2,1,cmd,2,[ t('',147,2,0) ]).
+b_line_i(44,2,1,cmd,2,[ t('',146,2,0),t([ t('Menubar',3,44,6),t('Id_midias',3,44,14) ],29,44,14) ]).
+b_line_i(45,2,1,cmd,2,[ t('',104,2,0),t(o(1,'RetFunLogDados'),28,2,4),t('Funcionario',23,2,25) ]).
+b_line_i(47,2,1,cmd,2,[ t('',109,2,0),t([ t('Funcionario',23,47,7),t('Pesfuncargo',3,47,20) ],29,47,20),t(<>,10,2,32),t('1',3,2,35) ]).
+b_line_i(48,2,1,cmd,2,[ t('',141,2,0),t('''Apenas gerentes podem acessar este menu!''',3,48,12),t(')',4,2,54) ]).
+b_line_i(49,2,1,cmd,2,[ t('',110,2,0) ]).
+b_line_i(50,2,1,cmd,2,[ t('',104,2,0),t(o(4,'PeMidia'),28,2,8) ]).
+b_line_i(51,2,1,cmd,2,[ t('',111,2,0) ]).
+b_line_i(53,2,1,cmd,2,[ t('',147,2,0) ]).
+b_line_i(59,2,1,cmd,2,[ t('',146,2,0),t([ t('Menubar',3,59,6),t('Id_mov',3,59,14) ],29,59,14) ]).
+b_line_i(60,2,1,cmd,2,[ t('',104,2,0),t(o(4,'PeLocacao'),28,2,4) ]).
+b_line_i(61,2,1,cmd,2,[ t('',147,2,0) ]).
+b_line_i(63,2,1,cmd,2,[ t('',146,2,0),t([ t('Menubar',3,63,6),t('Id_precos',3,63,14) ],29,63,14) ]).
+b_line_i(64,2,1,cmd,2,[ t('',104,2,0),t(o(1,'RetFunLogDados'),28,2,4),t('Funcionario',23,2,25) ]).
+b_line_i(66,2,1,cmd,2,[ t('',109,2,0),t([ t('Funcionario',23,66,7),t('Pesfuncargo',3,66,20) ],29,66,20),t(<>,10,2,32),t('1',3,2,35) ]).
+b_line_i(67,2,1,cmd,2,[ t('',141,2,0),t('''Apenas gerentes podem acessar este menu!''',3,67,12),t(')',4,2,54) ]).
+b_line_i(68,2,1,cmd,2,[ t('',110,2,0) ]).
+b_line_i(69,2,1,cmd,2,[ t('',104,2,0),t(o(4,'ConfTipMidia'),28,2,8) ]).
+b_line_i(70,2,1,cmd,2,[ t('',111,2,0) ]).
+b_line_i(72,2,1,cmd,2,[ t('',147,2,0) ]).
+b_line_i(78,2,1,cmd,2,[ t('',146,2,0),t([ t('Menubar',3,78,6),t('Id_fil_p_categoria',3,78,14) ],29,78,14) ]).
+b_line_i(79,2,1,cmd,2,[ t('',104,2,0),t(o(4,'RelFilPorCategoria'),28,2,4) ]).
+b_line_i(80,2,1,cmd,2,[ t('',147,2,0) ]).
+b_line_i(82,2,1,cmd,2,[ t('',146,2,0),t([ t('Menubar',3,82,6),t('Id_cli_c_dependente',3,82,14) ],29,82,14) ]).
+b_line_i(83,2,1,cmd,2,[ t('',104,2,0),t(o(4,'RelCliComDependente'),28,2,4) ]).
+b_line_i(84,2,1,cmd,2,[ t('',147,2,0) ]).
+b_line_i(86,2,1,cmd,2,[ t('',146,2,0),t([ t('Menubar',3,86,6),t('Id_tot_mid_p_cat',3,86,14) ],29,86,14) ]).
+b_line_i(87,2,1,cmd,2,[ t('',104,2,0),t(o(4,'RelMid'),28,2,4) ]).
+b_line_i(88,2,1,cmd,2,[ t('',147,2,0) ]).
+b_line_i(90,2,1,cmd,2,[ t('',146,2,0),t([ t('Menubar',3,90,6),t('Id_topdelista',3,90,14) ],29,90,14) ]).
+b_line_i(91,2,1,cmd,2,[ t('',104,2,0),t(o(4,'RelTopDeLista'),28,2,4) ]).
+b_line_i(92,2,1,cmd,2,[ t('',147,2,0) ]).
  
  
  
@@ -196,8 +199,9 @@ menu_i(14,1,m,'Id_relatorio','Relatório',[ popup ]).
 menu_i(15,14,m,'Id_fil_p_categoria','Total de filmes por categoria',[]).
 menu_i(16,14,m,'Id_cli_c_dependente','Clientes com dependentes',[]).
 menu_i(17,14,m,'Id_tot_mid_p_cat','Total de mídias por categoria',[]).
-menu_i(18,0,t,'','',[ popup ]).
-menu_i(19,18,t,'H','',[ disabled ]).
+menu_i(18,14,m,'Id_topdelista','Topo de lista',[]).
+menu_i(19,0,t,'','',[ popup ]).
+menu_i(20,19,t,'H','',[ disabled ]).
  
  
  
@@ -290,12 +294,13 @@ struct_dt_elem_i([ 26,3,0 ],4,pic,'@!').
 struct_dt_elem_i([ 26,3,0 ],6,pic,'@!').
  
  
-pgm_parm_i(scr,66,'WCONFTIPMIDIA',[],[]).
+pgm_parm_i(scr,94,'WRELTOPDELISTA',[],[]).
 pgm_parm_i(scr,65,'WRELMID',[],[]).
 pgm_parm_i(scr,64,'WRELCLICOMDEPENDENTE',[],[]).
 pgm_parm_i(scr,62,'WRELFILPORCATEGORIA',[],[]).
-pgm_parm_i(scr,14,'WPEMIDIA',[],[]).
+pgm_parm_i(scr,66,'WCONFTIPMIDIA',[],[]).
 pgm_parm_i(scr,78,'WPELOCACAO',[],[]).
+pgm_parm_i(scr,14,'WPEMIDIA',[],[]).
 pgm_parm_i(scr,56,'WPEFUNCIONARIO',[],[]).
 pgm_parm_i(scr,13,'WPEFILME',[],[]).
 pgm_parm_i(proc,14,'PRETFUNLOGDADOS',[ [ o('SDTFuncionario'),0,0,0 ] ],[ [ 'Funcionario',out,[] ] ]).

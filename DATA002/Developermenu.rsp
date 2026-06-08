@@ -101,8 +101,9 @@ subwgx00d120.cs
 wgx0090.cs
 subwgx009016.cs
 wmovdocliente.cs
-subwmovdocliente07.cs
+subwmovdocliente06.cs
 bmenuprincipal.cs
+wreltopdelista.cs
 pverpesfunlogin.cs
 pvalpesfunlogin.cs
 pvercidcodigo.cs
@@ -116,3 +117,4 @@ rrelfilporcategoria.cs
 rrelclicomdependente.cs
 rrelmidporcategoria.cs
 rrelmidporcatfilme.cs
+rreltopdelisdevporcliente.cs

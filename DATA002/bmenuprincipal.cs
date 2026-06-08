@@ -55,6 +55,7 @@ namespace GeneXus.Programs {
          addMenuItem( menu14 , "Total de filmes por categoria" , "id_fil_p_categoria" , "" , 0 , false , true , false , 0 );
          addMenuItem( menu14 , "Clientes com dependentes" , "id_cli_c_dependente" , "" , 0 , false , true , false , 0 );
          addMenuItem( menu14 , "Total de mídias por categoria" , "id_tot_mid_p_cat" , "" , 0 , false , true , false , 0 );
+         addMenuItem( menu14 , "Topo de lista" , "id_topdelista" , "" , 0 , false , true , false , 0 );
          addToolBarButton( "" , "h" , "" , false , false );
       }
 
@@ -95,34 +96,39 @@ namespace GeneXus.Programs {
             E17011 ();
             return true;
          }
-         if ( ( String.CompareOrdinal(action.TrimEnd(' '), "id_mov".TrimEnd(' ') ) == 0 ) )
+         if ( ( String.CompareOrdinal(action.TrimEnd(' '), "id_midias".TrimEnd(' ') ) == 0 ) )
          {
             E18011 ();
             return true;
          }
-         if ( ( String.CompareOrdinal(action.TrimEnd(' '), "id_midias".TrimEnd(' ') ) == 0 ) )
+         if ( ( String.CompareOrdinal(action.TrimEnd(' '), "id_mov".TrimEnd(' ') ) == 0 ) )
          {
             E19011 ();
             return true;
          }
-         if ( ( String.CompareOrdinal(action.TrimEnd(' '), "id_fil_p_categoria".TrimEnd(' ') ) == 0 ) )
+         if ( ( String.CompareOrdinal(action.TrimEnd(' '), "id_precos".TrimEnd(' ') ) == 0 ) )
          {
             E20011 ();
             return true;
          }
-         if ( ( String.CompareOrdinal(action.TrimEnd(' '), "id_cli_c_dependente".TrimEnd(' ') ) == 0 ) )
+         if ( ( String.CompareOrdinal(action.TrimEnd(' '), "id_fil_p_categoria".TrimEnd(' ') ) == 0 ) )
          {
             E21011 ();
             return true;
          }
-         if ( ( String.CompareOrdinal(action.TrimEnd(' '), "id_tot_mid_p_cat".TrimEnd(' ') ) == 0 ) )
+         if ( ( String.CompareOrdinal(action.TrimEnd(' '), "id_cli_c_dependente".TrimEnd(' ') ) == 0 ) )
          {
             E22011 ();
             return true;
          }
-         if ( ( String.CompareOrdinal(action.TrimEnd(' '), "id_precos".TrimEnd(' ') ) == 0 ) )
+         if ( ( String.CompareOrdinal(action.TrimEnd(' '), "id_tot_mid_p_cat".TrimEnd(' ') ) == 0 ) )
          {
             E23011 ();
+            return true;
+         }
+         if ( ( String.CompareOrdinal(action.TrimEnd(' '), "id_topdelista".TrimEnd(' ') ) == 0 ) )
+         {
+            E24011 ();
             return true;
          }
          return false;
@@ -188,12 +194,6 @@ namespace GeneXus.Programs {
 
       protected void E18011( )
       {
-         /* Menubar_Id_mov Routine */
-         new wpelocacao(context, remoteHandle, jContext ).execute( ) ;
-      }
-
-      protected void E19011( )
-      {
          /* Menubar_Id_midias Routine */
          new pretfunlogdados(context, remoteHandle, jContext ).execute( out  AV1Funcion) ;
          if ( ( AV1Funcion.gxTpr_Pesfuncargo != 1 ) )
@@ -206,25 +206,13 @@ namespace GeneXus.Programs {
          }
       }
 
+      protected void E19011( )
+      {
+         /* Menubar_Id_mov Routine */
+         new wpelocacao(context, remoteHandle, jContext ).execute( ) ;
+      }
+
       protected void E20011( )
-      {
-         /* Menubar_Id_fil_p_categoria Routine */
-         new wrelfilporcategoria(context, remoteHandle, jContext ).execute( ) ;
-      }
-
-      protected void E21011( )
-      {
-         /* Menubar_Id_cli_c_dependente Routine */
-         new wrelclicomdependente(context, remoteHandle, jContext ).execute( ) ;
-      }
-
-      protected void E22011( )
-      {
-         /* Menubar_Id_tot_mid_p_cat Routine */
-         new wrelmid(context, remoteHandle, jContext ).execute( ) ;
-      }
-
-      protected void E23011( )
       {
          /* Menubar_Id_precos Routine */
          new pretfunlogdados(context, remoteHandle, jContext ).execute( out  AV1Funcion) ;
@@ -236,6 +224,30 @@ namespace GeneXus.Programs {
          {
             new wconftipmidia(context, remoteHandle, jContext ).execute( ) ;
          }
+      }
+
+      protected void E21011( )
+      {
+         /* Menubar_Id_fil_p_categoria Routine */
+         new wrelfilporcategoria(context, remoteHandle, jContext ).execute( ) ;
+      }
+
+      protected void E22011( )
+      {
+         /* Menubar_Id_cli_c_dependente Routine */
+         new wrelclicomdependente(context, remoteHandle, jContext ).execute( ) ;
+      }
+
+      protected void E23011( )
+      {
+         /* Menubar_Id_tot_mid_p_cat Routine */
+         new wrelmid(context, remoteHandle, jContext ).execute( ) ;
+      }
+
+      protected void E24011( )
+      {
+         /* Menubar_Id_topdelista Routine */
+         new wreltopdelista(context, remoteHandle, jContext ).execute( ) ;
       }
 
       public override void initialize( )

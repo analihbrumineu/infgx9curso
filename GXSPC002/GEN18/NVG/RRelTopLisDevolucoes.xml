@@ -1,0 +1,21 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>2</ObjCls>
+<ObjId>24</ObjId>
+<ObjName>RelTopLisDevolucoes</ObjName>
+<ObjDesc>Relatório do total de devoluções.</ObjDesc>
+<ObjPgmName>RRelTopLisDevolucoes</ObjPgmName>
+<ObjClsName>Report</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<OutputDevices>
+<Device>None</Device></OutputDevices>
+<Generator>
+<GenId>18</GenId>
+<GenName>.NET - Win</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters></Parameters>
+<Levels></Levels></ObjectSpec>

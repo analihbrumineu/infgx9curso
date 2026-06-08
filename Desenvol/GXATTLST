@@ -1,27 +1,23 @@
 
 <AttriList>
 <Attribute>
-  <AttriName>PesCodigo</AttriName>
-  <AttriShortName>PesCodigo</AttriShortName>
-  <AttriId>13</AttriId>
-  <AttriDesc>Código da pessoa</AttriDesc>
-  <Type>N</Type>
-  <TypeStr>N(9)</TypeStr>
-  <Length>9</Length>
-  <Decimals>0</Decimals>
-  <Picture>ZZZZZZZZ9</Picture>
+  <AttriName>LocDatDevolucao</AttriName>
+  <AttriShortName>LocDatDevolucao</AttriShortName>
+  <AttriId>89</AttriId>
+  <AttriDesc>Data da devolução</AttriDesc>
+  <Type>D</Type>
+  <TypeStr>D(8)</TypeStr>
+  <Picture>99/99/9999</Picture>
   <Domain>
     <Attribute>
-      <AttriName>Codigo</AttriName>
-      <AttriShortName>Codigo</AttriShortName>
-      <AttriId>2</AttriId>
-      <AttriDesc>Código</AttriDesc>
+      <AttriName>Data</AttriName>
+      <AttriShortName>Data</AttriShortName>
+      <AttriId>6</AttriId>
+      <AttriDesc>Data</AttriDesc>
       <AttriIsDomain/>
-      <Type>N</Type>
-      <TypeStr>N(9)</TypeStr>
-      <Length>9</Length>
-      <Decimals>0</Decimals>
-      <Picture>ZZZZZZZZ9</Picture>
+      <Type>D</Type>
+      <TypeStr>D(8)</TypeStr>
+      <Picture>99/99/9999</Picture>
     </Attribute>
   </Domain>
 </Attribute>
@@ -67,57 +63,25 @@ Sorted: Yes
          <ObjXRef>
 <Object>
   <ObjCls>7</ObjCls>
-  <ObjId>1</ObjId>
-  <ObjName>Cliente</ObjName>
-  <ObjShortName>Cliente</ObjShortName>
-  <ObjTitle>Cadastro de clientes.</ObjTitle>
+  <ObjId>12</ObjId>
+  <ObjName>Locacao</ObjName>
+  <ObjShortName>Locacao</ObjShortName>
+  <ObjTitle>Cadastro de locações.</ObjTitle>
 </Object>
 
             <ObjXRefParts>
-               <ObjPart>Composition (Key)</ObjPart>
-               <ObjPart>System Index</ObjPart>
+               <ObjPart>Composition</ObjPart>
             </ObjXRefParts>
             <Flags>
-               <TblAttKey></TblAttKey>
-            </Flags>
-         </ObjXRef>
-         <ObjXRef>
-<Object>
-  <ObjCls>7</ObjCls>
-  <ObjId>2</ObjId>
-  <ObjName>ClienteDependente</ObjName>
-  <ObjShortName>ClienteDependente</ObjShortName>
-  <ObjTitle>Dependente</ObjTitle>
-</Object>
-
-            <ObjXRefParts>
-               <ObjPart>Composition (Key)</ObjPart>
-               <ObjPart>System Index</ObjPart>
-            </ObjXRefParts>
-            <Flags>
-               <TblAttKey></TblAttKey>
             </Flags>
          </ObjXRef>
          <ObjXRef>
 <Object>
   <ObjCls>0</ObjCls>
-  <ObjId>1</ObjId>
-  <ObjName>Cliente</ObjName>
-  <ObjShortName>Cliente</ObjShortName>
-  <ObjTitle>Cadastro de clientes.</ObjTitle>
-</Object>
-
-            <ObjXRefParts>
-               <ObjPart>Structure</ObjPart>
-            </ObjXRefParts>
-         </ObjXRef>
-         <ObjXRef>
-<Object>
-  <ObjCls>0</ObjCls>
-  <ObjId>7</ObjId>
-  <ObjName>Funcionario</ObjName>
-  <ObjShortName>Funcionario</ObjShortName>
-  <ObjTitle>Cadastro de funcionários.</ObjTitle>
+  <ObjId>11</ObjId>
+  <ObjName>Locacao</ObjName>
+  <ObjShortName>Locacao</ObjShortName>
+  <ObjTitle>Cadastro de locações.</ObjTitle>
 </Object>
 
             <ObjXRefParts>
@@ -129,72 +93,24 @@ Sorted: Yes
          <ObjXRef>
 <Object>
   <ObjCls>0</ObjCls>
-  <ObjId>1</ObjId>
-  <ObjName>Cliente</ObjName>
-  <ObjShortName>Cliente</ObjShortName>
-  <ObjTitle>Cadastro de clientes.</ObjTitle>
-</Object>
-
-            <ObjXRefParts>
-               <ObjPart>Rules</ObjPart>
-               <ObjPart>Events</ObjPart>
-               <ObjPart>Form</ObjPart>
-               <ObjPart>Parm rule</ObjPart>
-            </ObjXRefParts>
-         </ObjXRef>
-         <ObjXRef>
-<Object>
-  <ObjCls>0</ObjCls>
-  <ObjId>7</ObjId>
-  <ObjName>Funcionario</ObjName>
-  <ObjShortName>Funcionario</ObjShortName>
-  <ObjTitle>Cadastro de funcionários.</ObjTitle>
+  <ObjId>11</ObjId>
+  <ObjName>Locacao</ObjName>
+  <ObjShortName>Locacao</ObjShortName>
+  <ObjTitle>Cadastro de locações.</ObjTitle>
 </Object>
 
             <ObjXRefParts>
                <ObjPart>Rules</ObjPart>
                <ObjPart>Form</ObjPart>
-               <ObjPart>Variable</ObjPart>
-               <ObjPart>Parm rule</ObjPart>
             </ObjXRefParts>
          </ObjXRef>
          <ObjXRef>
 <Object>
   <ObjCls>1</ObjCls>
-  <ObjId>2</ObjId>
-  <ObjName>VerPesFunLogin</ObjName>
-  <ObjShortName>VerPesFunLogin</ObjShortName>
-  <ObjTitle>Verificar login do funcionário.</ObjTitle>
-</Object>
-
-            <ObjXRefParts>
-               <ObjPart>Subroutine</ObjPart>
-               <ObjPart>Variable</ObjPart>
-               <ObjPart>Parm rule</ObjPart>
-            </ObjXRefParts>
-         </ObjXRef>
-         <ObjXRef>
-<Object>
-  <ObjCls>1</ObjCls>
-  <ObjId>8</ObjId>
-  <ObjName>VerCliDependente</ObjName>
-  <ObjShortName>VerCliDependente</ObjShortName>
-  <ObjTitle>Verificar cliente dependente.</ObjTitle>
-</Object>
-
-            <ObjXRefParts>
-               <ObjPart>Subroutine</ObjPart>
-               <ObjPart>Variable</ObjPart>
-               <ObjPart>Parm rule</ObjPart>
-            </ObjXRefParts>
-         </ObjXRef>
-         <ObjXRef>
-<Object>
-  <ObjCls>1</ObjCls>
-  <ObjId>14</ObjId>
-  <ObjName>RetFunLogDados</ObjName>
-  <ObjShortName>RetFunLogDados</ObjShortName>
-  <ObjTitle>Retornar dados do funcionário logado.</ObjTitle>
+  <ObjId>17</ObjId>
+  <ObjName>AtzLocacao</ObjName>
+  <ObjShortName>AtzLocacao</ObjShortName>
+  <ObjTitle>Atualizar locação</ObjTitle>
 </Object>
 
             <ObjXRefParts>
@@ -204,123 +120,42 @@ Sorted: Yes
          <ObjXRef>
 <Object>
   <ObjCls>2</ObjCls>
-  <ObjId>10</ObjId>
-  <ObjName>RelCliComDependente</ObjName>
-  <ObjShortName>RelCliComDependente</ObjShortName>
-  <ObjTitle>Relatório de clientes com dependentes.</ObjTitle>
+  <ObjId>24</ObjId>
+  <ObjName>RelTopDeLisDevPorCliente</ObjName>
+  <ObjShortName>RelTopDeLisDevPorCliente</ObjShortName>
+  <ObjTitle>Relatório do total de devoluções por cliente.</ObjTitle>
 </Object>
 
             <ObjXRefParts>
                <ObjPart>Subroutine</ObjPart>
-               <ObjPart>Variable</ObjPart>
-            </ObjXRefParts>
-         </ObjXRef>
-         <ObjXRef>
-<Object>
-  <ObjCls>4</ObjCls>
-  <ObjId>27</ObjId>
-  <ObjName>ConsCliente</ObjName>
-  <ObjShortName>ConsCliente</ObjShortName>
-  <ObjTitle>Consulta de cliente.</ObjTitle>
-</Object>
-
-            <ObjXRefParts>
-               <ObjPart>Events</ObjPart>
-               <ObjPart>Form</ObjPart>
-               <ObjPart>Variable</ObjPart>
-               <ObjPart>Parm rule</ObjPart>
-            </ObjXRefParts>
-         </ObjXRef>
-         <ObjXRef>
-<Object>
-  <ObjCls>4</ObjCls>
-  <ObjId>28</ObjId>
-  <ObjName>PeCliente</ObjName>
-  <ObjShortName>PeCliente</ObjShortName>
-  <ObjTitle>Cadastro de clientes.</ObjTitle>
-</Object>
-
-            <ObjXRefParts>
-               <ObjPart>Events</ObjPart>
-               <ObjPart>Form</ObjPart>
-               <ObjPart>Variable</ObjPart>
-            </ObjXRefParts>
-         </ObjXRef>
-         <ObjXRef>
-<Object>
-  <ObjCls>4</ObjCls>
-  <ObjId>29</ObjId>
-  <ObjName>ConsFuncionario</ObjName>
-  <ObjShortName>ConsFuncionario</ObjShortName>
-  <ObjTitle>Consulta de funcionários.</ObjTitle>
-</Object>
-
-            <ObjXRefParts>
-               <ObjPart>Events</ObjPart>
-               <ObjPart>Form</ObjPart>
-               <ObjPart>Variable</ObjPart>
-               <ObjPart>Parm rule</ObjPart>
-            </ObjXRefParts>
-         </ObjXRef>
-         <ObjXRef>
-<Object>
-  <ObjCls>4</ObjCls>
-  <ObjId>56</ObjId>
-  <ObjName>PeFuncionario</ObjName>
-  <ObjShortName>PeFuncionario</ObjShortName>
-  <ObjTitle>Cadastro de funcionário.</ObjTitle>
-</Object>
-
-            <ObjXRefParts>
-               <ObjPart>Events</ObjPart>
-               <ObjPart>Form</ObjPart>
-               <ObjPart>Variable</ObjPart>
             </ObjXRefParts>
          </ObjXRef>
          <ObjXRef>
 <Object>
   <ObjCls>12</ObjCls>
-  <ObjId>80</ObjId>
-  <ObjName>Gx0010</ObjName>
-  <ObjShortName>Gx0010</ObjShortName>
-  <ObjTitle>Lista de Seleção Cadastro de clientes.</ObjTitle>
+  <ObjId>90</ObjId>
+  <ObjName>Gx00C0</ObjName>
+  <ObjShortName>Gx00C0</ObjShortName>
+  <ObjTitle>Lista de Seleção Cadastro de locações.</ObjTitle>
 </Object>
 
             <ObjXRefParts>
-               <ObjPart>Rules</ObjPart>
-               <ObjPart>Events</ObjPart>
                <ObjPart>Conditions</ObjPart>
-               <ObjPart>Form</ObjPart>
                <ObjPart>Variable</ObjPart>
-               <ObjPart>Parm rule</ObjPart>
             </ObjXRefParts>
          </ObjXRef>
          <ObjXRef>
 <Object>
-  <ObjCls>12</ObjCls>
-  <ObjId>81</ObjId>
-  <ObjName>Gx0021</ObjName>
-  <ObjShortName>Gx0021</ObjShortName>
-  <ObjTitle>Lista de Seleção Dependente</ObjTitle>
+  <ObjCls>4</ObjCls>
+  <ObjId>93</ObjId>
+  <ObjName>MovDoCliente</ObjName>
+  <ObjShortName>MovDoCliente</ObjShortName>
+  <ObjTitle>Movimentos dos clientes e seus dependentes.</ObjTitle>
 </Object>
 
             <ObjXRefParts>
-               <ObjPart>Rules</ObjPart>
-               <ObjPart>Form</ObjPart>
-               <ObjPart>Parm rule</ObjPart>
-            </ObjXRefParts>
-         </ObjXRef>
-         <ObjXRef>
-<Object>
-  <ObjCls>26</ObjCls>
-  <ObjId>3</ObjId>
-  <ObjName>SDTFuncionario</ObjName>
-  <ObjShortName>SDTFuncionario</ObjShortName>
-  <ObjTitle>SDT do funcionário.</ObjTitle>
-</Object>
-
-            <ObjXRefParts>
-               <ObjPart>Element</ObjPart>
+               <ObjPart>Events</ObjPart>
+               <ObjPart>Variable</ObjPart>
             </ObjXRefParts>
          </ObjXRef>
       </Objects>

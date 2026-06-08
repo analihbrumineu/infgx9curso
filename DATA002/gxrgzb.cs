@@ -56,7 +56,22 @@ namespace GeneXus.Programs {
             Execute reorganization programs (none if creating the database).
          */
          GeneXus.Reorg.GXReorganization.AddMsg( GXResourceManager.GetMessage("rgzrrpgm", new   object[]  {"4"}) , null);
+         GeneXus.Reorg.GXReorganization.AddMsg( GXResourceManager.GetMessage("runpgm", new   object[]  {"C12"}) , null);
+         new c12(context ).execute( ) ;
          /* Creating final tables. */
+         GeneXus.Reorg.GXReorganization.AddMsg( GXResourceManager.GetMessage("filecrea", new   object[]  {"LOCACAO", ""}) , null);
+         cmdBuffer=" DROP TABLE [LOCACAO] "
+         ;
+         RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+         RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+         RGZ.ExecuteStmt() ;
+         RGZ.Drop();
+         cmdBuffer=" CREATE TABLE [LOCACAO] ([LocCodigo] int NOT null  IDENTITY(1,1), [LocSituacao] smallint null , [LocDatLocacao] datetime null , [LocDatDevolucao] datetime null , [LocDatCancelamento] datetime null , [LocCliPesCodigo] int null , [LocVenPesCodigo] int null , [LocTotValor] money null , PRIMARY KEY([LocCodigo]))  "
+         ;
+         RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+         RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+         RGZ.ExecuteStmt() ;
+         RGZ.Drop();
          /* Dropping temporary indexes. */
          this.cleanup();
       }
@@ -72,10 +87,13 @@ namespace GeneXus.Programs {
 
       public override void initialize( )
       {
+         cmdBuffer = "" ;
          /* GeneXus formulas. */
       }
 
+      protected String cmdBuffer ;
       protected IGxDataStore dsDefault ;
+      protected GxCommand RGZ ;
    }
 
 }

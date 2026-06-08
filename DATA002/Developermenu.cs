@@ -10,6 +10,8 @@ using com.genexus.uifactory;
 using GeneXus.Windows;
 using GeneXus.Forms;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
 using GeneXus.Data;
 using com.genexus.distributed;
 using GeneXus.Data.ADO;
@@ -18,9 +20,13 @@ using GeneXus.Data.NTier.ADO;
 using System.Runtime.Remoting.Channels.Http;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting;
+using GeneXus.Http;
+using GeneXus.Procedure;
+using GeneXus.Printer;
 using GeneXus.XML;
 using GeneXus.Encryption;
 using GeneXus.Http.Client;
+using System.Threading;
 using System.Xml.Serialization;
 using System.Data.SqlTypes;
 namespace GeneXus.Programs {
@@ -70,6 +76,9 @@ namespace GeneXus.Programs {
          nodeToAdd.Nodes.Add( childNode);
          childNode = new TreeNode( "Cadastro de locação") ;
          childNode.Tag = "WPeLocacao" ;
+         nodeToAdd.Nodes.Add( childNode);
+         childNode = new TreeNode( "Relatório de topo de lista.") ;
+         childNode.Tag = "WRelTopDeLista" ;
          nodeToAdd.Nodes.Add( childNode);
       }
 
@@ -177,6 +186,14 @@ namespace GeneXus.Programs {
             java.lang.Class thisClass = java.lang.Class.FromType(Type.GetType("GeneXus.Programs.wpelocacao"));
             com.genexus.Application.init(thisClass);
             wpelocacao pgm = new wpelocacao (-1, new ModelContext(thisClass));
+            com.genexus.Application.realMainProgram = this ;
+            pgm.execute();
+         }
+         else if ( ( String.CompareOrdinal(pgmName.TrimEnd(' '), "WRelTopDeLista".TrimEnd(' ') ) == 0 ) )
+         {
+            java.lang.Class thisClass = java.lang.Class.FromType(Type.GetType("GeneXus.Programs.wreltopdelista"));
+            com.genexus.Application.init(thisClass);
+            wreltopdelista pgm = new wreltopdelista (-1, new ModelContext(thisClass));
             com.genexus.Application.realMainProgram = this ;
             pgm.execute();
          }

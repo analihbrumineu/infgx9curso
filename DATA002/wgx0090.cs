@@ -2,7 +2,7 @@
                File: Gx0090
         Description: Lista de Seleção Cadastro de mídias.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/3/2026 10:48:12.26
+       Generated on: 6/8/2026 9:5:20.23
        Program type: Callable routine
           Main DBMS: sqlserver
 */

@@ -2,7 +2,7 @@
                File: PeEstado
         Description: Cadastro de Estados.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/3/2026 10:48:12.98
+       Generated on: 6/8/2026 9:5:21.3
        Program type: Callable routine
           Main DBMS: sqlserver
 */

@@ -2,7 +2,7 @@
                File: Cliente
         Description: Cadastro de clientes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/3/2026 10:48:5.80
+       Generated on: 6/8/2026 9:5:13.76
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -1608,6 +1608,10 @@ namespace GeneXus.Programs {
                bttBtn_movimentos.setGXVisible(0);
             }
          }
+         else
+         {
+            bttBtn_movimentos.setGXVisible(0);
+         }
       }
 
       protected void E15012( )
@@ -1651,13 +1655,20 @@ namespace GeneXus.Programs {
       {
          eventLevelContext();
          /* Depende_Click Routine */
-         if ( ( A83Depende != 0 ) )
+         if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) != 0 ) )
          {
-            bttBtn_movimentos.setGXVisible(0);
+            if ( ( A83Depende != 0 ) )
+            {
+               bttBtn_movimentos.setGXVisible(0);
+            }
+            else
+            {
+               bttBtn_movimentos.setGXVisible(1);
+            }
          }
          else
          {
-            bttBtn_movimentos.setGXVisible(1);
+            bttBtn_movimentos.setGXVisible(0);
          }
          eventLevelResetContext();
       }
@@ -1666,7 +1677,7 @@ namespace GeneXus.Programs {
       {
          eventLevelContext();
          /* 'Movimentos' Routine */
-         new wmovdocliente(context, base.remoteHandle, base.context).execute(  A13PesCodi,  A83Depende) ;
+         new wmovdocliente(context, base.remoteHandle, base.context).execute(  A13PesCodi) ;
          eventLevelResetContext();
       }
 

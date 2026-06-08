@@ -66,6 +66,7 @@ called_program_i(4,64,2,10).
 called_program_i(4,62,2,9).
 called_program_i(4,65,2,11).
 called_program_i(4,65,2,12).
+called_program_i(4,94,2,24).
 called_program_i(17,1,4,57).
 called_program_i(17,1,4,12).
 called_program_i(17,1,4,11).
@@ -74,11 +75,12 @@ called_program_i(17,1,4,9).
 called_program_i(17,1,1,14).
 called_program_i(17,1,4,13).
 called_program_i(17,1,4,56).
-called_program_i(17,1,4,78).
 called_program_i(17,1,4,14).
+called_program_i(17,1,4,78).
+called_program_i(17,1,4,66).
 called_program_i(17,1,4,62).
 called_program_i(17,1,4,64).
 called_program_i(17,1,4,65).
-called_program_i(17,1,4,66).
+called_program_i(17,1,4,94).
 call_tree_built_i.
 sdt_map_i(18,'SDTFuncionario',[ 26,3,0 ]).

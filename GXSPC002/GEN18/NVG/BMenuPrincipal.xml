@@ -67,7 +67,10 @@
 <Event>Id_cli_c_dependente</Event></MenuBarOption>
 <MenuBarOption>
 <Name>Total de mídias por categoria</Name>
-<Event>Id_tot_mid_p_cat</Event></MenuBarOption></MenuBarOption></MenuBarOption>
+<Event>Id_tot_mid_p_cat</Event></MenuBarOption>
+<MenuBarOption>
+<Name>Topo de lista</Name>
+<Event>Id_topdelista</Event></MenuBarOption></MenuBarOption></MenuBarOption>
 <MenuBarOption>
 <Name>Tool Bar</Name>
 <Event></Event>
@@ -177,17 +180,6 @@
 <Parameters></Parameters>
 <IF></IF></CALL></Event>
 <Event>
-<EventName>Menubar.Id_mov</EventName>
-<CALL>
-<Object>
-<ObjCls>4</ObjCls>
-<ObjId>78</ObjId>
-<ObjName>PeLocacao</ObjName>
-<ObjPgmName>WPeLocacao</ObjPgmName>
-<ObjClsName>Work Panel</ObjClsName></Object>
-<Parameters></Parameters>
-<IF></IF></CALL></Event>
-<Event>
 <EventName>Menubar.Id_midias</EventName>
 <CALL>
 <Object>
@@ -207,6 +199,40 @@
 <ObjId>14</ObjId>
 <ObjName>PeMidia</ObjName>
 <ObjPgmName>WPeMidia</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Parameters></Parameters>
+<IF></IF></CALL></Event>
+<Event>
+<EventName>Menubar.Id_mov</EventName>
+<CALL>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>78</ObjId>
+<ObjName>PeLocacao</ObjName>
+<ObjPgmName>WPeLocacao</ObjPgmName>
+<ObjClsName>Work Panel</ObjClsName></Object>
+<Parameters></Parameters>
+<IF></IF></CALL></Event>
+<Event>
+<EventName>Menubar.Id_precos</EventName>
+<CALL>
+<Object>
+<ObjCls>1</ObjCls>
+<ObjId>14</ObjId>
+<ObjName>RetFunLogDados</ObjName>
+<ObjPgmName>PRetFunLogDados</ObjPgmName>
+<ObjClsName>Procedure</ObjClsName></Object>
+<Parameters>
+<Variable>
+<VarId>Funcionario</VarId>
+<VarName>&amp;Funcionario</VarName></Variable></Parameters>
+<IF></IF></CALL>
+<CALL>
+<Object>
+<ObjCls>4</ObjCls>
+<ObjId>66</ObjId>
+<ObjName>ConfTipMidia</ObjName>
+<ObjPgmName>WConfTipMidia</ObjPgmName>
 <ObjClsName>Work Panel</ObjClsName></Object>
 <Parameters></Parameters>
 <IF></IF></CALL></Event>
@@ -244,25 +270,13 @@
 <Parameters></Parameters>
 <IF></IF></CALL></Event>
 <Event>
-<EventName>Menubar.Id_precos</EventName>
-<CALL>
-<Object>
-<ObjCls>1</ObjCls>
-<ObjId>14</ObjId>
-<ObjName>RetFunLogDados</ObjName>
-<ObjPgmName>PRetFunLogDados</ObjPgmName>
-<ObjClsName>Procedure</ObjClsName></Object>
-<Parameters>
-<Variable>
-<VarId>Funcionario</VarId>
-<VarName>&amp;Funcionario</VarName></Variable></Parameters>
-<IF></IF></CALL>
+<EventName>Menubar.Id_topdelista</EventName>
 <CALL>
 <Object>
 <ObjCls>4</ObjCls>
-<ObjId>66</ObjId>
-<ObjName>ConfTipMidia</ObjName>
-<ObjPgmName>WConfTipMidia</ObjPgmName>
+<ObjId>94</ObjId>
+<ObjName>RelTopDeLista</ObjName>
+<ObjPgmName>WRelTopDeLista</ObjPgmName>
 <ObjClsName>Work Panel</ObjClsName></Object>
 <Parameters></Parameters>
 <IF></IF></CALL></Event>

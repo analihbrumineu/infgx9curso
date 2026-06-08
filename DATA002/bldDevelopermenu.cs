@@ -209,9 +209,11 @@ public class bldDevelopermenu : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\wmovdocliente.cs" ))
             return true;
-         if (checkTime(obj, cs_path + @"\subwmovdocliente07.cs" ))
+         if (checkTime(obj, cs_path + @"\subwmovdocliente06.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\bmenuprincipal.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\wreltopdelista.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\pverpesfunlogin.cs" ))
             return true;
@@ -238,6 +240,8 @@ public class bldDevelopermenu : GxBaseBuilder
          if (checkTime(obj, cs_path + @"\rrelmidporcategoria.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\rrelmidporcatfilme.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\rreltopdelisdevporcliente.cs" ))
             return true;
       }
       if ( ( obj == @"bin\gxCommon.dll" ) )

@@ -2,7 +2,7 @@
                File: ConsFilme
         Description: Consulta de filmes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/3/2026 10:48:11.44
+       Generated on: 6/8/2026 9:5:19.40
        Program type: Callable routine
           Main DBMS: sqlserver
 */

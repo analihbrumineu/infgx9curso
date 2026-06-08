@@ -3,6 +3,13 @@
  
 pgm_main_i(scr,1,'WCONTROLEDELOCADORA',[ 18,'UCONTROLEDELOCADORA','Controle de locadora.','','','','' ]).
  
+pgm_prop_i(rpt,24,'RRELTOPDELISDEVPORCLIENTE','SOAP_NAMESPACE','AgoraVaiCurso').
+pgm_prop_i(rpt,24,'RRELTOPDELISDEVPORCLIENTE',idTRN_Type,idTRN_Type_CONTAINER).
+pgm_prop_i(rpt,24,'RRELTOPDELISDEVPORCLIENTE',idTRN_Attribute,idTRN_Attribute_REQUIRED).
+pgm_prop_i(rpt,24,'RRELTOPDELISDEVPORCLIENTE',idJNDI_Name,'ejb/aRelTopDeLisDevPorCliente').
+pgm_prop_i(rpt,24,'RRELTOPDELISDEVPORCLIENTE',idDEST_Type,idDEST_Type_QUEUE).
+pgm_prop_i(rpt,24,'RRELTOPDELISDEVPORCLIENTE',idCON_FACTORY_JNDI_Name,'').
+pgm_prop_i(rpt,24,'RRELTOPDELISDEVPORCLIENTE',idDEST_JNDI_Name,'').
 pgm_prop_i(trn,9,'TCONFTIPMIDIA','URLAccess','No').
 pgm_prop_i(trn,9,'TCONFTIPMIDIA',idTRN_Type,idTRN_Type_CONTAINER).
 pgm_prop_i(trn,9,'TCONFTIPMIDIA',idTRN_Attribute,idTRN_Attribute_REQUIRED).
@@ -267,11 +274,10 @@ subtype_group_i(2,8,[ 'LocVendedor',[ [ 93,13 ],[ 94,14 ] ] ]).
 subtype_group_i(2,9,[ 'LocCodigo',[ [ 116,86 ] ] ]).
 subtype_group_i(2,10,[ 'LocMidMidLocCodigo',[ [ 102,37 ],[ 107,36 ] ] ]).
  
-forced_rebuild_i.
  
 culture_id_i(por).
  
  
  
-ver_stamp(date(2026,6,3),time(8,59,6,6)).
+ver_stamp(date(2026,6,5),time(11,25,25,60)).
  

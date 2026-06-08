@@ -20,20 +20,18 @@
 <IO>in</IO>
 <Variable>
 <VarId>Pescodigo</VarId>
-<VarName>&amp;PesCodigo</VarName></Variable></Parameter>
-<Parameter>
-<IO>in</IO>
-<Variable>
-<VarId>Depende</VarId>
-<VarName>&amp;Depende</VarName></Variable></Parameter></Parameters>
+<VarName>&amp;PesCodigo</VarName></Variable></Parameter></Parameters>
 <StandAloneRules></StandAloneRules>
 <Event>
+<EventName>Start</EventName></Event>
+<Event>
+<EventName>Refresh</EventName></Event>
+<Event>
 <EventName>Load</EventName>
-<LoadMethod>Auto</LoadMethod>
 <Level>
 <Optimizations></Optimizations>
 <LevelType>For First</LevelType>
-<LevelBeginRow>4</LevelBeginRow>
+<LevelBeginRow>24</LevelBeginRow>
 <BaseTable>
 <Table>
 <TableId>1</TableId>
@@ -93,5 +91,236 @@
 <TablesToUpdate></TablesToUpdate>
 <Formulas>
 <VerticalFormulas></VerticalFormulas>
-<AggSelFormulas></AggSelFormulas></Formulas></Level></Event>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<Level>
+<Optimizations></Optimizations>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>32</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>ILOCACAO1</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>@PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>@PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute>
+<Attribute>
+<AttriId>88</AttriId>
+<AttriName>LocDatLocacao</AttriName>
+<Description>Data da locação</Description></Attribute>
+<Attribute>
+<AttriId>89</AttriId>
+<AttriName>LocDatDevolucao</AttriName>
+<Description>Data da devolução</Description></Attribute>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas></Level>
+<Level>
+<Optimizations></Optimizations>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>49</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>2</TableId>
+<TableName>CLIENTEDEPENDENTE</TableName>
+<Description>Dependente</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>ICLIENTEDEPENDENTE</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>@PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>@PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere></NonOptimizedWhere>
+<JoinLocation>1</JoinLocation>
+<NavigationTree>
+<Table>
+<TableId>2</TableId>
+<TableName>CLIENTEDEPENDENTE</TableName>
+<Description>Dependente</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute>
+<Attribute>
+<AttriId>46</AttriId>
+<AttriName>PesDepCodigo</AttriName>
+<Description>Código do dependente</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>46</AttriId>
+<AttriName>PesDepCodigo</AttriName>
+<Description>Código do dependente</Description></Attribute></Into>
+<Tables>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>46</AttriId>
+<AttriName>PesDepCodigo</AttriName>
+<Description>Código do dependente</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>47</AttriId>
+<AttriName>PesDepNome</AttriName>
+<Description>Nome do dependente</Description></Attribute></Into>
+<Tables></Tables></Table></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<Level>
+<Optimizations></Optimizations>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>59</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>ILOCACAO1</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>46</AttriId>
+<AttriName>@PesDepCodigo</AttriName>
+<Description>Código do dependente</Description></Attribute></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>46</AttriId>
+<AttriName>@PesDepCodigo</AttriName>
+<Description>Código do dependente</Description></Attribute></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere></NonOptimizedWhere>
+<NavigationTree>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute>
+<Attribute>
+<AttriId>88</AttriId>
+<AttriName>LocDatLocacao</AttriName>
+<Description>Data da locação</Description></Attribute>
+<Attribute>
+<AttriId>89</AttriId>
+<AttriName>LocDatDevolucao</AttriName>
+<Description>Data da devolução</Description></Attribute>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute></Into>
+<Tables></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas></Level></Level></Level></Event>
 <Suggests></Suggests></ObjectSpec>

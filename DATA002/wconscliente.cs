@@ -2,7 +2,7 @@
                File: ConsCliente
         Description: Consulta de cliente.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/3/2026 10:48:11.27
+       Generated on: 6/8/2026 9:5:19.23
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -485,7 +485,7 @@ namespace GeneXus.Programs {
             n15PesCPF = W000R3_n15PesCPF[0] ;
             A83Depende = W000R3_A83Depende[0] ;
             n83Depende = W000R3_n83Depende[0] ;
-            if ( ( A83Depende != 1 ) )
+            if ( ( A83Depende != 1 ) && ( String.CompareOrdinal(AV14TratEr.TrimEnd(' '), "Inativo".TrimEnd(' ') ) == 0 ) )
             {
                AV14TratEr = "Ativo" ;
             }
