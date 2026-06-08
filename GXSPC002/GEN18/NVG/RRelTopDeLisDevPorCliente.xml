@@ -26,9 +26,16 @@
 <Description>Nome do cliente locatário</Description></Attribute>
 <Token>; poor performance may be noticed</Token>
 <Token> in group starting at line </Token>
-<Token>11</Token>
+<Token>10</Token>
 <Token></Token>
-<Token>.</Token></Warning></Warnings>
+<Token>.</Token></Warning>
+<Warning>
+<MsgCode>spc0047</MsgCode>
+<Token>Variable </Token>
+<Token>Contcliente</Token>
+<Token> not defined; </Token>
+<Token>N(10.2)</Token>
+<Token> assumed.</Token></Warning></Warnings>
 <Errors></Errors>
 <OutputDevices>
 <Device>Screen</Device>
@@ -58,7 +65,7 @@
 <LevelNumber>3</LevelNumber>
 <Optimizations></Optimizations>
 <LevelType>For Each</LevelType>
-<LevelBeginRow>23</LevelBeginRow>
+<LevelBeginRow>22</LevelBeginRow>
 <BaseTable>
 <Table>
 <TableId>12</TableId>

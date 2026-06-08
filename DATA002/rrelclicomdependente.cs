@@ -2,7 +2,7 @@
                File: RelCliComDependente
         Description: Relatório de clientes com dependentes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/8/2026 9:5:12.24
+       Generated on: 6/8/2026 11:43:13.42
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -352,8 +352,8 @@ namespace GeneXus.Programs {
          AV11PesNom = "" ;
          Gx_OldLine = 0 ;
          AV13CliPes = 0 ;
-         R000A3_A46PesDepC = new int[1] ;
          R000A3_A13PesCodi = new int[1] ;
+         R000A3_A46PesDepC = new int[1] ;
          R000A3_A47PesDepN = new String[] {""} ;
          R000A3_n47PesDepN = new bool[] {false} ;
          A46PesDepC = 0 ;
@@ -372,7 +372,7 @@ namespace GeneXus.Programs {
                R000A2_A13PesCodi, R000A2_A83Depende, R000A2_n83Depende, R000A2_A14PesNome, R000A2_n14PesNome
                }
                , new Object[] {
-               R000A3_A46PesDepC, R000A3_A13PesCodi, R000A3_A47PesDepN, R000A3_n47PesDepN
+               R000A3_A13PesCodi, R000A3_A46PesDepC, R000A3_A47PesDepN, R000A3_n47PesDepN
                }
                , new Object[] {
                R000A4_Gx_cnt
@@ -432,8 +432,8 @@ namespace GeneXus.Programs {
       private String[] R000A2_A14PesNome ;
       private bool[] R000A2_n14PesNome ;
       private IDataReader R000A3 ;
-      private int[] R000A3_A46PesDepC ;
       private int[] R000A3_A13PesCodi ;
+      private int[] R000A3_A46PesDepC ;
       private String[] R000A3_A47PesDepN ;
       private bool[] R000A3_n47PesDepN ;
       private IDataReader R000A4 ;
@@ -472,7 +472,7 @@ namespace GeneXus.Programs {
           } ;
           def= new GeneXus.Data.NTier.ADO.CursorDef[] {
               new GeneXus.Data.NTier.ADO.CursorDef("R000A2", "SELECT [PesCodigo], [Depende], [PesNome] FROM [PESSOA] WITH (NOLOCK) WHERE ([PesCodigo] >= @AV9PesCodI) AND ([PesCodigo] <= @AV10PesCod) ORDER BY [PesCodigo] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmR000A2,100,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("R000A3", "SELECT T1.[PesDepCodigo] AS PesDepCodigo, T1.[PesCodigo], T2.[PesNome] AS PesDepNome FROM ([CLIENTEDEPENDENTE] T1 WITH (NOLOCK) INNER JOIN [PESSOA] T2 WITH (NOLOCK) ON T2.[PesCodigo] = T1.[PesDepCodigo]) WHERE T1.[PesCodigo] = @PesCodigo ORDER BY T2.[PesNome] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmR000A3,100,0,false,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("R000A3", "SELECT T1.[PesCodigo], T1.[PesDepCodigo] AS PesDepCodigo, T2.[PesNome] AS PesDepNome FROM ([CLIENTEDEPENDENTE] T1 WITH (NOLOCK) INNER JOIN [PESSOA] T2 WITH (NOLOCK) ON T2.[PesCodigo] = T1.[PesDepCodigo]) WHERE T1.[PesCodigo] = @PesCodigo ORDER BY T2.[PesNome] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmR000A3,100,0,false,false )
              ,new GeneXus.Data.NTier.ADO.CursorDef("R000A4", "SELECT COUNT(*) FROM [CLIENTEDEPENDENTE] WITH (NOLOCK) WHERE [PesCodigo] = @PesCodigo ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmR000A4,1,0,true,true )
           };
        }

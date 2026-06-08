@@ -2,7 +2,7 @@
                File: VerCidCodigo
         Description: Verificar validade do código da cidade.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/8/2026 9:5:12.14
+       Generated on: 6/8/2026 11:43:13.30
        Program type: Callable routine
           Main DBMS: sqlserver
 */

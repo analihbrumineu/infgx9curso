@@ -19,6 +19,7 @@
 /r:system.data.dll
 /r:system.data.dll
 type_SdtSDTFuncionario.cs
+type_SdtSDTCliDevolucao.cs
 GxObjectCollection.cs
 GxSilentTrnGridCollection.cs
 SoapParm.cs

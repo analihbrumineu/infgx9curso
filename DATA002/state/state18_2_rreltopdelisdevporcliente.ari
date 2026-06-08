@@ -6,7 +6,7 @@ current_obj_i(2,rpt,24).
  
  
  
-ij_object_dependency(rreltopdelisdevporcliente,[],[],[],24).
+ij_object_dependency(rreltopdelisdevporcliente,[],[],[ type_SdtSDTCliDevolucao,'GxObjectCollection' ],24).
  
  
 obj_parms_i([ 'DateTime aP0_DatInicial','DateTime aP1_DatFinal','long aP2_Selecao' ],[ [ 'Datinicial',in ],[ 'Datfinal',in ],[ 'Selecao',in ] ]).

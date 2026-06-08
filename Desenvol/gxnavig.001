@@ -31,7 +31,8 @@
 <ObjCls>2</ObjCls>
 <ObjId>24</ObjId>
 <ObjName>RelTopDeLisDevPorCliente</ObjName>
-<ObjStatus>genreq</ObjStatus>
+<ObjStatus>specfailed</ObjStatus>
+<HasWarnings>Yes</HasWarnings>
 <ObjNavig>GXSPC001\GEN00\NVG\RRelTopDeLisDevPorCliente.xml</ObjNavig></Object>
 <Object>
 <ObjCls>1</ObjCls>

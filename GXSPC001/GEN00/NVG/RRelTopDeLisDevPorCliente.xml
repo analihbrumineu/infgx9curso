@@ -8,9 +8,40 @@
 <ObjDesc>Relatório do total de devoluções por cliente.</ObjDesc>
 <ObjPgmName>RRelTopDeLisDevPorCliente</ObjPgmName>
 <ObjClsName>Report</ObjClsName></Object>
-<Result>genreq</Result>
-<Warnings></Warnings>
-<Errors></Errors>
+<Result>specfailed</Result>
+<Warnings>
+<Warning>
+<MsgCode>spc0047</MsgCode>
+<Token>Variable </Token>
+<Token>Contselecao</Token>
+<Token> not defined; </Token>
+<Token>N(1.0)</Token>
+<Token> assumed.</Token></Warning>
+<Warning>
+<MsgCode>spc0038</MsgCode>
+<Token>There is no index for order </Token>
+<Attribute>
+<AttriId>92</AttriId>
+<AttriName>LocCliPesNome</AttriName>
+<Description>Nome do cliente locatário</Description></Attribute>
+<Token>; poor performance may be noticed</Token>
+<Token> in group starting at line </Token>
+<Token>11</Token>
+<Token></Token>
+<Token>.</Token></Warning></Warnings>
+<Errors>
+<Error>
+<MsgCode>spc0116</MsgCode>
+<Token>Group cannot be ordered by </Token>
+<Attribute>
+<AttriId>92</AttriId>
+<AttriName>LocCliPesNome</AttriName>
+<Description>Nome do cliente locatário</Description></Attribute>
+<Token></Token>
+<Token> in group starting at line </Token>
+<Token>11</Token>
+<Token></Token>
+<Token>.</Token></Error></Errors>
 <OutputDevices>
 <Device>Screen</Device>
 <Device>Printer</Device></OutputDevices>
@@ -39,7 +70,7 @@
 <LevelNumber>3</LevelNumber>
 <Optimizations></Optimizations>
 <LevelType>For Each</LevelType>
-<LevelBeginRow>19</LevelBeginRow>
+<LevelBeginRow>23</LevelBeginRow>
 <BaseTable>
 <Table>
 <TableId>12</TableId>
@@ -47,11 +78,10 @@
 <Description>Cadastro de locações.</Description></Table></BaseTable>
 <Order>
 <Attribute>
-<AttriId>86</AttriId>
-<AttriName>LocCodigo</AttriName>
-<Description>Código da locação</Description></Attribute></Order>
+<AttriId>92</AttriId>
+<AttriName>LocCliPesNome</AttriName>
+<Description>Nome do cliente locatário</Description></Attribute></Order>
 <Condition></Condition>
-<IndexName>ILOCACAO</IndexName>
 <LevelOptions></LevelOptions>
 <OptimizedWhere>
 <StartFrom>
@@ -106,13 +136,13 @@
 <AttriName>LocCliPesCodigo</AttriName>
 <Description>Código do cliente locatário</Description></Attribute>
 <Attribute>
-<AttriId>86</AttriId>
-<AttriName>LocCodigo</AttriName>
-<Description>Código da locação</Description></Attribute>
-<Attribute>
 <AttriId>89</AttriId>
 <AttriName>LocDatDevolucao</AttriName>
-<Description>Data da devolução</Description></Attribute></Into>
+<Description>Data da devolução</Description></Attribute>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></Into>
 <Tables>
 <Table>
 <TableId>1</TableId>
@@ -135,87 +165,4 @@
 <Formulas>
 <VerticalFormulas></VerticalFormulas>
 <AggSelFormulas></AggSelFormulas></Formulas>
-<Levels>
-<Level>
-<LevelNumber>4</LevelNumber>
-<Optimizations></Optimizations>
-<LevelType>Break</LevelType>
-<LevelBeginRow>28</LevelBeginRow>
-<BaseTable>
-<Table>
-<TableId>12</TableId>
-<TableName>LOCACAO</TableName>
-<Description>Cadastro de locações.</Description></Table></BaseTable>
-<Order>
-<Attribute>
-<AttriId>86</AttriId>
-<AttriName>LocCodigo</AttriName>
-<Description>Código da locação</Description></Attribute></Order>
-<Condition></Condition>
-<IndexName>ILOCACAO</IndexName>
-<LevelOptions></LevelOptions>
-<OptimizedWhere>
-<StartFrom>
-<Condition>
-<Token>FirstRecord</Token></Condition></StartFrom>
-<LoopWhile>
-<Condition>
-<Attribute>
-<AttriId>86</AttriId>
-<AttriName>LocCodigo</AttriName>
-<Description>Código da locação</Description></Attribute>
-<Token>=</Token>
-<Attribute>
-<AttriId>86</AttriId>
-<AttriName>@LocCodigo</AttriName>
-<Description>Código da locação</Description></Attribute></Condition></LoopWhile></OptimizedWhere>
-<NonOptimizedWhere>
-<Condition>
-<Attribute>
-<AttriId>92</AttriId>
-<AttriName>LocCliPesNome</AttriName>
-<Description>Nome do cliente locatário</Description></Attribute>
-<Token>=</Token>
-<Variable>
-<VarId>Locclipesnome</VarId>
-<VarName>&amp;LocCliPesNome</VarName></Variable></Condition></NonOptimizedWhere>
-<JoinLocation>0</JoinLocation>
-<NavigationTree>
-<Table>
-<TableId>12</TableId>
-<TableName>LOCACAO</TableName>
-<Description>Cadastro de locações.</Description>
-<RecordsToRead>many</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>86</AttriId>
-<AttriName>LocCodigo</AttriName>
-<Description>Código da locação</Description></Attribute></KeyAttributes>
-<Into>
-<Attribute>
-<AttriId>91</AttriId>
-<AttriName>LocCliPesCodigo</AttriName>
-<Description>Código do cliente locatário</Description></Attribute></Into>
-<Tables>
-<Table>
-<TableId>1</TableId>
-<TableName>PESSOA</TableName>
-<Description>Cadastro de pessoas.</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>91</AttriId>
-<AttriName>LocCliPesCodigo</AttriName>
-<Description>Código do cliente locatário</Description></Attribute></KeyAttributes>
-<Into>
-<Attribute>
-<AttriId>92</AttriId>
-<AttriName>LocCliPesNome</AttriName>
-<Description>Nome do cliente locatário</Description></Attribute></Into>
-<JoinType>Outer</JoinType>
-<Tables></Tables></Table></Tables></Table></NavigationTree>
-<TablesToUpdate></TablesToUpdate>
-<Formulas>
-<VerticalFormulas></VerticalFormulas>
-<AggSelFormulas></AggSelFormulas></Formulas>
-<Levels></Levels></Level></Levels></Level></Levels></ObjectSpec>
+<Levels></Levels></Level></Levels></ObjectSpec>

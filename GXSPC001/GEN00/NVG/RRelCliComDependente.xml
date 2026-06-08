@@ -14,9 +14,9 @@
 <MsgCode>spc0038</MsgCode>
 <Token>There is no index for order </Token>
 <Attribute>
-<AttriId>14</AttriId>
-<AttriName>PesNome</AttriName>
-<Description>Nome da pessoa</Description></Attribute>
+<AttriId>47</AttriId>
+<AttriName>PesDepNome</AttriName>
+<Description>Nome do dependente</Description></Attribute>
 <Token>; poor performance may be noticed</Token>
 <Token> in group starting at line </Token>
 <Token>17</Token>
@@ -27,9 +27,9 @@
 <MsgCode>spc0116</MsgCode>
 <Token>Group cannot be ordered by </Token>
 <Attribute>
-<AttriId>14</AttriId>
-<AttriName>PesNome</AttriName>
-<Description>Nome da pessoa</Description></Attribute>
+<AttriId>47</AttriId>
+<AttriName>PesDepNome</AttriName>
+<Description>Nome do dependente</Description></Attribute>
 <Token></Token>
 <Token> in group starting at line </Token>
 <Token>17</Token>
@@ -194,9 +194,9 @@
 <Description>Dependente</Description></Table></BaseTable>
 <Order>
 <Attribute>
-<AttriId>14</AttriId>
-<AttriName>PesNome</AttriName>
-<Description>Nome da pessoa</Description></Attribute></Order>
+<AttriId>47</AttriId>
+<AttriName>PesDepNome</AttriName>
+<Description>Nome do dependente</Description></Attribute></Order>
 <Condition></Condition>
 <LevelOptions></LevelOptions>
 <OptimizedWhere>
@@ -216,17 +216,7 @@
 <Attribute>
 <AttriId>13</AttriId>
 <AttriName>@PesCodigo</AttriName>
-<Description>Código da pessoa</Description></Attribute></Condition>
-<Condition>
-<Attribute>
-<AttriId>14</AttriId>
-<AttriName>@PesNome</AttriName>
-<Description>Nome da pessoa</Description></Attribute>
-<Token>=</Token>
-<Attribute>
-<AttriId>47</AttriId>
-<AttriName>PesDepNome</AttriName>
-<Description>Nome do dependente</Description></Attribute></Condition></NonOptimizedWhere>
+<Description>Código da pessoa</Description></Attribute></Condition></NonOptimizedWhere>
 <JoinLocation>0</JoinLocation>
 <NavigationTree>
 <Table>

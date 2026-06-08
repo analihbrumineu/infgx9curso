@@ -2,7 +2,7 @@
                File: Gx0021
         Description: Lista de Seleção Dependente
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/8/2026 9:5:19.92
+       Generated on: 6/8/2026 11:43:21.30
        Program type: Callable routine
           Main DBMS: sqlserver
 */

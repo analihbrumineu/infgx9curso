@@ -2,7 +2,7 @@
                File: VerPesFunLogin
         Description: Verificar login do funcionário.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/8/2026 9:5:12.19
+       Generated on: 6/8/2026 11:43:13.38
        Program type: Callable routine
           Main DBMS: sqlserver
 */

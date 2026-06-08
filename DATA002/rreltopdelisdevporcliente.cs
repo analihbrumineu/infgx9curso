@@ -2,7 +2,7 @@
                File: RelTopDeLisDevPorCliente
         Description: Relatório do total de devoluções por cliente.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/8/2026 9:16:32.70
+       Generated on: 6/8/2026 11:43:13.93
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -150,7 +150,7 @@ namespace GeneXus.Programs {
             getPrinter().setM_top(M_top);
             getPrinter().setM_bot(M_bot);
             AV17AuxLoc = "" ;
-            AV24Contse = 0 ;
+            AV29Contse = 0 ;
             /* Using cursor R000O2 */
             pr_default.execute(0);
             while ( (pr_default.getStatus(0) != 101) )
@@ -170,8 +170,8 @@ namespace GeneXus.Programs {
                   {
                      if ( ( String.CompareOrdinal(AV17AuxLoc.TrimEnd(' '), "".TrimEnd(' ') ) != 0 ) )
                      {
-                        AV24Contse = (short)(AV24Contse+1) ;
-                        if ( ( AV24Contse == AV10Seleca ) )
+                        AV29Contse = (short)(AV29Contse+1) ;
+                        if ( ( AV29Contse == AV10Seleca ) )
                         {
                            /* Exit For each command. Update data (if necessary), close cursors & exit. */
                            if (true) break;
@@ -205,7 +205,7 @@ namespace GeneXus.Programs {
                pr_default.readNext(0);
             }
             pr_default.close(0);
-            if ( ( String.CompareOrdinal(AV17AuxLoc.TrimEnd(' '), "".TrimEnd(' ') ) != 0 ) && ( AV24Contse <= AV10Seleca ) )
+            if ( ( String.CompareOrdinal(AV17AuxLoc.TrimEnd(' '), "".TrimEnd(' ') ) != 0 ) && ( AV31Contcl >= Convert.ToDecimal( AV29Contse )) )
             {
                H0O0( false, 15) ;
                getPrinter().GxDrawLine(52, Gx_line+12, 650, Gx_line+12, 1, 200, 200, 200, 0) ;
@@ -278,7 +278,7 @@ namespace GeneXus.Programs {
                getPrinter().GxDrawLine(26, Gx_line+194, 650, Gx_line+194, 1, 0, 0, 0, 0) ;
                getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
                getPrinter().GxDrawText(StringUtil.Format( (decimal)(Gx_page), "ZZZZZ9"), 606, Gx_line+26, 657, Gx_line+41, 2) ;
-               getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV21Pgmdes, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")), 182, Gx_line+20, 506, Gx_line+35, 0) ;
+               getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV26Pgmdes, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")), 182, Gx_line+20, 506, Gx_line+35, 0) ;
                getPrinter().GxDrawText(StringUtil.Format( Gx_date, "99/99/99"), 611, Gx_line+0, 666, Gx_line+15, 0+256) ;
                getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( Gx_time, "XXXXXXXX")), 611, Gx_line+13, 666, Gx_line+28, 0+256) ;
                getPrinter().GxDrawText(StringUtil.Format( AV8DatInic, "99/99/9999"), 65, Gx_line+91, 134, Gx_line+106, 0+256) ;
@@ -343,7 +343,7 @@ namespace GeneXus.Programs {
          ToSkip = 0 ;
          PrtOffset = 0 ;
          AV17AuxLoc = "" ;
-         AV24Contse = 0 ;
+         AV29Contse = 0 ;
          scmdbuf = "" ;
          R000O2_A91LocCliP = new int[1] ;
          R000O2_n91LocCliP = new bool[] {false} ;
@@ -363,7 +363,8 @@ namespace GeneXus.Programs {
          Gx_OldLine = 0 ;
          AV12LocCli = "" ;
          AV11LocCod = 0 ;
-         AV21Pgmdes = "" ;
+         AV31Contcl = (decimal)(0M) ;
+         AV26Pgmdes = "" ;
          Gx_date = (DateTime)(DateTime.MinValue) ;
          Gx_time = "" ;
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.rreltopdelisdevporcliente__default(),
@@ -377,7 +378,7 @@ namespace GeneXus.Programs {
          Gx_line = 0 ;
          Gx_time = DateTimeUtil.Time( ) ;
          Gx_date = DateTimeUtil.Today( ) ;
-         AV21Pgmdes = "Relatório do total de devoluções por cliente." ;
+         AV26Pgmdes = "Relatório do total de devoluções por cliente." ;
          context.Gx_err = 0 ;
          if ( ( String.CompareOrdinal(Gx_dev.TrimEnd(' '), "S".TrimEnd(' ') ) == 0 ) )
          {
@@ -390,7 +391,7 @@ namespace GeneXus.Programs {
          askCanceled = !doAsk();
       }
 
-      private short AV24Contse ;
+      private short AV29Contse ;
       private int M_top ;
       private int M_bot ;
       private int Line ;
@@ -402,8 +403,9 @@ namespace GeneXus.Programs {
       private int AV11LocCod ;
       private long AV10Seleca ;
       private long AV14TotDev ;
+      private decimal AV31Contcl ;
       private String scmdbuf ;
-      private String AV21Pgmdes ;
+      private String AV26Pgmdes ;
       private String Gx_time ;
       private DateTime AV8DatInic ;
       private DateTime AV9DatFina ;
