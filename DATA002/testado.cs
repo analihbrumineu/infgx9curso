@@ -2,7 +2,7 @@
                File: Estado
         Description: Cadastro de Estados.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/9/2026 8:48:37.24
+       Generated on: 6/9/2026 11:37:32.63
        Program type: Callable routine
           Main DBMS: sqlserver
 */

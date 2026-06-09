@@ -158,8 +158,7 @@
 <AttriName>LocMidMidCodigo</AttriName>
 <Description>Código da mídia a ser locada</Description></Attribute></IndexAttris>
 <IndexExistance>AlreadyExist</IndexExistance>
-<Clustered>Yes</Clustered></Index></Indices>
-<NewIndices>
+<Clustered>Yes</Clustered></Index>
 <Index>
 <IndexName>ILOCACAOLOCACAOMIDIA3</IndexName>
 <IndexType>d</IndexType>
@@ -169,19 +168,30 @@
 <AttriName>LocMidMidCodigo</AttriName>
 <Description>Código da mídia a ser locada</Description></Attribute></IndexAttris>
 <IndexExistance>AlreadyExist</IndexExistance>
-<Clustered>No</Clustered></Index></NewIndices>
-<IndicesToDelete>
+<Clustered>No</Clustered></Index></Indices>
+<NewIndices>
 <Index>
 <IndexName>ILOCACAOLOCACAOMIDIA1</IndexName>
 <IndexType>d</IndexType>
 <IndexAttris>
 <Attribute>
-<AttriId>108</AttriId>
-<AttriName>LocMidMidLocCodigo</AttriName>
-<Description>Código da locação da mídia a ser locada</Description></Attribute></IndexAttris>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute></IndexAttris>
 <IndexExistance>AlreadyExist</IndexExistance>
-<Clustered>No</Clustered></Index></IndicesToDelete></TableIndices>
+<Clustered>No</Clustered></Index></NewIndices></TableIndices>
 <FKConstraints>
+<FKConstraint>
+<ChangeType>none</ChangeType>
+<Table>
+<TableId>9</TableId>
+<TableName>MIDIA</TableName>
+<Description>Cadastro de mídias.</Description></Table>
+<Attributes>
+<Attribute>
+<AttriId>102</AttriId>
+<AttriName>LocMidMidCodigo</AttriName>
+<Description>Código da mídia a ser locada</Description></Attribute></Attributes></FKConstraint>
 <FKConstraint>
 <ChangeType>none</ChangeType>
 <Table>
@@ -196,25 +206,14 @@
 <FKConstraint>
 <ChangeType>new</ChangeType>
 <Table>
-<TableId>9</TableId>
-<TableName>MIDIA</TableName>
-<Description>Cadastro de mídias.</Description></Table>
+<TableId>6</TableId>
+<TableName>CATEGORIA</TableName>
+<Description>Cadastro de categorias.</Description></Table>
 <Attributes>
 <Attribute>
-<AttriId>102</AttriId>
-<AttriName>LocMidMidCodigo</AttriName>
-<Description>Código da mídia a ser locada</Description></Attribute></Attributes></FKConstraint>
-<FKConstraint>
-<ChangeType>rmv</ChangeType>
-<Table>
-<TableId>9</TableId>
-<TableName>MIDIA</TableName>
-<Description>Cadastro de mídias.</Description></Table>
-<Attributes>
-<Attribute>
-<AttriId>108</AttriId>
-<AttriName>LocMidMidLocCodigo</AttriName>
-<Description>Código da locação da mídia a ser locada</Description></Attribute></Attributes></FKConstraint></FKConstraints>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute></Attributes></FKConstraint></FKConstraints>
 <Warnings>
 <Warning>
 <MsgCode>rgz0009</MsgCode>
@@ -223,16 +222,6 @@
 <AttriId>103</AttriId>
 <AttriName>LocMidFilCodigo</AttriName>
 <Description>Código do filme a ser locado</Description></Attribute>
-<Token> is not table </Token>
-<Token>LOCACAOLOCACAOMIDIA</Token>
-<Token>'s primary key.</Token></Warning>
-<Warning>
-<MsgCode>rgz0009</MsgCode>
-<Token>AutoNumber=True ignored. Attribute </Token>
-<Attribute>
-<AttriId>105</AttriId>
-<AttriName>LocMidCatCodigo</AttriName>
-<Description>Código da categoria do filme a ser locado</Description></Attribute>
 <Token> is not table </Token>
 <Token>LOCACAOLOCACAOMIDIA</Token>
 <Token>'s primary key.</Token></Warning></Warnings>

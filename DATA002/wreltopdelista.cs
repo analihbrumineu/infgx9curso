@@ -2,7 +2,7 @@
                File: RelTopDeLista
         Description: Relatório de topo de lista.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/9/2026 8:48:43.74
+       Generated on: 6/9/2026 11:37:39.1
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -259,6 +259,18 @@ namespace GeneXus.Programs {
                   if ( ( AV8Relator == 1 ) && ( AV9Assunto == 1 ) )
                   {
                      new rreltopdelisdevporcliente(context, base.remoteHandle, base.context).execute(  AV5DatInic,  AV6DatFina,  AV7Selecao) ;
+                  }
+                  if ( ( AV8Relator == 1 ) && ( AV9Assunto == 2 ) )
+                  {
+                     new rreltopdelisdevporfilmes(context, base.remoteHandle, base.context).execute(  AV5DatInic,  AV6DatFina,  AV7Selecao) ;
+                  }
+                  if ( ( AV8Relator == 1 ) && ( AV9Assunto == 3 ) )
+                  {
+                     new rreltopdelisdevporcategoria(context, base.remoteHandle, base.context).execute(  AV5DatInic,  AV6DatFina,  AV7Selecao) ;
+                  }
+                  if ( ( AV8Relator == 1 ) && ( AV9Assunto == 4 ) )
+                  {
+                     new rreltopdelisdevportipdemidia(context, base.remoteHandle, base.context).execute(  AV5DatInic,  AV6DatFina,  AV7Selecao) ;
                   }
                }
             }

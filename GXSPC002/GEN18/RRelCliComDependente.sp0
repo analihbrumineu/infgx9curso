@@ -4,7 +4,7 @@ struct_i(3,1,[],[]).
 struct_i(4,3,[ 13 ],[]).
  
 level_i(3,[ 1,[ [ 1,many ] ],[],[],[ [ [ 1 ],[ 13,48,83,14 ] ] ],[ [ [ 1 ],[] ] ],[ 13 ],'ICLIENTE',[],[] ]).
-level_i(4,[ 2,[ [ 2,many ],[ 514,one ] ],[],[],[ [ [ 2,514 ],[ 13,46,47 ] ] ],[ [ [ 2,514 ],[] ] ],[ 47 ],'',[],[] ]).
+level_i(4,[ 2,[ [ 2,many ],[ 514,one ] ],[],[],[ [ [ 2,514 ],[ 13,47,46 ] ] ],[ [ [ 2,514 ],[] ] ],[ 47 ],'',[],[] ]).
  
 tw_i(3,[]).
 tw_i(4,[ [ 514,[ [ 2,46,13 ] ] ] ]).
@@ -17,10 +17,10 @@ lwi_i(4,[ [ c([ t(13,2),t(=,10),t(13,23) ],[ 13 ]) ] ]).
 level_option_i(3,usr_condition,y).
  
 ta_i(3,[ [ [ 1,13 ],[ 1,83 ],[ 1,14 ] ] ]).
-ta_i(4,[ [ [ 2,13 ],[ 2,46 ],[ 514,47 ] ] ]).
+ta_i(4,[ [ [ 2,46 ],[ 2,13 ],[ 514,47 ] ] ]).
  
 las_i(3,[ [ 13,48,83,14 ] ]).
-las_i(4,[ [ 13,46,47 ] ]).
+las_i(4,[ [ 13,47,46 ] ]).
  
 lac_i(3,[ [] ]).
 lac_i(4,[ [] ]).
@@ -182,8 +182,8 @@ v_i(f,o,5,'Pgmdesc').
 v_i(f,i,6,[]).
 v_i(f,o,6,'Err').
 v_i(t,i,7,[]).
-v_i(t,o,7,13).
 v_i(t,o,7,46).
+v_i(t,o,7,13).
 v_i(r,i,8,46).
 v_i(r,o,8,47).
 v_i(f,i,9,13).
@@ -204,12 +204,12 @@ ca_i(2,'Page').
  
 attri_i('Outdev',[ 'Gx_dev',char,1,0,!,1,'','',25 ]).
 attri_i('Output',[ 'Gx_out',char,3,0,'',1,'','',24 ]).
+attri_i(46,[ 'PesDepCodigo',int,9,0,'ZZZZZZZZ9',0,'Código do dependente','',0 ]).
 attri_i('Line',[ 'Gx_line',int,6,0,'ZZZZZ9',0,'Line number','',23 ]).
 attri_i(48,[ 'PesDepTotal',int,9,0,'ZZZZZZZZ9',0,'Total de dependentes','',0 ]).
 attri_i(83,[ 'Depende',int,1,0,'9',0,'Esse cliente é dependente de outro?','',0 ]).
 attri_i(14,[ 'PesNome',svchar,50,0,'@!',0,'Nome da pessoa','',0 ]).
 attri_i(13,[ 'PesCodigo',int,9,0,'ZZZZZZZZ9',0,'Código da pessoa','',0 ]).
-attri_i(46,[ 'PesDepCodigo',int,9,0,'ZZZZZZZZ9',0,'Código do dependente','',0 ]).
 attri_i(47,[ 'PesDepNome',svchar,50,0,'@!',0,'Nome do dependente','',0 ]).
 attri_i('Page',[ 'Gx_page',int,6,0,'ZZZZZ9',0,'Page number','',20 ]).
 attri_i('Time',[ 'Gx_time',char,8,0,'',1,'','',19 ]).
@@ -256,7 +256,7 @@ map_i(514,a,46,[ 'PesCodigo' ]).
  
  
 break_i(2,page,1,[],[ [],[],[] ]).
-break_i(4,nvg,3,[ 47 ],[ [ 47,46 ],[],[] ]).
+break_i(4,nvg,3,[ 47 ],[ [ 47 ],[],[] ]).
 break_i(3,nvg,1,[ 13 ],[ [ 13,14,83,48 ],[ 13 ],[] ]).
 break_i(5,foot,1,[],[ [],[],[] ]).
 break_i(1,rpt,0,[],[ [],[],[] ]).
@@ -296,7 +296,7 @@ b_line_i(13,3,1,cmd,14,[]).
 b_line_i(14,3,1,cmd,14,[ t('',107,14,0),t('Clipesdeptotal',23,14,0),t(=,10,14,0),t('0',3,14,0) ]).
 b_line_i(15,3,1,cmd,14,[]).
 b_line_i(16,4,1,cmd,25,[ t('',121,16,0),t('ORDER',39,16,12),t(47,2,16,18) ]).
-b_line_i(17,4,1,cmd,25,[ t('',112,25,0),t(46,2,25,23) ]).
+b_line_i(17,4,1,cmd,25,[]).
 b_line_i(18,4,1,cmd,25,[ t('',141,25,0),t('''Acessando dependentes...''',3,18,16),t(',',7,25,42),t('Status',3,25,44),t(')',4,25,50) ]).
 b_line_i(19,4,1,cmd,25,[]).
 b_line_i(20,4,1,cmd,25,[ t('',107,25,0),t('Pesdepnome',23,25,0),t(=,10,25,0),t(47,2,25,0) ]).
@@ -431,15 +431,6 @@ att_prop_i(2,47,'AUTOGENERATE_GUID','0',d).
 att_prop_i(2,47,idDATEFORMAT,idDATEFORMAT_SHORT,d).
 att_prop_i(2,47,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
 att_prop_i(2,47,'FullName','PesDepNome',v).
-att_prop_i(2,46,'AUTONUMBER','-1',d).
-att_prop_i(2,46,'AUTONUMBER_START','1',d).
-att_prop_i(2,46,'AUTONUMBER_STEP','1',d).
-att_prop_i(2,46,'AUTONUMBER_FORREPLICATION','-1',d).
-att_prop_i(2,46,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,46,'AUTOGENERATE_GUID','0',d).
-att_prop_i(2,46,idDATEFORMAT,idDATEFORMAT_SHORT,d).
-att_prop_i(2,46,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
-att_prop_i(2,46,'FullName','PesDepCodigo',v).
 att_prop_i(2,13,'AUTONUMBER','-1',d).
 att_prop_i(2,13,'AUTONUMBER_START','1',d).
 att_prop_i(2,13,'AUTONUMBER_STEP','1',d).
@@ -475,6 +466,15 @@ att_prop_i(2,48,'AUTOGENERATE_GUID','0',d).
 att_prop_i(2,48,idDATEFORMAT,idDATEFORMAT_SHORT,d).
 att_prop_i(2,48,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
 att_prop_i(2,48,'FullName','PesDepTotal',v).
+att_prop_i(2,46,'AUTONUMBER','-1',d).
+att_prop_i(2,46,'AUTONUMBER_START','1',d).
+att_prop_i(2,46,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,46,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,46,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,46,'AUTOGENERATE_GUID','0',d).
+att_prop_i(2,46,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,46,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
+att_prop_i(2,46,'FullName','PesDepCodigo',v).
  
 tbl_prop_i(2,2,'AllDirSuper',[ [ 1,[ 13 ] ],[ 514,[ 46 ] ] ],v).
 tbl_prop_i(2,514,'DirSubor',[ [ 2,[ 13 ] ],[ 2,[ 46 ] ] ],v).

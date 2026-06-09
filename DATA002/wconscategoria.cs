@@ -2,7 +2,7 @@
                File: ConsCategoria
         Description: Consulta de categorias.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/9/2026 8:48:41.22
+       Generated on: 6/9/2026 11:37:36.52
        Program type: Callable routine
           Main DBMS: sqlserver
 */

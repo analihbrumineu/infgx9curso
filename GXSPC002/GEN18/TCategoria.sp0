@@ -211,11 +211,15 @@ v_i(t,i,2,32).
 v_i(t,o,2,33).
  
  
+tbl_to_delete_i(6,[ 13,[ [ 6,32,105 ] ],c,'ILOCACAOLOCACAOMIDIA1',[ [ 13,105 ] ],[ 86,102 ] ]).
 tbl_to_delete_i(6,[ 3,[ [ 6,32,32 ] ],c,'IFILME1',[ [ 3,32 ] ],[ 28 ] ]).
 tbl_to_delete_i(6,[ 11,[ [ 6,32,32 ] ],c,'ICONFTIPMIDIA1',[ [ 11,32 ] ],[ 35,32 ] ]).
  
  
  
+attri_i(102,[ 'LocMidMidCodigo',int,9,0,'ZZZZZZZZ9',0,'Código da mídia a ser locada','',0 ]).
+attri_i(86,[ 'LocCodigo',int,9,0,'ZZZZZZZZ9',0,'Código da locação','',0 ]).
+attri_i(105,[ 'LocMidCatCodigo',int,9,0,'ZZZZZZZZ9',0,'Código da categoria do filme a ser locado','',0 ]).
 attri_i(28,[ 'FilCodigo',int,9,0,'ZZZZZZZZ9',0,'Código do filme','',0 ]).
 attri_i(35,[ 'MidTipo',int,1,0,'9',0,'Tipo da mídia','',0 ]).
 attri_i(33,[ 'CatNome',svchar,50,0,'@!',0,'Nome da categoria do filme','',0 ]).
@@ -223,6 +227,7 @@ attri_i(32,[ 'CatCodigo',int,9,0,'ZZZZZZZZ9',0,'Código da categoria do filme',''
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'GxRemove','',6 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
+table_i(13,[ 'LOCACAOLOCACAOMIDIA',[ 86,102,105 ],'Dados da mídia locada','LocacaoLocacaoMidia' ]).
 table_i(3,[ 'FILME',[ 28,32 ],'Cadastro de filmes.','Filme' ]).
 table_i(11,[ 'CONFTIPMIDIA',[ 35,32 ],'Configurações tipo de mídia.','ConfTipMidia' ]).
 table_i(6,[ 'CATEGORIA',[ 32,33 ],'Cadastro de categorias.','Categoria' ]).
@@ -232,6 +237,8 @@ index_i(11,[ 'ICONFTIPMIDIA',u,[ 35,32 ],'IConfTipMidia' ]).
 index_i(11,[ 'ICONFTIPMIDIA1',d,[ 32 ],'IConfTipMidia1' ]).
 index_i(3,[ 'IFILME',u,[ 28 ],'IFilme' ]).
 index_i(3,[ 'IFILME1',d,[ 32 ],'IFilme1' ]).
+index_i(13,[ 'ILOCACAOLOCACAOMIDIA',u,[ 86,102 ],'ILocacaoLocacaoMidia' ]).
+index_i(13,[ 'ILOCACAOLOCACAOMIDIA1',d,[ 105 ],'ILocacaoLocacaoMidia1' ]).
  
  
  
@@ -342,11 +349,38 @@ att_prop_i(2,28,'AUTOGENERATE_GUID','0',d).
 att_prop_i(2,28,idDATEFORMAT,idDATEFORMAT_SHORT,d).
 att_prop_i(2,28,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
 att_prop_i(2,28,'FullName','FilCodigo',v).
+att_prop_i(2,105,'AUTONUMBER','-1',d).
+att_prop_i(2,105,'AUTONUMBER_START','1',d).
+att_prop_i(2,105,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,105,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,105,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,105,'AUTOGENERATE_GUID','0',d).
+att_prop_i(2,105,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,105,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
+att_prop_i(2,105,'FullName','LocMidCatCodigo',v).
+att_prop_i(2,86,'AUTONUMBER','-1',d).
+att_prop_i(2,86,'AUTONUMBER_START','1',d).
+att_prop_i(2,86,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,86,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,86,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,86,'AUTOGENERATE_GUID','0',d).
+att_prop_i(2,86,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,86,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
+att_prop_i(2,86,'FullName','LocCodigo',v).
+att_prop_i(2,102,'AUTONUMBER','-1',d).
+att_prop_i(2,102,'AUTONUMBER_START','1',d).
+att_prop_i(2,102,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,102,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,102,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,102,'AUTOGENERATE_GUID','0',d).
+att_prop_i(2,102,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,102,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
+att_prop_i(2,102,'FullName','LocMidMidCodigo',v).
  
 tbl_prop_i(2,3,'AllDirSuper',[ [ 6,[ 32 ] ] ],v).
 tbl_prop_i(2,11,'AllDirSuper',[ [ 6,[ 32 ] ] ],v).
 tbl_prop_i(2,3,'DirSuperNull',[ [ 6,[ 32 ] ] ],v).
-tbl_prop_i(2,6,'DirSubor',[ [ 11,[ 32 ] ],[ 3,[ 32 ] ] ],v).
+tbl_prop_i(2,6,'DirSubor',[ [ 11,[ 32 ] ],[ 3,[ 32 ] ],[ 13,[ 105 ] ] ],v).
 tbl_prop_i(2,3,'DirSuper',[ [ 6,[ 32 ] ] ],v).
 tbl_prop_i(2,11,'DirSuper',[ [ 6,[ 32 ] ] ],v).
  
@@ -356,6 +390,8 @@ tbl_att_prop_i(2,11,35,'AllowNulls',n).
 tbl_att_prop_i(2,11,32,'AllowNulls',n).
 tbl_att_prop_i(2,3,28,'AllowNulls',n).
 tbl_att_prop_i(2,3,28,'AUTONUMBER',y).
+tbl_att_prop_i(2,13,86,'AllowNulls',n).
+tbl_att_prop_i(2,13,102,'AllowNulls',n).
  
  
  

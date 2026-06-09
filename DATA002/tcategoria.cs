@@ -2,7 +2,7 @@
                File: Categoria
         Description: Cadastro de categorias.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/9/2026 8:48:35.16
+       Generated on: 6/9/2026 11:37:30.54
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -1061,7 +1061,7 @@ namespace GeneXus.Programs {
             pr_default.execute(10, new Object[] {n32CatCodi, A32CatCodi});
             if ( (pr_default.getStatus(10) != 101) )
             {
-               pushError( GXResourceManager.GetMessage("del", new   object[]  {"Cadastro de filmes."}) );
+               pushError( GXResourceManager.GetMessage("del", new   object[]  {"Dados da mídia locada"}) );
                AnyError = 1 ;
                keepFocus();
             }
@@ -1070,11 +1070,20 @@ namespace GeneXus.Programs {
             pr_default.execute(11, new Object[] {n32CatCodi, A32CatCodi});
             if ( (pr_default.getStatus(11) != 101) )
             {
-               pushError( GXResourceManager.GetMessage("del", new   object[]  {"Configurações tipo de mídia."}) );
+               pushError( GXResourceManager.GetMessage("del", new   object[]  {"Cadastro de filmes."}) );
                AnyError = 1 ;
                keepFocus();
             }
             pr_default.close(11);
+            /* Using cursor T000314 */
+            pr_default.execute(12, new Object[] {n32CatCodi, A32CatCodi});
+            if ( (pr_default.getStatus(12) != 101) )
+            {
+               pushError( GXResourceManager.GetMessage("del", new   object[]  {"Configurações tipo de mídia."}) );
+               AnyError = 1 ;
+               keepFocus();
+            }
+            pr_default.close(12);
          }
       }
 
@@ -1106,10 +1115,10 @@ namespace GeneXus.Programs {
 
       protected void ScanStart036( )
       {
-         /* Using cursor T000314 */
-         pr_default.execute(12, new Object[] {n32CatCodi, A32CatCodi});
+         /* Using cursor T000315 */
+         pr_default.execute(13, new Object[] {n32CatCodi, A32CatCodi});
          RcdFound6 = 0 ;
-         if ( (pr_default.getStatus(12) != 101) )
+         if ( (pr_default.getStatus(13) != 101) )
          {
             RcdFound6 = 1 ;
          }
@@ -1118,9 +1127,9 @@ namespace GeneXus.Programs {
 
       protected void ScanNext036( )
       {
-         pr_default.readNext(12);
+         pr_default.readNext(13);
          RcdFound6 = 0 ;
-         if ( (pr_default.getStatus(12) != 101) )
+         if ( (pr_default.getStatus(13) != 101) )
          {
             RcdFound6 = 1 ;
          }
@@ -1128,7 +1137,7 @@ namespace GeneXus.Programs {
 
       protected void ScanEnd036( )
       {
-         pr_default.close(12);
+         pr_default.close(13);
       }
 
       protected void AfterConfirm036( )
@@ -1243,12 +1252,14 @@ namespace GeneXus.Programs {
          T00032_n33CatNome = new bool[] {false} ;
          T00039_A32CatCodi = new int[1] ;
          T00039_n32CatCodi = new bool[] {false} ;
-         T000312_A28FilCodi = new int[1] ;
-         T000313_A35MidTipo = new short[1] ;
-         T000313_A32CatCodi = new int[1] ;
-         T000313_n32CatCodi = new bool[] {false} ;
+         T000312_A86LocCodi = new int[1] ;
+         T000312_A102LocMid = new int[1] ;
+         T000313_A28FilCodi = new int[1] ;
+         T000314_A35MidTipo = new short[1] ;
          T000314_A32CatCodi = new int[1] ;
          T000314_n32CatCodi = new bool[] {false} ;
+         T000315_A32CatCodi = new int[1] ;
+         T000315_n32CatCodi = new bool[] {false} ;
          K32CatCodi = 0 ;
          n32CatCodi = false ;
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.tcategoria__default(),
@@ -1281,13 +1292,16 @@ namespace GeneXus.Programs {
                , new Object[] {
                }
                , new Object[] {
-               T000312_A28FilCodi
+               T000312_A86LocCodi, T000312_A102LocMid
                }
                , new Object[] {
-               T000313_A35MidTipo, T000313_A32CatCodi
+               T000313_A28FilCodi
                }
                , new Object[] {
-               T000314_A32CatCodi
+               T000314_A35MidTipo, T000314_A32CatCodi
+               }
+               , new Object[] {
+               T000315_A32CatCodi
                }
             }
          );
@@ -1356,14 +1370,17 @@ namespace GeneXus.Programs {
       protected int[] T00039_A32CatCodi ;
       protected bool[] T00039_n32CatCodi ;
       protected IDataReader T000312 ;
-      protected int[] T000312_A28FilCodi ;
+      protected int[] T000312_A86LocCodi ;
+      protected int[] T000312_A102LocMid ;
       protected IDataReader T000313 ;
-      protected short[] T000313_A35MidTipo ;
-      protected int[] T000313_A32CatCodi ;
-      protected bool[] T000313_n32CatCodi ;
+      protected int[] T000313_A28FilCodi ;
       protected IDataReader T000314 ;
+      protected short[] T000314_A35MidTipo ;
       protected int[] T000314_A32CatCodi ;
       protected bool[] T000314_n32CatCodi ;
+      protected IDataReader T000315 ;
+      protected int[] T000315_A32CatCodi ;
+      protected bool[] T000315_n32CatCodi ;
    }
 
    public class tcategoria__default : DataStoreHelperBase, IDataStoreHelper
@@ -1385,6 +1402,7 @@ namespace GeneXus.Programs {
          ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[10])
          ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[11])
          ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[12])
+         ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[13])
        };
     }
 
@@ -1445,6 +1463,10 @@ namespace GeneXus.Programs {
           prmT000314 = new Object[] {
           new Object[] {"@CatCodigo",SqlDbType.Int,9,0}
           } ;
+          Object[] prmT000315 ;
+          prmT000315 = new Object[] {
+          new Object[] {"@CatCodigo",SqlDbType.Int,9,0}
+          } ;
           def= new GeneXus.Data.NTier.ADO.CursorDef[] {
               new GeneXus.Data.NTier.ADO.CursorDef("T00032", "SELECT [CatCodigo], [CatNome] FROM [CATEGORIA] WITH (UPDLOCK) WHERE [CatCodigo] = @CatCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT00032,1,0,true,true )
              ,new GeneXus.Data.NTier.ADO.CursorDef("T00033", "SELECT [CatCodigo], [CatNome] FROM [CATEGORIA] WITH (NOLOCK) WHERE [CatCodigo] = @CatCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT00033,1,0,true,true )
@@ -1456,9 +1478,10 @@ namespace GeneXus.Programs {
              ,new GeneXus.Data.NTier.ADO.CursorDef("T00039", "SELECT @@IDENTITY ",true, GxErrorMask.GX_NOMASK, false, this,prmT00039,1,0,true,true )
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000310", "UPDATE [CATEGORIA] SET [CatNome]=@CatNome  WHERE [CatCodigo] = @CatCodigo", GxErrorMask.GX_NOMASK,prmT000310)
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000311", "DELETE FROM [CATEGORIA]  WHERE [CatCodigo] = @CatCodigo", GxErrorMask.GX_NOMASK,prmT000311)
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000312", "SELECT TOP 1 [FilCodigo] FROM [FILME] WITH (NOLOCK) WHERE [CatCodigo] = @CatCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000312,1,0,true,true )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000313", "SELECT TOP 1 [MidTipo], [CatCodigo] FROM [CONFTIPMIDIA] WITH (NOLOCK) WHERE [CatCodigo] = @CatCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000313,1,0,true,true )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000314", "SELECT [CatCodigo] FROM [CATEGORIA] WITH (NOLOCK) WHERE [CatCodigo] = @CatCodigo ORDER BY [CatCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000314,100,0,true,true )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000312", "SELECT TOP 1 [LocCodigo], [LocMidMidCodigo] FROM [LOCACAOLOCACAOMIDIA] WITH (NOLOCK) WHERE [LocMidCatCodigo] = @CatCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000312,1,0,true,true )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000313", "SELECT TOP 1 [FilCodigo] FROM [FILME] WITH (NOLOCK) WHERE [CatCodigo] = @CatCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000313,1,0,true,true )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000314", "SELECT TOP 1 [MidTipo], [CatCodigo] FROM [CONFTIPMIDIA] WITH (NOLOCK) WHERE [CatCodigo] = @CatCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000314,1,0,true,true )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000315", "SELECT [CatCodigo] FROM [CATEGORIA] WITH (NOLOCK) WHERE [CatCodigo] = @CatCodigo ORDER BY [CatCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000315,100,0,true,true )
           };
        }
     }
@@ -1498,12 +1521,16 @@ namespace GeneXus.Programs {
                 break;
              case 10 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
+                ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 break;
              case 11 :
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
+                break;
+             case 12 :
                 ((short[]) buf[0])[0] = rslt.getShort(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
                 break;
-             case 12 :
+             case 13 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 break;
        }
@@ -1634,6 +1661,16 @@ namespace GeneXus.Programs {
                 }
                 break;
              case 12 :
+                if ( (bool)parms[0] )
+                {
+                   stmt.setNull( 1 , SqlDbType.Int );
+                }
+                else
+                {
+                   stmt.SetParameter(1, (int)parms[1]);
+                }
+                break;
+             case 13 :
                 if ( (bool)parms[0] )
                 {
                    stmt.setNull( 1 , SqlDbType.Int );

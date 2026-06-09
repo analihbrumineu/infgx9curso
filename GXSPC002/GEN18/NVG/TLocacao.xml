@@ -659,10 +659,6 @@
 <AttriName>LocMidFilNome</AttriName>
 <Description>Nome do filme a ser locado</Description></Attribute>
 <Attribute>
-<AttriId>105</AttriId>
-<AttriName>LocMidCatCodigo</AttriName>
-<Description>Código da categoria do filme a ser locado</Description></Attribute>
-<Attribute>
 <AttriId>106</AttriId>
 <AttriName>LocMidMidTipo</AttriName>
 <Description>Tipo da mídia a ser locada</Description></Attribute>
@@ -673,7 +669,11 @@
 <Attribute>
 <AttriId>109</AttriId>
 <AttriName>LocMidMidConfValor</AttriName>
-<Description>Valor da configuração da mídia a ser locada</Description></Attribute></Into></Action></BaseTableRule>
+<Description>Valor da configuração da mídia a ser locada</Description></Attribute>
+<Attribute>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute></Into></Action></BaseTableRule>
 <StandAloneWithModeRules></StandAloneWithModeRules>
 <Rules>
 <Action>
@@ -730,7 +730,39 @@
 <AttriName>LocMidMidConfValor</AttriName>
 <Description>Valor da configuração da mídia a ser locada</Description></Attribute>
 <Token>&lt;</Token>
-<Token>0</Token></Condition></Action></Rules>
+<Token>0</Token></Condition></Action>
+<Action>
+<ActionType>ReadTable</ActionType>
+<JoinType>Outer</JoinType>
+<Table>
+<TableId>6</TableId>
+<TableName>CATEGORIA</TableName>
+<Description>Cadastro de categorias.</Description></Table>
+<JoinConditions>
+<Table>
+<TableId>6</TableId>
+<TableName>CATEGORIA</TableName>
+<Description>Cadastro de categorias.</Description></Table>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>CatCodigo</AttriName>
+<Description>Código da categoria do filme</Description></Attribute></AttributeTo>
+<Table>
+<TableId>13</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Dados da mídia locada</Description></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
+<Into>
+<Attribute>
+<AttriId>118</AttriId>
+<AttriName>LocMidCatNome</AttriName>
+<Description>Nome da categoria do filme a ser locado</Description></Attribute></Into></Action></Rules>
 <BeforeConfirmRules></BeforeConfirmRules>
 <AfterConfirmRules></AfterConfirmRules>
 <TablesToUpdate>
@@ -754,10 +786,6 @@
 <AttriName>LocMidFilNome</AttriName>
 <Description>Nome do filme a ser locado</Description></Attribute>
 <Attribute>
-<AttriId>105</AttriId>
-<AttriName>LocMidCatCodigo</AttriName>
-<Description>Código da categoria do filme a ser locado</Description></Attribute>
-<Attribute>
 <AttriId>106</AttriId>
 <AttriName>LocMidMidTipo</AttriName>
 <Description>Tipo da mídia a ser locada</Description></Attribute>
@@ -772,7 +800,11 @@
 <Attribute>
 <AttriId>102</AttriId>
 <AttriName>LocMidMidCodigo</AttriName>
-<Description>Código da mídia a ser locada</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<Description>Código da mídia a ser locada</Description></Attribute>
+<Attribute>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute></AttrisToUpdate></TableToUpdate>
 <TableToUpdate>
 <Table>
 <TableId>13</TableId>
@@ -789,10 +821,6 @@
 <AttriName>LocMidFilNome</AttriName>
 <Description>Nome do filme a ser locado</Description></Attribute>
 <Attribute>
-<AttriId>105</AttriId>
-<AttriName>LocMidCatCodigo</AttriName>
-<Description>Código da categoria do filme a ser locado</Description></Attribute>
-<Attribute>
 <AttriId>106</AttriId>
 <AttriName>LocMidMidTipo</AttriName>
 <Description>Tipo da mídia a ser locada</Description></Attribute>
@@ -803,7 +831,11 @@
 <Attribute>
 <AttriId>109</AttriId>
 <AttriName>LocMidMidConfValor</AttriName>
-<Description>Valor da configuração da mídia a ser locada</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<Description>Valor da configuração da mídia a ser locada</Description></Attribute>
+<Attribute>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute></AttrisToUpdate></TableToUpdate>
 <TableToUpdate>
 <Table>
 <TableId>13</TableId>

@@ -2,7 +2,7 @@
                File: RelTopDeLisDevPorCliente
         Description: Relatório do total de devoluções por cliente.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/9/2026 8:48:34.69
+       Generated on: 6/9/2026 11:37:29.84
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -304,7 +304,7 @@ namespace GeneXus.Programs {
                getPrinter().GxDrawLine(26, Gx_line+194, 650, Gx_line+194, 1, 0, 0, 0, 0) ;
                getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
                getPrinter().GxDrawText(StringUtil.Format( (decimal)(Gx_page), "ZZZZZ9"), 606, Gx_line+26, 657, Gx_line+41, 2) ;
-               getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV29Pgmdes, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")), 182, Gx_line+20, 506, Gx_line+35, 0) ;
+               getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV29Pgmdes, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")), 143, Gx_line+20, 506, Gx_line+35, 0) ;
                getPrinter().GxDrawText(StringUtil.Format( Gx_date, "99/99/99"), 611, Gx_line+0, 666, Gx_line+15, 0+256) ;
                getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( Gx_time, "XXXXXXXX")), 611, Gx_line+13, 666, Gx_line+28, 0+256) ;
                getPrinter().GxDrawText(StringUtil.Format( AV8DatInic, "99/99/9999"), 65, Gx_line+91, 134, Gx_line+106, 0+256) ;

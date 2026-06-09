@@ -155,6 +155,16 @@
 <AfterDeleteRules></AfterDeleteRules>
 <TablesToControlOnDelete>
 <Table>
+<TableId>13</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Dados da mídia locada</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute></KeyAttributes></Table>
+<Table>
 <TableId>3</TableId>
 <TableName>FILME</TableName>
 <Description>Cadastro de filmes.</Description>

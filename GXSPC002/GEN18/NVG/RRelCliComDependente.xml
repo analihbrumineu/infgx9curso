@@ -223,13 +223,13 @@
 <Description>Código do dependente</Description></Attribute></KeyAttributes>
 <Into>
 <Attribute>
-<AttriId>13</AttriId>
-<AttriName>PesCodigo</AttriName>
-<Description>Código da pessoa</Description></Attribute>
-<Attribute>
 <AttriId>46</AttriId>
 <AttriName>PesDepCodigo</AttriName>
-<Description>Código do dependente</Description></Attribute></Into>
+<Description>Código do dependente</Description></Attribute>
+<Attribute>
+<AttriId>13</AttriId>
+<AttriName>PesCodigo</AttriName>
+<Description>Código da pessoa</Description></Attribute></Into>
 <Tables>
 <Table>
 <TableId>1</TableId>

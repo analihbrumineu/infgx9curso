@@ -1,23 +1,27 @@
 
 <AttriList>
 <Attribute>
-  <AttriName>LocDatDevolucao</AttriName>
-  <AttriShortName>LocDatDevolucao</AttriShortName>
-  <AttriId>89</AttriId>
-  <AttriDesc>Data da devolução</AttriDesc>
-  <Type>D</Type>
-  <TypeStr>D(8)</TypeStr>
-  <Picture>99/99/9999</Picture>
+  <AttriName>LocMidCatCodigo</AttriName>
+  <AttriShortName>LocMidCatCodigo</AttriShortName>
+  <AttriId>105</AttriId>
+  <AttriDesc>Código da categoria do filme a ser locado</AttriDesc>
+  <Type>N</Type>
+  <TypeStr>N(9)</TypeStr>
+  <Length>9</Length>
+  <Decimals>0</Decimals>
+  <Picture>ZZZZZZZZ9</Picture>
   <Domain>
     <Attribute>
-      <AttriName>Data</AttriName>
-      <AttriShortName>Data</AttriShortName>
-      <AttriId>6</AttriId>
-      <AttriDesc>Data</AttriDesc>
+      <AttriName>Codigo</AttriName>
+      <AttriShortName>Codigo</AttriShortName>
+      <AttriId>2</AttriId>
+      <AttriDesc>Código</AttriDesc>
       <AttriIsDomain/>
-      <Type>D</Type>
-      <TypeStr>D(8)</TypeStr>
-      <Picture>99/99/9999</Picture>
+      <Type>N</Type>
+      <TypeStr>N(9)</TypeStr>
+      <Length>9</Length>
+      <Decimals>0</Decimals>
+      <Picture>ZZZZZZZZ9</Picture>
     </Attribute>
   </Domain>
 </Attribute>
@@ -63,10 +67,10 @@ Sorted: Yes
          <ObjXRef>
 <Object>
   <ObjCls>7</ObjCls>
-  <ObjId>12</ObjId>
-  <ObjName>Locacao</ObjName>
-  <ObjShortName>Locacao</ObjShortName>
-  <ObjTitle>Cadastro de locações.</ObjTitle>
+  <ObjId>13</ObjId>
+  <ObjName>LocacaoLocacaoMidia</ObjName>
+  <ObjShortName>LocacaoLocacaoMidia</ObjShortName>
+  <ObjTitle>Dados da mídia locada</ObjTitle>
 </Object>
 
             <ObjXRefParts>
@@ -100,43 +104,31 @@ Sorted: Yes
 </Object>
 
             <ObjXRefParts>
-               <ObjPart>Rules</ObjPart>
-               <ObjPart>Form</ObjPart>
-            </ObjXRefParts>
-         </ObjXRef>
-         <ObjXRef>
-<Object>
-  <ObjCls>1</ObjCls>
-  <ObjId>17</ObjId>
-  <ObjName>AtzLocacao</ObjName>
-  <ObjShortName>AtzLocacao</ObjShortName>
-  <ObjTitle>Atualizar locação</ObjTitle>
-</Object>
-
-            <ObjXRefParts>
-               <ObjPart>Subroutine</ObjPart>
+               <ObjPart>Events</ObjPart>
+               <ObjPart>Variable</ObjPart>
             </ObjXRefParts>
          </ObjXRef>
          <ObjXRef>
 <Object>
   <ObjCls>2</ObjCls>
-  <ObjId>24</ObjId>
-  <ObjName>RelTopDeLisDevPorCliente</ObjName>
-  <ObjShortName>RelTopDeLisDevPorCliente</ObjShortName>
-  <ObjTitle>Relatório do total de devoluções por cliente.</ObjTitle>
+  <ObjId>26</ObjId>
+  <ObjName>RelTopDeLisDevPorCategoria</ObjName>
+  <ObjShortName>RelTopDeLisDevPorCategoria</ObjShortName>
+  <ObjTitle>Relatório de topo de lista de devoluções por categoria.</ObjTitle>
 </Object>
 
             <ObjXRefParts>
                <ObjPart>Subroutine</ObjPart>
+               <ObjPart>Variable</ObjPart>
             </ObjXRefParts>
          </ObjXRef>
          <ObjXRef>
 <Object>
   <ObjCls>12</ObjCls>
-  <ObjId>90</ObjId>
-  <ObjName>Gx00C0</ObjName>
-  <ObjShortName>Gx00C0</ObjShortName>
-  <ObjTitle>Lista de Seleção Cadastro de locações.</ObjTitle>
+  <ObjId>91</ObjId>
+  <ObjName>Gx00D1</ObjName>
+  <ObjShortName>Gx00D1</ObjShortName>
+  <ObjTitle>Lista de Seleção Dados da mídia locada</ObjTitle>
 </Object>
 
             <ObjXRefParts>
@@ -146,16 +138,15 @@ Sorted: Yes
          </ObjXRef>
          <ObjXRef>
 <Object>
-  <ObjCls>4</ObjCls>
-  <ObjId>93</ObjId>
-  <ObjName>MovDoCliente</ObjName>
-  <ObjShortName>MovDoCliente</ObjShortName>
-  <ObjTitle>Movimentos dos clientes e seus dependentes.</ObjTitle>
+  <ObjCls>26</ObjCls>
+  <ObjId>6</ObjId>
+  <ObjName>SDTCatDevolucao</ObjName>
+  <ObjShortName>SDTCatDevolucao</ObjShortName>
+  <ObjTitle>SDTCat Devolucao para relatórios.</ObjTitle>
 </Object>
 
             <ObjXRefParts>
-               <ObjPart>Events</ObjPart>
-               <ObjPart>Variable</ObjPart>
+               <ObjPart>Element</ObjPart>
             </ObjXRefParts>
          </ObjXRef>
       </Objects>

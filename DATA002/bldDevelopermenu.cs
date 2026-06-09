@@ -243,6 +243,12 @@ public class bldDevelopermenu : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\rreltopdelisdevporcliente.cs" ))
             return true;
+         if (checkTime(obj, cs_path + @"\rreltopdelisdevporfilmes.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\rreltopdelisdevporcategoria.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\rreltopdelisdevportipdemidia.cs" ))
+            return true;
       }
       if ( ( obj == @"bin\gxCommon.dll" ) )
       {

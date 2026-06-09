@@ -2,7 +2,7 @@
                File: ConsMidia
         Description: Consulta de mídias.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/9/2026 8:48:41.66
+       Generated on: 6/9/2026 11:37:36.98
        Program type: Callable routine
           Main DBMS: sqlserver
 */

@@ -35,14 +35,15 @@ namespace GeneXus.Programs {
       private decimal LocMidMidConfValor ;
       private int LocMidFilCodigo ;
       private int LocMidCatCodigo ;
+      private String LocMidCatNome ;
       private short LocMidMidSituacao ;
       private int LocMidMidLocCodigo ;
       private int ZLocMidFilCodigo ;
       private String ZLocMidFilNome ;
-      private int ZLocMidCatCodigo ;
       private short ZLocMidMidTipo ;
       private int ZLocMidMidLocCodigo ;
       private decimal ZLocMidMidConfValor ;
+      private int ZLocMidCatCodigo ;
       public int getLocMidMidCodigo( )
       {
          return LocMidMidCodigo ;
@@ -113,6 +114,16 @@ namespace GeneXus.Programs {
          LocMidCatCodigo = value;
       }
 
+      public String getLocMidCatNome( )
+      {
+         return LocMidCatNome ;
+      }
+
+      public void setLocMidCatNome( String value )
+      {
+         LocMidCatNome = value;
+      }
+
       public short getLocMidMidSituacao( )
       {
          return LocMidMidSituacao ;
@@ -153,16 +164,6 @@ namespace GeneXus.Programs {
          ZLocMidFilNome = value;
       }
 
-      public int getZLocMidCatCodigo( )
-      {
-         return ZLocMidCatCodigo ;
-      }
-
-      public void setZLocMidCatCodigo( int value )
-      {
-         ZLocMidCatCodigo = value;
-      }
-
       public short getZLocMidMidTipo( )
       {
          return ZLocMidMidTipo ;
@@ -193,6 +194,16 @@ namespace GeneXus.Programs {
          ZLocMidMidConfValor = value;
       }
 
+      public int getZLocMidCatCodigo( )
+      {
+         return ZLocMidCatCodigo ;
+      }
+
+      public void setZLocMidCatCodigo( int value )
+      {
+         ZLocMidCatCodigo = value;
+      }
+
       public override void clear( )
       {
          LocMidMidCodigo = 0 ;
@@ -201,14 +212,15 @@ namespace GeneXus.Programs {
          LocMidMidConfValor = 0M ;
          LocMidFilCodigo = 0 ;
          LocMidCatCodigo = 0 ;
+         LocMidCatNome = "" ;
          LocMidMidSituacao = 0 ;
          LocMidMidLocCodigo = 0 ;
          ZLocMidFilCodigo = 0 ;
          ZLocMidFilNome = "" ;
-         ZLocMidCatCodigo = 0 ;
          ZLocMidMidTipo = 0 ;
          ZLocMidMidLocCodigo = 0 ;
          ZLocMidMidConfValor = 0M ;
+         ZLocMidCatCodigo = 0 ;
       }
 
       public override int compareTo( GXSubfileElement element ,
@@ -248,7 +260,7 @@ namespace GeneXus.Programs {
 
       public override bool isEmpty( )
       {
-         return ( ( getLocMidMidCodigo() == 0 ) && ( String.CompareOrdinal(getLocMidFilNome().TrimEnd(' '), "".TrimEnd(' ') ) == 0 ) && ( getLocMidMidTipo() == 0 ) && ( getLocMidMidConfValor() == Convert.ToDecimal( 0M )) && ( getLocMidFilCodigo() == 0 ) && ( getLocMidCatCodigo() == 0 ) && ( getLocMidMidSituacao() == 0 ) && ( getLocMidMidLocCodigo() == 0 ) || insertedNotUserModified() )  ;
+         return ( ( getLocMidMidCodigo() == 0 ) && ( String.CompareOrdinal(getLocMidFilNome().TrimEnd(' '), "".TrimEnd(' ') ) == 0 ) && ( getLocMidMidTipo() == 0 ) && ( getLocMidMidConfValor() == Convert.ToDecimal( 0M )) && ( getLocMidFilCodigo() == 0 ) && ( getLocMidCatCodigo() == 0 ) && ( String.CompareOrdinal(getLocMidCatNome().TrimEnd(' '), "".TrimEnd(' ') ) == 0 ) && ( getLocMidMidSituacao() == 0 ) && ( getLocMidMidLocCodigo() == 0 ) || insertedNotUserModified() )  ;
       }
 
       public override void setColumn( GXComponent cell ,

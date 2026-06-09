@@ -67,6 +67,9 @@ called_program_i(4,62,2,9).
 called_program_i(4,65,2,11).
 called_program_i(4,65,2,12).
 called_program_i(4,94,2,24).
+called_program_i(4,94,2,25).
+called_program_i(4,94,2,26).
+called_program_i(4,94,2,27).
 called_program_i(17,1,4,57).
 called_program_i(17,1,4,12).
 called_program_i(17,1,4,11).
@@ -86,3 +89,6 @@ call_tree_built_i.
 sdt_map_i(18,'SDTFuncionario',[ 26,3,0 ]).
 sdt_map_i(18,'SDTCliDevolucao',[ 26,4,0 ]).
 sdt_map_i(18,'SDTCliDevolucao.SDTCliDevolucaoItem',[ 26,4,1 ]).
+sdt_map_i(18,'SDTFilDevolucao.SDTFilDevolucaoItem',[ 26,5,1 ]).
+sdt_map_i(18,'SDTCatDevolucao.SDTCatDevolucaoItem',[ 26,6,1 ]).
+sdt_map_i(18,'SDTMidTipRelatorio.SDTMidTipDevRelatorioItem',[ 26,7,1 ]).

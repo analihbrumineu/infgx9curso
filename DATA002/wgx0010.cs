@@ -2,7 +2,7 @@
                File: Gx0010
         Description: Lista de Seleção Cadastro de clientes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/9/2026 8:48:41.96
+       Generated on: 6/9/2026 11:37:37.27
        Program type: Callable routine
           Main DBMS: sqlserver
 */

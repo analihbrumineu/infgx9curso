@@ -2,7 +2,7 @@
                File: Funcionario
         Description: Cadastro de funcionários.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/9/2026 8:48:38.58
+       Generated on: 6/9/2026 11:37:33.93
        Program type: Callable routine
           Main DBMS: sqlserver
 */

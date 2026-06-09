@@ -2,7 +2,7 @@
                File: Gx0080
         Description: Lista de Seleção Cadastro de cidades.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/9/2026 8:48:42.30
+       Generated on: 6/9/2026 11:37:37.60
        Program type: Callable routine
           Main DBMS: sqlserver
 */

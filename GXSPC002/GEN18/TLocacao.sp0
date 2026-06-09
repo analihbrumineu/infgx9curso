@@ -3,10 +3,10 @@ spec_i([ trn,11,'Cadastro de locações.','Locacao',[],por,'9_0_6-009' ]).
 struct_i(12,0,[ 'Loctotvalor','Loccodigo','Mode' ],[]).
 struct_i(13,12,[ 'Loctotvalor',86 ],[]).
  
-level_i(13,[ 13,[ [ 13,many ],[ 520,one ] ],[ 86,102 ],[],[],[],[ 86,102 ],'ILOCACAOLOCACAOMIDIA',[ 13,[ [ [],86,86 ] ] ],[] ]).
+level_i(13,[ 13,[ [ 13,many ],[ 520,one ],[ 521,one ] ],[ 86,102 ],[],[],[],[ 86,102 ],'ILOCACAOLOCACAOMIDIA',[ 13,[ [ [],86,86 ] ] ],[] ]).
 level_i(12,[ 12,[ [ 12,many ],[ 517,one ],[ 518,one ] ],[ 86 ],[],[],[],[ 86 ],'ILOCACAO',[ 12,[] ],[] ]).
  
-tw_i(13,[ [ 520,[ [ 13,102,37 ] ] ] ]).
+tw_i(13,[ [ 520,[ [ 13,102,37 ] ] ],[ 521,[ [ 13,105,32 ] ] ] ]).
 tw_i(12,[ [ 517,[ [ 12,91,13 ] ] ],[ 518,[ [ 12,93,13 ] ] ] ]).
  
 lwi_i(13,[ [] ]).
@@ -15,10 +15,10 @@ lwi_i(12,[ [] ]).
  
  
  
-ta_i(13,[ [ [ 13,86 ],[ 13,103 ],[ 13,104 ],[ 13,105 ],[ 13,106 ],[ 520,107 ],[ 13,108 ],[ 13,109 ],[ 13,102 ] ] ]).
+ta_i(13,[ [ [ 13,86 ],[ 13,103 ],[ 13,104 ],[ 521,118 ],[ 13,106 ],[ 520,107 ],[ 13,108 ],[ 13,109 ],[ 13,102 ],[ 13,105 ] ] ]).
 ta_i(12,[ [ [ 12,86 ],[ 12,95 ],[ 12,87 ],[ 12,88 ],[ 12,89 ],[ 12,90 ],[ 517,92 ],[ 518,94 ],[ 12,91 ],[ 12,93 ] ] ]).
  
-las_i(13,[ [ 86,102,103,104,105,106,107,108,109 ] ]).
+las_i(13,[ [ 86,102,103,104,105,118,106,107,108,109 ] ]).
 las_i(12,[ [ 'Loctotvalor','Loccodigo','Mode',86,'Funcionario',95,'Today','GxBScreen',87,88,89,90,91,92,93,94,[ t('Funcionario',23),t('Pescodigo',3) ],[ t('Funcionario',23),t('Pesnome',3) ] ] ]).
  
 lac_i(13,[ [ 102 ] ]).
@@ -263,12 +263,14 @@ rule_i(12,rule([ a(1,[ t('''Um cliente deve ser informado!''',3) ]) ],[ t(91,2),
 rule_i(12,rule([ a(1,[ t('''Pelo menos uma mídia deve ser adicionada!''',3) ]) ],[ t('Loctotvalor',23),t(=,10),t('0',3),t('.OR.',9),t('null(',1),t('Loctotvalor',23),t(')',4) ],[ insert,update,delete ],[ 'Loctotvalor' ])).
 rule_i(12,rule([ a(19,[ [ 91 ],msg([ t('"Não existe ''Cliente da locação.''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 91 ])).
 rule_i(12,rule([ a(19,[ [ 93 ],msg([ t('"Não existe ''Vendedor da locação.''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 93 ])).
+rule_i(13,rule([ a(18,[ [ 105 ] ]) ],[],[ insert,update,delete ],[ 105 ])).
 rule_i(13,rule([ a(3,[ t(106,2) ]) ],[],[ insert,update,delete ],[ 106 ])).
 rule_i(13,rule([ a(3,[ t(107,2) ]) ],[],[ insert,update,delete ],[ 107 ])).
 rule_i(13,rule([ a(3,[ t(109,2) ]) ],[],[ insert,update,delete ],[ 109 ])).
 rule_i(13,rule([ a(3,[ t(104,2) ]) ],[],[ insert,update,delete ],[ 104 ])).
 rule_i(13,rule([ a(1,[ t('''A mídia selecionada não possui um valor (R$) cadastrado.''',3),t(+,5),t('newline(',1),t(')',4),t(+,5),t('''Favor, reportar a um gerente!''',3) ]) ],[ t('after(',1),t(109,2),t(')',4),t('.AND.',9),t(109,2),t(<,10),t('0',3) ],[ insert,update,delete ],[ 109 ])).
 rule_i(13,rule([ a(19,[ [ 102 ],msg([ t('"Não existe ''Loc Mid Mid Loc Codigo''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 102 ])).
+rule_i(13,rule([ a(19,[ [ 105 ],msg([ t('"Não existe ''Loc Mid Cat Codigo''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 105 ])).
 rule_i(0,rule([ a(22,[ '''Pesquisar''','''Pesquisar''','4' ]) ],[],[],[])).
  
 a_i(1,12,f,86,[],[ [],[ t('Loccodigo',23),t('IF',17),t('Mode',23),t(<>,10),t('''INS''',3),t(';',18) ] ]).
@@ -297,8 +299,9 @@ a_i(23,12,r,517,[],[ [ [ 12,91,13 ] ],'ICLIENTE',[] ]).
 a_i(24,12,r,518,[],[ [ [ 12,93,13 ] ],'ICLIENTE',[] ]).
 a_i(25,13,t,13,[],[ [ [ [],86,86 ],[ [],102,102 ] ],'ILOCACAOLOCACAOMIDIA',[] ]).
 a_i(26,13,r,520,[],[ [ [ 13,102,37 ] ],'IMIDIA',[] ]).
-a_i(27,12,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
-a_i(28,12,f,'GxBScreen',[],[ [],[ t('0',3) ] ]).
+a_i(27,13,r,521,[],[ [ [ 13,105,32 ] ],'ICATEGORIA',[] ]).
+a_i(28,12,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
+a_i(29,12,f,'GxBScreen',[],[ [],[ t('0',3) ] ]).
  
 v_i(f,i,1,'Loccodigo').
 v_i(f,i,1,'Mode').
@@ -363,16 +366,18 @@ v_i(t,i,25,86).
 v_i(t,i,25,102).
 v_i(t,o,25,103).
 v_i(t,o,25,104).
-v_i(t,o,25,105).
 v_i(t,o,25,106).
 v_i(t,o,25,108).
 v_i(t,o,25,109).
+v_i(t,o,25,105).
 v_i(r,i,26,102).
 v_i(r,o,26,107).
-v_i(f,i,27,[]).
-v_i(f,o,27,'Today').
+v_i(r,i,27,105).
+v_i(r,o,27,118).
 v_i(f,i,28,[]).
-v_i(f,o,28,'GxBScreen').
+v_i(f,o,28,'Today').
+v_i(f,i,29,[]).
+v_i(f,o,29,'GxBScreen').
  
 ca_i(13,94).
 ca_i(12,93).
@@ -385,6 +390,8 @@ tbl_to_delete_i(12,[ 13,[ [ 12,86,86 ] ],d,'ILOCACAOLOCACAOMIDIA',[ [ 13,86 ],[ 
  
  
 attri_i(107,[ 'LocMidMidSituacao',int,1,0,'9',0,'Situação da mídia a ser locada','',0 ]).
+attri_i(118,[ 'LocMidCatNome',svchar,50,0,'@!',0,'Nome da categoria do filme a ser locado','',0 ]).
+attri_i(32,[ 'CatCodigo',int,9,0,'ZZZZZZZZ9',0,'Código da categoria do filme','',0 ]).
 attri_i(37,[ 'MidCodigo',int,9,0,'ZZZZZZZZ9',0,'Código da mídia','',0 ]).
 attri_i(116,[ 'LocCodLocCodigo',int,9,0,'ZZZZZZZZ9',0,'Código da locação','',0 ]).
 attri_i(108,[ 'LocMidMidLocCodigo',int,9,0,'ZZZZZZZZ9',0,'Código da locação da mídia a ser locada','',0 ]).
@@ -435,6 +442,7 @@ table_i(518,[ 'PESSOA',[ 93,94 ],'Cadastro de pessoas.','Pessoa' ]).
 table_i(517,[ 'PESSOA',[ 91,92 ],'Cadastro de pessoas.','Pessoa' ]).
 table_i(12,[ 'LOCACAO',[ 86,87,88,89,90,91,93,95 ],'Cadastro de locações.','Locacao' ]).
 table_i(520,[ 'MIDIA',[ 102,107 ],'Cadastro de mídias.','Midia' ]).
+table_i(521,[ 'CATEGORIA',[ 105,118 ],'Cadastro de categorias.','Categoria' ]).
 table_i(13,[ 'LOCACAOLOCACAOMIDIA',[ 86,102,103,104,105,106,108,109 ],'Dados da mídia locada','LocacaoLocacaoMidia' ]).
  
 index_i(12,[ 'ILOCACAO',u,[ 86 ],'ILocacao' ]).
@@ -444,6 +452,7 @@ index_i(13,[ 'ILOCACAOLOCACAOMIDIA',u,[ 86,102 ],'ILocacaoLocacaoMidia' ]).
 index_i(9,[ 'IMIDIA',u,[ 37 ],'IMidia' ]).
 index_i(9,[ 'IMIDIA1',d,[ 116 ],'IMidia1' ]).
 index_i(520,[ 'IMIDIA',u,[ 102 ],'IMidia' ]).
+index_i(521,[ 'ICATEGORIA',u,[ 105 ],'ICategoria' ]).
  
  
  
@@ -452,8 +461,8 @@ upd_i(12,12,i,[ [ 95,87,88,89,90,91,93 ],[],'ILOCACAO',[ [ [],86,86 ] ] ]).
 upd_i(12,12,u,[ [ 95,87,88,89,90,91,93 ],[],'ILOCACAO',[] ]).
 upd_i(12,12,d,[ [],[],'ILOCACAO',[] ]).
 upd_i(12,518,u,[ [ 94 ],[],'ICLIENTE',[ [ 12,93,13 ] ] ]).
-upd_i(13,13,i,[ [ 86,103,104,105,106,108,109,102 ],[],'ILOCACAOLOCACAOMIDIA',[ [ [],86,86 ],[ [],102,102 ] ] ]).
-upd_i(13,13,u,[ [ 103,104,105,106,108,109 ],[],'ILOCACAOLOCACAOMIDIA',[] ]).
+upd_i(13,13,i,[ [ 86,103,104,106,108,109,102,105 ],[],'ILOCACAOLOCACAOMIDIA',[ [ [],86,86 ],[ [],102,102 ] ] ]).
+upd_i(13,13,u,[ [ 103,104,106,108,109,105 ],[],'ILOCACAOLOCACAOMIDIA',[] ]).
 upd_i(13,13,d,[ [],[],'ILOCACAOLOCACAOMIDIA',[] ]).
  
  
@@ -462,6 +471,8 @@ start_i(13,0,0,[ [ [ 86,2,86,= ] ],many ]).
 end_i(13,0,0,[ [ [ t(86,2),t(=,10),t(86,23) ] ] ]).
  
  
+map_i(521,a,118,[ 'CatNome' ]).
+map_i(521,a,105,[ 'CatCodigo' ]).
 map_i(520,a,107,[ 'MidSituacao' ]).
 map_i(520,a,102,[ 'MidCodigo' ]).
 map_i(518,a,94,[ 'PesNome' ]).
@@ -779,6 +790,14 @@ att_prop_i(2,94,'AUTOGENERATE_GUID','0',d).
 att_prop_i(2,94,idDATEFORMAT,idDATEFORMAT_SHORT,d).
 att_prop_i(2,94,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
 att_prop_i(2,94,'FullName','LocVenPesNome',v).
+att_prop_i(2,118,'AUTONUMBER_START','1',d).
+att_prop_i(2,118,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,118,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,118,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,118,'AUTOGENERATE_GUID','0',d).
+att_prop_i(2,118,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,118,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
+att_prop_i(2,118,'FullName','LocMidCatNome',v).
 att_prop_i(2,107,'AUTONUMBER','0',d).
 att_prop_i(2,107,'AUTONUMBER_START','1',d).
 att_prop_i(2,107,'AUTONUMBER_STEP','1',d).
@@ -824,17 +843,29 @@ att_prop_i(2,37,'AUTOGENERATE_GUID','0',d).
 att_prop_i(2,37,idDATEFORMAT,idDATEFORMAT_SHORT,d).
 att_prop_i(2,37,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
 att_prop_i(2,37,'FullName','MidCodigo',v).
+att_prop_i(2,32,'AUTONUMBER','-1',d).
+att_prop_i(2,32,'AUTONUMBER_START','1',d).
+att_prop_i(2,32,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,32,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,32,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,32,'AUTOGENERATE_GUID','0',d).
+att_prop_i(2,32,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,32,idHOURFORMAT,idHOURFORMAT_HOURMIN,d).
+att_prop_i(2,32,'FullName','CatCodigo',v).
  
-tbl_prop_i(2,13,'AllDirSuper',[ [ 520,[ 102 ] ],[ 12,[ 86 ] ] ],v).
+tbl_prop_i(2,13,'AllDirSuper',[ [ 521,[ 105 ] ],[ 520,[ 102 ] ],[ 12,[ 86 ] ] ],v).
 tbl_prop_i(2,12,'AllDirSuper',[ [ 517,[ 91 ] ],[ 518,[ 93 ] ] ],v).
+tbl_prop_i(2,13,'DirSuperNull',[ [ 521,[ 105 ] ] ],v).
 tbl_prop_i(2,12,'DirSuperNull',[ [ 517,[ 91 ] ],[ 518,[ 93 ] ] ],v).
+tbl_prop_i(2,6,'DirSubor',[ [ 13,[ 105 ] ] ],v).
+tbl_prop_i(2,521,'DirSubor',[ [ 13,[ 105 ] ] ],v).
 tbl_prop_i(2,520,'DirSubor',[ [ 13,[ 102 ] ] ],v).
 tbl_prop_i(2,9,'DirSubor',[ [ 13,[ 102 ] ] ],v).
 tbl_prop_i(2,518,'DirSubor',[ [ 12,[ 91 ] ],[ 12,[ 93 ] ] ],v).
 tbl_prop_i(2,1,'DirSubor',[ [ 12,[ 91 ] ],[ 12,[ 93 ] ] ],v).
 tbl_prop_i(2,517,'DirSubor',[ [ 12,[ 91 ] ],[ 12,[ 93 ] ] ],v).
 tbl_prop_i(2,12,'DirSubor',[ [ 13,[ 86 ] ],[ 9,[ 116 ] ] ],v).
-tbl_prop_i(2,13,'DirSuper',[ [ 520,[ 102 ] ],[ 12,[ 86 ] ] ],v).
+tbl_prop_i(2,13,'DirSuper',[ [ 521,[ 105 ] ],[ 520,[ 102 ] ],[ 12,[ 86 ] ] ],v).
 tbl_prop_i(2,12,'DirSuper',[ [ 517,[ 91 ] ],[ 518,[ 93 ] ] ],v).
 tbl_prop_i(2,1,'DKL_CHECK_INTEGRITY','UMPV',d).
 tbl_prop_i(2,1,'DKL_EXTERNAL_NAME','',d).
@@ -858,6 +889,7 @@ tbl_att_prop_i(2,13,102,'AllowNulls',n).
 tbl_att_prop_i(2,9,37,'AllowNulls',n).
 tbl_att_prop_i(2,9,37,'AUTONUMBER',y).
 tbl_att_prop_i(2,520,102,'AllowNulls',n).
+tbl_att_prop_i(2,521,105,'AllowNulls',n).
  
  
  
@@ -867,9 +899,11 @@ a_alias_i(93,'LocVenPesCodigo').
 a_alias_i(94,'LocVenPesNome').
 a_alias_i(102,'LocMidMidCodigo').
 a_alias_i(107,'LocMidMidSituacao').
+a_alias_i(105,'LocMidCatCodigo').
+a_alias_i(118,'LocMidCatNome').
  
 trn_level_i(12,[ [ 86,87,88,89,90,91,92,93,94,95 ],'Locacao','Cadastro de locações.','Locacao','',92 ]).
-trn_level_i(13,[ [ 102,103,104,105,106,107,108,109 ],'LocacaoMidia','Dados da mídia locada','Level1Item','',92 ]).
+trn_level_i(13,[ [ 102,103,104,105,118,106,107,108,109 ],'LocacaoMidia','Dados da mídia locada','Level1Item','',92 ]).
  
 struct_dt_i([ 26,3,0 ],name,'SDTFuncionario').
 struct_dt_i([ 26,3,0 ],'ObjId','0').

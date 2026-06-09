@@ -1,0 +1,14 @@
+current_obj_i(2,rpt,26).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(rreltopdelisdevporcategoria,[],[],[ type_SdtSDTCatDevolucao_SDTCatDevolucaoItem,'GxObjectCollection' ],26).
+ 
+ 
+obj_parms_i([ 'DateTime aP0_DatInicial','DateTime aP1_DatFinal','long aP2_Selecao' ],[ [ 'Datinicial',in ],[ 'Datfinal',in ],[ 'Selecao',in ] ]).
+ 
+ 
