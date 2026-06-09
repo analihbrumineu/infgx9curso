@@ -2,7 +2,7 @@
                File: RelTopDeLisDevPorCliente
         Description: Relatório do total de devoluções por cliente.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/8/2026 11:43:13.93
+       Generated on: 6/9/2026 8:48:34.69
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -150,16 +150,15 @@ namespace GeneXus.Programs {
             getPrinter().setM_top(M_top);
             getPrinter().setM_bot(M_bot);
             AV17AuxLoc = "" ;
-            AV29Contse = 0 ;
+            AV24Client = new GxObjectCollection( context, "SDTCliDevolucao.SDTCliDevolucaoItem", "AgoraVaiCurso", "SdtSDTCliDevolucao_SDTCliDevolucaoItem", "GeneXus.Programs") ;
             /* Using cursor R000O2 */
             pr_default.execute(0);
             while ( (pr_default.getStatus(0) != 101) )
             {
-               A91LocCliP = R000O2_A91LocCliP[0] ;
-               n91LocCliP = R000O2_n91LocCliP[0] ;
                A89LocDatD = R000O2_A89LocDatD[0] ;
                n89LocDatD = R000O2_n89LocDatD[0] ;
-               A86LocCodi = R000O2_A86LocCodi[0] ;
+               A91LocCliP = R000O2_A91LocCliP[0] ;
+               n91LocCliP = R000O2_n91LocCliP[0] ;
                A92LocCliP = R000O2_A92LocCliP[0] ;
                n92LocCliP = R000O2_n92LocCliP[0] ;
                A92LocCliP = R000O2_A92LocCliP[0] ;
@@ -170,51 +169,78 @@ namespace GeneXus.Programs {
                   {
                      if ( ( String.CompareOrdinal(AV17AuxLoc.TrimEnd(' '), "".TrimEnd(' ') ) != 0 ) )
                      {
-                        AV29Contse = (short)(AV29Contse+1) ;
-                        if ( ( AV29Contse == AV10Seleca ) )
-                        {
-                           /* Exit For each command. Update data (if necessary), close cursors & exit. */
-                           if (true) break;
-                        }
-                        H0O0( false, 15) ;
-                        getPrinter().GxDrawLine(52, Gx_line+12, 650, Gx_line+12, 1, 200, 200, 200, 0) ;
-                        getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-                        getPrinter().GxDrawText(StringUtil.Format( (decimal)(AV14TotDev), "ZZZZZZZZZ9"), 559, Gx_line+0, 628, Gx_line+15, 2+256) ;
-                        getPrinter().GxAttris("MS Sans Serif", 8, true, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-                        getPrinter().GxDrawText("Total", 507, Gx_line+0, 536, Gx_line+13, 0+256) ;
-                        Gx_OldLine = Gx_line ;
-                        Gx_line = (int)(Gx_line+15) ;
+                        AV24Client.Add(AV25Item, 0);
                      }
-                     AV12LocCli = A92LocCliP ;
-                     H0O0( false, 39) ;
-                     getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-                     getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV12LocCli, "@!")), 26, Gx_line+13, 246, Gx_line+28, 0) ;
-                     Gx_OldLine = Gx_line ;
-                     Gx_line = (int)(Gx_line+39) ;
+                     AV25Item = new SdtSDTCliDevolucao_SDTCliDevolucaoItem(context) ;
+                     AV25Item.gxTpr_Clidevlocclipescodigo = A91LocCliP ;
+                     AV25Item.gxTpr_Clidevlocclipesnome = A92LocCliP ;
+                     AV25Item.gxTpr_Clidevtotdevolucao = 0 ;
                      AV17AuxLoc = A92LocCliP ;
-                     AV14TotDev = 0 ;
                   }
-                  AV11LocCod = A86LocCodi ;
-                  H0O0( false, 16) ;
-                  getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-                  getPrinter().GxDrawText(StringUtil.Format( (decimal)(AV11LocCod), "ZZZZZZZZ9"), 260, Gx_line+0, 322, Gx_line+15, 2+256) ;
-                  Gx_OldLine = Gx_line ;
-                  Gx_line = (int)(Gx_line+16) ;
-                  AV14TotDev = (long)(AV14TotDev+1) ;
+                  AV25Item.gxTpr_Clidevtotdevolucao = (long)(AV25Item.gxTpr_Clidevtotdevolucao+1) ;
                }
                pr_default.readNext(0);
             }
             pr_default.close(0);
-            if ( ( String.CompareOrdinal(AV17AuxLoc.TrimEnd(' '), "".TrimEnd(' ') ) != 0 ) && ( AV31Contcl >= Convert.ToDecimal( AV29Contse )) )
+            if ( ( String.CompareOrdinal(AV17AuxLoc.TrimEnd(' '), "".TrimEnd(' ') ) != 0 ) )
             {
-               H0O0( false, 15) ;
-               getPrinter().GxDrawLine(52, Gx_line+12, 650, Gx_line+12, 1, 200, 200, 200, 0) ;
-               getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-               getPrinter().GxDrawText(StringUtil.Format( (decimal)(AV14TotDev), "ZZZZZZZZZ9"), 559, Gx_line+0, 628, Gx_line+15, 2+256) ;
-               getPrinter().GxAttris("MS Sans Serif", 8, true, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-               getPrinter().GxDrawText("Total", 507, Gx_line+0, 536, Gx_line+13, 0+256) ;
-               Gx_OldLine = Gx_line ;
-               Gx_line = (int)(Gx_line+15) ;
+               AV24Client.Add(AV25Item, 0);
+            }
+            AV24Client.Sort("[CliDevTotDevolucao]");
+            AV23ContSe = 0 ;
+            AV33GXV1 = 1 ;
+            while ( ( AV33GXV1 <= AV24Client.Count ) )
+            {
+               AV25Item = ((SdtSDTCliDevolucao_SDTCliDevolucaoItem)AV24Client.Item(AV33GXV1)) ;
+               if ( ( AV23ContSe < AV10Seleca ) )
+               {
+                  AV12LocCli = AV25Item.gxTpr_Clidevlocclipesnome ;
+                  H0O0( false, 39) ;
+                  getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
+                  getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV12LocCli, "@!")), 26, Gx_line+13, 246, Gx_line+28, 0) ;
+                  Gx_OldLine = Gx_line ;
+                  Gx_line = (int)(Gx_line+39) ;
+                  /* Using cursor R000O3 */
+                  pr_default.execute(1, new Object[] {AV12LocCli});
+                  while ( (pr_default.getStatus(1) != 101) )
+                  {
+                     A91LocCliP = R000O3_A91LocCliP[0] ;
+                     n91LocCliP = R000O3_n91LocCliP[0] ;
+                     A89LocDatD = R000O3_A89LocDatD[0] ;
+                     n89LocDatD = R000O3_n89LocDatD[0] ;
+                     A92LocCliP = R000O3_A92LocCliP[0] ;
+                     n92LocCliP = R000O3_n92LocCliP[0] ;
+                     A86LocCodi = R000O3_A86LocCodi[0] ;
+                     A92LocCliP = R000O3_A92LocCliP[0] ;
+                     n92LocCliP = R000O3_n92LocCliP[0] ;
+                     if ( ( A89LocDatD >= AV8DatInic ) && ( A89LocDatD <= AV9DatFina ) && ( A89LocDatD != DateTimeUtil.CToD( "0", 2) ) )
+                     {
+                        AV11LocCod = A86LocCodi ;
+                        H0O0( false, 16) ;
+                        getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
+                        getPrinter().GxDrawText(StringUtil.Format( (decimal)(AV11LocCod), "ZZZZZZZZ9"), 260, Gx_line+0, 322, Gx_line+15, 2+256) ;
+                        Gx_OldLine = Gx_line ;
+                        Gx_line = (int)(Gx_line+16) ;
+                     }
+                     pr_default.readNext(1);
+                  }
+                  pr_default.close(1);
+                  AV14TotDev = AV25Item.gxTpr_Clidevtotdevolucao ;
+                  H0O0( false, 15) ;
+                  getPrinter().GxDrawLine(52, Gx_line+12, 650, Gx_line+12, 1, 200, 200, 200, 0) ;
+                  getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
+                  getPrinter().GxDrawText(StringUtil.Format( (decimal)(AV14TotDev), "ZZZZZZZZZ9"), 559, Gx_line+0, 628, Gx_line+15, 2+256) ;
+                  getPrinter().GxAttris("MS Sans Serif", 8, true, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
+                  getPrinter().GxDrawText("Total", 507, Gx_line+0, 536, Gx_line+13, 0+256) ;
+                  Gx_OldLine = Gx_line ;
+                  Gx_line = (int)(Gx_line+15) ;
+                  AV23ContSe = (long)(AV23ContSe+1) ;
+               }
+               else
+               {
+                  if (true) break;
+               }
+               AV33GXV1 = (int)(AV33GXV1+1) ;
             }
             /* Print footer for last page */
             ToSkip = (int)(P_lines+1) ;
@@ -278,7 +304,7 @@ namespace GeneXus.Programs {
                getPrinter().GxDrawLine(26, Gx_line+194, 650, Gx_line+194, 1, 0, 0, 0, 0) ;
                getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
                getPrinter().GxDrawText(StringUtil.Format( (decimal)(Gx_page), "ZZZZZ9"), 606, Gx_line+26, 657, Gx_line+41, 2) ;
-               getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV26Pgmdes, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")), 182, Gx_line+20, 506, Gx_line+35, 0) ;
+               getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV29Pgmdes, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")), 182, Gx_line+20, 506, Gx_line+35, 0) ;
                getPrinter().GxDrawText(StringUtil.Format( Gx_date, "99/99/99"), 611, Gx_line+0, 666, Gx_line+15, 0+256) ;
                getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( Gx_time, "XXXXXXXX")), 611, Gx_line+13, 666, Gx_line+28, 0+256) ;
                getPrinter().GxDrawText(StringUtil.Format( AV8DatInic, "99/99/9999"), 65, Gx_line+91, 134, Gx_line+106, 0+256) ;
@@ -343,34 +369,46 @@ namespace GeneXus.Programs {
          ToSkip = 0 ;
          PrtOffset = 0 ;
          AV17AuxLoc = "" ;
-         AV29Contse = 0 ;
+         AV24Client = new GxObjectCollection( context, "SDTCliDevolucao.SDTCliDevolucaoItem", "AgoraVaiCurso", "SdtSDTCliDevolucao_SDTCliDevolucaoItem", "GeneXus.Programs");
          scmdbuf = "" ;
-         R000O2_A91LocCliP = new int[1] ;
-         R000O2_n91LocCliP = new bool[] {false} ;
+         R000O2_A86LocCodi = new int[1] ;
          R000O2_A89LocDatD = new DateTime[] {DateTime.MinValue} ;
          R000O2_n89LocDatD = new bool[] {false} ;
-         R000O2_A86LocCodi = new int[1] ;
+         R000O2_A91LocCliP = new int[1] ;
+         R000O2_n91LocCliP = new bool[] {false} ;
          R000O2_A92LocCliP = new String[] {""} ;
          R000O2_n92LocCliP = new bool[] {false} ;
-         A91LocCliP = 0 ;
-         n91LocCliP = false ;
          A89LocDatD = (DateTime)(DateTime.MinValue) ;
          n89LocDatD = false ;
-         A86LocCodi = 0 ;
+         A91LocCliP = 0 ;
+         n91LocCliP = false ;
          A92LocCliP = "" ;
          n92LocCliP = false ;
-         AV14TotDev = 0 ;
-         Gx_OldLine = 0 ;
+         AV25Item = new SdtSDTCliDevolucao_SDTCliDevolucaoItem(context);
+         AV23ContSe = 0 ;
+         AV33GXV1 = 0 ;
          AV12LocCli = "" ;
+         Gx_OldLine = 0 ;
+         R000O3_A91LocCliP = new int[1] ;
+         R000O3_n91LocCliP = new bool[] {false} ;
+         R000O3_A89LocDatD = new DateTime[] {DateTime.MinValue} ;
+         R000O3_n89LocDatD = new bool[] {false} ;
+         R000O3_A92LocCliP = new String[] {""} ;
+         R000O3_n92LocCliP = new bool[] {false} ;
+         R000O3_A86LocCodi = new int[1] ;
+         A86LocCodi = 0 ;
          AV11LocCod = 0 ;
-         AV31Contcl = (decimal)(0M) ;
-         AV26Pgmdes = "" ;
+         AV14TotDev = 0 ;
+         AV29Pgmdes = "" ;
          Gx_date = (DateTime)(DateTime.MinValue) ;
          Gx_time = "" ;
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.rreltopdelisdevporcliente__default(),
             new Object[][] {
                 new Object[] {
-               R000O2_A91LocCliP, R000O2_n91LocCliP, R000O2_A89LocDatD, R000O2_n89LocDatD, R000O2_A86LocCodi, R000O2_A92LocCliP, R000O2_n92LocCliP
+               R000O2_A86LocCodi, R000O2_A89LocDatD, R000O2_n89LocDatD, R000O2_A91LocCliP, R000O2_n91LocCliP, R000O2_A92LocCliP, R000O2_n92LocCliP
+               }
+               , new Object[] {
+               R000O3_A91LocCliP, R000O3_n91LocCliP, R000O3_A89LocDatD, R000O3_n89LocDatD, R000O3_A92LocCliP, R000O3_n92LocCliP, R000O3_A86LocCodi
                }
             }
          );
@@ -378,7 +416,7 @@ namespace GeneXus.Programs {
          Gx_line = 0 ;
          Gx_time = DateTimeUtil.Time( ) ;
          Gx_date = DateTimeUtil.Today( ) ;
-         AV26Pgmdes = "Relatório do total de devoluções por cliente." ;
+         AV29Pgmdes = "Relatório do total de devoluções por cliente." ;
          context.Gx_err = 0 ;
          if ( ( String.CompareOrdinal(Gx_dev.TrimEnd(' '), "S".TrimEnd(' ') ) == 0 ) )
          {
@@ -391,29 +429,29 @@ namespace GeneXus.Programs {
          askCanceled = !doAsk();
       }
 
-      private short AV29Contse ;
       private int M_top ;
       private int M_bot ;
       private int Line ;
       private int ToSkip ;
       private int PrtOffset ;
       private int A91LocCliP ;
-      private int A86LocCodi ;
+      private int AV33GXV1 ;
       private int Gx_OldLine ;
+      private int A86LocCodi ;
       private int AV11LocCod ;
       private long AV10Seleca ;
+      private long AV23ContSe ;
       private long AV14TotDev ;
-      private decimal AV31Contcl ;
       private String scmdbuf ;
-      private String AV26Pgmdes ;
+      private String AV29Pgmdes ;
       private String Gx_time ;
       private DateTime AV8DatInic ;
       private DateTime AV9DatFina ;
       private DateTime A89LocDatD ;
       private DateTime Gx_date ;
       private bool askCanceled ;
-      private bool n91LocCliP ;
       private bool n89LocDatD ;
+      private bool n91LocCliP ;
       private bool n92LocCliP ;
       private String AV17AuxLoc ;
       private String A92LocCliP ;
@@ -421,13 +459,23 @@ namespace GeneXus.Programs {
       private IGxDataStore dsDefault ;
       private IDataReader R000O2 ;
       private IDataStoreProvider pr_default ;
-      private int[] R000O2_A91LocCliP ;
-      private bool[] R000O2_n91LocCliP ;
+      private int[] R000O2_A86LocCodi ;
       private DateTime[] R000O2_A89LocDatD ;
       private bool[] R000O2_n89LocDatD ;
-      private int[] R000O2_A86LocCodi ;
+      private int[] R000O2_A91LocCliP ;
+      private bool[] R000O2_n91LocCliP ;
       private String[] R000O2_A92LocCliP ;
       private bool[] R000O2_n92LocCliP ;
+      private IDataReader R000O3 ;
+      private int[] R000O3_A91LocCliP ;
+      private bool[] R000O3_n91LocCliP ;
+      private DateTime[] R000O3_A89LocDatD ;
+      private bool[] R000O3_n89LocDatD ;
+      private String[] R000O3_A92LocCliP ;
+      private bool[] R000O3_n92LocCliP ;
+      private int[] R000O3_A86LocCodi ;
+      private GxObjectCollection AV24Client ;
+      private SdtSDTCliDevolucao_SDTCliDevolucaoItem AV25Item ;
    }
 
    public class rreltopdelisdevporcliente__default : DataStoreHelperBase, IDataStoreHelper
@@ -437,6 +485,7 @@ namespace GeneXus.Programs {
          cursorDefinitions();
          return new GeneXus.Data.NTier.ADO.Cursor[] {
           new GeneXus.Data.NTier.ADO.ForEachCursor(def[0])
+         ,new GeneXus.Data.NTier.ADO.ForEachCursor(def[1])
        };
     }
 
@@ -448,8 +497,13 @@ namespace GeneXus.Programs {
           Object[] prmR000O2 ;
           prmR000O2 = new Object[] {
           } ;
+          Object[] prmR000O3 ;
+          prmR000O3 = new Object[] {
+          new Object[] {"@AV12LocCli",SqlDbType.VarChar,50,0}
+          } ;
           def= new GeneXus.Data.NTier.ADO.CursorDef[] {
-              new GeneXus.Data.NTier.ADO.CursorDef("R000O2", "SELECT T1.[LocCliPesCodigo] AS LocCliPesCodigo, T1.[LocDatDevolucao], T1.[LocCodigo], T2.[PesNome] AS LocCliPesNome FROM ([LOCACAO] T1 WITH (NOLOCK) LEFT JOIN [PESSOA] T2 WITH (NOLOCK) ON T2.[PesCodigo] = T1.[LocCliPesCodigo]) ORDER BY T2.[PesNome] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmR000O2,100,0,false,false )
+              new GeneXus.Data.NTier.ADO.CursorDef("R000O2", "SELECT T1.[LocCodigo], T1.[LocDatDevolucao], T1.[LocCliPesCodigo] AS LocCliPesCodigo, T2.[PesNome] AS LocCliPesNome FROM ([LOCACAO] T1 WITH (NOLOCK) LEFT JOIN [PESSOA] T2 WITH (NOLOCK) ON T2.[PesCodigo] = T1.[LocCliPesCodigo]) ORDER BY T2.[PesNome] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmR000O2,100,0,false,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("R000O3", "SELECT T1.[LocCliPesCodigo] AS LocCliPesCodigo, T1.[LocDatDevolucao], T2.[PesNome] AS LocCliPesNome, T1.[LocCodigo] FROM ([LOCACAO] T1 WITH (NOLOCK) LEFT JOIN [PESSOA] T2 WITH (NOLOCK) ON T2.[PesCodigo] = T1.[LocCliPesCodigo]) WHERE T2.[PesNome] = @AV12LocCli ORDER BY T1.[LocCodigo] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmR000O3,100,0,false,false )
           };
        }
     }
@@ -462,12 +516,21 @@ namespace GeneXus.Programs {
        {
              case 0 :
                 ((int[]) buf[0])[0] = rslt.getInt(1) ;
+                ((DateTime[]) buf[1])[0] = rslt.getGXDate(2) ;
+                ((bool[]) buf[2])[0] = rslt.wasNull(2);
+                ((int[]) buf[3])[0] = rslt.getInt(3) ;
+                ((bool[]) buf[4])[0] = rslt.wasNull(3);
+                ((String[]) buf[5])[0] = rslt.getVarchar(4) ;
+                ((bool[]) buf[6])[0] = rslt.wasNull(4);
+                break;
+             case 1 :
+                ((int[]) buf[0])[0] = rslt.getInt(1) ;
                 ((bool[]) buf[1])[0] = rslt.wasNull(1);
                 ((DateTime[]) buf[2])[0] = rslt.getGXDate(2) ;
                 ((bool[]) buf[3])[0] = rslt.wasNull(2);
-                ((int[]) buf[4])[0] = rslt.getInt(3) ;
-                ((String[]) buf[5])[0] = rslt.getVarchar(4) ;
-                ((bool[]) buf[6])[0] = rslt.wasNull(4);
+                ((String[]) buf[4])[0] = rslt.getVarchar(3) ;
+                ((bool[]) buf[5])[0] = rslt.wasNull(3);
+                ((int[]) buf[6])[0] = rslt.getInt(4) ;
                 break;
        }
     }
@@ -478,6 +541,9 @@ namespace GeneXus.Programs {
     {
        switch ( cursor )
        {
+             case 1 :
+                stmt.SetParameter(1, (String)parms[0]);
+                break;
        }
     }
 

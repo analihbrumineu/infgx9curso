@@ -2,7 +2,7 @@
                File: RetFunLogDados
         Description: Retornar dados do funcionário logado.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/8/2026 11:43:13.22
+       Generated on: 6/9/2026 8:48:34.1
        Program type: Callable routine
           Main DBMS: sqlserver
 */

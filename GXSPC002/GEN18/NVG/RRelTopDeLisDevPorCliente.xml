@@ -11,13 +11,6 @@
 <Result>genreq</Result>
 <Warnings>
 <Warning>
-<MsgCode>spc0047</MsgCode>
-<Token>Variable </Token>
-<Token>Contselecao</Token>
-<Token> not defined; </Token>
-<Token>N(1.0)</Token>
-<Token> assumed.</Token></Warning>
-<Warning>
 <MsgCode>spc0038</MsgCode>
 <Token>There is no index for order </Token>
 <Attribute>
@@ -28,14 +21,7 @@
 <Token> in group starting at line </Token>
 <Token>10</Token>
 <Token></Token>
-<Token>.</Token></Warning>
-<Warning>
-<MsgCode>spc0047</MsgCode>
-<Token>Variable </Token>
-<Token>Contcliente</Token>
-<Token> not defined; </Token>
-<Token>N(10.2)</Token>
-<Token> assumed.</Token></Warning></Warnings>
+<Token>.</Token></Warning></Warnings>
 <Errors></Errors>
 <OutputDevices>
 <Device>Screen</Device>
@@ -113,6 +99,112 @@
 <Token>ctod(</Token>
 <Token>'0'</Token>
 <Token>)</Token></Condition></NonOptimizedWhere>
+<JoinLocation>1</JoinLocation>
+<NavigationTree>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>89</AttriId>
+<AttriName>LocDatDevolucao</AttriName>
+<Description>Data da devolução</Description></Attribute>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute></Into>
+<Tables>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>92</AttriId>
+<AttriName>LocCliPesNome</AttriName>
+<Description>Nome do cliente locatário</Description></Attribute></Into>
+<JoinType>Outer</JoinType>
+<Tables></Tables></Table></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<Levels></Levels></Level>
+<Level>
+<LevelNumber>4</LevelNumber>
+<Optimizations></Optimizations>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>63</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>ILOCACAO</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Token>FirstRecord</Token></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Token>NotEndOfTable</Token></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<Condition>
+<Attribute>
+<AttriId>89</AttriId>
+<AttriName>LocDatDevolucao</AttriName>
+<Description>Data da devolução</Description></Attribute>
+<Token>&gt;=</Token>
+<Variable>
+<VarId>Datinicial</VarId>
+<VarName>&amp;DatInicial</VarName></Variable>
+<Token>and</Token>
+<Attribute>
+<AttriId>89</AttriId>
+<AttriName>LocDatDevolucao</AttriName>
+<Description>Data da devolução</Description></Attribute>
+<Token>&lt;=</Token>
+<Variable>
+<VarId>Datfinal</VarId>
+<VarName>&amp;DatFinal</VarName></Variable>
+<Token>and</Token>
+<Attribute>
+<AttriId>89</AttriId>
+<AttriName>LocDatDevolucao</AttriName>
+<Description>Data da devolução</Description></Attribute>
+<Token>&lt;&gt;</Token>
+<Token>ctod(</Token>
+<Token>'0'</Token>
+<Token>)</Token></Condition>
+<Condition>
+<Attribute>
+<AttriId>92</AttriId>
+<AttriName>LocCliPesNome</AttriName>
+<Description>Nome do cliente locatário</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Locclipesnome</VarId>
+<VarName>&amp;LocCliPesNome</VarName></Variable></Condition></NonOptimizedWhere>
 <JoinLocation>1</JoinLocation>
 <NavigationTree>
 <Table>

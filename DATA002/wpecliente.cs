@@ -2,7 +2,7 @@
                File: PeCliente
         Description: Cadastro de clientes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/8/2026 11:43:22.33
+       Generated on: 6/9/2026 8:48:43.8
        Program type: Callable routine
           Main DBMS: sqlserver
 */

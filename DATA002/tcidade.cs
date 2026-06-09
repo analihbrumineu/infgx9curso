@@ -2,7 +2,7 @@
                File: Cidade
         Description: Cadastro de cidades.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/8/2026 11:43:14.64
+       Generated on: 6/9/2026 8:48:35.42
        Program type: Callable routine
           Main DBMS: sqlserver
 */

@@ -85,3 +85,4 @@ called_program_i(17,1,4,94).
 call_tree_built_i.
 sdt_map_i(18,'SDTFuncionario',[ 26,3,0 ]).
 sdt_map_i(18,'SDTCliDevolucao',[ 26,4,0 ]).
+sdt_map_i(18,'SDTCliDevolucao.SDTCliDevolucaoItem',[ 26,4,1 ]).

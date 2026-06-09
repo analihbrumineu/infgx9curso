@@ -11,13 +11,6 @@
 <Result>specfailed</Result>
 <Warnings>
 <Warning>
-<MsgCode>spc0047</MsgCode>
-<Token>Variable </Token>
-<Token>Contselecao</Token>
-<Token> not defined; </Token>
-<Token>N(1.0)</Token>
-<Token> assumed.</Token></Warning>
-<Warning>
 <MsgCode>spc0038</MsgCode>
 <Token>There is no index for order </Token>
 <Attribute>
@@ -26,7 +19,7 @@
 <Description>Nome do cliente locatário</Description></Attribute>
 <Token>; poor performance may be noticed</Token>
 <Token> in group starting at line </Token>
-<Token>11</Token>
+<Token>10</Token>
 <Token></Token>
 <Token>.</Token></Warning></Warnings>
 <Errors>
@@ -39,7 +32,7 @@
 <Description>Nome do cliente locatário</Description></Attribute>
 <Token></Token>
 <Token> in group starting at line </Token>
-<Token>11</Token>
+<Token>10</Token>
 <Token></Token>
 <Token>.</Token></Error></Errors>
 <OutputDevices>
@@ -70,7 +63,7 @@
 <LevelNumber>3</LevelNumber>
 <Optimizations></Optimizations>
 <LevelType>For Each</LevelType>
-<LevelBeginRow>23</LevelBeginRow>
+<LevelBeginRow>22</LevelBeginRow>
 <BaseTable>
 <Table>
 <TableId>12</TableId>
@@ -138,11 +131,7 @@
 <Attribute>
 <AttriId>89</AttriId>
 <AttriName>LocDatDevolucao</AttriName>
-<Description>Data da devolução</Description></Attribute>
-<Attribute>
-<AttriId>86</AttriId>
-<AttriName>LocCodigo</AttriName>
-<Description>Código da locação</Description></Attribute></Into>
+<Description>Data da devolução</Description></Attribute></Into>
 <Tables>
 <Table>
 <TableId>1</TableId>
