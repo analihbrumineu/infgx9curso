@@ -5,7 +5,7 @@
 <ObjCls>2</ObjCls>
 <ObjId>24</ObjId>
 <ObjName>RelTopDeLisDevPorCliente</ObjName>
-<ObjDesc>Relatório do total de devoluções por cliente.</ObjDesc>
+<ObjDesc>Relatório de topo de lista sobre total de devoluções por cliente.</ObjDesc>
 <ObjPgmName>RRelTopDeLisDevPorCliente</ObjPgmName>
 <ObjClsName>Report</ObjClsName></Object>
 <Result>genreq</Result>

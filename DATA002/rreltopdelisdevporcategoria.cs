@@ -2,7 +2,7 @@
                File: RelTopDeLisDevPorCategoria
         Description: Relatório de topo de lista de devoluções por categoria.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/9/2026 11:37:29.71
+       Generated on: 6/10/2026 8:22:47.27
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -150,7 +150,7 @@ namespace GeneXus.Programs {
             getPrinter().setM_top(M_top);
             getPrinter().setM_bot(M_bot);
             AV13AuxLoc = 0 ;
-            AV14Catego = new GxObjectCollection( context, "SDTCatDevolucao.SDTCatDevolucaoItem", "AgoraVaiCurso", "SdtSDTCatDevolucao_SDTCatDevolucaoItem", "GeneXus.Programs") ;
+            AV14Catego = new GxObjectCollection( context, "SDTCatRelatorio.SDTCatDevolucaoItem", "AgoraVaiCurso", "SdtSDTCatRelatorio_SDTCatDevolucaoItem", "GeneXus.Programs") ;
             /* Using cursor R000Q2 */
             pr_default.execute(0);
             while ( (pr_default.getStatus(0) != 101) )
@@ -175,10 +175,10 @@ namespace GeneXus.Programs {
                      {
                         AV14Catego.Add(AV15Item, 0);
                      }
-                     AV15Item = new SdtSDTCatDevolucao_SDTCatDevolucaoItem(context) ;
-                     AV15Item.gxTpr_Catdevlocmidcatcodigo = A105LocMid ;
-                     AV15Item.gxTpr_Catdevcatnome = A118LocMid ;
-                     AV15Item.gxTpr_Catdevtotdevolucao = 0 ;
+                     AV15Item = new SdtSDTCatRelatorio_SDTCatDevolucaoItem(context) ;
+                     AV15Item.gxTpr_Catrellocmidcatcodigo = A105LocMid ;
+                     AV15Item.gxTpr_Catrelcatnome = A118LocMid ;
+                     AV15Item.gxTpr_Catreltotal = 0 ;
                      AV13AuxLoc = A105LocMid ;
                   }
                   while ( (pr_default.getStatus(0) != 101) && ( R000Q2_A105LocMid[0] == A105LocMid ) )
@@ -191,7 +191,7 @@ namespace GeneXus.Programs {
                      n89LocDatD = R000Q2_n89LocDatD[0] ;
                      if ( ( A89LocDatD >= AV8DatInic ) && ( A89LocDatD <= AV9DatFina ) && ( A89LocDatD != DateTimeUtil.CToD( "0", 2) ) )
                      {
-                        AV15Item.gxTpr_Catdevtotdevolucao = (long)(AV15Item.gxTpr_Catdevtotdevolucao+1) ;
+                        AV15Item.gxTpr_Catreltotal = (long)(AV15Item.gxTpr_Catreltotal+1) ;
                      }
                      BRK0Q3 = true ;
                      pr_default.readNext(0);
@@ -208,21 +208,21 @@ namespace GeneXus.Programs {
             {
                AV14Catego.Add(AV15Item, 0);
             }
-            AV14Catego.Sort("[CatDevTotDevolucao]");
+            AV14Catego.Sort("[CatRelTotal]");
             AV16ContSe = 0 ;
             AV25GXV1 = 1 ;
             while ( ( AV25GXV1 <= AV14Catego.Count ) )
             {
-               AV15Item = ((SdtSDTCatDevolucao_SDTCatDevolucaoItem)AV14Catego.Item(AV25GXV1)) ;
+               AV15Item = ((SdtSDTCatRelatorio_SDTCatDevolucaoItem)AV14Catego.Item(AV25GXV1)) ;
                if ( ( AV16ContSe < AV10Seleca ) )
                {
-                  AV11CatNom = AV15Item.gxTpr_Catdevcatnome ;
+                  AV11CatNom = AV15Item.gxTpr_Catrelcatnome ;
                   H0Q0( false, 39) ;
                   getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
                   getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV11CatNom, "@!")), 26, Gx_line+13, 375, Gx_line+28, 0+256) ;
                   Gx_OldLine = Gx_line ;
                   Gx_line = (int)(Gx_line+39) ;
-                  AV12TotDev = AV15Item.gxTpr_Catdevtotdevolucao ;
+                  AV12TotDev = AV15Item.gxTpr_Catreltotal ;
                   H0Q0( false, 15) ;
                   getPrinter().GxDrawLine(52, Gx_line+12, 650, Gx_line+12, 1, 200, 200, 200, 0) ;
                   getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
@@ -365,7 +365,7 @@ namespace GeneXus.Programs {
          ToSkip = 0 ;
          PrtOffset = 0 ;
          AV13AuxLoc = 0 ;
-         AV14Catego = new GxObjectCollection( context, "SDTCatDevolucao.SDTCatDevolucaoItem", "AgoraVaiCurso", "SdtSDTCatDevolucao_SDTCatDevolucaoItem", "GeneXus.Programs");
+         AV14Catego = new GxObjectCollection( context, "SDTCatRelatorio.SDTCatDevolucaoItem", "AgoraVaiCurso", "SdtSDTCatRelatorio_SDTCatDevolucaoItem", "GeneXus.Programs");
          scmdbuf = "" ;
          R000Q2_A102LocMid = new int[1] ;
          R000Q2_A86LocCodi = new int[1] ;
@@ -383,7 +383,7 @@ namespace GeneXus.Programs {
          n105LocMid = false ;
          A118LocMid = "" ;
          n118LocMid = false ;
-         AV15Item = new SdtSDTCatDevolucao_SDTCatDevolucaoItem(context);
+         AV15Item = new SdtSDTCatRelatorio_SDTCatDevolucaoItem(context);
          AV16ContSe = 0 ;
          AV25GXV1 = 0 ;
          AV11CatNom = "" ;
@@ -455,7 +455,7 @@ namespace GeneXus.Programs {
       private String[] R000Q2_A118LocMid ;
       private bool[] R000Q2_n118LocMid ;
       private GxObjectCollection AV14Catego ;
-      private SdtSDTCatDevolucao_SDTCatDevolucaoItem AV15Item ;
+      private SdtSDTCatRelatorio_SDTCatDevolucaoItem AV15Item ;
    }
 
    public class rreltopdelisdevporcategoria__default : DataStoreHelperBase, IDataStoreHelper

@@ -2,7 +2,7 @@
                File: RelMid
         Description: Impressão de relatórios de mídia.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/9/2026 11:37:38.99
+       Generated on: 6/10/2026 8:22:56.98
        Program type: Callable routine
           Main DBMS: sqlserver
 */

@@ -30,15 +30,15 @@ using System.Xml.Serialization;
 using System.Data.SqlTypes;
 namespace GeneXus.Programs {
    [Serializable]
-   public class SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem : GxUserType
+   public class SdtSDTCatRelatorio_SDTCatDevolucaoItem : GxUserType
    {
-      public SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem( )
+      public SdtSDTCatRelatorio_SDTCatDevolucaoItem( )
       {
          constructorCallingAssembly = Assembly.GetCallingAssembly() ;
          initialize();
       }
 
-      public SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem( IGxContext context )
+      public SdtSDTCatRelatorio_SDTCatDevolucaoItem( IGxContext context )
       {
          this.context = context;
          IsMain = false;
@@ -57,25 +57,25 @@ namespace GeneXus.Programs {
          while ( ( ( String.CompareOrdinal(oReader.Name.TrimEnd(' '), sTagName.TrimEnd(' ') ) != 0 ) || ( oReader.NodeType == 1 ) ) && ( GXSoapError > 0 ) )
          {
             readOk = 0 ;
-            if ( ( String.CompareOrdinal(oReader.LocalName.TrimEnd(' '), "MidTipRelLocMidMidCodigo".TrimEnd(' ') ) == 0 ) && ( ( String.CompareOrdinal(oReader.NamespaceURI.TrimEnd(' '), "AgoraVaiCurso".TrimEnd(' ') ) == 0 ) || ( String.CompareOrdinal(oReader.NamespaceURI.TrimEnd(' '), "".TrimEnd(' ') ) == 0 ) ) )
+            if ( ( String.CompareOrdinal(oReader.LocalName.TrimEnd(' '), "CatRelLocMidCatCodigo".TrimEnd(' ') ) == 0 ) && ( ( String.CompareOrdinal(oReader.NamespaceURI.TrimEnd(' '), "AgoraVaiCurso".TrimEnd(' ') ) == 0 ) || ( String.CompareOrdinal(oReader.NamespaceURI.TrimEnd(' '), "".TrimEnd(' ') ) == 0 ) ) )
             {
-               gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtiprellocmidmidcodigo = (int)(NumberUtil.Val( oReader.Value, true)) ;
+               gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catrellocmidcatcodigo = (int)(NumberUtil.Val( oReader.Value, true)) ;
                if ( ( GXSoapError > 0 ) )
                {
                   readOk = 1 ;
                }
             }
-            if ( ( String.CompareOrdinal(oReader.LocalName.TrimEnd(' '), "MidTipRelLocMidMidTipo".TrimEnd(' ') ) == 0 ) && ( ( String.CompareOrdinal(oReader.NamespaceURI.TrimEnd(' '), "AgoraVaiCurso".TrimEnd(' ') ) == 0 ) || ( String.CompareOrdinal(oReader.NamespaceURI.TrimEnd(' '), "".TrimEnd(' ') ) == 0 ) ) )
+            if ( ( String.CompareOrdinal(oReader.LocalName.TrimEnd(' '), "CatRelCatNome".TrimEnd(' ') ) == 0 ) && ( ( String.CompareOrdinal(oReader.NamespaceURI.TrimEnd(' '), "AgoraVaiCurso".TrimEnd(' ') ) == 0 ) || ( String.CompareOrdinal(oReader.NamespaceURI.TrimEnd(' '), "".TrimEnd(' ') ) == 0 ) ) )
             {
-               gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtiprellocmidmidtipo = (short)(NumberUtil.Val( oReader.Value, true)) ;
+               gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catrelcatnome = oReader.Value ;
                if ( ( GXSoapError > 0 ) )
                {
                   readOk = 1 ;
                }
             }
-            if ( ( String.CompareOrdinal(oReader.LocalName.TrimEnd(' '), "MidTipRelTotal".TrimEnd(' ') ) == 0 ) && ( ( String.CompareOrdinal(oReader.NamespaceURI.TrimEnd(' '), "AgoraVaiCurso".TrimEnd(' ') ) == 0 ) || ( String.CompareOrdinal(oReader.NamespaceURI.TrimEnd(' '), "".TrimEnd(' ') ) == 0 ) ) )
+            if ( ( String.CompareOrdinal(oReader.LocalName.TrimEnd(' '), "CatRelTotal".TrimEnd(' ') ) == 0 ) && ( ( String.CompareOrdinal(oReader.NamespaceURI.TrimEnd(' '), "AgoraVaiCurso".TrimEnd(' ') ) == 0 ) || ( String.CompareOrdinal(oReader.NamespaceURI.TrimEnd(' '), "".TrimEnd(' ') ) == 0 ) ) )
             {
-               gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtipreltotal = (long)(NumberUtil.Val( oReader.Value, true)) ;
+               gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catreltotal = (long)(NumberUtil.Val( oReader.Value, true)) ;
                if ( ( GXSoapError > 0 ) )
                {
                   readOk = 1 ;
@@ -99,7 +99,7 @@ namespace GeneXus.Programs {
          short GXSoapError ;
          if ( ((String.CompareOrdinal("".TrimEnd(' '), StringUtil.RTrim( sName).TrimEnd(' ') )==0)) )
          {
-            sName = "SDTMidTipRelatorio.SDTMidTipDevRelatorioItem" ;
+            sName = "SDTCatRelatorio.SDTCatDevolucaoItem" ;
          }
          if ( ! ((String.CompareOrdinal("".TrimEnd(' '), StringUtil.RTrim( sNameSpace).TrimEnd(' ') )==0)) && ( String.CompareOrdinal(sNameSpace.TrimEnd(' '), "AgoraVaiCurso".TrimEnd(' ') ) != 0 ) )
          {
@@ -114,72 +114,72 @@ namespace GeneXus.Programs {
          {
             oWriter.WriteAttribute("xmlns", "AgoraVaiCurso");
          }
-         oWriter.WriteElement("MidTipRelLocMidMidCodigo", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtiprellocmidmidcodigo), 9, 0)));
-         oWriter.WriteElement("MidTipRelLocMidMidTipo", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtiprellocmidmidtipo), 1, 0)));
-         oWriter.WriteElement("MidTipRelTotal", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtipreltotal), 10, 0)));
+         oWriter.WriteElement("CatRelLocMidCatCodigo", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catrellocmidcatcodigo), 9, 0)));
+         oWriter.WriteElement("CatRelCatNome", StringUtil.RTrim( gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catrelcatnome));
+         oWriter.WriteElement("CatRelTotal", StringUtil.Trim( StringUtil.Str( (decimal)(gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catreltotal), 10, 0)));
          oWriter.WriteEndElement();
          return  ;
       }
 
-      public int gxTpr_Midtiprellocmidmidcodigo
+      public int gxTpr_Catrellocmidcatcodigo
       {
          get {
-            return gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtiprellocmidmidcodigo ;
+            return gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catrellocmidcatcodigo ;
          }
 
          set {
-            gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtiprellocmidmidcodigo = (int)(value) ;
+            gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catrellocmidcatcodigo = (int)(value) ;
          }
 
       }
 
-      public void gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtiprellocmidmidcodigo_SetNull( )
+      public void gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catrellocmidcatcodigo_SetNull( )
       {
-         gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtiprellocmidmidcodigo = 0 ;
+         gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catrellocmidcatcodigo = 0 ;
          return  ;
       }
 
-      public short gxTpr_Midtiprellocmidmidtipo
+      public String gxTpr_Catrelcatnome
       {
          get {
-            return gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtiprellocmidmidtipo ;
+            return gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catrelcatnome ;
          }
 
          set {
-            gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtiprellocmidmidtipo = (short)(value) ;
+            gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catrelcatnome = (String)(value) ;
          }
 
       }
 
-      public void gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtiprellocmidmidtipo_SetNull( )
+      public void gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catrelcatnome_SetNull( )
       {
-         gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtiprellocmidmidtipo = 0 ;
+         gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catrelcatnome = "" ;
          return  ;
       }
 
-      public long gxTpr_Midtipreltotal
+      public long gxTpr_Catreltotal
       {
          get {
-            return gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtipreltotal ;
+            return gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catreltotal ;
          }
 
          set {
-            gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtipreltotal = (long)(value) ;
+            gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catreltotal = (long)(value) ;
          }
 
       }
 
-      public void gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtipreltotal_SetNull( )
+      public void gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catreltotal_SetNull( )
       {
-         gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtipreltotal = 0 ;
+         gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catreltotal = 0 ;
          return  ;
       }
 
       public void initialize( )
       {
-         gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtiprellocmidmidcodigo = 0 ;
-         gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtiprellocmidmidtipo = 0 ;
-         gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtipreltotal = 0 ;
+         gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catrellocmidcatcodigo = 0 ;
+         gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catrelcatnome = "" ;
+         gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catreltotal = 0 ;
          sTagName = "" ;
          nOutParmCount = 0 ;
          readOk = 0 ;
@@ -187,13 +187,13 @@ namespace GeneXus.Programs {
          return  ;
       }
 
-      private short gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtiprellocmidmidtipo ;
       private short nOutParmCount ;
       private short readOk ;
-      private int gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtiprellocmidmidcodigo ;
-      private long gxTv_SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem_Midtipreltotal ;
+      private int gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catrellocmidcatcodigo ;
+      private long gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catreltotal ;
       private String sTagName ;
       private String GXt_char1 ;
+      private String gxTv_SdtSDTCatRelatorio_SDTCatDevolucaoItem_Catrelcatnome ;
       private Assembly constructorCallingAssembly ;
       private IGxContext context ;
       private bool IsMain ;

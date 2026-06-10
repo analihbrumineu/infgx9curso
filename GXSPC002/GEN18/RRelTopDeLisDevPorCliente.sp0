@@ -1,4 +1,4 @@
-spec_i([ rpt,24,'Relatório do total de devoluções por cliente.','RelTopDeLisDevPorCliente',96,por,'9_0_6-009' ]).
+spec_i([ rpt,24,'Relatório de topo de lista sobre total de devoluções por cliente.','RelTopDeLisDevPorCliente',96,por,'9_0_6-009' ]).
  
 struct_i(4,1,[],[]).
 struct_i(3,1,[],[]).
@@ -35,7 +35,7 @@ default_i(e('Output',2,2,'''SCR''')).
 default_i(e('Outdev',2,2,'''N''')).
 default_i(e('Time',2,2,'systime(')).
 default_i(e('Today',2,2,'''today''')).
-default_i(e('Pgmdesc',2,2,'"Relatório do total de devoluções por cliente."')).
+default_i(e('Pgmdesc',2,2,'"Relatório de topo de lista sobre total de devoluções por cliente."')).
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
 rule_i(0,datastore(1,'LOCK_RETRY','10')).
@@ -161,7 +161,7 @@ a_i(3,1,f,'Line',[],[ [],[ t(0,3) ] ]).
 a_i(4,2,f,'Page',[],[ [],[ t('Page',23),t(+,5),t('1',3) ] ]).
 a_i(5,1,f,'Time',[],[ [],[ t('systime(',1),t(')',4) ] ]).
 a_i(6,1,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
-a_i(7,1,f,'Pgmdesc',[],[ [],[ t('"Relatório do total de devoluções por cliente."',3) ] ]).
+a_i(7,1,f,'Pgmdesc',[],[ [],[ t('"Relatório de topo de lista sobre total de devoluções por cliente."',3) ] ]).
 a_i(8,1,f,'Err',[],[ [],[ t('0',3) ] ]).
 a_i(9,3,t,12,[],[ [],'',[] ]).
 a_i(10,3,r,517,[],[ [ [ 12,91,13 ] ],'ICLIENTE',[] ]).
@@ -225,8 +225,8 @@ attri_i('Pgmdesc',[ 'Pgmdesc',char,30,0,'',1,'Program description','',29 ]).
 attri_i('Page',[ 'Gx_page',int,6,0,'ZZZZZ9',0,'Page number','',28 ]).
 attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',27 ]).
 attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',26 ]).
-attri_i('Item',[ 'Item',o('SDTCliDevolucao.SDTCliDevolucaoItem'),0,0,'',0,'Item de Clientes.','',25 ]).
-attri_i('Clientes',[ 'Clientes',o(objectcollection('SDTCliDevolucao.SDTCliDevolucaoItem')),0,0,'',0,'Clientes','',24 ]).
+attri_i('Item',[ 'Item',o('SDTCliRelatorio.SDTCliDevolucaoItem'),0,0,'',0,'Item de Clientes.','',25 ]).
+attri_i('Clientes',[ 'Clientes',o(objectcollection('SDTCliRelatorio.SDTCliDevolucaoItem')),0,0,'',0,'Clientes','',24 ]).
 attri_i('Contselecao',[ 'ContSelecao',int,10,0,'ZZZZZZZZZ9',0,'Contador de passadas.','',23 ]).
 attri_i('Cadloccomdevolucao',[ 'CadLocComDevolucao',int,10,0,'ZZZZZZZZZ9',0,'Cad Loc Com Devolucao','',19 ]).
 attri_i('Auxlocclipesnome',[ 'AuxLocCliPesNome',svchar,50,0,'@!',0,'Auxiliar de LocCliPesNome.','',17 ]).
@@ -292,7 +292,7 @@ b_line_i([ 4,12 ],2,1,line,15,[ t('Cliente',3,12,3),t('Locação',3,12,40) ]).
 b_line_i(5,2,1,cmd,16,[ t('',122,16,0) ]).
 b_line_i(6,1,3,cmd,16,[]).
 b_line_i(7,1,3,cmd,16,[ t('',107,16,0),t('Auxlocclipesnome',23,16,0),t(=,10,16,0),t('''''',3,16,0) ]).
-b_line_i(8,1,3,cmd,16,[ t('',107,16,0),t('Clientes',23,16,0),t(=,10,16,0),t([ 'SDTCliDevolucao',[ t('(',0,8,15),t(')',4,8,16) ] ],46,16,0) ]).
+b_line_i(8,1,3,cmd,16,[ t('',107,16,0),t('Clientes',23,16,0),t(=,10,16,0),t([ 'SDTCliRelatorio',[ t('(',0,8,15),t(')',4,8,16) ] ],46,16,0) ]).
 b_line_i(9,1,3,cmd,16,[]).
 b_line_i(10,3,1,cmd,23,[ t('',121,10,0),t('ORDER',39,10,4),t(92,2,10,10) ]).
 b_line_i(12,3,1,cmd,23,[]).
@@ -304,17 +304,17 @@ b_line_i(17,3,1,cmd,23,[ t('',107,23,0),t([ t('Clientes',23,17,12),t('add(',1,17
 b_line_i(18,3,1,cmd,23,[]).
 b_line_i(19,3,1,cmd,23,[ t('',111,23,0) ]).
 b_line_i(20,3,1,cmd,23,[]).
-b_line_i(21,3,1,cmd,23,[ t('',107,23,0),t('Item',23,23,0),t(=,10,23,0),t([ 'SDTCliDevolucao.SDTCliDevolucaoItem',[ t('(',0,21,19),t(')',4,21,20) ] ],46,23,0) ]).
+b_line_i(21,3,1,cmd,23,[ t('',107,23,0),t('Item',23,23,0),t(=,10,23,0),t([ 'SDTCliRelatorio.SDTCliDevolucaoItem',[ t('(',0,21,19),t(')',4,21,20) ] ],46,23,0) ]).
 b_line_i(22,3,1,cmd,23,[]).
-b_line_i(23,3,1,cmd,23,[ t('',107,23,0),t([ t('Item',23,23,0),t('Clidevlocclipescodigo',3,23,0) ],29,23,0),t(=,10,23,0),t(91,2,23,0) ]).
-b_line_i(24,3,1,cmd,23,[ t('',107,23,0),t([ t('Item',23,23,0),t('Clidevlocclipesnome',3,23,0) ],29,23,0),t(=,10,23,0),t(92,2,23,0) ]).
-b_line_i(25,3,1,cmd,23,[ t('',107,23,0),t([ t('Item',23,23,0),t('Clidevtotdevolucao',3,23,0) ],29,23,0),t(=,10,23,0),t('0',3,23,0) ]).
+b_line_i(23,3,1,cmd,23,[ t('',107,23,0),t([ t('Item',23,23,0),t('Clirellocclipescodigo',3,23,0) ],29,23,0),t(=,10,23,0),t(91,2,23,0) ]).
+b_line_i(24,3,1,cmd,23,[ t('',107,23,0),t([ t('Item',23,23,0),t('Clirellocclipesnome',3,23,0) ],29,23,0),t(=,10,23,0),t(92,2,23,0) ]).
+b_line_i(25,3,1,cmd,23,[ t('',107,23,0),t([ t('Item',23,23,0),t('Clireltotal',3,23,0) ],29,23,0),t(=,10,23,0),t('0',3,23,0) ]).
 b_line_i(26,3,1,cmd,23,[]).
 b_line_i(27,3,1,cmd,23,[ t('',107,23,0),t('Auxlocclipesnome',23,23,0),t(=,10,23,0),t(92,2,23,0) ]).
 b_line_i(28,3,1,cmd,23,[]).
 b_line_i(29,3,1,cmd,23,[ t('',111,23,0) ]).
 b_line_i(30,3,1,cmd,23,[]).
-b_line_i(31,3,1,cmd,23,[ t('',107,23,0),t([ t('Item',23,23,0),t('Clidevtotdevolucao',3,23,0) ],29,23,0),t(=,10,23,0),t([ t('Item',23,23,0),t('Clidevtotdevolucao',3,23,0) ],29,23,0),t(+,5,23,0),t('1',3,23,0) ]).
+b_line_i(31,3,1,cmd,23,[ t('',107,23,0),t([ t('Item',23,23,0),t('Clireltotal',3,23,0) ],29,23,0),t(=,10,23,0),t([ t('Item',23,23,0),t('Clireltotal',3,23,0) ],29,23,0),t(+,5,23,0),t('1',3,23,0) ]).
 b_line_i(32,3,1,cmd,23,[]).
 b_line_i(33,3,1,cmd,23,[ t('',128,23,0) ]).
 b_line_i(34,1,5,cmd,40,[]).
@@ -324,7 +324,7 @@ b_line_i(37,1,5,cmd,40,[ t('',107,40,0),t([ t('Clientes',23,37,4),t('add(',1,37,
 b_line_i(38,1,5,cmd,40,[]).
 b_line_i(39,1,5,cmd,40,[ t('',111,40,0) ]).
 b_line_i(40,1,5,cmd,40,[]).
-b_line_i(41,1,5,cmd,40,[ t('',107,40,0),t([ t('Clientes',23,41,0),t('sort(',1,41,10) ],31,41,0),t('"[CliDevTotDevolucao]"',3,41,15),t(')',4,40,37) ]).
+b_line_i(41,1,5,cmd,40,[ t('',107,40,0),t([ t('Clientes',23,41,0),t('sort(',1,41,10) ],31,41,0),t('"[CliRelTotal]"',3,41,15),t(')',4,40,30) ]).
 b_line_i(42,1,5,cmd,40,[]).
 b_line_i(43,1,5,cmd,40,[ t('',107,40,0),t('Contselecao',23,40,0),t(=,10,40,0),t('0',3,40,0) ]).
 b_line_i(44,1,5,cmd,40,[]).
@@ -332,7 +332,7 @@ b_line_i(45,1,5,cmd,40,[ t('',107,40,0),t('GXV1',23,40,0),t(=,10,40,0),t(1,3,40,
 b_line_i([ 45,2 ],1,5,cmd,40,[ t('',114,40,0),t('GXV1',23,40,0),t(<=,10,40,0),t([ t('Clientes',23,45,13),t('Count',3,45,0) ],29,45,0) ]).
 b_line_i([ 45,3 ],1,5,cmd,40,[ t('',107,40,0),t('Item',23,40,0),t(=,10,40,0),t([ t('Clientes',23,40,0),t('item(',1,40,0) ],31,40,0),t('GXV1',23,40,0),t(')',4,40,0) ]).
 b_line_i(46,1,5,cmd,41,[ t('',109,41,0),t('Contselecao',23,41,7),t(<,10,41,20),t('Selecao',23,41,22) ]).
-b_line_i(47,1,5,cmd,41,[ t('',107,41,0),t('Locclipesnome',23,41,0),t(=,10,41,0),t([ t('Item',23,41,0),t('Clidevlocclipesnome',3,41,0) ],29,41,0) ]).
+b_line_i(47,1,5,cmd,41,[ t('',107,41,0),t('Locclipesnome',23,41,0),t(=,10,41,0),t([ t('Item',23,41,0),t('Clirellocclipesnome',3,41,0) ],29,41,0) ]).
 b_line_i(48,1,5,cmd,41,[]).
 b_line_i(49,1,5,pb,41,[ t(a,3,41,8) ]).
 b_line_i([ 49,0 ],1,5,line,41,[ t('Locclipesnome',23,0,3) ]).
@@ -346,7 +346,7 @@ b_line_i(56,4,1,pb,65,[ t(a,3,65,12) ]).
 b_line_i([ 56,0 ],4,1,line,65,[ t('Loccodigo',23,0,37) ]).
 b_line_i(57,4,1,cmd,66,[ t('',128,66,0) ]).
 b_line_i(58,1,7,cmd,50,[]).
-b_line_i(59,1,7,cmd,50,[ t('',107,50,0),t('Totdevolucao',23,50,0),t(=,10,50,0),t([ t('Item',23,50,0),t('Clidevtotdevolucao',3,50,0) ],29,50,0) ]).
+b_line_i(59,1,7,cmd,50,[ t('',107,50,0),t('Totdevolucao',23,50,0),t(=,10,50,0),t([ t('Item',23,50,0),t('Clireltotal',3,50,0) ],29,50,0) ]).
 b_line_i(60,1,7,cmd,50,[]).
 b_line_i(61,1,7,pb,50,[ t(a,3,50,8) ]).
 b_line_i([ 61,0 ],1,7,line,50,[ t('Total',3,0,72),t('Totdevolucao',23,0,79) ]).
@@ -547,11 +547,11 @@ a_alias_i(91,'LocCliPesCodigo').
 a_alias_i(92,'LocCliPesNome').
  
  
-struct_dt_i([ 26,4,0 ],name,'SDTCliDevolucao').
+struct_dt_i([ 26,4,0 ],name,'SDTCliRelatorio').
 struct_dt_i([ 26,4,0 ],'ObjId','0').
-struct_dt_i([ 26,4,0 ],'ObjName','SDTCliDevolucao').
+struct_dt_i([ 26,4,0 ],'ObjName','SDTCliRelatorio').
 struct_dt_i([ 26,4,0 ],'ObjDesc','').
-struct_dt_i([ 26,4,0 ],'ExternalName','SDTCliDevolucao').
+struct_dt_i([ 26,4,0 ],'ExternalName','SDTCliRelatorio').
 struct_dt_i([ 26,4,0 ],'ExternalNamespace','AgoraVaiCurso').
 struct_dt_i([ 26,4,0 ],namespace,'AgoraVaiCurso').
 struct_dt_i([ 26,4,0 ],subid,'0').
@@ -559,30 +559,30 @@ struct_dt_i([ 26,4,0 ],collection,'True').
 struct_dt_i([ 26,4,0 ],ispublic,'True').
 struct_dt_i([ 26,4,0 ],datatype,[ 26,4,1 ]).
 struct_dt_i([ 26,4,1 ],name,'SDTCliDevolucaoItem').
-struct_dt_i([ 26,4,1 ],namespace,'AgoraVaiCurso.SDTCliDevolucao').
+struct_dt_i([ 26,4,1 ],namespace,'AgoraVaiCurso.SDTCliRelatorio').
 struct_dt_i([ 26,4,1 ],subid,'1').
 struct_dt_i([ 26,4,1 ],ispublic,'True').
-struct_dt_i([ 26,4,0 ],fullname,'SDTCliDevolucao').
-struct_dt_i([ 26,4,1 ],fullname,'SDTCliDevolucao.SDTCliDevolucaoItem').
+struct_dt_i([ 26,4,0 ],fullname,'SDTCliRelatorio').
+struct_dt_i([ 26,4,1 ],fullname,'SDTCliRelatorio.SDTCliDevolucaoItem').
 struct_dt_i([ 26,4,0 ],modified,yes).
 struct_dt_i([ 26,4,1 ],modified,yes).
  
-struct_dt_elem_i([ 26,4,1 ],1,name,'Clidevlocclipescodigo').
-struct_dt_elem_i([ 26,4,1 ],1,camelname,'CliDevLocCliPesCodigo').
+struct_dt_elem_i([ 26,4,1 ],1,name,'Clirellocclipescodigo').
+struct_dt_elem_i([ 26,4,1 ],1,camelname,'CliRelLocCliPesCodigo').
 struct_dt_elem_i([ 26,4,1 ],1,basedon,91).
 struct_dt_elem_i([ 26,4,1 ],1,type,[ 4,9,0 ]).
 struct_dt_elem_i([ 26,4,1 ],1,collection,'False').
 struct_dt_elem_i([ 26,4,1 ],1,length,'0').
 struct_dt_elem_i([ 26,4,1 ],1,decimals,'0').
-struct_dt_elem_i([ 26,4,1 ],2,name,'Clidevlocclipesnome').
-struct_dt_elem_i([ 26,4,1 ],2,camelname,'CliDevLocCliPesNome').
+struct_dt_elem_i([ 26,4,1 ],2,name,'Clirellocclipesnome').
+struct_dt_elem_i([ 26,4,1 ],2,camelname,'CliRelLocCliPesNome').
 struct_dt_elem_i([ 26,4,1 ],2,basedon,92).
 struct_dt_elem_i([ 26,4,1 ],2,type,[ 13,50,0 ]).
 struct_dt_elem_i([ 26,4,1 ],2,collection,'False').
 struct_dt_elem_i([ 26,4,1 ],2,length,'0').
 struct_dt_elem_i([ 26,4,1 ],2,decimals,'0').
-struct_dt_elem_i([ 26,4,1 ],3,name,'Clidevtotdevolucao').
-struct_dt_elem_i([ 26,4,1 ],3,camelname,'CliDevTotDevolucao').
+struct_dt_elem_i([ 26,4,1 ],3,name,'Clireltotal').
+struct_dt_elem_i([ 26,4,1 ],3,camelname,'CliRelTotal').
 struct_dt_elem_i([ 26,4,1 ],3,type,[ 4,10,0 ]).
 struct_dt_elem_i([ 26,4,1 ],3,collection,'False').
 struct_dt_elem_i([ 26,4,1 ],3,length,'10').

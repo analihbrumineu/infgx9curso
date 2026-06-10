@@ -2,7 +2,7 @@
                File: Gx00D1
         Description: Lista de Seleção Dados da mídia locada
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/9/2026 11:37:37.87
+       Generated on: 6/10/2026 8:22:55.82
        Program type: Callable routine
           Main DBMS: sqlserver
 */

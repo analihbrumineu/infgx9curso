@@ -2,7 +2,7 @@
                File: RelTopDeLisDevPorFilmes
         Description: Relatório de topo de lista de devoluções por filmes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/9/2026 11:37:29.98
+       Generated on: 6/10/2026 8:22:47.54
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -150,7 +150,7 @@ namespace GeneXus.Programs {
             getPrinter().setM_top(M_top);
             getPrinter().setM_bot(M_bot);
             AV13AuxLoc = "" ;
-            AV14Filmes = new GxObjectCollection( context, "SDTFilDevolucao.SDTFilDevolucaoItem", "AgoraVaiCurso", "SdtSDTFilDevolucao_SDTFilDevolucaoItem", "GeneXus.Programs") ;
+            AV14Filmes = new GxObjectCollection( context, "SDTFilRelatorio.SDTFilDevolucaoItem", "AgoraVaiCurso", "SdtSDTFilRelatorio_SDTFilDevolucaoItem", "GeneXus.Programs") ;
             /* Using cursor R000P2 */
             pr_default.execute(0);
             while ( (pr_default.getStatus(0) != 101) )
@@ -173,10 +173,10 @@ namespace GeneXus.Programs {
                      {
                         AV14Filmes.Add(AV15Item, 0);
                      }
-                     AV15Item = new SdtSDTFilDevolucao_SDTFilDevolucaoItem(context) ;
-                     AV15Item.gxTpr_Fildevlocmidfilcodigo = A103LocMid ;
-                     AV15Item.gxTpr_Fildevlocmidfilnome = A104LocMid ;
-                     AV15Item.gxTpr_Fildevtotdevolucao = 0 ;
+                     AV15Item = new SdtSDTFilRelatorio_SDTFilDevolucaoItem(context) ;
+                     AV15Item.gxTpr_Filrellocmidfilcodigo = A103LocMid ;
+                     AV15Item.gxTpr_Filrellocmidfilnome = A104LocMid ;
+                     AV15Item.gxTpr_Filreltotal = 0 ;
                      AV13AuxLoc = A104LocMid ;
                   }
                   while ( (pr_default.getStatus(0) != 101) && ( String.CompareOrdinal(R000P2_A104LocMid[0].TrimEnd(' '), A104LocMid.TrimEnd(' ') ) == 0 ) )
@@ -189,7 +189,7 @@ namespace GeneXus.Programs {
                      n89LocDatD = R000P2_n89LocDatD[0] ;
                      if ( ( A89LocDatD >= AV8DatInic ) && ( A89LocDatD <= AV9DatFina ) && ( A89LocDatD != DateTimeUtil.CToD( "0", 2) ) )
                      {
-                        AV15Item.gxTpr_Fildevtotdevolucao = (long)(AV15Item.gxTpr_Fildevtotdevolucao+1) ;
+                        AV15Item.gxTpr_Filreltotal = (long)(AV15Item.gxTpr_Filreltotal+1) ;
                      }
                      BRK0P3 = true ;
                      pr_default.readNext(0);
@@ -206,21 +206,21 @@ namespace GeneXus.Programs {
             {
                AV14Filmes.Add(AV15Item, 0);
             }
-            AV14Filmes.Sort("[FilDevTotDevolucao]");
+            AV14Filmes.Sort("[FilRelTotal]");
             AV16ContSe = 0 ;
             AV25GXV1 = 1 ;
             while ( ( AV25GXV1 <= AV14Filmes.Count ) )
             {
-               AV15Item = ((SdtSDTFilDevolucao_SDTFilDevolucaoItem)AV14Filmes.Item(AV25GXV1)) ;
+               AV15Item = ((SdtSDTFilRelatorio_SDTFilDevolucaoItem)AV14Filmes.Item(AV25GXV1)) ;
                if ( ( AV16ContSe < AV10Seleca ) )
                {
-                  AV11LocMid = AV15Item.gxTpr_Fildevlocmidfilnome ;
+                  AV11LocMid = AV15Item.gxTpr_Filrellocmidfilnome ;
                   H0P0( false, 39) ;
                   getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
                   getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV11LocMid, "@!")), 26, Gx_line+13, 375, Gx_line+28, 0+256) ;
                   Gx_OldLine = Gx_line ;
                   Gx_line = (int)(Gx_line+39) ;
-                  AV12TotDev = AV15Item.gxTpr_Fildevtotdevolucao ;
+                  AV12TotDev = AV15Item.gxTpr_Filreltotal ;
                   H0P0( false, 15) ;
                   getPrinter().GxDrawLine(52, Gx_line+12, 650, Gx_line+12, 1, 200, 200, 200, 0) ;
                   getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
@@ -363,7 +363,7 @@ namespace GeneXus.Programs {
          ToSkip = 0 ;
          PrtOffset = 0 ;
          AV13AuxLoc = "" ;
-         AV14Filmes = new GxObjectCollection( context, "SDTFilDevolucao.SDTFilDevolucaoItem", "AgoraVaiCurso", "SdtSDTFilDevolucao_SDTFilDevolucaoItem", "GeneXus.Programs");
+         AV14Filmes = new GxObjectCollection( context, "SDTFilRelatorio.SDTFilDevolucaoItem", "AgoraVaiCurso", "SdtSDTFilRelatorio_SDTFilDevolucaoItem", "GeneXus.Programs");
          scmdbuf = "" ;
          R000P2_A102LocMid = new int[1] ;
          R000P2_A86LocCodi = new int[1] ;
@@ -381,7 +381,7 @@ namespace GeneXus.Programs {
          n104LocMid = false ;
          A103LocMid = 0 ;
          n103LocMid = false ;
-         AV15Item = new SdtSDTFilDevolucao_SDTFilDevolucaoItem(context);
+         AV15Item = new SdtSDTFilRelatorio_SDTFilDevolucaoItem(context);
          AV16ContSe = 0 ;
          AV25GXV1 = 0 ;
          AV11LocMid = "" ;
@@ -453,7 +453,7 @@ namespace GeneXus.Programs {
       private int[] R000P2_A103LocMid ;
       private bool[] R000P2_n103LocMid ;
       private GxObjectCollection AV14Filmes ;
-      private SdtSDTFilDevolucao_SDTFilDevolucaoItem AV15Item ;
+      private SdtSDTFilRelatorio_SDTFilDevolucaoItem AV15Item ;
    }
 
    public class rreltopdelisdevporfilmes__default : DataStoreHelperBase, IDataStoreHelper

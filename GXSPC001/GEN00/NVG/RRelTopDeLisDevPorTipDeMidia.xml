@@ -8,16 +8,19 @@
 <ObjDesc>Rel Top De Lis Dev Por Tip De Midia</ObjDesc>
 <ObjPgmName>RRelTopDeLisDevPorTipDeMidia</ObjPgmName>
 <ObjClsName>Report</ObjClsName></Object>
-<Result>genreq</Result>
+<Result>specfailed</Result>
 <Warnings></Warnings>
-<Errors></Errors>
+<Errors>
+<Error>
+<Token>Source, Line 25, Col 15 : 'LocMidMidCodigo' invalid Property</Token></Error>
+<Error>
+<Token>No Layout found</Token></Error></Errors>
 <OutputDevices>
-<Device>Screen</Device>
-<Device>Printer</Device></OutputDevices>
+<Device>None</Device></OutputDevices>
 <Generator>
 <GenId>0</GenId>
 <GenName>(Default)</GenName></Generator>
-<FormClass>Graphic</FormClass>
+<FormClass>HTML</FormClass>
 <Parameters>
 <Parameter>
 <IO>in</IO>

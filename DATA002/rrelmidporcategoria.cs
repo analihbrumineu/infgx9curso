@@ -2,7 +2,7 @@
                File: RelMidPorCategoria
         Description: Relatório do total de mídias por categoria
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/9/2026 11:37:29.44
+       Generated on: 6/10/2026 8:22:47.1
        Program type: Callable routine
           Main DBMS: sqlserver
 */

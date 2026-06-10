@@ -1,8 +1,8 @@
 /*
                File: RelTopDeLisDevPorCliente
-        Description: Relatório do total de devoluções por cliente.
+        Description: Relatório de topo de lista sobre total de devoluções por cliente.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/9/2026 11:37:29.84
+       Generated on: 6/10/2026 8:22:47.39
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -141,7 +141,7 @@ namespace GeneXus.Programs {
                cleanup();
                return;
             }
-            getPrinter().GxSetDocName("Relatório do total de devoluções por cliente.") ;
+            getPrinter().GxSetDocName("Relatório de topo de lista sobre total de devoluções por cliente.") ;
             getPrinter().setModal(true) ;
             P_lines = (int)(gxYPage-(lineHeight*6)) ;
             Gx_line = (int)(P_lines+1) ;
@@ -150,7 +150,7 @@ namespace GeneXus.Programs {
             getPrinter().setM_top(M_top);
             getPrinter().setM_bot(M_bot);
             AV17AuxLoc = "" ;
-            AV24Client = new GxObjectCollection( context, "SDTCliDevolucao.SDTCliDevolucaoItem", "AgoraVaiCurso", "SdtSDTCliDevolucao_SDTCliDevolucaoItem", "GeneXus.Programs") ;
+            AV24Client = new GxObjectCollection( context, "SDTCliRelatorio.SDTCliDevolucaoItem", "AgoraVaiCurso", "SdtSDTCliRelatorio_SDTCliDevolucaoItem", "GeneXus.Programs") ;
             /* Using cursor R000O2 */
             pr_default.execute(0);
             while ( (pr_default.getStatus(0) != 101) )
@@ -171,13 +171,13 @@ namespace GeneXus.Programs {
                      {
                         AV24Client.Add(AV25Item, 0);
                      }
-                     AV25Item = new SdtSDTCliDevolucao_SDTCliDevolucaoItem(context) ;
-                     AV25Item.gxTpr_Clidevlocclipescodigo = A91LocCliP ;
-                     AV25Item.gxTpr_Clidevlocclipesnome = A92LocCliP ;
-                     AV25Item.gxTpr_Clidevtotdevolucao = 0 ;
+                     AV25Item = new SdtSDTCliRelatorio_SDTCliDevolucaoItem(context) ;
+                     AV25Item.gxTpr_Clirellocclipescodigo = A91LocCliP ;
+                     AV25Item.gxTpr_Clirellocclipesnome = A92LocCliP ;
+                     AV25Item.gxTpr_Clireltotal = 0 ;
                      AV17AuxLoc = A92LocCliP ;
                   }
-                  AV25Item.gxTpr_Clidevtotdevolucao = (long)(AV25Item.gxTpr_Clidevtotdevolucao+1) ;
+                  AV25Item.gxTpr_Clireltotal = (long)(AV25Item.gxTpr_Clireltotal+1) ;
                }
                pr_default.readNext(0);
             }
@@ -186,15 +186,15 @@ namespace GeneXus.Programs {
             {
                AV24Client.Add(AV25Item, 0);
             }
-            AV24Client.Sort("[CliDevTotDevolucao]");
+            AV24Client.Sort("[CliRelTotal]");
             AV23ContSe = 0 ;
             AV33GXV1 = 1 ;
             while ( ( AV33GXV1 <= AV24Client.Count ) )
             {
-               AV25Item = ((SdtSDTCliDevolucao_SDTCliDevolucaoItem)AV24Client.Item(AV33GXV1)) ;
+               AV25Item = ((SdtSDTCliRelatorio_SDTCliDevolucaoItem)AV24Client.Item(AV33GXV1)) ;
                if ( ( AV23ContSe < AV10Seleca ) )
                {
-                  AV12LocCli = AV25Item.gxTpr_Clidevlocclipesnome ;
+                  AV12LocCli = AV25Item.gxTpr_Clirellocclipesnome ;
                   H0O0( false, 39) ;
                   getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
                   getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV12LocCli, "@!")), 26, Gx_line+13, 246, Gx_line+28, 0) ;
@@ -225,7 +225,7 @@ namespace GeneXus.Programs {
                      pr_default.readNext(1);
                   }
                   pr_default.close(1);
-                  AV14TotDev = AV25Item.gxTpr_Clidevtotdevolucao ;
+                  AV14TotDev = AV25Item.gxTpr_Clireltotal ;
                   H0O0( false, 15) ;
                   getPrinter().GxDrawLine(52, Gx_line+12, 650, Gx_line+12, 1, 200, 200, 200, 0) ;
                   getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
@@ -340,7 +340,7 @@ namespace GeneXus.Programs {
 
       private bool doAsk( )
       {
-         GXAsk ask = new GXAsk( "Relatório do total de devoluções por cliente." , true , new GXAskObject[] {
+         GXAsk ask = new GXAsk( "Relatório de topo de lista sobre total de devoluções por cliente." , true , new GXAskObject[] {
          });
          Gx_out = ask.getOutput();
          return ask.getConfirmed();
@@ -369,7 +369,7 @@ namespace GeneXus.Programs {
          ToSkip = 0 ;
          PrtOffset = 0 ;
          AV17AuxLoc = "" ;
-         AV24Client = new GxObjectCollection( context, "SDTCliDevolucao.SDTCliDevolucaoItem", "AgoraVaiCurso", "SdtSDTCliDevolucao_SDTCliDevolucaoItem", "GeneXus.Programs");
+         AV24Client = new GxObjectCollection( context, "SDTCliRelatorio.SDTCliDevolucaoItem", "AgoraVaiCurso", "SdtSDTCliRelatorio_SDTCliDevolucaoItem", "GeneXus.Programs");
          scmdbuf = "" ;
          R000O2_A86LocCodi = new int[1] ;
          R000O2_A89LocDatD = new DateTime[] {DateTime.MinValue} ;
@@ -384,7 +384,7 @@ namespace GeneXus.Programs {
          n91LocCliP = false ;
          A92LocCliP = "" ;
          n92LocCliP = false ;
-         AV25Item = new SdtSDTCliDevolucao_SDTCliDevolucaoItem(context);
+         AV25Item = new SdtSDTCliRelatorio_SDTCliDevolucaoItem(context);
          AV23ContSe = 0 ;
          AV33GXV1 = 0 ;
          AV12LocCli = "" ;
@@ -416,7 +416,7 @@ namespace GeneXus.Programs {
          Gx_line = 0 ;
          Gx_time = DateTimeUtil.Time( ) ;
          Gx_date = DateTimeUtil.Today( ) ;
-         AV29Pgmdes = "Relatório do total de devoluções por cliente." ;
+         AV29Pgmdes = "Relatório de topo de lista sobre total de devoluções por cliente." ;
          context.Gx_err = 0 ;
          if ( ( String.CompareOrdinal(Gx_dev.TrimEnd(' '), "S".TrimEnd(' ') ) == 0 ) )
          {
@@ -475,7 +475,7 @@ namespace GeneXus.Programs {
       private bool[] R000O3_n92LocCliP ;
       private int[] R000O3_A86LocCodi ;
       private GxObjectCollection AV24Client ;
-      private SdtSDTCliDevolucao_SDTCliDevolucaoItem AV25Item ;
+      private SdtSDTCliRelatorio_SDTCliDevolucaoItem AV25Item ;
    }
 
    public class rreltopdelisdevporcliente__default : DataStoreHelperBase, IDataStoreHelper

@@ -228,8 +228,8 @@ attri_i('Page',[ 'Gx_page',int,6,0,'ZZZZZ9',0,'Page number','',19 ]).
 attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',18 ]).
 attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',17 ]).
 attri_i('Contselecao',[ 'ContSelecao',int,10,0,'ZZZZZZZZZ9',0,'Contador de passadas.','',16 ]).
-attri_i('Item',[ 'Item',o('SDTCatDevolucao.SDTCatDevolucaoItem'),0,0,'',0,'Item','',15 ]).
-attri_i('Categorias',[ 'Categorias',o(objectcollection('SDTCatDevolucao.SDTCatDevolucaoItem')),0,0,'',0,'Categorias','',14 ]).
+attri_i('Item',[ 'Item',o('SDTCatRelatorio.SDTCatDevolucaoItem'),0,0,'',0,'Item','',15 ]).
+attri_i('Categorias',[ 'Categorias',o(objectcollection('SDTCatRelatorio.SDTCatDevolucaoItem')),0,0,'',0,'Categorias','',14 ]).
 attri_i('Auxlocmidcatcodigo',[ 'AuxLocMidCatCodigo',int,9,0,'ZZZZZZZZ9',0,'Auxiliar de LocMidCatCodigo.','',13 ]).
 attri_i('Totdevolucao',[ 'TotDevolucao',int,10,0,'ZZZZZZZZZ9',0,'Total de devoluções por cliente.','',12 ]).
 attri_i('Catnome',[ 'CatNome',svchar,50,0,'@!',0,'Nome da categoria do filme','',11 ]).
@@ -294,7 +294,7 @@ b_line_i([ 4,12 ],2,1,line,15,[ t('Categoria',3,12,3) ]).
 b_line_i(5,2,1,cmd,16,[ t('',122,16,0) ]).
 b_line_i(6,1,3,cmd,16,[]).
 b_line_i(7,1,3,cmd,16,[ t('',107,16,0),t('Auxlocmidcatcodigo',23,16,0),t(=,10,16,0),t('0',3,16,0) ]).
-b_line_i(8,1,3,cmd,16,[ t('',107,16,0),t('Categorias',23,16,0),t(=,10,16,0),t([ 'SDTCatDevolucao',[ t('(',0,8,17),t(')',4,8,18) ] ],46,16,0) ]).
+b_line_i(8,1,3,cmd,16,[ t('',107,16,0),t('Categorias',23,16,0),t(=,10,16,0),t([ 'SDTCatRelatorio',[ t('(',0,8,17),t(')',4,8,18) ] ],46,16,0) ]).
 b_line_i(9,1,3,cmd,16,[]).
 b_line_i(10,3,1,cmd,23,[ t('',121,10,0),t('ORDER',39,10,4),t(105,2,10,10) ]).
 b_line_i(12,3,1,cmd,23,[]).
@@ -306,19 +306,19 @@ b_line_i(17,3,1,cmd,23,[ t('',107,23,0),t([ t('Categorias',23,17,12),t('add(',1,
 b_line_i(18,3,1,cmd,23,[]).
 b_line_i(19,3,1,cmd,23,[ t('',111,23,0) ]).
 b_line_i(20,3,1,cmd,23,[]).
-b_line_i(21,3,1,cmd,23,[ t('',107,23,0),t('Item',23,23,0),t(=,10,23,0),t([ 'SDTCatDevolucao.SDTCatDevolucaoItem',[ t('(',0,21,19),t(')',4,21,20) ] ],46,23,0) ]).
+b_line_i(21,3,1,cmd,23,[ t('',107,23,0),t('Item',23,23,0),t(=,10,23,0),t([ 'SDTCatRelatorio.SDTCatDevolucaoItem',[ t('(',0,21,19),t(')',4,21,20) ] ],46,23,0) ]).
 b_line_i(22,3,1,cmd,23,[]).
-b_line_i(23,3,1,cmd,23,[ t('',107,23,0),t([ t('Item',23,23,0),t('Catdevlocmidcatcodigo',3,23,0) ],29,23,0),t(=,10,23,0),t(105,2,23,0) ]).
-b_line_i(24,3,1,cmd,23,[ t('',107,23,0),t([ t('Item',23,23,0),t('Catdevcatnome',3,23,0) ],29,23,0),t(=,10,23,0),t(118,2,23,0) ]).
+b_line_i(23,3,1,cmd,23,[ t('',107,23,0),t([ t('Item',23,23,0),t('Catrellocmidcatcodigo',3,23,0) ],29,23,0),t(=,10,23,0),t(105,2,23,0) ]).
+b_line_i(24,3,1,cmd,23,[ t('',107,23,0),t([ t('Item',23,23,0),t('Catrelcatnome',3,23,0) ],29,23,0),t(=,10,23,0),t(118,2,23,0) ]).
 b_line_i(25,3,1,cmd,23,[]).
-b_line_i(26,3,1,cmd,23,[ t('',107,23,0),t([ t('Item',23,23,0),t('Catdevtotdevolucao',3,23,0) ],29,23,0),t(=,10,23,0),t('0',3,23,0) ]).
+b_line_i(26,3,1,cmd,23,[ t('',107,23,0),t([ t('Item',23,23,0),t('Catreltotal',3,23,0) ],29,23,0),t(=,10,23,0),t('0',3,23,0) ]).
 b_line_i(27,3,1,cmd,23,[]).
 b_line_i(28,3,1,cmd,23,[ t('',107,23,0),t('Auxlocmidcatcodigo',23,23,0),t(=,10,23,0),t(105,2,23,0) ]).
 b_line_i(29,3,1,cmd,23,[ t('',111,23,0) ]).
 b_line_i(30,3,1,cmd,23,[]).
 b_line_i(31,4,1,cmd,44,[ t('',121,31,0) ]).
 b_line_i(33,4,1,cmd,44,[]).
-b_line_i(34,4,1,cmd,44,[ t('',107,44,0),t([ t('Item',23,44,0),t('Catdevtotdevolucao',3,44,0) ],29,44,0),t(=,10,44,0),t([ t('Item',23,44,0),t('Catdevtotdevolucao',3,44,0) ],29,44,0),t(+,5,44,0),t('1',3,44,0) ]).
+b_line_i(34,4,1,cmd,44,[ t('',107,44,0),t([ t('Item',23,44,0),t('Catreltotal',3,44,0) ],29,44,0),t(=,10,44,0),t([ t('Item',23,44,0),t('Catreltotal',3,44,0) ],29,44,0),t(+,5,44,0),t('1',3,44,0) ]).
 b_line_i(35,4,1,cmd,44,[ t('',128,44,0) ]).
 b_line_i(36,3,3,cmd,28,[]).
 b_line_i(37,3,3,cmd,28,[ t('',128,28,0) ]).
@@ -329,7 +329,7 @@ b_line_i(41,1,5,cmd,44,[ t('',107,44,0),t([ t('Categorias',23,41,4),t('add(',1,4
 b_line_i(42,1,5,cmd,44,[]).
 b_line_i(43,1,5,cmd,44,[ t('',111,44,0) ]).
 b_line_i(44,1,5,cmd,44,[]).
-b_line_i(45,1,5,cmd,44,[ t('',107,44,0),t([ t('Categorias',23,45,0),t('sort(',1,45,12) ],31,45,0),t('"[CatDevTotDevolucao]"',3,45,17),t(')',4,44,39) ]).
+b_line_i(45,1,5,cmd,44,[ t('',107,44,0),t([ t('Categorias',23,45,0),t('sort(',1,45,12) ],31,45,0),t('"[CatRelTotal]"',3,45,17),t(')',4,44,32) ]).
 b_line_i(46,1,5,cmd,44,[]).
 b_line_i(47,1,5,cmd,44,[ t('',107,44,0),t('Contselecao',23,44,0),t(=,10,44,0),t('0',3,44,0) ]).
 b_line_i(48,1,5,cmd,44,[]).
@@ -338,13 +338,13 @@ b_line_i([ 49,2 ],1,5,cmd,44,[ t('',114,44,0),t('GXV1',23,44,0),t(<=,10,44,0),t(
 b_line_i([ 49,3 ],1,5,cmd,44,[ t('',107,44,0),t('Item',23,44,0),t(=,10,44,0),t([ t('Categorias',23,44,0),t('item(',1,44,0) ],31,44,0),t('GXV1',23,44,0),t(')',4,44,0) ]).
 b_line_i(50,1,5,cmd,45,[]).
 b_line_i(51,1,5,cmd,45,[ t('',109,45,0),t('Contselecao',23,45,7),t(<,10,45,20),t('Selecao',23,45,22) ]).
-b_line_i(52,1,5,cmd,45,[ t('',107,45,0),t('Catnome',23,45,0),t(=,10,45,0),t([ t('Item',23,45,0),t('Catdevcatnome',3,45,0) ],29,45,0) ]).
+b_line_i(52,1,5,cmd,45,[ t('',107,45,0),t('Catnome',23,45,0),t(=,10,45,0),t([ t('Item',23,45,0),t('Catrelcatnome',3,45,0) ],29,45,0) ]).
 b_line_i(53,1,5,cmd,45,[]).
 b_line_i(54,1,5,pb,45,[ t(a,3,45,8) ]).
 b_line_i([ 54,0 ],1,5,line,45,[ t('Catnome',23,0,3) ]).
 b_line_i([ 54,1 ],1,5,line,46,[ t(' ',3,1,0) ]).
 b_line_i(55,1,5,cmd,47,[]).
-b_line_i(56,1,5,cmd,47,[ t('',107,47,0),t('Totdevolucao',23,47,0),t(=,10,47,0),t([ t('Item',23,47,0),t('Catdevtotdevolucao',3,47,0) ],29,47,0) ]).
+b_line_i(56,1,5,cmd,47,[ t('',107,47,0),t('Totdevolucao',23,47,0),t(=,10,47,0),t([ t('Item',23,47,0),t('Catreltotal',3,47,0) ],29,47,0) ]).
 b_line_i(57,1,5,cmd,47,[]).
 b_line_i(58,1,5,pb,47,[ t(a,3,47,8) ]).
 b_line_i([ 58,0 ],1,5,line,47,[ t('Total',3,0,72),t('Totdevolucao',23,0,79) ]).
@@ -539,11 +539,11 @@ a_alias_i(105,'LocMidCatCodigo').
 a_alias_i(118,'LocMidCatNome').
  
  
-struct_dt_i([ 26,6,0 ],name,'SDTCatDevolucao').
+struct_dt_i([ 26,6,0 ],name,'SDTCatRelatorio').
 struct_dt_i([ 26,6,0 ],'ObjId','0').
-struct_dt_i([ 26,6,0 ],'ObjName','SDTCatDevolucao').
+struct_dt_i([ 26,6,0 ],'ObjName','SDTCatRelatorio').
 struct_dt_i([ 26,6,0 ],'ObjDesc','').
-struct_dt_i([ 26,6,0 ],'ExternalName','SDTCatDevolucao').
+struct_dt_i([ 26,6,0 ],'ExternalName','SDTCatRelatorio').
 struct_dt_i([ 26,6,0 ],'ExternalNamespace','AgoraVaiCurso').
 struct_dt_i([ 26,6,0 ],namespace,'AgoraVaiCurso').
 struct_dt_i([ 26,6,0 ],subid,'0').
@@ -551,30 +551,30 @@ struct_dt_i([ 26,6,0 ],collection,'True').
 struct_dt_i([ 26,6,0 ],ispublic,'True').
 struct_dt_i([ 26,6,0 ],datatype,[ 26,6,1 ]).
 struct_dt_i([ 26,6,1 ],name,'SDTCatDevolucaoItem').
-struct_dt_i([ 26,6,1 ],namespace,'AgoraVaiCurso.SDTCatDevolucao').
+struct_dt_i([ 26,6,1 ],namespace,'AgoraVaiCurso.SDTCatRelatorio').
 struct_dt_i([ 26,6,1 ],subid,'1').
 struct_dt_i([ 26,6,1 ],ispublic,'True').
-struct_dt_i([ 26,6,0 ],fullname,'SDTCatDevolucao').
-struct_dt_i([ 26,6,1 ],fullname,'SDTCatDevolucao.SDTCatDevolucaoItem').
+struct_dt_i([ 26,6,0 ],fullname,'SDTCatRelatorio').
+struct_dt_i([ 26,6,1 ],fullname,'SDTCatRelatorio.SDTCatDevolucaoItem').
 struct_dt_i([ 26,6,0 ],modified,yes).
 struct_dt_i([ 26,6,1 ],modified,yes).
  
-struct_dt_elem_i([ 26,6,1 ],1,name,'Catdevlocmidcatcodigo').
-struct_dt_elem_i([ 26,6,1 ],1,camelname,'CatDevLocMidCatCodigo').
+struct_dt_elem_i([ 26,6,1 ],1,name,'Catrellocmidcatcodigo').
+struct_dt_elem_i([ 26,6,1 ],1,camelname,'CatRelLocMidCatCodigo').
 struct_dt_elem_i([ 26,6,1 ],1,basedon,105).
 struct_dt_elem_i([ 26,6,1 ],1,type,[ 4,9,0 ]).
 struct_dt_elem_i([ 26,6,1 ],1,collection,'False').
 struct_dt_elem_i([ 26,6,1 ],1,length,'0').
 struct_dt_elem_i([ 26,6,1 ],1,decimals,'0').
-struct_dt_elem_i([ 26,6,1 ],2,name,'Catdevcatnome').
-struct_dt_elem_i([ 26,6,1 ],2,camelname,'CatDevCatNome').
+struct_dt_elem_i([ 26,6,1 ],2,name,'Catrelcatnome').
+struct_dt_elem_i([ 26,6,1 ],2,camelname,'CatRelCatNome').
 struct_dt_elem_i([ 26,6,1 ],2,basedon,33).
 struct_dt_elem_i([ 26,6,1 ],2,type,[ 13,50,0 ]).
 struct_dt_elem_i([ 26,6,1 ],2,collection,'False').
 struct_dt_elem_i([ 26,6,1 ],2,length,'0').
 struct_dt_elem_i([ 26,6,1 ],2,decimals,'0').
-struct_dt_elem_i([ 26,6,1 ],3,name,'Catdevtotdevolucao').
-struct_dt_elem_i([ 26,6,1 ],3,camelname,'CatDevTotDevolucao').
+struct_dt_elem_i([ 26,6,1 ],3,name,'Catreltotal').
+struct_dt_elem_i([ 26,6,1 ],3,camelname,'CatRelTotal').
 struct_dt_elem_i([ 26,6,1 ],3,type,[ 4,10,0 ]).
 struct_dt_elem_i([ 26,6,1 ],3,collection,'False').
 struct_dt_elem_i([ 26,6,1 ],3,length,'10').

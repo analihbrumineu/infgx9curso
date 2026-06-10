@@ -2,7 +2,7 @@
                File: Locacao
         Description: Cadastro de locações.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/9/2026 11:37:34.87
+       Generated on: 6/10/2026 8:22:52.55
        Program type: Callable routine
           Main DBMS: sqlserver
 */

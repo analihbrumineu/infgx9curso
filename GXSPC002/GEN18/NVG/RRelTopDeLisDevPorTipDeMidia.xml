@@ -5,7 +5,7 @@
 <ObjCls>2</ObjCls>
 <ObjId>27</ObjId>
 <ObjName>RelTopDeLisDevPorTipDeMidia</ObjName>
-<ObjDesc>Rel Top De Lis Dev Por Tip De Midia</ObjDesc>
+<ObjDesc>Relatório de topo de lista sobre o total de devoluções por formato de mídia.</ObjDesc>
 <ObjPgmName>RRelTopDeLisDevPorTipDeMidia</ObjPgmName>
 <ObjClsName>Report</ObjClsName></Object>
 <Result>genreq</Result>
@@ -19,7 +19,7 @@
 <Description>Tipo da mídia a ser locada</Description></Attribute>
 <Token>; poor performance may be noticed</Token>
 <Token> in group starting at line </Token>
-<Token>31</Token>
+<Token>33</Token>
 <Token></Token>
 <Token>.</Token></Warning></Warnings>
 <Errors></Errors>
@@ -51,7 +51,7 @@
 <LevelNumber>3</LevelNumber>
 <Optimizations></Optimizations>
 <LevelType>For Each</LevelType>
-<LevelBeginRow>23</LevelBeginRow>
+<LevelBeginRow>24</LevelBeginRow>
 <BaseTable>
 <Table>
 <TableId>13</TableId>
@@ -154,7 +154,7 @@
 <LevelNumber>4</LevelNumber>
 <Optimizations></Optimizations>
 <LevelType>Break</LevelType>
-<LevelBeginRow>43</LevelBeginRow>
+<LevelBeginRow>45</LevelBeginRow>
 <BaseTable>
 <Table>
 <TableId>13</TableId>

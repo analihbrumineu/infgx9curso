@@ -92,3 +92,6 @@ sdt_map_i(18,'SDTCliDevolucao.SDTCliDevolucaoItem',[ 26,4,1 ]).
 sdt_map_i(18,'SDTFilDevolucao.SDTFilDevolucaoItem',[ 26,5,1 ]).
 sdt_map_i(18,'SDTCatDevolucao.SDTCatDevolucaoItem',[ 26,6,1 ]).
 sdt_map_i(18,'SDTMidTipRelatorio.SDTMidTipDevRelatorioItem',[ 26,7,1 ]).
+sdt_map_i(18,'SDTCatRelatorio.SDTCatDevolucaoItem',[ 26,6,1 ]).
+sdt_map_i(18,'SDTCliRelatorio.SDTCliDevolucaoItem',[ 26,4,1 ]).
+sdt_map_i(18,'SDTFilRelatorio.SDTFilDevolucaoItem',[ 26,5,1 ]).

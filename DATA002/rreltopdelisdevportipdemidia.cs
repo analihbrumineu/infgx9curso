@@ -1,8 +1,8 @@
 /*
                File: RelTopDeLisDevPorTipDeMidia
-        Description: Rel Top De Lis Dev Por Tip De Midia
+        Description: Relatório de topo de lista sobre o total de devoluções por formato de mídia.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/9/2026 11:40:10.22
+       Generated on: 6/10/2026 8:22:47.66
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -141,7 +141,7 @@ namespace GeneXus.Programs {
                cleanup();
                return;
             }
-            getPrinter().GxSetDocName("Rel Top De Lis Dev Por Tip De Midia") ;
+            getPrinter().GxSetDocName("Relatório de topo de lista sobre o total de devoluções por formato de mídia.") ;
             getPrinter().setModal(true) ;
             P_lines = (int)(gxYPage-(lineHeight*6)) ;
             Gx_line = (int)(P_lines+1) ;
@@ -173,8 +173,8 @@ namespace GeneXus.Programs {
                         AV14Midias.Add(AV15Item, 0);
                      }
                      AV15Item = new SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem(context) ;
-                     AV15Item.gxTpr_Locmidmidcodigo = A102LocMid ;
-                     AV15Item.gxTpr_Midtipo = A106LocMid ;
+                     AV15Item.gxTpr_Midtiprellocmidmidcodigo = A102LocMid ;
+                     AV15Item.gxTpr_Midtiprellocmidmidtipo = A106LocMid ;
                      AV15Item.gxTpr_Midtipreltotal = 0 ;
                      AV13AuxLoc = A106LocMid ;
                   }
@@ -205,23 +205,48 @@ namespace GeneXus.Programs {
             {
                AV14Midias.Add(AV15Item, 0);
             }
-            AV14Midias.Sort("[LocMidMidTipo]");
+            AV14Midias.Sort("[MidTipRelTotal]");
             AV16ContSe = 0 ;
-            AV25GXV1 = 1 ;
-            while ( ( AV25GXV1 <= AV14Midias.Count ) )
+            AV26GXV1 = 1 ;
+            while ( ( AV26GXV1 <= AV14Midias.Count ) )
             {
-               AV15Item = ((SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem)AV14Midias.Item(AV25GXV1)) ;
-               AV12TotDev = AV15Item.gxTpr_Midtipreltotal ;
-               H0R0( false, 15) ;
-               getPrinter().GxDrawLine(52, Gx_line+12, 650, Gx_line+12, 1, 200, 200, 200, 0) ;
-               getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-               getPrinter().GxDrawText(StringUtil.Format( (decimal)(AV12TotDev), "ZZZZZZZZZ9"), 559, Gx_line+0, 628, Gx_line+15, 2+256) ;
-               getPrinter().GxAttris("MS Sans Serif", 8, true, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-               getPrinter().GxDrawText("Total", 507, Gx_line+0, 536, Gx_line+13, 0+256) ;
-               Gx_OldLine = Gx_line ;
-               Gx_line = (int)(Gx_line+15) ;
-               AV16ContSe = (long)(AV16ContSe+1) ;
-               AV25GXV1 = (int)(AV25GXV1+1) ;
+               AV15Item = ((SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem)AV14Midias.Item(AV26GXV1)) ;
+               if ( ( AV16ContSe < AV10Seleca ) )
+               {
+                  AV11LocMid = AV15Item.gxTpr_Midtiprellocmidmidtipo ;
+                  if ( ( AV11LocMid == 1 ) )
+                  {
+                     AV17LocMid = "DVD" ;
+                  }
+                  else if ( ( AV11LocMid == 2 ) )
+                  {
+                     AV17LocMid = "Bluray" ;
+                  }
+                  else if ( ( AV11LocMid == 3 ) )
+                  {
+                     AV17LocMid = "VHS" ;
+                  }
+                  else if ( ( AV11LocMid == 4 ) )
+                  {
+                     AV17LocMid = "Box" ;
+                  }
+                  H0R0( false, 39) ;
+                  getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
+                  getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV17LocMid, "@!")), 26, Gx_line+13, 207, Gx_line+28, 0) ;
+                  Gx_OldLine = Gx_line ;
+                  Gx_line = (int)(Gx_line+39) ;
+                  AV12TotDev = AV15Item.gxTpr_Midtipreltotal ;
+                  H0R0( false, 15) ;
+                  getPrinter().GxDrawLine(52, Gx_line+12, 650, Gx_line+12, 1, 200, 200, 200, 0) ;
+                  getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
+                  getPrinter().GxDrawText(StringUtil.Format( (decimal)(AV12TotDev), "ZZZZZZZZZ9"), 559, Gx_line+0, 628, Gx_line+15, 2+256) ;
+                  getPrinter().GxAttris("MS Sans Serif", 8, true, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
+                  getPrinter().GxDrawText("Total", 507, Gx_line+0, 536, Gx_line+13, 0+256) ;
+                  Gx_OldLine = Gx_line ;
+                  Gx_line = (int)(Gx_line+15) ;
+                  AV16ContSe = (long)(AV16ContSe+1) ;
+               }
+               AV26GXV1 = (int)(AV26GXV1+1) ;
             }
             /* Print footer for last page */
             ToSkip = (int)(P_lines+1) ;
@@ -285,7 +310,7 @@ namespace GeneXus.Programs {
                getPrinter().GxDrawLine(26, Gx_line+194, 650, Gx_line+194, 1, 0, 0, 0, 0) ;
                getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
                getPrinter().GxDrawText(StringUtil.Format( (decimal)(Gx_page), "ZZZZZ9"), 606, Gx_line+26, 657, Gx_line+41, 2) ;
-               getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV20Pgmdes, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")), 130, Gx_line+20, 506, Gx_line+35, 0) ;
+               getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV21Pgmdes, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")), 130, Gx_line+20, 506, Gx_line+35, 0) ;
                getPrinter().GxDrawText(StringUtil.Format( Gx_date, "99/99/99"), 611, Gx_line+0, 666, Gx_line+15, 0+256) ;
                getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( Gx_time, "XXXXXXXX")), 611, Gx_line+13, 666, Gx_line+28, 0+256) ;
                getPrinter().GxDrawText(StringUtil.Format( AV8DatInic, "99/99/9999"), 65, Gx_line+91, 134, Gx_line+106, 0+256) ;
@@ -320,7 +345,7 @@ namespace GeneXus.Programs {
 
       private bool doAsk( )
       {
-         GXAsk ask = new GXAsk( "Rel Top De Lis Dev Por Tip De Midia" , true , new GXAskObject[] {
+         GXAsk ask = new GXAsk( "Relatório de topo de lista sobre o total de devoluções por formato de mídia." , true , new GXAskObject[] {
          });
          Gx_out = ask.getOutput();
          return ask.getConfirmed();
@@ -366,10 +391,12 @@ namespace GeneXus.Programs {
          A102LocMid = 0 ;
          AV15Item = new SdtSDTMidTipRelatorio_SDTMidTipDevRelatorioItem(context);
          AV16ContSe = 0 ;
-         AV25GXV1 = 0 ;
-         AV12TotDev = 0 ;
+         AV26GXV1 = 0 ;
+         AV11LocMid = 0 ;
+         AV17LocMid = "" ;
          Gx_OldLine = 0 ;
-         AV20Pgmdes = "" ;
+         AV12TotDev = 0 ;
+         AV21Pgmdes = "" ;
          Gx_date = (DateTime)(DateTime.MinValue) ;
          Gx_time = "" ;
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.rreltopdelisdevportipdemidia__default(),
@@ -383,7 +410,7 @@ namespace GeneXus.Programs {
          Gx_line = 0 ;
          Gx_time = DateTimeUtil.Time( ) ;
          Gx_date = DateTimeUtil.Today( ) ;
-         AV20Pgmdes = "Rel Top De Lis Dev Por Tip De Midia" ;
+         AV21Pgmdes = "Relatório de topo de lista sobre o total de devoluções por formato de mídia." ;
          context.Gx_err = 0 ;
          if ( ( String.CompareOrdinal(Gx_dev.TrimEnd(' '), "S".TrimEnd(' ') ) == 0 ) )
          {
@@ -398,6 +425,7 @@ namespace GeneXus.Programs {
 
       private short AV13AuxLoc ;
       private short A106LocMid ;
+      private short AV11LocMid ;
       private int M_top ;
       private int M_bot ;
       private int Line ;
@@ -405,13 +433,13 @@ namespace GeneXus.Programs {
       private int PrtOffset ;
       private int A86LocCodi ;
       private int A102LocMid ;
-      private int AV25GXV1 ;
+      private int AV26GXV1 ;
       private int Gx_OldLine ;
       private long AV10Seleca ;
       private long AV16ContSe ;
       private long AV12TotDev ;
       private String scmdbuf ;
-      private String AV20Pgmdes ;
+      private String AV21Pgmdes ;
       private String Gx_time ;
       private DateTime AV8DatInic ;
       private DateTime AV9DatFina ;
@@ -421,6 +449,7 @@ namespace GeneXus.Programs {
       private bool BRK0R3 ;
       private bool n89LocDatD ;
       private bool n106LocMid ;
+      private String AV17LocMid ;
       private IGxDataStore dsDefault ;
       private IDataReader R000R2 ;
       private IDataStoreProvider pr_default ;
