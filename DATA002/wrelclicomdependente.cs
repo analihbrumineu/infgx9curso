@@ -2,7 +2,7 @@
                File: RelCliComDependente
         Description: Impressão de relatório de clientes com dependentes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:18:16.21
+       Generated on: 6/10/2026 9:40:45.43
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -236,7 +236,21 @@ namespace GeneXus.Programs {
       {
          eventLevelContext();
          /* 'Imprimir' Routine */
-         new rrelclicomdependente(context, base.remoteHandle, base.context).execute(  AV5PesCodI,  AV6PesCodF) ;
+         if ( ( AV5PesCodI <= 0 ) || ( AV6PesCodF <= 0 ) )
+         {
+            GXutil.msg( me(), "Digite um código válido!" );
+         }
+         else
+         {
+            if ( ( AV5PesCodI > AV6PesCodF ) )
+            {
+               GXutil.msg( me(), "O final do intervalo não pode ocorrer antes do início" );
+            }
+            else
+            {
+               new rrelclicomdependente(context, base.remoteHandle, base.context).execute(  AV5PesCodI,  AV6PesCodF) ;
+            }
+         }
          eventLevelResetContext();
       }
 

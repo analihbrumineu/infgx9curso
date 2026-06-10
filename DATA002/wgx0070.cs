@@ -2,7 +2,7 @@
                File: Gx0070
         Description: Lista de Seleção Cadastro de Estados.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:18:14.79
+       Generated on: 6/10/2026 9:40:43.78
        Program type: Callable routine
           Main DBMS: sqlserver
 */

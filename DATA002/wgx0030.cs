@@ -2,7 +2,7 @@
                File: Gx0030
         Description: Lista de Seleção Cadastro de filmes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:18:14.60
+       Generated on: 6/10/2026 9:40:43.55
        Program type: Callable routine
           Main DBMS: sqlserver
 */

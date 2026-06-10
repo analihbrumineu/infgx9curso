@@ -199,8 +199,16 @@ b_line_i(4,2,1,cmd,0,[ t('',107,0,0),t('Filcodinicial',23,0,0),t(=,10,0,0),t('1'
 b_line_i(5,2,1,cmd,0,[ t('',107,0,0),t('Filcodfinal',23,0,0),t(=,10,0,0),t('999999999',3,0,0) ]).
 b_line_i(6,2,1,cmd,0,[ t('',147,0,0) ]).
 b_line_i(8,2,1,cmd,0,[ t('',146,0,0),t('''Imprimir''',3,8,6) ]).
-b_line_i(9,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelFilPorCategoria'),28,0,4),t('Catcodinicial',23,0,29),t(',',7,0,43),t('Catcodfinal',23,0,45),t(',',7,0,57),t('Filcodinicial',23,0,59),t(',',7,0,73),t('Filcodfinal',23,0,75) ]).
-b_line_i(10,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(10,2,1,cmd,0,[ t('',109,0,0),t('Catcodinicial',23,0,7),t(<=,10,0,22),t('0',3,0,25),t('.OR.',9,0,27),t('Catcodfinal',23,0,30),t(<=,10,0,43),t('0',3,0,46),t('.OR.',9,0,48),t('Filcodinicial',23,0,51),t(<=,10,0,66),t('0',3,0,69),t('.OR.',9,0,71),t('Filcodfinal',23,0,74),t(<=,10,0,87),t('0',3,0,90) ]).
+b_line_i(11,2,1,cmd,0,[ t('',141,0,0),t('''Digite um código válido!''',3,11,12),t(')',4,0,38) ]).
+b_line_i(13,2,1,cmd,0,[ t('',110,0,0) ]).
+b_line_i(14,2,1,cmd,0,[ t('',109,0,0),t('Catcodinicial',23,0,11),t(>,10,0,26),t('Catcodfinal',23,0,28),t('.OR.',9,0,41),t('Filcodinicial',23,0,44),t(>,10,0,59),t('Filcodfinal',23,0,61) ]).
+b_line_i(15,2,1,cmd,0,[ t('',141,0,0),t('''O final do intervalo não pode ocorrer antes do início''',3,15,16),t(')',4,0,71) ]).
+b_line_i(17,2,1,cmd,0,[ t('',110,0,0) ]).
+b_line_i(18,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelFilPorCategoria'),28,0,12),t('Catcodinicial',23,0,37),t(',',7,0,51),t('Catcodfinal',23,0,53),t(',',7,0,65),t('Filcodinicial',23,0,67),t(',',7,0,81),t('Filcodfinal',23,0,83) ]).
+b_line_i(20,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(22,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(24,2,1,cmd,0,[ t('',147,0,0) ]).
 b_line_i(1000,2,1,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
 b_line_i(1001,2,1,cmd,0,[ t('',155,0,0) ]).
 b_line_i(1002,2,1,cmd,0,[ t('',147,0,0) ]).

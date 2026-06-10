@@ -10,8 +10,6 @@ using com.genexus.uifactory;
 using GeneXus.Windows;
 using GeneXus.Forms;
 using System.Windows.Forms;
-using System.Data;
-using System.Data.SqlClient;
 using GeneXus.Data;
 using com.genexus.distributed;
 using GeneXus.Data.ADO;

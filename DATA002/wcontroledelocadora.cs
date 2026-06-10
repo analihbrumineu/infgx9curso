@@ -2,7 +2,7 @@
                File: ControleDeLocadora
         Description: Stub for ControleDeLocadora
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:18:14.47
+       Generated on: 6/10/2026 9:40:43.39
        Program type: Callable routine
           Main DBMS: sqlserver
 */

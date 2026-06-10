@@ -2,7 +2,7 @@
                File: RelTopDeLisDevPorCliente
         Description: Relatório de topo de lista sobre total de devoluções por cliente.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:22:30.85
+       Generated on: 6/10/2026 9:40:34.73
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -303,22 +303,22 @@ namespace GeneXus.Programs {
                getPrinter().GxStartPage() ;
                getPrinter().GxDrawLine(26, Gx_line+194, 650, Gx_line+194, 1, 0, 0, 0, 0) ;
                getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-               getPrinter().GxDrawText(StringUtil.Format( (decimal)(Gx_page), "ZZZZZ9"), 606, Gx_line+26, 657, Gx_line+41, 2) ;
-               getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV29Pgmdes, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")), 143, Gx_line+20, 506, Gx_line+35, 0) ;
-               getPrinter().GxDrawText(StringUtil.Format( Gx_date, "99/99/99"), 611, Gx_line+0, 666, Gx_line+15, 0+256) ;
-               getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( Gx_time, "XXXXXXXX")), 611, Gx_line+13, 666, Gx_line+28, 0+256) ;
                getPrinter().GxDrawText(StringUtil.Format( AV8DatInic, "99/99/9999"), 65, Gx_line+91, 134, Gx_line+106, 0+256) ;
                getPrinter().GxDrawText(StringUtil.Format( AV9DatFina, "99/99/9999"), 169, Gx_line+91, 238, Gx_line+106, 0+256) ;
                getPrinter().GxDrawText(StringUtil.Format( (decimal)(AV10Seleca), "ZZZZZZZZZ9"), 91, Gx_line+117, 160, Gx_line+132, 2+256) ;
+               getPrinter().GxDrawText(StringUtil.Format( (decimal)(Gx_page), "ZZZZZ9"), 606, Gx_line+26, 657, Gx_line+41, 2) ;
+               getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV29Pgmdes, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")), 91, Gx_line+52, 597, Gx_line+67, 0) ;
+               getPrinter().GxDrawText(StringUtil.Format( Gx_date, "99/99/99"), 611, Gx_line+0, 666, Gx_line+15, 0+256) ;
+               getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( Gx_time, "XXXXXXXX")), 611, Gx_line+13, 666, Gx_line+28, 0+256) ;
                getPrinter().GxAttris("MS Sans Serif", 8, true, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-               getPrinter().GxDrawText("Data:", 567, Gx_line+0, 598, Gx_line+13, 0+256) ;
-               getPrinter().GxDrawText("Hora:", 567, Gx_line+13, 598, Gx_line+26, 0+256) ;
-               getPrinter().GxDrawText("Página:", 554, Gx_line+26, 597, Gx_line+39, 0+256) ;
                getPrinter().GxDrawText("De", 39, Gx_line+91, 55, Gx_line+104, 0+256) ;
                getPrinter().GxDrawText("até", 143, Gx_line+91, 161, Gx_line+104, 0+256) ;
                getPrinter().GxDrawText("Seleção", 39, Gx_line+117, 85, Gx_line+130, 0+256) ;
                getPrinter().GxDrawText("Cliente", 26, Gx_line+182, 65, Gx_line+195, 0+256) ;
                getPrinter().GxDrawText("Locação", 286, Gx_line+182, 335, Gx_line+195, 0+256) ;
+               getPrinter().GxDrawText("Data:", 567, Gx_line+0, 598, Gx_line+13, 0+256) ;
+               getPrinter().GxDrawText("Hora:", 567, Gx_line+13, 598, Gx_line+26, 0+256) ;
+               getPrinter().GxDrawText("Página:", 554, Gx_line+26, 597, Gx_line+39, 0+256) ;
                Gx_OldLine = Gx_line ;
                Gx_line = (int)(Gx_line+195) ;
                if (true) break;

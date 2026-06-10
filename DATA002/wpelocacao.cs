@@ -2,7 +2,7 @@
                File: PeLocacao
         Description: Cadastro de locação
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:18:15.94
+       Generated on: 6/10/2026 9:40:45.13
        Program type: Callable routine
           Main DBMS: sqlserver
 */

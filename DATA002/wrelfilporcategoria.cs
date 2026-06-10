@@ -2,7 +2,7 @@
                File: RelFilPorCategoria
         Description: Impressão de relatório de filmes por categoria.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:18:16.23
+       Generated on: 6/10/2026 9:40:45.45
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -240,7 +240,21 @@ namespace GeneXus.Programs {
       {
          eventLevelContext();
          /* 'Imprimir' Routine */
-         new rrelfilporcategoria(context, base.remoteHandle, base.context).execute(  AV5CatCodI,  AV6CatCodF,  AV7FilCodI,  AV8FilCodF) ;
+         if ( ( AV5CatCodI <= 0 ) || ( AV6CatCodF <= 0 ) || ( AV7FilCodI <= 0 ) || ( AV8FilCodF <= 0 ) )
+         {
+            GXutil.msg( me(), "Digite um código válido!" );
+         }
+         else
+         {
+            if ( ( AV5CatCodI > AV6CatCodF ) || ( AV7FilCodI > AV8FilCodF ) )
+            {
+               GXutil.msg( me(), "O final do intervalo não pode ocorrer antes do início" );
+            }
+            else
+            {
+               new rrelfilporcategoria(context, base.remoteHandle, base.context).execute(  AV5CatCodI,  AV6CatCodF,  AV7FilCodI,  AV8FilCodF) ;
+            }
+         }
          eventLevelResetContext();
       }
 

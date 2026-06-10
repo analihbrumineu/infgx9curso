@@ -2,7 +2,7 @@
                File: Cliente
         Description: Cadastro de clientes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:18:8.43
+       Generated on: 6/10/2026 9:40:36.31
        Program type: Callable routine
           Main DBMS: sqlserver
 */

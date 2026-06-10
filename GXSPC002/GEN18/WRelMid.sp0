@@ -194,17 +194,25 @@ b_group_i(2,1,lit,0,1,0).
 b_line_i(0,2,1,cmd,0,[ t('',146,0,0),t('Start',3,0,6) ]).
 b_line_i(1,2,1,cmd,0,[ t('',107,0,0),t('Relmidopcao',23,0,0),t(=,10,0,0),t('0',3,0,0) ]).
 b_line_i(2,2,1,cmd,0,[ t('',107,0,0),t('Midtipo',23,0,0),t(=,10,0,0),t('0',3,0,0) ]).
-b_line_i(3,2,1,cmd,0,[ t('',107,0,0),t('Catcodinicial',23,0,0),t(=,10,0,0),t('1',3,0,0) ]).
-b_line_i(4,2,1,cmd,0,[ t('',107,0,0),t('Catcodfinal',23,0,0),t(=,10,0,0),t('999999999',3,0,0) ]).
-b_line_i(5,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(7,2,1,cmd,0,[ t('',146,0,0),t('''Imprimir''',3,7,6) ]).
-b_line_i(9,2,1,cmd,0,[ t('',109,0,0),t('Relmidopcao',23,0,7),t(=,10,0,20),t('0',3,0,22) ]).
-b_line_i(10,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelMidPorCategoria'),28,0,8),t('Midtipo',23,0,33),t(',',7,0,41),t('Catcodinicial',23,0,43),t(',',7,0,57),t('Catcodfinal',23,0,59) ]).
-b_line_i(11,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(13,2,1,cmd,0,[ t('',109,0,0),t('Relmidopcao',23,0,7),t(=,10,0,20),t('1',3,0,22) ]).
-b_line_i(14,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelMidPorCatFilme'),28,0,8),t('Midtipo',23,0,32),t(',',7,0,40),t('Catcodinicial',23,0,42),t(',',7,0,56),t('Catcodfinal',23,0,58) ]).
-b_line_i(15,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(17,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(4,2,1,cmd,0,[ t('',107,0,0),t('Catcodinicial',23,0,0),t(=,10,0,0),t('1',3,0,0) ]).
+b_line_i(5,2,1,cmd,0,[ t('',107,0,0),t('Catcodfinal',23,0,0),t(=,10,0,0),t('999999999',3,0,0) ]).
+b_line_i(6,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(8,2,1,cmd,0,[ t('',146,0,0),t('''Imprimir''',3,8,6) ]).
+b_line_i(10,2,1,cmd,0,[ t('',109,0,0),t('Catcodinicial',23,0,7),t(<=,10,0,22),t('0',3,0,25),t('.OR.',9,0,27),t('Catcodfinal',23,0,30),t(<=,10,0,43),t('0',3,0,46) ]).
+b_line_i(11,2,1,cmd,0,[ t('',141,0,0),t('''Digite um código válido!''',3,11,12),t(')',4,0,38) ]).
+b_line_i(13,2,1,cmd,0,[ t('',110,0,0) ]).
+b_line_i(14,2,1,cmd,0,[ t('',109,0,0),t('Catcodinicial',23,0,11),t(>,10,0,26),t('Catcodfinal',23,0,28) ]).
+b_line_i(15,2,1,cmd,0,[ t('',141,0,0),t('''O final do intervalo não pode ocorrer antes do início''',3,15,16),t(')',4,0,71) ]).
+b_line_i(17,2,1,cmd,0,[ t('',110,0,0) ]).
+b_line_i(19,2,1,cmd,0,[ t('',109,0,0),t('Relmidopcao',23,0,15),t(=,10,0,28),t('0',3,0,30) ]).
+b_line_i(20,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelMidPorCategoria'),28,0,16),t('Midtipo',23,0,41),t(',',7,0,49),t('Catcodinicial',23,0,51),t(',',7,0,65),t('Catcodfinal',23,0,67) ]).
+b_line_i(22,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(24,2,1,cmd,0,[ t('',109,0,0),t('Relmidopcao',23,0,15),t(=,10,0,28),t('1',3,0,30) ]).
+b_line_i(25,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelMidPorCatFilme'),28,0,16),t('Midtipo',23,0,40),t(',',7,0,48),t('Catcodinicial',23,0,50),t(',',7,0,64),t('Catcodfinal',23,0,66) ]).
+b_line_i(27,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(29,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(31,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(33,2,1,cmd,0,[ t('',147,0,0) ]).
 b_line_i(1000,2,1,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
 b_line_i(1001,2,1,cmd,0,[ t('',155,0,0) ]).
 b_line_i(1002,2,1,cmd,0,[ t('',147,0,0) ]).

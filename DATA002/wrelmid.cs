@@ -2,7 +2,7 @@
                File: RelMid
         Description: Impressão de relatórios de mídia.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:18:16.25
+       Generated on: 6/10/2026 9:40:45.48
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -240,13 +240,27 @@ namespace GeneXus.Programs {
       {
          eventLevelContext();
          /* 'Imprimir' Routine */
-         if ( ( AV5RelMidO == 0 ) )
+         if ( ( AV6CatCodI <= 0 ) || ( AV7CatCodF <= 0 ) )
          {
-            new rrelmidporcategoria(context, base.remoteHandle, base.context).execute(  AV8MidTipo,  AV6CatCodI,  AV7CatCodF) ;
+            GXutil.msg( me(), "Digite um código válido!" );
          }
-         if ( ( AV5RelMidO == 1 ) )
+         else
          {
-            new rrelmidporcatfilme(context, base.remoteHandle, base.context).execute(  AV8MidTipo,  AV6CatCodI,  AV7CatCodF) ;
+            if ( ( AV6CatCodI > AV7CatCodF ) )
+            {
+               GXutil.msg( me(), "O final do intervalo não pode ocorrer antes do início" );
+            }
+            else
+            {
+               if ( ( AV5RelMidO == 0 ) )
+               {
+                  new rrelmidporcategoria(context, base.remoteHandle, base.context).execute(  AV8MidTipo,  AV6CatCodI,  AV7CatCodF) ;
+               }
+               if ( ( AV5RelMidO == 1 ) )
+               {
+                  new rrelmidporcatfilme(context, base.remoteHandle, base.context).execute(  AV8MidTipo,  AV6CatCodI,  AV7CatCodF) ;
+               }
+            }
          }
          eventLevelResetContext();
       }
