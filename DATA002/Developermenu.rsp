@@ -118,6 +118,10 @@ rrelclicomdependente.cs
 rrelmidporcategoria.cs
 rrelmidporcatfilme.cs
 rreltopdelisdevporcliente.cs
-rreltopdelisdevporfilmes.cs
+rreltopdelisdevporfilme.cs
 rreltopdelisdevporcategoria.cs
 rreltopdelisdevportipdemidia.cs
+rreltopdeliscanporcliente.cs
+rreltopdeliscanporfilme.cs
+rreltopdeliscanportipdemidia.cs
+rreltopdeliscanporcategoria.cs

@@ -564,8 +564,6 @@ struct_dt_i([ 26,4,1 ],subid,'1').
 struct_dt_i([ 26,4,1 ],ispublic,'True').
 struct_dt_i([ 26,4,0 ],fullname,'SDTCliRelatorio').
 struct_dt_i([ 26,4,1 ],fullname,'SDTCliRelatorio.SDTCliDevolucaoItem').
-struct_dt_i([ 26,4,0 ],modified,yes).
-struct_dt_i([ 26,4,1 ],modified,yes).
  
 struct_dt_elem_i([ 26,4,1 ],1,name,'Clirellocclipescodigo').
 struct_dt_elem_i([ 26,4,1 ],1,camelname,'CliRelLocCliPesCodigo').

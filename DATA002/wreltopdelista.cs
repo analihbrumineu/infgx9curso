@@ -2,7 +2,7 @@
                File: RelTopDeLista
         Description: Relatório de topo de lista.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 8:22:57.1
+       Generated on: 6/10/2026 9:22:31.20
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -262,7 +262,7 @@ namespace GeneXus.Programs {
                   }
                   if ( ( AV8Relator == 1 ) && ( AV9Assunto == 2 ) )
                   {
-                     new rreltopdelisdevporfilmes(context, base.remoteHandle, base.context).execute(  AV5DatInic,  AV6DatFina,  AV7Selecao) ;
+                     new rreltopdelisdevporfilme(context, base.remoteHandle, base.context).execute(  AV5DatInic,  AV6DatFina,  AV7Selecao) ;
                   }
                   if ( ( AV8Relator == 1 ) && ( AV9Assunto == 3 ) )
                   {
@@ -271,6 +271,22 @@ namespace GeneXus.Programs {
                   if ( ( AV8Relator == 1 ) && ( AV9Assunto == 4 ) )
                   {
                      new rreltopdelisdevportipdemidia(context, base.remoteHandle, base.context).execute(  AV5DatInic,  AV6DatFina,  AV7Selecao) ;
+                  }
+                  if ( ( AV8Relator == 2 ) && ( AV9Assunto == 1 ) )
+                  {
+                     new rreltopdeliscanporcliente(context, base.remoteHandle, base.context).execute(  AV5DatInic,  AV6DatFina,  AV7Selecao) ;
+                  }
+                  if ( ( AV8Relator == 2 ) && ( AV9Assunto == 2 ) )
+                  {
+                     new rreltopdeliscanporfilme(context, base.remoteHandle, base.context).execute(  AV5DatInic,  AV6DatFina,  AV7Selecao) ;
+                  }
+                  if ( ( AV8Relator == 2 ) && ( AV9Assunto == 3 ) )
+                  {
+                     new rreltopdeliscanporcategoria(context, base.remoteHandle, base.context).execute(  AV5DatInic,  AV6DatFina,  AV7Selecao) ;
+                  }
+                  if ( ( AV8Relator == 2 ) && ( AV9Assunto == 4 ) )
+                  {
+                     new rreltopdeliscanportipdemidia(context, base.remoteHandle, base.context).execute(  AV5DatInic,  AV6DatFina,  AV7Selecao) ;
                   }
                }
             }

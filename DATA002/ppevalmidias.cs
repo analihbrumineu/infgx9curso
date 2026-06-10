@@ -2,7 +2,7 @@
                File: PeValMidias
         Description: Validar mídias liberadas da locação.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 8:22:46.55
+       Generated on: 6/10/2026 9:18:5.82
        Program type: Callable routine
           Main DBMS: sqlserver
 */

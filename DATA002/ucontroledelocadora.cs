@@ -2,7 +2,7 @@
                File: ControleDeLocadora
         Description: Controle de locadora.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 8:22:54.17
+       Generated on: 6/10/2026 9:18:13.57
        Program type: Main program
           Main DBMS: sqlserver
 */

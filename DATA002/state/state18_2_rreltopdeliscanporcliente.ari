@@ -1,0 +1,14 @@
+current_obj_i(2,rpt,28).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_object_dependency(rreltopdeliscanporcliente,[],[],[ type_SdtSDTCliRelatorio_SDTCliDevolucaoItem,'GxObjectCollection' ],28).
+ 
+ 
+obj_parms_i([ 'DateTime aP0_DatInicial','DateTime aP1_DatFinal','long aP2_Selecao' ],[ [ 'Datinicial',in ],[ 'Datfinal',in ],[ 'Selecao',in ] ]).
+ 
+ 

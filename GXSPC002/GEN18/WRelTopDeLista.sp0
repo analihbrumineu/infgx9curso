@@ -218,18 +218,30 @@ b_line_i(22,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('1',
 b_line_i(23,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisDevPorCliente'),28,0,20),t('Datinicial',23,0,51),t(',',7,0,62),t('Datfinal',23,0,64),t(',',7,0,73),t('Selecao',23,0,75) ]).
 b_line_i(25,2,1,cmd,0,[ t('',111,0,0) ]).
 b_line_i(27,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('1',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('2',3,0,49) ]).
-b_line_i(28,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisDevPorFilmes'),28,0,20),t('Datinicial',23,0,50),t(',',7,0,61),t('Datfinal',23,0,63),t(',',7,0,72),t('Selecao',23,0,74) ]).
+b_line_i(28,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisDevPorFilme'),28,0,20),t('Datinicial',23,0,49),t(',',7,0,60),t('Datfinal',23,0,62),t(',',7,0,71),t('Selecao',23,0,73) ]).
 b_line_i(30,2,1,cmd,0,[ t('',111,0,0) ]).
 b_line_i(32,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('1',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('3',3,0,49) ]).
 b_line_i(33,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisDevPorCategoria'),28,0,20),t('Datinicial',23,0,53),t(',',7,0,64),t('Datfinal',23,0,66),t(',',7,0,75),t('Selecao',23,0,77) ]).
 b_line_i(35,2,1,cmd,0,[ t('',111,0,0) ]).
 b_line_i(37,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('1',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('4',3,0,49) ]).
 b_line_i(38,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisDevPorTipDeMidia'),28,0,20),t('Datinicial',23,0,54),t(',',7,0,65),t('Datfinal',23,0,67),t(',',7,0,76),t('Selecao',23,0,78) ]).
-b_line_i(40,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(41,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(42,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(39,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(41,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('2',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('1',3,0,49) ]).
+b_line_i(42,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisCanPorCliente'),28,0,20),t('Datinicial',23,0,51),t(',',7,0,62),t('Datfinal',23,0,64),t(',',7,0,73),t('Selecao',23,0,75) ]).
 b_line_i(43,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(44,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(45,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('2',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('2',3,0,49) ]).
+b_line_i(46,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisCanPorFilme'),28,0,20),t('Datinicial',23,0,49),t(',',7,0,60),t('Datfinal',23,0,62),t(',',7,0,71),t('Selecao',23,0,73) ]).
+b_line_i(47,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(49,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('2',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('3',3,0,49) ]).
+b_line_i(50,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisCanPorCategoria'),28,0,20),t('Datinicial',23,0,53),t(',',7,0,64),t('Datfinal',23,0,66),t(',',7,0,75),t('Selecao',23,0,77) ]).
+b_line_i(51,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(53,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('2',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('4',3,0,49) ]).
+b_line_i(54,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisCanPorTipDeMidia'),28,0,20),t('Datinicial',23,0,54),t(',',7,0,65),t('Datfinal',23,0,67),t(',',7,0,76),t('Selecao',23,0,78) ]).
+b_line_i(55,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(56,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(57,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(58,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(59,2,1,cmd,0,[ t('',147,0,0) ]).
 b_line_i(1000,2,1,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
 b_line_i(1001,2,1,cmd,0,[ t('',155,0,0) ]).
 b_line_i(1002,2,1,cmd,0,[ t('',147,0,0) ]).
@@ -310,9 +322,13 @@ calling_main_i(4,1).
  
  
  
+pgm_parm_i(rpt,30,'RRELTOPDELISCANPORTIPDEMIDIA',[ [ date,8,0,0 ],[ date,8,0,0 ],[ int,10,0,0 ] ],[ [ 'DatInicial',in,[] ],[ 'DatFinal',in,[] ],[ 'Selecao',in,[] ] ]).
+pgm_parm_i(rpt,31,'RRELTOPDELISCANPORCATEGORIA',[ [ date,8,0,0 ],[ date,8,0,0 ],[ int,10,0,0 ] ],[ [ 'DatInicial',in,[] ],[ 'DatFinal',in,[] ],[ 'Selecao',in,[] ] ]).
+pgm_parm_i(rpt,29,'RRELTOPDELISCANPORFILME',[ [ date,8,0,0 ],[ date,8,0,0 ],[ int,10,0,0 ] ],[ [ 'DatInicial',in,[] ],[ 'DatFinal',in,[] ],[ 'Selecao',in,[] ] ]).
+pgm_parm_i(rpt,28,'RRELTOPDELISCANPORCLIENTE',[ [ date,8,0,0 ],[ date,8,0,0 ],[ int,10,0,0 ] ],[ [ 'DatInicial',in,[] ],[ 'DatFinal',in,[] ],[ 'Selecao',in,[] ] ]).
 pgm_parm_i(rpt,27,'RRELTOPDELISDEVPORTIPDEMIDIA',[ [ date,8,0,0 ],[ date,8,0,0 ],[ int,10,0,0 ] ],[ [ 'DatInicial',in,[] ],[ 'DatFinal',in,[] ],[ 'Selecao',in,[] ] ]).
 pgm_parm_i(rpt,26,'RRELTOPDELISDEVPORCATEGORIA',[ [ date,8,0,0 ],[ date,8,0,0 ],[ int,10,0,0 ] ],[ [ 'DatInicial',in,[] ],[ 'DatFinal',in,[] ],[ 'Selecao',in,[] ] ]).
-pgm_parm_i(rpt,25,'RRELTOPDELISDEVPORFILMES',[ [ date,8,0,0 ],[ date,8,0,0 ],[ int,10,0,0 ] ],[ [ 'DatInicial',in,[] ],[ 'DatFinal',in,[] ],[ 'Selecao',in,[] ] ]).
+pgm_parm_i(rpt,25,'RRELTOPDELISDEVPORFILME',[ [ date,8,0,0 ],[ date,8,0,0 ],[ int,10,0,0 ] ],[ [ 'DatInicial',in,[] ],[ 'DatFinal',in,[] ],[ 'Selecao',in,[] ] ]).
 pgm_parm_i(rpt,24,'RRELTOPDELISDEVPORCLIENTE',[ [ date,8,0,0 ],[ date,8,0,0 ],[ int,10,0,0 ] ],[ [ 'DatInicial',in,[] ],[ 'DatFinal',in,[] ],[ 'Selecao',in,[] ] ]).
  
  

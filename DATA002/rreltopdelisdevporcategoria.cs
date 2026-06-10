@@ -2,7 +2,7 @@
                File: RelTopDeLisDevPorCategoria
         Description: Relatório de topo de lista de devoluções por categoria.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 8:22:47.27
+       Generated on: 6/10/2026 9:22:30.74
        Program type: Callable routine
           Main DBMS: sqlserver
 */

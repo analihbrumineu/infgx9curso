@@ -2,7 +2,7 @@
                File: RelTopDeLisDevPorCliente
         Description: Relatório de topo de lista sobre total de devoluções por cliente.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 8:22:47.39
+       Generated on: 6/10/2026 9:22:30.85
        Program type: Callable routine
           Main DBMS: sqlserver
 */

@@ -2,7 +2,7 @@
                File: Filme
         Description: Cadastro de filmes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 8:22:50.45
+       Generated on: 6/10/2026 9:18:10.10
        Program type: Callable routine
           Main DBMS: sqlserver
 */

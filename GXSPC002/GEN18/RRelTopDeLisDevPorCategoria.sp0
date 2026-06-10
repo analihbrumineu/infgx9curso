@@ -556,8 +556,6 @@ struct_dt_i([ 26,6,1 ],subid,'1').
 struct_dt_i([ 26,6,1 ],ispublic,'True').
 struct_dt_i([ 26,6,0 ],fullname,'SDTCatRelatorio').
 struct_dt_i([ 26,6,1 ],fullname,'SDTCatRelatorio.SDTCatDevolucaoItem').
-struct_dt_i([ 26,6,0 ],modified,yes).
-struct_dt_i([ 26,6,1 ],modified,yes).
  
 struct_dt_elem_i([ 26,6,1 ],1,name,'Catrellocmidcatcodigo').
 struct_dt_elem_i([ 26,6,1 ],1,camelname,'CatRelLocMidCatCodigo').

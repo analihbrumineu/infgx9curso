@@ -2,7 +2,7 @@
                File: RelFilPorCategoria
         Description: Relatório de filmes por categoria.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 8:22:46.90
+       Generated on: 6/10/2026 9:18:6.17
        Program type: Callable routine
           Main DBMS: sqlserver
 */

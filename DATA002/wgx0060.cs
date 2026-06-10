@@ -2,7 +2,7 @@
                File: Gx0060
         Description: Lista de Seleção Cadastro de categorias.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 8:22:55.41
+       Generated on: 6/10/2026 9:18:14.74
        Program type: Callable routine
           Main DBMS: sqlserver
 */
