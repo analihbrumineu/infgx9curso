@@ -2,7 +2,7 @@
                File: Filme
         Description: Cadastro de filmes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 8:57:58.22
+       Generated on: 6/11/2026 9:2:19.50
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -67,9 +67,8 @@ namespace GeneXus.Programs {
          A29FilNome = "" ;
          n29FilNome = false ;
          n29FilNome = (((String.CompareOrdinal("".TrimEnd(' '), StringUtil.RTrim( A29FilNome).TrimEnd(' ') )==0)) ? true : false) ;
-         A30FilSitu = 0 ;
+         A30FilSitu = 1 ;
          n30FilSitu = false ;
-         n30FilSitu = (((0==A30FilSitu)) ? true : false) ;
          A31FilData = Gx_date ;
          n31FilData = false ;
          A32CatCodi = 0 ;
@@ -97,6 +96,9 @@ namespace GeneXus.Programs {
          A31FilData = i31FilData ;
          edtFilData.setValue(A31FilData);
          n31FilData = false ;
+         A30FilSitu = i30FilSitu ;
+         cmbFilSituacao.setValue(A30FilSitu);
+         n30FilSitu = false ;
       }
 
       protected void InitializeNonKey024( )
@@ -1623,6 +1625,7 @@ namespace GeneXus.Programs {
             if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) == 0 ) )
             {
                i31FilData = A31FilData ;
+               i30FilSitu = A30FilSitu ;
             }
          }
          set_caption( ) ;
@@ -1631,7 +1634,7 @@ namespace GeneXus.Programs {
 
       protected void ZM023( int GX_JID )
       {
-         if ( ( GX_JID == 10 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 11 ) || ( GX_JID == 0 ) )
          {
             if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) != 0 ) )
             {
@@ -1650,7 +1653,7 @@ namespace GeneXus.Programs {
                Z32CatCodi = A32CatCodi ;
             }
          }
-         if ( ( GX_JID == -10 ) )
+         if ( ( GX_JID == -11 ) )
          {
             Z28FilCodi = A28FilCodi ;
             Z29FilNome = A29FilNome ;
@@ -1684,6 +1687,12 @@ namespace GeneXus.Programs {
             edtFilData.setValue(A31FilData);
             n31FilData = false ;
          }
+         if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) == 0 )  && ((0==A30FilSitu)) && ( Gx_BScreen == 0 ) )
+         {
+            A30FilSitu = 1 ;
+            cmbFilSituacao.setValue(A30FilSitu);
+            n30FilSitu = false ;
+         }
          if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) == 0 ) && ( Gx_BScreen == 0 ) )
          {
          }
@@ -1715,7 +1724,7 @@ namespace GeneXus.Programs {
             n55FilOsca = T000211_n55FilOsca[0] ;
             A32CatCodi = T000211_A32CatCodi[0] ;
             n32CatCodi = T000211_n32CatCodi[0] ;
-            ZM023( -10) ;
+            ZM023( -11) ;
          }
          pr_default.close(9);
          OnLoadActions023( ) ;
@@ -1807,7 +1816,7 @@ namespace GeneXus.Programs {
          pr_default.execute(8, new Object[] {n28FilCodi, A28FilCodi});
          if ( (pr_default.getStatus(8) != 101) && ( T000210_A28FilCodi[0] == A28FilCodi ) )
          {
-            ZM023( 10) ;
+            ZM023( 11) ;
             RcdFound3 = 1 ;
             A29FilNome = T000210_A29FilNome[0] ;
             n29FilNome = T000210_n29FilNome[0] ;
@@ -2485,7 +2494,7 @@ namespace GeneXus.Programs {
 
       protected void ZM024( int GX_JID )
       {
-         if ( ( GX_JID == 12 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 13 ) || ( GX_JID == 0 ) )
          {
             if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) != 0 ) )
             {
@@ -2494,7 +2503,7 @@ namespace GeneXus.Programs {
             {
             }
          }
-         if ( ( GX_JID == -12 ) )
+         if ( ( GX_JID == -13 ) )
          {
             Z28FilCodi = A28FilCodi ;
             Z79FilDirC = A79FilDirC ;
@@ -2523,7 +2532,7 @@ namespace GeneXus.Programs {
             RcdFound4 = 1 ;
             A80FilDirN = T000222_A80FilDirN[0] ;
             n80FilDirN = T000222_n80FilDirN[0] ;
-            ZM024( -12) ;
+            ZM024( -13) ;
          }
          pr_default.close(20);
          OnLoadActions024( ) ;
@@ -2582,7 +2591,7 @@ namespace GeneXus.Programs {
          pr_default.execute(6, new Object[] {n28FilCodi, A28FilCodi, A79FilDirC});
          if ( (pr_default.getStatus(6) != 101) && ( T00028_A28FilCodi[0] == A28FilCodi ) )
          {
-            ZM024( 12) ;
+            ZM024( 13) ;
             RcdFound4 = 1 ;
             InitializeNonKey024( ) ;
             A79FilDirC = T00028_A79FilDirC[0] ;
@@ -2867,7 +2876,7 @@ namespace GeneXus.Programs {
 
       protected void ZM025( int GX_JID )
       {
-         if ( ( GX_JID == 14 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 15 ) || ( GX_JID == 0 ) )
          {
             if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) != 0 ) )
             {
@@ -2878,7 +2887,7 @@ namespace GeneXus.Programs {
                Z81FilAtoP = A81FilAtoP ;
             }
          }
-         if ( ( GX_JID == -14 ) )
+         if ( ( GX_JID == -15 ) )
          {
             Z28FilCodi = A28FilCodi ;
             Z81FilAtoP = A81FilAtoP ;
@@ -2910,7 +2919,7 @@ namespace GeneXus.Programs {
             n78FilAtoN = T000228_n78FilAtoN[0] ;
             A81FilAtoP = T000228_A81FilAtoP[0] ;
             n81FilAtoP = T000228_n81FilAtoP[0] ;
-            ZM025( -14) ;
+            ZM025( -15) ;
          }
          pr_default.close(26);
          OnLoadActions025( ) ;
@@ -2969,7 +2978,7 @@ namespace GeneXus.Programs {
          pr_default.execute(4, new Object[] {n28FilCodi, A28FilCodi, A77FilAtoC});
          if ( (pr_default.getStatus(4) != 101) && ( T00026_A28FilCodi[0] == A28FilCodi ) )
          {
-            ZM025( 14) ;
+            ZM025( 15) ;
             RcdFound5 = 1 ;
             InitializeNonKey025( ) ;
             A81FilAtoP = T00026_A81FilAtoP[0] ;
@@ -3514,6 +3523,7 @@ namespace GeneXus.Programs {
          A55FilOsca = 0 ;
          n55FilOsca = false ;
          i31FilData = (DateTime)(DateTime.MinValue) ;
+         i30FilSitu = 0 ;
          A79FilDirC = 0 ;
          A80FilDirN = "" ;
          n80FilDirN = false ;
@@ -3657,6 +3667,8 @@ namespace GeneXus.Programs {
          T000234_A77FilAtoC = new int[1] ;
          K28FilCodi = 0 ;
          n28FilCodi = false ;
+         A30FilSitu = 1 ;
+         n30FilSitu = false ;
          A31FilData = Gx_date ;
          n31FilData = false ;
          Gx_date = DateTimeUtil.Today( ) ;
@@ -3764,6 +3776,9 @@ namespace GeneXus.Programs {
          K28FilCodi = 0 ;
          edtFilCodigo.setValue(A28FilCodi);
          n28FilCodi = false ;
+         A30FilSitu = 1 ;
+         cmbFilSituacao.setValue(A30FilSitu);
+         n30FilSitu = false ;
          A31FilData = Gx_date ;
          edtFilData.setValue(A31FilData);
          n31FilData = false ;
@@ -3779,6 +3794,7 @@ namespace GeneXus.Programs {
       protected short A30FilSitu ;
       protected short A55FilOsca ;
       protected short geteqAfterKey= 1 ;
+      protected short i30FilSitu ;
       protected short geteqAfterKey4= 1 ;
       protected short A81FilAtoP ;
       protected short geteqAfterKey5= 1 ;

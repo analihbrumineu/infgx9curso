@@ -2,7 +2,7 @@
                File: Login
         Description: Tela de login.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 8:58:3.31
+       Generated on: 6/11/2026 9:2:24.67
        Program type: Callable routine
           Main DBMS: sqlserver
 */

@@ -48,6 +48,31 @@
 <Action>
 <ActionType>Formula</ActionType>
 <FormulaName>
+<Attribute>
+<AttriId>30</AttriId>
+<AttriName>FilSituacao</AttriName>
+<Description>Situação do filme</Description></Attribute></FormulaName>
+<FormulaExpression>
+<Token>1</Token>
+<Token>IF</Token>
+<Token>insert</Token>
+<Token>and</Token>
+<Token>null1(</Token>
+<Attribute>
+<AttriId>30</AttriId>
+<AttriName>FilSituacao</AttriName>
+<Description>Situação do filme</Description></Attribute>
+<Token>)</Token>
+<Token>and</Token>
+<Variable>
+<VarId>GxBScreen</VarId>
+<VarName>&amp;Gx_BScreen</VarName></Variable>
+<Token>=</Token>
+<Token>0</Token>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
 <Variable>
 <VarId>Today</VarId>
 <VarName>&amp;Gx_date</VarName></Variable></FormulaName>

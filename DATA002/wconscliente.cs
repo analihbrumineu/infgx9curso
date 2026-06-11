@@ -2,7 +2,7 @@
                File: ConsCliente
         Description: Consulta de cliente.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 8:58:2.2
+       Generated on: 6/11/2026 9:2:23.37
        Program type: Callable routine
           Main DBMS: sqlserver
 */

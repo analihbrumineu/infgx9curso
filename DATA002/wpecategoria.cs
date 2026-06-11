@@ -2,7 +2,7 @@
                File: PeCategoria
         Description: Cadastro de categorias.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 8:58:3.56
+       Generated on: 6/11/2026 9:2:24.92
        Program type: Callable routine
           Main DBMS: sqlserver
 */

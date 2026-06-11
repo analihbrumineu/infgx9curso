@@ -68,6 +68,7 @@ repeat_i(5,[ 3,25,[],[] ]).
 repeat_i(4,[ 3,25,[],[] ]).
  
 default_i(e(28,3,1,28)).
+default_i(e(30,4,3,[ t('1',3) ])).
 default_i(e(31,4,3,[ t('Today',23) ])).
 default_i(e('Today',2,2,'''today''')).
  
@@ -267,20 +268,21 @@ rule_i(0,rule([ a(22,[ '''Pesquisa''','''Pesquisa''','4' ]) ],[],[],[])).
 a_i(1,3,b,0,[],[ [],[ a(1,msg([ t('"Campo Data de lançamento do filme fora da faixa"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(31,2),t(')',4),t('.OR.',9),t(31,2),t(>=,10),t('ymdtod(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(')',4),t(')',4) ] ]).
 a_i(2,3,f,[ t(32,2),t('Enabled',3) ],[],[ [],[ t(0,3),t('IF',17),t('Mode',23),t(=,10),t('''UPD''',3),t(';',18),t(1,3),t('OTHERWISE',19),t(';',18) ] ]).
 a_i(3,3,f,31,[],[ [ insert ],[ t('Today',23),t('IF',17),t(insert,1),t('AND',9),t('null1(',1),t(31,2),t(')',4),t('AND',9),t('GxBScreen',23),t(=,10),t(0,3),t(';',18) ] ]).
-a_i(4,3,b,3,[],[ [],[ a(3,[ t(32,2) ]) ],[ t('Mode',23),t(=,10),t('''UPD''',3) ] ]).
-a_i(5,3,b,4,[],[ [],[ a(1,[ t('''Nome deve ser informado!''',3) ]) ],[ t('after(',1),t(29,2),t(')',4),t('.AND.',9),t('null(',1),t(29,2),t(')',4) ] ]).
-a_i(6,3,b,5,[],[ [],[ a(1,[ t('''Categoria deve ser informada!''',3) ]) ],[ t('after(',1),t(32,2),t(')',4),t('.AND.',9),t('null(',1),t(32,2),t(')',4) ] ]).
-a_i(7,3,b,6,[],[ [],[ a(1,[ t('''Data de lançamento deve ser informada!''',3) ]) ],[ t('after(',1),t(31,2),t(')',4),t('.AND.',9),t(31,2),t(=,10),t('ctod(',1),t('''0''',3),t(')',4) ] ]).
-a_i(8,3,b,7,[],[ [],[ a(1,[ t('''Não é possível cadastrar um filme não lançado!''',3) ]) ],[ t('after(',1),t(31,2),t(')',4),t('.AND.',9),t(31,2),t(>,10),t('Today',23) ] ]).
-a_i(9,3,b,8,[ trn ],[ [],[ a(4,[ t('''Descrição não foi informada!''',3) ]) ],[ t('null(',1),t(34,2),t(')',4) ] ]).
-a_i(10,3,t,3,[],[ [ [ [],28,28 ] ],'IFILME',[] ]).
-a_i(11,3,r,6,[],[ [ [ 3,32,32 ] ],'ICATEGORIA',[] ]).
-a_i(12,4,t,4,[],[ [ [ [],28,28 ],[ [],79,79 ] ],'IFILMEDIRECAO',[] ]).
-a_i(13,4,r,515,[],[ [ [ 4,79,49 ] ],'IASTRO',[] ]).
-a_i(14,5,t,5,[],[ [ [ [],28,28 ],[ [],77,77 ] ],'IFILMEELENCO',[] ]).
-a_i(15,5,r,516,[],[ [ [ 5,77,49 ] ],'IASTRO',[] ]).
-a_i(16,3,f,'GxBScreen',[],[ [],[ t('0',3) ] ]).
-a_i(17,3,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
+a_i(4,3,f,30,[],[ [ insert ],[ t('1',3),t('IF',17),t(insert,1),t('AND',9),t('null1(',1),t(30,2),t(')',4),t('AND',9),t('GxBScreen',23),t(=,10),t(0,3),t(';',18) ] ]).
+a_i(5,3,b,4,[],[ [],[ a(3,[ t(32,2) ]) ],[ t('Mode',23),t(=,10),t('''UPD''',3) ] ]).
+a_i(6,3,b,5,[],[ [],[ a(1,[ t('''Nome deve ser informado!''',3) ]) ],[ t('after(',1),t(29,2),t(')',4),t('.AND.',9),t('null(',1),t(29,2),t(')',4) ] ]).
+a_i(7,3,b,6,[],[ [],[ a(1,[ t('''Categoria deve ser informada!''',3) ]) ],[ t('after(',1),t(32,2),t(')',4),t('.AND.',9),t('null(',1),t(32,2),t(')',4) ] ]).
+a_i(8,3,b,7,[],[ [],[ a(1,[ t('''Data de lançamento deve ser informada!''',3) ]) ],[ t('after(',1),t(31,2),t(')',4),t('.AND.',9),t(31,2),t(=,10),t('ctod(',1),t('''0''',3),t(')',4) ] ]).
+a_i(9,3,b,8,[],[ [],[ a(1,[ t('''Não é possível cadastrar um filme não lançado!''',3) ]) ],[ t('after(',1),t(31,2),t(')',4),t('.AND.',9),t(31,2),t(>,10),t('Today',23) ] ]).
+a_i(10,3,b,9,[ trn ],[ [],[ a(4,[ t('''Descrição não foi informada!''',3) ]) ],[ t('null(',1),t(34,2),t(')',4) ] ]).
+a_i(11,3,t,3,[],[ [ [ [],28,28 ] ],'IFILME',[] ]).
+a_i(12,3,r,6,[],[ [ [ 3,32,32 ] ],'ICATEGORIA',[] ]).
+a_i(13,4,t,4,[],[ [ [ [],28,28 ],[ [],79,79 ] ],'IFILMEDIRECAO',[] ]).
+a_i(14,4,r,515,[],[ [ [ 4,79,49 ] ],'IASTRO',[] ]).
+a_i(15,5,t,5,[],[ [ [ [],28,28 ],[ [],77,77 ] ],'IFILMEELENCO',[] ]).
+a_i(16,5,r,516,[],[ [ [ 5,77,49 ] ],'IASTRO',[] ]).
+a_i(17,3,f,'GxBScreen',[],[ [],[ t('0',3) ] ]).
+a_i(18,3,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
  
 v_i(b,i,1,31).
 v_i(b,o,1,[]).
@@ -289,42 +291,45 @@ v_i(f,o,2,[ t(32,2),t('Enabled',3) ]).
 v_i(f,i,3,'Today').
 v_i(f,i,3,'GxBScreen').
 v_i(f,o,3,31).
-v_i(b,i,4,'Mode').
-v_i(b,o,4,[]).
-v_i(b,i,5,29).
+v_i(f,i,4,'GxBScreen').
+v_i(f,o,4,30).
+v_i(b,i,5,'Mode').
 v_i(b,o,5,[]).
-v_i(b,i,6,32).
+v_i(b,i,6,29).
 v_i(b,o,6,[]).
-v_i(b,i,7,31).
+v_i(b,i,7,32).
 v_i(b,o,7,[]).
 v_i(b,i,8,31).
 v_i(b,o,8,[]).
-v_i(b,i,9,34).
+v_i(b,i,9,31).
 v_i(b,o,9,[]).
-v_i(t,i,10,28).
-v_i(t,o,10,29).
-v_i(t,o,10,30).
-v_i(t,o,10,31).
-v_i(t,o,10,34).
-v_i(t,o,10,55).
-v_i(t,o,10,32).
-v_i(r,i,11,32).
-v_i(r,o,11,33).
-v_i(t,i,12,28).
-v_i(t,i,12,79).
-v_i(t,o,12,[]).
-v_i(r,i,13,79).
-v_i(r,o,13,80).
-v_i(t,i,14,28).
-v_i(t,i,14,77).
-v_i(t,o,14,81).
-v_i(r,i,15,77).
-v_i(r,o,15,78).
-v_i(f,i,16,[]).
-v_i(f,o,16,'GxBScreen').
+v_i(b,i,10,34).
+v_i(b,o,10,[]).
+v_i(t,i,11,28).
+v_i(t,o,11,29).
+v_i(t,o,11,30).
+v_i(t,o,11,31).
+v_i(t,o,11,34).
+v_i(t,o,11,55).
+v_i(t,o,11,32).
+v_i(r,i,12,32).
+v_i(r,o,12,33).
+v_i(t,i,13,28).
+v_i(t,i,13,79).
+v_i(t,o,13,[]).
+v_i(r,i,14,79).
+v_i(r,o,14,80).
+v_i(t,i,15,28).
+v_i(t,i,15,77).
+v_i(t,o,15,81).
+v_i(r,i,16,77).
+v_i(r,o,16,78).
 v_i(f,i,17,[]).
-v_i(f,o,17,'Today').
+v_i(f,o,17,'GxBScreen').
+v_i(f,i,18,[]).
+v_i(f,o,18,'Today').
  
+ca_i(4,30).
 ca_i(3,31).
  
 tbl_to_delete_i(3,[ 9,[ [ 3,28,28 ] ],c,'IMIDIA2',[ [ 9,28 ] ],[ 37 ] ]).

@@ -2,7 +2,7 @@
                File: ConsAstro
         Description: Consulta de astros.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 8:58:1.83
+       Generated on: 6/11/2026 9:2:23.18
        Program type: Callable routine
           Main DBMS: sqlserver
 */

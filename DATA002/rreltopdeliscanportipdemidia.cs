@@ -2,7 +2,7 @@
                File: RelTopDeLisCanPorTipDeMidia
         Description: Relatório de topo de lista sobre cancelamentos por formato de mídia.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 8:57:54.97
+       Generated on: 6/11/2026 9:2:16.22
        Program type: Callable routine
           Main DBMS: sqlserver
 */
