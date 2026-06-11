@@ -26,22 +26,21 @@ lits_i('Formato',4,85).
 lits_i('Valor (R$)',4,99).
 lits_i('Novo valor (R$)',4,116).
 lits_i('Marcado',4,131).
-lits_i('Tipo de mídia:',2,9).
-lits_i('Configurações tipo de mídia',1,9).
-lits_i('Categoria:',2,35).
+lits_i('Formato',2,9).
+lits_i('Categoria',2,29).
  
-cls_i([ 1,9 ],[ 15,137 ]).
+cls_i([ 2,9 ],[ 26,137 ]).
  
-pos_i(32,[ 5,15,9 ]).
-pos_i(33,[ 5,15,34 ]).
-pos_i(35,[ 5,15,85 ]).
-pos_i('Conftipvalor',[ 5,15,99 ]).
-pos_i('Conftipvalnovo',[ 5,15,116 ]).
-pos_i('Marcado',[ 5,15,131 ]).
-pos_i('Midtipo',[ 2,2,22 ]).
-pos_i('Catnome',[ 2,2,44 ]).
+pos_i(32,[ 5,26,9 ]).
+pos_i(33,[ 5,26,34 ]).
+pos_i(35,[ 5,26,85 ]).
+pos_i('Conftipvalor',[ 5,26,99 ]).
+pos_i('Conftipvalnovo',[ 5,26,116 ]).
+pos_i('Marcado',[ 5,26,131 ]).
+pos_i('Midtipo',[ 2,2,16 ]).
+pos_i('Catnome',[ 2,2,39 ]).
  
-repeat_i(2,[ 5,15,[ 32,33,35,'Conftipvalor','Conftipvalnovo','Marcado' ],[ 'Conftipvalnovo','Marcado' ] ]).
+repeat_i(2,[ 5,26,[ 32,33,35,'Conftipvalor','Conftipvalnovo','Marcado' ],[ 'Conftipvalnovo','Marcado' ] ]).
  
 default_i(e('Midtipo',2,2,'0')).
  
@@ -231,30 +230,30 @@ b_group_i(2,1,lit,0,1,0).
  
 b_line_i(0,2,1,cmd,0,[ t('',146,0,0),t('Load',3,0,6) ]).
 b_line_i(1,2,1,cmd,0,[ t('',107,0,0),t('Conftipvalor',23,0,0),t(=,10,0,0),t(85,2,0,0) ]).
-b_line_i(2,2,1,cmd,0,[ t('',155,0,0) ]).
-b_line_i(2,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(4,2,1,cmd,0,[ t('',146,0,0),t('''Marcado''',3,4,6) ]).
-b_line_i(5,2,1,cmd,0,[ t('',149,0,0) ]).
-b_line_i(6,2,1,cmd,1,[ t('',107,1,0),t('Marcado',23,1,0),t(=,10,1,0),t('''S''',3,1,0) ]).
-b_line_i(7,2,1,cmd,1,[ t('',150,1,0) ]).
-b_line_i(8,2,1,cmd,1,[ t('',147,1,0) ]).
-b_line_i(10,2,1,cmd,1,[ t('',146,1,0),t('''Desmarcado''',3,10,6) ]).
-b_line_i(11,2,1,cmd,1,[ t('',149,1,0) ]).
-b_line_i(12,2,1,cmd,2,[ t('',107,2,0),t('Marcado',23,2,0),t(=,10,2,0),t('''N''',3,2,0) ]).
-b_line_i(13,2,1,cmd,2,[ t('',150,2,0) ]).
-b_line_i(14,2,1,cmd,2,[ t('',147,2,0) ]).
-b_line_i(16,2,1,cmd,2,[ t('',146,2,0),t('''Novo''',3,16,6) ]).
-b_line_i(17,2,1,cmd,2,[ t('',104,2,0),t(o(0,'ConfTipMidia'),28,2,4),t('''INS''',3,17,23) ]).
-b_line_i(18,2,1,cmd,2,[ t('',148,2,0) ]).
-b_line_i(19,2,1,cmd,2,[ t('',147,2,0) ]).
-b_line_i(21,2,1,cmd,2,[ t('',146,2,0),t('''Gravar''',3,21,6) ]).
-b_line_i(22,2,1,cmd,2,[ t('',149,2,0) ]).
-b_line_i(23,2,1,cmd,3,[ t('',109,3,0),t('Marcado',23,3,11),t(=,10,3,20),t('''S''',3,23,22),t('.AND.',9,3,26),t('Conftipvalor',23,3,30),t(<>,10,3,44),t('Conftipvalnovo',23,3,47),t('.AND.',9,3,63),t('Conftipvalnovo',23,3,67),t(>,10,3,83),t('0',3,3,85) ]).
-b_line_i(24,2,1,cmd,3,[ t('',104,3,0),t(o(1,'GraConfTipMidia'),28,3,12),t(35,2,3,34),t(',',7,3,41),t(32,2,3,43),t(',',7,3,52),t('Conftipvalnovo',23,3,54) ]).
-b_line_i(25,2,1,cmd,3,[ t('',111,3,0) ]).
-b_line_i(26,2,1,cmd,3,[ t('',150,3,0) ]).
-b_line_i(27,2,1,cmd,3,[ t('',148,3,0) ]).
-b_line_i(28,2,1,cmd,3,[ t('',147,3,0) ]).
+b_line_i(3,2,1,cmd,0,[ t('',155,0,0) ]).
+b_line_i(3,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(5,2,1,cmd,0,[ t('',146,0,0),t('''Marcado''',3,5,6) ]).
+b_line_i(7,2,1,cmd,0,[ t('',149,0,0) ]).
+b_line_i(8,2,1,cmd,1,[ t('',107,1,0),t('Marcado',23,1,0),t(=,10,1,0),t('''S''',3,1,0) ]).
+b_line_i(10,2,1,cmd,1,[ t('',150,1,0) ]).
+b_line_i(12,2,1,cmd,1,[ t('',147,1,0) ]).
+b_line_i(14,2,1,cmd,1,[ t('',146,1,0),t('''Desmarcado''',3,14,6) ]).
+b_line_i(16,2,1,cmd,1,[ t('',149,1,0) ]).
+b_line_i(17,2,1,cmd,2,[ t('',107,2,0),t('Marcado',23,2,0),t(=,10,2,0),t('''N''',3,2,0) ]).
+b_line_i(19,2,1,cmd,2,[ t('',150,2,0) ]).
+b_line_i(21,2,1,cmd,2,[ t('',147,2,0) ]).
+b_line_i(23,2,1,cmd,2,[ t('',146,2,0),t('''Novo''',3,23,6) ]).
+b_line_i(24,2,1,cmd,2,[ t('',104,2,0),t(o(0,'ConfTipMidia'),28,2,4),t('''INS''',3,24,23) ]).
+b_line_i(26,2,1,cmd,2,[ t('',148,2,0) ]).
+b_line_i(27,2,1,cmd,2,[ t('',147,2,0) ]).
+b_line_i(29,2,1,cmd,2,[ t('',146,2,0),t('''Gravar''',3,29,6) ]).
+b_line_i(31,2,1,cmd,2,[ t('',149,2,0) ]).
+b_line_i(33,2,1,cmd,4,[ t('',109,4,0),t('Marcado',23,4,11),t(=,10,4,20),t('''S''',3,33,22),t('.AND.',9,4,26),t('Conftipvalor',23,4,30),t(<>,10,4,44),t('Conftipvalnovo',23,4,47),t('.AND.',9,4,63),t('Conftipvalnovo',23,4,67),t(>,10,4,83),t('0',3,4,85) ]).
+b_line_i(34,2,1,cmd,4,[ t('',104,4,0),t(o(1,'GraConfTipMidia'),28,4,12),t(35,2,4,34),t(',',7,4,41),t(32,2,4,43),t(',',7,4,52),t('Conftipvalnovo',23,4,54) ]).
+b_line_i(36,2,1,cmd,4,[ t('',111,4,0) ]).
+b_line_i(38,2,1,cmd,4,[ t('',150,4,0) ]).
+b_line_i(40,2,1,cmd,4,[ t('',148,4,0) ]).
+b_line_i(41,2,1,cmd,4,[ t('',147,4,0) ]).
  
 sf_break_i(2,2).
  
@@ -285,17 +284,16 @@ lit_i(5,1,s(t(35,2),2),[ width(104),pos(2),title([ 'Formato' ]),ctlname(35),pic(
 lit_i(6,1,s(t('Conftipvalor',23),2),[ width(121),pos(3),title([ 'Valor (R$)' ]),ctlname('&Conftipvalor'),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,6) ]).
 lit_i(7,1,s(t('Conftipvalnovo',23),2),[ width(105),pos(4),title([ 'Novo valor (R$)' ]),ctlname('&Conftipvalnovo'),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,7) ]).
 lit_i(8,1,s(t('Marcado',23),2),[ width(58),pos(5),title([ 'Marcado' ]),ctlname('&Marcado'),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(checkbox,8) ]).
-lit_i(2,1,s(2),[ th(18),height(18),rect(65,104,819,402),back(rgb(240,240,240)),fore(gxcolor([]),rgb(0,0,0)),border(1),ctlname('Gxsf2'),font(font('Courier New',9,[])),titlefont(font('MS Sans Serif',8,[ bold ])),el([ t(32,2),t(33,2),t(35,2),t('Conftipvalor',23),t('Conftipvalnovo',23),t('Marcado',23) ]) ]).
-lit_i(9,1,button('''Marcado'''),[ id(9),title([ 'M' ]),ctlname(''),rect(65,416,90,441),font('MS Shell Dlg',8,[]) ]).
-lit_i(10,1,button('''Desmarcado'''),[ id(10),title([ 'D' ]),ctlname(''),rect(104,416,129,441),font('MS Shell Dlg',8,[]) ]).
-lit_i(11,1,button('''Gravar'''),[ id(11),title([ 'Gravar' ]),ctlname(''),rect(728,416,818,441),font('MS Shell Dlg',8,[]) ]).
-lit_i(12,1,t('Tipo de mídia:',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,71,147,83),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(13,1,t('Configurações tipo de mídia',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,26,224,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(14,1,t('Midtipo',23),[ font('Courier New',9,[]),rect(156,67,223,87),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Midtipo'),ctrltype(combo,14) ]).
-lit_i(15,1,t('Categoria:',3),[ font('MS Sans Serif',8,[ bold ]),rect(247,71,305,83),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(16,1,button('''Novo'''),[ id(16),title([ 'Novo' ]),ctlname(''),rect(715,65,805,90),font('MS Shell Dlg',8,[]) ]).
-lit_i(17,1,t('Catnome',23),[ font('Courier New',9,[]),rect(312,67,493,87),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catnome'),ctrltype(edit,17),ispwd(0) ]).
-lit_i(1,1,window,[ title([]),rect(3,25,873,492),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(2,1,s(2),[ th(18),height(18),rect(65,117,819,662),back(rgb(240,240,240)),fore(gxcolor([]),rgb(0,0,0)),border(1),ctlname('Gxsf2'),font(font('Courier New',9,[])),titlefont(font('MS Sans Serif',8,[ bold ])),el([ t(32,2),t(33,2),t(35,2),t('Conftipvalor',23),t('Conftipvalnovo',23),t('Marcado',23) ]) ]).
+lit_i(9,1,button('''Marcado'''),[ id(9),title([ 'M' ]),ctlname(''),rect(65,676,90,701),font('MS Shell Dlg',8,[]) ]).
+lit_i(10,1,button('''Desmarcado'''),[ id(10),title([ 'D' ]),ctlname(''),rect(104,676,129,701),font('MS Shell Dlg',8,[]) ]).
+lit_i(11,1,button('''Gravar'''),[ id(11),title([ 'Gravar' ]),ctlname(''),rect(728,676,818,701),font('MS Shell Dlg',8,[]) ]).
+lit_i(12,1,t('Formato',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,69,110,81),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(13,1,t('Midtipo',23),[ font('Courier New',9,[]),rect(117,65,184,85),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Midtipo'),ctrltype(combo,13) ]).
+lit_i(14,1,t('Categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(208,69,262,81),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(15,1,button('''Novo'''),[ id(15),title([ 'Novo' ]),ctlname(''),rect(715,63,805,88),font('MS Shell Dlg',8,[]) ]).
+lit_i(16,1,t('Catnome',23),[ font('Courier New',9,[]),rect(273,65,454,85),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catnome'),ctrltype(edit,16),ispwd(0) ]).
+lit_i(1,1,window,[ title([ 'Configurações tipo de mídia' ]),rect(3,25,873,778),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).
  
@@ -331,18 +329,17 @@ std_color_i(8,tfore,18).
 std_color_i(2,back,15).
 std_color_i(2,fore,8).
 std_color_i(12,fore,8).
+std_color_i(13,back,5).
 std_color_i(13,fore,8).
-std_color_i(14,back,5).
 std_color_i(14,fore,8).
-std_color_i(15,fore,8).
-std_color_i(17,back,5).
-std_color_i(17,fore,8).
+std_color_i(16,back,5).
+std_color_i(16,fore,8).
 std_color_i(1,back,15).
 std_color_i(1,fore,6).
  
 ctrl_info_i(1,5,[ [ [ 'DVD','1' ],[ 'Bluray','2' ],[ 'VHS','3' ],[ 'Box','4' ] ],[ 'Mídia' ] ]).
 ctrl_info_i(1,8,[ [ 'S','N','Marcado' ] ]).
-ctrl_info_i(1,14,[ [ [ 'Todas','0' ],[ 'DVD','1' ],[ 'Bluray','2' ],[ 'VHS','3' ],[ 'Box','4' ] ],[ 'Mídia' ] ]).
+ctrl_info_i(1,13,[ [ [ 'Todas','0' ],[ 'DVD','1' ],[ 'Bluray','2' ],[ 'VHS','3' ],[ 'Box','4' ] ],[ 'Mídia' ] ]).
  
 form_prop_i(2,'Loadall','NO',d,[ str ]).
 form_prop_i(2,'Load','YES',d,[ str ]).

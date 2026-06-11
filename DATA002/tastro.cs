@@ -2,7 +2,7 @@
                File: Astro
         Description: Cadastro de astros.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:35.18
+       Generated on: 6/11/2026 8:57:55.57
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -109,7 +109,7 @@ namespace GeneXus.Programs {
 
       public override String getFrmTitle( )
       {
-         return "Cadastro de astros." ;
+         return "Cadastro de astros" ;
       }
 
       public override GXMenuBar getMenuBar( )
@@ -263,7 +263,7 @@ namespace GeneXus.Programs {
          ((GXEdit) edtAstDatFalecimento.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtAstDatFalecimento.addFocusListener(this);
          edtAstDatFalecimento.getGXComponent().setHelpId("HLP_TAstro.htm");
-         lbllbl5 = UIFactory.getLabel(tpagetpage4.getGXPanel(), "Cadastro de astros", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 26 , 107 , 13 );
+         lbllbl5 = UIFactory.getLabel(tpagetpage4.getGXPanel(), "Dados gerais", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 26 , 75 , 13 );
          lbllbl7 = UIFactory.getLabel(tpagetpage4.getGXPanel(), "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 82 , 40 , 13 );
          lbllbl9 = UIFactory.getLabel(tpagetpage4.getGXPanel(), "Nome completo", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 108 , 88 , 13 );
          lbllbl10 = UIFactory.getLabel(tpagetpage4.getGXPanel(), "Data de nascimento", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 160 , 114 , 13 );
@@ -273,7 +273,7 @@ namespace GeneXus.Programs {
          ((GXEdit) edtAstDescricao.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtAstDescricao.addFocusListener(this);
          edtAstDescricao.getGXComponent().setHelpId("HLP_TAstro.htm");
-         lbllbl15 = UIFactory.getLabel(tpagetpage14.getGXPanel(), "Descrição do astro", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 26 , 108 , 13 );
+         lbllbl15 = UIFactory.getLabel(tpagetpage14.getGXPanel(), "Descrição", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 26 , 58 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtAstCodigo ,
                    edtAstNome ,
@@ -704,6 +704,13 @@ namespace GeneXus.Programs {
             setNextFocus( edtAstDatNascimento );
             setFocusNext();
          }
+         if ( true /* After */ && ( A113AstDat > Gx_date ) )
+         {
+            GXutil.msg( me(), "Digite uma data de nascimento válida!" );
+            AnyError = 1 ;
+            setNextFocus( edtAstDatNascimento );
+            setFocusNext();
+         }
       }
 
       protected void Valid_Astdatfalecimento( )
@@ -711,6 +718,20 @@ namespace GeneXus.Programs {
          if ( ! ( ((DateTime.MinValue==A114AstDat)) || ( A114AstDat >= DateTimeUtil.YMDToD( 1753, 1, 1) ) ) )
          {
             GXutil.msg( me(), "Campo Data de falecimento do astro de cinema fora da faixa" );
+            AnyError = 1 ;
+            setNextFocus( edtAstDatFalecimento );
+            setFocusNext();
+         }
+         if ( true /* After */ && ( A114AstDat > Gx_date ) )
+         {
+            GXutil.msg( me(), "Digite uma data de falecimento válida!" );
+            AnyError = 1 ;
+            setNextFocus( edtAstDatFalecimento );
+            setFocusNext();
+         }
+         if ( true /* After */ && ( A114AstDat < A113AstDat ) )
+         {
+            GXutil.msg( me(), "A data de falecimento não pode ocorrer antes do nascimento!" );
             AnyError = 1 ;
             setNextFocus( edtAstDatFalecimento );
             setFocusNext();
@@ -752,7 +773,7 @@ namespace GeneXus.Programs {
 
       protected void ZM0810( int GX_JID )
       {
-         if ( ( GX_JID == 4 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 7 ) || ( GX_JID == 0 ) )
          {
             if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) != 0 ) )
             {
@@ -767,7 +788,7 @@ namespace GeneXus.Programs {
                Z114AstDat = A114AstDat ;
             }
          }
-         if ( ( GX_JID == -4 ) )
+         if ( ( GX_JID == -7 ) )
          {
             Z49AstCodi = A49AstCodi ;
             Z50AstNome = A50AstNome ;
@@ -779,6 +800,7 @@ namespace GeneXus.Programs {
 
       public override void standaloneNotModal( )
       {
+         Gx_date = DateTimeUtil.Today( ) ;
       }
 
       public override void standaloneModal( )
@@ -803,7 +825,7 @@ namespace GeneXus.Programs {
             n114AstDat = T00084_n114AstDat[0] ;
             A53AstDesc = T00084_A53AstDesc[0] ;
             n53AstDesc = T00084_n53AstDesc[0] ;
-            ZM0810( -4) ;
+            ZM0810( -7) ;
          }
          pr_default.close(2);
          OnLoadActions0810( ) ;
@@ -830,9 +852,27 @@ namespace GeneXus.Programs {
             AnyError = 1 ;
             keepFocus();
          }
+         if ( true /* After */ && ( A113AstDat > Gx_date ) )
+         {
+            pushError( "Digite uma data de nascimento válida!" );
+            AnyError = 1 ;
+            keepFocus();
+         }
          if ( ! ( ((DateTime.MinValue==A114AstDat)) || ( A114AstDat >= DateTimeUtil.YMDToD( 1753, 1, 1) ) ) )
          {
             pushError( "Campo Data de falecimento do astro de cinema fora da faixa" );
+            AnyError = 1 ;
+            keepFocus();
+         }
+         if ( true /* After */ && ( A114AstDat > Gx_date ) )
+         {
+            pushError( "Digite uma data de falecimento válida!" );
+            AnyError = 1 ;
+            keepFocus();
+         }
+         if ( true /* After */ && ( A114AstDat < A113AstDat ) )
+         {
+            pushError( "A data de falecimento não pode ocorrer antes do nascimento!" );
             AnyError = 1 ;
             keepFocus();
          }
@@ -868,7 +908,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A49AstCodi});
          if ( (pr_default.getStatus(1) != 101) && ( T00083_A49AstCodi[0] == A49AstCodi ) )
          {
-            ZM0810( 4) ;
+            ZM0810( 7) ;
             RcdFound10 = 1 ;
             A50AstNome = T00083_A50AstNome[0] ;
             n50AstNome = T00083_n50AstNome[0] ;
@@ -1378,6 +1418,7 @@ namespace GeneXus.Programs {
          A53AstDesc = "" ;
          n53AstDesc = false ;
          lastAnyError = 0 ;
+         Gx_date = (DateTime)(DateTime.MinValue) ;
          sMode10 = "" ;
          RcdFound10 = 0 ;
          Z50AstNome = "" ;
@@ -1425,6 +1466,7 @@ namespace GeneXus.Programs {
          T000813_A77FilAtoC = new int[1] ;
          T000814_A49AstCodi = new int[1] ;
          K49AstCodi = 0 ;
+         Gx_date = DateTimeUtil.Today( ) ;
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.tastro__default(),
             new Object[][] {
                 new Object[] {
@@ -1468,6 +1510,7 @@ namespace GeneXus.Programs {
          reloadDynamicLists(0);
          K49AstCodi = 0 ;
          edtAstCodigo.setValue(A49AstCodi);
+         Gx_date = DateTimeUtil.Today( ) ;
       }
 
       protected short IsConfirmed ;
@@ -1488,6 +1531,7 @@ namespace GeneXus.Programs {
       protected String scmdbuf ;
       protected DateTime A113AstDat ;
       protected DateTime A114AstDat ;
+      protected DateTime Gx_date ;
       protected DateTime Z113AstDat ;
       protected DateTime Z114AstDat ;
       protected bool n50AstNome ;

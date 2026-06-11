@@ -2,7 +2,7 @@
                File: ConsFuncionario
         Description: Consulta de funcionários.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:42.98
+       Generated on: 6/11/2026 8:58:2.26
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -66,7 +66,7 @@ namespace GeneXus.Programs {
 
       public override String getFrmTitle( )
       {
-         return "Consulta de funcionários." ;
+         return "Consulta de funcionários" ;
       }
 
       public override GXMenuBar getMenuBar( )
@@ -91,12 +91,12 @@ namespace GeneXus.Programs {
 
       public override int getFrmWidth( )
       {
-         return 702 ;
+         return 755 ;
       }
 
       public override int getFrmHeight( )
       {
-         return 741 ;
+         return 811 ;
       }
 
       public override String getHelpId( )
@@ -425,7 +425,25 @@ namespace GeneXus.Programs {
       protected void GXRefreshCommand12( )
       {
          ControlsToVariables();
+         /* Execute user event: E12V0T2 */
+         E12V0T2 ();
          /* End function GeneXus Refresh */
+      }
+
+      protected void E12V0T2( )
+      {
+         /* Refresh Routine */
+         if ( ( AV11PesCod < 0 ) )
+         {
+            GXutil.msg( me(), "Digite um código válido!" );
+         }
+         else
+         {
+            if ( ( AV8PesFunD < AV9PesFunD ) )
+            {
+               GXutil.msg( me(), "A data de demissão não pode ocorrer antes da admissão." );
+            }
+         }
       }
 
       public void loadToBuffer12( )
@@ -456,8 +474,8 @@ namespace GeneXus.Programs {
 
       public override void GXExit( )
       {
-         /* Execute user event: E12V0T2 */
-         E12V0T2 ();
+         /* Execute user event: E13V0T2 */
+         E13V0T2 ();
          if ( returnInSub )
          {
             if (canCleanup()) {
@@ -467,7 +485,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void E12V0T2( )
+      protected void E13V0T2( )
       {
          eventLevelContext();
          /* Exit Routine */
@@ -475,7 +493,7 @@ namespace GeneXus.Programs {
          edtavPescodigoret.setValue(AV5PesCodi);
       }
 
-      protected void E13V0T2( )
+      protected void E14V0T2( )
       {
          eventLevelContext();
          /* PesCodigo_Click Routine */
@@ -486,7 +504,7 @@ namespace GeneXus.Programs {
          if (true) return;
       }
 
-      protected void E14V0T2( )
+      protected void E15V0T2( )
       {
          eventLevelContext();
          /* 'Pesquisa' Routine */
@@ -502,40 +520,40 @@ namespace GeneXus.Programs {
 
       public override void screen( )
       {
-         GXPanel1 = new GXPanel(this, 3 , 25 , 702 , 741 );
+         GXPanel1 = new GXPanel(this, 3 , 25 , 755 , 811 );
          this.setIBackground(UIFactory.getColor(15));
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         edtavPescodigoret = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),117, 65, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), true) , GXPanel1 , 117 , 65 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV5PesCodi" );
-         ((GXEdit) edtavPescodigoret.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
-         edtavPescodigoret.addFocusListener(this);
-         edtavPescodigoret.getGXComponent().setHelpId("HLP_WConsFuncionario.htm");
-         edtavPesnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),273, 65, 360, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 273 , 65 , 360 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6PesNome" );
+         edtavPesnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),299, 69, 360, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 299 , 69 , 360 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6PesNome" );
          ((GXEdit) edtavPesnome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavPesnome.addFocusListener(this);
          edtavPesnome.getGXComponent().setHelpId("HLP_WConsFuncionario.htm");
-         cmbavPesfuncargo = new GUIObjectShort ( new GXComboBox(GXPanel1) , GXPanel1 , 117 , 91 , 82 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7PesFunC" );
+         edtavPescodigoret = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),66, 70, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), true) , GXPanel1 , 66 , 70 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV5PesCodi" );
+         ((GXEdit) edtavPescodigoret.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
+         edtavPescodigoret.addFocusListener(this);
+         edtavPescodigoret.getGXComponent().setHelpId("HLP_WConsFuncionario.htm");
+         edtavPesfundatadmissao = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),170, 70, 104, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , GXPanel1 , 170 , 70 , 104 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV8PesFunD" );
+         ((GXEdit) edtavPesfundatadmissao.getGXComponent()).setAlignment(ILabelConstants.LEFT);
+         edtavPesfundatadmissao.addFocusListener(this);
+         edtavPesfundatadmissao.getGXComponent().setHelpId("HLP_WConsFuncionario.htm");
+         cmbavPesfuncargo = new GUIObjectShort ( new GXComboBox(GXPanel1) , GXPanel1 , 66 , 116 , 82 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7PesFunC" );
          ((GXComboBox) cmbavPesfuncargo.getGXComponent()).addItem( new java.lang.Short(1),"Gerente");
          ((GXComboBox) cmbavPesfuncargo.getGXComponent()).addItem( new java.lang.Short(2),"Vendedor");
          cmbavPesfuncargo.addFocusListener(this);
          cmbavPesfuncargo.addItemListener(this);
          cmbavPesfuncargo.getGXComponent().setHelpId("HLP_WConsFuncionario.htm");
-         edtavPesfundatadmissao = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),273, 91, 104, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , GXPanel1 , 273 , 91 , 104 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV8PesFunD" );
-         ((GXEdit) edtavPesfundatadmissao.getGXComponent()).setAlignment(ILabelConstants.LEFT);
-         edtavPesfundatadmissao.addFocusListener(this);
-         edtavPesfundatadmissao.getGXComponent().setHelpId("HLP_WConsFuncionario.htm");
-         edtavPesfundatdemissao = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),455, 91, 104, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , GXPanel1 , 455 , 91 , 104 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV9PesFunD" );
+         edtavPesfundatdemissao = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),170, 116, 104, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , GXPanel1 , 170 , 116 , 104 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV9PesFunD" );
          ((GXEdit) edtavPesfundatdemissao.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavPesfundatdemissao.addFocusListener(this);
          edtavPesfundatdemissao.getGXComponent().setHelpId("HLP_WConsFuncionario.htm");
          addSubfile ( subGxsf12  = new GXSubfile ( new ConsFuncionario_load12(this), new ConsFuncionario_flow12(this), false , new GXColumnDefinition[] {
           new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 71, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 70 , 18 , UIFactory.getColor(5) , UIFactory.getColor(255, 0, 0) , UIFactory.getFont( "Courier New", 0, 9) , false , "A13PesCodi" ), "Código"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 70 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 261, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 260 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A14PesNome" ), "Nome completo"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 260 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 306, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 305 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A14PesNome" ), "Nome completo"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 305 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectShort ( new GXComboBox(GXPanel1, false) , null ,  0 , 0 , 125 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A39PesFunC" ), "Cargo"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 125 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),0, 0, 78, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.DATE, false, false, 0, false) , null ,  0 , 0 , 77 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A41PesFunD" ), "Demissão"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 77 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , false )
-         , new GXColumnDefinition( new GUIObjectShort ( new GXCheckBox(GXPanel1, "" , new java.lang.Short(1), new java.lang.Short(0)) , null ,  0 , 0 , 58 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV10Demiti" ), "Demitido"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 58 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , true , true )
-         }, 33 , 18 , GXPanel1 , 65 , 117 , 573 , 611 ,  18 ));
+         , new GXColumnDefinition( new GUIObjectShort ( new GXCheckBox(GXPanel1, "" , new java.lang.Short(1), new java.lang.Short(0)) , null ,  0 , 0 , 60 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV10Demiti" ), "Demitido"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 60 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , true , true )
+         }, 32 , 18 , GXPanel1 , 65 , 173 , 620 , 601 ,  18 ));
          ((GXComboBox) subGxsf12.getColumn(2).getGXComponent()).addItem( new java.lang.Short(1),"Gerente");
          ((GXComboBox) subGxsf12.getColumn(2).getGXComponent()).addItem( new java.lang.Short(2),"Vendedor");
          subGxsf12.addActionListener(this);
@@ -543,17 +561,16 @@ namespace GeneXus.Programs {
          subGxsf12.setSortOnClick(true);
          subGxsf12.getColumn(0).addActionListener( this);
          subGxsf12.getColumn(0).addItemListener( this);
-         lbllbl18 = UIFactory.getLabel(GXPanel1, "Consulta de funcionários", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 26 , 141 , 13 );
-         lbllbl7 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 65 , 40 , 13 );
-         lbllbl8 = UIFactory.getLabel(GXPanel1, "Nome", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 208 , 65 , 33 , 13 );
-         lbllbl9 = UIFactory.getLabel(GXPanel1, "Cargo", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 91 , 34 , 13 );
-         lbllbl10 = UIFactory.getLabel(GXPanel1, "Admissão", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 208 , 91 , 54 , 13 );
-         lbllbl11 = UIFactory.getLabel(GXPanel1, "Demissão", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 390 , 91 , 55 , 13 );
+         lbllbl7 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 66 , 52 , 40 , 13 );
+         lbllbl10 = UIFactory.getLabel(GXPanel1, "Admissão", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 170 , 52 , 54 , 13 );
+         lbllbl8 = UIFactory.getLabel(GXPanel1, "Nome", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 299 , 52 , 33 , 13 );
+         lbllbl9 = UIFactory.getLabel(GXPanel1, "Cargo", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 66 , 97 , 34 , 13 );
+         lbllbl11 = UIFactory.getLabel(GXPanel1, "Demissão", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 170 , 97 , 55 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
-                   edtavPescodigoret ,
                    edtavPesnome ,
-                   cmbavPesfuncargo ,
+                   edtavPescodigoret ,
                    edtavPesfundatadmissao ,
+                   cmbavPesfuncargo ,
                    edtavPesfundatdemissao ,
                    subGxsf12
          });
@@ -659,8 +676,8 @@ namespace GeneXus.Programs {
             return;
          }
          if ( subGxsf12.getColumn(0).isEventSource(eventSource) ) {
-            /* Execute user event: E13V0T2 */
-            E13V0T2 ();
+            /* Execute user event: E14V0T2 */
+            E14V0T2 ();
             return;
          }
       }
@@ -729,8 +746,8 @@ namespace GeneXus.Programs {
                                                int modifier )
       {
          if ( subGxsf12.getColumn(0).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
-            /* Execute user event: E13V0T2 */
-            E13V0T2 ();
+            /* Execute user event: E14V0T2 */
+            E14V0T2 ();
             return;
          }
       }
@@ -739,8 +756,8 @@ namespace GeneXus.Programs {
                                              int keyCode )
       {
          if (keyCode == UIFactory.getKeyCodes().getF4()) {
-            /* Execute user event: E14V0T2 */
-            E14V0T2 ();
+            /* Execute user event: E15V0T2 */
+            E15V0T2 ();
             return true ;
          }
          if (triggerEventEnter(eventSource, keyCode)) {
@@ -773,8 +790,8 @@ namespace GeneXus.Programs {
          if ( ! exitExecuted )
          {
             exitExecuted = true ;
-            /* Execute user event: E12V0T2 */
-            E12V0T2 ();
+            /* Execute user event: E13V0T2 */
+            E13V0T2 ();
          }
          this.AV5PesCodi = AV5PesCodi;
          stopThreads();
@@ -822,9 +839,9 @@ namespace GeneXus.Programs {
          n39PesFunC = false ;
          n14PesNome = false ;
          gxIsRefreshing = false ;
+         AV9PesFunD = (DateTime)(DateTime.MinValue) ;
          AV10Demiti = 0 ;
          returnInSub = false ;
-         AV9PesFunD = (DateTime)(DateTime.MinValue) ;
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.wconsfuncionario__default(),
             new Object[][] {
                 new Object[] {
@@ -877,17 +894,16 @@ namespace GeneXus.Programs {
       protected bool[] W000T2_n14PesNome ;
       protected int[] W000T2_A13PesCodi ;
       protected GXPanel GXPanel1 ;
-      protected GUIObjectInt edtavPescodigoret ;
       protected GUIObjectString edtavPesnome ;
-      protected GUIObjectShort cmbavPesfuncargo ;
+      protected GUIObjectInt edtavPescodigoret ;
       protected GUIObjectDatetime edtavPesfundatadmissao ;
+      protected GUIObjectShort cmbavPesfuncargo ;
       protected GUIObjectDatetime edtavPesfundatdemissao ;
       protected GXSubfile subGxsf12 ;
-      protected ILabel lbllbl18 ;
       protected ILabel lbllbl7 ;
+      protected ILabel lbllbl10 ;
       protected ILabel lbllbl8 ;
       protected ILabel lbllbl9 ;
-      protected ILabel lbllbl10 ;
       protected ILabel lbllbl11 ;
       protected int aP0_PesCodigoRet ;
    }
@@ -958,7 +974,7 @@ namespace GeneXus.Programs {
           prmW000T2 = new Object[] {
           } ;
           def= new GeneXus.Data.NTier.ADO.CursorDef[] {
-              new GeneXus.Data.NTier.ADO.CursorDef("W000T2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW000T2,27,0,true,false )
+              new GeneXus.Data.NTier.ADO.CursorDef("W000T2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW000T2,26,0,true,false )
           };
        }
     }

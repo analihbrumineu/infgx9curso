@@ -153,7 +153,7 @@ public class bldDevelopermenu : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\wpelocacao.cs" ))
             return true;
-         if (checkTime(obj, cs_path + @"\subwpelocacao11.cs" ))
+         if (checkTime(obj, cs_path + @"\subwpelocacao10.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\wgx0010.cs" ))
             return true;

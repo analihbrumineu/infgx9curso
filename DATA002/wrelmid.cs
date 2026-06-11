@@ -2,7 +2,7 @@
                File: RelMid
         Description: Impressão de relatórios de mídia.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:45.48
+       Generated on: 6/11/2026 8:58:4.37
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -61,7 +61,7 @@ namespace GeneXus.Programs {
 
       public override String getFrmTitle( )
       {
-         return "Relatório de mídia." ;
+         return "Relatório sobre mídias" ;
       }
 
       public override GXMenuBar getMenuBar( )
@@ -86,12 +86,12 @@ namespace GeneXus.Programs {
 
       public override int getFrmWidth( )
       {
-         return 605 ;
+         return 572 ;
       }
 
       public override int getFrmHeight( )
       {
-         return 240 ;
+         return 260 ;
       }
 
       public override String getHelpId( )
@@ -277,18 +277,18 @@ namespace GeneXus.Programs {
 
       public override void screen( )
       {
-         GXPanel1 = new GXPanel(this, 3 , 25 , 605 , 240 );
+         GXPanel1 = new GXPanel(this, 3 , 25 , 572 , 260 );
          this.setIBackground(UIFactory.getColor(15));
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         cmbavRelmidopcao = new GUIObjectShort ( new GXComboBox(GXPanel1) , GXPanel1 , 159 , 57 , 181 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV5RelMidO" );
+         cmbavRelmidopcao = new GUIObjectShort ( new GXComboBox(GXPanel1) , GXPanel1 , 182 , 67 , 181 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV5RelMidO" );
          ((GXComboBox) cmbavRelmidopcao.getGXComponent()).addItem( new java.lang.Short(0),"Categoria");
          ((GXComboBox) cmbavRelmidopcao.getGXComponent()).addItem( new java.lang.Short(1),"Categoria/filme");
          cmbavRelmidopcao.addFocusListener(this);
          cmbavRelmidopcao.addItemListener(this);
          cmbavRelmidopcao.getGXComponent().setHelpId("HLP_WRelMid.htm");
-         cmbavMidtipo = new GUIObjectShort ( new GXComboBox(GXPanel1) , GXPanel1 , 159 , 84 , 68 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV8MidTipo" );
+         cmbavMidtipo = new GUIObjectShort ( new GXComboBox(GXPanel1) , GXPanel1 , 182 , 94 , 68 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV8MidTipo" );
          ((GXComboBox) cmbavMidtipo.getGXComponent()).addItem( new java.lang.Short(0),"Todos");
          ((GXComboBox) cmbavMidtipo.getGXComponent()).addItem( new java.lang.Short(1),"DVD");
          ((GXComboBox) cmbavMidtipo.getGXComponent()).addItem( new java.lang.Short(2),"Bluray");
@@ -297,28 +297,28 @@ namespace GeneXus.Programs {
          cmbavMidtipo.addFocusListener(this);
          cmbavMidtipo.addItemListener(this);
          cmbavMidtipo.getGXComponent().setHelpId("HLP_WRelMid.htm");
-         edtavCatcodinicial = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),159, 111, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 159 , 111 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6CatCodI" );
+         edtavCatcodinicial = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),182, 121, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 182 , 121 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6CatCodI" );
          ((GXEdit) edtavCatcodinicial.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavCatcodinicial.addFocusListener(this);
          edtavCatcodinicial.getGXComponent().setHelpId("HLP_WRelMid.htm");
-         edtavCatcodfinal = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),265, 111, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 265 , 111 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7CatCodF" );
+         edtavCatcodfinal = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),373, 121, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 373 , 121 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7CatCodF" );
          ((GXEdit) edtavCatcodfinal.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavCatcodfinal.addFocusListener(this);
          edtavCatcodfinal.getGXComponent().setHelpId("HLP_WRelMid.htm");
-         bttbtt8 = UIFactory.getGXButton( GXPanel1 , "Imprimir" ,  429 ,  176 ,  78 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
-         bttbtt8.setTooltip("Imprimir");
-         bttbtt8.addActionListener(this);
-         bttbtt8.setFiresEvents(false);
-         lbllbl3 = UIFactory.getLabel(GXPanel1, "Tipo do relatório", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 57 , 61 , 94 , 13 );
-         lbllbl10 = UIFactory.getLabel(GXPanel1, "Tipo da mídia", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 72 , 88 , 79 , 13 );
-         lbllbl4 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 96 , 115 , 55 , 13 );
-         lbllbl7 = UIFactory.getLabel(GXPanel1, "até", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 239 , 115 , 19 , 13 );
+         bttbtt10 = UIFactory.getGXButton( GXPanel1 , "Imprimir" ,  411 ,  179 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt10.setTooltip("Imprimir");
+         bttbtt10.addActionListener(this);
+         bttbtt10.setFiresEvents(false);
+         lbllbl3 = UIFactory.getLabel(GXPanel1, "Tipo do relatório", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 67 , 71 , 94 , 13 );
+         lbllbl9 = UIFactory.getLabel(GXPanel1, "Tipo da mídia", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 67 , 98 , 79 , 13 );
+         lbllbl4 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 67 , 125 , 55 , 13 );
+         lbllbl7 = UIFactory.getLabel(GXPanel1, "até", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 301 , 125 , 19 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    cmbavRelmidopcao ,
                    cmbavMidtipo ,
                    edtavCatcodinicial ,
                    edtavCatcodfinal ,
-                   bttbtt8
+                   bttbtt10
          });
       }
 
@@ -371,7 +371,7 @@ namespace GeneXus.Programs {
 
       public override void actionEventDispatch( Object eventSource )
       {
-         if ( bttbtt8.isEventSource(eventSource) ) {
+         if ( bttbtt10.isEventSource(eventSource) ) {
             /* Execute user event: E13V1T2 */
             E13V1T2 ();
             return;
@@ -507,9 +507,9 @@ namespace GeneXus.Programs {
       protected GUIObjectShort cmbavMidtipo ;
       protected GUIObjectInt edtavCatcodinicial ;
       protected GUIObjectInt edtavCatcodfinal ;
-      protected IGXButton bttbtt8 ;
+      protected IGXButton bttbtt10 ;
       protected ILabel lbllbl3 ;
-      protected ILabel lbllbl10 ;
+      protected ILabel lbllbl9 ;
       protected ILabel lbllbl4 ;
       protected ILabel lbllbl7 ;
    }

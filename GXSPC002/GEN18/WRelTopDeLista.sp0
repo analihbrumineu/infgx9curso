@@ -18,19 +18,19 @@ las_i(2,[ [ 'Datinicial','Datfinal','Selecao','Relatorio','Assunto' ] ]).
 lac_i(2,[ [ 'Datinicial','Datfinal','Selecao','Relatorio','Assunto' ] ]).
  
  
-lits_i('De',2,18).
-lits_i(até,2,35).
-lits_i('Seleção',5,18).
-lits_i('Assunto',3,18).
-lits_i(por,3,44).
+lits_i('De',2,17).
+lits_i(até,2,45).
+lits_i('Seleção',5,17).
+lits_i('Assunto',3,17).
+lits_i(por,3,45).
  
-cls_i([ 2,18 ],[ 5,48 ]).
+cls_i([ 2,17 ],[ 5,58 ]).
  
-pos_i('Datinicial',[ 2,2,22 ]).
-pos_i('Datfinal',[ 2,2,39 ]).
+pos_i('Datinicial',[ 2,2,26 ]).
+pos_i('Datfinal',[ 2,2,49 ]).
 pos_i('Selecao',[ 4,4,26 ]).
 pos_i('Relatorio',[ 3,3,26 ]).
-pos_i('Assunto',[ 3,3,48 ]).
+pos_i('Assunto',[ 3,3,49 ]).
  
  
 default_i(e('Today',2,2,'''today''')).
@@ -205,43 +205,43 @@ b_line_i(2,2,1,cmd,0,[ t('',107,0,0),t('Datfinal',23,0,0),t(=,10,0,0),t('Today',
 b_line_i(4,2,1,cmd,0,[ t('',107,0,0),t('Selecao',23,0,0),t(=,10,0,0),t('9999999999',3,0,0) ]).
 b_line_i(6,2,1,cmd,0,[ t('',147,0,0) ]).
 b_line_i(9,2,1,cmd,0,[ t('',146,0,0),t('''Imprimir''',3,9,6) ]).
-b_line_i(10,2,1,cmd,0,[ t('',109,0,0),t('Datfinal',23,0,7),t(<,10,0,17),t('Datinicial',23,0,19) ]).
-b_line_i(11,2,1,cmd,0,[ t('',141,0,0),t('''O final do período não pode ocorrer antes do início.''',3,11,12),t(')',4,0,66) ]).
-b_line_i(13,2,1,cmd,0,[ t('',110,0,0) ]).
-b_line_i(14,2,1,cmd,0,[ t('',109,0,0),t('Datfinal',23,0,11),t(>,10,0,21),t('Today',23,0,23) ]).
-b_line_i(15,2,1,cmd,0,[ t('',141,0,0),t('''Não é possível consultar locações futuras.''',3,15,16),t(')',4,0,60) ]).
-b_line_i(17,2,1,cmd,0,[ t('',110,0,0) ]).
-b_line_i(18,2,1,cmd,0,[ t('',109,0,0),t('Selecao',23,0,15),t(<=,10,0,24),t('0',3,0,27) ]).
-b_line_i(19,2,1,cmd,0,[ t('',141,0,0),t('''Seleção inválida!''',3,19,20),t(')',4,0,39) ]).
-b_line_i(21,2,1,cmd,0,[ t('',110,0,0) ]).
-b_line_i(22,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('1',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('1',3,0,49) ]).
-b_line_i(23,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisDevPorCliente'),28,0,20),t('Datinicial',23,0,51),t(',',7,0,62),t('Datfinal',23,0,64),t(',',7,0,73),t('Selecao',23,0,75) ]).
-b_line_i(25,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(27,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('1',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('2',3,0,49) ]).
-b_line_i(28,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisDevPorFilme'),28,0,20),t('Datinicial',23,0,49),t(',',7,0,60),t('Datfinal',23,0,62),t(',',7,0,71),t('Selecao',23,0,73) ]).
-b_line_i(30,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(32,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('1',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('3',3,0,49) ]).
-b_line_i(33,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisDevPorCategoria'),28,0,20),t('Datinicial',23,0,53),t(',',7,0,64),t('Datfinal',23,0,66),t(',',7,0,75),t('Selecao',23,0,77) ]).
-b_line_i(35,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(37,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('1',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('4',3,0,49) ]).
-b_line_i(38,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisDevPorTipDeMidia'),28,0,20),t('Datinicial',23,0,54),t(',',7,0,65),t('Datfinal',23,0,67),t(',',7,0,76),t('Selecao',23,0,78) ]).
-b_line_i(39,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(41,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('2',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('1',3,0,49) ]).
-b_line_i(42,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisCanPorCliente'),28,0,20),t('Datinicial',23,0,51),t(',',7,0,62),t('Datfinal',23,0,64),t(',',7,0,73),t('Selecao',23,0,75) ]).
-b_line_i(43,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(45,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('2',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('2',3,0,49) ]).
-b_line_i(46,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisCanPorFilme'),28,0,20),t('Datinicial',23,0,49),t(',',7,0,60),t('Datfinal',23,0,62),t(',',7,0,71),t('Selecao',23,0,73) ]).
-b_line_i(47,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(49,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('2',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('3',3,0,49) ]).
-b_line_i(50,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisCanPorCategoria'),28,0,20),t('Datinicial',23,0,53),t(',',7,0,64),t('Datfinal',23,0,66),t(',',7,0,75),t('Selecao',23,0,77) ]).
-b_line_i(51,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(53,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('2',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('4',3,0,49) ]).
-b_line_i(54,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisCanPorTipDeMidia'),28,0,20),t('Datinicial',23,0,54),t(',',7,0,65),t('Datfinal',23,0,67),t(',',7,0,76),t('Selecao',23,0,78) ]).
-b_line_i(55,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(11,2,1,cmd,0,[ t('',109,0,0),t('Datfinal',23,0,7),t(<,10,0,17),t('Datinicial',23,0,19) ]).
+b_line_i(12,2,1,cmd,0,[ t('',141,0,0),t('''O final do período não pode ocorrer antes do início.''',3,12,12),t(')',4,0,66) ]).
+b_line_i(14,2,1,cmd,0,[ t('',110,0,0) ]).
+b_line_i(15,2,1,cmd,0,[ t('',109,0,0),t('Datfinal',23,0,11),t(>,10,0,21),t('Today',23,0,23) ]).
+b_line_i(16,2,1,cmd,0,[ t('',141,0,0),t('''Não é possível consultar locações futuras.''',3,16,16),t(')',4,0,60) ]).
+b_line_i(18,2,1,cmd,0,[ t('',110,0,0) ]).
+b_line_i(19,2,1,cmd,0,[ t('',109,0,0),t('Selecao',23,0,15),t(<=,10,0,24),t('0',3,0,27) ]).
+b_line_i(20,2,1,cmd,0,[ t('',141,0,0),t('''Seleção inválida!''',3,20,20),t(')',4,0,39) ]).
+b_line_i(22,2,1,cmd,0,[ t('',110,0,0) ]).
+b_line_i(23,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('1',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('1',3,0,49) ]).
+b_line_i(24,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisDevPorCliente'),28,0,20),t('Datinicial',23,0,51),t(',',7,0,62),t('Datfinal',23,0,64),t(',',7,0,73),t('Selecao',23,0,75) ]).
+b_line_i(26,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(28,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('1',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('2',3,0,49) ]).
+b_line_i(29,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisDevPorFilme'),28,0,20),t('Datinicial',23,0,49),t(',',7,0,60),t('Datfinal',23,0,62),t(',',7,0,71),t('Selecao',23,0,73) ]).
+b_line_i(31,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(33,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('1',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('3',3,0,49) ]).
+b_line_i(34,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisDevPorCategoria'),28,0,20),t('Datinicial',23,0,53),t(',',7,0,64),t('Datfinal',23,0,66),t(',',7,0,75),t('Selecao',23,0,77) ]).
+b_line_i(36,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(38,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('1',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('4',3,0,49) ]).
+b_line_i(39,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisDevPorTipDeMidia'),28,0,20),t('Datinicial',23,0,54),t(',',7,0,65),t('Datfinal',23,0,67),t(',',7,0,76),t('Selecao',23,0,78) ]).
+b_line_i(40,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(42,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('2',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('1',3,0,49) ]).
+b_line_i(43,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisCanPorCliente'),28,0,20),t('Datinicial',23,0,51),t(',',7,0,62),t('Datfinal',23,0,64),t(',',7,0,73),t('Selecao',23,0,75) ]).
+b_line_i(44,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(46,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('2',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('2',3,0,49) ]).
+b_line_i(47,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisCanPorFilme'),28,0,20),t('Datinicial',23,0,49),t(',',7,0,60),t('Datfinal',23,0,62),t(',',7,0,71),t('Selecao',23,0,73) ]).
+b_line_i(48,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(50,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('2',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('3',3,0,49) ]).
+b_line_i(51,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisCanPorCategoria'),28,0,20),t('Datinicial',23,0,53),t(',',7,0,64),t('Datfinal',23,0,66),t(',',7,0,75),t('Selecao',23,0,77) ]).
+b_line_i(52,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(54,2,1,cmd,0,[ t('',109,0,0),t('Relatorio',23,0,19),t(=,10,0,30),t('2',3,0,32),t('.AND.',9,0,34),t('Assunto',23,0,38),t(=,10,0,47),t('4',3,0,49) ]).
+b_line_i(55,2,1,cmd,0,[ t('',104,0,0),t(o(2,'RelTopDeLisCanPorTipDeMidia'),28,0,20),t('Datinicial',23,0,54),t(',',7,0,65),t('Datfinal',23,0,67),t(',',7,0,76),t('Selecao',23,0,78) ]).
 b_line_i(56,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(57,2,1,cmd,0,[ t('',111,0,0) ]).
 b_line_i(58,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(59,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(60,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(62,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(64,2,1,cmd,0,[ t('',147,0,0) ]).
 b_line_i(1000,2,1,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
 b_line_i(1001,2,1,cmd,0,[ t('',155,0,0) ]).
 b_line_i(1002,2,1,cmd,0,[ t('',147,0,0) ]).
@@ -268,17 +268,17 @@ ppi_i([ 96,96 ]).
  
  
  
-lit_i(2,1,t('De',3),[ font('MS Sans Serif',8,[ bold ]),rect(130,69,146,81),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(3,1,t('Datinicial',23),[ font('Courier New',9,[]),rect(156,65,235,85),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Datinicial'),ctrltype(edit,3),ispwd(0) ]).
-lit_i(4,1,t(até,3),[ font('MS Sans Serif',8,[ bold ]),rect(247,69,265,81),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(5,1,t('Datfinal',23),[ font('Courier New',9,[]),rect(273,65,352,85),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Datfinal'),ctrltype(edit,5),ispwd(0) ]).
-lit_i(6,1,t('Seleção',3),[ font('MS Sans Serif',8,[ bold ]),rect(130,121,176,133),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(7,1,t('Selecao',23),[ font('Courier New',9,[]),rect(187,117,266,137),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Selecao'),ctrltype(edit,7),ispwd(0) ]).
-lit_i(8,1,button('''Imprimir'''),[ id(8),title([ 'Imprimir' ]),ctlname(''),rect(429,182,506,207),font('MS Shell Dlg',8,[]) ]).
-lit_i(9,1,t('Assunto',3),[ font('MS Sans Serif',8,[ bold ]),rect(130,95,175,107),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(10,1,t('Relatorio',23),[ font('Courier New',9,[]),rect(186,91,305,111),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Relatorio'),ctrltype(combo,10) ]).
-lit_i(11,1,t(por,3),[ font('MS Sans Serif',8,[ bold ]),rect(311,95,329,107),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(12,1,t('Assunto',23),[ font('Courier New',9,[]),rect(338,91,461,111),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Assunto'),ctrltype(combo,12) ]).
+lit_i(2,1,t('De',3),[ font('MS Sans Serif',8,[ bold ]),rect(119,70,135,82),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(3,1,t('Datinicial',23),[ font('Courier New',9,[]),rect(186,66,265,86),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Datinicial'),ctrltype(edit,3),ispwd(0) ]).
+lit_i(4,1,t(até,3),[ font('MS Sans Serif',8,[ bold ]),rect(316,70,334,82),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(5,1,t('Datfinal',23),[ font('Courier New',9,[]),rect(348,66,427,86),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Datfinal'),ctrltype(edit,5),ispwd(0) ]).
+lit_i(6,1,t('Seleção',3),[ font('MS Sans Serif',8,[ bold ]),rect(119,121,165,133),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(7,1,t('Selecao',23),[ font('Courier New',9,[]),rect(186,117,265,137),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Selecao'),ctrltype(edit,7),ispwd(0) ]).
+lit_i(8,1,t('Assunto',3),[ font('MS Sans Serif',8,[ bold ]),rect(119,95,164,107),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(9,1,t('Relatorio',23),[ font('Courier New',9,[]),rect(186,91,305,111),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Relatorio'),ctrltype(combo,9) ]).
+lit_i(10,1,t(por,3),[ font('MS Sans Serif',8,[ bold ]),rect(316,95,334,107),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(11,1,t('Assunto',23),[ font('Courier New',9,[]),rect(348,91,471,111),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Assunto'),ctrltype(combo,11) ]).
+lit_i(12,1,button('''Imprimir'''),[ id(12),title([ 'Imprimir' ]),ctlname(''),rect(442,169,532,194),font('MS Shell Dlg',8,[]) ]).
 lit_i(1,1,window,[ title([ 'Relatório de topo de lista' ]),rect(3,25,639,271),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).
@@ -297,17 +297,17 @@ std_color_i(5,fore,8).
 std_color_i(6,fore,8).
 std_color_i(7,back,5).
 std_color_i(7,fore,8).
+std_color_i(8,fore,8).
+std_color_i(9,back,5).
 std_color_i(9,fore,8).
-std_color_i(10,back,5).
 std_color_i(10,fore,8).
+std_color_i(11,back,5).
 std_color_i(11,fore,8).
-std_color_i(12,back,5).
-std_color_i(12,fore,8).
 std_color_i(1,back,15).
 std_color_i(1,fore,6).
  
-ctrl_info_i(1,10,[ [ [ 'Devoluções','1' ],[ 'Cancelamentos','2' ] ],[ '' ] ]).
-ctrl_info_i(1,12,[ [ [ clientes,'1' ],[ filmes,'2' ],[ categorias,'3' ],[ 'formato de mídia','4' ] ],[ '' ] ]).
+ctrl_info_i(1,9,[ [ [ 'Devoluções','1' ],[ 'Cancelamentos','2' ] ],[ '' ] ]).
+ctrl_info_i(1,11,[ [ [ clientes,'1' ],[ filmes,'2' ],[ categorias,'3' ],[ 'formato de mídia','4' ] ],[ '' ] ]).
  
  
 calling_main_i(4,1).

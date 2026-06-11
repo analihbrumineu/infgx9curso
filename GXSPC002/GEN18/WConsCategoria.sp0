@@ -22,18 +22,17 @@ lac_i(2,[ [ 'Catcodigo','Catnome' ] ]).
  
 lits_i('Código',2,9).
 lits_i('Categoria',2,22).
-lits_i('Código',4,9).
-lits_i('Categoria',4,20).
-lits_i('Consulta de categorias',1,9).
+lits_i('Código',5,9).
+lits_i('Categoria',5,21).
  
-cls_i([ 1,9 ],[ 30,71 ]).
+cls_i([ 2,9 ],[ 32,71 ]).
  
 pos_i('Catcodigo',[ 3,3,9 ]).
 pos_i('Catnome',[ 3,3,22 ]).
-pos_i(32,[ 5,30,9 ]).
-pos_i(33,[ 5,30,20 ]).
+pos_i(32,[ 6,32,9 ]).
+pos_i(33,[ 6,32,21 ]).
  
-repeat_i(2,[ 5,30,[ 32,33 ],[] ]).
+repeat_i(2,[ 6,32,[ 32,33 ],[] ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
@@ -204,18 +203,23 @@ break_i(2,nvg,1,[],[ [ 32,33 ],[],[] ]).
  
 b_group_i(2,1,lit,0,1,0).
  
-b_line_i(0,2,1,cmd,0,[ t('',146,0,0),t('Exit',3,0,6) ]).
-b_line_i(1,2,1,cmd,0,[ t('',107,0,0),t('Catcodigoret',23,0,0),t(=,10,0,0),t(32,2,0,0) ]).
-b_line_i(2,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(4,2,1,cmd,0,[ t('',146,0,0),t([ t(32,2,4,6),t('Click',3,4,16) ],29,4,16) ]).
-b_line_i(5,2,1,cmd,0,[ t('',118,0,0) ]).
-b_line_i(6,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(8,2,1,cmd,0,[ t('',146,0,0),t('''Pesquisa''',3,8,6),t('4',3,0,16) ]).
-b_line_i(9,2,1,cmd,0,[ t('',152,0,0) ]).
-b_line_i(10,2,1,cmd,0,[ t('',153,0,0),t('cursor(',1,0,13),t(32,2,0,20),t(')',4,0,29) ]).
-b_line_i(10,2,1,cmd,0,[ t('',104,0,0),t(o(4,'ConsCategoria'),28,0,32),t(32,2,0,52) ]).
-b_line_i(11,2,1,cmd,0,[ t('',154,0,0) ]).
+b_line_i(0,2,1,cmd,0,[ t('',146,0,0),t('Refresh',3,0,6) ]).
+b_line_i(2,2,1,cmd,0,[ t('',109,0,0),t('Catcodigo',23,0,7),t(<,10,0,18),t('0',3,0,20) ]).
+b_line_i(3,2,1,cmd,0,[ t('',141,0,0),t('''Digite um código válido!''',3,3,12),t(')',4,0,38) ]).
+b_line_i(5,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(7,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(9,2,1,cmd,0,[ t('',146,0,0),t('Exit',3,9,6) ]).
+b_line_i(10,2,1,cmd,0,[ t('',107,0,0),t('Catcodigoret',23,0,0),t(=,10,0,0),t(32,2,0,0) ]).
 b_line_i(12,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(14,2,1,cmd,0,[ t('',146,0,0),t([ t(32,2,14,6),t('Click',3,14,16) ],29,14,16) ]).
+b_line_i(16,2,1,cmd,0,[ t('',118,0,0) ]).
+b_line_i(17,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(19,2,1,cmd,0,[ t('',146,0,0),t('''Pesquisa''',3,19,6),t('4',3,0,16) ]).
+b_line_i(21,2,1,cmd,0,[ t('',152,0,0) ]).
+b_line_i(22,2,1,cmd,0,[ t('',153,0,0),t('cursor(',1,0,13),t(32,2,0,20),t(')',4,0,29) ]).
+b_line_i(22,2,1,cmd,0,[ t('',104,0,0),t(o(4,'ConsCategoria'),28,0,32),t(32,2,0,52) ]).
+b_line_i(24,2,1,cmd,0,[ t('',154,0,0) ]).
+b_line_i(26,2,1,cmd,0,[ t('',147,0,0) ]).
 b_line_i(1000,2,1,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
 b_line_i(1001,2,1,cmd,0,[ t('',155,0,0) ]).
 b_line_i(1002,2,1,cmd,0,[ t('',147,0,0) ]).
@@ -243,15 +247,14 @@ ppi_i([ 96,96 ]).
  
  
  
-lit_i(2,1,t('Catcodigo',23),[ font('Courier New',9,[]),rect(65,78,137,98),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catcodigo'),ctrltype(edit,2),ispwd(0) ]).
+lit_i(2,1,t('Catcodigo',23),[ font('Courier New',9,[]),rect(65,78,137,98),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catcodigo'),ctrltype(edit,2),ispwd(0) ]).
 lit_i(3,1,t('Catnome',23),[ font('Courier New',9,[]),rect(156,78,519,98),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catnome'),ctrltype(edit,3),ispwd(0) ]).
-lit_i(4,1,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,65,104,77),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(5,1,t('Categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(156,65,210,77),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(7,1,s(t(32,2),6),[ width(78),pos(0),title([ 'Código' ]),ctlname(32),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(255,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,7),e2n(1) ]).
-lit_i(8,1,s(t(33,2),6),[ width(319),pos(1),title([ 'Categoria' ]),ctlname(33),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,8),e2n(1) ]).
-lit_i(6,1,s(6),[ th(18),height(18),rect(65,104,519,766),back(rgb(240,240,240)),fore(gxcolor([]),rgb(0,0,0)),border(1),ctlname('Gxsf6'),font(font('Courier New',9,[])),titlefont(font('MS Sans Serif',8,[ bold ])),el([ t(32,2),t(33,2) ]) ]).
-lit_i(9,1,t('Consulta de categorias',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,26,195,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(1,1,window,[ title([]),rect(3,25,587,804),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(4,1,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,60,104,72),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(5,1,t('Categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(156,60,210,72),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(7,1,s(t(32,2),6),[ width(86),pos(0),title([ 'Código' ]),ctlname(32),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(255,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,7),e2n(1) ]).
+lit_i(8,1,s(t(33,2),6),[ width(352),pos(1),title([ 'Categoria' ]),ctlname(33),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,8),e2n(1) ]).
+lit_i(6,1,s(6),[ th(18),height(18),rect(65,128,560,814),back(rgb(240,240,240)),fore(gxcolor([]),rgb(0,0,0)),border(1),ctlname('Gxsf6'),font(font('Courier New',9,[])),titlefont(font('MS Sans Serif',8,[ bold ])),el([ t(32,2),t(33,2) ]) ]).
+lit_i(1,1,window,[ title([ 'Consulta de categorias' ]),rect(3,25,648,866),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).
  
@@ -275,7 +278,6 @@ std_color_i(8,tback,15).
 std_color_i(8,tfore,18).
 std_color_i(6,back,15).
 std_color_i(6,fore,8).
-std_color_i(9,fore,8).
 std_color_i(1,back,15).
 std_color_i(1,fore,6).
  

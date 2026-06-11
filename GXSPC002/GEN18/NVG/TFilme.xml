@@ -287,6 +287,27 @@
 <Token>'0'</Token>
 <Token>)</Token></Condition></Action>
 <Action>
+<ActionType>BusinessRule</ActionType>
+<RuleType>ErrorRule</RuleType>
+<Expression>
+<Token>'Não é possível cadastrar um filme não lançado!'</Token></Expression>
+<Condition>
+<Token>after(</Token>
+<Attribute>
+<AttriId>31</AttriId>
+<AttriName>FilData</AttriName>
+<Description>Data de lançamento do filme</Description></Attribute>
+<Token>)</Token>
+<Token>and</Token>
+<Attribute>
+<AttriId>31</AttriId>
+<AttriName>FilData</AttriName>
+<Description>Data de lançamento do filme</Description></Attribute>
+<Token>&gt;</Token>
+<Variable>
+<VarId>Today</VarId>
+<VarName>&amp;Gx_date</VarName></Variable></Condition></Action>
+<Action>
 <ActionType>ReadTable</ActionType>
 <JoinType>Outer</JoinType>
 <Table>

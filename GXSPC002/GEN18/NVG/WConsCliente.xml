@@ -118,7 +118,7 @@
 <Event>
 <EventName>PesCodigo.Click</EventName></Event>
 <Event>
-<EventName>Enter</EventName></Event>
+<EventName>Refresh</EventName></Event>
 <Event>
 <EventName>Load</EventName>
 <ImplicitForEach>

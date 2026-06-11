@@ -32,40 +32,40 @@ lac_i(4,[ [ 79 ] ]).
 lac_i(3,[ [ 29,30,31,32,34,55 ] ]).
  
  
-lits_i('Código',3,7).
-lits_i('Estreia',5,7).
-lits_i('Situação',4,7).
-lits_i('Título',6,7).
-lits_i('Descrição',7,7).
-lits_i('Informações gerais sobre o filme',1,5).
-lits_i('Código da categoria',4,35).
-lits_i('Nome da categoria',5,35).
-lits_i('Responsáveis pela direção do filme',1,5).
+lits_i('Código',4,5).
+lits_i('Estreia',6,5).
+lits_i('Situação',5,5).
+lits_i('Título',9,5).
+lits_i('Descrição',10,5).
+lits_i('Dados gerais',1,5).
+lits_i('Código da categoria',7,5).
+lits_i('Nome da categoria',8,5).
+lits_i('Direção',1,5).
 lits_i('Código',2,5).
 lits_i('Nome completo',2,19).
-lits_i('Atores presentes neste filme',1,5).
+lits_i('Atores',1,5).
 lits_i('Código',2,5).
 lits_i('Nome completo',2,16).
-lits_i('Prot',2,67).
+lits_i('Protagonista',2,67).
  
-cls_i([ 1,5 ],[ 23,102 ]).
+cls_i([ 1,5 ],[ 25,78 ]).
  
-pos_i(28,[ 3,3,18 ]).
-pos_i(31,[ 5,5,18 ]).
-pos_i(30,[ 4,4,18 ]).
-pos_i(29,[ 6,6,18 ]).
-pos_i(34,[ 7,7,18 ]).
-pos_i(55,[ 23,23,18 ]).
-pos_i(32,[ 4,4,53 ]).
-pos_i(33,[ 5,5,53 ]).
-pos_i(79,[ 3,21,5 ]).
-pos_i(80,[ 3,21,19 ]).
-pos_i(77,[ 3,21,5 ]).
-pos_i(78,[ 3,21,16 ]).
-pos_i(81,[ 3,21,67 ]).
+pos_i(28,[ 3,3,24 ]).
+pos_i(31,[ 5,5,24 ]).
+pos_i(30,[ 4,4,24 ]).
+pos_i(29,[ 8,8,24 ]).
+pos_i(34,[ 10,10,24 ]).
+pos_i(55,[ 25,25,24 ]).
+pos_i(32,[ 6,6,24 ]).
+pos_i(33,[ 7,7,24 ]).
+pos_i(79,[ 3,25,5 ]).
+pos_i(80,[ 3,25,19 ]).
+pos_i(77,[ 3,25,5 ]).
+pos_i(78,[ 3,25,16 ]).
+pos_i(81,[ 3,25,67 ]).
  
-repeat_i(5,[ 3,21,[],[] ]).
-repeat_i(4,[ 3,21,[],[] ]).
+repeat_i(5,[ 3,25,[],[] ]).
+repeat_i(4,[ 3,25,[],[] ]).
  
 default_i(e(28,3,1,28)).
 default_i(e(31,4,3,[ t('Today',23) ])).
@@ -257,6 +257,7 @@ rule_i(3,rule([ a(3,[ t(32,2) ]) ],[ t('Mode',23),t(=,10),t('''UPD''',3) ],[ ins
 rule_i(3,rule([ a(1,[ t('''Nome deve ser informado!''',3) ]) ],[ t('after(',1),t(29,2),t(')',4),t('.AND.',9),t('null(',1),t(29,2),t(')',4) ],[ insert,update,delete ],[ 29 ])).
 rule_i(3,rule([ a(1,[ t('''Categoria deve ser informada!''',3) ]) ],[ t('after(',1),t(32,2),t(')',4),t('.AND.',9),t('null(',1),t(32,2),t(')',4) ],[ insert,update,delete ],[ 32 ])).
 rule_i(3,rule([ a(1,[ t('''Data de lançamento deve ser informada!''',3) ]) ],[ t('after(',1),t(31,2),t(')',4),t('.AND.',9),t(31,2),t(=,10),t('ctod(',1),t('''0''',3),t(')',4) ],[ insert,update,delete ],[ 31 ])).
+rule_i(3,rule([ a(1,[ t('''Não é possível cadastrar um filme não lançado!''',3) ]) ],[ t('after(',1),t(31,2),t(')',4),t('.AND.',9),t(31,2),t(>,10),t('Today',23) ],[ insert,update,delete ],[ 31 ])).
 rule_i(3,rule([ a(4,[ t('''Descrição não foi informada!''',3) ]) ],[ t('null(',1),t(34,2),t(')',4) ],[ insert,update,delete ],[ 34 ])).
 rule_i(3,rule([ a(19,[ [ 32 ],msg([ t('"Não existe ''Cadastro de categorias.''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 32 ])).
 rule_i(4,rule([ a(19,[ [ 79 ],msg([ t('"Não existe ''Diretor do filme.''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 79 ])).
@@ -270,15 +271,16 @@ a_i(4,3,b,3,[],[ [],[ a(3,[ t(32,2) ]) ],[ t('Mode',23),t(=,10),t('''UPD''',3) ]
 a_i(5,3,b,4,[],[ [],[ a(1,[ t('''Nome deve ser informado!''',3) ]) ],[ t('after(',1),t(29,2),t(')',4),t('.AND.',9),t('null(',1),t(29,2),t(')',4) ] ]).
 a_i(6,3,b,5,[],[ [],[ a(1,[ t('''Categoria deve ser informada!''',3) ]) ],[ t('after(',1),t(32,2),t(')',4),t('.AND.',9),t('null(',1),t(32,2),t(')',4) ] ]).
 a_i(7,3,b,6,[],[ [],[ a(1,[ t('''Data de lançamento deve ser informada!''',3) ]) ],[ t('after(',1),t(31,2),t(')',4),t('.AND.',9),t(31,2),t(=,10),t('ctod(',1),t('''0''',3),t(')',4) ] ]).
-a_i(8,3,b,7,[ trn ],[ [],[ a(4,[ t('''Descrição não foi informada!''',3) ]) ],[ t('null(',1),t(34,2),t(')',4) ] ]).
-a_i(9,3,t,3,[],[ [ [ [],28,28 ] ],'IFILME',[] ]).
-a_i(10,3,r,6,[],[ [ [ 3,32,32 ] ],'ICATEGORIA',[] ]).
-a_i(11,4,t,4,[],[ [ [ [],28,28 ],[ [],79,79 ] ],'IFILMEDIRECAO',[] ]).
-a_i(12,4,r,515,[],[ [ [ 4,79,49 ] ],'IASTRO',[] ]).
-a_i(13,5,t,5,[],[ [ [ [],28,28 ],[ [],77,77 ] ],'IFILMEELENCO',[] ]).
-a_i(14,5,r,516,[],[ [ [ 5,77,49 ] ],'IASTRO',[] ]).
-a_i(15,3,f,'GxBScreen',[],[ [],[ t('0',3) ] ]).
-a_i(16,3,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
+a_i(8,3,b,7,[],[ [],[ a(1,[ t('''Não é possível cadastrar um filme não lançado!''',3) ]) ],[ t('after(',1),t(31,2),t(')',4),t('.AND.',9),t(31,2),t(>,10),t('Today',23) ] ]).
+a_i(9,3,b,8,[ trn ],[ [],[ a(4,[ t('''Descrição não foi informada!''',3) ]) ],[ t('null(',1),t(34,2),t(')',4) ] ]).
+a_i(10,3,t,3,[],[ [ [ [],28,28 ] ],'IFILME',[] ]).
+a_i(11,3,r,6,[],[ [ [ 3,32,32 ] ],'ICATEGORIA',[] ]).
+a_i(12,4,t,4,[],[ [ [ [],28,28 ],[ [],79,79 ] ],'IFILMEDIRECAO',[] ]).
+a_i(13,4,r,515,[],[ [ [ 4,79,49 ] ],'IASTRO',[] ]).
+a_i(14,5,t,5,[],[ [ [ [],28,28 ],[ [],77,77 ] ],'IFILMEELENCO',[] ]).
+a_i(15,5,r,516,[],[ [ [ 5,77,49 ] ],'IASTRO',[] ]).
+a_i(16,3,f,'GxBScreen',[],[ [],[ t('0',3) ] ]).
+a_i(17,3,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
  
 v_i(b,i,1,31).
 v_i(b,o,1,[]).
@@ -295,31 +297,33 @@ v_i(b,i,6,32).
 v_i(b,o,6,[]).
 v_i(b,i,7,31).
 v_i(b,o,7,[]).
-v_i(b,i,8,34).
+v_i(b,i,8,31).
 v_i(b,o,8,[]).
-v_i(t,i,9,28).
-v_i(t,o,9,29).
-v_i(t,o,9,30).
-v_i(t,o,9,31).
-v_i(t,o,9,34).
-v_i(t,o,9,55).
-v_i(t,o,9,32).
-v_i(r,i,10,32).
-v_i(r,o,10,33).
-v_i(t,i,11,28).
-v_i(t,i,11,79).
-v_i(t,o,11,[]).
-v_i(r,i,12,79).
-v_i(r,o,12,80).
-v_i(t,i,13,28).
-v_i(t,i,13,77).
-v_i(t,o,13,81).
-v_i(r,i,14,77).
-v_i(r,o,14,78).
-v_i(f,i,15,[]).
-v_i(f,o,15,'GxBScreen').
+v_i(b,i,9,34).
+v_i(b,o,9,[]).
+v_i(t,i,10,28).
+v_i(t,o,10,29).
+v_i(t,o,10,30).
+v_i(t,o,10,31).
+v_i(t,o,10,34).
+v_i(t,o,10,55).
+v_i(t,o,10,32).
+v_i(r,i,11,32).
+v_i(r,o,11,33).
+v_i(t,i,12,28).
+v_i(t,i,12,79).
+v_i(t,o,12,[]).
+v_i(r,i,13,79).
+v_i(r,o,13,80).
+v_i(t,i,14,28).
+v_i(t,i,14,77).
+v_i(t,o,14,81).
+v_i(r,i,15,77).
+v_i(r,o,15,78).
 v_i(f,i,16,[]).
-v_i(f,o,16,'Today').
+v_i(f,o,16,'GxBScreen').
+v_i(f,i,17,[]).
+v_i(f,o,17,'Today').
  
 ca_i(3,31).
  
@@ -421,20 +425,20 @@ b_line_i(0,2,1,cmd,0,[ t('',146,0,0),t('Start',3,0,6) ]).
 b_line_i(1,2,1,cmd,0,[ t('',107,0,0),t([ t('Cadastrodefilme',3,0,0),t('Activepage',3,0,0) ],29,0,0),t(=,10,0,0),t('1',3,0,0) ]).
 b_line_i(3,2,1,cmd,0,[ t('',147,0,0) ]).
 b_line_i(5,2,1,cmd,0,[ t('',146,0,0),t('After Trn',3,5,6) ]).
-b_line_i(6,2,1,cmd,0,[ t('',109,0,0),t(29,2,0,7),t(<>,10,0,15),t('Filnomeant',23,0,18),t('.AND.',9,0,30),t('Mode',23,0,34),t(=,10,0,40),t('''UPD''',3,6,42) ]).
-b_line_i(7,2,1,cmd,0,[ t('',141,0,0),t('''Registro atualizado!''',3,7,12),t(')',4,0,34) ]).
-b_line_i(8,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(9,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(11,2,1,cmd,0,[ t('',146,0,0),t('''Pesquisa''',3,11,6),t('4',3,0,16) ]).
-b_line_i(12,2,1,cmd,0,[ t('',152,0,0) ]).
-b_line_i(13,2,1,cmd,0,[ t('',153,0,0),t('cursor(',1,0,13),t(32,2,0,20),t(')',4,0,29) ]).
-b_line_i(13,2,1,cmd,0,[ t('',104,0,0),t(o(4,'ConsCategoria'),28,0,31),t(32,2,0,51) ]).
-b_line_i(15,2,1,cmd,0,[ t('',153,0,0),t('cursor(',1,0,13),t(79,2,0,20),t(')',4,0,32) ]).
-b_line_i(15,2,1,cmd,0,[ t('',104,0,0),t(o(4,'ConsAstro'),28,0,34),t(79,2,0,50) ]).
-b_line_i(17,2,1,cmd,0,[ t('',153,0,0),t('cursor(',1,0,13),t(77,2,0,20),t(')',4,0,32) ]).
-b_line_i(17,2,1,cmd,0,[ t('',104,0,0),t(o(4,'ConsAstro'),28,0,34),t(77,2,0,50) ]).
-b_line_i(18,2,1,cmd,0,[ t('',154,0,0) ]).
-b_line_i(19,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(7,2,1,cmd,0,[ t('',109,0,0),t(29,2,0,7),t(<>,10,0,15),t('Filnomeant',23,0,18),t('.AND.',9,0,30),t('Mode',23,0,34),t(=,10,0,40),t('''UPD''',3,7,42) ]).
+b_line_i(8,2,1,cmd,0,[ t('',141,0,0),t('''Registro atualizado!''',3,8,12),t(')',4,0,34) ]).
+b_line_i(10,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(12,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(14,2,1,cmd,0,[ t('',146,0,0),t('''Pesquisa''',3,14,6),t('4',3,0,16) ]).
+b_line_i(16,2,1,cmd,0,[ t('',152,0,0) ]).
+b_line_i(17,2,1,cmd,0,[ t('',153,0,0),t('cursor(',1,0,13),t(32,2,0,20),t(')',4,0,29) ]).
+b_line_i(17,2,1,cmd,0,[ t('',104,0,0),t(o(4,'ConsCategoria'),28,0,31),t(32,2,0,51) ]).
+b_line_i(19,2,1,cmd,0,[ t('',153,0,0),t('cursor(',1,0,13),t(79,2,0,20),t(')',4,0,32) ]).
+b_line_i(19,2,1,cmd,0,[ t('',104,0,0),t(o(4,'ConsAstro'),28,0,34),t(79,2,0,50) ]).
+b_line_i(21,2,1,cmd,0,[ t('',153,0,0),t('cursor(',1,0,13),t(77,2,0,20),t(')',4,0,32) ]).
+b_line_i(21,2,1,cmd,0,[ t('',104,0,0),t(o(4,'ConsAstro'),28,0,34),t(77,2,0,50) ]).
+b_line_i(23,2,1,cmd,0,[ t('',154,0,0) ]).
+b_line_i(25,2,1,cmd,0,[ t('',147,0,0) ]).
  
 sf_break_i(22,4).
 sf_break_i(27,5).
@@ -460,37 +464,37 @@ ppi_i([ 96,96 ]).
  
  
  
-lit_i(2,1,tabcontrol,[ rect(0,0,558,637),outstyle(single),fill,lines(1),back(rgb(255,255,255)),fore(rgb(0,0,0)),border(1),ctlname('Cadastrodefilme'),gxcolor([]) ]).
-lit_i(3,2,tabpage,[ title([ 'Filme' ]),rect(5,29,558,637),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(0,0,0)),border(2),ctlname(''),gxcolor([]),defgxcolor('BLK','WHT') ]).
-lit_i(4,3,t(28,2),[ font('Courier New',9,[]),rect(130,78,233,98),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(28),ctrltype(edit,4),ispwd(0),e2n(1) ]).
-lit_i(5,3,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(52,82,91,94),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(6,3,t(31,2),[ font('Courier New',9,[]),rect(130,130,233,150),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(31),ctrltype(edit,6),ispwd(0),e2n(1) ]).
-lit_i(7,3,t('Estreia',3),[ font('MS Sans Serif',8,[ bold ]),rect(52,134,91,146),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(8,3,t(30,2),[ font('Courier New',9,[]),rect(130,104,233,124),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(30),ctrltype(combo,8),e2n(1) ]).
-lit_i(9,3,t('Situação',3),[ font('MS Sans Serif',8,[ bold ]),rect(52,108,102,120),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(10,3,t(29,2),[ font('Courier New',9,[]),rect(130,156,493,176),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(29),ctrltype(edit,10),ispwd(0),e2n(1) ]).
-lit_i(11,3,t('Título',3),[ font('MS Sans Serif',8,[ bold ]),rect(52,160,86,172),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(12,3,t('Descrição',3),[ font('MS Sans Serif',8,[ bold ]),rect(52,186,109,198),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(13,3,t(34,2),[ font('Courier New',9,[]),rect(130,186,493,558),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(34),ctrltype(edit,13),ispwd(0),e2n(1) ]).
-lit_i(14,3,t(55,2),[ font('Courier New',9,[]),rect(130,572,269,587),outstyle('3d'),align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(55),ctrltype(checkbox,14),e2n(1) ]).
-lit_i(15,3,t('Informações gerais sobre o filme',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,26,222,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(16,3,t(32,2),[ font('Courier New',9,[]),rect(377,104,493,124),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(32),ctrltype(edit,16),ispwd(0),e2n(1) ]).
-lit_i(17,3,t(33,2),[ font('Courier New',9,[]),rect(377,130,493,150),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(33),ctrltype(edit,17),ispwd(0),e2n(1) ]).
-lit_i(18,3,t('Código da categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(247,108,361,120),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(19,3,t('Nome da categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(247,134,354,146),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(20,2,tabpage,[ title([ 'Direção' ]),rect(5,29,558,637),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(0,0,0)),border(2),ctlname(''),gxcolor([]),defgxcolor('BLK','WHT') ]).
-lit_i(21,20,t('Responsáveis pela direção do filme',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,26,240,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(2,1,tabcontrol,[ rect(0,0,663,708),outstyle(single),fill,lines(1),back(rgb(255,255,255)),fore(rgb(0,0,0)),border(1),ctlname('Cadastrodefilme'),gxcolor([]) ]).
+lit_i(3,2,tabpage,[ title([ 'Filme' ]),rect(5,29,663,708),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(0,0,0)),border(2),ctlname(''),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(4,3,t(28,2),[ font('Courier New',9,[]),rect(169,92,233,112),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(28),ctrltype(edit,4),ispwd(0),e2n(1) ]).
+lit_i(5,3,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,96,78,108),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(6,3,t(31,2),[ font('Courier New',9,[]),rect(169,141,272,161),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(31),ctrltype(edit,6),ispwd(0),e2n(1) ]).
+lit_i(7,3,t('Estreia',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,144,78,156),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(8,3,t(30,2),[ font('Courier New',9,[]),rect(169,116,272,136),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(30),ctrltype(combo,8),e2n(1) ]).
+lit_i(9,3,t('Situação',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,120,89,132),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(10,3,t(29,2),[ font('Courier New',9,[]),rect(169,215,532,235),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(29),ctrltype(edit,10),ispwd(0),e2n(1) ]).
+lit_i(11,3,t('Título',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,216,73,228),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(12,3,t('Descrição',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,240,96,252),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(13,3,t(34,2),[ font('Courier New',9,[]),rect(169,240,532,612),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(34),ctrltype(edit,13),ispwd(0),e2n(1) ]).
+lit_i(14,3,t(55,2),[ font('Courier New',9,[]),rect(169,618,308,633),outstyle('3d'),align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(55),ctrltype(checkbox,14),e2n(1) ]).
+lit_i(15,3,t('Dados gerais',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,26,113,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(16,3,t(32,2),[ font('Courier New',9,[]),rect(169,166,233,186),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(32),ctrltype(edit,16),ispwd(0),e2n(1) ]).
+lit_i(17,3,t(33,2),[ font('Courier New',9,[]),rect(169,190,337,210),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(33),ctrltype(edit,17),ispwd(0),e2n(1) ]).
+lit_i(18,3,t('Código da categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,168,153,180),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(19,3,t('Nome da categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,192,146,204),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(20,2,tabpage,[ title([ 'Direção' ]),rect(5,29,663,708),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(0,0,0)),border(2),ctlname(''),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(21,20,t('Direção',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,26,83,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(23,20,s(t(79,2),22),[ width(102),pos(0),title([ 'Código' ]),ctlname(79),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,23),e2n(1) ]).
-lit_i(24,20,s(t(80,2),22),[ width(323),pos(1),title([ 'Nome completo' ]),ctlname(80),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,24),e2n(1) ]).
-lit_i(22,20,s(22),[ th(18),height(18),rect(37,52,519,545),back(rgb(240,240,240)),fore(gxcolor([]),rgb(0,0,0)),border(1),ctlname('Gxsf22'),font(font('Courier New',9,[])),titlefont(font('MS Sans Serif',8,[ bold ])),el([ t(79,2),t(80,2) ]) ]).
-lit_i(25,2,tabpage,[ title([ 'Elenco' ]),rect(5,29,558,637),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(0,0,0)),border(2),ctlname(''),gxcolor([]),defgxcolor('BLK','WHT') ]).
-lit_i(26,25,t('Atores presentes neste filme',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,26,199,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(24,20,s(t(80,2),22),[ width(426),pos(1),title([ 'Nome completo' ]),ctlname(80),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,24),e2n(1) ]).
+lit_i(22,20,s(22),[ th(18),height(18),rect(37,52,622,643),back(rgb(240,240,240)),fore(gxcolor([]),rgb(0,0,0)),border(1),ctlname('Gxsf22'),font(font('Courier New',9,[])),titlefont(font('MS Sans Serif',8,[ bold ])),el([ t(79,2),t(80,2) ]) ]).
+lit_i(25,2,tabpage,[ title([ 'Elenco' ]),rect(5,29,663,708),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(0,0,0)),border(2),ctlname(''),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(26,25,t('Atores',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,26,75,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(28,25,s(t(77,2),27),[ width(83),pos(0),title([ 'Código' ]),ctlname(77),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,28),e2n(1) ]).
-lit_i(29,25,s(t(78,2),27),[ width(306),pos(1),title([ 'Nome completo' ]),ctlname(78),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,29),e2n(1) ]).
-lit_i(30,25,s(t(81,2),27),[ width(33),pos(2),title([ 'Prot' ]),ctlname(81),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(checkbox,30),e2n(1) ]).
-lit_i(27,25,s(27),[ th(18),height(18),rect(39,52,519,545),back(rgb(240,240,240)),fore(gxcolor([]),rgb(0,0,0)),border(1),ctlname('Gxsf27'),font(font('Courier New',9,[])),titlefont(font('MS Sans Serif',8,[ bold ])),el([ t(77,2),t(78,2),t(81,2) ]) ]).
-lit_i(31,1,button('Enter'),[ id(31),title([ 'Cadastrar' ]),ctlname('Btn_enter'),rect(416,650,504,672),font('MS Shell Dlg',8,[]) ]).
-lit_i(1,1,window,[ title([]),rect(3,25,561,713),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(29,25,s(t(78,2),27),[ width(363),pos(1),title([ 'Nome completo' ]),ctlname(78),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,29),e2n(1) ]).
+lit_i(30,25,s(t(81,2),27),[ width(79),pos(2),title([ 'Protagonista' ]),ctlname(81),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(checkbox,30),e2n(1) ]).
+lit_i(27,25,s(27),[ th(18),height(18),rect(39,52,622,644),back(rgb(240,240,240)),fore(gxcolor([]),rgb(0,0,0)),border(1),ctlname('Gxsf27'),font(font('Courier New',9,[])),titlefont(font('MS Sans Serif',8,[ bold ])),el([ t(77,2),t(78,2),t(81,2) ]) ]).
+lit_i(31,1,button('Enter'),[ id(31),title([ 'Cadastrar' ]),ctlname('Btn_enter'),rect(550,731,638,757),font('MS Shell Dlg',8,[]) ]).
+lit_i(1,1,window,[ title([ 'Cadastro de filmes' ]),rect(3,25,666,798),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).
  

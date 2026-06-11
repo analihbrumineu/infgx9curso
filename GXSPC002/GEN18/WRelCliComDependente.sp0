@@ -18,14 +18,13 @@ las_i(2,[ [ 'Pescodinicial','Pescodfinal' ] ]).
 lac_i(2,[ [ 'Pescodinicial','Pescodfinal' ] ]).
  
  
-lits_i('Impressão de relatório de clientes com dependentes',1,5).
-lits_i('Cliente',2,13).
-lits_i(até,2,31).
+lits_i('Cliente',2,11).
+lits_i(até,2,29).
  
-cls_i([ 1,5 ],[ 2,54 ]).
+cls_i([ 2,11 ],[ 2,41 ]).
  
-pos_i('Pescodinicial',[ 2,2,20 ]).
-pos_i('Pescodfinal',[ 2,2,35 ]).
+pos_i('Pescodinicial',[ 2,2,18 ]).
+pos_i('Pescodfinal',[ 2,2,33 ]).
  
  
  
@@ -227,13 +226,12 @@ ppi_i([ 96,96 ]).
  
  
  
-lit_i(2,1,t('Impressão de relatório de clientes com dependentes',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,26,334,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(3,1,t('Cliente',3),[ font('MS Sans Serif',8,[ bold ]),rect(91,69,130,81),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(4,1,t('Pescodinicial',23),[ font('Courier New',9,[]),rect(143,65,215,85),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pescodinicial'),ctrltype(edit,4),ispwd(0) ]).
-lit_i(5,1,t('Pescodfinal',23),[ font('Courier New',9,[]),rect(247,65,319,85),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pescodfinal'),ctrltype(edit,5),ispwd(0) ]).
-lit_i(6,1,t(até,3),[ font('MS Sans Serif',8,[ bold ]),rect(221,69,239,81),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(7,1,button('''Imprimir'''),[ id(7),title([ 'Imprimir' ]),ctlname(''),rect(260,104,350,129),font('MS Shell Dlg',8,[]) ]).
-lit_i(1,1,window,[ title([]),rect(3,25,405,180),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(2,1,t('Cliente',3),[ font('MS Sans Serif',8,[ bold ]),rect(78,69,150,81),outstyle(none),align(left),fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(3,1,t('Pescodinicial',23),[ font('Courier New',9,[]),rect(130,65,202,85),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pescodinicial'),ctrltype(edit,3),ispwd(0) ]).
+lit_i(4,1,t('Pescodfinal',23),[ font('Courier New',9,[]),rect(234,65,306,85),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pescodfinal'),ctrltype(edit,4),ispwd(0) ]).
+lit_i(5,1,t(até,3),[ font('MS Sans Serif',8,[ bold ]),rect(208,69,226,81),outstyle(none),align(left),fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(6,1,button('''Imprimir'''),[ id(6),title([ 'Imprimir' ]),ctlname(''),rect(273,117,363,142),font('MS Shell Dlg',8,[]) ]).
+lit_i(1,1,window,[ title([ 'Relatório de clientes com dependentes' ]),rect(3,25,431,206),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).
  
@@ -243,12 +241,11 @@ popup_offset_i(0,0).
 form_class_i(1,'Graphic').
  
 std_color_i(2,fore,8).
+std_color_i(3,back,5).
 std_color_i(3,fore,8).
 std_color_i(4,back,5).
 std_color_i(4,fore,8).
-std_color_i(5,back,5).
 std_color_i(5,fore,8).
-std_color_i(6,fore,8).
 std_color_i(1,back,15).
 std_color_i(1,fore,6).
  

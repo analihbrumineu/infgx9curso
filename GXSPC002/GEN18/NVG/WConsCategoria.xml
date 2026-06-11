@@ -23,6 +23,8 @@
 <VarName>&amp;CatCodigoRet</VarName></Variable></Parameter></Parameters>
 <StandAloneRules></StandAloneRules>
 <Event>
+<EventName>Refresh</EventName></Event>
+<Event>
 <EventName>Exit</EventName></Event>
 <Event>
 <EventName>CatCodigo.Click</EventName></Event>

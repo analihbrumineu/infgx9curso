@@ -2,7 +2,7 @@
                File: RelFilPorCategoria
         Description: Impressão de relatório de filmes por categoria.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:45.45
+       Generated on: 6/11/2026 8:58:4.34
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -61,7 +61,7 @@ namespace GeneXus.Programs {
 
       public override String getFrmTitle( )
       {
-         return "Impressão de relatório de filmes por categoria." ;
+         return "Relatório de filmes por categoria" ;
       }
 
       public override GXMenuBar getMenuBar( )
@@ -86,12 +86,12 @@ namespace GeneXus.Programs {
 
       public override int getFrmWidth( )
       {
-         return 429 ;
+         return 494 ;
       }
 
       public override int getFrmHeight( )
       {
-         return 182 ;
+         return 247 ;
       }
 
       public override String getHelpId( )
@@ -270,7 +270,7 @@ namespace GeneXus.Programs {
 
       public override void screen( )
       {
-         GXPanel1 = new GXPanel(this, 3 , 25 , 429 , 182 );
+         GXPanel1 = new GXPanel(this, 3 , 25 , 494 , 247 );
          this.setIBackground(UIFactory.getColor(15));
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
@@ -291,21 +291,20 @@ namespace GeneXus.Programs {
          ((GXEdit) edtavFilcodfinal.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavFilcodfinal.addFocusListener(this);
          edtavFilcodfinal.getGXComponent().setHelpId("HLP_WRelFilPorCategoria.htm");
-         bttbtt2 = UIFactory.getGXButton( GXPanel1 , "Imprimir" ,  286 ,  130 ,  89 ,  23 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
-         bttbtt2.setTooltip("Imprimir");
-         bttbtt2.addActionListener(this);
-         bttbtt2.setFiresEvents(false);
-         lbllbl11 = UIFactory.getLabel(GXPanel1, "Impressão de relatório de filmes por categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 26 , 259 , 13 );
-         lbllbl3 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 91 , 65 , 55 , 13 );
-         lbllbl4 = UIFactory.getLabel(GXPanel1, "até", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 234 , 65 , 19 , 13 );
-         lbllbl5 = UIFactory.getLabel(GXPanel1, "Filme", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 91 , 91 , 30 , 13 );
-         lbllbl6 = UIFactory.getLabel(GXPanel1, "até", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 234 , 91 , 19 , 13 );
+         bttbtt10 = UIFactory.getGXButton( GXPanel1 , "Imprimir" ,  299 ,  143 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt10.setTooltip("Imprimir");
+         bttbtt10.addActionListener(this);
+         bttbtt10.setFiresEvents(false);
+         lbllbl2 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 91 , 69 , 55 , 13 );
+         lbllbl3 = UIFactory.getLabel(GXPanel1, "até", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 234 , 69 , 19 , 13 );
+         lbllbl4 = UIFactory.getLabel(GXPanel1, "Filme", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 91 , 95 , 30 , 13 );
+         lbllbl5 = UIFactory.getLabel(GXPanel1, "até", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 234 , 95 , 19 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavCatcodinicial ,
                    edtavCatcodfinal ,
                    edtavFilcodinicial ,
                    edtavFilcodfinal ,
-                   bttbtt2
+                   bttbtt10
          });
       }
 
@@ -358,7 +357,7 @@ namespace GeneXus.Programs {
 
       public override void actionEventDispatch( Object eventSource )
       {
-         if ( bttbtt2.isEventSource(eventSource) ) {
+         if ( bttbtt10.isEventSource(eventSource) ) {
             /* Execute user event: E13V1Q2 */
             E13V1Q2 ();
             return;
@@ -494,12 +493,11 @@ namespace GeneXus.Programs {
       protected GUIObjectInt edtavCatcodfinal ;
       protected GUIObjectInt edtavFilcodinicial ;
       protected GUIObjectInt edtavFilcodfinal ;
-      protected IGXButton bttbtt2 ;
-      protected ILabel lbllbl11 ;
+      protected IGXButton bttbtt10 ;
+      protected ILabel lbllbl2 ;
       protected ILabel lbllbl3 ;
       protected ILabel lbllbl4 ;
       protected ILabel lbllbl5 ;
-      protected ILabel lbllbl6 ;
    }
 
 }

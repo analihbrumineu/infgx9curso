@@ -23,6 +23,8 @@
 <VarName>&amp;CidCodigoRet</VarName></Variable></Parameter></Parameters>
 <StandAloneRules></StandAloneRules>
 <Event>
+<EventName>Refresh</EventName></Event>
+<Event>
 <EventName>Exit</EventName></Event>
 <Event>
 <EventName>CidCodigo.Click</EventName></Event>

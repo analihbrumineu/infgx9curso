@@ -2,7 +2,7 @@
                File: PeCategoria
         Description: Cadastro de categorias.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:44.51
+       Generated on: 6/11/2026 8:58:3.56
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -66,7 +66,7 @@ namespace GeneXus.Programs {
 
       public override String getFrmTitle( )
       {
-         return "Cadastro de categorias." ;
+         return "Categorias" ;
       }
 
       public override GXMenuBar getMenuBar( )
@@ -409,7 +409,18 @@ namespace GeneXus.Programs {
       protected void GXRefreshCommand04( )
       {
          ControlsToVariables();
+         /* Execute user event: E12V0C2 */
+         E12V0C2 ();
          /* End function GeneXus Refresh */
+      }
+
+      protected void E12V0C2( )
+      {
+         /* Refresh Routine */
+         if ( ( AV5CatCodi < 0 ) )
+         {
+            GXutil.msg( me(), "Digite um código válido!" );
+         }
       }
 
       public void loadToBuffer04( )
@@ -435,7 +446,7 @@ namespace GeneXus.Programs {
          pr_default.close(0);
       }
 
-      protected void E12V0C2( )
+      protected void E13V0C2( )
       {
          eventLevelContext();
          /* Visualizar_Click Routine */
@@ -443,7 +454,7 @@ namespace GeneXus.Programs {
          eventLevelResetContext();
       }
 
-      protected void E13V0C2( )
+      protected void E14V0C2( )
       {
          eventLevelContext();
          /* Editar_Click Routine */
@@ -451,7 +462,7 @@ namespace GeneXus.Programs {
          GXRefresh();
       }
 
-      protected void E14V0C2( )
+      protected void E15V0C2( )
       {
          eventLevelContext();
          /* Excluir_Click Routine */
@@ -459,7 +470,7 @@ namespace GeneXus.Programs {
          GXRefresh();
       }
 
-      protected void E15V0C2( )
+      protected void E16V0C2( )
       {
          eventLevelContext();
          /* 'Novo' Routine */
@@ -474,11 +485,11 @@ namespace GeneXus.Programs {
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         edtavCatcodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),65, 78, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 65 , 78 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV5CatCodi" );
+         edtavCatcodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),65, 67, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 65 , 67 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV5CatCodi" );
          ((GXEdit) edtavCatcodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavCatcodigo.addFocusListener(this);
          edtavCatcodigo.getGXComponent().setHelpId("HLP_WPeCategoria.htm");
-         edtavCatnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),156, 78, 286, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 156 , 78 , 286 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6CatNome" );
+         edtavCatnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),156, 67, 286, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 156 , 67 , 286 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6CatNome" );
          ((GXEdit) edtavCatnome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavCatnome.addFocusListener(this);
          edtavCatnome.getGXComponent().setHelpId("HLP_WPeCategoria.htm");
@@ -498,13 +509,12 @@ namespace GeneXus.Programs {
          subGxsf4.getColumn(1).addItemListener( this);
          subGxsf4.getColumn(2).addActionListener( this);
          subGxsf4.getColumn(2).addItemListener( this);
-         bttbtt10 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  468 ,  78 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt10 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  481 ,  65 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt10.setTooltip("Novo");
          bttbtt10.addActionListener(this);
          bttbtt10.setFiresEvents(false);
-         lbllbl13 = UIFactory.getLabel(GXPanel1, "Cadastro de categorias", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 26 , 132 , 13 );
-         lbllbl2 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 65 , 78 , 13 );
-         lbllbl3 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 156 , 65 , 78 , 13 );
+         lbllbl2 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 52 , 78 , 13 );
+         lbllbl3 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 156 , 52 , 78 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavCatcodigo ,
                    edtavCatnome ,
@@ -601,26 +611,26 @@ namespace GeneXus.Programs {
       public override void actionEventDispatch( Object eventSource )
       {
          if ( bttbtt10.isEventSource(eventSource) ) {
-            /* Execute user event: E15V0C2 */
-            E15V0C2 ();
+            /* Execute user event: E16V0C2 */
+            E16V0C2 ();
             return;
          }
          if ( subGxsf4.isEventSource(eventSource) ) {
             return;
          }
          if ( subGxsf4.getColumn(0).isEventSource(eventSource) ) {
-            /* Execute user event: E12V0C2 */
-            E12V0C2 ();
-            return;
-         }
-         if ( subGxsf4.getColumn(1).isEventSource(eventSource) ) {
             /* Execute user event: E13V0C2 */
             E13V0C2 ();
             return;
          }
-         if ( subGxsf4.getColumn(2).isEventSource(eventSource) ) {
+         if ( subGxsf4.getColumn(1).isEventSource(eventSource) ) {
             /* Execute user event: E14V0C2 */
             E14V0C2 ();
+            return;
+         }
+         if ( subGxsf4.getColumn(2).isEventSource(eventSource) ) {
+            /* Execute user event: E15V0C2 */
+            E15V0C2 ();
             return;
          }
       }
@@ -665,18 +675,18 @@ namespace GeneXus.Programs {
                                                int modifier )
       {
          if ( subGxsf4.getColumn(0).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
-            /* Execute user event: E12V0C2 */
-            E12V0C2 ();
-            return;
-         }
-         if ( subGxsf4.getColumn(1).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
             /* Execute user event: E13V0C2 */
             E13V0C2 ();
             return;
          }
-         if ( subGxsf4.getColumn(2).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
+         if ( subGxsf4.getColumn(1).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
             /* Execute user event: E14V0C2 */
             E14V0C2 ();
+            return;
+         }
+         if ( subGxsf4.getColumn(2).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
+            /* Execute user event: E15V0C2 */
+            E15V0C2 ();
             return;
          }
       }
@@ -781,7 +791,6 @@ namespace GeneXus.Programs {
       protected GUIObjectString edtavCatnome ;
       protected GXSubfile subGxsf4 ;
       protected IGXButton bttbtt10 ;
-      protected ILabel lbllbl13 ;
       protected ILabel lbllbl2 ;
       protected ILabel lbllbl3 ;
    }

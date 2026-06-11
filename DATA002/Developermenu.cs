@@ -35,7 +35,7 @@ namespace GeneXus.Programs {
          childNode = new TreeNode( "Cadastro de Estados.") ;
          childNode.Tag = "WPeEstado" ;
          nodeToAdd.Nodes.Add( childNode);
-         childNode = new TreeNode( "Cadastro de cidades") ;
+         childNode = new TreeNode( "Cadastro de cidades.") ;
          childNode.Tag = "WPeCidade" ;
          nodeToAdd.Nodes.Add( childNode);
          childNode = new TreeNode( "Cadastro de categorias.") ;
@@ -68,7 +68,7 @@ namespace GeneXus.Programs {
          childNode = new TreeNode( "Configurações tipo de mídia.") ;
          childNode.Tag = "WConfTipMidia" ;
          nodeToAdd.Nodes.Add( childNode);
-         childNode = new TreeNode( "Cadastro de locação") ;
+         childNode = new TreeNode( "Cadastro de locação.") ;
          childNode.Tag = "WPeLocacao" ;
          nodeToAdd.Nodes.Add( childNode);
          childNode = new TreeNode( "Relatório de topo de lista.") ;

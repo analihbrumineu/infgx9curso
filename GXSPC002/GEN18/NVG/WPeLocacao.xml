@@ -5,7 +5,7 @@
 <ObjCls>4</ObjCls>
 <ObjId>78</ObjId>
 <ObjName>PeLocacao</ObjName>
-<ObjDesc>Cadastro de locação</ObjDesc>
+<ObjDesc>Cadastro de locação.</ObjDesc>
 <ObjPgmName>WPeLocacao</ObjPgmName>
 <ObjClsName>Work Panel</ObjClsName></Object>
 <Result>genreq</Result>
@@ -19,6 +19,8 @@
 <StandAloneRules></StandAloneRules>
 <Event>
 <EventName>Start</EventName></Event>
+<Event>
+<EventName>Refresh</EventName></Event>
 <Event>
 <EventName>Load</EventName>
 <LoadMethod>Auto</LoadMethod>

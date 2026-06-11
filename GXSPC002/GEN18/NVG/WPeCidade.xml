@@ -5,7 +5,7 @@
 <ObjCls>4</ObjCls>
 <ObjId>11</ObjId>
 <ObjName>PeCidade</ObjName>
-<ObjDesc>Cadastro de cidades</ObjDesc>
+<ObjDesc>Cadastro de cidades.</ObjDesc>
 <ObjPgmName>WPeCidade</ObjPgmName>
 <ObjClsName>Work Panel</ObjClsName></Object>
 <Result>genreq</Result>
@@ -61,6 +61,8 @@
 <AttriName>EstUF</AttriName>
 <Description>UF do Estado da pessoa</Description></Attribute></Order>
 <Condition></Condition></NavigationOrder></Navigation></DynamicLoad></Action></StandAloneRules>
+<Event>
+<EventName>Refresh</EventName></Event>
 <Event>
 <EventName>Load</EventName>
 <LoadMethod>Auto</LoadMethod>

@@ -62,6 +62,8 @@
 <Description>Nome da categoria do filme</Description></Attribute></Order>
 <Condition></Condition></NavigationOrder></Navigation></DynamicLoad></Action></StandAloneRules>
 <Event>
+<EventName>Refresh</EventName></Event>
+<Event>
 <EventName>Load</EventName>
 <LoadMethod>Auto</LoadMethod>
 <ImplicitForEach>

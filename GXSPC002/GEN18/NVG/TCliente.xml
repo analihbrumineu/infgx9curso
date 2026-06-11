@@ -85,6 +85,15 @@
 <Token>1</Token>
 <Token>;</Token></FormulaExpression></Action>
 <Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Variable>
+<VarId>Today</VarId>
+<VarName>&amp;Gx_date</VarName></Variable></FormulaName>
+<FormulaExpression>
+<Token>today(</Token>
+<Token>)</Token></FormulaExpression></Action>
+<Action>
 <ActionType>ReadBaseTable</ActionType>
 <Table>
 <TableId>1</TableId>
@@ -364,6 +373,27 @@
 <Token>.</Token>
 <Token>isempty(</Token>
 <Token>)</Token></Condition></Action>
+<Action>
+<ActionType>BusinessRule</ActionType>
+<RuleType>ErrorRule</RuleType>
+<Expression>
+<Token>'Digite uma data de nascimento válida!'</Token></Expression>
+<Condition>
+<Token>after(</Token>
+<Attribute>
+<AttriId>111</AttriId>
+<AttriName>PesDatNascimento</AttriName>
+<Description>Data de nascimento da pessoa</Description></Attribute>
+<Token>)</Token>
+<Token>and</Token>
+<Attribute>
+<AttriId>111</AttriId>
+<AttriName>PesDatNascimento</AttriName>
+<Description>Data de nascimento da pessoa</Description></Attribute>
+<Token>&gt;</Token>
+<Variable>
+<VarId>Today</VarId>
+<VarName>&amp;Gx_date</VarName></Variable></Condition></Action>
 <Action>
 <ActionType>ReadTable</ActionType>
 <JoinType>Outer</JoinType>

@@ -2,7 +2,7 @@
                File: PeFilme
         Description: Cadastro de filmes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:44.90
+       Generated on: 6/11/2026 8:58:3.87
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -66,7 +66,7 @@ namespace GeneXus.Programs {
 
       public override String getFrmTitle( )
       {
-         return "Cadastro de filmes." ;
+         return "Filmes" ;
       }
 
       public override GXMenuBar getMenuBar( )
@@ -490,19 +490,19 @@ namespace GeneXus.Programs {
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         edtavFilcodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),65, 78, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 65 , 78 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV8FilCodi" );
+         edtavFilcodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),65, 67, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 65 , 67 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV8FilCodi" );
          ((GXEdit) edtavFilcodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavFilcodigo.addFocusListener(this);
          edtavFilcodigo.getGXComponent().setHelpId("HLP_WPeFilme.htm");
-         edtavFilnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),156, 78, 273, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 156 , 78 , 273 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV11FilNom" );
+         edtavFilnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),157, 67, 273, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 157 , 67 , 273 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV11FilNom" );
          ((GXEdit) edtavFilnome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavFilnome.addFocusListener(this);
          edtavFilnome.getGXComponent().setHelpId("HLP_WPeFilme.htm");
-         edtavFildata = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),442, 78, 80, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , GXPanel1 , 442 , 78 , 80 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV9FilData" );
+         edtavFildata = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),443, 67, 80, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , GXPanel1 , 443 , 67 , 80 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV9FilData" );
          ((GXEdit) edtavFildata.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavFildata.addFocusListener(this);
          edtavFildata.getGXComponent().setHelpId("HLP_WPeFilme.htm");
-         dynavCatnome = new GUIObjectString ( new GXComboBox(GXPanel1, this, 13) , GXPanel1 , 533 , 78 , 273 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7CatNome" );
+         dynavCatnome = new GUIObjectString ( new GXComboBox(GXPanel1, this, 13) , GXPanel1 , 534 , 67 , 273 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7CatNome" );
          dynavCatnome.addFocusListener(this);
          dynavCatnome.addItemListener(this);
          dynavCatnome.getGXComponent().setHelpId("HLP_WPeFilme.htm");
@@ -528,22 +528,21 @@ namespace GeneXus.Programs {
          subGxsf2.getColumn(1).addItemListener( this);
          subGxsf2.getColumn(2).addActionListener( this);
          subGxsf2.getColumn(2).addItemListener( this);
-         bttbtt18 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  819 ,  78 ,  89 ,  23 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
-         bttbtt18.setTooltip("Novo");
-         bttbtt18.addActionListener(this);
-         bttbtt18.setFiresEvents(false);
-         lbllbl20 = UIFactory.getLabel(GXPanel1, "Cadastro de filmes", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 26 , 105 , 13 );
-         lbllbl14 = UIFactory.getLabel(GXPanel1, "Código do filme", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 65 , 42 , 13 );
-         lbllbl15 = UIFactory.getLabel(GXPanel1, "Nome do filme", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 156 , 65 , 81 , 14 );
-         lbllbl16 = UIFactory.getLabel(GXPanel1, "Estreia", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 442 , 65 , 81 , 14 );
-         lbllbl17 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 533 , 65 , 81 , 15 );
+         bttbtt19 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  832 ,  65 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt19.setTooltip("Novo");
+         bttbtt19.addActionListener(this);
+         bttbtt19.setFiresEvents(false);
+         lbllbl17 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 534 , 49 , 81 , 15 );
+         lbllbl14 = UIFactory.getLabel(GXPanel1, "Código do filme", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 50 , 42 , 13 );
+         lbllbl15 = UIFactory.getLabel(GXPanel1, "Nome do filme", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 157 , 50 , 81 , 14 );
+         lbllbl16 = UIFactory.getLabel(GXPanel1, "Estreia", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 443 , 50 , 81 , 14 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavFilcodigo ,
                    edtavFilnome ,
                    edtavFildata ,
                    dynavCatnome ,
                    subGxsf2 ,
-                   bttbtt18
+                   bttbtt19
          });
       }
 
@@ -646,7 +645,7 @@ namespace GeneXus.Programs {
 
       public override void actionEventDispatch( Object eventSource )
       {
-         if ( bttbtt18.isEventSource(eventSource) ) {
+         if ( bttbtt19.isEventSource(eventSource) ) {
             /* Execute user event: E15V0D2 */
             E15V0D2 ();
             return;
@@ -929,12 +928,11 @@ namespace GeneXus.Programs {
       protected GUIObjectDatetime edtavFildata ;
       protected GUIObjectString dynavCatnome ;
       protected GXSubfile subGxsf2 ;
-      protected IGXButton bttbtt18 ;
-      protected ILabel lbllbl20 ;
+      protected IGXButton bttbtt19 ;
+      protected ILabel lbllbl17 ;
       protected ILabel lbllbl14 ;
       protected ILabel lbllbl15 ;
       protected ILabel lbllbl16 ;
-      protected ILabel lbllbl17 ;
       protected IDataReader W000D3 ;
       protected int[] W000D3_A32CatCodi ;
       protected bool[] W000D3_n32CatCodi ;

@@ -2,7 +2,7 @@
                File: Filme
         Description: Cadastro de filmes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:38.24
+       Generated on: 6/11/2026 8:57:58.22
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -156,7 +156,7 @@ namespace GeneXus.Programs {
 
       public override String getFrmTitle( )
       {
-         return "Cadastro de filmes." ;
+         return "Cadastro de filmes" ;
       }
 
       public override GXMenuBar getMenuBar( )
@@ -181,12 +181,12 @@ namespace GeneXus.Programs {
 
       public override int getFrmWidth( )
       {
-         return 559 ;
+         return 664 ;
       }
 
       public override int getFrmHeight( )
       {
-         return 689 ;
+         return 774 ;
       }
 
       public override String getHelpId( )
@@ -284,85 +284,85 @@ namespace GeneXus.Programs {
 
       public override void screen( )
       {
-         GXPanel1 = new GXPanel(this, 3 , 25 , 559 , 689 );
+         GXPanel1 = new GXPanel(this, 3 , 25 , 664 , 774 );
          this.setIBackground(UIFactory.getColor(15));
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         bttBtn_enter = UIFactory.getGXButton( GXPanel1 , "Cadastrar" ,  416 ,  650 ,  89 ,  23 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttBtn_enter = UIFactory.getGXButton( GXPanel1 , "Cadastrar" ,  550 ,  731 ,  89 ,  27 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttBtn_enter.setTooltip("Cadastrar");
          bttBtn_enter.addActionListener(this);
-         tctrlCadastrodefilme = new GXTabControl (this,  GXPanel1 , 0 , 0 , 559 , 638 , UIFactory.getColor(5) , UIFactory.getColor(8) , 0, 0, 0, false );
-         tpagetpage3 = new GXTabPage ( tctrlCadastrodefilme , "Filme" , 5 , 29 , 554 , 609 , UIFactory.getColor(15) , UIFactory.getColor(18) , 0, 0);
-         edtFilCodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),130, 78, 104, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), true) , tpagetpage3.getGXPanel() , 130 , 78 , 104 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A28FilCodi" );
+         tctrlCadastrodefilme = new GXTabControl (this,  GXPanel1 , 0 , 0 , 664 , 709 , UIFactory.getColor(5) , UIFactory.getColor(8) , 0, 0, 0, false );
+         tpagetpage3 = new GXTabPage ( tctrlCadastrodefilme , "Filme" , 5 , 29 , 659 , 680 , UIFactory.getColor(15) , UIFactory.getColor(18) , 0, 0);
+         edtFilCodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),169, 92, 65, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), true) , tpagetpage3.getGXPanel() , 169 , 92 , 65 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A28FilCodi" );
          ((GXEdit) edtFilCodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtFilCodigo.addFocusListener(this);
          edtFilCodigo.getGXComponent().setHelpId("HLP_TFilme.htm");
-         cmbFilSituacao = new GUIObjectShort ( new GXComboBox(tpagetpage3.getGXPanel()) , tpagetpage3.getGXPanel() , 130 , 104 , 104 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A30FilSitu" );
+         cmbFilSituacao = new GUIObjectShort ( new GXComboBox(tpagetpage3.getGXPanel()) , tpagetpage3.getGXPanel() , 169 , 116 , 104 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A30FilSitu" );
          ((GXComboBox) cmbFilSituacao.getGXComponent()).addItem( new java.lang.Short(1),"Ativo");
          ((GXComboBox) cmbFilSituacao.getGXComponent()).addItem( new java.lang.Short(0),"Inativo");
          cmbFilSituacao.addFocusListener(this);
          cmbFilSituacao.addItemListener(this);
          cmbFilSituacao.getGXComponent().setHelpId("HLP_TFilme.htm");
-         edtCatCodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),377, 104, 117, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(255, 255, 255), false) , tpagetpage3.getGXPanel() , 377 , 104 , 117 , 21 , UIFactory.getColor(255, 255, 255) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A32CatCodi" );
-         ((GXEdit) edtCatCodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
-         edtCatCodigo.addFocusListener(this);
-         edtCatCodigo.getGXComponent().setHelpId("HLP_TFilme.htm");
-         edtFilData = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),130, 130, 104, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 130 , 130 , 104 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A31FilData" );
+         edtFilData = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),169, 141, 104, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 169 , 141 , 104 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A31FilData" );
          ((GXEdit) edtFilData.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtFilData.addFocusListener(this);
          edtFilData.getGXComponent().setHelpId("HLP_TFilme.htm");
-         edtCatNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),377, 130, 117, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), true) , tpagetpage3.getGXPanel() , 377 , 130 , 117 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A33CatNome" );
+         edtCatCodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),169, 166, 65, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(255, 255, 255), false) , tpagetpage3.getGXPanel() , 169 , 166 , 65 , 21 , UIFactory.getColor(255, 255, 255) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A32CatCodi" );
+         ((GXEdit) edtCatCodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
+         edtCatCodigo.addFocusListener(this);
+         edtCatCodigo.getGXComponent().setHelpId("HLP_TFilme.htm");
+         edtCatNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),169, 190, 169, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), true) , tpagetpage3.getGXPanel() , 169 , 190 , 169 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A33CatNome" );
          ((GXEdit) edtCatNome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtCatNome.addFocusListener(this);
          edtCatNome.getGXComponent().setHelpId("HLP_TFilme.htm");
-         edtFilNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),130, 156, 364, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 130 , 156 , 364 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A29FilNome" );
+         edtFilNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),169, 215, 364, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 169 , 215 , 364 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A29FilNome" );
          ((GXEdit) edtFilNome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtFilNome.addFocusListener(this);
          edtFilNome.getGXComponent().setHelpId("HLP_TFilme.htm");
-         edtFilDescricao = new GUIObjectString ( new GXEdit(800, "@!", UIFactory.getFont( "Courier New", 0, 9),130, 186, 364, 373, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.LONGVARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 130 , 186 , 364 , 373 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A34FilDesc" );
+         edtFilDescricao = new GUIObjectString ( new GXEdit(800, "@!", UIFactory.getFont( "Courier New", 0, 9),169, 240, 364, 373, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.LONGVARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 169 , 240 , 364 , 373 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A34FilDesc" );
          ((GXEdit) edtFilDescricao.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtFilDescricao.addFocusListener(this);
          edtFilDescricao.getGXComponent().setHelpId("HLP_TFilme.htm");
-         chkFilOscar = new GUIObjectShort ( new GXCheckBox(tpagetpage3.getGXPanel(), "Vencedor do Oscar" , new java.lang.Short(1), new java.lang.Short(0)) , tpagetpage3.getGXPanel() , 130 , 572 , 140 , 16 , Integer.MAX_VALUE , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A55FilOsca" );
+         chkFilOscar = new GUIObjectShort ( new GXCheckBox(tpagetpage3.getGXPanel(), "Vencedor do Oscar" , new java.lang.Short(1), new java.lang.Short(0)) , tpagetpage3.getGXPanel() , 169 , 618 , 140 , 16 , Integer.MAX_VALUE , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A55FilOsca" );
          chkFilOscar.addFocusListener(this);
          chkFilOscar.addItemListener(this);
          chkFilOscar.getGXComponent().setHelpId("HLP_TFilme.htm");
-         lbllbl15 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Informações gerais sobre o filme", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 26 , 184 , 13 );
-         lbllbl5 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 52 , 82 , 40 , 13 );
-         lbllbl9 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Situação", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 52 , 108 , 51 , 13 );
-         lbllbl18 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Código da categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 247 , 108 , 115 , 13 );
-         lbllbl7 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Estreia", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 52 , 134 , 40 , 13 );
-         lbllbl19 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Nome da categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 247 , 134 , 108 , 13 );
-         lbllbl11 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Título", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 52 , 160 , 35 , 13 );
-         lbllbl12 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Descrição", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 52 , 186 , 58 , 13 );
-         tpagetpage20 = new GXTabPage ( tctrlCadastrodefilme , "Direção" , 5 , 29 , 554 , 609 , UIFactory.getColor(15) , UIFactory.getColor(18) , 0, 0);
+         lbllbl15 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Dados gerais", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 26 , 75 , 13 );
+         lbllbl5 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 96 , 40 , 13 );
+         lbllbl9 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Situação", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 120 , 51 , 13 );
+         lbllbl7 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Estreia", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 144 , 40 , 13 );
+         lbllbl18 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Código da categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 168 , 115 , 13 );
+         lbllbl19 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Nome da categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 192 , 108 , 13 );
+         lbllbl11 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Título", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 216 , 35 , 13 );
+         lbllbl12 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Descrição", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 240 , 58 , 13 );
+         tpagetpage20 = new GXTabPage ( tctrlCadastrodefilme , "Direção" , 5 , 29 , 659 , 680 , UIFactory.getColor(15) , UIFactory.getColor(18) , 0, 0);
          addSubfile ( subGxsf22  = new GXSubfileTRN ( new Filme_flow22(this) , new GXColumnDefinition[] {
           new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 103, 19, tpagetpage20.getGXPanel(), false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 102 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A79FilDirC" ), "Código"  , UIFactory.getColor(8) , UIFactory.getColor(15) , 102 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , true , true )
-         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 324, 19, tpagetpage20.getGXPanel(), false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 323 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A80FilDirN" ), "Nome completo"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 323 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         }, 26 , 18 , tpagetpage20.getGXPanel() , 37 , 52 , 483 , 494 ,  18 ));
+         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 427, 19, tpagetpage20.getGXPanel(), false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 426 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A80FilDirN" ), "Nome completo"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 426 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         }, 31 , 18 , tpagetpage20.getGXPanel() , 37 , 52 , 586 , 592 ,  18 ));
          subGxsf22.addActionListener(this);
          subGxsf22.addFocusListener(this);
          subGxsf22.setSortOnClick(false);
-         lbllbl21 = UIFactory.getLabel(tpagetpage20.getGXPanel(), "Responsáveis pela direção do filme", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 26 , 202 , 13 );
-         tpagetpage25 = new GXTabPage ( tctrlCadastrodefilme , "Elenco" , 5 , 29 , 554 , 609 , UIFactory.getColor(15) , UIFactory.getColor(18) , 0, 0);
+         lbllbl21 = UIFactory.getLabel(tpagetpage20.getGXPanel(), "Direção", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 26 , 45 , 13 );
+         tpagetpage25 = new GXTabPage ( tctrlCadastrodefilme , "Elenco" , 5 , 29 , 659 , 680 , UIFactory.getColor(15) , UIFactory.getColor(18) , 0, 0);
          addSubfile ( subGxsf27  = new GXSubfileTRN ( new Filme_flow27(this) , new GXColumnDefinition[] {
           new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 84, 19, tpagetpage25.getGXPanel(), false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 83 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A77FilAtoC" ), "Código"  , UIFactory.getColor(8) , UIFactory.getColor(15) , 83 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , true , true )
-         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 307, 19, tpagetpage25.getGXPanel(), false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 306 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A78FilAtoN" ), "Nome completo"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 306 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         , new GXColumnDefinition( new GUIObjectShort ( new GXCheckBox(tpagetpage25.getGXPanel(), "" , new java.lang.Short(1), new java.lang.Short(0)) , null ,  0 , 0 , 33 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A81FilAtoP" ), "Prot"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 33 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , true , true )
-         }, 26 , 18 , tpagetpage25.getGXPanel() , 39 , 52 , 481 , 494 ,  18 ));
+         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 364, 19, tpagetpage25.getGXPanel(), false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 363 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A78FilAtoN" ), "Nome completo"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 363 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         , new GXColumnDefinition( new GUIObjectShort ( new GXCheckBox(tpagetpage25.getGXPanel(), "" , new java.lang.Short(1), new java.lang.Short(0)) , null ,  0 , 0 , 79 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A81FilAtoP" ), "Protagonista"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 79 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , true , true )
+         }, 32 , 18 , tpagetpage25.getGXPanel() , 39 , 52 , 584 , 593 ,  18 ));
          subGxsf27.addActionListener(this);
          subGxsf27.addFocusListener(this);
          subGxsf27.setSortOnClick(false);
-         lbllbl26 = UIFactory.getLabel(tpagetpage25.getGXPanel(), "Atores presentes neste filme", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 26 , 161 , 13 );
+         lbllbl26 = UIFactory.getLabel(tpagetpage25.getGXPanel(), "Atores", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 26 , 37 , 13 );
          subGxsf27.getColumn(0).addContextAction(this, "BROWSE", GXResourceManager.GetMessage("toolbrowsedata"));
          subGxsf22.getColumn(0).addContextAction(this, "BROWSE", GXResourceManager.GetMessage("toolbrowsedata"));
          edtCatCodigo.addContextAction(this, "BROWSE", GXResourceManager.GetMessage("toolbrowsedata"));
          focusManager.setControlList(new IFocusableControl[] {
                    edtFilCodigo ,
                    cmbFilSituacao ,
-                   edtCatCodigo ,
                    edtFilData ,
+                   edtCatCodigo ,
                    edtCatNome ,
                    edtFilNome ,
                    edtFilDescricao ,
@@ -1388,6 +1388,31 @@ namespace GeneXus.Programs {
          set_caption( ) ;
       }
 
+      protected void Valid_Fildata( )
+      {
+         if ( ! ( ((DateTime.MinValue==A31FilData)) || ( A31FilData >= DateTimeUtil.YMDToD( 1753, 1, 1) ) ) )
+         {
+            GXutil.msg( me(), "Campo Data de lançamento do filme fora da faixa" );
+            AnyError = 1 ;
+            setNextFocus( edtFilData );
+            setFocusNext();
+         }
+         if ( true /* After */ && ( A31FilData == DateTimeUtil.CToD( "0", 2) ) )
+         {
+            GXutil.msg( me(), "Data de lançamento deve ser informada!" );
+            AnyError = 1 ;
+            setNextFocus( edtFilData );
+            setFocusNext();
+         }
+         if ( true /* After */ && ( A31FilData > Gx_date ) )
+         {
+            GXutil.msg( me(), "Não é possível cadastrar um filme não lançado!" );
+            AnyError = 1 ;
+            setNextFocus( edtFilData );
+            setFocusNext();
+         }
+      }
+
       protected void Valid_Catcodigo( )
       {
          /* Using cursor T00022 */
@@ -1414,24 +1439,6 @@ namespace GeneXus.Programs {
             setFocusNext();
          }
          pr_default.close(0);
-      }
-
-      protected void Valid_Fildata( )
-      {
-         if ( ! ( ((DateTime.MinValue==A31FilData)) || ( A31FilData >= DateTimeUtil.YMDToD( 1753, 1, 1) ) ) )
-         {
-            GXutil.msg( me(), "Campo Data de lançamento do filme fora da faixa" );
-            AnyError = 1 ;
-            setNextFocus( edtFilData );
-            setFocusNext();
-         }
-         if ( true /* After */ && ( A31FilData == DateTimeUtil.CToD( "0", 2) ) )
-         {
-            GXutil.msg( me(), "Data de lançamento deve ser informada!" );
-            AnyError = 1 ;
-            setNextFocus( edtFilData );
-            setFocusNext();
-         }
       }
 
       protected void Valid_Filnome( )
@@ -1624,7 +1631,7 @@ namespace GeneXus.Programs {
 
       protected void ZM023( int GX_JID )
       {
-         if ( ( GX_JID == 9 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 10 ) || ( GX_JID == 0 ) )
          {
             if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) != 0 ) )
             {
@@ -1643,7 +1650,7 @@ namespace GeneXus.Programs {
                Z32CatCodi = A32CatCodi ;
             }
          }
-         if ( ( GX_JID == -9 ) )
+         if ( ( GX_JID == -10 ) )
          {
             Z28FilCodi = A28FilCodi ;
             Z29FilNome = A29FilNome ;
@@ -1708,7 +1715,7 @@ namespace GeneXus.Programs {
             n55FilOsca = T000211_n55FilOsca[0] ;
             A32CatCodi = T000211_A32CatCodi[0] ;
             n32CatCodi = T000211_n32CatCodi[0] ;
-            ZM023( -9) ;
+            ZM023( -10) ;
          }
          pr_default.close(9);
          OnLoadActions023( ) ;
@@ -1723,6 +1730,24 @@ namespace GeneXus.Programs {
          Gx_BScreen = 1 ;
          standaloneModal( ) ;
          Gx_BScreen = 0 ;
+         if ( ! ( ((DateTime.MinValue==A31FilData)) || ( A31FilData >= DateTimeUtil.YMDToD( 1753, 1, 1) ) ) )
+         {
+            pushError( "Campo Data de lançamento do filme fora da faixa" );
+            AnyError = 1 ;
+            keepFocus();
+         }
+         if ( true /* After */ && ( A31FilData == DateTimeUtil.CToD( "0", 2) ) )
+         {
+            pushError( "Data de lançamento deve ser informada!" );
+            AnyError = 1 ;
+            keepFocus();
+         }
+         if ( true /* After */ && ( A31FilData > Gx_date ) )
+         {
+            pushError( "Não é possível cadastrar um filme não lançado!" );
+            AnyError = 1 ;
+            keepFocus();
+         }
          /* Using cursor T00022 */
          pr_default.execute(0, new Object[] {n32CatCodi, A32CatCodi});
          if ( (pr_default.getStatus(0) == 101) )
@@ -1740,18 +1765,6 @@ namespace GeneXus.Programs {
          if ( true /* After */ && ((0==A32CatCodi)) )
          {
             pushError( "Categoria deve ser informada!" );
-            AnyError = 1 ;
-            keepFocus();
-         }
-         if ( ! ( ((DateTime.MinValue==A31FilData)) || ( A31FilData >= DateTimeUtil.YMDToD( 1753, 1, 1) ) ) )
-         {
-            pushError( "Campo Data de lançamento do filme fora da faixa" );
-            AnyError = 1 ;
-            keepFocus();
-         }
-         if ( true /* After */ && ( A31FilData == DateTimeUtil.CToD( "0", 2) ) )
-         {
-            pushError( "Data de lançamento deve ser informada!" );
             AnyError = 1 ;
             keepFocus();
          }
@@ -1794,7 +1807,7 @@ namespace GeneXus.Programs {
          pr_default.execute(8, new Object[] {n28FilCodi, A28FilCodi});
          if ( (pr_default.getStatus(8) != 101) && ( T000210_A28FilCodi[0] == A28FilCodi ) )
          {
-            ZM023( 9) ;
+            ZM023( 10) ;
             RcdFound3 = 1 ;
             A29FilNome = T000210_A29FilNome[0] ;
             n29FilNome = T000210_n29FilNome[0] ;
@@ -2472,7 +2485,7 @@ namespace GeneXus.Programs {
 
       protected void ZM024( int GX_JID )
       {
-         if ( ( GX_JID == 11 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 12 ) || ( GX_JID == 0 ) )
          {
             if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) != 0 ) )
             {
@@ -2481,7 +2494,7 @@ namespace GeneXus.Programs {
             {
             }
          }
-         if ( ( GX_JID == -11 ) )
+         if ( ( GX_JID == -12 ) )
          {
             Z28FilCodi = A28FilCodi ;
             Z79FilDirC = A79FilDirC ;
@@ -2510,7 +2523,7 @@ namespace GeneXus.Programs {
             RcdFound4 = 1 ;
             A80FilDirN = T000222_A80FilDirN[0] ;
             n80FilDirN = T000222_n80FilDirN[0] ;
-            ZM024( -11) ;
+            ZM024( -12) ;
          }
          pr_default.close(20);
          OnLoadActions024( ) ;
@@ -2569,7 +2582,7 @@ namespace GeneXus.Programs {
          pr_default.execute(6, new Object[] {n28FilCodi, A28FilCodi, A79FilDirC});
          if ( (pr_default.getStatus(6) != 101) && ( T00028_A28FilCodi[0] == A28FilCodi ) )
          {
-            ZM024( 11) ;
+            ZM024( 12) ;
             RcdFound4 = 1 ;
             InitializeNonKey024( ) ;
             A79FilDirC = T00028_A79FilDirC[0] ;
@@ -2854,7 +2867,7 @@ namespace GeneXus.Programs {
 
       protected void ZM025( int GX_JID )
       {
-         if ( ( GX_JID == 13 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 14 ) || ( GX_JID == 0 ) )
          {
             if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) != 0 ) )
             {
@@ -2865,7 +2878,7 @@ namespace GeneXus.Programs {
                Z81FilAtoP = A81FilAtoP ;
             }
          }
-         if ( ( GX_JID == -13 ) )
+         if ( ( GX_JID == -14 ) )
          {
             Z28FilCodi = A28FilCodi ;
             Z81FilAtoP = A81FilAtoP ;
@@ -2897,7 +2910,7 @@ namespace GeneXus.Programs {
             n78FilAtoN = T000228_n78FilAtoN[0] ;
             A81FilAtoP = T000228_A81FilAtoP[0] ;
             n81FilAtoP = T000228_n81FilAtoP[0] ;
-            ZM025( -13) ;
+            ZM025( -14) ;
          }
          pr_default.close(26);
          OnLoadActions025( ) ;
@@ -2956,7 +2969,7 @@ namespace GeneXus.Programs {
          pr_default.execute(4, new Object[] {n28FilCodi, A28FilCodi, A77FilAtoC});
          if ( (pr_default.getStatus(4) != 101) && ( T00026_A28FilCodi[0] == A28FilCodi ) )
          {
-            ZM025( 13) ;
+            ZM025( 14) ;
             RcdFound5 = 1 ;
             InitializeNonKey025( ) ;
             A81FilAtoP = T00026_A81FilAtoP[0] ;
@@ -3830,8 +3843,8 @@ namespace GeneXus.Programs {
       protected GXTabPage tpagetpage3 ;
       protected GUIObjectInt edtFilCodigo ;
       protected GUIObjectShort cmbFilSituacao ;
-      protected GUIObjectInt edtCatCodigo ;
       protected GUIObjectDatetime edtFilData ;
+      protected GUIObjectInt edtCatCodigo ;
       protected GUIObjectString edtCatNome ;
       protected GUIObjectString edtFilNome ;
       protected GUIObjectString edtFilDescricao ;
@@ -3839,8 +3852,8 @@ namespace GeneXus.Programs {
       protected ILabel lbllbl15 ;
       protected ILabel lbllbl5 ;
       protected ILabel lbllbl9 ;
-      protected ILabel lbllbl18 ;
       protected ILabel lbllbl7 ;
+      protected ILabel lbllbl18 ;
       protected ILabel lbllbl19 ;
       protected ILabel lbllbl11 ;
       protected ILabel lbllbl12 ;
@@ -4212,19 +4225,19 @@ namespace GeneXus.Programs {
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000219", "SELECT [CatNome] FROM [CATEGORIA] WITH (NOLOCK) WHERE [CatCodigo] = @CatCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000219,1,0,true,true )
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000220", "SELECT TOP 1 [MidCodigo] FROM [MIDIA] WITH (NOLOCK) WHERE [FilCodigo] = @FilCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000220,1,0,true,true )
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000221", "SELECT [FilCodigo] FROM [FILME] WITH (NOLOCK) WHERE [FilCodigo] = @FilCodigo ORDER BY [FilCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000221,100,0,true,true )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000222", "SELECT T1.[FilCodigo], T2.[AstNome] AS FilDirNome, T1.[FilDirCodigo] AS FilDirCodigo FROM ([FILMEDIRECAO] T1 WITH (NOLOCK) INNER JOIN [ASTRO] T2 WITH (NOLOCK) ON T2.[AstCodigo] = T1.[FilDirCodigo]) WHERE T1.[FilCodigo] = @FilCodigo and T1.[FilDirCodigo] = @FilDirCodigo ORDER BY T1.[FilCodigo], T1.[FilDirCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000222,21,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000222", "SELECT T1.[FilCodigo], T2.[AstNome] AS FilDirNome, T1.[FilDirCodigo] AS FilDirCodigo FROM ([FILMEDIRECAO] T1 WITH (NOLOCK) INNER JOIN [ASTRO] T2 WITH (NOLOCK) ON T2.[AstCodigo] = T1.[FilDirCodigo]) WHERE T1.[FilCodigo] = @FilCodigo and T1.[FilDirCodigo] = @FilDirCodigo ORDER BY T1.[FilCodigo], T1.[FilDirCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000222,25,0,true,false )
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000223", "SELECT [FilCodigo], [FilDirCodigo] AS FilDirCodigo FROM [FILMEDIRECAO] WITH (NOLOCK) WHERE [FilCodigo] = @FilCodigo AND [FilDirCodigo] = @FilDirCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000223,1,0,true,false )
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000224", "INSERT INTO [FILMEDIRECAO] ([FilCodigo], [FilDirCodigo]) VALUES (@FilCodigo, @FilDirCodigo)", GxErrorMask.GX_NOMASK,prmT000224)
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000225", "DELETE FROM [FILMEDIRECAO]  WHERE [FilCodigo] = @FilCodigo AND [FilDirCodigo] = @FilDirCodigo", GxErrorMask.GX_NOMASK,prmT000225)
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000226", "SELECT [AstNome] AS FilDirNome FROM [ASTRO] WITH (NOLOCK) WHERE [AstCodigo] = @FilDirCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000226,1,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000227", "SELECT [FilCodigo], [FilDirCodigo] AS FilDirCodigo FROM [FILMEDIRECAO] WITH (NOLOCK) WHERE [FilCodigo] = @FilCodigo ORDER BY [FilCodigo], [FilDirCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000227,21,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000228", "SELECT T1.[FilCodigo], T2.[AstNome] AS FilAtoNome, T1.[FilAtoProt], T1.[FilAtoCodigo] AS FilAtoCodigo FROM ([FILMEELENCO] T1 WITH (NOLOCK) INNER JOIN [ASTRO] T2 WITH (NOLOCK) ON T2.[AstCodigo] = T1.[FilAtoCodigo]) WHERE T1.[FilCodigo] = @FilCodigo and T1.[FilAtoCodigo] = @FilAtoCodigo ORDER BY T1.[FilCodigo], T1.[FilAtoCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000228,21,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000227", "SELECT [FilCodigo], [FilDirCodigo] AS FilDirCodigo FROM [FILMEDIRECAO] WITH (NOLOCK) WHERE [FilCodigo] = @FilCodigo ORDER BY [FilCodigo], [FilDirCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000227,25,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000228", "SELECT T1.[FilCodigo], T2.[AstNome] AS FilAtoNome, T1.[FilAtoProt], T1.[FilAtoCodigo] AS FilAtoCodigo FROM ([FILMEELENCO] T1 WITH (NOLOCK) INNER JOIN [ASTRO] T2 WITH (NOLOCK) ON T2.[AstCodigo] = T1.[FilAtoCodigo]) WHERE T1.[FilCodigo] = @FilCodigo and T1.[FilAtoCodigo] = @FilAtoCodigo ORDER BY T1.[FilCodigo], T1.[FilAtoCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000228,25,0,true,false )
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000229", "SELECT [FilCodigo], [FilAtoCodigo] AS FilAtoCodigo FROM [FILMEELENCO] WITH (NOLOCK) WHERE [FilCodigo] = @FilCodigo AND [FilAtoCodigo] = @FilAtoCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000229,1,0,true,false )
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000230", "INSERT INTO [FILMEELENCO] ([FilCodigo], [FilAtoProt], [FilAtoCodigo]) VALUES (@FilCodigo, @FilAtoProt, @FilAtoCodigo)", GxErrorMask.GX_NOMASK,prmT000230)
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000231", "UPDATE [FILMEELENCO] SET [FilAtoProt]=@FilAtoProt  WHERE [FilCodigo] = @FilCodigo AND [FilAtoCodigo] = @FilAtoCodigo", GxErrorMask.GX_NOMASK,prmT000231)
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000232", "DELETE FROM [FILMEELENCO]  WHERE [FilCodigo] = @FilCodigo AND [FilAtoCodigo] = @FilAtoCodigo", GxErrorMask.GX_NOMASK,prmT000232)
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000233", "SELECT [AstNome] AS FilAtoNome FROM [ASTRO] WITH (NOLOCK) WHERE [AstCodigo] = @FilAtoCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000233,1,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000234", "SELECT [FilCodigo], [FilAtoCodigo] AS FilAtoCodigo FROM [FILMEELENCO] WITH (NOLOCK) WHERE [FilCodigo] = @FilCodigo ORDER BY [FilCodigo], [FilAtoCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000234,21,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000234", "SELECT [FilCodigo], [FilAtoCodigo] AS FilAtoCodigo FROM [FILMEELENCO] WITH (NOLOCK) WHERE [FilCodigo] = @FilCodigo ORDER BY [FilCodigo], [FilAtoCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000234,25,0,true,false )
           };
        }
     }

@@ -1,4 +1,4 @@
-spec_i([ scr,25,'Login','Login',0,por,'9_0_6-009' ]).
+spec_i([ scr,25,'Tela de login.','Login',0,por,'9_0_6-009' ]).
  
 struct_i(2,1,[],[]).
 struct_i(3,2,[],[]).
@@ -26,13 +26,13 @@ lac_i(2,[ [ 'Pesfunlogin','Pesfunsenha' ] ]).
 lac_i(3,[ [ 'Pesfunlogin','Pesfunsenha' ] ]).
  
  
-lits_i('Login',14,126).
-lits_i('Senha',15,126).
+lits_i('Login',11,57).
+lits_i('Senha',12,57).
  
-cls_i([ 13,80 ],[ 15,152 ]).
+cls_i([ 11,57 ],[ 12,83 ]).
  
-pos_i('Pesfunlogin',[ 13,13,133 ]).
-pos_i('Pesfunsenha',[ 15,15,133 ]).
+pos_i('Pesfunlogin',[ 11,11,64 ]).
+pos_i('Pesfunsenha',[ 12,12,64 ]).
  
  
  
@@ -224,11 +224,11 @@ b_line_i(17,3,1,cmd,9,[ t('',128,9,0) ]).
 b_line_i([ 17,1 ],2,3,cmd,10,[ t('',109,10,0),t('GXLvl7',23,10,0),t(=,10,10,0),t('0',3,10,0) ]).
 b_line_i(18,2,3,cmd,11,[ t('',107,11,0),t('Ret',23,11,0),t(=,10,11,0),t('setuserid(',1,11,0),t('''''',3,11,0),t(')',4,11,0) ]).
 b_line_i(20,2,3,cmd,11,[ t('',141,11,0),t('''Login ou senha não encontrados!''',3,20,16),t(')',4,11,49) ]).
-b_line_i(21,2,3,cmd,11,[ t('',111,11,0) ]).
-b_line_i(23,2,3,cmd,11,[ t('',109,11,0),t('Logar',23,11,7),t(=,10,11,14),t('''S''',3,23,16) ]).
-b_line_i(25,2,3,cmd,11,[ t('',118,11,0) ]).
-b_line_i(26,2,3,cmd,11,[ t('',111,11,0) ]).
-b_line_i(28,2,3,cmd,11,[ t('',147,11,0) ]).
+b_line_i(22,2,3,cmd,11,[ t('',111,11,0) ]).
+b_line_i(24,2,3,cmd,11,[ t('',109,11,0),t('Logar',23,11,7),t(=,10,11,14),t('''S''',3,24,16) ]).
+b_line_i(26,2,3,cmd,11,[ t('',118,11,0) ]).
+b_line_i(27,2,3,cmd,11,[ t('',111,11,0) ]).
+b_line_i(29,2,3,cmd,11,[ t('',147,11,0) ]).
 b_line_i(1000,2,3,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
 b_line_i(1001,2,3,cmd,0,[ t('',155,0,0) ]).
 b_line_i(1002,2,3,cmd,0,[ t('',147,0,0) ]).
@@ -255,12 +255,12 @@ ppi_i([ 96,96 ]).
  
  
  
-lit_i(2,1,t('Pesfunlogin',23),[ font('Courier New',9,[]),rect(933,334,1082,354),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pesfunlogin'),ctrltype(edit,2),ispwd(0) ]).
-lit_i(3,1,t('Pesfunsenha',23),[ font('Courier New',9,[]),rect(933,360,1082,380),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pesfunsenha'),ctrltype(edit,3),ispwd(1) ]).
-lit_i(4,1,t('Login',3),[ font('MS Sans Serif',8,[ bold ]),rect(884,338,915,350),outstyle(none),align(left),fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(5,1,t('Senha',3),[ font('MS Sans Serif',8,[ bold ]),rect(884,364,920,376),outstyle(none),align(left),fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(6,1,button('Enter'),[ id(6),title([ 'Logar' ]),ctlname(''),rect(962,403,1052,428),font('MS Shell Dlg',8,[]) ]).
-lit_i(1,1,window,[ title([]),rect(3,25,1887,856),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(2,1,t('Pesfunlogin',23),[ font('Courier New',9,[]),rect(452,273,601,293),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pesfunlogin'),ctrltype(edit,2),ispwd(0) ]).
+lit_i(3,1,t('Pesfunsenha',23),[ font('Courier New',9,[]),rect(452,299,601,319),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pesfunsenha'),ctrltype(edit,3),ispwd(1) ]).
+lit_i(4,1,t('Login',3),[ font('MS Sans Serif',8,[ bold ]),rect(403,277,434,289),outstyle(none),align(left),fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(5,1,t('Senha',3),[ font('MS Sans Serif',8,[ bold ]),rect(403,303,439,315),outstyle(none),align(left),fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(6,1,button('Enter'),[ id(6),title([ 'Logar' ]),ctlname(''),rect(481,342,571,367),font('MS Shell Dlg',8,[]) ]).
+lit_i(1,1,window,[ title([]),rect(3,25,1016,765),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).
  

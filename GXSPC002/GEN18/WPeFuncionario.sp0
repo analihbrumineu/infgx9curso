@@ -22,34 +22,33 @@ las_i(2,[ [ 'Pescodigo','Pesfuncargo','Pesnome','Pesfundatadmissao','Pesfundatde
 lac_i(2,[ [ 'Pescodigo','Pesfuncargo','Pesnome','Pesfundatadmissao','Pesfundatdemissao' ] ]).
  
  
-lits_i('Código',5,18).
-lits_i('Nome completo',5,29).
-lits_i('Cargo',5,95).
-lits_i('Data de admissão do funcionário',5,115).
+lits_i('Código',4,18).
+lits_i('Nome completo',4,29).
+lits_i('Cargo',4,95).
+lits_i('Data de admissão do funcionário',4,115).
 lits_i('Código',2,9).
-lits_i('Nome',2,29).
-lits_i('Cargo',4,9).
-lits_i('Cadastro de funcionário',1,9).
-lits_i('Admissão',4,29).
-lits_i('Demissão',4,52).
+lits_i('Nome',2,21).
+lits_i('Cargo',2,74).
+lits_i('Admissão',2,88).
+lits_i('Demissão',2,101).
  
-cls_i([ 1,9 ],[ 30,145 ]).
+cls_i([ 2,9 ],[ 27,145 ]).
  
-pos_i('Visualizar',[ 6,30,9 ]).
-pos_i('Editar',[ 6,30,12 ]).
-pos_i('Excluir',[ 6,30,15 ]).
-pos_i(13,[ 6,30,18 ]).
-pos_i(14,[ 6,30,29 ]).
-pos_i(39,[ 6,30,95 ]).
-pos_i(42,[ 6,30,115 ]).
-pos_i('Demitido',[ 6,30,142 ]).
-pos_i('Pescodigo',[ 2,2,16 ]).
-pos_i('Pesfuncargo',[ 4,4,16 ]).
-pos_i('Pesnome',[ 2,2,35 ]).
-pos_i('Pesfundatadmissao',[ 4,4,39 ]).
-pos_i('Pesfundatdemissao',[ 4,4,61 ]).
+pos_i('Visualizar',[ 5,27,9 ]).
+pos_i('Editar',[ 5,27,12 ]).
+pos_i('Excluir',[ 5,27,15 ]).
+pos_i(13,[ 5,27,18 ]).
+pos_i(14,[ 5,27,29 ]).
+pos_i(39,[ 5,27,95 ]).
+pos_i(42,[ 5,27,115 ]).
+pos_i('Demitido',[ 5,27,142 ]).
+pos_i('Pescodigo',[ 2,2,9 ]).
+pos_i('Pesfuncargo',[ 2,2,74 ]).
+pos_i('Pesnome',[ 2,2,21 ]).
+pos_i('Pesfundatadmissao',[ 2,2,88 ]).
+pos_i('Pesfundatdemissao',[ 2,2,101 ]).
  
-repeat_i(2,[ 6,30,[ 'Visualizar','Editar','Excluir',13,14,39,42,'Demitido' ],[] ]).
+repeat_i(2,[ 5,27,[ 'Visualizar','Editar','Excluir',13,14,39,42,'Demitido' ],[] ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
@@ -241,31 +240,40 @@ b_group_i(2,1,lit,0,1,0).
 b_line_i(0,2,1,cmd,0,[ t('',146,0,0),t('Start',3,0,6) ]).
 b_line_i(1,2,1,cmd,0,[ t('',107,0,0),t('Pesfuncargo',23,0,0),t(=,10,0,0),t('0',3,0,0) ]).
 b_line_i(3,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(5,2,1,cmd,0,[ t('',146,0,0),t('Load',3,5,6) ]).
-b_line_i(6,2,1,cmd,0,[ t('',107,0,0),t('Excluir',23,0,0),t(=,10,0,0),t('loadbitmap(',1,0,0),t('''c:\KB\DATA002\bin\deleteIcon.jpg''',3,0,0),t(')',4,0,0) ]).
-b_line_i(7,2,1,cmd,0,[ t('',107,0,0),t('Editar',23,0,0),t(=,10,0,0),t('loadbitmap(',1,0,0),t('''c:\KB\DATA002\bin\editIcon.jpg''',3,0,0),t(')',4,0,0) ]).
-b_line_i(8,2,1,cmd,0,[ t('',107,0,0),t('Visualizar',23,0,0),t(=,10,0,0),t('loadbitmap(',1,0,0),t('''c:\KB\DATA002\bin\visualizarIcon.jpg''',3,0,0),t(')',4,0,0) ]).
-b_line_i(10,2,1,cmd,0,[ t('',107,0,0),t('Demitido',23,0,0),t(=,10,0,0),t('0',3,0,0) ]).
-b_line_i(12,2,1,cmd,0,[ t('',109,0,0),t(41,2,0,7),t(<>,10,0,25),t('ctod(',1,0,28),t('''0''',3,12,33),t(')',4,0,36) ]).
-b_line_i(13,2,1,cmd,0,[ t('',107,0,0),t('Demitido',23,0,0),t(=,10,0,0),t('1',3,0,0) ]).
+b_line_i(5,2,1,cmd,0,[ t('',146,0,0),t('Refresh',3,5,6) ]).
+b_line_i(7,2,1,cmd,0,[ t('',109,0,0),t('Pescodigo',23,0,7),t(<,10,0,18),t('0',3,0,20) ]).
+b_line_i(8,2,1,cmd,0,[ t('',141,0,0),t('''Digite um código válido!''',3,8,12),t(')',4,0,38) ]).
+b_line_i(10,2,1,cmd,0,[ t('',110,0,0) ]).
+b_line_i(12,2,1,cmd,0,[ t('',109,0,0),t('Pesfundatadmissao',23,0,11),t(<,10,0,30),t('Pesfundatdemissao',23,0,32) ]).
+b_line_i(13,2,1,cmd,0,[ t('',141,0,0),t('''A data de demissão não pode ocorrer antes da admissão.''',3,13,16),t(')',4,0,72) ]).
 b_line_i(14,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(16,2,1,cmd,0,[ t('',155,0,0) ]).
-b_line_i(17,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(19,2,1,cmd,0,[ t('',146,0,0),t([ t('Visualizar',23,19,6),t('Click',3,19,18) ],29,19,18) ]).
-b_line_i(20,2,1,cmd,0,[ t('',104,0,0),t(o(0,'Funcionario'),28,0,4),t(13,2,0,22),t(',',7,0,31),t('''DSP''',3,20,33) ]).
-b_line_i(22,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(24,2,1,cmd,0,[ t('',146,0,0),t([ t('Editar',23,24,6),t('Click',3,24,14) ],29,24,14) ]).
-b_line_i(25,2,1,cmd,0,[ t('',104,0,0),t(o(0,'Funcionario'),28,0,4),t(13,2,0,22),t(',',7,0,31),t('''UPD''',3,25,33) ]).
-b_line_i(27,2,1,cmd,0,[ t('',148,0,0) ]).
-b_line_i(28,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(30,2,1,cmd,0,[ t('',146,0,0),t([ t('Excluir',23,30,6),t('Click',3,30,15) ],29,30,15) ]).
-b_line_i(31,2,1,cmd,0,[ t('',104,0,0),t(o(0,'Funcionario'),28,0,4),t(13,2,0,22),t(',',7,0,31),t('''DLT''',3,31,33) ]).
-b_line_i(33,2,1,cmd,0,[ t('',148,0,0) ]).
-b_line_i(34,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(36,2,1,cmd,0,[ t('',146,0,0),t('''Novo''',3,36,6) ]).
-b_line_i(37,2,1,cmd,0,[ t('',104,0,0),t(o(0,'Funcionario'),28,0,4),t('0',3,0,22),t(',',7,0,23),t('''INS''',3,37,25) ]).
-b_line_i(39,2,1,cmd,0,[ t('',148,0,0) ]).
-b_line_i(40,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(16,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(18,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(20,2,1,cmd,0,[ t('',146,0,0),t('Load',3,20,6) ]).
+b_line_i(21,2,1,cmd,0,[ t('',107,0,0),t('Excluir',23,0,0),t(=,10,0,0),t('loadbitmap(',1,0,0),t('''c:\KB\DATA002\bin\deleteIcon.jpg''',3,0,0),t(')',4,0,0) ]).
+b_line_i(22,2,1,cmd,0,[ t('',107,0,0),t('Editar',23,0,0),t(=,10,0,0),t('loadbitmap(',1,0,0),t('''c:\KB\DATA002\bin\editIcon.jpg''',3,0,0),t(')',4,0,0) ]).
+b_line_i(23,2,1,cmd,0,[ t('',107,0,0),t('Visualizar',23,0,0),t(=,10,0,0),t('loadbitmap(',1,0,0),t('''c:\KB\DATA002\bin\visualizarIcon.jpg''',3,0,0),t(')',4,0,0) ]).
+b_line_i(25,2,1,cmd,0,[ t('',107,0,0),t('Demitido',23,0,0),t(=,10,0,0),t('0',3,0,0) ]).
+b_line_i(27,2,1,cmd,0,[ t('',109,0,0),t(41,2,0,7),t(<>,10,0,25),t('ctod(',1,0,28),t('''0''',3,27,33),t(')',4,0,36) ]).
+b_line_i(28,2,1,cmd,0,[ t('',107,0,0),t('Demitido',23,0,0),t(=,10,0,0),t('1',3,0,0) ]).
+b_line_i(29,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(31,2,1,cmd,0,[ t('',155,0,0) ]).
+b_line_i(32,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(34,2,1,cmd,0,[ t('',146,0,0),t([ t('Visualizar',23,34,6),t('Click',3,34,18) ],29,34,18) ]).
+b_line_i(35,2,1,cmd,0,[ t('',104,0,0),t(o(0,'Funcionario'),28,0,4),t(13,2,0,22),t(',',7,0,31),t('''DSP''',3,35,33) ]).
+b_line_i(37,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(39,2,1,cmd,0,[ t('',146,0,0),t([ t('Editar',23,39,6),t('Click',3,39,14) ],29,39,14) ]).
+b_line_i(40,2,1,cmd,0,[ t('',104,0,0),t(o(0,'Funcionario'),28,0,4),t(13,2,0,22),t(',',7,0,31),t('''UPD''',3,40,33) ]).
+b_line_i(42,2,1,cmd,0,[ t('',148,0,0) ]).
+b_line_i(43,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(45,2,1,cmd,0,[ t('',146,0,0),t([ t('Excluir',23,45,6),t('Click',3,45,15) ],29,45,15) ]).
+b_line_i(46,2,1,cmd,0,[ t('',104,0,0),t(o(0,'Funcionario'),28,0,4),t(13,2,0,22),t(',',7,0,31),t('''DLT''',3,46,33) ]).
+b_line_i(48,2,1,cmd,0,[ t('',148,0,0) ]).
+b_line_i(49,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(51,2,1,cmd,0,[ t('',146,0,0),t('''Novo''',3,51,6) ]).
+b_line_i(52,2,1,cmd,0,[ t('',104,0,0),t(o(0,'Funcionario'),28,0,4),t('0',3,0,22),t(',',7,0,23),t('''INS''',3,52,25) ]).
+b_line_i(54,2,1,cmd,0,[ t('',148,0,0) ]).
+b_line_i(55,2,1,cmd,0,[ t('',147,0,0) ]).
  
 sf_break_i(2,2).
  
@@ -298,20 +306,19 @@ lit_i(7,1,s(t(14,2),2),[ width(467),pos(4),title([ 'Nome completo' ]),ctlname(14
 lit_i(8,1,s(t(39,2),2),[ width(143),pos(5),title([ 'Cargo' ]),ctlname(39),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(combo,8),e2n(1) ]).
 lit_i(9,1,s(t(42,2),2),[ width(195),pos(6),title([ 'Data de admissão do funcionário' ]),ctlname(42),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,9),hidden,e2n(1) ]).
 lit_i(10,1,s(t('Demitido',23),2),[ width(58),pos(7),title([ '' ]),ctlname('&Demitido'),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(checkbox,10) ]).
-lit_i(2,1,s(2),[ th(18),height(18),rect(65,130,949,766),back(rgb(240,240,240)),fore(gxcolor([]),rgb(0,0,0)),border(1),ctlname('Gxsf2'),font(font('Courier New',9,[])),titlefont(font('MS Sans Serif',8,[ bold ])),el([ t('Visualizar',23),t('Editar',23),t('Excluir',23),t(13,2),t(14,2),t(39,2),t(42,2),t('Demitido',23) ]) ]).
-lit_i(11,1,t('Pescodigo',23),[ font('Courier New',9,[]),rect(117,67,189,87),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pescodigo'),ctrltype(edit,11),ispwd(0) ]).
-lit_i(12,1,t('Pesfuncargo',23),[ font('Courier New',9,[]),rect(117,104,198,124),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pesfuncargo'),ctrltype(combo,12) ]).
-lit_i(13,1,t('Pesnome',23),[ font('Courier New',9,[]),rect(247,67,606,87),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pesnome'),ctrltype(edit,13),ispwd(0) ]).
-lit_i(14,1,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,71,104,83),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(15,1,t('Nome',3),[ font('MS Sans Serif',8,[ bold ]),rect(208,71,240,83),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(16,1,t('Cargo',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,108,98,120),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(17,1,button('''Novo'''),[ id(17),title([ 'Novo' ]),ctlname(''),rect(793,91,883,116),font('MS Shell Dlg',8,[]) ]).
-lit_i(18,1,t('Cadastro de funcionário',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,26,200,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(19,1,t('Admissão',3),[ font('MS Sans Serif',8,[ bold ]),rect(208,108,261,120),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(20,1,t('Demissão',3),[ font('MS Sans Serif',8,[ bold ]),rect(364,108,418,120),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(21,1,t('Pesfundatadmissao',23),[ font('Courier New',9,[]),rect(273,104,352,124),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pesfundatadmissao'),ctrltype(edit,21),ispwd(0) ]).
-lit_i(22,1,t('Pesfundatdemissao',23),[ font('Courier New',9,[]),rect(429,104,508,124),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pesfundatdemissao'),ctrltype(edit,22),ispwd(0) ]).
-lit_i(1,1,window,[ title([]),rect(3,25,1029,804),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(2,1,s(2),[ th(18),height(18),rect(65,117,949,688),back(rgb(240,240,240)),fore(gxcolor([]),rgb(0,0,0)),border(1),ctlname('Gxsf2'),font(font('Courier New',9,[])),titlefont(font('MS Sans Serif',8,[ bold ])),el([ t('Visualizar',23),t('Editar',23),t('Excluir',23),t(13,2),t(14,2),t(39,2),t(42,2),t('Demitido',23) ]) ]).
+lit_i(11,1,t('Pescodigo',23),[ font('Courier New',9,[]),rect(65,67,137,87),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pescodigo'),ctrltype(edit,11),ispwd(0) ]).
+lit_i(12,1,t('Pesfuncargo',23),[ font('Courier New',9,[]),rect(524,67,605,87),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pesfuncargo'),ctrltype(combo,12) ]).
+lit_i(13,1,t('Pesnome',23),[ font('Courier New',9,[]),rect(150,67,509,87),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pesnome'),ctrltype(edit,13),ispwd(0) ]).
+lit_i(14,1,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,49,104,61),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(15,1,t('Nome',3),[ font('MS Sans Serif',8,[ bold ]),rect(150,49,182,61),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(16,1,t('Cargo',3),[ font('MS Sans Serif',8,[ bold ]),rect(524,49,557,61),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(17,1,t('Admissão',3),[ font('MS Sans Serif',8,[ bold ]),rect(617,49,670,61),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(18,1,t('Demissão',3),[ font('MS Sans Serif',8,[ bold ]),rect(709,49,763,61),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(19,1,t('Pesfundatadmissao',23),[ font('Courier New',9,[]),rect(617,67,696,87),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pesfundatadmissao'),ctrltype(edit,19),ispwd(0) ]).
+lit_i(20,1,t('Pesfundatdemissao',23),[ font('Courier New',9,[]),rect(709,67,788,87),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pesfundatdemissao'),ctrltype(edit,20),ispwd(0) ]).
+lit_i(21,1,button('''Novo'''),[ id(21),title([ 'Novo' ]),ctlname(''),rect(845,65,935,90),font('MS Shell Dlg',8,[]) ]).
+lit_i(1,1,window,[ title([ 'Funcionários' ]),rect(3,25,1029,735),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).
  
@@ -363,13 +370,12 @@ std_color_i(13,fore,8).
 std_color_i(14,fore,8).
 std_color_i(15,fore,8).
 std_color_i(16,fore,8).
+std_color_i(17,fore,8).
 std_color_i(18,fore,8).
+std_color_i(19,back,5).
 std_color_i(19,fore,8).
+std_color_i(20,back,5).
 std_color_i(20,fore,8).
-std_color_i(21,back,5).
-std_color_i(21,fore,8).
-std_color_i(22,back,5).
-std_color_i(22,fore,8).
 std_color_i(1,back,15).
 std_color_i(1,fore,6).
  

@@ -2,7 +2,7 @@
                File: Categoria
         Description: Cadastro de categorias.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:35.55
+       Generated on: 6/11/2026 8:57:55.90
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -100,7 +100,7 @@ namespace GeneXus.Programs {
 
       public override String getFrmTitle( )
       {
-         return "Cadastro de categorias." ;
+         return "Cadastro de categorias" ;
       }
 
       public override GXMenuBar getMenuBar( )
@@ -125,12 +125,12 @@ namespace GeneXus.Programs {
 
       public override int getFrmWidth( )
       {
-         return 481 ;
+         return 520 ;
       }
 
       public override int getFrmHeight( )
       {
-         return 169 ;
+         return 195 ;
       }
 
       public override String getHelpId( )
@@ -228,7 +228,7 @@ namespace GeneXus.Programs {
 
       public override void screen( )
       {
-         GXPanel1 = new GXPanel(this, 3 , 25 , 481 , 169 );
+         GXPanel1 = new GXPanel(this, 3 , 25 , 520 , 195 );
          this.setIBackground(UIFactory.getColor(15));
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
@@ -241,10 +241,9 @@ namespace GeneXus.Programs {
          ((GXEdit) edtCatNome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtCatNome.addFocusListener(this);
          edtCatNome.getGXComponent().setHelpId("HLP_TCategoria.htm");
-         bttBtn_enter = UIFactory.getGXButton( GXPanel1 , "Enter" ,  312 ,  130 ,  89 ,  23 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttBtn_enter = UIFactory.getGXButton( GXPanel1 , "Enter" ,  390 ,  130 ,  89 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttBtn_enter.setTooltip("Enter");
          bttBtn_enter.addActionListener(this);
-         lbllbl7 = UIFactory.getLabel(GXPanel1, "Cadastro de categorias", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 26 , 132 , 13 );
          lbllbl4 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 65 , 40 , 13 );
          lbllbl6 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 91 , 55 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
@@ -1338,7 +1337,6 @@ namespace GeneXus.Programs {
       protected GUIObjectInt edtCatCodigo ;
       protected GUIObjectString edtCatNome ;
       protected IGXButton bttBtn_enter ;
-      protected ILabel lbllbl7 ;
       protected ILabel lbllbl4 ;
       protected ILabel lbllbl6 ;
       protected IDataReader T00032 ;

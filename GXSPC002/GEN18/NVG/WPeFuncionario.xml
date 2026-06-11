@@ -20,6 +20,8 @@
 <Event>
 <EventName>Start</EventName></Event>
 <Event>
+<EventName>Refresh</EventName></Event>
+<Event>
 <EventName>Load</EventName>
 <ImplicitForEach>
 <LevelType>For Each</LevelType>

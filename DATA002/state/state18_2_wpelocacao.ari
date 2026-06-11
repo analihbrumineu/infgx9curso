@@ -8,7 +8,7 @@ called_tree_i(4,78,1,17).
  
  
  
-ij_object_dependency(wpelocacao,[],[ subwpelocacao11 ],[ type_SdtSDTFuncionario,'GxObjectCollection' ],78).
+ij_object_dependency(wpelocacao,[],[ subwpelocacao10 ],[ type_SdtSDTFuncionario,'GxObjectCollection' ],78).
  
  
 obj_parms_i([],[]).

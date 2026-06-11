@@ -60,6 +60,15 @@
 <Token>0</Token>
 <Token>;</Token></FormulaExpression></Action>
 <Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Variable>
+<VarId>Today</VarId>
+<VarName>&amp;Gx_date</VarName></Variable></FormulaName>
+<FormulaExpression>
+<Token>today(</Token>
+<Token>)</Token></FormulaExpression></Action>
+<Action>
 <ActionType>BusinessRule</ActionType>
 <RuleType>ErrorRule</RuleType>
 <Expression>
@@ -407,6 +416,27 @@
 <Token>)</Token></Condition></Action>
 <Action>
 <ActionType>BusinessRule</ActionType>
+<RuleType>ErrorRule</RuleType>
+<Expression>
+<Token>'Data de nascimento inválida!'</Token></Expression>
+<Condition>
+<Token>after(</Token>
+<Attribute>
+<AttriId>111</AttriId>
+<AttriName>PesDatNascimento</AttriName>
+<Description>Data de nascimento da pessoa</Description></Attribute>
+<Token>)</Token>
+<Token>and</Token>
+<Attribute>
+<AttriId>111</AttriId>
+<AttriName>PesDatNascimento</AttriName>
+<Description>Data de nascimento da pessoa</Description></Attribute>
+<Token>&gt;</Token>
+<Variable>
+<VarId>Today</VarId>
+<VarName>&amp;Gx_date</VarName></Variable></Condition></Action>
+<Action>
+<ActionType>BusinessRule</ActionType>
 <RuleType>MsgRule</RuleType>
 <Expression>
 <Token>'Endereço não informado!'</Token></Expression>
@@ -714,6 +744,27 @@
 <ActionType>BusinessRule</ActionType>
 <RuleType>ErrorRule</RuleType>
 <Expression>
+<Token>'Data de admissão inválida!'</Token></Expression>
+<Condition>
+<Token>after(</Token>
+<Attribute>
+<AttriId>42</AttriId>
+<AttriName>PesFunDatAdmissao</AttriName>
+<Description>Data de admissão do funcionário</Description></Attribute>
+<Token>)</Token>
+<Token>and</Token>
+<Attribute>
+<AttriId>42</AttriId>
+<AttriName>PesFunDatAdmissao</AttriName>
+<Description>Data de admissão do funcionário</Description></Attribute>
+<Token>&gt;</Token>
+<Variable>
+<VarId>Today</VarId>
+<VarName>&amp;Gx_date</VarName></Variable></Condition></Action>
+<Action>
+<ActionType>BusinessRule</ActionType>
+<RuleType>ErrorRule</RuleType>
+<Expression>
 <Token>&quot;Campo Data de demissão do funcionário fora da faixa&quot;</Token>
 <Token>,</Token>
 <Token>OutOfRange</Token></Expression>
@@ -741,6 +792,49 @@
 <Token>01</Token>
 <Token>)</Token>
 <Token>)</Token></Condition></Action>
+<Action>
+<ActionType>BusinessRule</ActionType>
+<RuleType>ErrorRule</RuleType>
+<Expression>
+<Token>'Data de demissão inválida!'</Token></Expression>
+<Condition>
+<Token>after(</Token>
+<Attribute>
+<AttriId>41</AttriId>
+<AttriName>PesFunDatDemissao</AttriName>
+<Description>Data de demissão do funcionário</Description></Attribute>
+<Token>)</Token>
+<Token>and</Token>
+<Attribute>
+<AttriId>41</AttriId>
+<AttriName>PesFunDatDemissao</AttriName>
+<Description>Data de demissão do funcionário</Description></Attribute>
+<Token>&gt;</Token>
+<Variable>
+<VarId>Today</VarId>
+<VarName>&amp;Gx_date</VarName></Variable></Condition></Action>
+<Action>
+<ActionType>BusinessRule</ActionType>
+<RuleType>ErrorRule</RuleType>
+<Expression>
+<Token>'A data de demissão não pode ocorrer antes da admissão!'</Token></Expression>
+<Condition>
+<Token>after(</Token>
+<Attribute>
+<AttriId>41</AttriId>
+<AttriName>PesFunDatDemissao</AttriName>
+<Description>Data de demissão do funcionário</Description></Attribute>
+<Token>)</Token>
+<Token>and</Token>
+<Attribute>
+<AttriId>41</AttriId>
+<AttriName>PesFunDatDemissao</AttriName>
+<Description>Data de demissão do funcionário</Description></Attribute>
+<Token>&lt;</Token>
+<Attribute>
+<AttriId>42</AttriId>
+<AttriName>PesFunDatAdmissao</AttriName>
+<Description>Data de admissão do funcionário</Description></Attribute></Condition></Action>
 <Action>
 <ActionType>BusinessRule</ActionType>
 <CALL>

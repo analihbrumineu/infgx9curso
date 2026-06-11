@@ -29,7 +29,7 @@
 <Description>Nome do filme</Description></Attribute>
 <Token>; poor performance may be noticed</Token>
 <Token> in group starting at line </Token>
-<Token>15</Token>
+<Token>17</Token>
 <Token></Token>
 <Token>.</Token></Warning></Warnings>
 <Errors></Errors>
@@ -66,7 +66,7 @@
 <LevelNumber>3</LevelNumber>
 <Optimizations></Optimizations>
 <LevelType>For Each</LevelType>
-<LevelBeginRow>15</LevelBeginRow>
+<LevelBeginRow>16</LevelBeginRow>
 <BaseTable>
 <Table>
 <TableId>3</TableId>
@@ -189,7 +189,7 @@
 <LevelNumber>4</LevelNumber>
 <Optimizations></Optimizations>
 <LevelType>Break</LevelType>
-<LevelBeginRow>25</LevelBeginRow>
+<LevelBeginRow>27</LevelBeginRow>
 <BaseTable>
 <Table>
 <TableId>3</TableId>

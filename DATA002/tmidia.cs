@@ -2,7 +2,7 @@
                File: Midia
         Description: Cadastro de mídias.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:41.84
+       Generated on: 6/11/2026 8:58:1.30
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -118,7 +118,7 @@ namespace GeneXus.Programs {
 
       public override String getFrmTitle( )
       {
-         return "Cadastro de mídias." ;
+         return "Cadastro de mídias" ;
       }
 
       public override GXMenuBar getMenuBar( )
@@ -288,14 +288,13 @@ namespace GeneXus.Programs {
          bttBtn_enter = UIFactory.getGXButton( GXPanel1 , "Enter" ,  455 ,  247 ,  89 ,  23 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttBtn_enter.setTooltip("Enter");
          bttBtn_enter.addActionListener(this);
-         lbllbl15 = UIFactory.getLabel(GXPanel1, "Cadastro de mídias", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 26 , 110 , 13 );
          lbllbl4 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 78 , 40 , 13 );
          lbllbl6 = UIFactory.getLabel(GXPanel1, "Tipo", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 108 , 26 , 13 );
          lbllbl8 = UIFactory.getLabel(GXPanel1, "Situação", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 273 , 108 , 51 , 13 );
          lbllbl10 = UIFactory.getLabel(GXPanel1, "Código do filme", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 134 , 88 , 13 );
          lbllbl12 = UIFactory.getLabel(GXPanel1, "Título", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 273 , 134 , 35 , 13 );
          lbllbl13 = UIFactory.getLabel(GXPanel1, "Código de locação de mídia", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 78 , 188 , 160 , 13 );
-         rctrct16 = UIFactory.getGXRectangle( GXPanel1 , 1 , 65 , 169 , 495 , 53 , Integer.MAX_VALUE , UIFactory.getColor(0) , ILabelConstants.BORDER_SINGLE );
+         rctrct15 = UIFactory.getGXRectangle( GXPanel1 , 1 , 65 , 169 , 495 , 53 , Integer.MAX_VALUE , UIFactory.getColor(0) , ILabelConstants.BORDER_SINGLE );
          edtFilCodigo.addContextAction(this, "BROWSE", GXResourceManager.GetMessage("toolbrowsedata"));
          focusManager.setControlList(new IFocusableControl[] {
                    edtMidCodigo ,
@@ -1785,14 +1784,13 @@ namespace GeneXus.Programs {
       protected GUIObjectInt edtLocCodLocCodigo ;
       protected IGXButton bttVislocacao ;
       protected IGXButton bttBtn_enter ;
-      protected ILabel lbllbl15 ;
       protected ILabel lbllbl4 ;
       protected ILabel lbllbl6 ;
       protected ILabel lbllbl8 ;
       protected ILabel lbllbl10 ;
       protected ILabel lbllbl12 ;
       protected ILabel lbllbl13 ;
-      protected IGXRectangle rctrct16 ;
+      protected IGXRectangle rctrct15 ;
       protected IDataReader T00062 ;
       protected IDataStoreProvider pr_default ;
       protected String[] T00062_A29FilNome ;

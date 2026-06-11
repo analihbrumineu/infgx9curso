@@ -19,7 +19,7 @@
 <Description>Nome do dependente</Description></Attribute>
 <Token>; poor performance may be noticed</Token>
 <Token> in group starting at line </Token>
-<Token>17</Token>
+<Token>21</Token>
 <Token></Token>
 <Token>.</Token></Warning></Warnings>
 <Errors></Errors>
@@ -46,7 +46,7 @@
 <LevelNumber>3</LevelNumber>
 <Optimizations></Optimizations>
 <LevelType>For Each</LevelType>
-<LevelBeginRow>13</LevelBeginRow>
+<LevelBeginRow>14</LevelBeginRow>
 <BaseTable>
 <Table>
 <TableId>1</TableId>
@@ -174,7 +174,7 @@
 <LevelNumber>4</LevelNumber>
 <Optimizations></Optimizations>
 <LevelType>For Each</LevelType>
-<LevelBeginRow>25</LevelBeginRow>
+<LevelBeginRow>29</LevelBeginRow>
 <BaseTable>
 <Table>
 <TableId>2</TableId>

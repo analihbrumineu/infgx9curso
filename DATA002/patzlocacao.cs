@@ -2,7 +2,7 @@
                File: AtzLocacao
         Description: Atualizar locação
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:32.88
+       Generated on: 6/11/2026 8:57:53.50
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -172,8 +172,8 @@ namespace GeneXus.Programs {
                         n108LocMid = false ;
                         AV15LocCod = A86LocCodi ;
                         AV13LocMid = A102LocMid ;
-                        /* Execute user subroutine: S11108 */
-                        S11108 ();
+                        /* Execute user subroutine: S11124 */
+                        S11124 ();
                         if ( returnInSub )
                         {
                            pr_default.close(1);
@@ -236,8 +236,8 @@ namespace GeneXus.Programs {
                            n108LocMid = false ;
                            AV13LocMid = A102LocMid ;
                            AV15LocCod = A86LocCodi ;
-                           /* Execute user subroutine: S11108 */
-                           S11108 ();
+                           /* Execute user subroutine: S11124 */
+                           S11124 ();
                            if ( returnInSub )
                            {
                               pr_default.close(6);
@@ -284,8 +284,8 @@ namespace GeneXus.Programs {
                            n108LocMid = false ;
                            AV13LocMid = A102LocMid ;
                            AV15LocCod = A86LocCodi ;
-                           /* Execute user subroutine: S12119 */
-                           S12119 ();
+                           /* Execute user subroutine: S12137 */
+                           S12137 ();
                            if ( returnInSub )
                            {
                               pr_default.close(9);
@@ -363,8 +363,8 @@ namespace GeneXus.Programs {
                            n108LocMid = false ;
                            AV15LocCod = A86LocCodi ;
                            AV13LocMid = A102LocMid ;
-                           /* Execute user subroutine: S12119 */
-                           S12119 ();
+                           /* Execute user subroutine: S12137 */
+                           S12137 ();
                            if ( returnInSub )
                            {
                               pr_default.close(16);
@@ -394,7 +394,7 @@ namespace GeneXus.Programs {
          this.cleanup();
       }
 
-      protected void S11108( )
+      protected void S11124( )
       {
          /* 'LOCARMIDIA' Routine */
          /* Optimized UPDATE. */
@@ -405,7 +405,7 @@ namespace GeneXus.Programs {
          context.CommitDataStores("PAtzLocacao");
       }
 
-      protected void S12119( )
+      protected void S12137( )
       {
          /* 'LIBERARMIDIA' Routine */
          /* Optimized UPDATE. */

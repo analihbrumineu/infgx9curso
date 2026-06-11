@@ -3,10 +3,10 @@ called_program_i(1,17,1,19).
 called_program_i(1,5,4,25).
 called_program_i(0,5,4,20).
 called_program_i(0,5,4,86).
-called_program_i(0,1,4,27).
-called_program_i(0,1,4,18).
 called_program_i(1000,1,1,23).
 called_program_i(0,1,1,23).
+called_program_i(0,1,4,27).
+called_program_i(0,1,4,18).
 called_program_i(0,1,4,93).
 called_program_i(0,1,4,87).
 called_program_i(0,1,4,81).

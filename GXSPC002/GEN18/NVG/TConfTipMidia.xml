@@ -99,7 +99,26 @@
 <AttriId>32</AttriId>
 <AttriName>CatCodigo</AttriName>
 <Description>Código da categoria do filme</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
-<Into></Into></Action></Rules>
+<Into></Into></Action>
+<Action>
+<ActionType>BusinessRule</ActionType>
+<RuleType>ErrorRule</RuleType>
+<Expression>
+<Token>'Valor inválido!'</Token></Expression>
+<Condition>
+<Token>after(</Token>
+<Attribute>
+<AttriId>85</AttriId>
+<AttriName>ConfTipValor</AttriName>
+<Description>Valor da configuração</Description></Attribute>
+<Token>)</Token>
+<Token>and</Token>
+<Attribute>
+<AttriId>85</AttriId>
+<AttriName>ConfTipValor</AttriName>
+<Description>Valor da configuração</Description></Attribute>
+<Token>&lt;=</Token>
+<Token>0</Token></Condition></Action></Rules>
 <BeforeConfirmRules></BeforeConfirmRules>
 <AfterConfirmRules></AfterConfirmRules>
 <TablesToUpdate>

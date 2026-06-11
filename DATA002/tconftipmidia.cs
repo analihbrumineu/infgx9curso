@@ -2,7 +2,7 @@
                File: ConfTipMidia
         Description: Configurações tipo de mídia.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:37.59
+       Generated on: 6/11/2026 8:57:57.65
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -103,7 +103,7 @@ namespace GeneXus.Programs {
 
       public override String getFrmTitle( )
       {
-         return "Configurações tipo de mídia." ;
+         return "Configurações tipo de mídia" ;
       }
 
       public override GXMenuBar getMenuBar( )
@@ -128,12 +128,12 @@ namespace GeneXus.Programs {
 
       public override int getFrmWidth( )
       {
-         return 507 ;
+         return 390 ;
       }
 
       public override int getFrmHeight( )
       {
-         return 221 ;
+         return 247 ;
       }
 
       public override String getHelpId( )
@@ -229,12 +229,12 @@ namespace GeneXus.Programs {
 
       public override void screen( )
       {
-         GXPanel1 = new GXPanel(this, 3 , 25 , 507 , 221 );
+         GXPanel1 = new GXPanel(this, 3 , 25 , 390 , 247 );
          this.setIBackground(UIFactory.getColor(15));
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         cmbMidTipo = new GUIObjectShort ( new GXComboBox(GXPanel1) , GXPanel1 , 130 , 78 , 78 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A35MidTipo" );
+         cmbMidTipo = new GUIObjectShort ( new GXComboBox(GXPanel1) , GXPanel1 , 143 , 76 , 78 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A35MidTipo" );
          ((GXComboBox) cmbMidTipo.getGXComponent()).addItem( new java.lang.Short(1),"DVD");
          ((GXComboBox) cmbMidTipo.getGXComponent()).addItem( new java.lang.Short(2),"Bluray");
          ((GXComboBox) cmbMidTipo.getGXComponent()).addItem( new java.lang.Short(3),"VHS");
@@ -242,21 +242,20 @@ namespace GeneXus.Programs {
          cmbMidTipo.addFocusListener(this);
          cmbMidTipo.addItemListener(this);
          cmbMidTipo.getGXComponent().setHelpId("HLP_TConfTipMidia.htm");
-         edtCatCodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),130, 104, 78, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 130 , 104 , 78 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A32CatCodi" );
+         edtCatCodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),143, 102, 78, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 143 , 102 , 78 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A32CatCodi" );
          ((GXEdit) edtCatCodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtCatCodigo.addFocusListener(this);
          edtCatCodigo.getGXComponent().setHelpId("HLP_TConfTipMidia.htm");
-         edtConfTipValor = new GUIObjectDecimal2 ( new GXEdit(12, "ZZZ,ZZZ,ZZ9.99", UIFactory.getFont( "Courier New", 0, 9),130, 130, 108, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 130 , 130 , 108 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A85ConfTip" );
+         edtConfTipValor = new GUIObjectDecimal2 ( new GXEdit(12, "ZZZ,ZZZ,ZZ9.99", UIFactory.getFont( "Courier New", 0, 9),143, 128, 108, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 143 , 128 , 108 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A85ConfTip" );
          ((GXEdit) edtConfTipValor.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtConfTipValor.addFocusListener(this);
          edtConfTipValor.getGXComponent().setHelpId("HLP_TConfTipMidia.htm");
-         bttbtt3 = UIFactory.getGXButton( GXPanel1 , "Enter" ,  351 ,  169 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt3 = UIFactory.getGXButton( GXPanel1 , "Enter" ,  234 ,  182 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt3.setTooltip("Enter");
          bttbtt3.addActionListener(this);
-         lbllbl4 = UIFactory.getLabel(GXPanel1, "Configuração de tipo de mídia", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 26 , 172 , 13 );
-         lbllbl6 = UIFactory.getLabel(GXPanel1, "Formato", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 82 , 46 , 13 );
-         lbllbl5 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 108 , 55 , 13 );
-         lbllbl8 = UIFactory.getLabel(GXPanel1, "Valor (R$)", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 134 , 58 , 13 );
+         lbllbl5 = UIFactory.getLabel(GXPanel1, "Formato", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 67 , 80 , 46 , 13 );
+         lbllbl4 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 67 , 106 , 55 , 13 );
+         lbllbl7 = UIFactory.getLabel(GXPanel1, "Valor (R$)", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 67 , 132 , 58 , 13 );
          edtCatCodigo.addContextAction(this, "BROWSE", GXResourceManager.GetMessage("toolbrowsedata"));
          focusManager.setControlList(new IFocusableControl[] {
                    cmbMidTipo ,
@@ -419,6 +418,10 @@ namespace GeneXus.Programs {
       public override void focusEventDispatch( Object eventSource )
       {
          AnyError = 0 ;
+         if ( edtConfTipValor.isEventSource(eventSource) ) {
+            Valid_Conftipvalor ();
+            return;
+         }
          if ( cmbMidTipo.isEventSource(eventSource) ) {
             Valid_Midtipo ();
             return;
@@ -647,6 +650,18 @@ namespace GeneXus.Programs {
          set_caption( ) ;
       }
 
+      protected void Valid_Conftipvalor( )
+      {
+         if ( true /* After */ && ( A85ConfTip <= Convert.ToDecimal( 0 )) )
+         {
+            GXutil.msg( me(), "Valor inválido!" );
+            AnyError = 1 ;
+            setNextFocus( edtConfTipValor );
+            setFocusNext();
+         }
+         reloadGridRow();
+      }
+
       protected void E11092( )
       {
          eventLevelContext();
@@ -678,7 +693,7 @@ namespace GeneXus.Programs {
 
       protected void ZM0911( int GX_JID )
       {
-         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 2 ) || ( GX_JID == 0 ) )
          {
             if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "INS".TrimEnd(' ') ) != 0 ) )
             {
@@ -689,7 +704,7 @@ namespace GeneXus.Programs {
                Z85ConfTip = A85ConfTip ;
             }
          }
-         if ( ( GX_JID == -1 ) )
+         if ( ( GX_JID == -2 ) )
          {
             Z35MidTipo = A35MidTipo ;
             Z85ConfTip = A85ConfTip ;
@@ -717,7 +732,7 @@ namespace GeneXus.Programs {
             RcdFound11 = 1 ;
             A85ConfTip = T00095_A85ConfTip[0] ;
             n85ConfTip = T00095_n85ConfTip[0] ;
-            ZM0911( -1) ;
+            ZM0911( -2) ;
          }
          pr_default.close(3);
          OnLoadActions0911( ) ;
@@ -741,6 +756,12 @@ namespace GeneXus.Programs {
             setNextFocus( edtCatCodigo );
          }
          pr_default.close(0);
+         if ( true /* After */ && ( A85ConfTip <= Convert.ToDecimal( 0 )) )
+         {
+            pushError( "Valor inválido!" );
+            AnyError = 1 ;
+            keepFocus();
+         }
          Gx_BScreen = 1 ;
       }
 
@@ -774,7 +795,7 @@ namespace GeneXus.Programs {
          pr_default.execute(2, new Object[] {A35MidTipo, A32CatCodi});
          if ( (pr_default.getStatus(2) != 101) )
          {
-            ZM0911( 1) ;
+            ZM0911( 2) ;
             RcdFound11 = 1 ;
             A35MidTipo = T00094_A35MidTipo[0] ;
             A85ConfTip = T00094_A85ConfTip[0] ;
@@ -1515,10 +1536,9 @@ namespace GeneXus.Programs {
       protected GUIObjectInt edtCatCodigo ;
       protected GUIObjectDecimal2 edtConfTipValor ;
       protected IGXButton bttbtt3 ;
-      protected ILabel lbllbl4 ;
-      protected ILabel lbllbl6 ;
       protected ILabel lbllbl5 ;
-      protected ILabel lbllbl8 ;
+      protected ILabel lbllbl4 ;
+      protected ILabel lbllbl7 ;
       protected IDataReader T00092 ;
       protected IDataStoreProvider pr_default ;
       protected int[] T00092_A32CatCodi ;

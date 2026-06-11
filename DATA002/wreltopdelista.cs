@@ -2,7 +2,7 @@
                File: RelTopDeLista
         Description: Relatório de topo de lista.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:45.50
+       Generated on: 6/11/2026 8:58:4.39
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -311,11 +311,11 @@ namespace GeneXus.Programs {
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         edtavDatinicial = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),156, 65, 80, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , GXPanel1 , 156 , 65 , 80 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV5DatInic" );
+         edtavDatinicial = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),186, 66, 80, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , GXPanel1 , 186 , 66 , 80 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV5DatInic" );
          ((GXEdit) edtavDatinicial.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavDatinicial.addFocusListener(this);
          edtavDatinicial.getGXComponent().setHelpId("HLP_WRelTopDeLista.htm");
-         edtavDatfinal = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),273, 65, 80, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , GXPanel1 , 273 , 65 , 80 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6DatFina" );
+         edtavDatfinal = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),348, 66, 80, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , GXPanel1 , 348 , 66 , 80 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6DatFina" );
          ((GXEdit) edtavDatfinal.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavDatfinal.addFocusListener(this);
          edtavDatfinal.getGXComponent().setHelpId("HLP_WRelTopDeLista.htm");
@@ -325,7 +325,7 @@ namespace GeneXus.Programs {
          cmbavRelatorio.addFocusListener(this);
          cmbavRelatorio.addItemListener(this);
          cmbavRelatorio.getGXComponent().setHelpId("HLP_WRelTopDeLista.htm");
-         cmbavAssunto = new GUIObjectShort ( new GXComboBox(GXPanel1) , GXPanel1 , 338 , 91 , 124 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV9Assunto" );
+         cmbavAssunto = new GUIObjectShort ( new GXComboBox(GXPanel1) , GXPanel1 , 348 , 91 , 124 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV9Assunto" );
          ((GXComboBox) cmbavAssunto.getGXComponent()).addItem( new java.lang.Short(1),"clientes");
          ((GXComboBox) cmbavAssunto.getGXComponent()).addItem( new java.lang.Short(2),"filmes");
          ((GXComboBox) cmbavAssunto.getGXComponent()).addItem( new java.lang.Short(3),"categorias");
@@ -333,26 +333,26 @@ namespace GeneXus.Programs {
          cmbavAssunto.addFocusListener(this);
          cmbavAssunto.addItemListener(this);
          cmbavAssunto.getGXComponent().setHelpId("HLP_WRelTopDeLista.htm");
-         edtavSelecao = new GUIObjectLong ( new GXEdit(10, "ZZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),187, 117, 80, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 187 , 117 , 80 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7Selecao" );
+         edtavSelecao = new GUIObjectLong ( new GXEdit(10, "ZZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),186, 117, 80, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 186 , 117 , 80 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7Selecao" );
          ((GXEdit) edtavSelecao.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavSelecao.addFocusListener(this);
          edtavSelecao.getGXComponent().setHelpId("HLP_WRelTopDeLista.htm");
-         bttbtt8 = UIFactory.getGXButton( GXPanel1 , "Imprimir" ,  429 ,  182 ,  78 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
-         bttbtt8.setTooltip("Imprimir");
-         bttbtt8.addActionListener(this);
-         bttbtt8.setFiresEvents(false);
-         lbllbl2 = UIFactory.getLabel(GXPanel1, "De", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 130 , 69 , 17 , 13 );
-         lbllbl4 = UIFactory.getLabel(GXPanel1, "até", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 247 , 69 , 19 , 13 );
-         lbllbl9 = UIFactory.getLabel(GXPanel1, "Assunto", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 130 , 95 , 46 , 13 );
-         lbllbl11 = UIFactory.getLabel(GXPanel1, "por", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 311 , 95 , 19 , 13 );
-         lbllbl6 = UIFactory.getLabel(GXPanel1, "Seleção", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 130 , 121 , 47 , 13 );
+         bttbtt12 = UIFactory.getGXButton( GXPanel1 , "Imprimir" ,  442 ,  169 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt12.setTooltip("Imprimir");
+         bttbtt12.addActionListener(this);
+         bttbtt12.setFiresEvents(false);
+         lbllbl2 = UIFactory.getLabel(GXPanel1, "De", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 119 , 70 , 17 , 13 );
+         lbllbl4 = UIFactory.getLabel(GXPanel1, "até", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 316 , 70 , 19 , 13 );
+         lbllbl8 = UIFactory.getLabel(GXPanel1, "Assunto", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 119 , 95 , 46 , 13 );
+         lbllbl10 = UIFactory.getLabel(GXPanel1, "por", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 316 , 95 , 19 , 13 );
+         lbllbl6 = UIFactory.getLabel(GXPanel1, "Seleção", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 119 , 121 , 47 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavDatinicial ,
                    edtavDatfinal ,
                    cmbavRelatorio ,
                    cmbavAssunto ,
                    edtavSelecao ,
-                   bttbtt8
+                   bttbtt12
          });
       }
 
@@ -408,7 +408,7 @@ namespace GeneXus.Programs {
 
       public override void actionEventDispatch( Object eventSource )
       {
-         if ( bttbtt8.isEventSource(eventSource) ) {
+         if ( bttbtt12.isEventSource(eventSource) ) {
             /* Execute user event: E13V2M2 */
             E13V2M2 ();
             return;
@@ -560,11 +560,11 @@ namespace GeneXus.Programs {
       protected GUIObjectShort cmbavRelatorio ;
       protected GUIObjectShort cmbavAssunto ;
       protected GUIObjectLong edtavSelecao ;
-      protected IGXButton bttbtt8 ;
+      protected IGXButton bttbtt12 ;
       protected ILabel lbllbl2 ;
       protected ILabel lbllbl4 ;
-      protected ILabel lbllbl9 ;
-      protected ILabel lbllbl11 ;
+      protected ILabel lbllbl8 ;
+      protected ILabel lbllbl10 ;
       protected ILabel lbllbl6 ;
    }
 

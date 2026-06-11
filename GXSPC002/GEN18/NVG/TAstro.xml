@@ -38,6 +38,15 @@
 <Description>Cadastro de astros.</Description></Table></BaseTable>
 <StandAloneRules>
 <Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Variable>
+<VarId>Today</VarId>
+<VarName>&amp;Gx_date</VarName></Variable></FormulaName>
+<FormulaExpression>
+<Token>today(</Token>
+<Token>)</Token></FormulaExpression></Action>
+<Action>
 <ActionType>ReadBaseTable</ActionType>
 <Table>
 <TableId>10</TableId>
@@ -174,6 +183,27 @@
 <ActionType>BusinessRule</ActionType>
 <RuleType>ErrorRule</RuleType>
 <Expression>
+<Token>'Digite uma data de nascimento válida!'</Token></Expression>
+<Condition>
+<Token>after(</Token>
+<Attribute>
+<AttriId>113</AttriId>
+<AttriName>AstDatNascimento</AttriName>
+<Description>Data de nascimento do astro de cinema</Description></Attribute>
+<Token>)</Token>
+<Token>and</Token>
+<Attribute>
+<AttriId>113</AttriId>
+<AttriName>AstDatNascimento</AttriName>
+<Description>Data de nascimento do astro de cinema</Description></Attribute>
+<Token>&gt;</Token>
+<Variable>
+<VarId>Today</VarId>
+<VarName>&amp;Gx_date</VarName></Variable></Condition></Action>
+<Action>
+<ActionType>BusinessRule</ActionType>
+<RuleType>ErrorRule</RuleType>
+<Expression>
 <Token>&quot;Campo Data de falecimento do astro de cinema fora da faixa&quot;</Token>
 <Token>,</Token>
 <Token>OutOfRange</Token></Expression>
@@ -200,7 +230,50 @@
 <Token>,</Token>
 <Token>01</Token>
 <Token>)</Token>
-<Token>)</Token></Condition></Action></Rules>
+<Token>)</Token></Condition></Action>
+<Action>
+<ActionType>BusinessRule</ActionType>
+<RuleType>ErrorRule</RuleType>
+<Expression>
+<Token>'Digite uma data de falecimento válida!'</Token></Expression>
+<Condition>
+<Token>after(</Token>
+<Attribute>
+<AttriId>114</AttriId>
+<AttriName>AstDatFalecimento</AttriName>
+<Description>Data de falecimento do astro de cinema</Description></Attribute>
+<Token>)</Token>
+<Token>and</Token>
+<Attribute>
+<AttriId>114</AttriId>
+<AttriName>AstDatFalecimento</AttriName>
+<Description>Data de falecimento do astro de cinema</Description></Attribute>
+<Token>&gt;</Token>
+<Variable>
+<VarId>Today</VarId>
+<VarName>&amp;Gx_date</VarName></Variable></Condition></Action>
+<Action>
+<ActionType>BusinessRule</ActionType>
+<RuleType>ErrorRule</RuleType>
+<Expression>
+<Token>'A data de falecimento não pode ocorrer antes do nascimento!'</Token></Expression>
+<Condition>
+<Token>after(</Token>
+<Attribute>
+<AttriId>114</AttriId>
+<AttriName>AstDatFalecimento</AttriName>
+<Description>Data de falecimento do astro de cinema</Description></Attribute>
+<Token>)</Token>
+<Token>and</Token>
+<Attribute>
+<AttriId>114</AttriId>
+<AttriName>AstDatFalecimento</AttriName>
+<Description>Data de falecimento do astro de cinema</Description></Attribute>
+<Token>&lt;</Token>
+<Attribute>
+<AttriId>113</AttriId>
+<AttriName>AstDatNascimento</AttriName>
+<Description>Data de nascimento do astro de cinema</Description></Attribute></Condition></Action></Rules>
 <BeforeConfirmRules></BeforeConfirmRules>
 <AfterConfirmRules></AfterConfirmRules>
 <TablesToUpdate>

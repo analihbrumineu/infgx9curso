@@ -34,6 +34,8 @@
 <Parameters></Parameters>
 <StandAloneRules></StandAloneRules>
 <Event>
+<EventName>Refresh</EventName></Event>
+<Event>
 <EventName>Load</EventName>
 <LoadMethod>Auto</LoadMethod>
 <ImplicitForEach>

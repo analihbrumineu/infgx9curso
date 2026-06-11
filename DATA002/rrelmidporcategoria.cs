@@ -2,7 +2,7 @@
                File: RelMidPorCategoria
         Description: Relatório do total de mídias por categoria
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:33.83
+       Generated on: 6/11/2026 8:57:54.38
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -263,10 +263,11 @@ namespace GeneXus.Programs {
                {
                   /* Print footers */
                   Gx_line = P_lines ;
+                  getPrinter().GxDrawLine(26, Gx_line+13, 650, Gx_line+13, 1, 0, 0, 0, 0) ;
                   getPrinter().GxAttris("MS Sans Serif", 8, true, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-                  getPrinter().GxDrawText("Rodapé", 325, Gx_line+13, 369, Gx_line+26, 0+256) ;
+                  getPrinter().GxDrawText("Rodape", 325, Gx_line+26, 369, Gx_line+39, 0+256) ;
                   Gx_OldLine = Gx_line ;
-                  Gx_line = (int)(Gx_line+39) ;
+                  Gx_line = (int)(Gx_line+52) ;
                   if ( ! bFoot )
                   {
                      getPrinter().GxEndPage() ;

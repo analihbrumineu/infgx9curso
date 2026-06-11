@@ -18,16 +18,15 @@ las_i(11,[ [ 'Mode',35,32,85 ] ]).
 lac_i(11,[ [ 35,32,85 ] ]).
  
  
-lits_i('Configuração de tipo de mídia',1,9).
 lits_i('Categoria',4,9).
 lits_i('Formato',3,9).
 lits_i('Valor (R$)',5,9).
  
-cls_i([ 1,9 ],[ 5,37 ]).
+cls_i([ 3,9 ],[ 5,33 ]).
  
-pos_i(32,[ 4,4,18 ]).
-pos_i(35,[ 3,3,18 ]).
-pos_i(85,[ 5,5,18 ]).
+pos_i(32,[ 4,4,20 ]).
+pos_i(35,[ 3,3,20 ]).
+pos_i(85,[ 5,5,20 ]).
  
  
  
@@ -205,17 +204,21 @@ rule_i(0,rule([ a(22,[ 'Dlt','"Eliminar"','' ]) ],[],[],[])).
 rule_i(0,maingen(18)).
 rule_i(0,rule([ a(10,[ 'Mode' ]) ],[],[ insert,update,delete ],[])).
 rule_i(0,parmio([ [ 'Mode',in ] ])).
+rule_i(11,rule([ a(1,[ t('''Valor inválido!''',3) ]) ],[ t('after(',1),t(85,2),t(')',4),t('.AND.',9),t(85,2),t(<=,10),t('0',3) ],[ insert,update,delete ],[ 85 ])).
 rule_i(11,rule([ a(19,[ [ 32 ],msg([ t('"Não existe ''Cadastro de categorias.''."',3) ],[ t('ForeignKeyNotFound',3) ]) ]) ],[],[ insert,update,delete ],[ 32 ])).
 rule_i(0,rule([ a(22,[ '''Pesquisa''','''Pesquisa''','4' ]) ],[],[],[])).
  
-a_i(1,11,t,11,[],[ [ [ [],35,35 ],[ [],32,32 ] ],'ICONFTIPMIDIA',[] ]).
-a_i(2,11,r,6,[],[ [ [ 11,32,32 ] ],'ICATEGORIA',[] ]).
+a_i(1,11,b,2,[],[ [],[ a(1,[ t('''Valor inválido!''',3) ]) ],[ t('after(',1),t(85,2),t(')',4),t('.AND.',9),t(85,2),t(<=,10),t('0',3) ] ]).
+a_i(2,11,t,11,[],[ [ [ [],35,35 ],[ [],32,32 ] ],'ICONFTIPMIDIA',[] ]).
+a_i(3,11,r,6,[],[ [ [ 11,32,32 ] ],'ICATEGORIA',[] ]).
  
-v_i(t,i,1,35).
-v_i(t,i,1,32).
-v_i(t,o,1,85).
-v_i(r,i,2,32).
-v_i(r,o,2,[]).
+v_i(b,i,1,85).
+v_i(b,o,1,[]).
+v_i(t,i,2,35).
+v_i(t,i,2,32).
+v_i(t,o,2,85).
+v_i(r,i,3,32).
+v_i(r,o,3,[]).
  
  
  
@@ -257,11 +260,11 @@ break_i(2,nvg,1,[],[ [ 32 ],[],[] ]).
 b_group_i(2,1,lit,0,1,0).
  
 b_line_i(0,2,1,cmd,0,[ t('',146,0,0),t('''Pesquisa''',3,0,6),t('4',3,0,16) ]).
-b_line_i(1,2,1,cmd,0,[ t('',152,0,0) ]).
-b_line_i(2,2,1,cmd,0,[ t('',153,0,0),t('cursor(',1,0,13),t(32,2,0,20),t(')',4,0,29) ]).
-b_line_i(3,2,1,cmd,0,[ t('',104,0,0),t(o(4,'ConsCategoria'),28,0,12),t(32,2,0,32) ]).
-b_line_i(4,2,1,cmd,0,[ t('',154,0,0) ]).
-b_line_i(5,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(2,2,1,cmd,0,[ t('',152,0,0) ]).
+b_line_i(3,2,1,cmd,0,[ t('',153,0,0),t('cursor(',1,0,13),t(32,2,0,20),t(')',4,0,29) ]).
+b_line_i(3,2,1,cmd,0,[ t('',104,0,0),t(o(4,'ConsCategoria'),28,0,32),t(32,2,0,52) ]).
+b_line_i(5,2,1,cmd,0,[ t('',154,0,0) ]).
+b_line_i(7,2,1,cmd,0,[ t('',147,0,0) ]).
  
  
  
@@ -285,15 +288,14 @@ ppi_i([ 96,96 ]).
  
  
  
-lit_i(2,1,t(32,2),[ font('Courier New',9,[]),rect(130,104,207,124),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(32),ctrltype(edit,2),ispwd(0),e2n(1) ]).
-lit_i(3,1,button('Enter'),[ id(3),title([ 'Enter' ]),ctlname(''),rect(351,169,441,194),font('MS Shell Dlg',8,[]) ]).
-lit_i(4,1,t('Configuração de tipo de mídia',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,26,236,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(5,1,t('Categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,108,119,120),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(6,1,t('Formato',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,82,110,94),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(7,1,t(35,2),[ font('Courier New',9,[]),rect(130,78,207,98),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(35),ctrltype(combo,7),e2n(1) ]).
-lit_i(8,1,t('Valor (R$)',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,134,122,146),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(9,1,t(85,2),[ font('Courier New',9,[]),rect(130,130,237,150),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(85),ctrltype(edit,9),ispwd(0),e2n(1) ]).
-lit_i(1,1,window,[ title([]),rect(3,25,509,245),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(2,1,t(32,2),[ font('Courier New',9,[]),rect(143,102,220,122),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(32),ctrltype(edit,2),ispwd(0),e2n(1) ]).
+lit_i(3,1,button('Enter'),[ id(3),title([ 'Enter' ]),ctlname(''),rect(234,182,324,207),font('MS Shell Dlg',8,[]) ]).
+lit_i(4,1,t('Categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(67,106,121,118),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(5,1,t('Formato',3),[ font('MS Sans Serif',8,[ bold ]),rect(67,80,112,92),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(6,1,t(35,2),[ font('Courier New',9,[]),rect(143,76,220,96),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(35),ctrltype(combo,6),e2n(1) ]).
+lit_i(7,1,t('Valor (R$)',3),[ font('MS Sans Serif',8,[ bold ]),rect(67,132,124,144),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(8,1,t(85,2),[ font('Courier New',9,[]),rect(143,128,250,148),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(85),ctrltype(edit,8),ispwd(0),e2n(1) ]).
+lit_i(1,1,window,[ title([ 'Configurações tipo de mídia' ]),rect(3,25,392,271),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).
  
@@ -306,16 +308,15 @@ std_color_i(2,back,5).
 std_color_i(2,fore,8).
 std_color_i(4,fore,8).
 std_color_i(5,fore,8).
+std_color_i(6,back,5).
 std_color_i(6,fore,8).
-std_color_i(7,back,5).
 std_color_i(7,fore,8).
+std_color_i(8,back,5).
 std_color_i(8,fore,8).
-std_color_i(9,back,5).
-std_color_i(9,fore,8).
 std_color_i(1,back,15).
 std_color_i(1,fore,6).
  
-ctrl_info_i(1,7,[ [ [ 'DVD','1' ],[ 'Bluray','2' ],[ 'VHS','3' ],[ 'Box','4' ] ],[ 'Mídia' ] ]).
+ctrl_info_i(1,6,[ [ [ 'DVD','1' ],[ 'Bluray','2' ],[ 'VHS','3' ],[ 'Box','4' ] ],[ 'Mídia' ] ]).
  
  
 calling_main_i(4,1).

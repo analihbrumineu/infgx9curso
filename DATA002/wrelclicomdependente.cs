@@ -2,7 +2,7 @@
                File: RelCliComDependente
         Description: Impressão de relatório de clientes com dependentes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:45.43
+       Generated on: 6/11/2026 8:58:4.33
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -61,7 +61,7 @@ namespace GeneXus.Programs {
 
       public override String getFrmTitle( )
       {
-         return "Impressão de relatório de clientes com dependentes." ;
+         return "Relatório de clientes com dependentes" ;
       }
 
       public override GXMenuBar getMenuBar( )
@@ -86,12 +86,12 @@ namespace GeneXus.Programs {
 
       public override int getFrmWidth( )
       {
-         return 403 ;
+         return 429 ;
       }
 
       public override int getFrmHeight( )
       {
-         return 156 ;
+         return 182 ;
       }
 
       public override String getHelpId( )
@@ -266,30 +266,29 @@ namespace GeneXus.Programs {
 
       public override void screen( )
       {
-         GXPanel1 = new GXPanel(this, 3 , 25 , 403 , 156 );
+         GXPanel1 = new GXPanel(this, 3 , 25 , 429 , 182 );
          this.setIBackground(UIFactory.getColor(15));
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         edtavPescodinicial = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),143, 65, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 143 , 65 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV5PesCodI" );
+         edtavPescodinicial = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),130, 65, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 130 , 65 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV5PesCodI" );
          ((GXEdit) edtavPescodinicial.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavPescodinicial.addFocusListener(this);
          edtavPescodinicial.getGXComponent().setHelpId("HLP_WRelCliComDependente.htm");
-         edtavPescodfinal = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),247, 65, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 247 , 65 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6PesCodF" );
+         edtavPescodfinal = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),234, 65, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 234 , 65 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6PesCodF" );
          ((GXEdit) edtavPescodfinal.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavPescodfinal.addFocusListener(this);
          edtavPescodfinal.getGXComponent().setHelpId("HLP_WRelCliComDependente.htm");
-         bttbtt7 = UIFactory.getGXButton( GXPanel1 , "Imprimir" ,  260 ,  104 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
-         bttbtt7.setTooltip("Imprimir");
-         bttbtt7.addActionListener(this);
-         bttbtt7.setFiresEvents(false);
-         lbllbl2 = UIFactory.getLabel(GXPanel1, "Impressão de relatório de clientes com dependentes", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 26 , 296 , 13 );
-         lbllbl3 = UIFactory.getLabel(GXPanel1, "Cliente", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 91 , 69 , 40 , 13 );
-         lbllbl6 = UIFactory.getLabel(GXPanel1, "até", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 221 , 69 , 19 , 13 );
+         bttbtt6 = UIFactory.getGXButton( GXPanel1 , "Imprimir" ,  273 ,  117 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt6.setTooltip("Imprimir");
+         bttbtt6.addActionListener(this);
+         bttbtt6.setFiresEvents(false);
+         lbllbl2 = UIFactory.getLabel(GXPanel1, "Cliente", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 78 , 69 , 73 , 13 );
+         lbllbl5 = UIFactory.getLabel(GXPanel1, "até", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 208 , 69 , 19 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavPescodinicial ,
                    edtavPescodfinal ,
-                   bttbtt7
+                   bttbtt6
          });
       }
 
@@ -336,7 +335,7 @@ namespace GeneXus.Programs {
 
       public override void actionEventDispatch( Object eventSource )
       {
-         if ( bttbtt7.isEventSource(eventSource) ) {
+         if ( bttbtt6.isEventSource(eventSource) ) {
             /* Execute user event: E13V1S2 */
             E13V1S2 ();
             return;
@@ -450,10 +449,9 @@ namespace GeneXus.Programs {
       protected GXPanel GXPanel1 ;
       protected GUIObjectInt edtavPescodinicial ;
       protected GUIObjectInt edtavPescodfinal ;
-      protected IGXButton bttbtt7 ;
+      protected IGXButton bttbtt6 ;
       protected ILabel lbllbl2 ;
-      protected ILabel lbllbl3 ;
-      protected ILabel lbllbl6 ;
+      protected ILabel lbllbl5 ;
    }
 
 }

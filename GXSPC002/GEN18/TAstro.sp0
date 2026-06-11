@@ -13,17 +13,17 @@ lwi_i(10,[ [] ]).
  
 ta_i(10,[ [ [ 10,49 ],[ 10,50 ],[ 10,113 ],[ 10,114 ],[ 10,53 ] ] ]).
  
-las_i(10,[ [ 49,'Mode',50,113,114,53 ] ]).
+las_i(10,[ [ 49,'Mode','Today',50,113,114,53 ] ]).
  
 lac_i(10,[ [ 50,113,114,53 ] ]).
  
  
-lits_i('Cadastro de astros',1,5).
+lits_i('Dados gerais',1,5).
 lits_i('Código',3,5).
 lits_i('Nome completo',4,5).
 lits_i('Data de nascimento',6,5).
 lits_i('Data de falecimento',7,5).
-lits_i('Descrição do astro',1,5).
+lits_i('Descrição',1,5).
  
 cls_i([ 1,5 ],[ 7,73 ]).
  
@@ -35,6 +35,7 @@ pos_i(53,[ 2,2,5 ]).
  
  
 default_i(e(49,3,1,49)).
+default_i(e('Today',2,2,'''today''')).
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
 rule_i(0,datastore(1,'LOCK_RETRY','10')).
@@ -209,11 +210,18 @@ rule_i(0,parmio([ [ 49,in ],[ 'Mode',in ] ])).
 rule_i(10,rule([ a(1,msg([ t('"Campo Data de nascimento do astro de cinema fora da faixa"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(113,2),t(')',4),t('.OR.',9),t(113,2),t(>=,10),t('ymdtod(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(')',4),t(')',4) ],[ insert,update ],[ 113 ])).
 rule_i(10,rule([ a(1,msg([ t('"Campo Data de falecimento do astro de cinema fora da faixa"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(114,2),t(')',4),t('.OR.',9),t(114,2),t(>=,10),t('ymdtod(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(')',4),t(')',4) ],[ insert,update ],[ 114 ])).
 rule_i(10,rule([ a(1,[ t('''Nome deve ser informado!''',3) ]) ],[ t('after(',1),t(50,2),t(')',4),t('.AND.',9),t('null(',1),t(50,2),t(')',4) ],[ insert,update,delete ],[ 50 ])).
+rule_i(10,rule([ a(1,[ t('''Digite uma data de nascimento válida!''',3) ]) ],[ t('after(',1),t(113,2),t(')',4),t('.AND.',9),t(113,2),t(>,10),t('Today',23) ],[ insert,update,delete ],[ 113 ])).
+rule_i(10,rule([ a(1,[ t('''Digite uma data de falecimento válida!''',3) ]) ],[ t('after(',1),t(114,2),t(')',4),t('.AND.',9),t(114,2),t(>,10),t('Today',23) ],[ insert,update,delete ],[ 114 ])).
+rule_i(10,rule([ a(1,[ t('''A data de falecimento não pode ocorrer antes do nascimento!''',3) ]) ],[ t('after(',1),t(114,2),t(')',4),t('.AND.',9),t(114,2),t(<,10),t(113,2) ],[ insert,update,delete ],[ 114 ])).
  
 a_i(1,10,b,0,[],[ [],[ a(1,msg([ t('"Campo Data de nascimento do astro de cinema fora da faixa"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(113,2),t(')',4),t('.OR.',9),t(113,2),t(>=,10),t('ymdtod(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(')',4),t(')',4) ] ]).
 a_i(2,10,b,0,[],[ [],[ a(1,msg([ t('"Campo Data de falecimento do astro de cinema fora da faixa"',3) ],[ t('OutOfRange',3) ])) ],[ t('NOT',8),t('(',0),t('null(',1),t(114,2),t(')',4),t('.OR.',9),t(114,2),t(>=,10),t('ymdtod(',1),t('1753',3),t(',',7),t('01',3),t(',',7),t('01',3),t(')',4),t(')',4) ] ]).
 a_i(3,10,b,2,[],[ [],[ a(1,[ t('''Nome deve ser informado!''',3) ]) ],[ t('after(',1),t(50,2),t(')',4),t('.AND.',9),t('null(',1),t(50,2),t(')',4) ] ]).
-a_i(4,10,t,10,[],[ [ [ [],49,49 ] ],'IASTRO',[] ]).
+a_i(4,10,b,3,[],[ [],[ a(1,[ t('''Digite uma data de nascimento válida!''',3) ]) ],[ t('after(',1),t(113,2),t(')',4),t('.AND.',9),t(113,2),t(>,10),t('Today',23) ] ]).
+a_i(5,10,b,4,[],[ [],[ a(1,[ t('''Digite uma data de falecimento válida!''',3) ]) ],[ t('after(',1),t(114,2),t(')',4),t('.AND.',9),t(114,2),t(>,10),t('Today',23) ] ]).
+a_i(6,10,b,5,[],[ [],[ a(1,[ t('''A data de falecimento não pode ocorrer antes do nascimento!''',3) ]) ],[ t('after(',1),t(114,2),t(')',4),t('.AND.',9),t(114,2),t(<,10),t(113,2) ] ]).
+a_i(7,10,t,10,[],[ [ [ [],49,49 ] ],'IASTRO',[] ]).
+a_i(8,10,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
  
 v_i(b,i,1,113).
 v_i(b,o,1,[]).
@@ -221,11 +229,19 @@ v_i(b,i,2,114).
 v_i(b,o,2,[]).
 v_i(b,i,3,50).
 v_i(b,o,3,[]).
-v_i(t,i,4,49).
-v_i(t,o,4,50).
-v_i(t,o,4,113).
-v_i(t,o,4,114).
-v_i(t,o,4,53).
+v_i(b,i,4,113).
+v_i(b,o,4,[]).
+v_i(b,i,5,114).
+v_i(b,o,5,[]).
+v_i(b,i,6,114).
+v_i(b,o,6,[]).
+v_i(t,i,7,49).
+v_i(t,o,7,50).
+v_i(t,o,7,113).
+v_i(t,o,7,114).
+v_i(t,o,7,53).
+v_i(f,i,8,[]).
+v_i(f,o,8,'Today').
  
  
 tbl_to_delete_i(10,[ 4,[ [ 10,49,79 ] ],c,'IFILMEDIRECAO1',[ [ 4,79 ] ],[ 28,79 ] ]).
@@ -241,6 +257,7 @@ attri_i(114,[ 'AstDatFalecimento',date,8,0,'99/99/9999',0,'Data de falecimento d
 attri_i(113,[ 'AstDatNascimento',date,8,0,'99/99/9999',0,'Data de nascimento do astro de cinema','',0 ]).
 attri_i(50,[ 'AstNome',svchar,50,0,'@!',0,'Nome do astro de cinema','',0 ]).
 attri_i(49,[ 'AstCodigo',int,9,0,'ZZZZZZZZ9',0,'Código do astro de cinema','',0 ]).
+attri_i('Today',[ 'Gx_date',date,8,0,'99/99/99',1,'','',12 ]).
 attri_i('Astnome',[ 'AstNome',svchar,50,0,'@!',0,'Nome do astro.','',11 ]).
 attri_i('Astdescricao',[ 'AstDescricao',vchar,800,0,'@!',0,'Descrição do astro.','',10 ]).
 attri_i('Astdatnasc',[ 'AstDatNasc',date,8,0,'99/99/9999',0,'Data de nascimento do astro.','',9 ]).
@@ -307,7 +324,7 @@ ppi_i([ 96,96 ]).
 lit_i(2,1,button('Enter'),[ id(2),title([ 'Enter' ]),ctlname(''),rect(442,299,532,324),font('MS Shell Dlg',8,[]) ]).
 lit_i(3,1,tabcontrol,[ rect(0,0,559,286),outstyle(single),fill,lines(1),back(rgb(255,255,255)),fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor([]) ]).
 lit_i(4,3,tabpage,[ title([ 'Personalidade' ]),rect(5,29,559,286),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(0,0,0)),border(2),ctlname(''),gxcolor([]),defgxcolor('BLK','WHT') ]).
-lit_i(5,4,t('Cadastro de astros',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,26,145,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(5,4,t('Dados gerais',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,26,113,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(6,4,t(49,2),[ font('Courier New',9,[]),rect(169,78,246,98),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(49),ctrltype(edit,6),ispwd(0),e2n(1) ]).
 lit_i(7,4,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,82,78,94),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(8,4,t(50,2),[ font('Courier New',9,[]),rect(169,104,480,124),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(50),ctrltype(edit,8),ispwd(0),e2n(1) ]).
@@ -317,9 +334,9 @@ lit_i(11,4,t('Data de falecimento',3),[ font('MS Sans Serif',8,[ bold ]),rect(39
 lit_i(12,4,t(114,2),[ font('Courier New',9,[]),rect(169,182,248,202),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(114),ctrltype(edit,12),ispwd(0),e2n(1) ]).
 lit_i(13,4,t(113,2),[ font('Courier New',9,[]),rect(169,156,248,176),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(113),ctrltype(edit,13),ispwd(0),e2n(1) ]).
 lit_i(14,3,tabpage,[ title([ 'Sobre' ]),rect(5,29,559,286),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(0,0,0)),border(2),ctlname(''),gxcolor([]),defgxcolor('BLK','WHT') ]).
-lit_i(15,14,t('Descrição do astro',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,26,146,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(15,14,t('Descrição',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,26,96,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(16,14,t(53,2),[ font('Courier New',9,[]),rect(39,65,519,233),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(53),ctrltype(edit,16),ispwd(0),e2n(1) ]).
-lit_i(1,1,window,[ title([]),rect(3,25,562,362),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(1,1,window,[ title([ 'Cadastro de astros' ]),rect(3,25,562,362),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).
  

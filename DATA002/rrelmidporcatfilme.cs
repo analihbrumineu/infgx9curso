@@ -2,7 +2,7 @@
                File: RelMidPorCatFilme
         Description: Relatório de mídia por categoria/filme.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:33.98
+       Generated on: 6/11/2026 8:57:54.50
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -227,12 +227,12 @@ namespace GeneXus.Programs {
                         pr_default.readNext(1);
                      }
                      pr_default.close(1);
-                     H0C0( false, 26) ;
+                     H0C0( false, 13) ;
                      getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
                      getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV12FilNom, "@!")), 195, Gx_line+0, 480, Gx_line+13, 0) ;
                      getPrinter().GxDrawText(StringUtil.Format( (decimal)(AV13TotMid), "ZZZZZZZZZ9"), 494, Gx_line+0, 563, Gx_line+13, 2) ;
                      Gx_OldLine = Gx_line ;
-                     Gx_line = (int)(Gx_line+26) ;
+                     Gx_line = (int)(Gx_line+13) ;
                   }
                   BRK0C3 = true ;
                   pr_default.readNext(0);
@@ -282,10 +282,11 @@ namespace GeneXus.Programs {
                {
                   /* Print footers */
                   Gx_line = P_lines ;
+                  getPrinter().GxDrawLine(26, Gx_line+13, 650, Gx_line+13, 1, 0, 0, 0, 0) ;
                   getPrinter().GxAttris("MS Sans Serif", 8, true, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-                  getPrinter().GxDrawText("Rodapé", 312, Gx_line+0, 356, Gx_line+13, 0+256) ;
+                  getPrinter().GxDrawText("Rodape", 325, Gx_line+26, 369, Gx_line+39, 0+256) ;
                   Gx_OldLine = Gx_line ;
-                  Gx_line = (int)(Gx_line+40) ;
+                  Gx_line = (int)(Gx_line+52) ;
                   if ( ! bFoot )
                   {
                      getPrinter().GxEndPage() ;
@@ -302,7 +303,7 @@ namespace GeneXus.Programs {
                Gx_line = (int)(Gx_line+(M_top*lineHeight)) ;
                /* Print headers */
                getPrinter().GxStartPage() ;
-               getPrinter().GxDrawLine(26, Gx_line+156, 650, Gx_line+156, 1, 100, 100, 100, 0) ;
+               getPrinter().GxDrawLine(26, Gx_line+168, 650, Gx_line+168, 1, 100, 100, 100, 0) ;
                getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
                getPrinter().GxDrawText(StringUtil.Format( Gx_date, "99/99/99"), 595, Gx_line+0, 659, Gx_line+15, 0) ;
                getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( Gx_time, "XXXXXXXX")), 595, Gx_line+13, 659, Gx_line+28, 0) ;
@@ -317,10 +318,10 @@ namespace GeneXus.Programs {
                getPrinter().GxDrawText("Página:", 543, Gx_line+26, 586, Gx_line+39, 0+256) ;
                getPrinter().GxDrawText("Categoria", 26, Gx_line+60, 80, Gx_line+73, 0+256) ;
                getPrinter().GxDrawText("até", 182, Gx_line+60, 200, Gx_line+73, 0+256) ;
-               getPrinter().GxDrawText("Categoria", 39, Gx_line+144, 93, Gx_line+157, 0+256) ;
+               getPrinter().GxDrawText("Categoria", 39, Gx_line+156, 93, Gx_line+169, 0+256) ;
                getPrinter().GxDrawText("Total de mídias em", 26, Gx_line+80, 134, Gx_line+93, 0+256) ;
-               getPrinter().GxDrawText("Total de mídias", 494, Gx_line+144, 582, Gx_line+157, 0+256) ;
-               getPrinter().GxDrawText("Filme", 195, Gx_line+144, 224, Gx_line+157, 0+256) ;
+               getPrinter().GxDrawText("Total de mídias", 494, Gx_line+156, 582, Gx_line+169, 0+256) ;
+               getPrinter().GxDrawText("Filme", 195, Gx_line+156, 224, Gx_line+169, 0+256) ;
                getPrinter().GxDrawText("em cada título", 204, Gx_line+80, 286, Gx_line+93, 0+256) ;
                Gx_OldLine = Gx_line ;
                Gx_line = (int)(Gx_line+169) ;

@@ -1,8 +1,8 @@
 /*
                File: Login
-        Description: Login
+        Description: Tela de login.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:44.23
+       Generated on: 6/11/2026 8:58:3.31
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -66,7 +66,7 @@ namespace GeneXus.Programs {
 
       public override String getFrmTitle( )
       {
-         return "Login" ;
+         return "Tela de login." ;
       }
 
       public override GXMenuBar getMenuBar( )
@@ -86,12 +86,12 @@ namespace GeneXus.Programs {
 
       public override int getFrmWidth( )
       {
-         return 1885 ;
+         return 1014 ;
       }
 
       public override int getFrmHeight( )
       {
-         return 832 ;
+         return 741 ;
       }
 
       public override String getHelpId( )
@@ -294,24 +294,24 @@ namespace GeneXus.Programs {
 
       public override void screen( )
       {
-         GXPanel1 = new GXPanel(this, 3 , 25 , 1885 , 832 );
+         GXPanel1 = new GXPanel(this, 3 , 25 , 1014 , 741 );
          this.setIBackground(UIFactory.getColor(15));
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         edtavPesfunlogin = new GUIObjectString ( new GXEdit(20, "@!", UIFactory.getFont( "Courier New", 0, 9),933, 334, 150, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 933 , 334 , 150 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6PesFunL" );
+         edtavPesfunlogin = new GUIObjectString ( new GXEdit(20, "@!", UIFactory.getFont( "Courier New", 0, 9),452, 273, 150, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 452 , 273 , 150 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6PesFunL" );
          ((GXEdit) edtavPesfunlogin.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavPesfunlogin.addFocusListener(this);
          edtavPesfunlogin.getGXComponent().setHelpId("HLP_WLogin.htm");
-         edtavPesfunsenha = new GUIObjectString ( new GXEdit(20, "@!", UIFactory.getFont( "Courier New", 0, 9),933, 360, 150, 21, GXPanel1, true, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 933 , 360 , 150 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7PesFunS" );
+         edtavPesfunsenha = new GUIObjectString ( new GXEdit(20, "@!", UIFactory.getFont( "Courier New", 0, 9),452, 299, 150, 21, GXPanel1, true, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 452 , 299 , 150 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7PesFunS" );
          ((GXEdit) edtavPesfunsenha.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavPesfunsenha.addFocusListener(this);
          edtavPesfunsenha.getGXComponent().setHelpId("HLP_WLogin.htm");
-         bttbtt6 = UIFactory.getGXButton( GXPanel1 , "Logar" ,  962 ,  403 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt6 = UIFactory.getGXButton( GXPanel1 , "Logar" ,  481 ,  342 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt6.setTooltip("Logar");
          bttbtt6.addActionListener(this);
-         lbllbl4 = UIFactory.getLabel(GXPanel1, "Login", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 884 , 338 , 32 , 13 );
-         lbllbl5 = UIFactory.getLabel(GXPanel1, "Senha", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 884 , 364 , 37 , 13 );
+         lbllbl4 = UIFactory.getLabel(GXPanel1, "Login", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 403 , 277 , 32 , 13 );
+         lbllbl5 = UIFactory.getLabel(GXPanel1, "Senha", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 403 , 303 , 37 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavPesfunlogin ,
                    edtavPesfunsenha ,

@@ -2,7 +2,7 @@
                File: ControleDeLocadora
         Description: Controle de locadora.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:42.33
+       Generated on: 6/11/2026 8:58:1.71
        Program type: Main program
           Main DBMS: sqlserver
 */
@@ -90,7 +90,7 @@ namespace GeneXus.Programs {
 
       public override String getFrmTitle( )
       {
-         return "Controle de locadora." ;
+         return "Controle de locadora" ;
       }
 
       public override GXMenuBar getMenuBar( )

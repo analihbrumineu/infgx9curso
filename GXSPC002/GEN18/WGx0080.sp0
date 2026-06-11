@@ -281,7 +281,6 @@ form_prop_i(10,'Subfile_order','UMPV',d,[ str ]).
 form_prop_i(10,'Refresh_tout','',d,[ str ]).
 form_prop_i(10,'Refresh_tout_trig','ALL',d,[ str ]).
  
-calling_main_i(4,1).
  
 att_prop_i(2,26,'AUTONUMBER','-1',d).
 att_prop_i(2,26,'AUTONUMBER_START','1',d).

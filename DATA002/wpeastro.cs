@@ -2,7 +2,7 @@
                File: PeAstro
         Description: Cadastro de astros.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:44.44
+       Generated on: 6/11/2026 8:58:3.48
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -66,7 +66,7 @@ namespace GeneXus.Programs {
 
       public override String getFrmTitle( )
       {
-         return "Cadastro de astros." ;
+         return "Astros" ;
       }
 
       public override GXMenuBar getMenuBar( )
@@ -417,7 +417,18 @@ namespace GeneXus.Programs {
       protected void GXRefreshCommand07( )
       {
          ControlsToVariables();
+         /* Execute user event: E12V1L2 */
+         E12V1L2 ();
          /* End function GeneXus Refresh */
+      }
+
+      protected void E12V1L2( )
+      {
+         /* Refresh Routine */
+         if ( ( AV5AstCodi < 0 ) )
+         {
+            GXutil.msg( me(), "Digite um código válido!" );
+         }
       }
 
       public void loadToBuffer07( )
@@ -443,7 +454,7 @@ namespace GeneXus.Programs {
          pr_default.close(0);
       }
 
-      protected void E12V1L2( )
+      protected void E13V1L2( )
       {
          eventLevelContext();
          /* Visualizar_Click Routine */
@@ -451,7 +462,7 @@ namespace GeneXus.Programs {
          eventLevelResetContext();
       }
 
-      protected void E13V1L2( )
+      protected void E14V1L2( )
       {
          eventLevelContext();
          /* Editar_Click Routine */
@@ -459,7 +470,7 @@ namespace GeneXus.Programs {
          GXRefresh();
       }
 
-      protected void E14V1L2( )
+      protected void E15V1L2( )
       {
          eventLevelContext();
          /* Excluir_Click Routine */
@@ -467,7 +478,7 @@ namespace GeneXus.Programs {
          GXRefresh();
       }
 
-      protected void E15V1L2( )
+      protected void E16V1L2( )
       {
          eventLevelContext();
          /* 'Novo' Routine */
@@ -482,15 +493,15 @@ namespace GeneXus.Programs {
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         edtavAstcodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),65, 80, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 65 , 80 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV5AstCodi" );
+         edtavAstcodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),65, 67, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 65 , 67 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV5AstCodi" );
          ((GXEdit) edtavAstcodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavAstcodigo.addFocusListener(this);
          edtavAstcodigo.getGXComponent().setHelpId("HLP_WPeAstro.htm");
-         edtavAstnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),143, 80, 286, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 143 , 80 , 286 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6AstNome" );
+         edtavAstnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),156, 67, 286, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 156 , 67 , 286 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6AstNome" );
          ((GXEdit) edtavAstnome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavAstnome.addFocusListener(this);
          edtavAstnome.getGXComponent().setHelpId("HLP_WPeAstro.htm");
-         chkavAstdatfalecimento = new GUIObjectShort ( new GXCheckBox(GXPanel1, "Falecido?" , new java.lang.Short(1), new java.lang.Short(0)) , GXPanel1 , 442 , 82 , 84 , 17 , Integer.MAX_VALUE , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", IFontConstants.BOLD, 9) , true , "AV11AstDat" );
+         chkavAstdatfalecimento = new GUIObjectShort ( new GXCheckBox(GXPanel1, "Falecido?" , new java.lang.Short(1), new java.lang.Short(0)) , GXPanel1 , 455 , 69 , 84 , 17 , Integer.MAX_VALUE , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", IFontConstants.BOLD, 9) , true , "AV11AstDat" );
          chkavAstdatfalecimento.addFocusListener(this);
          chkavAstdatfalecimento.addItemListener(this);
          chkavAstdatfalecimento.getGXComponent().setHelpId("HLP_WPeAstro.htm");
@@ -511,13 +522,12 @@ namespace GeneXus.Programs {
          subGxsf7.getColumn(1).addItemListener( this);
          subGxsf7.getColumn(2).addActionListener( this);
          subGxsf7.getColumn(2).addItemListener( this);
-         bttbtt14 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  546 ,  78 ,  78 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt14 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  559 ,  65 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt14.setTooltip("Novo");
          bttbtt14.addActionListener(this);
          bttbtt14.setFiresEvents(false);
-         lbllbl15 = UIFactory.getLabel(GXPanel1, "Cadastro de astros", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 26 , 107 , 13 );
-         lbllbl3 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 65 , 40 , 13 );
-         lbllbl4 = UIFactory.getLabel(GXPanel1, "Nome", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 143 , 65 , 33 , 13 );
+         lbllbl3 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 52 , 40 , 13 );
+         lbllbl4 = UIFactory.getLabel(GXPanel1, "Nome", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 156 , 52 , 33 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavAstcodigo ,
                    edtavAstnome ,
@@ -620,26 +630,26 @@ namespace GeneXus.Programs {
       public override void actionEventDispatch( Object eventSource )
       {
          if ( bttbtt14.isEventSource(eventSource) ) {
-            /* Execute user event: E15V1L2 */
-            E15V1L2 ();
+            /* Execute user event: E16V1L2 */
+            E16V1L2 ();
             return;
          }
          if ( subGxsf7.isEventSource(eventSource) ) {
             return;
          }
          if ( subGxsf7.getColumn(0).isEventSource(eventSource) ) {
-            /* Execute user event: E12V1L2 */
-            E12V1L2 ();
-            return;
-         }
-         if ( subGxsf7.getColumn(1).isEventSource(eventSource) ) {
             /* Execute user event: E13V1L2 */
             E13V1L2 ();
             return;
          }
-         if ( subGxsf7.getColumn(2).isEventSource(eventSource) ) {
+         if ( subGxsf7.getColumn(1).isEventSource(eventSource) ) {
             /* Execute user event: E14V1L2 */
             E14V1L2 ();
+            return;
+         }
+         if ( subGxsf7.getColumn(2).isEventSource(eventSource) ) {
+            /* Execute user event: E15V1L2 */
+            E15V1L2 ();
             return;
          }
       }
@@ -692,18 +702,18 @@ namespace GeneXus.Programs {
                                                int modifier )
       {
          if ( subGxsf7.getColumn(0).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
-            /* Execute user event: E12V1L2 */
-            E12V1L2 ();
-            return;
-         }
-         if ( subGxsf7.getColumn(1).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
             /* Execute user event: E13V1L2 */
             E13V1L2 ();
             return;
          }
-         if ( subGxsf7.getColumn(2).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
+         if ( subGxsf7.getColumn(1).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
             /* Execute user event: E14V1L2 */
             E14V1L2 ();
+            return;
+         }
+         if ( subGxsf7.getColumn(2).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
+            /* Execute user event: E15V1L2 */
+            E15V1L2 ();
             return;
          }
       }
@@ -821,7 +831,6 @@ namespace GeneXus.Programs {
       protected GUIObjectShort chkavAstdatfalecimento ;
       protected GXSubfile subGxsf7 ;
       protected IGXButton bttbtt14 ;
-      protected ILabel lbllbl15 ;
       protected ILabel lbllbl3 ;
       protected ILabel lbllbl4 ;
    }

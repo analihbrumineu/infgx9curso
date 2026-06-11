@@ -1,8 +1,8 @@
 /*
                File: PeLocacao
-        Description: Cadastro de locação
+        Description: Cadastro de locação.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:45.13
+       Generated on: 6/11/2026 8:58:4.7
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -66,7 +66,7 @@ namespace GeneXus.Programs {
 
       public override String getFrmTitle( )
       {
-         return "Cadastro de locação" ;
+         return "Locações" ;
       }
 
       public override GXMenuBar getMenuBar( )
@@ -96,7 +96,7 @@ namespace GeneXus.Programs {
 
       public override int getFrmHeight( )
       {
-         return 767 ;
+         return 832 ;
       }
 
       public override String getHelpId( )
@@ -198,13 +198,13 @@ namespace GeneXus.Programs {
       {
       }
 
-      public void runLoad_load11( )
+      public void runLoad_load10( )
       {
          if ( exitExecuted )
          {
             return  ;
          }
-         subwpelocacao11 = new subwpelocacao11 ();
+         subwpelocacao10 = new subwpelocacao10 ();
          pr_default.dynParam(0, new Object[]{ new Object[]{
                                               AV5LocCliP ,
                                               AV6LocCliP ,
@@ -221,7 +221,7 @@ namespace GeneXus.Programs {
          });
          /* Using cursor W00262 */
          pr_default.execute(0);
-         while ( ( (pr_default.getStatus(0) != 101) ) && ( ( subGxsf11.getSize() < 10000 ) ) )
+         while ( ( (pr_default.getStatus(0) != 101) ) && ( ( subGxsf10.getSize() < 10000 ) ) )
          {
             A87LocSitu = W00262_A87LocSitu[0] ;
             n87LocSitu = W00262_n87LocSitu[0] ;
@@ -238,36 +238,36 @@ namespace GeneXus.Programs {
             E11V262 ();
             pr_default.readNext(0);
          }
-         if ( subGxsf11.getSize() >= 10000 && !(pr_default.getStatus(0) == 101) )
+         if ( subGxsf10.getSize() >= 10000 && !(pr_default.getStatus(0) == 101) )
          {
             GXutil.msg( me(), (String)(localUtil.getMessages().getMessage("mlmax", new Object[]{ 10000})) );
          }
          pr_default.close(0);
       }
 
-      public class PeLocacao_load11 : GXLoadProducer
+      public class PeLocacao_load10 : GXLoadProducer
       {
          wpelocacao _sf ;
 
-         public PeLocacao_load11( wpelocacao uType ) : base()
+         public PeLocacao_load10( wpelocacao uType ) : base()
          {
             _sf = uType;
          }
          public override void loadToBuffer( )
          {
-            _sf.loadToBuffer11();
+            _sf.loadToBuffer10();
          }
 
          public override void runLoad( )
          {
             if(!UIFactory.isDisposed( _sf.getIPanel() )) {
-               _sf.runLoad_load11();
+               _sf.runLoad_load10();
             }
          }
 
          public override void closeCursors( )
          {
-            _sf.closeCursors11();
+            _sf.closeCursors10();
          }
 
       }
@@ -286,7 +286,7 @@ namespace GeneXus.Programs {
             ControlsToVariables();
             standAlone();
             VariablesToControls();
-            subGxsf11.refresh();
+            subGxsf10.refresh();
             gxIsRefreshing = false ;
          }
       }
@@ -295,98 +295,98 @@ namespace GeneXus.Programs {
       {
       }
 
-      public bool isLoadAtStartup_flow11( )
+      public bool isLoadAtStartup_flow10( )
       {
          return true;
       }
 
-      public void autoRefresh_flow11( GXSubfile subfile ,
+      public void autoRefresh_flow10( GXSubfile subfile ,
                                       bool loadedFirstTime )
       {
-         if (( false ) || (!loadedFirstTime && ! isLoadAtStartup_flow11() )) {
+         if (( false ) || (!loadedFirstTime && ! isLoadAtStartup_flow10() )) {
             subfile.refresh();
-            resetSubfileConditions_flow11() ;
+            resetSubfileConditions_flow10() ;
          }
       }
 
-      public bool getSearch_flow11( )
+      public bool getSearch_flow10( )
       {
          return false ;
       }
 
-      public void resetSubfileConditions_flow11( )
+      public void resetSubfileConditions_flow10( )
       {
       }
 
-      public void resetSearchConditions_flow11( bool defaults )
+      public void resetSearchConditions_flow10( bool defaults )
       {
       }
 
-      public GXSubfileElement getNewSubfileElement_flow11( )
+      public GXSubfileElement getNewSubfileElement_flow10( )
       {
-         return new subwpelocacao11 ();
+         return new subwpelocacao10 ();
       }
 
-      public bool getSearch_flow11( GXSubfileElement subfileElement )
+      public bool getSearch_flow10( GXSubfileElement subfileElement )
       {
          return true;
       }
 
-      public void setConditionalColor_flow11( GUIObject comp ,
+      public void setConditionalColor_flow10( GUIObject comp ,
                                               GXSubfileElement element )
       {
 
       }
 
-      public bool getNoaccept_flow11( int col ,
+      public bool getNoaccept_flow10( int col ,
                                       GXSubfileElement element ,
                                       bool enabled )
       {
          return !enabled;
       }
 
-      public void refresh_flow11( )
+      public void refresh_flow10( )
       {
-         GXRefreshCommand11 ();
+         GXRefreshCommand10 ();
       }
 
-      public class PeLocacao_flow11 : GXSubfileFlow
+      public class PeLocacao_flow10 : GXSubfileFlow
       {
          wpelocacao _sf ;
 
-         public PeLocacao_flow11( wpelocacao uType ) : base()
+         public PeLocacao_flow10( wpelocacao uType ) : base()
          {
             _sf = uType;
          }
          public bool isLoadAtStartup( )
          {
-            return _sf.isLoadAtStartup_flow11();
+            return _sf.isLoadAtStartup_flow10();
          }
 
          public void autoRefresh( GXSubfile subfile ,
                                   bool loadedFirstTime )
          {
-            _sf.autoRefresh_flow11(subfile, loadedFirstTime);
+            _sf.autoRefresh_flow10(subfile, loadedFirstTime);
          }
 
          public bool getSearch( )
          {
-            return _sf.getSearch_flow11();
+            return _sf.getSearch_flow10();
          }
 
          public void resetSubfileConditions( )
          {
-            _sf.resetSubfileConditions_flow11();
+            _sf.resetSubfileConditions_flow10();
          }
 
          public void resetSearchConditions( bool defaults )
          {
-            _sf.resetSearchConditions_flow11(defaults);
+            _sf.resetSearchConditions_flow10(defaults);
          }
 
          public GXSubfileElement getNewSubfileElement( )
          {
-            return _sf.getNewSubfileElement_flow11();
+            return _sf.getNewSubfileElement_flow10();
          }
 
          public void refreshScreen( )
@@ -396,39 +396,41 @@ namespace GeneXus.Programs {
 
          public bool getSearch( GXSubfileElement subfileElement )
          {
-            return _sf.getSearch_flow11(subfileElement);
+            return _sf.getSearch_flow10(subfileElement);
          }
 
          public void setConditionalColor( GUIObject comp ,
                                           GXSubfileElement element )
          {
-            _sf.setConditionalColor_flow11(comp, element);
+            _sf.setConditionalColor_flow10(comp, element);
          }
 
          public bool getNoaccept( int col ,
                                   GXSubfileElement element ,
                                   bool enabled )
          {
-            return _sf.getNoaccept_flow11(col, element, enabled);
+            return _sf.getNoaccept_flow10(col, element, enabled);
          }
 
          public void refresh( )
          {
-            _sf.refresh_flow11();
+            _sf.refresh_flow10();
          }
 
       }
 
-      protected void GXRefreshCommand11( )
+      protected void GXRefreshCommand10( )
       {
          ControlsToVariables();
+         /* Execute user event: E12V262 */
+         E12V262 ();
          /* End function GeneXus Refresh */
       }
 
       public override void GXStart( )
       {
-         /* Execute user event: E12V262 */
-         E12V262 ();
+         /* Execute user event: E13V262 */
+         E13V262 ();
          if ( returnInSub )
          {
             if (canCleanup()) {
@@ -439,7 +441,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void E12V262( )
+      protected void E13V262( )
       {
          eventNoLevelContext();
          /* Start Routine */
@@ -447,13 +449,29 @@ namespace GeneXus.Programs {
          cmbavLocsituacao.setValue(AV8LocSitu);
       }
 
-      public void loadToBuffer11( )
+      protected void E12V262( )
       {
-         subwpelocacao11 oAux = subwpelocacao11 ;
-         subwpelocacao11 = new subwpelocacao11 ();
-         variablesToSubfile11 ();
-         subGxsf11.addElement(subwpelocacao11);
-         subwpelocacao11 = oAux;
+         /* Refresh Routine */
+         if ( ( AV5LocCliP < 0 ) )
+         {
+            GXutil.msg( me(), "Digite um código válido!" );
+         }
+         else
+         {
+            if ( ( AV7LocDatL > Gx_date ) )
+            {
+               GXutil.msg( me(), "Não é possível consultar locações futuras!" );
+            }
+         }
+      }
+
+      public void loadToBuffer10( )
+      {
+         subwpelocacao10 oAux = subwpelocacao10 ;
+         subwpelocacao10 = new subwpelocacao10 ();
+         variablesToSubfile10 ();
+         subGxsf10.addElement(subwpelocacao10);
+         subwpelocacao10 = oAux;
       }
 
       private void E11V262( )
@@ -462,15 +480,15 @@ namespace GeneXus.Programs {
          /* Load Routine */
          AV15Editar = "c:\\KB\\DATA002\\bin\\editIcon.jpg" ;
          AV16Visual = "c:\\KB\\DATA002\\bin\\visualizarIcon.jpg" ;
-         subGxsf11.loadCommand();
+         subGxsf10.loadCommand();
       }
 
-      protected void closeCursors11( )
+      protected void closeCursors10( )
       {
          pr_default.close(0);
       }
 
-      protected void E13V262( )
+      protected void E14V262( )
       {
          eventLevelContext();
          /* 'Novo' Routine */
@@ -478,32 +496,17 @@ namespace GeneXus.Programs {
          GXRefresh();
       }
 
-      protected void E14V262( )
-      {
-         eventLevelContext();
-         /* 'Marcado' Routine */
-         for (java.util.Enumeration en0 = subGxsf11.elements(); en0.hasMoreElements();)
-         {
-            subwpelocacao11 = (subwpelocacao11) en0.nextElement();
-            subfileToVariables11 ();
-            AV9Marcado = "S" ;
-            variablesToSubfile11 ();
-            subGxsf11.refreshLineValueFEL(subwpelocacao11);
-         }
-         eventLevelContext( );
-      }
-
       protected void E15V262( )
       {
          eventLevelContext();
-         /* 'Desmarcado' Routine */
-         for (java.util.Enumeration en1 = subGxsf11.elements(); en1.hasMoreElements();)
+         /* 'Marcado' Routine */
+         for (java.util.Enumeration en0 = subGxsf10.elements(); en0.hasMoreElements();)
          {
-            subwpelocacao11 = (subwpelocacao11) en1.nextElement();
-            subfileToVariables11 ();
-            AV9Marcado = "N" ;
-            variablesToSubfile11 ();
-            subGxsf11.refreshLineValueFEL(subwpelocacao11);
+            subwpelocacao10 = (subwpelocacao10) en0.nextElement();
+            subfileToVariables10 ();
+            AV9Marcado = "S" ;
+            variablesToSubfile10 ();
+            subGxsf10.refreshLineValueFEL(subwpelocacao10);
          }
          eventLevelContext( );
       }
@@ -511,11 +514,26 @@ namespace GeneXus.Programs {
       protected void E16V262( )
       {
          eventLevelContext();
-         /* 'RealizarDevolver' Routine */
-         for (java.util.Enumeration en2 = subGxsf11.elements(); en2.hasMoreElements();)
+         /* 'Desmarcado' Routine */
+         for (java.util.Enumeration en1 = subGxsf10.elements(); en1.hasMoreElements();)
          {
-            subwpelocacao11 = (subwpelocacao11) en2.nextElement();
-            subfileToVariables11 ();
+            subwpelocacao10 = (subwpelocacao10) en1.nextElement();
+            subfileToVariables10 ();
+            AV9Marcado = "N" ;
+            variablesToSubfile10 ();
+            subGxsf10.refreshLineValueFEL(subwpelocacao10);
+         }
+         eventLevelContext( );
+      }
+
+      protected void E17V262( )
+      {
+         eventLevelContext();
+         /* 'RealizarDevolver' Routine */
+         for (java.util.Enumeration en2 = subGxsf10.elements(); en2.hasMoreElements();)
+         {
+            subwpelocacao10 = (subwpelocacao10) en2.nextElement();
+            subfileToVariables10 ();
             if ( ( String.CompareOrdinal(AV9Marcado.TrimEnd(' '), "S".TrimEnd(' ') ) == 0 ) )
             {
                AV10AtzLoc = 1 ;
@@ -526,35 +544,35 @@ namespace GeneXus.Programs {
                   GXutil.msg( me(), AV17MsgErr );
                }
             }
-            variablesToSubfile11 ();
-            subGxsf11.refreshLineValueFEL(subwpelocacao11);
-         }
-         eventLevelContext( );
-         GXRefresh();
-      }
-
-      protected void E17V262( )
-      {
-         eventLevelContext();
-         /* 'CancelarExcluir' Routine */
-         for (java.util.Enumeration en3 = subGxsf11.elements(); en3.hasMoreElements();)
-         {
-            subwpelocacao11 = (subwpelocacao11) en3.nextElement();
-            subfileToVariables11 ();
-            if ( ( String.CompareOrdinal(AV9Marcado.TrimEnd(' '), "S".TrimEnd(' ') ) == 0 ) )
-            {
-               AV10AtzLoc = 2 ;
-               new patzlocacao(context, base.remoteHandle, base.context).execute(  AV12Y, ref  A86LocCodi,  AV10AtzLoc, ref  A87LocSitu, out  AV17MsgErr) ;
-               n87LocSitu = false ;
-            }
-            variablesToSubfile11 ();
-            subGxsf11.refreshLineValueFEL(subwpelocacao11);
+            variablesToSubfile10 ();
+            subGxsf10.refreshLineValueFEL(subwpelocacao10);
          }
          eventLevelContext( );
          GXRefresh();
       }
 
       protected void E18V262( )
+      {
+         eventLevelContext();
+         /* 'CancelarExcluir' Routine */
+         for (java.util.Enumeration en3 = subGxsf10.elements(); en3.hasMoreElements();)
+         {
+            subwpelocacao10 = (subwpelocacao10) en3.nextElement();
+            subfileToVariables10 ();
+            if ( ( String.CompareOrdinal(AV9Marcado.TrimEnd(' '), "S".TrimEnd(' ') ) == 0 ) )
+            {
+               AV10AtzLoc = 2 ;
+               new patzlocacao(context, base.remoteHandle, base.context).execute(  AV12Y, ref  A86LocCodi,  AV10AtzLoc, ref  A87LocSitu, out  AV17MsgErr) ;
+               n87LocSitu = false ;
+            }
+            variablesToSubfile10 ();
+            subGxsf10.refreshLineValueFEL(subwpelocacao10);
+         }
+         eventLevelContext( );
+         GXRefresh();
+      }
+
+      protected void E19V262( )
       {
          eventLevelContext();
          /* 'AcessoPelaGrid' Routine */
@@ -569,7 +587,7 @@ namespace GeneXus.Programs {
          GXRefresh();
       }
 
-      protected void E19V262( )
+      protected void E20V262( )
       {
          eventLevelContext();
          /* Visualizar_Click Routine */
@@ -584,7 +602,7 @@ namespace GeneXus.Programs {
          eventLevelResetContext();
       }
 
-      protected void E20V262( )
+      protected void E21V262( )
       {
          eventLevelContext();
          /* Editar_Click Routine */
@@ -601,24 +619,24 @@ namespace GeneXus.Programs {
 
       public override void screen( )
       {
-         GXPanel1 = new GXPanel(this, 3 , 25 , 910 , 767 );
+         GXPanel1 = new GXPanel(this, 3 , 25 , 910 , 832 );
          this.setIBackground(UIFactory.getColor(15));
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         edtavLocclipescodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),117, 65, 78, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 117 , 65 , 78 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV5LocCliP" );
+         edtavLocclipescodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),65, 71, 78, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 65 , 71 , 78 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV5LocCliP" );
          ((GXEdit) edtavLocclipescodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavLocclipescodigo.addFocusListener(this);
          edtavLocclipescodigo.getGXComponent().setHelpId("HLP_WPeLocacao.htm");
-         edtavLocclipesnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),273, 65, 360, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 273 , 65 , 360 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6LocCliP" );
+         edtavLocclipesnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),156, 71, 360, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 156 , 71 , 360 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6LocCliP" );
          ((GXEdit) edtavLocclipesnome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavLocclipesnome.addFocusListener(this);
          edtavLocclipesnome.getGXComponent().setHelpId("HLP_WPeLocacao.htm");
-         edtavLocdatlocacao = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),117, 93, 80, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , GXPanel1 , 117 , 93 , 80 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7LocDatL" );
+         edtavLocdatlocacao = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),65, 117, 80, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , GXPanel1 , 65 , 117 , 80 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7LocDatL" );
          ((GXEdit) edtavLocdatlocacao.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavLocdatlocacao.addFocusListener(this);
          edtavLocdatlocacao.getGXComponent().setHelpId("HLP_WPeLocacao.htm");
-         cmbavLocsituacao = new GUIObjectShort ( new GXComboBox(GXPanel1) , GXPanel1 , 273 , 93 , 117 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV8LocSitu" );
+         cmbavLocsituacao = new GUIObjectShort ( new GXComboBox(GXPanel1) , GXPanel1 , 156 , 117 , 117 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV8LocSitu" );
          ((GXComboBox) cmbavLocsituacao.getGXComponent()).addItem( new java.lang.Short(0),"Todas");
          ((GXComboBox) cmbavLocsituacao.getGXComponent()).addItem( new java.lang.Short(1),"Digitada");
          ((GXComboBox) cmbavLocsituacao.getGXComponent()).addItem( new java.lang.Short(2),"Realizada");
@@ -627,7 +645,7 @@ namespace GeneXus.Programs {
          cmbavLocsituacao.addFocusListener(this);
          cmbavLocsituacao.addItemListener(this);
          cmbavLocsituacao.getGXComponent().setHelpId("HLP_WPeLocacao.htm");
-         addSubfile ( subGxsf11  = new GXSubfile ( new PeLocacao_load11(this), new PeLocacao_flow11(this), false , new GXColumnDefinition[] {
+         addSubfile ( subGxsf10  = new GXSubfile ( new PeLocacao_load10(this), new PeLocacao_flow10(this), false , new GXColumnDefinition[] {
           new GXColumnDefinition( new GUIObjectString ( new GXCheckBox(GXPanel1, "" , "S", "N") , null ,  0 , 0 , 26 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV9Marcado" ), ""  , UIFactory.getColor(18) , UIFactory.getColor(15) , 26 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , true , true )
          , new GXColumnDefinition( new GUIObjectString ( new SubfileImage() , null ,  0 , 0 , 25 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV16Visual" ), ""  , UIFactory.getColor(18) , UIFactory.getColor(15) , 25 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectString ( new SubfileImage() , null ,  0 , 0 , 25 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV15Editar" ), ""  , UIFactory.getColor(18) , UIFactory.getColor(15) , 25 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
@@ -636,88 +654,87 @@ namespace GeneXus.Programs {
          , new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 120, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 119 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A91LocCliP" ), "Código do locatário"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 119 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , false )
          , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 409, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 408 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A92LocCliP" ), "Locatário"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 408 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectShort ( new GXComboBox(GXPanel1, false) , null ,  0 , 0 , 86 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A87LocSitu" ), "Situação"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 86 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         }, 30 , 18 , GXPanel1 , 65 , 130 , 780 , 572 ,  18 ));
-         ((GXComboBox) subGxsf11.getColumn(7).getGXComponent()).addItem( new java.lang.Short(1),"Digitada");
-         ((GXComboBox) subGxsf11.getColumn(7).getGXComponent()).addItem( new java.lang.Short(2),"Realizada");
-         ((GXComboBox) subGxsf11.getColumn(7).getGXComponent()).addItem( new java.lang.Short(3),"Devolvida");
-         ((GXComboBox) subGxsf11.getColumn(7).getGXComponent()).addItem( new java.lang.Short(4),"Cancelada");
-         subGxsf11.addActionListener(this);
-         subGxsf11.addFocusListener(this);
-         subGxsf11.setSortOnClick(true);
-         subGxsf11.getColumn(1).addActionListener( this);
-         subGxsf11.getColumn(1).addItemListener( this);
-         subGxsf11.getColumn(2).addActionListener( this);
-         subGxsf11.getColumn(2).addItemListener( this);
-         bttbtt20 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  689 ,  91 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
-         bttbtt20.setTooltip("Novo");
+         }, 33 , 18 , GXPanel1 , 65 , 169 , 780 , 611 ,  18 ));
+         ((GXComboBox) subGxsf10.getColumn(7).getGXComponent()).addItem( new java.lang.Short(1),"Digitada");
+         ((GXComboBox) subGxsf10.getColumn(7).getGXComponent()).addItem( new java.lang.Short(2),"Realizada");
+         ((GXComboBox) subGxsf10.getColumn(7).getGXComponent()).addItem( new java.lang.Short(3),"Devolvida");
+         ((GXComboBox) subGxsf10.getColumn(7).getGXComponent()).addItem( new java.lang.Short(4),"Cancelada");
+         subGxsf10.addActionListener(this);
+         subGxsf10.addFocusListener(this);
+         subGxsf10.setSortOnClick(true);
+         subGxsf10.getColumn(1).addActionListener( this);
+         subGxsf10.getColumn(1).addItemListener( this);
+         subGxsf10.getColumn(2).addActionListener( this);
+         subGxsf10.getColumn(2).addItemListener( this);
+         bttbtt19 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  739 ,  115 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt19.setTooltip("Novo");
+         bttbtt19.addActionListener(this);
+         bttbtt19.setFiresEvents(false);
+         bttbtt20 = UIFactory.getGXButton( GXPanel1 , "M" ,  117 ,  793 ,  26 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt20.setTooltip("M");
          bttbtt20.addActionListener(this);
          bttbtt20.setFiresEvents(false);
-         bttbtt21 = UIFactory.getGXButton( GXPanel1 , "M" ,  91 ,  715 ,  26 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
-         bttbtt21.setTooltip("M");
+         bttbtt21 = UIFactory.getGXButton( GXPanel1 , "D" ,  156 ,  793 ,  26 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt21.setTooltip("D");
          bttbtt21.addActionListener(this);
          bttbtt21.setFiresEvents(false);
-         bttbtt22 = UIFactory.getGXButton( GXPanel1 , "D" ,  130 ,  715 ,  26 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
-         bttbtt22.setTooltip("D");
+         bttbtt22 = UIFactory.getGXButton( GXPanel1 , "Realizar/Devolver" ,  598 ,  793 ,  104 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt22.setTooltip("Realizar/Devolver");
          bttbtt22.addActionListener(this);
          bttbtt22.setFiresEvents(false);
-         bttbtt23 = UIFactory.getGXButton( GXPanel1 , "Realizar/Devolver" ,  572 ,  715 ,  104 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
-         bttbtt23.setTooltip("Realizar/Devolver");
+         bttbtt23 = UIFactory.getGXButton( GXPanel1 , "Cancelar/Excluir" ,  715 ,  793 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt23.setTooltip("Cancelar/Excluir");
          bttbtt23.addActionListener(this);
          bttbtt23.setFiresEvents(false);
-         bttbtt24 = UIFactory.getGXButton( GXPanel1 , "Cancelar/Excluir" ,  689 ,  715 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
-         bttbtt24.setTooltip("Cancelar/Excluir");
-         bttbtt24.addActionListener(this);
-         bttbtt24.setFiresEvents(false);
-         lbllbl2 = UIFactory.getLabel(GXPanel1, "Cadastro de locação", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 26 , 118 , 13 );
-         lbllbl7 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 69 , 40 , 13 );
-         lbllbl8 = UIFactory.getLabel(GXPanel1, "Nome", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 208 , 69 , 33 , 13 );
-         lbllbl9 = UIFactory.getLabel(GXPanel1, "Data", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 97 , 28 , 13 );
-         lbllbl10 = UIFactory.getLabel(GXPanel1, "Situação", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 208 , 97 , 51 , 13 );
+         lbllbl6 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 52 , 40 , 13 );
+         lbllbl7 = UIFactory.getLabel(GXPanel1, "Nome", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 156 , 52 , 33 , 13 );
+         lbllbl8 = UIFactory.getLabel(GXPanel1, "Data", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 101 , 28 , 13 );
+         lbllbl9 = UIFactory.getLabel(GXPanel1, "Situação", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 156 , 101 , 51 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavLocclipescodigo ,
                    edtavLocclipesnome ,
                    edtavLocdatlocacao ,
                    cmbavLocsituacao ,
-                   subGxsf11 ,
+                   subGxsf10 ,
+                   bttbtt19 ,
                    bttbtt20 ,
                    bttbtt21 ,
                    bttbtt22 ,
-                   bttbtt23 ,
-                   bttbtt24
+                   bttbtt23
          });
       }
 
       public override void setFocusFirst( )
       {
-         setFocus(subGxsf11, true);
+         setFocus(subGxsf10, true);
       }
 
       public override void reloadDynamicLists( int id )
       {
       }
 
-      protected void variablesToSubfile11( )
+      protected void variablesToSubfile10( )
       {
-         subwpelocacao11.setVMarcado(AV9Marcado);
-         subwpelocacao11.setVVisualizar(AV16Visual);
-         subwpelocacao11.setVEditar(AV15Editar);
-         subwpelocacao11.setLocCodigo(A86LocCodi);
-         subwpelocacao11.setLocDatLocacao(A88LocDatL);
-         subwpelocacao11.setLocCliPesCodigo(A91LocCliP);
-         subwpelocacao11.setLocCliPesNome(A92LocCliP);
-         subwpelocacao11.setLocSituacao(A87LocSitu);
+         subwpelocacao10.setVMarcado(AV9Marcado);
+         subwpelocacao10.setVVisualizar(AV16Visual);
+         subwpelocacao10.setVEditar(AV15Editar);
+         subwpelocacao10.setLocCodigo(A86LocCodi);
+         subwpelocacao10.setLocDatLocacao(A88LocDatL);
+         subwpelocacao10.setLocCliPesCodigo(A91LocCliP);
+         subwpelocacao10.setLocCliPesNome(A92LocCliP);
+         subwpelocacao10.setLocSituacao(A87LocSitu);
       }
 
-      protected void subfileToVariables11( )
+      protected void subfileToVariables10( )
       {
-         AV9Marcado = subwpelocacao11.getVMarcado();
-         AV16Visual = subwpelocacao11.getVVisualizar();
-         AV15Editar = subwpelocacao11.getVEditar();
-         A86LocCodi = subwpelocacao11.getLocCodigo();
-         A88LocDatL = subwpelocacao11.getLocDatLocacao();
-         A91LocCliP = subwpelocacao11.getLocCliPesCodigo();
-         A92LocCliP = subwpelocacao11.getLocCliPesNome();
-         A87LocSitu = subwpelocacao11.getLocSituacao();
+         AV9Marcado = subwpelocacao10.getVMarcado();
+         AV16Visual = subwpelocacao10.getVVisualizar();
+         AV15Editar = subwpelocacao10.getVEditar();
+         A86LocCodi = subwpelocacao10.getLocCodigo();
+         A88LocDatL = subwpelocacao10.getLocDatLocacao();
+         A91LocCliP = subwpelocacao10.getLocCliPesCodigo();
+         A92LocCliP = subwpelocacao10.getLocCliPesNome();
+         A87LocSitu = subwpelocacao10.getLocSituacao();
       }
 
       public override void VariablesToControls( )
@@ -754,74 +771,74 @@ namespace GeneXus.Programs {
       public override void eventLevelContext( )
       {
          ControlsToVariables();
-         if ( subGxsf11.inValidElement() )
+         if ( subGxsf10.inValidElement() )
          {
-            subwpelocacao11 = ( subwpelocacao11 ) subGxsf11.getCurrentElement() ;
+            subwpelocacao10 = ( subwpelocacao10 ) subGxsf10.getCurrentElement() ;
          }
          else
          {
-            subwpelocacao11 = new subwpelocacao11 ();
+            subwpelocacao10 = new subwpelocacao10 ();
          }
-         subfileToVariables11 ();
+         subfileToVariables10 ();
       }
 
       protected void eventLevelResetContext( )
       {
-         variablesToSubfile11 ();
-         subGxsf11.refreshLineValue(subwpelocacao11);
+         variablesToSubfile10 ();
+         subGxsf10.refreshLineValue(subwpelocacao10);
       }
 
       protected void reloadGridRow( )
       {
-         if ( subGxsf11.inValidElement() )
+         if ( subGxsf10.inValidElement() )
          {
-            subwpelocacao11 = ( subwpelocacao11 ) subGxsf11.getCurrentElement() ;
+            subwpelocacao10 = ( subwpelocacao10 ) subGxsf10.getCurrentElement() ;
          }
          else
          {
-            subwpelocacao11 = new subwpelocacao11 ();
+            subwpelocacao10 = new subwpelocacao10 ();
          }
-         subfileToVariables11 ();
+         subfileToVariables10 ();
       }
 
       public override void actionEventDispatch( Object eventSource )
       {
-         if ( bttbtt20.isEventSource(eventSource) ) {
-            /* Execute user event: E13V262 */
-            E13V262 ();
-            return;
-         }
-         if ( bttbtt21.isEventSource(eventSource) ) {
+         if ( bttbtt19.isEventSource(eventSource) ) {
             /* Execute user event: E14V262 */
             E14V262 ();
             return;
          }
-         if ( bttbtt22.isEventSource(eventSource) ) {
+         if ( bttbtt20.isEventSource(eventSource) ) {
             /* Execute user event: E15V262 */
             E15V262 ();
             return;
          }
-         if ( bttbtt23.isEventSource(eventSource) ) {
+         if ( bttbtt21.isEventSource(eventSource) ) {
             /* Execute user event: E16V262 */
             E16V262 ();
             return;
          }
-         if ( bttbtt24.isEventSource(eventSource) ) {
+         if ( bttbtt22.isEventSource(eventSource) ) {
             /* Execute user event: E17V262 */
             E17V262 ();
             return;
          }
-         if ( subGxsf11.isEventSource(eventSource) ) {
+         if ( bttbtt23.isEventSource(eventSource) ) {
+            /* Execute user event: E18V262 */
+            E18V262 ();
             return;
          }
-         if ( subGxsf11.getColumn(1).isEventSource(eventSource) ) {
-            /* Execute user event: E19V262 */
-            E19V262 ();
+         if ( subGxsf10.isEventSource(eventSource) ) {
             return;
          }
-         if ( subGxsf11.getColumn(2).isEventSource(eventSource) ) {
+         if ( subGxsf10.getColumn(1).isEventSource(eventSource) ) {
             /* Execute user event: E20V262 */
             E20V262 ();
+            return;
+         }
+         if ( subGxsf10.getColumn(2).isEventSource(eventSource) ) {
+            /* Execute user event: E21V262 */
+            E21V262 ();
             return;
          }
       }
@@ -881,14 +898,14 @@ namespace GeneXus.Programs {
       public override void mouseEventDispatch( Object eventSource ,
                                                int modifier )
       {
-         if ( subGxsf11.getColumn(1).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
-            /* Execute user event: E19V262 */
-            E19V262 ();
-            return;
-         }
-         if ( subGxsf11.getColumn(2).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
+         if ( subGxsf10.getColumn(1).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
             /* Execute user event: E20V262 */
             E20V262 ();
+            return;
+         }
+         if ( subGxsf10.getColumn(2).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
+            /* Execute user event: E21V262 */
+            E21V262 ();
             return;
          }
       }
@@ -897,8 +914,8 @@ namespace GeneXus.Programs {
                                              int keyCode )
       {
          if (keyCode == UIFactory.getKeyCodes().getF4()) {
-            /* Execute user event: E18V262 */
-            E18V262 ();
+            /* Execute user event: E19V262 */
+            E19V262 ();
             return true ;
          }
          if (triggerEventEnter(eventSource, keyCode)) {
@@ -948,7 +965,7 @@ namespace GeneXus.Programs {
 
       public override void initialize( )
       {
-         subwpelocacao11 = new subwpelocacao11();
+         subwpelocacao10 = new subwpelocacao10();
          scmdbuf = "" ;
          AV5LocCliP = 0 ;
          AV6LocCliP = "" ;
@@ -974,12 +991,14 @@ namespace GeneXus.Programs {
          A86LocCodi = 0 ;
          gxIsRefreshing = false ;
          returnInSub = false ;
+         Gx_date = (DateTime)(DateTime.MinValue) ;
          AV9Marcado = "" ;
          AV15Editar = "" ;
          AV16Visual = "" ;
          AV10AtzLoc = 0 ;
          AV12Y = 0 ;
          AV17MsgErr = "" ;
+         Gx_date = DateTimeUtil.Today( ) ;
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.wpelocacao__default(),
             new Object[][] {
                 new Object[] {
@@ -988,7 +1007,9 @@ namespace GeneXus.Programs {
             }
          );
          reloadDynamicLists(0);
+         Gx_date = DateTimeUtil.Today( ) ;
          /* GeneXus formulas. */
+         Gx_date = DateTimeUtil.Today( ) ;
          context.Gx_err = 0 ;
       }
 
@@ -1003,6 +1024,7 @@ namespace GeneXus.Programs {
       protected String AV9Marcado ;
       protected DateTime AV7LocDatL ;
       protected DateTime A88LocDatL ;
+      protected DateTime Gx_date ;
       protected bool n87LocSitu ;
       protected bool n92LocCliP ;
       protected bool n91LocCliP ;
@@ -1017,7 +1039,7 @@ namespace GeneXus.Programs {
       protected IGxDataStore dsDefault ;
       protected IGxContext context ;
       protected bool IsMain ;
-      protected subwpelocacao11 subwpelocacao11 ;
+      protected subwpelocacao10 subwpelocacao10 ;
       protected IDataReader W00262 ;
       protected IDataStoreProvider pr_default ;
       protected short[] W00262_A87LocSitu ;
@@ -1034,17 +1056,16 @@ namespace GeneXus.Programs {
       protected GUIObjectString edtavLocclipesnome ;
       protected GUIObjectDatetime edtavLocdatlocacao ;
       protected GUIObjectShort cmbavLocsituacao ;
-      protected GXSubfile subGxsf11 ;
+      protected GXSubfile subGxsf10 ;
+      protected IGXButton bttbtt19 ;
       protected IGXButton bttbtt20 ;
       protected IGXButton bttbtt21 ;
       protected IGXButton bttbtt22 ;
       protected IGXButton bttbtt23 ;
-      protected IGXButton bttbtt24 ;
-      protected ILabel lbllbl2 ;
+      protected ILabel lbllbl6 ;
       protected ILabel lbllbl7 ;
       protected ILabel lbllbl8 ;
       protected ILabel lbllbl9 ;
-      protected ILabel lbllbl10 ;
    }
 
    public class wpelocacao__default : DataStoreHelperBase, IDataStoreHelper
@@ -1142,7 +1163,7 @@ namespace GeneXus.Programs {
           prmW00262 = new Object[] {
           } ;
           def= new GeneXus.Data.NTier.ADO.CursorDef[] {
-              new GeneXus.Data.NTier.ADO.CursorDef("W00262", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW00262,25,0,true,false )
+              new GeneXus.Data.NTier.ADO.CursorDef("W00262", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW00262,26,0,true,false )
           };
        }
     }

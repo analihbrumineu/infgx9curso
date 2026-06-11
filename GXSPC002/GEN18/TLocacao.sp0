@@ -30,7 +30,7 @@ lits_i('Situação',4,5).
 lits_i('Data da locação',5,5).
 lits_i('Data da devolução',6,5).
 lits_i('Data de cancelamento',7,5).
-lits_i('Cadastro de locação',1,5).
+lits_i('Dados gerais da locação',1,5).
 lits_i('Código',11,7).
 lits_i('Nome completo',12,7).
 lits_i('Área do cliente',10,5).
@@ -493,23 +493,23 @@ b_line_i(1,2,1,cmd,0,[ t('',107,0,0),t([ t('Cadastrodelocacao',3,0,0),t('Activep
 b_line_i(3,2,1,cmd,0,[ t('',107,0,0),t('Loctotvalor',23,0,0),t(=,10,0,0),t(95,2,0,0) ]).
 b_line_i(5,2,1,cmd,0,[ t('',147,0,0) ]).
 b_line_i(7,2,1,cmd,0,[ t('',146,0,0),t('''Pesquisar''',3,7,6),t('4',3,0,17) ]).
-b_line_i(8,2,1,cmd,0,[ t('',152,0,0) ]).
-b_line_i(9,2,1,cmd,0,[ t('',153,0,0),t('cursor(',1,0,13),t(91,2,0,20),t(')',4,0,35) ]).
-b_line_i(9,2,1,cmd,0,[ t('',104,0,0),t(o(4,'ConsCliente'),28,0,37),t('''Locacao''',3,9,55),t(',',7,0,64),t(91,2,0,66) ]).
-b_line_i(11,2,1,cmd,0,[ t('',153,0,0),t('cursor(',1,0,13),t(102,2,0,20),t(')',4,0,35) ]).
-b_line_i(11,2,1,cmd,0,[ t('',104,0,0),t(o(4,'ConsMidia'),28,0,37),t(102,2,0,53),t(',',7,0,68),t(103,2,0,70),t(',',7,0,85),t(104,2,0,87),t(',',7,0,100),t(105,2,0,102),t(',',7,0,117),t(106,2,0,119),t(',',7,0,132),t(109,2,0,134) ]).
-b_line_i(11,2,1,cmd,0,[ t('',107,0,0),t('Loctotvalor',23,0,0),t(=,10,0,0),t('Loctotvalor',23,0,0),t(+,5,0,0),t(109,2,0,0) ]).
-b_line_i(12,2,1,cmd,0,[ t('',154,0,0) ]).
-b_line_i(14,2,1,cmd,0,[ t('',147,0,0) ]).
-b_line_i(16,2,1,cmd,0,[ t('',146,0,0),t('After Trn',3,16,6) ]).
-b_line_i(17,2,1,cmd,0,[ t('',151,0,0),t('''Deseja realizar esta locação?''',3,17,12),t(')',4,0,43) ]).
-b_line_i(19,2,1,cmd,0,[ t('',107,0,0),t('Y',23,0,0),t(=,10,0,0),t('0',3,0,0) ]).
-b_line_i(21,2,1,cmd,0,[ t('',109,0,0),t('confirmed(',1,0,7),t(')',4,0,17) ]).
-b_line_i(22,2,1,cmd,0,[ t('',107,0,0),t('Y',23,0,0),t(=,10,0,0),t('1',3,0,0) ]).
-b_line_i(24,2,1,cmd,0,[ t('',104,0,0),t(o(1,'AtzLocacao'),28,0,8),t('Y',23,0,25),t(',',7,0,27),t(86,2,0,29),t(',',7,0,38),t('Atzlocacao',23,0,40),t(',',7,0,51),t(87,2,0,53),t(',',7,0,64),t('Msgerro',23,0,66) ]).
-b_line_i(26,2,1,cmd,0,[ t('',111,0,0) ]).
-b_line_i(28,2,1,cmd,0,[ t('',118,0,0) ]).
-b_line_i(29,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(9,2,1,cmd,0,[ t('',152,0,0) ]).
+b_line_i(10,2,1,cmd,0,[ t('',153,0,0),t('cursor(',1,0,13),t(91,2,0,20),t(')',4,0,35) ]).
+b_line_i(10,2,1,cmd,0,[ t('',104,0,0),t(o(4,'ConsCliente'),28,0,37),t('''Locacao''',3,10,55),t(',',7,0,64),t(91,2,0,66) ]).
+b_line_i(12,2,1,cmd,0,[ t('',153,0,0),t('cursor(',1,0,13),t(102,2,0,20),t(')',4,0,35) ]).
+b_line_i(12,2,1,cmd,0,[ t('',104,0,0),t(o(4,'ConsMidia'),28,0,37),t(102,2,0,53),t(',',7,0,68),t(103,2,0,70),t(',',7,0,85),t(104,2,0,87),t(',',7,0,100),t(105,2,0,102),t(',',7,0,117),t(106,2,0,119),t(',',7,0,132),t(109,2,0,134) ]).
+b_line_i(12,2,1,cmd,0,[ t('',107,0,0),t('Loctotvalor',23,0,0),t(=,10,0,0),t('Loctotvalor',23,0,0),t(+,5,0,0),t(109,2,0,0) ]).
+b_line_i(13,2,1,cmd,0,[ t('',154,0,0) ]).
+b_line_i(15,2,1,cmd,0,[ t('',147,0,0) ]).
+b_line_i(17,2,1,cmd,0,[ t('',146,0,0),t('After Trn',3,17,6) ]).
+b_line_i(18,2,1,cmd,0,[ t('',151,0,0),t('''Deseja realizar esta locação?''',3,18,12),t(')',4,0,43) ]).
+b_line_i(20,2,1,cmd,0,[ t('',107,0,0),t('Y',23,0,0),t(=,10,0,0),t('0',3,0,0) ]).
+b_line_i(22,2,1,cmd,0,[ t('',109,0,0),t('confirmed(',1,0,7),t(')',4,0,17) ]).
+b_line_i(23,2,1,cmd,0,[ t('',107,0,0),t('Y',23,0,0),t(=,10,0,0),t('1',3,0,0) ]).
+b_line_i(25,2,1,cmd,0,[ t('',104,0,0),t(o(1,'AtzLocacao'),28,0,8),t('Y',23,0,25),t(',',7,0,27),t(86,2,0,29),t(',',7,0,38),t('Atzlocacao',23,0,40),t(',',7,0,51),t(87,2,0,53),t(',',7,0,64),t('Msgerro',23,0,66) ]).
+b_line_i(27,2,1,cmd,0,[ t('',111,0,0) ]).
+b_line_i(29,2,1,cmd,0,[ t('',118,0,0) ]).
+b_line_i(30,2,1,cmd,0,[ t('',147,0,0) ]).
  
 sf_break_i(30,13).
  
@@ -549,7 +549,7 @@ lit_i(12,3,t(90,2),[ font('Courier New',9,[]),rect(182,182,272,202),outstyle('3d
 lit_i(13,3,t('Data de cancelamento',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,186,167,198),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(14,3,t(93,2),[ font('Courier New',9,[]),rect(182,377,254,397),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(93),ctrltype(edit,14),ispwd(0),e2n(1) ]).
 lit_i(15,3,t(94,2),[ font('Courier New',9,[]),rect(182,401,541,421),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(94),ctrltype(edit,15),ispwd(0),e2n(1) ]).
-lit_i(16,3,t('Cadastro de locação',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,26,156,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(16,3,t('Dados gerais da locação',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,26,180,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(17,3,t(91,2),[ font('Courier New',9,[]),rect(182,273,254,293),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(91),ctrltype(edit,17),ispwd(0),e2n(1) ]).
 lit_i(18,3,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(52,277,91,289),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(19,3,t(92,2),[ font('Courier New',9,[]),rect(182,297,541,317),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(92),ctrltype(edit,19),ispwd(0),e2n(1) ]).
@@ -571,7 +571,7 @@ lit_i(30,28,s(30),[ th(18),height(18),rect(39,78,766,441),back(rgb(240,240,240))
 lit_i(35,1,t('Loctotvalor',23),[ font('Courier New',9,[]),rect(91,496,198,516),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Loctotvalor'),ctrltype(edit,35),ispwd(0) ]).
 lit_i(36,1,t('Total',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,500,68,512),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(37,1,button('Enter'),[ id(37),title([ 'Confirmar' ]),ctlname('Enter'),rect(689,494,779,519),font('MS Shell Dlg',8,[]) ]).
-lit_i(1,1,window,[ title([]),rect(3,25,808,557),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(1,1,window,[ title([ 'Cadastro de locações' ]),rect(3,25,808,557),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).
  

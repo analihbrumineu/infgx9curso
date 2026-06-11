@@ -2,7 +2,7 @@
                File: Locacao
         Description: Cadastro de locações.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/10/2026 9:40:40.55
+       Generated on: 6/11/2026 8:58:0.23
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -160,7 +160,7 @@ namespace GeneXus.Programs {
 
       public override String getFrmTitle( )
       {
-         return "Cadastro de locações." ;
+         return "Cadastro de locações" ;
       }
 
       public override GXMenuBar getMenuBar( )
@@ -343,7 +343,7 @@ namespace GeneXus.Programs {
          ((GXEdit) edtLocVenPesNome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtLocVenPesNome.addFocusListener(this);
          edtLocVenPesNome.getGXComponent().setHelpId("HLP_TLocacao.htm");
-         lbllbl16 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Cadastro de locação", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 26 , 118 , 13 );
+         lbllbl16 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Dados gerais da locação", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 26 , 142 , 13 );
          lbllbl5 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 82 , 40 , 13 );
          lbllbl7 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Situação", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 108 , 51 , 13 );
          lbllbl9 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Data da locação", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 134 , 95 , 13 );
