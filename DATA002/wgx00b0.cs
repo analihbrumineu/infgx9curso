@@ -2,7 +2,7 @@
                File: Gx00B0
         Description: Lista de Seleção Configurações tipo de mídia.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:24.48
+       Generated on: 6/11/2026 11:31:34.41
        Program type: Callable routine
           Main DBMS: sqlserver
 */

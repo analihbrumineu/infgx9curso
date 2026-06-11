@@ -18,8 +18,8 @@ las_i(11,[ [ 'Mode',35,32,85 ] ]).
 lac_i(11,[ [ 35,32,85 ] ]).
  
  
-lits_i('Categoria',4,9).
-lits_i('Formato',3,9).
+lits_i('Categoria',4,10).
+lits_i('Formato',3,11).
 lits_i('Valor (R$)',5,9).
  
 cls_i([ 3,9 ],[ 5,33 ]).
@@ -289,9 +289,9 @@ ppi_i([ 96,96 ]).
  
  
 lit_i(2,1,t(32,2),[ font('Courier New',9,[]),rect(143,102,220,122),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(32),ctrltype(edit,2),ispwd(0),e2n(1) ]).
-lit_i(3,1,button('Enter'),[ id(3),title([ 'Enter' ]),ctlname(''),rect(234,182,324,207),font('MS Shell Dlg',8,[]) ]).
-lit_i(4,1,t('Categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(67,106,121,118),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(5,1,t('Formato',3),[ font('MS Sans Serif',8,[ bold ]),rect(67,80,112,92),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(3,1,button('Enter'),[ id(3),title([ 'Enter' ]),ctlname(''),rect(160,182,250,207),font('MS Shell Dlg',8,[]) ]).
+lit_i(4,1,t('Categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(70,106,124,118),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(5,1,t('Formato',3),[ font('MS Sans Serif',8,[ bold ]),rect(79,80,124,92),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(6,1,t(35,2),[ font('Courier New',9,[]),rect(143,76,220,96),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(35),ctrltype(combo,6),e2n(1) ]).
 lit_i(7,1,t('Valor (R$)',3),[ font('MS Sans Serif',8,[ bold ]),rect(67,132,124,144),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(8,1,t(85,2),[ font('Courier New',9,[]),rect(143,128,250,148),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(85),ctrltype(edit,8),ispwd(0),e2n(1) ]).

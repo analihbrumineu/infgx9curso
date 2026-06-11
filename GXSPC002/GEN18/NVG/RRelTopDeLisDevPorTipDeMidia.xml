@@ -19,7 +19,7 @@
 <Description>Tipo da mídia a ser locada</Description></Attribute>
 <Token>; poor performance may be noticed</Token>
 <Token> in group starting at line </Token>
-<Token>33</Token>
+<Token>31</Token>
 <Token></Token>
 <Token>.</Token></Warning></Warnings>
 <Errors></Errors>
@@ -51,7 +51,7 @@
 <LevelNumber>3</LevelNumber>
 <Optimizations></Optimizations>
 <LevelType>For Each</LevelType>
-<LevelBeginRow>24</LevelBeginRow>
+<LevelBeginRow>22</LevelBeginRow>
 <BaseTable>
 <Table>
 <TableId>13</TableId>
@@ -154,7 +154,7 @@
 <LevelNumber>4</LevelNumber>
 <Optimizations></Optimizations>
 <LevelType>Break</LevelType>
-<LevelBeginRow>45</LevelBeginRow>
+<LevelBeginRow>43</LevelBeginRow>
 <BaseTable>
 <Table>
 <TableId>13</TableId>

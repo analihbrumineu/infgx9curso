@@ -2,7 +2,7 @@
                File: ConfTipMidia
         Description: Configurações tipo de mídia.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:18.91
+       Generated on: 6/11/2026 11:31:28.90
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -250,11 +250,11 @@ namespace GeneXus.Programs {
          ((GXEdit) edtConfTipValor.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtConfTipValor.addFocusListener(this);
          edtConfTipValor.getGXComponent().setHelpId("HLP_TConfTipMidia.htm");
-         bttbtt3 = UIFactory.getGXButton( GXPanel1 , "Enter" ,  234 ,  182 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt3 = UIFactory.getGXButton( GXPanel1 , "Enter" ,  160 ,  182 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt3.setTooltip("Enter");
          bttbtt3.addActionListener(this);
-         lbllbl5 = UIFactory.getLabel(GXPanel1, "Formato", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 67 , 80 , 46 , 13 );
-         lbllbl4 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 67 , 106 , 55 , 13 );
+         lbllbl5 = UIFactory.getLabel(GXPanel1, "Formato", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 79 , 80 , 46 , 13 );
+         lbllbl4 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 70 , 106 , 55 , 13 );
          lbllbl7 = UIFactory.getLabel(GXPanel1, "Valor (R$)", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 67 , 132 , 58 , 13 );
          edtCatCodigo.addContextAction(this, "BROWSE", GXResourceManager.GetMessage("toolbrowsedata"));
          focusManager.setControlList(new IFocusableControl[] {

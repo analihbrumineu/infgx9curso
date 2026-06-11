@@ -19,8 +19,8 @@ lac_i(10,[ [ 50,113,114,53 ] ]).
  
  
 lits_i('Dados gerais',1,5).
-lits_i('Código',3,5).
-lits_i('Nome completo',4,5).
+lits_i('Código',3,16).
+lits_i('Nome completo',4,9).
 lits_i('Data de nascimento',6,5).
 lits_i('Data de falecimento',7,5).
 lits_i('Descrição',1,5).
@@ -321,21 +321,21 @@ ppi_i([ 96,96 ]).
  
  
  
-lit_i(2,1,button('Enter'),[ id(2),title([ 'Enter' ]),ctlname(''),rect(442,299,532,324),font('MS Shell Dlg',8,[]) ]).
+lit_i(2,1,button('Enter'),[ id(2),title([ 'Enter' ]),ctlname(''),rect(431,299,521,324),font('MS Shell Dlg',8,[]) ]).
 lit_i(3,1,tabcontrol,[ rect(0,0,559,286),outstyle(single),fill,lines(1),back(rgb(255,255,255)),fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor([]) ]).
 lit_i(4,3,tabpage,[ title([ 'Personalidade' ]),rect(5,29,559,286),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(0,0,0)),border(2),ctlname(''),gxcolor([]),defgxcolor('BLK','WHT') ]).
 lit_i(5,4,t('Dados gerais',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,26,113,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(6,4,t(49,2),[ font('Courier New',9,[]),rect(169,78,246,98),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(49),ctrltype(edit,6),ispwd(0),e2n(1) ]).
-lit_i(7,4,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,82,78,94),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(8,4,t(50,2),[ font('Courier New',9,[]),rect(169,104,480,124),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(50),ctrltype(edit,8),ispwd(0),e2n(1) ]).
-lit_i(9,4,t('Nome completo',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,108,126,120),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(10,4,t('Data de nascimento',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,160,152,172),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(7,4,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(114,82,153,94),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(8,4,t(50,2),[ font('Courier New',9,[]),rect(169,104,355,124),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(50),ctrltype(edit,8),ispwd(0),e2n(1) ]).
+lit_i(9,4,t('Nome completo',3),[ font('MS Sans Serif',8,[ bold ]),rect(66,108,153,120),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(10,4,t('Data de nascimento',3),[ font('MS Sans Serif',8,[ bold ]),rect(40,160,153,172),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(11,4,t('Data de falecimento',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,186,153,198),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(12,4,t(114,2),[ font('Courier New',9,[]),rect(169,182,248,202),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(114),ctrltype(edit,12),ispwd(0),e2n(1) ]).
 lit_i(13,4,t(113,2),[ font('Courier New',9,[]),rect(169,156,248,176),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(113),ctrltype(edit,13),ispwd(0),e2n(1) ]).
 lit_i(14,3,tabpage,[ title([ 'Sobre' ]),rect(5,29,559,286),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(0,0,0)),border(2),ctlname(''),gxcolor([]),defgxcolor('BLK','WHT') ]).
 lit_i(15,14,t('Descrição',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,26,96,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(16,14,t(53,2),[ font('Courier New',9,[]),rect(39,65,519,233),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(53),ctrltype(edit,16),ispwd(0),e2n(1) ]).
+lit_i(16,14,t(53,2),[ font('Courier New',9,[]),rect(39,55,519,233),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(53),ctrltype(edit,16),ispwd(0),e2n(1) ]).
 lit_i(1,1,window,[ title([ 'Cadastro de astros' ]),rect(3,25,562,362),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).

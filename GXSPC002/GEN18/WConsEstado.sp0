@@ -23,21 +23,21 @@ lac_i(2,[ [ 'Estcodigo','Estuf','Estnome' ] ]).
  
 lits_i('Código',2,9).
 lits_i('UF',2,22).
-lits_i('Estado',2,28).
-lits_i('Código',5,9).
-lits_i('UF',5,20).
-lits_i('Estado',5,27).
+lits_i('Estado',2,29).
+lits_i('Código',4,9).
+lits_i('UF',4,20).
+lits_i('Estado',4,27).
  
-cls_i([ 2,9 ],[ 33,77 ]).
+cls_i([ 2,9 ],[ 33,78 ]).
  
 pos_i('Estcodigo',[ 2,2,9 ]).
 pos_i('Estuf',[ 2,2,22 ]).
-pos_i('Estnome',[ 2,2,28 ]).
-pos_i(24,[ 6,33,9 ]).
-pos_i(25,[ 6,33,20 ]).
-pos_i(12,[ 6,33,27 ]).
+pos_i('Estnome',[ 2,2,29 ]).
+pos_i(24,[ 5,33,9 ]).
+pos_i(25,[ 5,33,20 ]).
+pos_i(12,[ 5,33,27 ]).
  
-repeat_i(2,[ 6,33,[ 24,25,12 ],[] ]).
+repeat_i(2,[ 5,33,[ 24,25,12 ],[] ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
@@ -257,15 +257,15 @@ ppi_i([ 96,96 ]).
  
 lit_i(2,1,t('Estcodigo',23),[ font('Courier New',9,[]),rect(65,70,137,90),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Estcodigo'),ctrltype(edit,2),ispwd(0) ]).
 lit_i(3,1,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,52,104,64),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(4,1,t('UF',3),[ font('MS Sans Serif',8,[ bold ]),rect(157,52,173,64),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(5,1,t('Estuf',23),[ font('Courier New',9,[]),rect(157,70,180,90),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Estuf'),ctrltype(edit,5),ispwd(0) ]).
-lit_i(6,1,t('Estado',3),[ font('MS Sans Serif',8,[ bold ]),rect(196,52,235,64),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(7,1,t('Estnome',23),[ font('Courier New',9,[]),rect(196,70,555,90),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Estnome'),ctrltype(edit,7),ispwd(0) ]).
+lit_i(4,1,t('UF',3),[ font('MS Sans Serif',8,[ bold ]),rect(158,52,174,64),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(5,1,t('Estuf',23),[ font('Courier New',9,[]),rect(158,70,181,90),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Estuf'),ctrltype(edit,5),ispwd(0) ]).
+lit_i(6,1,t('Estado',3),[ font('MS Sans Serif',8,[ bold ]),rect(203,52,242,64),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(7,1,t('Estnome',23),[ font('Courier New',9,[]),rect(203,70,451,90),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Estnome'),ctrltype(edit,7),ispwd(0) ]).
 lit_i(9,1,s(t(24,2),8),[ width(78),pos(0),title([ 'Código' ]),ctlname(24),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(255,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,9),e2n(1) ]).
 lit_i(10,1,s(t(25,2),8),[ width(52),pos(1),title([ 'UF' ]),ctlname(25),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,10),e2n(1) ]).
-lit_i(11,1,s(t(12,2),8),[ width(383),pos(2),title([ 'Estado' ]),ctlname(12),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,11),e2n(1) ]).
-lit_i(8,1,s(8),[ th(18),height(18),rect(65,124,636,831),back(rgb(240,240,240)),fore(gxcolor([]),rgb(0,0,0)),border(1),ctlname('Gxsf8'),font(font('Courier New',9,[])),titlefont(font('MS Sans Serif',8,[ bold ])),el([ t(24,2),t(25,2),t(12,2) ]) ]).
-lit_i(1,1,window,[ title([ 'Consulta de Estados' ]),rect(3,25,743,869),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(11,1,s(t(12,2),8),[ width(198),pos(2),title([ 'Estado' ]),ctlname(12),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,11),e2n(1) ]).
+lit_i(8,1,s(8),[ th(18),height(18),rect(65,100,451,831),back(rgb(240,240,240)),fore(gxcolor([]),rgb(0,0,0)),border(1),ctlname('Gxsf8'),font(font('Courier New',9,[])),titlefont(font('MS Sans Serif',8,[ bold ])),el([ t(24,2),t(25,2),t(12,2) ]) ]).
+lit_i(1,1,window,[ title([ 'Consulta de Estados' ]),rect(3,25,559,869),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).
  

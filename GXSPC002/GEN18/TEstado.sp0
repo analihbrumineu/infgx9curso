@@ -19,7 +19,7 @@ lac_i(7,[ [ 25,12 ] ]).
  
  
 lits_i('Código',3,9).
-lits_i('UF',4,9).
+lits_i('UF',4,12).
 lits_i('Estado',5,9).
  
 cls_i([ 3,9 ],[ 5,66 ]).
@@ -280,14 +280,14 @@ ppi_i([ 96,96 ]).
  
  
  
-lit_i(2,1,button('Enter'),[ id(2),title([ 'Enter' ]),ctlname('Btn_enter'),rect(455,182,543,207),font('MS Shell Dlg',8,[]) ]).
+lit_i(2,1,button('Enter'),[ id(2),title([ 'Enter' ]),ctlname('Btn_enter'),rect(256,182,344,207),font('MS Shell Dlg',8,[]) ]).
 lit_i(3,1,t(24,2),[ font('Courier New',9,[]),rect(119,78,191,98),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(24),ctrltype(edit,3),ispwd(0),e2n(1) ]).
 lit_i(4,1,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(63,82,102,94),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(5,1,t(25,2),[ font('Courier New',9,[]),rect(119,105,144,125),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(25),ctrltype(edit,5),ispwd(0),e2n(1) ]).
-lit_i(6,1,t('UF',3),[ font('MS Sans Serif',8,[ bold ]),rect(63,108,79,120),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(7,1,t(12,2),[ font('Courier New',9,[]),rect(119,131,478,151),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(12),ctrltype(edit,7),ispwd(0),e2n(1) ]).
+lit_i(6,1,t('UF',3),[ font('MS Sans Serif',8,[ bold ]),rect(86,108,102,120),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(7,1,t(12,2),[ font('Courier New',9,[]),rect(119,131,344,151),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(12),ctrltype(edit,7),ispwd(0),e2n(1) ]).
 lit_i(8,1,t('Estado',3),[ font('MS Sans Serif',8,[ bold ]),rect(63,133,102,145),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(1,1,window,[ title([ 'Cadastro de Estados' ]),rect(3,25,585,280),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(1,1,window,[ title([ 'Cadastro de Estados' ]),rect(3,25,424,280),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).
  

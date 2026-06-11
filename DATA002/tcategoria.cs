@@ -2,7 +2,7 @@
                File: Categoria
         Description: Cadastro de categorias.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:17.15
+       Generated on: 6/11/2026 11:31:27.16
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -237,15 +237,15 @@ namespace GeneXus.Programs {
          ((GXEdit) edtCatCodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtCatCodigo.addFocusListener(this);
          edtCatCodigo.getGXComponent().setHelpId("HLP_TCategoria.htm");
-         edtCatNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),143, 87, 273, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 143 , 87 , 273 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A33CatNome" );
+         edtCatNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),143, 87, 163, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 143 , 87 , 163 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A33CatNome" );
          ((GXEdit) edtCatNome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtCatNome.addFocusListener(this);
          edtCatNome.getGXComponent().setHelpId("HLP_TCategoria.htm");
-         bttBtn_enter = UIFactory.getGXButton( GXPanel1 , "Enter" ,  390 ,  130 ,  89 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttBtn_enter = UIFactory.getGXButton( GXPanel1 , "Enter" ,  217 ,  130 ,  89 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttBtn_enter.setTooltip("Enter");
          bttBtn_enter.addActionListener(this);
-         lbllbl4 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 65 , 40 , 13 );
-         lbllbl6 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 91 , 55 , 13 );
+         lbllbl4 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 93 , 65 , 40 , 13 );
+         lbllbl6 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 78 , 91 , 55 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtCatCodigo ,
                    edtCatNome ,

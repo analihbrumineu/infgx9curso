@@ -2,7 +2,7 @@
                File: ConsCategoria
         Description: Consulta de categorias.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:23.24
+       Generated on: 6/11/2026 11:31:33.18
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -91,7 +91,7 @@ namespace GeneXus.Programs {
 
       public override int getFrmWidth( )
       {
-         return 646 ;
+         return 469 ;
       }
 
       public override int getFrmHeight( )
@@ -492,7 +492,7 @@ namespace GeneXus.Programs {
 
       public override void screen( )
       {
-         GXPanel1 = new GXPanel(this, 3 , 25 , 646 , 842 );
+         GXPanel1 = new GXPanel(this, 3 , 25 , 469 , 842 );
          this.setIBackground(UIFactory.getColor(15));
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
@@ -501,21 +501,21 @@ namespace GeneXus.Programs {
          ((GXEdit) edtavCatcodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavCatcodigo.addFocusListener(this);
          edtavCatcodigo.getGXComponent().setHelpId("HLP_WConsCategoria.htm");
-         edtavCatnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),156, 78, 364, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 156 , 78 , 364 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7CatNome" );
+         edtavCatnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),171, 78, 195, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 171 , 78 , 195 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7CatNome" );
          ((GXEdit) edtavCatnome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavCatnome.addFocusListener(this);
          edtavCatnome.getGXComponent().setHelpId("HLP_WConsCategoria.htm");
          addSubfile ( subGxsf6  = new GXSubfile ( new ConsCategoria_load06(this), new ConsCategoria_flow06(this), false , new GXColumnDefinition[] {
-          new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 87, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 86 , 18 , UIFactory.getColor(5) , UIFactory.getColor(255, 0, 0) , UIFactory.getFont( "Courier New", 0, 9) , false , "A32CatCodi" ), "Código"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 86 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 353, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 352 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A33CatNome" ), "Categoria"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 352 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         }, 37 , 18 , GXPanel1 , 65 , 128 , 496 , 687 ,  18 ));
+          new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 79, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 78 , 18 , UIFactory.getColor(5) , UIFactory.getColor(255, 0, 0) , UIFactory.getFont( "Courier New", 0, 9) , false , "A32CatCodi" ), "Código"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 78 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 166, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 165 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A33CatNome" ), "Categoria"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 165 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         }, 38 , 18 , GXPanel1 , 65 , 112 , 301 , 703 ,  18 ));
          subGxsf6.addActionListener(this);
          subGxsf6.addFocusListener(this);
          subGxsf6.setSortOnClick(true);
          subGxsf6.getColumn(0).addActionListener( this);
          subGxsf6.getColumn(0).addItemListener( this);
          lbllbl4 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 60 , 40 , 13 );
-         lbllbl5 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 156 , 60 , 55 , 13 );
+         lbllbl5 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 171 , 60 , 55 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavCatcodigo ,
                    edtavCatnome ,
@@ -838,7 +838,7 @@ namespace GeneXus.Programs {
           prmW000L2 = new Object[] {
           } ;
           def= new GeneXus.Data.NTier.ADO.CursorDef[] {
-              new GeneXus.Data.NTier.ADO.CursorDef("W000L2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW000L2,29,0,true,false )
+              new GeneXus.Data.NTier.ADO.CursorDef("W000L2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW000L2,30,0,true,false )
           };
        }
     }

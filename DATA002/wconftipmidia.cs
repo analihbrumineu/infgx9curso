@@ -2,7 +2,7 @@
                File: ConfTipMidia
         Description: Configurações tipo de mídia.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:23.11
+       Generated on: 6/11/2026 11:31:33.4
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -504,7 +504,7 @@ namespace GeneXus.Programs {
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         cmbavMidtipo = new GUIObjectShort ( new GXComboBox(GXPanel1) , GXPanel1 , 117 , 65 , 68 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV8MidTipo" );
+         cmbavMidtipo = new GUIObjectShort ( new GXComboBox(GXPanel1) , GXPanel1 , 65 , 65 , 68 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV8MidTipo" );
          ((GXComboBox) cmbavMidtipo.getGXComponent()).addItem( new java.lang.Short(0),"Todas");
          ((GXComboBox) cmbavMidtipo.getGXComponent()).addItem( new java.lang.Short(1),"DVD");
          ((GXComboBox) cmbavMidtipo.getGXComponent()).addItem( new java.lang.Short(2),"Bluray");
@@ -513,18 +513,18 @@ namespace GeneXus.Programs {
          cmbavMidtipo.addFocusListener(this);
          cmbavMidtipo.addItemListener(this);
          cmbavMidtipo.getGXComponent().setHelpId("HLP_WConfTipMidia.htm");
-         edtavCatnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),273, 65, 182, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 273 , 65 , 182 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV10CatNom" );
+         edtavCatnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),240, 65, 244, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 240 , 65 , 244 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV10CatNom" );
          ((GXEdit) edtavCatnome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavCatnome.addFocusListener(this);
          edtavCatnome.getGXComponent().setHelpId("HLP_WConfTipMidia.htm");
          addSubfile ( subGxsf2  = new GXSubfile ( new ConfTipMidia_load02(this), new ConfTipMidia_flow02(this), false , new GXColumnDefinition[] {
           new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 176, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 175 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A32CatCodi" ), "Código da categoria do filme"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 175 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , false )
-         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 307, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 306 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A33CatNome" ), "Categoria"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 306 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 169, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 168 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A33CatNome" ), "Categoria"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 168 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectShort ( new GXComboBox(GXPanel1, false) , null ,  0 , 0 , 104 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A35MidTipo" ), "Formato"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 104 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectDecimal2 ( new GXEdit(12, "ZZZ,ZZZ,ZZ9.99", UIFactory.getFont( "Courier New", 0, 9),0, 0, 122, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 121 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV7ConfTip" ), "Valor (R$)"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 121 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectDecimal2 ( new GXEdit(12, "ZZZ,ZZZ,ZZ9.99", UIFactory.getFont( "Courier New", 0, 9),0, 0, 106, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 105 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6ConfTip" ), "Novo valor (R$)"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 105 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , true , true )
          , new GXColumnDefinition( new GUIObjectString ( new GXCheckBox(GXPanel1, "" , "S", "N") , null ,  0 , 0 , 58 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV5Marcado" ), "Marcado"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 58 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , true , true )
-         }, 29 , 18 , GXPanel1 , 65 , 117 , 755 , 546 ,  18 ));
+         }, 30 , 18 , GXPanel1 , 65 , 103 , 617 , 560 ,  18 ));
          ((GXComboBox) subGxsf2.getColumn(2).getGXComponent()).addItem( new java.lang.Short(1),"DVD");
          ((GXComboBox) subGxsf2.getColumn(2).getGXComponent()).addItem( new java.lang.Short(2),"Bluray");
          ((GXComboBox) subGxsf2.getColumn(2).getGXComponent()).addItem( new java.lang.Short(3),"VHS");
@@ -532,29 +532,29 @@ namespace GeneXus.Programs {
          subGxsf2.addActionListener(this);
          subGxsf2.addFocusListener(this);
          subGxsf2.setSortOnClick(true);
-         bttbtt15 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  715 ,  63 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
-         bttbtt15.setTooltip("Novo");
-         bttbtt15.addActionListener(this);
-         bttbtt15.setFiresEvents(false);
-         bttbtt9 = UIFactory.getGXButton( GXPanel1 , "M" ,  65 ,  676 ,  26 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt14 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  591 ,  63 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt14.setTooltip("Novo");
+         bttbtt14.addActionListener(this);
+         bttbtt14.setFiresEvents(false);
+         bttbtt9 = UIFactory.getGXButton( GXPanel1 , "M" ,  65 ,  669 ,  26 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt9.setTooltip("M");
          bttbtt9.addActionListener(this);
          bttbtt9.setFiresEvents(false);
-         bttbtt10 = UIFactory.getGXButton( GXPanel1 , "D" ,  104 ,  676 ,  26 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt10 = UIFactory.getGXButton( GXPanel1 , "D" ,  106 ,  669 ,  26 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt10.setTooltip("D");
          bttbtt10.addActionListener(this);
          bttbtt10.setFiresEvents(false);
-         bttbtt11 = UIFactory.getGXButton( GXPanel1 , "Gravar" ,  728 ,  676 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt11 = UIFactory.getGXButton( GXPanel1 , "Gravar" ,  591 ,  669 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt11.setTooltip("Gravar");
          bttbtt11.addActionListener(this);
          bttbtt11.setFiresEvents(false);
-         lbllbl12 = UIFactory.getLabel(GXPanel1, "Formato", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 69 , 46 , 13 );
-         lbllbl14 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 208 , 69 , 55 , 13 );
+         lbllbl16 = UIFactory.getLabel(GXPanel1, "Formato", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 50 , 46 , 13 );
+         lbllbl13 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 240 , 51 , 55 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    cmbavMidtipo ,
                    edtavCatnome ,
                    subGxsf2 ,
-                   bttbtt15 ,
+                   bttbtt14 ,
                    bttbtt9 ,
                    bttbtt10 ,
                    bttbtt11
@@ -665,7 +665,7 @@ namespace GeneXus.Programs {
             E15V1U2 ();
             return;
          }
-         if ( bttbtt15.isEventSource(eventSource) ) {
+         if ( bttbtt14.isEventSource(eventSource) ) {
             /* Execute user event: E14V1U2 */
             E14V1U2 ();
             return;
@@ -830,12 +830,12 @@ namespace GeneXus.Programs {
       protected GUIObjectShort cmbavMidtipo ;
       protected GUIObjectString edtavCatnome ;
       protected GXSubfile subGxsf2 ;
-      protected IGXButton bttbtt15 ;
+      protected IGXButton bttbtt14 ;
       protected IGXButton bttbtt9 ;
       protected IGXButton bttbtt10 ;
       protected IGXButton bttbtt11 ;
-      protected ILabel lbllbl12 ;
-      protected ILabel lbllbl14 ;
+      protected ILabel lbllbl16 ;
+      protected ILabel lbllbl13 ;
    }
 
    public class wconftipmidia__default : DataStoreHelperBase, IDataStoreHelper

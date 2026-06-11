@@ -23,22 +23,22 @@ lac_i(2,[ [ 'Cidcodigo','Cidnome','Estuf' ] ]).
  
 lits_i('UF',4,18).
 lits_i('Código',4,25).
-lits_i('Cidade',4,36).
+lits_i('Cidade',4,35).
 lits_i('Código',2,9).
-lits_i('UF',2,76).
-lits_i('Cidade',2,22).
+lits_i('UF',2,56).
+lits_i('Cidade',2,21).
  
-cls_i([ 2,9 ],[ 30,85 ]).
+cls_i([ 2,9 ],[ 30,84 ]).
  
 pos_i('Visualizar',[ 5,30,9 ]).
 pos_i('Editar',[ 5,30,12 ]).
 pos_i('Excluir',[ 5,30,15 ]).
 pos_i(25,[ 5,30,18 ]).
 pos_i(26,[ 5,30,25 ]).
-pos_i(27,[ 5,30,36 ]).
+pos_i(27,[ 5,30,35 ]).
 pos_i('Cidcodigo',[ 2,2,9 ]).
-pos_i('Cidnome',[ 2,2,22 ]).
-pos_i('Estuf',[ 2,2,76 ]).
+pos_i('Cidnome',[ 2,2,21 ]).
+pos_i('Estuf',[ 2,2,56 ]).
  
 repeat_i(2,[ 5,30,[ 'Visualizar','Editar','Excluir',25,26,27 ],[] ]).
  
@@ -277,17 +277,17 @@ lit_i(3,1,s(t('Visualizar',23),2),[ width(26),pos(0),title([ '' ]),ctlname('&Vis
 lit_i(4,1,s(t('Editar',23),2),[ width(25),pos(1),title([ '' ]),ctlname('&Editar'),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,4) ]).
 lit_i(5,1,s(t('Excluir',23),2),[ width(26),pos(2),title([ '' ]),ctlname('&Excluir'),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,5) ]).
 lit_i(6,1,s(t(25,2),2),[ width(54),pos(3),title([ 'UF' ]),ctlname(25),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,6),e2n(1) ]).
-lit_i(7,1,s(t(26,2),2),[ width(78),pos(4),title([ 'Código' ]),ctlname(26),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,7),e2n(1) ]).
-lit_i(8,1,s(t(27,2),2),[ width(380),pos(5),title([ 'Cidade' ]),ctlname(27),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,8),e2n(1) ]).
-lit_i(2,1,s(2),[ th(18),height(18),rect(65,117,715,766),back(rgb(240,240,240)),fore(gxcolor([]),rgb(0,0,0)),border(1),ctlname('Gxsf2'),font(font('Courier New',9,[])),titlefont(font('MS Sans Serif',8,[ bold ])),el([ t('Visualizar',23),t('Editar',23),t('Excluir',23),t(25,2),t(26,2),t(27,2) ]) ]).
-lit_i(9,1,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,52,104,64),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(10,1,t('UF',3),[ font('MS Sans Serif',8,[ bold ]),rect(533,52,549,64),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(11,1,t('Cidade',3),[ font('MS Sans Serif',8,[ bold ]),rect(156,52,195,64),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(12,1,t('Cidcodigo',23),[ font('Courier New',9,[]),rect(65,67,137,87),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Cidcodigo'),ctrltype(edit,12),ispwd(0) ]).
-lit_i(13,1,t('Cidnome',23),[ font('Courier New',9,[]),rect(156,67,515,87),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Cidnome'),ctrltype(edit,13),ispwd(0) ]).
-lit_i(14,1,t('Estuf',23),[ font('Courier New',9,[]),rect(533,67,572,87),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Estuf'),ctrltype(dyncombo,14) ]).
-lit_i(15,1,button('''Novo'''),[ id(15),title([ 'Novo' ]),ctlname(''),rect(611,65,701,90),font('MS Shell Dlg',8,[]) ]).
-lit_i(1,1,window,[ title([ 'Cidades' ]),rect(3,25,782,804),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(7,1,s(t(26,2),2),[ width(67),pos(4),title([ 'Código' ]),ctlname(26),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,7),e2n(1) ]).
+lit_i(8,1,s(t(27,2),2),[ width(213),pos(5),title([ 'Cidade' ]),ctlname(27),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,8),e2n(1) ]).
+lit_i(2,1,s(2),[ th(18),height(18),rect(65,102,537,766),back(rgb(240,240,240)),fore(gxcolor([]),rgb(0,0,0)),border(1),ctlname('Gxsf2'),font(font('Courier New',9,[])),titlefont(font('MS Sans Serif',8,[ bold ])),el([ t('Visualizar',23),t('Editar',23),t('Excluir',23),t(25,2),t(26,2),t(27,2) ]) ]).
+lit_i(9,1,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,50,104,62),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(10,1,t('UF',3),[ font('MS Sans Serif',8,[ bold ]),rect(393,50,409,62),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(11,1,t('Cidade',3),[ font('MS Sans Serif',8,[ bold ]),rect(151,50,190,62),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(12,1,t('Cidcodigo',23),[ font('Courier New',9,[]),rect(65,65,137,85),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Cidcodigo'),ctrltype(edit,12),ispwd(0) ]).
+lit_i(13,1,t('Cidnome',23),[ font('Courier New',9,[]),rect(151,65,378,85),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Cidnome'),ctrltype(edit,13),ispwd(0) ]).
+lit_i(14,1,t('Estuf',23),[ font('Courier New',9,[]),rect(393,65,432,85),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Estuf'),ctrltype(dyncombo,14) ]).
+lit_i(15,1,button('''Novo'''),[ id(15),title([ 'Novo' ]),ctlname(''),rect(447,63,537,88),font('MS Shell Dlg',8,[]) ]).
+lit_i(1,1,window,[ title([ 'Cidades' ]),rect(3,25,605,804),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).
  

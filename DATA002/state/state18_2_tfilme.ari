@@ -12,7 +12,7 @@ called_tree_i(0,2,4,88).
  
  
  
-ij_object_dependency(tfilme,[],[ subtfilme22,subtfilme27 ],[],2).
+ij_object_dependency(tfilme,[],[ subtfilme21,subtfilme26 ],[],2).
  
  
 obj_parms_i([ 'int aP0_FilCodigo','String aP1_Gx_mode' ],[ [ 28,in ],[ 'Mode',in ] ]).

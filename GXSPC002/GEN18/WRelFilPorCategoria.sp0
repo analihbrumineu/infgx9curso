@@ -19,16 +19,16 @@ lac_i(2,[ [ 'Catcodinicial','Catcodfinal','Filcodinicial','Filcodfinal' ] ]).
  
  
 lits_i('Categoria',2,13).
-lits_i(até,2,33).
-lits_i('Filme',3,13).
-lits_i(até,3,33).
+lits_i(até,2,34).
+lits_i('Filme',3,16).
+lits_i(até,3,34).
  
-cls_i([ 2,13 ],[ 3,45 ]).
+cls_i([ 2,13 ],[ 3,46 ]).
  
 pos_i('Catcodinicial',[ 2,2,22 ]).
-pos_i('Catcodfinal',[ 2,2,37 ]).
+pos_i('Catcodfinal',[ 2,2,38 ]).
 pos_i('Filcodinicial',[ 3,3,22 ]).
-pos_i('Filcodfinal',[ 3,3,37 ]).
+pos_i('Filcodfinal',[ 3,3,38 ]).
  
  
  
@@ -234,15 +234,15 @@ ppi_i([ 96,96 ]).
  
  
  
-lit_i(2,1,t('Categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(91,69,145,81),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(3,1,t(até,3),[ font('MS Sans Serif',8,[ bold ]),rect(234,69,252,81),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(4,1,t('Filme',3),[ font('MS Sans Serif',8,[ bold ]),rect(91,95,120,107),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(5,1,t(até,3),[ font('MS Sans Serif',8,[ bold ]),rect(234,95,252,107),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(2,1,t('Categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(93,69,147,81),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(3,1,t(até,3),[ font('MS Sans Serif',8,[ bold ]),rect(239,69,257,81),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(4,1,t('Filme',3),[ font('MS Sans Serif',8,[ bold ]),rect(118,95,147,107),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(5,1,t(até,3),[ font('MS Sans Serif',8,[ bold ]),rect(239,95,257,107),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(6,1,t('Catcodinicial',23),[ font('Courier New',9,[]),rect(156,65,228,85),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catcodinicial'),ctrltype(edit,6),ispwd(0) ]).
-lit_i(7,1,t('Catcodfinal',23),[ font('Courier New',9,[]),rect(260,65,332,85),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catcodfinal'),ctrltype(edit,7),ispwd(0) ]).
+lit_i(7,1,t('Catcodfinal',23),[ font('Courier New',9,[]),rect(269,65,341,85),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catcodfinal'),ctrltype(edit,7),ispwd(0) ]).
 lit_i(8,1,t('Filcodinicial',23),[ font('Courier New',9,[]),rect(156,91,228,111),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Filcodinicial'),ctrltype(edit,8),ispwd(0) ]).
-lit_i(9,1,t('Filcodfinal',23),[ font('Courier New',9,[]),rect(260,91,332,111),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Filcodfinal'),ctrltype(edit,9),ispwd(0) ]).
-lit_i(10,1,button('''Imprimir'''),[ id(10),title([ 'Imprimir' ]),ctlname(''),rect(299,143,389,168),font('MS Shell Dlg',8,[]) ]).
+lit_i(9,1,t('Filcodfinal',23),[ font('Courier New',9,[]),rect(269,90,341,110),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Filcodfinal'),ctrltype(edit,9),ispwd(0) ]).
+lit_i(10,1,button('''Imprimir'''),[ id(10),title([ 'Imprimir' ]),ctlname(''),rect(251,143,341,168),font('MS Shell Dlg',8,[]) ]).
 lit_i(1,1,window,[ title([ 'Relatório de filmes por categoria' ]),rect(3,25,496,271),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).

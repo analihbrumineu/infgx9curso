@@ -2,7 +2,7 @@
                File: Cliente
         Description: Cadastro de clientes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:17.80
+       Generated on: 6/11/2026 11:31:27.79
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -190,12 +190,12 @@ namespace GeneXus.Programs {
 
       public override int getFrmWidth( )
       {
-         return 833 ;
+         return 585 ;
       }
 
       public override int getFrmHeight( )
       {
-         return 585 ;
+         return 662 ;
       }
 
       public override String getHelpId( )
@@ -293,131 +293,127 @@ namespace GeneXus.Programs {
 
       public override void screen( )
       {
-         GXPanel1 = new GXPanel(this, 3 , 25 , 833 , 585 );
+         GXPanel1 = new GXPanel(this, 3 , 25 , 585 , 662 );
          this.setIBackground(UIFactory.getColor(15));
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         bttBtn_movimentos = UIFactory.getGXButton( GXPanel1 , "Movimentos" ,  604 ,  543 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttBtn_movimentos = UIFactory.getGXButton( GXPanel1 , "Movimentos" ,  324 ,  622 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttBtn_movimentos.setTooltip("Movimentos");
          bttBtn_movimentos.addActionListener(this);
          bttBtn_movimentos.setFiresEvents(false);
-         bttBtn_enter = UIFactory.getGXButton( GXPanel1 , "Enter" ,  708 ,  543 ,  89 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttBtn_enter = UIFactory.getGXButton( GXPanel1 , "Enter" ,  421 ,  622 ,  89 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttBtn_enter.setTooltip("Enter");
          bttBtn_enter.addActionListener(this);
-         tctrlCadastrodecliente = new GXTabControl (this,  GXPanel1 , 0 , 0 , 833 , 531 , UIFactory.getColor(5) , UIFactory.getColor(8) , 0, 0, 0, false );
-         tpagetpage3 = new GXTabPage ( tctrlCadastrodecliente , "Cliente" , 5 , 29 , 828 , 502 , UIFactory.getColor(15) , UIFactory.getColor(18) , 0, 0);
-         edtPesCodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),177, 71, 64, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), true) , tpagetpage3.getGXPanel() , 177 , 71 , 64 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A13PesCodi" );
+         tctrlCadastrodecliente = new GXTabControl (this,  GXPanel1 , 0 , 0 , 585 , 606 , UIFactory.getColor(5) , UIFactory.getColor(8) , 0, 0, 0, false );
+         tpagetpage3 = new GXTabPage ( tctrlCadastrodecliente , "Cliente" , 5 , 29 , 580 , 577 , UIFactory.getColor(15) , UIFactory.getColor(18) , 0, 0);
+         edtPesCodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),178, 71, 64, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), true) , tpagetpage3.getGXPanel() , 178 , 71 , 64 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A13PesCodi" );
          ((GXEdit) edtPesCodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtPesCodigo.addFocusListener(this);
          edtPesCodigo.getGXComponent().setHelpId("HLP_TCliente.htm");
-         edtPesCPF = new GUIObjectString ( new GXEdit(14, "999.999.999-99", UIFactory.getFont( "Courier New", 0, 9),177, 96, 182, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 177 , 96 , 182 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A15PesCPF" );
+         edtPesCPF = new GUIObjectString ( new GXEdit(14, "999.999.999-99", UIFactory.getFont( "Courier New", 0, 9),178, 99, 182, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 178 , 99 , 182 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A15PesCPF" );
          ((GXEdit) edtPesCPF.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtPesCPF.addFocusListener(this);
          edtPesCPF.getGXComponent().setHelpId("HLP_TCliente.htm");
-         edtPesNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),473, 96, 268, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 473 , 96 , 268 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A14PesNome" );
+         edtPesNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),178, 128, 268, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 178 , 128 , 268 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A14PesNome" );
          ((GXEdit) edtPesNome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtPesNome.addFocusListener(this);
          edtPesNome.getGXComponent().setHelpId("HLP_TCliente.htm");
-         edtPesDatNascimento = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),177, 121, 77, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 177 , 121 , 77 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A111PesDat" );
-         ((GXEdit) edtPesDatNascimento.getGXComponent()).setAlignment(ILabelConstants.LEFT);
-         edtPesDatNascimento.addFocusListener(this);
-         edtPesDatNascimento.getGXComponent().setHelpId("HLP_TCliente.htm");
-         cmbPesSituacao = new GUIObjectShort ( new GXComboBox(tpagetpage3.getGXPanel()) , tpagetpage3.getGXPanel() , 473 , 121 , 75 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A23PesSitu" );
+         cmbPesSituacao = new GUIObjectShort ( new GXComboBox(tpagetpage3.getGXPanel()) , tpagetpage3.getGXPanel() , 178 , 156 , 75 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A23PesSitu" );
          ((GXComboBox) cmbPesSituacao.getGXComponent()).addItem( new java.lang.Short(0),"Inativo");
          ((GXComboBox) cmbPesSituacao.getGXComponent()).addItem( new java.lang.Short(1),"Ativo");
          cmbPesSituacao.addFocusListener(this);
          cmbPesSituacao.addItemListener(this);
          cmbPesSituacao.getGXComponent().setHelpId("HLP_TCliente.htm");
-         chkDepende = new GUIObjectShort ( new GXCheckBox(tpagetpage3.getGXPanel(), "Dependente" , new java.lang.Short(1), new java.lang.Short(0)) , tpagetpage3.getGXPanel() , 570 , 124 , 91 , 16 , Integer.MAX_VALUE , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A83Depende" );
+         edtPesDatNascimento = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),178, 185, 77, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 178 , 185 , 77 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A111PesDat" );
+         ((GXEdit) edtPesDatNascimento.getGXComponent()).setAlignment(ILabelConstants.LEFT);
+         edtPesDatNascimento.addFocusListener(this);
+         edtPesDatNascimento.getGXComponent().setHelpId("HLP_TCliente.htm");
+         chkDepende = new GUIObjectShort ( new GXCheckBox(tpagetpage3.getGXPanel(), "Dependente" , new java.lang.Short(1), new java.lang.Short(0)) , tpagetpage3.getGXPanel() , 178 , 214 , 91 , 16 , Integer.MAX_VALUE , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A83Depende" );
          chkDepende.addFocusListener(this);
          chkDepende.addItemListener(this);
          chkDepende.getGXComponent().setHelpId("HLP_TCliente.htm");
-         edtPesTelefone = new GUIObjectString ( new GXEdit(13, "(99)9999-9999", UIFactory.getFont( "Courier New", 0, 9),177, 181, 117, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 177 , 181 , 117 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A21PesTele" );
+         edtPesTelefone = new GUIObjectString ( new GXEdit(13, "(99)9999-9999", UIFactory.getFont( "Courier New", 0, 9),178, 274, 117, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 178 , 274 , 117 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A21PesTele" );
          ((GXEdit) edtPesTelefone.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtPesTelefone.addFocusListener(this);
          edtPesTelefone.getGXComponent().setHelpId("HLP_TCliente.htm");
-         edtPesCelular = new GUIObjectString ( new GXEdit(13, "(99)9999-9999", UIFactory.getFont( "Courier New", 0, 9),177, 208, 104, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 177 , 208 , 104 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A22PesCelu" );
+         edtPesCelular = new GUIObjectString ( new GXEdit(13, "(99)9999-9999", UIFactory.getFont( "Courier New", 0, 9),178, 300, 104, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 178 , 300 , 104 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A22PesCelu" );
          ((GXEdit) edtPesCelular.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtPesCelular.addFocusListener(this);
          edtPesCelular.getGXComponent().setHelpId("HLP_TCliente.htm");
-         edtPesEmail = new GUIObjectString ( new GXEdit(100, "@!", UIFactory.getFont( "Courier New", 0, 9),473, 208, 268, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 473 , 208 , 268 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A20PesEmai" );
+         edtPesEmail = new GUIObjectString ( new GXEdit(100, "@!", UIFactory.getFont( "Courier New", 0, 9),178, 326, 268, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 178 , 326 , 268 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A20PesEmai" );
          ((GXEdit) edtPesEmail.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtPesEmail.addFocusListener(this);
          edtPesEmail.getGXComponent().setHelpId("HLP_TCliente.htm");
-         edtEstCodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),177, 266, 73, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), true) , tpagetpage3.getGXPanel() , 177 , 266 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A24EstCodi" );
+         edtEstCodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),178, 395, 73, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), true) , tpagetpage3.getGXPanel() , 178 , 395 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A24EstCodi" );
          ((GXEdit) edtEstCodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtEstCodigo.addFocusListener(this);
          edtEstCodigo.getGXComponent().setHelpId("HLP_TCliente.htm");
-         edtEstUF = new GUIObjectString ( new GXEdit(2, "XX", UIFactory.getFont( "Courier New", 0, 9),177, 291, 78, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.CHAR, false, true, UIFactory.getColor(5), true) , tpagetpage3.getGXPanel() , 177 , 291 , 78 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A25EstUF" );
-         ((GXEdit) edtEstUF.getGXComponent()).setAlignment(ILabelConstants.LEFT);
-         edtEstUF.addFocusListener(this);
-         edtEstUF.getGXComponent().setHelpId("HLP_TCliente.htm");
-         edtEstNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),177, 317, 416, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), true) , tpagetpage3.getGXPanel() , 177 , 317 , 416 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A12EstNome" );
+         edtEstNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),258, 395, 188, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), true) , tpagetpage3.getGXPanel() , 258 , 395 , 188 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A12EstNome" );
          ((GXEdit) edtEstNome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtEstNome.addFocusListener(this);
          edtEstNome.getGXComponent().setHelpId("HLP_TCliente.htm");
-         edtCidCodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),177, 342, 73, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 177 , 342 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A26CidCodi" );
+         edtEstUF = new GUIObjectString ( new GXEdit(2, "XX", UIFactory.getFont( "Courier New", 0, 9),453, 395, 41, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.CHAR, false, true, UIFactory.getColor(5), true) , tpagetpage3.getGXPanel() , 453 , 395 , 41 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A25EstUF" );
+         ((GXEdit) edtEstUF.getGXComponent()).setAlignment(ILabelConstants.LEFT);
+         edtEstUF.addFocusListener(this);
+         edtEstUF.getGXComponent().setHelpId("HLP_TCliente.htm");
+         edtCidCodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),178, 423, 73, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 178 , 423 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A26CidCodi" );
          ((GXEdit) edtCidCodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtCidCodigo.addFocusListener(this);
          edtCidCodigo.getGXComponent().setHelpId("HLP_TCliente.htm");
-         edtCidNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),177, 367, 208, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), true) , tpagetpage3.getGXPanel() , 177 , 367 , 208 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A27CidNome" );
+         edtCidNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),258, 423, 189, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), true) , tpagetpage3.getGXPanel() , 258 , 423 , 189 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A27CidNome" );
          ((GXEdit) edtCidNome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtCidNome.addFocusListener(this);
          edtCidNome.getGXComponent().setHelpId("HLP_TCliente.htm");
-         edtPesBairro = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),177, 392, 182, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 177 , 392 , 182 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A19PesBair" );
+         edtPesBairro = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),178, 451, 182, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 178 , 451 , 182 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A19PesBair" );
          ((GXEdit) edtPesBairro.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtPesBairro.addFocusListener(this);
          edtPesBairro.getGXComponent().setHelpId("HLP_TCliente.htm");
-         edtPesEndereco = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),177, 417, 390, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 177 , 417 , 390 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A17PesEnde" );
+         edtPesEndereco = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),178, 479, 197, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 178 , 479 , 197 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A17PesEnde" );
          ((GXEdit) edtPesEndereco.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtPesEndereco.addFocusListener(this);
          edtPesEndereco.getGXComponent().setHelpId("HLP_TCliente.htm");
-         edtPesEndNumero = new GUIObjectString ( new GXEdit(20, "@!", UIFactory.getFont( "Courier New", 0, 9),177, 442, 74, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 177 , 442 , 74 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A18PesEndN" );
+         edtPesEndNumero = new GUIObjectString ( new GXEdit(20, "@!", UIFactory.getFont( "Courier New", 0, 9),385, 479, 42, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 385 , 479 , 42 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A18PesEndN" );
          ((GXEdit) edtPesEndNumero.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtPesEndNumero.addFocusListener(this);
          edtPesEndNumero.getGXComponent().setHelpId("HLP_TCliente.htm");
          lbllbl5 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Dados gerais", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 42 , 26 , 75 , 13 );
-         lbllbl4 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 43 , 75 , 40 , 13 );
-         lbllbl8 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Nome completo", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 372 , 98 , 88 , 13 );
-         lbllbl6 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "CPF", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 43 , 100 , 24 , 13 );
-         lbllbl11 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Data de nascimento", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 43 , 125 , 114 , 13 );
-         lbllbl13 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Situação", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 372 , 125 , 51 , 13 );
-         lbllbl15 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Telefone residencial", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 43 , 185 , 116 , 13 );
-         lbllbl17 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Telefone celular", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 43 , 212 , 93 , 13 );
-         lbllbl19 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "E-mail", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 372 , 212 , 35 , 13 );
-         lbllbl21 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Código do Estado", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 48 , 269 , 101 , 13 );
-         lbllbl23 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "UF", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 48 , 294 , 17 , 13 );
-         lbllbl25 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Estado", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 48 , 319 , 40 , 13 );
-         lbllbl27 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Código da cidade", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 48 , 344 , 100 , 13 );
-         lbllbl29 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Cidade", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 48 , 370 , 40 , 13 );
-         lbllbl34 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Bairro", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 48 , 395 , 34 , 13 );
-         lbllbl31 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Endereço", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 48 , 420 , 121 , 13 );
-         lbllbl33 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Nº", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 48 , 446 , 15 , 13 );
-         tpagetpage38 = new GXTabPage ( tctrlCadastrodecliente , "Dependente" , 5 , 29 , 828 , 502 , UIFactory.getColor(15) , UIFactory.getColor(18) , 0, 0);
-         addSubfile ( subDepgrid  = new GXSubfileTRN ( new Cliente_flow39(this) , new GXColumnDefinition[] {
-          new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 77, 19, tpagetpage38.getGXPanel(), false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 76 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A46PesDepC" ), "Código"  , UIFactory.getColor(8) , UIFactory.getColor(15) , 76 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , true , true )
-         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 560, 19, tpagetpage38.getGXPanel(), false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 559 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A47PesDepN" ), "Nome completo"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 559 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         }, 21 , 18 , tpagetpage38.getGXPanel() , 65 , 65 , 693 , 406 ,  18 ));
+         lbllbl4 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 127 , 75 , 40 , 13 );
+         lbllbl6 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "CPF", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 143 , 103 , 24 , 13 );
+         lbllbl8 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Nome completo", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 79 , 132 , 88 , 13 );
+         lbllbl13 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Situação", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 116 , 160 , 51 , 13 );
+         lbllbl11 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Data de nascimento", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 53 , 189 , 114 , 13 );
+         lbllbl15 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Telefone residencial", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 56 , 278 , 116 , 13 );
+         lbllbl17 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Telefone celular", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 74 , 304 , 93 , 13 );
+         lbllbl19 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "E-mail", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 132 , 330 , 35 , 13 );
+         lbllbl23 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Estado", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 127 , 399 , 40 , 13 );
+         lbllbl26 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Cidade", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 127 , 427 , 40 , 13 );
+         lbllbl30 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Bairro", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 133 , 455 , 34 , 13 );
+         lbllbl28 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Endereço", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 113 , 483 , 54 , 13 );
+         tpagetpage34 = new GXTabPage ( tctrlCadastrodecliente , "Dependente" , 5 , 29 , 580 , 577 , UIFactory.getColor(15) , UIFactory.getColor(18) , 0, 0);
+         addSubfile ( subDepgrid  = new GXSubfileTRN ( new Cliente_flow35(this) , new GXColumnDefinition[] {
+          new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 78, 19, tpagetpage34.getGXPanel(), false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 77 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A46PesDepC" ), "Código"  , UIFactory.getColor(8) , UIFactory.getColor(15) , 77 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , true , true )
+         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 310, 19, tpagetpage34.getGXPanel(), false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 309 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A47PesDepN" ), "Nome completo"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 309 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         }, 25 , 18 , tpagetpage34.getGXPanel() , 64 , 52 , 444 , 475 ,  18 ));
          subDepgrid.addActionListener(this);
          subDepgrid.addFocusListener(this);
          subDepgrid.setSortOnClick(false);
-         lbllbl42 = UIFactory.getLabel(tpagetpage38.getGXPanel(), "Vinculação de dependente", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 26 , 153 , 13 );
+         lbllbl38 = UIFactory.getLabel(tpagetpage34.getGXPanel(), "Vinculação de dependente", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 64 , 26 , 153 , 13 );
          subDepgrid.getColumn(0).addContextAction(this, "BROWSE", GXResourceManager.GetMessage("toolbrowsedata"));
          edtCidCodigo.addContextAction(this, "BROWSE", GXResourceManager.GetMessage("toolbrowsedata"));
          focusManager.setControlList(new IFocusableControl[] {
                    edtPesCodigo ,
                    edtPesCPF ,
                    edtPesNome ,
-                   edtPesDatNascimento ,
                    cmbPesSituacao ,
+                   edtPesDatNascimento ,
                    chkDepende ,
                    edtPesTelefone ,
                    edtPesCelular ,
                    edtPesEmail ,
                    edtEstCodigo ,
-                   edtEstUF ,
                    edtEstNome ,
+                   edtEstUF ,
                    edtCidCodigo ,
                    edtCidNome ,
                    edtPesBairro ,
@@ -443,7 +439,7 @@ namespace GeneXus.Programs {
       {
          InitializeNonKey011( ) ;
          subDepgrid.startLoad();
-         subtcliente39 = new subtcliente39 ();
+         subtcliente35 = new subtcliente35 ();
          subDepgrid.endLoad();
       }
 
@@ -467,8 +463,8 @@ namespace GeneXus.Programs {
             edtCidNome.setEnabled(0);
             edtPesEndereco.setEnabled(0);
             edtPesBairro.setEnabled(0);
-            edtPesEndNumero.setEnabled(0);
             chkDepende.setEnabled(0);
+            edtPesEndNumero.setEnabled(0);
             subDepgrid.getColumn(0).setEnabled(0);
             subDepgrid.getColumn(1).setEnabled(0);
             setFocus(bttBtn_enter, true);
@@ -544,73 +540,73 @@ namespace GeneXus.Programs {
       {
       }
 
-      public void loadToBuffer39( )
+      public void loadToBuffer35( )
       {
-         subtcliente39 oAux = subtcliente39 ;
-         subtcliente39 = new subtcliente39 ();
-         variablesToSubfile39 ();
-         subDepgrid.addElement(subtcliente39);
-         subtcliente39 = oAux;
+         subtcliente35 oAux = subtcliente35 ;
+         subtcliente35 = new subtcliente35 ();
+         variablesToSubfile35 ();
+         subDepgrid.addElement(subtcliente35);
+         subtcliente35 = oAux;
       }
 
-      public bool isLoadAtStartup_flow39( )
+      public bool isLoadAtStartup_flow35( )
       {
          return false;
       }
 
-      public void autoRefresh_flow39( GXSubfile subfile ,
+      public void autoRefresh_flow35( GXSubfile subfile ,
                                       bool loadedFirstTime )
       {
       }
 
-      public bool getSearch_flow39( )
+      public bool getSearch_flow35( )
       {
          return false ;
       }
 
-      public void resetSubfileConditions_flow39( )
+      public void resetSubfileConditions_flow35( )
       {
       }
 
-      public void resetSearchConditions_flow39( bool defaults )
+      public void resetSearchConditions_flow35( bool defaults )
       {
       }
 
-      public GXSubfileElement getNewSubfileElement_flow39( )
+      public GXSubfileElement getNewSubfileElement_flow35( )
       {
          if ( subDepgrid.getItemCount() > 0 )
          {
-            subtcliente39 = ( subtcliente39 ) subDepgrid.getElementAt(subDepgrid.getItemCount() -1);
-            subfileToVariables39 ();
+            subtcliente35 = ( subtcliente35 ) subDepgrid.getElementAt(subDepgrid.getItemCount() -1);
+            subfileToVariables35 ();
             /* Save values for previous() function. */
          }
-         subtcliente39 = new subtcliente39 ();
+         subtcliente35 = new subtcliente35 ();
          InitAll012( ) ;
          sMode2 = Gx_mode ;
          Gx_mode = "INS" ;
          standaloneModal012( ) ;
          Gx_mode = sMode2 ;
-         variablesToSubfile39 ();
-         return subtcliente39 ;
+         variablesToSubfile35 ();
+         return subtcliente35 ;
       }
 
-      public bool getSearch_flow39( GXSubfileElement subfileElement )
+      public bool getSearch_flow35( GXSubfileElement subfileElement )
       {
          return true;
       }
 
-      public void setConditionalColor_flow39( GUIObject comp ,
+      public void setConditionalColor_flow35( GUIObject comp ,
                                               GXSubfileElement element )
       {
 
       }
 
-      public bool getNoaccept_flow39( int col ,
+      public bool getNoaccept_flow35( int col ,
                                       GXSubfileElement element ,
                                       bool enabled )
       {
          String Gx_mode = element.getMode();
-         subtcliente39 subtcliente39  = ( subtcliente39 ) element;
+         subtcliente35 subtcliente35  = ( subtcliente35 ) element;
          if ( col == 0 )
          {
             return ( ( A83Depende == 1 ) || ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "UPD".TrimEnd(' ') ) == 0 )  || ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "DLT".TrimEnd(' ') ) == 0 )  );
@@ -618,47 +614,47 @@ namespace GeneXus.Programs {
          return !enabled;
       }
 
-      public void refresh_flow39( )
+      public void refresh_flow35( )
       {
       }
 
-      public class Cliente_flow39 : GXSubfileFlow
+      public class Cliente_flow35 : GXSubfileFlow
       {
          tcliente _sf ;
 
-         public Cliente_flow39( tcliente uType ) : base()
+         public Cliente_flow35( tcliente uType ) : base()
          {
             _sf = uType;
          }
          public bool isLoadAtStartup( )
          {
-            return _sf.isLoadAtStartup_flow39();
+            return _sf.isLoadAtStartup_flow35();
          }
 
          public void autoRefresh( GXSubfile subfile ,
                                   bool loadedFirstTime )
          {
-            _sf.autoRefresh_flow39(subfile, loadedFirstTime);
+            _sf.autoRefresh_flow35(subfile, loadedFirstTime);
          }
 
          public bool getSearch( )
          {
-            return _sf.getSearch_flow39();
+            return _sf.getSearch_flow35();
          }
 
          public void resetSubfileConditions( )
          {
-            _sf.resetSubfileConditions_flow39();
+            _sf.resetSubfileConditions_flow35();
          }
 
          public void resetSearchConditions( bool defaults )
          {
-            _sf.resetSearchConditions_flow39(defaults);
+            _sf.resetSearchConditions_flow35(defaults);
          }
 
          public GXSubfileElement getNewSubfileElement( )
          {
-            return _sf.getNewSubfileElement_flow39();
+            return _sf.getNewSubfileElement_flow35();
          }
 
          public void refreshScreen( )
@@ -668,25 +664,25 @@ namespace GeneXus.Programs {
 
          public bool getSearch( GXSubfileElement subfileElement )
          {
-            return _sf.getSearch_flow39(subfileElement);
+            return _sf.getSearch_flow35(subfileElement);
          }
 
          public void setConditionalColor( GUIObject comp ,
                                           GXSubfileElement element )
          {
-            _sf.setConditionalColor_flow39(comp, element);
+            _sf.setConditionalColor_flow35(comp, element);
          }
 
          public bool getNoaccept( int col ,
                                   GXSubfileElement element ,
                                   bool enabled )
          {
-            return _sf.getNoaccept_flow39(col, element, enabled);
+            return _sf.getNoaccept_flow35(col, element, enabled);
          }
 
          public void refresh( )
          {
-            _sf.refresh_flow39();
+            _sf.refresh_flow35();
          }
 
       }
@@ -805,12 +801,12 @@ namespace GeneXus.Programs {
             setGXCursor( edtPesBairro.getGXCursor() );
             return;
          }
-         if ( edtPesEndNumero.isEventSource(eventSource) ) {
-            setGXCursor( edtPesEndNumero.getGXCursor() );
-            return;
-         }
          if ( chkDepende.isEventSource(eventSource) ) {
             setGXCursor( chkDepende.getGXCursor() );
+            return;
+         }
+         if ( edtPesEndNumero.isEventSource(eventSource) ) {
+            setGXCursor( edtPesEndNumero.getGXCursor() );
             return;
          }
       }
@@ -867,24 +863,24 @@ namespace GeneXus.Programs {
             return;
          }
          if ( subDepgrid.getColumn(0).isEventSource(eventSource) ) {
-            subtcliente39 = (subtcliente39)subDepgrid.cloneCurrentElement();
-            if ( ( subtcliente39.isDeleted() != 1 ) )
+            subtcliente35 = (subtcliente35)subDepgrid.cloneCurrentElement();
+            if ( ( subtcliente35.isDeleted() != 1 ) )
             {
-               subfileToVariables39 ();
+               subfileToVariables35 ();
                sMode2 = Gx_mode ;
-               Gx_mode = (String)(subtcliente39.getTrnMode()) ;
+               Gx_mode = (String)(subtcliente35.getTrnMode()) ;
                Valid_Pesdepcodigo ();
                Gx_mode = sMode2 ;
             }
             return;
          }
          if ( subDepgrid.getColumn(1).isEventSource(eventSource) ) {
-            subtcliente39 = (subtcliente39)subDepgrid.cloneCurrentElement();
-            if ( ( subtcliente39.isDeleted() != 1 ) )
+            subtcliente35 = (subtcliente35)subDepgrid.cloneCurrentElement();
+            if ( ( subtcliente35.isDeleted() != 1 ) )
             {
-               subfileToVariables39 ();
+               subfileToVariables35 ();
                sMode2 = Gx_mode ;
-               Gx_mode = (String)(subtcliente39.getTrnMode()) ;
+               Gx_mode = (String)(subtcliente35.getTrnMode()) ;
                Valid_Pesdepnome ();
                Gx_mode = sMode2 ;
             }
@@ -964,14 +960,14 @@ namespace GeneXus.Programs {
             n19PesBair = (((String.CompareOrdinal("".TrimEnd(' '), StringUtil.RTrim( A19PesBair).TrimEnd(' ') )==0)) ? true : false) ;
             return;
          }
-         if ( edtPesEndNumero.isEventSource(eventSource) ) {
-            A18PesEndN = edtPesEndNumero.getValue() ;
-            n18PesEndN = (((String.CompareOrdinal("".TrimEnd(' '), StringUtil.RTrim( A18PesEndN).TrimEnd(' ') )==0)) ? true : false) ;
-            return;
-         }
          if ( chkDepende.isEventSource(eventSource) ) {
             A83Depende = chkDepende.getValue() ;
             n83Depende = (((0==A83Depende)) ? true : false) ;
+            return;
+         }
+         if ( edtPesEndNumero.isEventSource(eventSource) ) {
+            A18PesEndN = edtPesEndNumero.getValue() ;
+            n18PesEndN = (((String.CompareOrdinal("".TrimEnd(' '), StringUtil.RTrim( A18PesEndN).TrimEnd(' ') )==0)) ? true : false) ;
             return;
          }
       }
@@ -1093,11 +1089,11 @@ namespace GeneXus.Programs {
          {
             return true;
          }
-         if ( ( edtPesEndNumero.isEventSource(eventSource) ) && ( ( String.CompareOrdinal(A18PesEndN.TrimEnd(' '), edtPesEndNumero.getValue().TrimEnd(' ') ) != 0 ) ) )
+         if ( ( chkDepende.isEventSource(eventSource) ) && ( ( A83Depende != chkDepende.getValue() ) ) )
          {
             return true;
          }
-         if ( ( chkDepende.isEventSource(eventSource) ) && ( ( A83Depende != chkDepende.getValue() ) ) )
+         if ( ( edtPesEndNumero.isEventSource(eventSource) ) && ( ( String.CompareOrdinal(A18PesEndN.TrimEnd(' '), edtPesEndNumero.getValue().TrimEnd(' ') ) != 0 ) ) )
          {
             return true;
          }
@@ -1152,14 +1148,14 @@ namespace GeneXus.Programs {
       {
          if ( subDepgrid .isEventSource(eventSource)) {
             if ( row < 0 ) {
-               subtcliente39 = ( subtcliente39 ) subDepgrid.getCurrentElement() ;
+               subtcliente35 = ( subtcliente35 ) subDepgrid.getCurrentElement() ;
             }
             else
             {
-               subtcliente39 = ( subtcliente39 ) subDepgrid.getElementAt(row) ;
+               subtcliente35 = ( subtcliente35 ) subDepgrid.getElementAt(row) ;
             }
-            subfileToVariables39 ();
-            if ( ( subtcliente39.isDeleted() == 1 ) )
+            subfileToVariables35 ();
+            if ( ( subtcliente35.isDeleted() == 1 ) )
             {
                sMode2 = Gx_mode ;
                Gx_mode = "DLT" ;
@@ -1217,26 +1213,26 @@ namespace GeneXus.Programs {
          {
             edtPesBairro.setEnabled(!( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "DLT".TrimEnd(' ') ) == 0 )  || ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "DSP".TrimEnd(' ') ) == 0 )  ));
          }
-         if ( edtPesEndNumero.isEventSource(eventSource) )
-         {
-            edtPesEndNumero.setEnabled(!( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "DLT".TrimEnd(' ') ) == 0 )  || ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "DSP".TrimEnd(' ') ) == 0 )  ));
-         }
          if ( chkDepende.isEventSource(eventSource) )
          {
             chkDepende.setEnabled(!( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "DLT".TrimEnd(' ') ) == 0 )  || ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "DSP".TrimEnd(' ') ) == 0 )  ));
          }
+         if ( edtPesEndNumero.isEventSource(eventSource) )
+         {
+            edtPesEndNumero.setEnabled(!( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "DLT".TrimEnd(' ') ) == 0 )  || ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "DSP".TrimEnd(' ') ) == 0 )  ));
+         }
       }
 
-      protected void variablesToSubfile39( )
+      protected void variablesToSubfile35( )
       {
-         subtcliente39.setPesDepCodigo(A46PesDepC);
-         subtcliente39.setPesDepNome(A47PesDepN);
+         subtcliente35.setPesDepCodigo(A46PesDepC);
+         subtcliente35.setPesDepNome(A47PesDepN);
       }
 
-      protected void subfileToVariables39( )
+      protected void subfileToVariables35( )
       {
-         A46PesDepC = subtcliente39.getPesDepCodigo();
-         A47PesDepN = subtcliente39.getPesDepNome();
+         A46PesDepC = subtcliente35.getPesDepCodigo();
+         A47PesDepN = subtcliente35.getPesDepNome();
       }
 
       public override void VariablesToControls( )
@@ -1259,8 +1255,8 @@ namespace GeneXus.Programs {
          edtCidNome.setValue( A27CidNome );
          edtPesEndereco.setValue( A17PesEnde );
          edtPesBairro.setValue( A19PesBair );
-         edtPesEndNumero.setValue( A18PesEndN );
          chkDepende.setValue( A83Depende );
+         edtPesEndNumero.setValue( A18PesEndN );
       }
 
       public override void ControlsToVariables( )
@@ -1322,14 +1318,14 @@ namespace GeneXus.Programs {
          edtPesBairro.setValue(A19PesBair);
          n19PesBair = false ;
          n19PesBair = (((String.CompareOrdinal("".TrimEnd(' '), StringUtil.RTrim( A19PesBair).TrimEnd(' ') )==0)) ? true : false) ;
-         A18PesEndN = (String)(edtPesEndNumero.getValue()) ;
-         edtPesEndNumero.setValue(A18PesEndN);
-         n18PesEndN = false ;
-         n18PesEndN = (((String.CompareOrdinal("".TrimEnd(' '), StringUtil.RTrim( A18PesEndN).TrimEnd(' ') )==0)) ? true : false) ;
          A83Depende = (short)(chkDepende.getValue()) ;
          chkDepende.setValue(A83Depende);
          n83Depende = false ;
          n83Depende = (((0==A83Depende)) ? true : false) ;
+         A18PesEndN = (String)(edtPesEndNumero.getValue()) ;
+         edtPesEndNumero.setValue(A18PesEndN);
+         n18PesEndN = false ;
+         n18PesEndN = (((String.CompareOrdinal("".TrimEnd(' '), StringUtil.RTrim( A18PesEndN).TrimEnd(' ') )==0)) ? true : false) ;
       }
 
       protected void eventNoLevelContext( )
@@ -1342,32 +1338,32 @@ namespace GeneXus.Programs {
          ControlsToVariables();
          if ( subDepgrid.inValidElement() )
          {
-            subtcliente39 = ( subtcliente39 ) subDepgrid.getCurrentElement() ;
+            subtcliente35 = ( subtcliente35 ) subDepgrid.getCurrentElement() ;
          }
          else
          {
-            subtcliente39 = new subtcliente39 ();
+            subtcliente35 = new subtcliente35 ();
          }
-         subfileToVariables39 ();
+         subfileToVariables35 ();
       }
 
       protected void eventLevelResetContext( )
       {
-         variablesToSubfile39 ();
-         subDepgrid.refreshLineValue(subtcliente39);
+         variablesToSubfile35 ();
+         subDepgrid.refreshLineValue(subtcliente35);
       }
 
       protected void reloadGridRow( )
       {
          if ( subDepgrid.inValidElement() )
          {
-            subtcliente39 = ( subtcliente39 ) subDepgrid.getCurrentElement() ;
+            subtcliente35 = ( subtcliente35 ) subDepgrid.getCurrentElement() ;
          }
          else
          {
-            subtcliente39 = new subtcliente39 ();
+            subtcliente35 = new subtcliente35 ();
          }
-         subfileToVariables39 ();
+         subfileToVariables35 ();
       }
 
       protected void prompt_26_1( )
@@ -1382,7 +1378,7 @@ namespace GeneXus.Programs {
       protected void prompt_46_2( )
       {
          new wgx0010(context, base.remoteHandle, base.context).execute( out  A46PesDepC) ;
-         ((subtcliente39)subDepgrid.getCurrentElement()).setPesDepCodigo(A46PesDepC);
+         ((subtcliente35)subDepgrid.getCurrentElement()).setPesDepCodigo(A46PesDepC);
          subDepgrid.refreshLineValue(subDepgrid.getSelectedElement());
          subDepgrid.repaint();
          ResetCaption010( ) ;
@@ -1568,7 +1564,7 @@ namespace GeneXus.Programs {
             n47PesDepN = T00014_n47PesDepN[0] ;
             pr_default.close(2);
             chkDepende.setValue( A83Depende );
-            ((subtcliente39)subDepgrid.getCurrentElement()).setPesDepNome(A47PesDepN);
+            ((subtcliente35)subDepgrid.getCurrentElement()).setPesDepNome(A47PesDepN);
             subDepgrid.refreshLineValue(subDepgrid.getSelectedElement());
             subDepgrid.repaint();
             pr_default.close(2);
@@ -1626,7 +1622,7 @@ namespace GeneXus.Programs {
          if ( ( A83Depende == 1 ) )
          {
             new pdeldependente(context, base.remoteHandle, base.context).execute( ref  A46PesDepC) ;
-            ((subtcliente39)subDepgrid.getCurrentElement()).setPesDepCodigo(A46PesDepC);
+            ((subtcliente35)subDepgrid.getCurrentElement()).setPesDepCodigo(A46PesDepC);
             subDepgrid.refreshLineValue(subDepgrid.getSelectedElement());
             subDepgrid.repaint();
          }
@@ -1640,7 +1636,7 @@ namespace GeneXus.Programs {
          {
             AV12TratEr = "Inativo" ;
             new wconscliente(context, base.remoteHandle, base.context).execute( ref  AV12TratEr, out  A46PesDepC) ;
-            ((subtcliente39)subDepgrid.getCurrentElement()).setPesDepCodigo(A46PesDepC);
+            ((subtcliente35)subDepgrid.getCurrentElement()).setPesDepCodigo(A46PesDepC);
             subDepgrid.refreshLineValue(subDepgrid.getSelectedElement());
             subDepgrid.repaint();
             if ( ( String.CompareOrdinal(AV12TratEr.TrimEnd(' '), "Ativo".TrimEnd(' ') ) == 0 ) )
@@ -2031,7 +2027,7 @@ namespace GeneXus.Programs {
          K13PesCodi = A13PesCodi ;
          pr_default.close(7);
          subDepgrid.startLoad();
-         subtcliente39 = new subtcliente39 ();
+         subtcliente35 = new subtcliente35 ();
          if ( ( RcdFound1 == 1 ) )
          {
             ScanStart012( ) ;
@@ -2044,7 +2040,7 @@ namespace GeneXus.Programs {
             }
             ScanEnd012( ) ;
          }
-         subDepgrid.endLoad(new subtcliente39());
+         subDepgrid.endLoad(new subtcliente35());
       }
 
       public override void getEqualNoModal( )
@@ -2447,15 +2443,15 @@ namespace GeneXus.Programs {
       protected void ProcessNestedLevel012( )
       {
          s48PesDepT = O48PesDepT ;
-         nGXsfl_39_idx = 0 ;
-         while ( ( nGXsfl_39_idx < subDepgrid.getItemCount() ) )
+         nGXsfl_35_idx = 0 ;
+         while ( ( nGXsfl_35_idx < subDepgrid.getItemCount() ) )
          {
             ReadRow012( ) ;
-            if ( ( subtcliente39.isLoaded() != 0 ) || ( subtcliente39.isChanged() != 0 ) )
+            if ( ( subtcliente35.isLoaded() != 0 ) || ( subtcliente35.isChanged() != 0 ) )
             {
                standaloneNotModal012( ) ;
                GetKey012( ) ;
-               if ( ( subtcliente39.isLoaded() == 0 ) && ( subtcliente39.isDeleted() == 0 ) )
+               if ( ( subtcliente35.isLoaded() == 0 ) && ( subtcliente35.isDeleted() == 0 ) )
                {
                   if ( ( RcdFound2 == 0 ) )
                   {
@@ -2473,14 +2469,14 @@ namespace GeneXus.Programs {
                {
                   if ( ( RcdFound2 != 0 ) )
                   {
-                     if ( ( subtcliente39.isDeleted() != 0 ) && ( subtcliente39.isLoaded() != 0 ) )
+                     if ( ( subtcliente35.isDeleted() != 0 ) && ( subtcliente35.isLoaded() != 0 ) )
                      {
                         Gx_mode = "DLT" ;
                         Delete012( ) ;
                      }
                      else
                      {
-                        if ( ( subtcliente39.isChanged() != 0 ) && ( subtcliente39.isLoaded() != 0 ) )
+                        if ( ( subtcliente35.isChanged() != 0 ) && ( subtcliente35.isLoaded() != 0 ) )
                         {
                            Gx_mode = "UPD" ;
                            Update012( ) ;
@@ -2489,7 +2485,7 @@ namespace GeneXus.Programs {
                   }
                   else
                   {
-                     if ( ( subtcliente39.isDeleted() == 0 ) )
+                     if ( ( subtcliente35.isDeleted() == 0 ) )
                      {
                         pushError( GXResourceManager.GetMessage("recdeleted") );
                         AnyError = 1 ;
@@ -2500,7 +2496,7 @@ namespace GeneXus.Programs {
                O48PesDepT = A48PesDepT ;
             }
          }
-         subDepgrid.endLoad(new subtcliente39());
+         subDepgrid.endLoad(new subtcliente35());
          /* Start of After( level) rules */
          /* End of After( level) rules */
       }
@@ -2551,8 +2547,8 @@ namespace GeneXus.Programs {
             pr_default.close(17);
             pr_default.close(2);
             context.RollbackDataStores("TCliente");
-            nGXsfl_39_idx = 0 ;
-            while ( ( nGXsfl_39_idx < subDepgrid.getItemCount() ) )
+            nGXsfl_35_idx = 0 ;
+            while ( ( nGXsfl_35_idx < subDepgrid.getItemCount() ) )
             {
                ReadRow012( ) ;
                /* Using cursor T00017 */
@@ -2565,7 +2561,7 @@ namespace GeneXus.Programs {
                   else
                   {
                   }
-                  variablesToSubfile39 ();
+                  variablesToSubfile35 ();
                }
                pr_default.close(5);
             }
@@ -2700,7 +2696,7 @@ namespace GeneXus.Programs {
          {
             pushError( "Não existe 'Dependente de pessoa.'." );
             AnyError = 1 ;
-            setNextFocus( new GXSubfileCell(subDepgrid, nGXsfl_39_idx - 1, 0) );
+            setNextFocus( new GXSubfileCell(subDepgrid, nGXsfl_35_idx - 1, 0) );
          }
          A47PesDepN = T00014_A47PesDepN[0] ;
          n47PesDepN = T00014_n47PesDepN[0] ;
@@ -3011,14 +3007,14 @@ namespace GeneXus.Programs {
 
       protected void AddRow012( )
       {
-         loadToBuffer39();
+         loadToBuffer35();
       }
 
       protected void ReadRow012( )
       {
-         subtcliente39 = ( subtcliente39 ) subDepgrid.getElementAt(nGXsfl_39_idx) ;
-         subfileToVariables39 ();
-         nGXsfl_39_idx = (short)(nGXsfl_39_idx+1) ;
+         subtcliente35 = ( subtcliente35 ) subDepgrid.getElementAt(nGXsfl_35_idx) ;
+         subfileToVariables35 ();
+         nGXsfl_35_idx = (short)(nGXsfl_35_idx+1) ;
       }
 
       protected void CONFIRM_010( )
@@ -3057,14 +3053,14 @@ namespace GeneXus.Programs {
       protected void CONFIRM_012( )
       {
          s48PesDepT = O48PesDepT ;
-         nGXsfl_39_idx = 0 ;
-         while ( ( nGXsfl_39_idx < subDepgrid.getItemCount() ) )
+         nGXsfl_35_idx = 0 ;
+         while ( ( nGXsfl_35_idx < subDepgrid.getItemCount() ) )
          {
             ReadRow012( ) ;
-            if ( ( subtcliente39.isLoaded() != 0 ) || ( subtcliente39.isChanged() != 0 ) )
+            if ( ( subtcliente35.isLoaded() != 0 ) || ( subtcliente35.isChanged() != 0 ) )
             {
                GetKey012( ) ;
-               if ( ( subtcliente39.isLoaded() == 0 ) && ( subtcliente39.isDeleted() == 0 ) )
+               if ( ( subtcliente35.isLoaded() == 0 ) && ( subtcliente35.isDeleted() == 0 ) )
                {
                   if ( ( RcdFound2 == 0 ) )
                   {
@@ -3094,7 +3090,7 @@ namespace GeneXus.Programs {
                {
                   if ( ( RcdFound2 != 0 ) )
                   {
-                     if ( ( subtcliente39.isDeleted() != 0 ) )
+                     if ( ( subtcliente35.isDeleted() != 0 ) )
                      {
                         Gx_mode = "DLT" ;
                         getByPrimaryKey012( ) ;
@@ -3108,7 +3104,7 @@ namespace GeneXus.Programs {
                      }
                      else
                      {
-                        if ( ( subtcliente39.isChanged() != 0 ) )
+                        if ( ( subtcliente35.isChanged() != 0 ) )
                         {
                            Gx_mode = "UPD" ;
                            BeforeValidate012( ) ;
@@ -3129,7 +3125,7 @@ namespace GeneXus.Programs {
                   }
                   else
                   {
-                     if ( ( subtcliente39.isDeleted() == 0 ) )
+                     if ( ( subtcliente35.isDeleted() == 0 ) )
                      {
                         pushError( GXResourceManager.GetMessage("recdeleted") );
                         AnyError = 1 ;
@@ -3219,7 +3215,7 @@ namespace GeneXus.Programs {
          A47PesDepN = "" ;
          n47PesDepN = false ;
          K46PesDepC = 0 ;
-         subtcliente39 = new subtcliente39();
+         subtcliente35 = new subtcliente35();
          sMode2 = "" ;
          lastAnyError = 0 ;
          O48PesDepT = 0 ;
@@ -3511,7 +3507,7 @@ namespace GeneXus.Programs {
       protected short Z83Depende ;
       protected short Gx_BScreen ;
       protected short RcdFound2 ;
-      protected short nGXsfl_39_idx=1 ;
+      protected short nGXsfl_35_idx=1 ;
       protected int trnEnded ;
       protected int A24EstCodi ;
       protected int A26CidCodi ;
@@ -3591,15 +3587,15 @@ namespace GeneXus.Programs {
       protected GUIObjectInt edtPesCodigo ;
       protected GUIObjectString edtPesCPF ;
       protected GUIObjectString edtPesNome ;
-      protected GUIObjectDatetime edtPesDatNascimento ;
       protected GUIObjectShort cmbPesSituacao ;
+      protected GUIObjectDatetime edtPesDatNascimento ;
       protected GUIObjectShort chkDepende ;
       protected GUIObjectString edtPesTelefone ;
       protected GUIObjectString edtPesCelular ;
       protected GUIObjectString edtPesEmail ;
       protected GUIObjectInt edtEstCodigo ;
-      protected GUIObjectString edtEstUF ;
       protected GUIObjectString edtEstNome ;
+      protected GUIObjectString edtEstUF ;
       protected GUIObjectInt edtCidCodigo ;
       protected GUIObjectString edtCidNome ;
       protected GUIObjectString edtPesBairro ;
@@ -3607,25 +3603,21 @@ namespace GeneXus.Programs {
       protected GUIObjectString edtPesEndNumero ;
       protected ILabel lbllbl5 ;
       protected ILabel lbllbl4 ;
-      protected ILabel lbllbl8 ;
       protected ILabel lbllbl6 ;
-      protected ILabel lbllbl11 ;
+      protected ILabel lbllbl8 ;
       protected ILabel lbllbl13 ;
+      protected ILabel lbllbl11 ;
       protected ILabel lbllbl15 ;
       protected ILabel lbllbl17 ;
       protected ILabel lbllbl19 ;
-      protected ILabel lbllbl21 ;
       protected ILabel lbllbl23 ;
-      protected ILabel lbllbl25 ;
-      protected ILabel lbllbl27 ;
-      protected ILabel lbllbl29 ;
-      protected ILabel lbllbl34 ;
-      protected ILabel lbllbl31 ;
-      protected ILabel lbllbl33 ;
-      protected GXTabPage tpagetpage38 ;
+      protected ILabel lbllbl26 ;
+      protected ILabel lbllbl30 ;
+      protected ILabel lbllbl28 ;
+      protected GXTabPage tpagetpage34 ;
       protected GXSubfileTRN subDepgrid ;
-      protected ILabel lbllbl42 ;
-      protected subtcliente39 subtcliente39 ;
+      protected ILabel lbllbl38 ;
+      protected subtcliente35 subtcliente35 ;
       protected IDataReader T00012 ;
       protected IDataStoreProvider pr_default ;
       protected String[] T00012_A25EstUF ;
@@ -4004,12 +3996,12 @@ namespace GeneXus.Programs {
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000121", "SELECT TOP 1 [LocCodigo] FROM [LOCACAO] WITH (NOLOCK) WHERE [LocCliPesCodigo] = @PesCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000121,1,0,true,true )
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000122", "SELECT TOP 1 [PesCodigo], [PesDepCodigo] AS PesDepCodigo FROM [CLIENTEDEPENDENTE] WITH (NOLOCK) WHERE [PesDepCodigo] = @PesCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000122,1,0,true,true )
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000123", "SELECT [PesCodigo] FROM [PESSOA] WITH (NOLOCK) WHERE [PesCodigo] = @PesCodigo ORDER BY [PesCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000123,100,0,true,true )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000124", "SELECT T1.[PesCodigo], T2.[Depende], T2.[PesNome] AS PesDepNome, T1.[PesDepCodigo] AS PesDepCodigo FROM ([CLIENTEDEPENDENTE] T1 WITH (NOLOCK) INNER JOIN [PESSOA] T2 WITH (NOLOCK) ON T2.[PesCodigo] = T1.[PesDepCodigo]) WHERE T1.[PesCodigo] = @PesCodigo and T1.[PesDepCodigo] = @PesDepCodigo ORDER BY T1.[PesCodigo], T1.[PesDepCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000124,18,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000124", "SELECT T1.[PesCodigo], T2.[Depende], T2.[PesNome] AS PesDepNome, T1.[PesDepCodigo] AS PesDepCodigo FROM ([CLIENTEDEPENDENTE] T1 WITH (NOLOCK) INNER JOIN [PESSOA] T2 WITH (NOLOCK) ON T2.[PesCodigo] = T1.[PesDepCodigo]) WHERE T1.[PesCodigo] = @PesCodigo and T1.[PesDepCodigo] = @PesDepCodigo ORDER BY T1.[PesCodigo], T1.[PesDepCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000124,20,0,true,false )
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000125", "SELECT [PesCodigo], [PesDepCodigo] AS PesDepCodigo FROM [CLIENTEDEPENDENTE] WITH (NOLOCK) WHERE [PesCodigo] = @PesCodigo AND [PesDepCodigo] = @PesDepCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000125,1,0,true,false )
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000126", "INSERT INTO [CLIENTEDEPENDENTE] ([PesCodigo], [PesDepCodigo]) VALUES (@PesCodigo, @PesDepCodigo)", GxErrorMask.GX_NOMASK,prmT000126)
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000127", "DELETE FROM [CLIENTEDEPENDENTE]  WHERE [PesCodigo] = @PesCodigo AND [PesDepCodigo] = @PesDepCodigo", GxErrorMask.GX_NOMASK,prmT000127)
              ,new GeneXus.Data.NTier.ADO.CursorDef("T000128", "SELECT [Depende], [PesNome] AS PesDepNome FROM [PESSOA] WITH (NOLOCK) WHERE [PesCodigo] = @PesDepCodigo ",true, GxErrorMask.GX_NOMASK, false, this,prmT000128,1,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("T000129", "SELECT [PesCodigo], [PesDepCodigo] AS PesDepCodigo FROM [CLIENTEDEPENDENTE] WITH (NOLOCK) WHERE [PesCodigo] = @PesCodigo ORDER BY [PesCodigo], [PesDepCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000129,18,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("T000129", "SELECT [PesCodigo], [PesDepCodigo] AS PesDepCodigo FROM [CLIENTEDEPENDENTE] WITH (NOLOCK) WHERE [PesCodigo] = @PesCodigo ORDER BY [PesCodigo], [PesDepCodigo] ",true, GxErrorMask.GX_NOMASK, false, this,prmT000129,20,0,true,false )
           };
        }
     }

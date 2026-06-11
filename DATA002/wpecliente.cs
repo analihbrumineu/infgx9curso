@@ -2,7 +2,7 @@
                File: PeCliente
         Description: Cadastro de clientes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:25.7
+       Generated on: 6/11/2026 11:31:35.1
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -91,7 +91,7 @@ namespace GeneXus.Programs {
 
       public override int getFrmWidth( )
       {
-         return 819 ;
+         return 1062 ;
       }
 
       public override int getFrmHeight( )
@@ -198,13 +198,13 @@ namespace GeneXus.Programs {
       {
       }
 
-      public void runLoad_load11( )
+      public void runLoad_load10( )
       {
          if ( exitExecuted )
          {
             return  ;
          }
-         subwpecliente11 = new subwpecliente11 ();
+         subwpecliente10 = new subwpecliente10 ();
          pr_default.dynParam(0, new Object[]{ new Object[]{
                                               AV5PesCodi ,
                                               AV6PesNome ,
@@ -225,7 +225,7 @@ namespace GeneXus.Programs {
          });
          /* Using cursor W000S2 */
          pr_default.execute(0);
-         while ( ( (pr_default.getStatus(0) != 101) ) && ( ( subGxsf11.getSize() < 10000 ) ) )
+         while ( ( (pr_default.getStatus(0) != 101) ) && ( ( subGxsf10.getSize() < 10000 ) ) )
          {
             A38PesTipo = W000S2_A38PesTipo[0] ;
             n38PesTipo = W000S2_n38PesTipo[0] ;
@@ -244,36 +244,36 @@ namespace GeneXus.Programs {
             }
             pr_default.readNext(0);
          }
-         if ( subGxsf11.getSize() >= 10000 && !(pr_default.getStatus(0) == 101) )
+         if ( subGxsf10.getSize() >= 10000 && !(pr_default.getStatus(0) == 101) )
          {
             GXutil.msg( me(), (String)(localUtil.getMessages().getMessage("mlmax", new Object[]{ 10000})) );
          }
          pr_default.close(0);
       }
 
-      public class PeCliente_load11 : GXLoadProducer
+      public class PeCliente_load10 : GXLoadProducer
       {
          wpecliente _sf ;
 
-         public PeCliente_load11( wpecliente uType ) : base()
+         public PeCliente_load10( wpecliente uType ) : base()
          {
             _sf = uType;
          }
          public override void loadToBuffer( )
          {
-            _sf.loadToBuffer11();
+            _sf.loadToBuffer10();
          }
 
          public override void runLoad( )
          {
             if(!UIFactory.isDisposed( _sf.getIPanel() )) {
-               _sf.runLoad_load11();
+               _sf.runLoad_load10();
             }
          }
 
          public override void closeCursors( )
          {
-            _sf.closeCursors11();
+            _sf.closeCursors10();
          }
 
       }
@@ -292,7 +292,7 @@ namespace GeneXus.Programs {
             ControlsToVariables();
             standAlone();
             VariablesToControls();
-            subGxsf11.refresh();
+            subGxsf10.refresh();
             gxIsRefreshing = false ;
          }
       }
@@ -301,100 +301,100 @@ namespace GeneXus.Programs {
       {
       }
 
-      public bool isLoadAtStartup_flow11( )
+      public bool isLoadAtStartup_flow10( )
       {
          return true;
       }
 
-      public void autoRefresh_flow11( GXSubfile subfile ,
+      public void autoRefresh_flow10( GXSubfile subfile ,
                                       bool loadedFirstTime )
       {
-         if (( (AV12PesDep!=cV12PesDep)||(AV14DepTod!=cV14DepTod) ) || (!loadedFirstTime && ! isLoadAtStartup_flow11() )) {
+         if (( (AV12PesDep!=cV12PesDep)||(AV14DepTod!=cV14DepTod) ) || (!loadedFirstTime && ! isLoadAtStartup_flow10() )) {
             subfile.refresh();
-            resetSubfileConditions_flow11() ;
+            resetSubfileConditions_flow10() ;
          }
       }
 
-      public bool getSearch_flow11( )
+      public bool getSearch_flow10( )
       {
          return false ;
       }
 
-      public void resetSubfileConditions_flow11( )
+      public void resetSubfileConditions_flow10( )
       {
          cV12PesDep = AV12PesDep ;
          cV14DepTod = AV14DepTod ;
       }
 
-      public void resetSearchConditions_flow11( bool defaults )
+      public void resetSearchConditions_flow10( bool defaults )
       {
       }
 
-      public GXSubfileElement getNewSubfileElement_flow11( )
+      public GXSubfileElement getNewSubfileElement_flow10( )
       {
-         return new subwpecliente11 ();
+         return new subwpecliente10 ();
       }
 
-      public bool getSearch_flow11( GXSubfileElement subfileElement )
+      public bool getSearch_flow10( GXSubfileElement subfileElement )
       {
          return true;
       }
 
-      public void setConditionalColor_flow11( GUIObject comp ,
+      public void setConditionalColor_flow10( GUIObject comp ,
                                               GXSubfileElement element )
       {
 
       }
 
-      public bool getNoaccept_flow11( int col ,
+      public bool getNoaccept_flow10( int col ,
                                       GXSubfileElement element ,
                                       bool enabled )
       {
          return !enabled;
       }
 
-      public void refresh_flow11( )
+      public void refresh_flow10( )
       {
-         GXRefreshCommand11 ();
+         GXRefreshCommand10 ();
       }
 
-      public class PeCliente_flow11 : GXSubfileFlow
+      public class PeCliente_flow10 : GXSubfileFlow
       {
          wpecliente _sf ;
 
-         public PeCliente_flow11( wpecliente uType ) : base()
+         public PeCliente_flow10( wpecliente uType ) : base()
          {
             _sf = uType;
          }
          public bool isLoadAtStartup( )
          {
-            return _sf.isLoadAtStartup_flow11();
+            return _sf.isLoadAtStartup_flow10();
          }
 
          public void autoRefresh( GXSubfile subfile ,
                                   bool loadedFirstTime )
          {
-            _sf.autoRefresh_flow11(subfile, loadedFirstTime);
+            _sf.autoRefresh_flow10(subfile, loadedFirstTime);
          }
 
          public bool getSearch( )
          {
-            return _sf.getSearch_flow11();
+            return _sf.getSearch_flow10();
          }
 
          public void resetSubfileConditions( )
          {
-            _sf.resetSubfileConditions_flow11();
+            _sf.resetSubfileConditions_flow10();
          }
 
          public void resetSearchConditions( bool defaults )
          {
-            _sf.resetSearchConditions_flow11(defaults);
+            _sf.resetSearchConditions_flow10(defaults);
          }
 
          public GXSubfileElement getNewSubfileElement( )
          {
-            return _sf.getNewSubfileElement_flow11();
+            return _sf.getNewSubfileElement_flow10();
          }
 
          public void refreshScreen( )
@@ -404,30 +404,30 @@ namespace GeneXus.Programs {
 
          public bool getSearch( GXSubfileElement subfileElement )
          {
-            return _sf.getSearch_flow11(subfileElement);
+            return _sf.getSearch_flow10(subfileElement);
          }
 
          public void setConditionalColor( GUIObject comp ,
                                           GXSubfileElement element )
          {
-            _sf.setConditionalColor_flow11(comp, element);
+            _sf.setConditionalColor_flow10(comp, element);
          }
 
          public bool getNoaccept( int col ,
                                   GXSubfileElement element ,
                                   bool enabled )
          {
-            return _sf.getNoaccept_flow11(col, element, enabled);
+            return _sf.getNoaccept_flow10(col, element, enabled);
          }
 
          public void refresh( )
          {
-            _sf.refresh_flow11();
+            _sf.refresh_flow10();
          }
 
       }
 
-      protected void GXRefreshCommand11( )
+      protected void GXRefreshCommand10( )
       {
          ControlsToVariables();
          /* Execute user event: E12V0S2 */
@@ -476,13 +476,13 @@ namespace GeneXus.Programs {
          }
       }
 
-      public void loadToBuffer11( )
+      public void loadToBuffer10( )
       {
-         subwpecliente11 oAux = subwpecliente11 ;
-         subwpecliente11 = new subwpecliente11 ();
-         variablesToSubfile11 ();
-         subGxsf11.addElement(subwpecliente11);
-         subwpecliente11 = oAux;
+         subwpecliente10 oAux = subwpecliente10 ;
+         subwpecliente10 = new subwpecliente10 ();
+         variablesToSubfile10 ();
+         subGxsf10.addElement(subwpecliente10);
+         subwpecliente10 = oAux;
       }
 
       private void E11V0S2( )
@@ -491,10 +491,10 @@ namespace GeneXus.Programs {
          AV11Exclui = "c:\\KB\\DATA002\\bin\\deleteIcon.jpg" ;
          AV10Editar = "c:\\KB\\DATA002\\bin\\editIcon.jpg" ;
          AV15Visual = "c:\\KB\\DATA002\\bin\\visualizarIcon.jpg" ;
-         subGxsf11.loadCommand();
+         subGxsf10.loadCommand();
       }
 
-      protected void closeCursors11( )
+      protected void closeCursors10( )
       {
          pr_default.close(0);
       }
@@ -563,108 +563,108 @@ namespace GeneXus.Programs {
 
       public override void screen( )
       {
-         GXPanel1 = new GXPanel(this, 3 , 25 , 819 , 819 );
+         GXPanel1 = new GXPanel(this, 3 , 25 , 1062 , 819 );
          this.setIBackground(UIFactory.getColor(15));
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         edtavPescodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),64, 75, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 64 , 75 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV5PesCodi" );
+         edtavPescodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),65, 70, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 65 , 70 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV5PesCodi" );
          ((GXEdit) edtavPescodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavPescodigo.addFocusListener(this);
          edtavPescodigo.getGXComponent().setHelpId("HLP_WPeCliente.htm");
-         cmbavPessituacao = new GUIObjectShort ( new GXComboBox(GXPanel1) , GXPanel1 , 357 , 75 , 130 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV13PesSit" );
+         edtavPesnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),147, 70, 203, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 147 , 70 , 203 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6PesNome" );
+         ((GXEdit) edtavPesnome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
+         edtavPesnome.addFocusListener(this);
+         edtavPesnome.getGXComponent().setHelpId("HLP_WPeCliente.htm");
+         cmbavPessituacao = new GUIObjectShort ( new GXComboBox(GXPanel1) , GXPanel1 , 359 , 70 , 130 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV13PesSit" );
          ((GXComboBox) cmbavPessituacao.getGXComponent()).addItem( new java.lang.Short(9),"Todos");
          ((GXComboBox) cmbavPessituacao.getGXComponent()).addItem( new java.lang.Short(1),"Ativo");
          ((GXComboBox) cmbavPessituacao.getGXComponent()).addItem( new java.lang.Short(0),"Inativo");
          cmbavPessituacao.addFocusListener(this);
          cmbavPessituacao.addItemListener(this);
          cmbavPessituacao.getGXComponent().setHelpId("HLP_WPeCliente.htm");
-         edtavPesnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),64, 121, 273, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 64 , 121 , 273 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6PesNome" );
-         ((GXEdit) edtavPesnome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
-         edtavPesnome.addFocusListener(this);
-         edtavPesnome.getGXComponent().setHelpId("HLP_WPeCliente.htm");
-         edtavPesdeptotal = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),357, 121, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 357 , 121 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV12PesDep" );
+         edtavPesdeptotal = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),498, 70, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 498 , 70 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV12PesDep" );
          ((GXEdit) edtavPesdeptotal.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavPesdeptotal.addFocusListener(this);
          edtavPesdeptotal.getGXComponent().setHelpId("HLP_WPeCliente.htm");
-         chkavDeptodos = new GUIObjectShort ( new GXCheckBox(GXPanel1, "Todos" , new java.lang.Short(1), new java.lang.Short(0)) , GXPanel1 , 357 , 150 , 56 , 17 , Integer.MAX_VALUE , UIFactory.getColor(17) , UIFactory.getFont( "Courier New", IFontConstants.BOLD, 9) , true , "AV14DepTod" );
-         chkavDeptodos.addFocusListener(this);
-         chkavDeptodos.addItemListener(this);
-         chkavDeptodos.getGXComponent().setHelpId("HLP_WPeCliente.htm");
-         edtavPesbairro = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),64, 169, 273, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 64 , 169 , 273 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV9PesBair" );
+         edtavPesbairro = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),645, 70, 171, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 645 , 70 , 171 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV9PesBair" );
          ((GXEdit) edtavPesbairro.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavPesbairro.addFocusListener(this);
          edtavPesbairro.getGXComponent().setHelpId("HLP_WPeCliente.htm");
-         addSubfile ( subGxsf11  = new GXSubfile ( new PeCliente_load11(this), new PeCliente_flow11(this), false , new GXColumnDefinition[] {
+         chkavDeptodos = new GUIObjectShort ( new GXCheckBox(GXPanel1, "Todos" , new java.lang.Short(1), new java.lang.Short(0)) , GXPanel1 , 580 , 72 , 56 , 17 , Integer.MAX_VALUE , UIFactory.getColor(17) , UIFactory.getFont( "Courier New", IFontConstants.BOLD, 9) , true , "AV14DepTod" );
+         chkavDeptodos.addFocusListener(this);
+         chkavDeptodos.addItemListener(this);
+         chkavDeptodos.getGXComponent().setHelpId("HLP_WPeCliente.htm");
+         addSubfile ( subGxsf10  = new GXSubfile ( new PeCliente_load10(this), new PeCliente_flow10(this), false , new GXColumnDefinition[] {
           new GXColumnDefinition( new GUIObjectString ( new SubfileImage() , null ,  0 , 0 , 26 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV15Visual" ), ""  , UIFactory.getColor(18) , UIFactory.getColor(15) , 26 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectString ( new SubfileImage() , null ,  0 , 0 , 26 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV10Editar" ), ""  , UIFactory.getColor(18) , UIFactory.getColor(15) , 26 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectString ( new SubfileImage() , null ,  0 , 0 , 25 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV11Exclui" ), ""  , UIFactory.getColor(18) , UIFactory.getColor(15) , 25 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         , new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 52, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 51 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A13PesCodi" ), "Código"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 51 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 289, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 288 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A14PesNome" ), "Nome completo"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 288 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         , new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 93, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 92 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A48PesDepT" ), "Dependente(s)"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 92 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         , new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 80, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 79 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A13PesCodi" ), "Código"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 79 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 394, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 393 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A14PesNome" ), "Nome completo"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 393 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         , new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 123, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 122 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A48PesDepT" ), "Dependente(s)"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 122 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectShort ( new GXComboBox(GXPanel1, false) , null ,  0 , 0 , 122 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A23PesSitu" ), "Situação"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 122 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         }, 32 , 18 , GXPanel1 , 65 , 208 , 693 , 598 ,  18 ));
-         ((GXComboBox) subGxsf11.getColumn(6).getGXComponent()).addItem( new java.lang.Short(1),"Ativo");
-         ((GXComboBox) subGxsf11.getColumn(6).getGXComponent()).addItem( new java.lang.Short(0),"Inativo");
-         subGxsf11.addActionListener(this);
-         subGxsf11.addFocusListener(this);
-         subGxsf11.setSortOnClick(true);
-         subGxsf11.getColumn(0).addActionListener( this);
-         subGxsf11.getColumn(0).addItemListener( this);
-         subGxsf11.getColumn(1).addActionListener( this);
-         subGxsf11.getColumn(1).addItemListener( this);
-         subGxsf11.getColumn(2).addActionListener( this);
-         subGxsf11.getColumn(2).addItemListener( this);
-         bttbtt2 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  650 ,  169 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
-         bttbtt2.setTooltip("Novo");
-         bttbtt2.addActionListener(this);
-         bttbtt2.setFiresEvents(false);
-         lbllbl7 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 64 , 58 , 40 , 13 );
-         lbllbl10 = UIFactory.getLabel(GXPanel1, "Situação", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 357 , 58 , 51 , 13 );
-         lbllbl8 = UIFactory.getLabel(GXPanel1, "Nome", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 64 , 103 , 33 , 13 );
-         lbllbl9 = UIFactory.getLabel(GXPanel1, "Dependente(s)", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 357 , 103 , 84 , 13 );
-         lbllbl20 = UIFactory.getLabel(GXPanel1, "Bairro", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 64 , 152 , 34 , 13 );
+         }, 38 , 18 , GXPanel1 , 65 , 102 , 856 , 704 ,  18 ));
+         ((GXComboBox) subGxsf10.getColumn(6).getGXComponent()).addItem( new java.lang.Short(1),"Ativo");
+         ((GXComboBox) subGxsf10.getColumn(6).getGXComponent()).addItem( new java.lang.Short(0),"Inativo");
+         subGxsf10.addActionListener(this);
+         subGxsf10.addFocusListener(this);
+         subGxsf10.setSortOnClick(true);
+         subGxsf10.getColumn(0).addActionListener( this);
+         subGxsf10.getColumn(0).addItemListener( this);
+         subGxsf10.getColumn(1).addActionListener( this);
+         subGxsf10.getColumn(1).addItemListener( this);
+         subGxsf10.getColumn(2).addActionListener( this);
+         subGxsf10.getColumn(2).addItemListener( this);
+         bttbtt21 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  830 ,  65 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt21.setTooltip("Novo");
+         bttbtt21.addActionListener(this);
+         bttbtt21.setFiresEvents(false);
+         lbllbl6 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 55 , 40 , 13 );
+         lbllbl7 = UIFactory.getLabel(GXPanel1, "Nome", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 147 , 55 , 33 , 13 );
+         lbllbl9 = UIFactory.getLabel(GXPanel1, "Situação", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 359 , 55 , 51 , 13 );
+         lbllbl8 = UIFactory.getLabel(GXPanel1, "Dependente(s)", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 498 , 55 , 84 , 13 );
+         lbllbl19 = UIFactory.getLabel(GXPanel1, "Bairro", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 645 , 55 , 34 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavPescodigo ,
-                   cmbavPessituacao ,
                    edtavPesnome ,
+                   cmbavPessituacao ,
                    edtavPesdeptotal ,
-                   chkavDeptodos ,
                    edtavPesbairro ,
-                   subGxsf11 ,
-                   bttbtt2
+                   chkavDeptodos ,
+                   subGxsf10 ,
+                   bttbtt21
          });
       }
 
       public override void setFocusFirst( )
       {
-         setFocus(subGxsf11, true);
+         setFocus(subGxsf10, true);
       }
 
       public override void reloadDynamicLists( int id )
       {
       }
 
-      protected void variablesToSubfile11( )
+      protected void variablesToSubfile10( )
       {
-         subwpecliente11.setVVisualizar(AV15Visual);
-         subwpecliente11.setVEditar(AV10Editar);
-         subwpecliente11.setVExcluir(AV11Exclui);
-         subwpecliente11.setPesCodigo(A13PesCodi);
-         subwpecliente11.setPesNome(A14PesNome);
-         subwpecliente11.setPesDepTotal(A48PesDepT);
-         subwpecliente11.setPesSituacao(A23PesSitu);
+         subwpecliente10.setVVisualizar(AV15Visual);
+         subwpecliente10.setVEditar(AV10Editar);
+         subwpecliente10.setVExcluir(AV11Exclui);
+         subwpecliente10.setPesCodigo(A13PesCodi);
+         subwpecliente10.setPesNome(A14PesNome);
+         subwpecliente10.setPesDepTotal(A48PesDepT);
+         subwpecliente10.setPesSituacao(A23PesSitu);
       }
 
-      protected void subfileToVariables11( )
+      protected void subfileToVariables10( )
       {
-         AV15Visual = subwpecliente11.getVVisualizar();
-         AV10Editar = subwpecliente11.getVEditar();
-         AV11Exclui = subwpecliente11.getVExcluir();
-         A13PesCodi = subwpecliente11.getPesCodigo();
-         A14PesNome = subwpecliente11.getPesNome();
-         A48PesDepT = subwpecliente11.getPesDepTotal();
-         A23PesSitu = subwpecliente11.getPesSituacao();
+         AV15Visual = subwpecliente10.getVVisualizar();
+         AV10Editar = subwpecliente10.getVEditar();
+         AV11Exclui = subwpecliente10.getVExcluir();
+         A13PesCodi = subwpecliente10.getPesCodigo();
+         A14PesNome = subwpecliente10.getPesNome();
+         A48PesDepT = subwpecliente10.getPesDepTotal();
+         A23PesSitu = subwpecliente10.getPesSituacao();
       }
 
       public override void VariablesToControls( )
@@ -707,57 +707,57 @@ namespace GeneXus.Programs {
       public override void eventLevelContext( )
       {
          ControlsToVariables();
-         if ( subGxsf11.inValidElement() )
+         if ( subGxsf10.inValidElement() )
          {
-            subwpecliente11 = ( subwpecliente11 ) subGxsf11.getCurrentElement() ;
+            subwpecliente10 = ( subwpecliente10 ) subGxsf10.getCurrentElement() ;
          }
          else
          {
-            subwpecliente11 = new subwpecliente11 ();
+            subwpecliente10 = new subwpecliente10 ();
          }
-         subfileToVariables11 ();
+         subfileToVariables10 ();
       }
 
       protected void eventLevelResetContext( )
       {
-         variablesToSubfile11 ();
-         subGxsf11.refreshLineValue(subwpecliente11);
+         variablesToSubfile10 ();
+         subGxsf10.refreshLineValue(subwpecliente10);
       }
 
       protected void reloadGridRow( )
       {
-         if ( subGxsf11.inValidElement() )
+         if ( subGxsf10.inValidElement() )
          {
-            subwpecliente11 = ( subwpecliente11 ) subGxsf11.getCurrentElement() ;
+            subwpecliente10 = ( subwpecliente10 ) subGxsf10.getCurrentElement() ;
          }
          else
          {
-            subwpecliente11 = new subwpecliente11 ();
+            subwpecliente10 = new subwpecliente10 ();
          }
-         subfileToVariables11 ();
+         subfileToVariables10 ();
       }
 
       public override void actionEventDispatch( Object eventSource )
       {
-         if ( bttbtt2.isEventSource(eventSource) ) {
+         if ( bttbtt21.isEventSource(eventSource) ) {
             /* Execute user event: E17V0S2 */
             E17V0S2 ();
             return;
          }
-         if ( subGxsf11.isEventSource(eventSource) ) {
+         if ( subGxsf10.isEventSource(eventSource) ) {
             return;
          }
-         if ( subGxsf11.getColumn(0).isEventSource(eventSource) ) {
+         if ( subGxsf10.getColumn(0).isEventSource(eventSource) ) {
             /* Execute user event: E14V0S2 */
             E14V0S2 ();
             return;
          }
-         if ( subGxsf11.getColumn(1).isEventSource(eventSource) ) {
+         if ( subGxsf10.getColumn(1).isEventSource(eventSource) ) {
             /* Execute user event: E15V0S2 */
             E15V0S2 ();
             return;
          }
-         if ( subGxsf11.getColumn(2).isEventSource(eventSource) ) {
+         if ( subGxsf10.getColumn(2).isEventSource(eventSource) ) {
             /* Execute user event: E16V0S2 */
             E16V0S2 ();
             return;
@@ -840,17 +840,17 @@ namespace GeneXus.Programs {
       public override void mouseEventDispatch( Object eventSource ,
                                                int modifier )
       {
-         if ( subGxsf11.getColumn(0).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
+         if ( subGxsf10.getColumn(0).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
             /* Execute user event: E14V0S2 */
             E14V0S2 ();
             return;
          }
-         if ( subGxsf11.getColumn(1).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
+         if ( subGxsf10.getColumn(1).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
             /* Execute user event: E15V0S2 */
             E15V0S2 ();
             return;
          }
-         if ( subGxsf11.getColumn(2).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
+         if ( subGxsf10.getColumn(2).isEventSource(eventSource) && modifier == MOUSE_LEFTCLICK ) {
             /* Execute user event: E16V0S2 */
             E16V0S2 ();
             return;
@@ -925,7 +925,7 @@ namespace GeneXus.Programs {
 
       public override void initialize( )
       {
-         subwpecliente11 = new subwpecliente11();
+         subwpecliente10 = new subwpecliente10();
          scmdbuf = "" ;
          AV5PesCodi = 0 ;
          AV6PesNome = "" ;
@@ -1008,7 +1008,7 @@ namespace GeneXus.Programs {
       protected IGxDataStore dsDefault ;
       protected IGxContext context ;
       protected bool IsMain ;
-      protected subwpecliente11 subwpecliente11 ;
+      protected subwpecliente10 subwpecliente10 ;
       protected IDataReader W000S2 ;
       protected IDataStoreProvider pr_default ;
       protected short[] W000S2_A38PesTipo ;
@@ -1022,18 +1022,18 @@ namespace GeneXus.Programs {
       protected int[] W000S2_A13PesCodi ;
       protected GXPanel GXPanel1 ;
       protected GUIObjectInt edtavPescodigo ;
-      protected GUIObjectShort cmbavPessituacao ;
       protected GUIObjectString edtavPesnome ;
+      protected GUIObjectShort cmbavPessituacao ;
       protected GUIObjectInt edtavPesdeptotal ;
-      protected GUIObjectShort chkavDeptodos ;
       protected GUIObjectString edtavPesbairro ;
-      protected GXSubfile subGxsf11 ;
-      protected IGXButton bttbtt2 ;
+      protected GUIObjectShort chkavDeptodos ;
+      protected GXSubfile subGxsf10 ;
+      protected IGXButton bttbtt21 ;
+      protected ILabel lbllbl6 ;
       protected ILabel lbllbl7 ;
-      protected ILabel lbllbl10 ;
-      protected ILabel lbllbl8 ;
       protected ILabel lbllbl9 ;
-      protected ILabel lbllbl20 ;
+      protected ILabel lbllbl8 ;
+      protected ILabel lbllbl19 ;
       protected IDataReader W000S3 ;
       protected int[] W000S3_Gx_cnt ;
    }
@@ -1112,7 +1112,7 @@ namespace GeneXus.Programs {
           prmW000S2 = new Object[] {
           } ;
           def= new GeneXus.Data.NTier.ADO.CursorDef[] {
-              new GeneXus.Data.NTier.ADO.CursorDef("W000S2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW000S2,26,0,true,false )
+              new GeneXus.Data.NTier.ADO.CursorDef("W000S2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW000S2,30,0,true,false )
              ,new GeneXus.Data.NTier.ADO.CursorDef("W000S3", "SELECT COUNT(*) FROM [CLIENTEDEPENDENTE] WITH (NOLOCK) WHERE [PesCodigo] = @PesCodigo ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW000S3,1,0,true,true )
           };
        }

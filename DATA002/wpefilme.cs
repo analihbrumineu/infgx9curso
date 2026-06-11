@@ -2,7 +2,7 @@
                File: PeFilme
         Description: Cadastro de filmes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:25.24
+       Generated on: 6/11/2026 11:31:35.18
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -494,15 +494,15 @@ namespace GeneXus.Programs {
          ((GXEdit) edtavFilcodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavFilcodigo.addFocusListener(this);
          edtavFilcodigo.getGXComponent().setHelpId("HLP_WPeFilme.htm");
-         edtavFilnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),157, 67, 273, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 157 , 67 , 273 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV11FilNom" );
+         edtavFilnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),154, 67, 235, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 154 , 67 , 235 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV11FilNom" );
          ((GXEdit) edtavFilnome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavFilnome.addFocusListener(this);
          edtavFilnome.getGXComponent().setHelpId("HLP_WPeFilme.htm");
-         edtavFildata = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),443, 67, 80, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , GXPanel1 , 443 , 67 , 80 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV9FilData" );
+         edtavFildata = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),405, 67, 80, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , GXPanel1 , 405 , 67 , 80 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV9FilData" );
          ((GXEdit) edtavFildata.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavFildata.addFocusListener(this);
          edtavFildata.getGXComponent().setHelpId("HLP_WPeFilme.htm");
-         dynavCatnome = new GUIObjectString ( new GXComboBox(GXPanel1, this, 13) , GXPanel1 , 534 , 67 , 273 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7CatNome" );
+         dynavCatnome = new GUIObjectString ( new GXComboBox(GXPanel1, this, 13) , GXPanel1 , 501 , 67 , 173 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7CatNome" );
          dynavCatnome.addFocusListener(this);
          dynavCatnome.addItemListener(this);
          dynavCatnome.getGXComponent().setHelpId("HLP_WPeFilme.htm");
@@ -511,11 +511,11 @@ namespace GeneXus.Programs {
          , new GXColumnDefinition( new GUIObjectString ( new SubfileImage() , null ,  0 , 0 , 25 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV5Editar" ), ""  , UIFactory.getColor(18) , UIFactory.getColor(15) , 25 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectString ( new SubfileImage() , null ,  0 , 0 , 26 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV6Excluir" ), ""  , UIFactory.getColor(18) , UIFactory.getColor(15) , 26 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 78, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 77 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A28FilCodi" ), "Código"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 77 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 437, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 436 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A29FilNome" ), "Título"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 436 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 280, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 279 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A29FilNome" ), "Título"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 279 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),0, 0, 67, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.DATE, false, false, 0, false) , null ,  0 , 0 , 66 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A31FilData" ), "Data"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 66 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , false )
          , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 120, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 119 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A33CatNome" ), "Categoria"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 119 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectShort ( new GXComboBox(GXPanel1, false) , null ,  0 , 0 , 101 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A30FilSitu" ), "Situação"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 101 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         }, 35 , 18 , GXPanel1 , 65 , 117 , 873 , 650 ,  18 ));
+         }, 35 , 18 , GXPanel1 , 65 , 104 , 716 , 663 ,  18 ));
          ((GXComboBox) subGxsf2.getColumn(7).getGXComponent()).addItem( new java.lang.Short(1),"Ativo");
          ((GXComboBox) subGxsf2.getColumn(7).getGXComponent()).addItem( new java.lang.Short(0),"Inativo");
          subGxsf2.addActionListener(this);
@@ -528,14 +528,14 @@ namespace GeneXus.Programs {
          subGxsf2.getColumn(1).addItemListener( this);
          subGxsf2.getColumn(2).addActionListener( this);
          subGxsf2.getColumn(2).addItemListener( this);
-         bttbtt19 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  832 ,  65 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt19 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  690 ,  64 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt19.setTooltip("Novo");
          bttbtt19.addActionListener(this);
          bttbtt19.setFiresEvents(false);
-         lbllbl17 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 534 , 49 , 81 , 15 );
+         lbllbl17 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 501 , 49 , 81 , 15 );
          lbllbl14 = UIFactory.getLabel(GXPanel1, "Código do filme", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 50 , 42 , 13 );
-         lbllbl15 = UIFactory.getLabel(GXPanel1, "Nome do filme", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 157 , 50 , 81 , 14 );
-         lbllbl16 = UIFactory.getLabel(GXPanel1, "Estreia", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 443 , 50 , 81 , 14 );
+         lbllbl15 = UIFactory.getLabel(GXPanel1, "Nome do filme", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 154 , 50 , 81 , 14 );
+         lbllbl16 = UIFactory.getLabel(GXPanel1, "Estreia", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 405 , 50 , 81 , 14 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavFilcodigo ,
                    edtavFilnome ,

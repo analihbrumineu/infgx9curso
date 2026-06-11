@@ -2,7 +2,7 @@
                File: Gx00C0
         Description: Lista de Seleção Cadastro de locações.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:24.52
+       Generated on: 6/11/2026 11:31:34.47
        Program type: Callable routine
           Main DBMS: sqlserver
 */

@@ -2,7 +2,7 @@
                File: RelTopDeLisCanPorCategoria
         Description: Relatório de topo de lista sobre total de cancelamentos por categoria.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:15.89
+       Generated on: 6/11/2026 11:31:25.90
        Program type: Callable routine
           Main DBMS: sqlserver
 */

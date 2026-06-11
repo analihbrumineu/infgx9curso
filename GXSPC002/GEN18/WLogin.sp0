@@ -26,7 +26,7 @@ lac_i(2,[ [ 'Pesfunlogin','Pesfunsenha' ] ]).
 lac_i(3,[ [ 'Pesfunlogin','Pesfunsenha' ] ]).
  
  
-lits_i('Login',11,57).
+lits_i('Login',11,58).
 lits_i('Senha',12,57).
  
 cls_i([ 11,57 ],[ 12,83 ]).
@@ -257,7 +257,7 @@ ppi_i([ 96,96 ]).
  
 lit_i(2,1,t('Pesfunlogin',23),[ font('Courier New',9,[]),rect(452,273,601,293),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pesfunlogin'),ctrltype(edit,2),ispwd(0) ]).
 lit_i(3,1,t('Pesfunsenha',23),[ font('Courier New',9,[]),rect(452,299,601,319),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pesfunsenha'),ctrltype(edit,3),ispwd(1) ]).
-lit_i(4,1,t('Login',3),[ font('MS Sans Serif',8,[ bold ]),rect(403,277,434,289),outstyle(none),align(left),fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(4,1,t('Login',3),[ font('MS Sans Serif',8,[ bold ]),rect(408,277,439,289),outstyle(none),align(left),fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(5,1,t('Senha',3),[ font('MS Sans Serif',8,[ bold ]),rect(403,303,439,315),outstyle(none),align(left),fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(6,1,button('Enter'),[ id(6),title([ 'Logar' ]),ctlname(''),rect(481,342,571,367),font('MS Shell Dlg',8,[]) ]).
 lit_i(1,1,window,[ title([]),rect(3,25,1016,765),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).

@@ -2,7 +2,7 @@
                File: Filme
         Description: Cadastro de filmes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:19.50
+       Generated on: 6/11/2026 11:31:29.50
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -183,7 +183,7 @@ namespace GeneXus.Programs {
 
       public override int getFrmWidth( )
       {
-         return 664 ;
+         return 563 ;
       }
 
       public override int getFrmHeight( )
@@ -286,79 +286,78 @@ namespace GeneXus.Programs {
 
       public override void screen( )
       {
-         GXPanel1 = new GXPanel(this, 3 , 25 , 664 , 774 );
+         GXPanel1 = new GXPanel(this, 3 , 25 , 563 , 774 );
          this.setIBackground(UIFactory.getColor(15));
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         bttBtn_enter = UIFactory.getGXButton( GXPanel1 , "Cadastrar" ,  550 ,  731 ,  89 ,  27 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttBtn_enter = UIFactory.getGXButton( GXPanel1 , "Cadastrar" ,  445 ,  731 ,  89 ,  27 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttBtn_enter.setTooltip("Cadastrar");
          bttBtn_enter.addActionListener(this);
-         tctrlCadastrodefilme = new GXTabControl (this,  GXPanel1 , 0 , 0 , 664 , 709 , UIFactory.getColor(5) , UIFactory.getColor(8) , 0, 0, 0, false );
-         tpagetpage3 = new GXTabPage ( tctrlCadastrodefilme , "Filme" , 5 , 29 , 659 , 680 , UIFactory.getColor(15) , UIFactory.getColor(18) , 0, 0);
-         edtFilCodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),169, 92, 65, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), true) , tpagetpage3.getGXPanel() , 169 , 92 , 65 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A28FilCodi" );
+         tctrlCadastrodefilme = new GXTabControl (this,  GXPanel1 , 0 , 0 , 563 , 709 , UIFactory.getColor(5) , UIFactory.getColor(8) , 0, 0, 0, false );
+         tpagetpage3 = new GXTabPage ( tctrlCadastrodefilme , "Filme" , 5 , 29 , 558 , 680 , UIFactory.getColor(15) , UIFactory.getColor(18) , 0, 0);
+         edtFilCodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),168, 92, 65, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), true) , tpagetpage3.getGXPanel() , 168 , 92 , 65 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A28FilCodi" );
          ((GXEdit) edtFilCodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtFilCodigo.addFocusListener(this);
          edtFilCodigo.getGXComponent().setHelpId("HLP_TFilme.htm");
-         cmbFilSituacao = new GUIObjectShort ( new GXComboBox(tpagetpage3.getGXPanel()) , tpagetpage3.getGXPanel() , 169 , 116 , 104 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A30FilSitu" );
+         cmbFilSituacao = new GUIObjectShort ( new GXComboBox(tpagetpage3.getGXPanel()) , tpagetpage3.getGXPanel() , 168 , 116 , 104 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A30FilSitu" );
          ((GXComboBox) cmbFilSituacao.getGXComponent()).addItem( new java.lang.Short(1),"Ativo");
          ((GXComboBox) cmbFilSituacao.getGXComponent()).addItem( new java.lang.Short(0),"Inativo");
          cmbFilSituacao.addFocusListener(this);
          cmbFilSituacao.addItemListener(this);
          cmbFilSituacao.getGXComponent().setHelpId("HLP_TFilme.htm");
-         edtFilData = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),169, 141, 104, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 169 , 141 , 104 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A31FilData" );
+         edtFilData = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),168, 141, 104, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 168 , 141 , 104 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A31FilData" );
          ((GXEdit) edtFilData.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtFilData.addFocusListener(this);
          edtFilData.getGXComponent().setHelpId("HLP_TFilme.htm");
-         edtCatCodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),169, 166, 65, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(255, 255, 255), false) , tpagetpage3.getGXPanel() , 169 , 166 , 65 , 21 , UIFactory.getColor(255, 255, 255) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A32CatCodi" );
+         edtCatCodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),168, 166, 65, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(255, 255, 255), false) , tpagetpage3.getGXPanel() , 168 , 166 , 65 , 21 , UIFactory.getColor(255, 255, 255) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A32CatCodi" );
          ((GXEdit) edtCatCodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtCatCodigo.addFocusListener(this);
          edtCatCodigo.getGXComponent().setHelpId("HLP_TFilme.htm");
-         edtCatNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),169, 190, 169, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), true) , tpagetpage3.getGXPanel() , 169 , 190 , 169 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A33CatNome" );
+         edtCatNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),242, 166, 169, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), true) , tpagetpage3.getGXPanel() , 242 , 166 , 169 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A33CatNome" );
          ((GXEdit) edtCatNome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtCatNome.addFocusListener(this);
          edtCatNome.getGXComponent().setHelpId("HLP_TFilme.htm");
-         edtFilNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),169, 215, 364, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 169 , 215 , 364 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A29FilNome" );
+         edtFilNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),168, 191, 266, 21, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 168 , 191 , 266 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A29FilNome" );
          ((GXEdit) edtFilNome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtFilNome.addFocusListener(this);
          edtFilNome.getGXComponent().setHelpId("HLP_TFilme.htm");
-         edtFilDescricao = new GUIObjectString ( new GXEdit(800, "@!", UIFactory.getFont( "Courier New", 0, 9),169, 240, 364, 373, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.LONGVARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 169 , 240 , 364 , 373 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A34FilDesc" );
+         edtFilDescricao = new GUIObjectString ( new GXEdit(800, "@!", UIFactory.getFont( "Courier New", 0, 9),168, 216, 364, 373, tpagetpage3.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.LONGVARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage3.getGXPanel() , 168 , 216 , 364 , 373 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A34FilDesc" );
          ((GXEdit) edtFilDescricao.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtFilDescricao.addFocusListener(this);
          edtFilDescricao.getGXComponent().setHelpId("HLP_TFilme.htm");
-         chkFilOscar = new GUIObjectShort ( new GXCheckBox(tpagetpage3.getGXPanel(), "Vencedor do Oscar" , new java.lang.Short(1), new java.lang.Short(0)) , tpagetpage3.getGXPanel() , 169 , 618 , 140 , 16 , Integer.MAX_VALUE , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A55FilOsca" );
+         chkFilOscar = new GUIObjectShort ( new GXCheckBox(tpagetpage3.getGXPanel(), "Vencedor do Oscar" , new java.lang.Short(1), new java.lang.Short(0)) , tpagetpage3.getGXPanel() , 168 , 593 , 140 , 16 , Integer.MAX_VALUE , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A55FilOsca" );
          chkFilOscar.addFocusListener(this);
          chkFilOscar.addItemListener(this);
          chkFilOscar.getGXComponent().setHelpId("HLP_TFilme.htm");
          lbllbl15 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Dados gerais", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 26 , 75 , 13 );
-         lbllbl5 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 96 , 40 , 13 );
-         lbllbl9 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Situação", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 120 , 51 , 13 );
-         lbllbl7 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Estreia", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 144 , 40 , 13 );
-         lbllbl18 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Código da categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 168 , 115 , 13 );
-         lbllbl19 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Nome da categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 192 , 108 , 13 );
-         lbllbl11 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Título", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 216 , 35 , 13 );
-         lbllbl12 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Descrição", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 240 , 58 , 13 );
-         tpagetpage20 = new GXTabPage ( tctrlCadastrodefilme , "Direção" , 5 , 29 , 659 , 680 , UIFactory.getColor(15) , UIFactory.getColor(18) , 0, 0);
-         addSubfile ( subGxsf22  = new GXSubfileTRN ( new Filme_flow22(this) , new GXColumnDefinition[] {
-          new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 103, 19, tpagetpage20.getGXPanel(), false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 102 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A79FilDirC" ), "Código"  , UIFactory.getColor(8) , UIFactory.getColor(15) , 102 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , true , true )
-         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 427, 19, tpagetpage20.getGXPanel(), false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 426 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A80FilDirN" ), "Nome completo"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 426 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         }, 31 , 18 , tpagetpage20.getGXPanel() , 37 , 52 , 586 , 592 ,  18 ));
-         subGxsf22.addActionListener(this);
-         subGxsf22.addFocusListener(this);
-         subGxsf22.setSortOnClick(false);
-         lbllbl21 = UIFactory.getLabel(tpagetpage20.getGXPanel(), "Direção", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 26 , 45 , 13 );
-         tpagetpage25 = new GXTabPage ( tctrlCadastrodefilme , "Elenco" , 5 , 29 , 659 , 680 , UIFactory.getColor(15) , UIFactory.getColor(18) , 0, 0);
-         addSubfile ( subGxsf27  = new GXSubfileTRN ( new Filme_flow27(this) , new GXColumnDefinition[] {
-          new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 84, 19, tpagetpage25.getGXPanel(), false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 83 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A77FilAtoC" ), "Código"  , UIFactory.getColor(8) , UIFactory.getColor(15) , 83 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , true , true )
-         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 364, 19, tpagetpage25.getGXPanel(), false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 363 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A78FilAtoN" ), "Nome completo"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 363 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         , new GXColumnDefinition( new GUIObjectShort ( new GXCheckBox(tpagetpage25.getGXPanel(), "" , new java.lang.Short(1), new java.lang.Short(0)) , null ,  0 , 0 , 79 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A81FilAtoP" ), "Protagonista"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 79 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , true , true )
-         }, 32 , 18 , tpagetpage25.getGXPanel() , 39 , 52 , 584 , 593 ,  18 ));
-         subGxsf27.addActionListener(this);
-         subGxsf27.addFocusListener(this);
-         subGxsf27.setSortOnClick(false);
-         lbllbl26 = UIFactory.getLabel(tpagetpage25.getGXPanel(), "Atores", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 26 , 37 , 13 );
-         subGxsf27.getColumn(0).addContextAction(this, "BROWSE", GXResourceManager.GetMessage("toolbrowsedata"));
-         subGxsf22.getColumn(0).addContextAction(this, "BROWSE", GXResourceManager.GetMessage("toolbrowsedata"));
+         lbllbl5 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 107 , 96 , 40 , 13 );
+         lbllbl9 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Situação", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 96 , 120 , 51 , 13 );
+         lbllbl7 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Estreia", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 107 , 144 , 40 , 13 );
+         lbllbl18 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 92 , 170 , 55 , 13 );
+         lbllbl11 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Título", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 112 , 195 , 35 , 13 );
+         lbllbl12 = UIFactory.getLabel(tpagetpage3.getGXPanel(), "Descrição", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 89 , 216 , 58 , 13 );
+         tpagetpage19 = new GXTabPage ( tctrlCadastrodefilme , "Direção" , 5 , 29 , 558 , 680 , UIFactory.getColor(15) , UIFactory.getColor(18) , 0, 0);
+         addSubfile ( subGxsf21  = new GXSubfileTRN ( new Filme_flow21(this) , new GXColumnDefinition[] {
+          new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 103, 19, tpagetpage19.getGXPanel(), false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 102 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A79FilDirC" ), "Código"  , UIFactory.getColor(8) , UIFactory.getColor(15) , 102 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , true , true )
+         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 213, 19, tpagetpage19.getGXPanel(), false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 212 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A80FilDirN" ), "Nome completo"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 212 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         }, 31 , 18 , tpagetpage19.getGXPanel() , 37 , 52 , 372 , 592 ,  18 ));
+         subGxsf21.addActionListener(this);
+         subGxsf21.addFocusListener(this);
+         subGxsf21.setSortOnClick(false);
+         lbllbl20 = UIFactory.getLabel(tpagetpage19.getGXPanel(), "Direção", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 26 , 45 , 13 );
+         tpagetpage24 = new GXTabPage ( tctrlCadastrodefilme , "Elenco" , 5 , 29 , 558 , 680 , UIFactory.getColor(15) , UIFactory.getColor(18) , 0, 0);
+         addSubfile ( subGxsf26  = new GXSubfileTRN ( new Filme_flow26(this) , new GXColumnDefinition[] {
+          new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 84, 19, tpagetpage24.getGXPanel(), false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 83 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A77FilAtoC" ), "Código"  , UIFactory.getColor(8) , UIFactory.getColor(15) , 83 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , true , true )
+         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 202, 19, tpagetpage24.getGXPanel(), false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 201 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A78FilAtoN" ), "Nome completo"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 201 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         , new GXColumnDefinition( new GUIObjectShort ( new GXCheckBox(tpagetpage24.getGXPanel(), "" , new java.lang.Short(1), new java.lang.Short(0)) , null ,  0 , 0 , 79 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A81FilAtoP" ), "Protagonista"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 79 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , true , true )
+         }, 32 , 18 , tpagetpage24.getGXPanel() , 39 , 52 , 422 , 593 ,  18 ));
+         subGxsf26.addActionListener(this);
+         subGxsf26.addFocusListener(this);
+         subGxsf26.setSortOnClick(false);
+         lbllbl25 = UIFactory.getLabel(tpagetpage24.getGXPanel(), "Atores", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 26 , 37 , 13 );
+         subGxsf26.getColumn(0).addContextAction(this, "BROWSE", GXResourceManager.GetMessage("toolbrowsedata"));
+         subGxsf21.getColumn(0).addContextAction(this, "BROWSE", GXResourceManager.GetMessage("toolbrowsedata"));
          edtCatCodigo.addContextAction(this, "BROWSE", GXResourceManager.GetMessage("toolbrowsedata"));
          focusManager.setControlList(new IFocusableControl[] {
                    edtFilCodigo ,
@@ -369,8 +368,8 @@ namespace GeneXus.Programs {
                    edtFilNome ,
                    edtFilDescricao ,
                    chkFilOscar ,
-                   subGxsf22 ,
-                   subGxsf27 ,
+                   subGxsf21 ,
+                   subGxsf26 ,
                    bttBtn_enter
          });
       }
@@ -388,12 +387,12 @@ namespace GeneXus.Programs {
       public override void clear( )
       {
          InitializeNonKey023( ) ;
-         subGxsf22.startLoad();
-         subtfilme22 = new subtfilme22 ();
-         subGxsf22.endLoad();
-         subGxsf27.startLoad();
-         subtfilme27 = new subtfilme27 ();
-         subGxsf27.endLoad();
+         subGxsf21.startLoad();
+         subtfilme21 = new subtfilme21 ();
+         subGxsf21.endLoad();
+         subGxsf26.startLoad();
+         subtfilme26 = new subtfilme26 ();
+         subGxsf26.endLoad();
       }
 
       protected void disable_std_buttons( )
@@ -409,11 +408,11 @@ namespace GeneXus.Programs {
             chkFilOscar.setEnabled(0);
             edtCatCodigo.setEnabled(0);
             edtCatNome.setEnabled(0);
-            subGxsf22.getColumn(0).setEnabled(0);
-            subGxsf22.getColumn(1).setEnabled(0);
-            subGxsf27.getColumn(0).setEnabled(0);
-            subGxsf27.getColumn(1).setEnabled(0);
-            subGxsf27.getColumn(2).setEnabled(0);
+            subGxsf21.getColumn(0).setEnabled(0);
+            subGxsf21.getColumn(1).setEnabled(0);
+            subGxsf26.getColumn(0).setEnabled(0);
+            subGxsf26.getColumn(1).setEnabled(0);
+            subGxsf26.getColumn(2).setEnabled(0);
             setFocus(bttBtn_enter, true);
          }
       }
@@ -487,73 +486,73 @@ namespace GeneXus.Programs {
       {
       }
 
-      public void loadToBuffer22( )
+      public void loadToBuffer21( )
       {
-         subtfilme22 oAux = subtfilme22 ;
-         subtfilme22 = new subtfilme22 ();
-         variablesToSubfile22 ();
-         subGxsf22.addElement(subtfilme22);
-         subtfilme22 = oAux;
+         subtfilme21 oAux = subtfilme21 ;
+         subtfilme21 = new subtfilme21 ();
+         variablesToSubfile21 ();
+         subGxsf21.addElement(subtfilme21);
+         subtfilme21 = oAux;
       }
 
-      public bool isLoadAtStartup_flow22( )
+      public bool isLoadAtStartup_flow21( )
       {
          return false;
       }
 
-      public void autoRefresh_flow22( GXSubfile subfile ,
+      public void autoRefresh_flow21( GXSubfile subfile ,
                                       bool loadedFirstTime )
       {
       }
 
-      public bool getSearch_flow22( )
+      public bool getSearch_flow21( )
       {
          return false ;
       }
 
-      public void resetSubfileConditions_flow22( )
+      public void resetSubfileConditions_flow21( )
       {
       }
 
-      public void resetSearchConditions_flow22( bool defaults )
+      public void resetSearchConditions_flow21( bool defaults )
       {
       }
 
-      public GXSubfileElement getNewSubfileElement_flow22( )
+      public GXSubfileElement getNewSubfileElement_flow21( )
       {
-         if ( subGxsf22.getItemCount() > 0 )
+         if ( subGxsf21.getItemCount() > 0 )
          {
-            subtfilme22 = ( subtfilme22 ) subGxsf22.getElementAt(subGxsf22.getItemCount() -1);
-            subfileToVariables22 ();
+            subtfilme21 = ( subtfilme21 ) subGxsf21.getElementAt(subGxsf21.getItemCount() -1);
+            subfileToVariables21 ();
             /* Save values for previous() function. */
          }
-         subtfilme22 = new subtfilme22 ();
+         subtfilme21 = new subtfilme21 ();
          InitAll024( ) ;
          sMode4 = Gx_mode ;
          Gx_mode = "INS" ;
          standaloneModal024( ) ;
          Gx_mode = sMode4 ;
-         variablesToSubfile22 ();
-         return subtfilme22 ;
+         variablesToSubfile21 ();
+         return subtfilme21 ;
       }
 
-      public bool getSearch_flow22( GXSubfileElement subfileElement )
+      public bool getSearch_flow21( GXSubfileElement subfileElement )
       {
          return true;
       }
 
-      public void setConditionalColor_flow22( GUIObject comp ,
+      public void setConditionalColor_flow21( GUIObject comp ,
                                               GXSubfileElement element )
       {
 
       }
 
-      public bool getNoaccept_flow22( int col ,
+      public bool getNoaccept_flow21( int col ,
                                       GXSubfileElement element ,
                                       bool enabled )
       {
          String Gx_mode = element.getMode();
-         subtfilme22 subtfilme22  = ( subtfilme22 ) element;
+         subtfilme21 subtfilme21  = ( subtfilme21 ) element;
          if ( col == 0 )
          {
             return ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "UPD".TrimEnd(' ') ) == 0 )  || ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "DLT".TrimEnd(' ') ) == 0 )  );
@@ -561,47 +560,47 @@ namespace GeneXus.Programs {
          return !enabled;
       }
 
-      public void refresh_flow22( )
+      public void refresh_flow21( )
       {
       }
 
-      public class Filme_flow22 : GXSubfileFlow
+      public class Filme_flow21 : GXSubfileFlow
       {
          tfilme _sf ;
 
-         public Filme_flow22( tfilme uType ) : base()
+         public Filme_flow21( tfilme uType ) : base()
          {
             _sf = uType;
          }
          public bool isLoadAtStartup( )
          {
-            return _sf.isLoadAtStartup_flow22();
+            return _sf.isLoadAtStartup_flow21();
          }
 
          public void autoRefresh( GXSubfile subfile ,
                                   bool loadedFirstTime )
          {
-            _sf.autoRefresh_flow22(subfile, loadedFirstTime);
+            _sf.autoRefresh_flow21(subfile, loadedFirstTime);
          }
 
          public bool getSearch( )
          {
-            return _sf.getSearch_flow22();
+            return _sf.getSearch_flow21();
          }
 
          public void resetSubfileConditions( )
          {
-            _sf.resetSubfileConditions_flow22();
+            _sf.resetSubfileConditions_flow21();
          }
 
          public void resetSearchConditions( bool defaults )
          {
-            _sf.resetSearchConditions_flow22(defaults);
+            _sf.resetSearchConditions_flow21(defaults);
          }
 
          public GXSubfileElement getNewSubfileElement( )
          {
-            return _sf.getNewSubfileElement_flow22();
+            return _sf.getNewSubfileElement_flow21();
          }
 
          public void refreshScreen( )
@@ -611,96 +610,96 @@ namespace GeneXus.Programs {
 
          public bool getSearch( GXSubfileElement subfileElement )
          {
-            return _sf.getSearch_flow22(subfileElement);
+            return _sf.getSearch_flow21(subfileElement);
          }
 
          public void setConditionalColor( GUIObject comp ,
                                           GXSubfileElement element )
          {
-            _sf.setConditionalColor_flow22(comp, element);
+            _sf.setConditionalColor_flow21(comp, element);
          }
 
          public bool getNoaccept( int col ,
                                   GXSubfileElement element ,
                                   bool enabled )
          {
-            return _sf.getNoaccept_flow22(col, element, enabled);
+            return _sf.getNoaccept_flow21(col, element, enabled);
          }
 
          public void refresh( )
          {
-            _sf.refresh_flow22();
+            _sf.refresh_flow21();
          }
 
       }
 
-      public void loadToBuffer27( )
+      public void loadToBuffer26( )
       {
-         subtfilme27 oAux = subtfilme27 ;
-         subtfilme27 = new subtfilme27 ();
-         variablesToSubfile27 ();
-         subGxsf27.addElement(subtfilme27);
-         subtfilme27 = oAux;
+         subtfilme26 oAux = subtfilme26 ;
+         subtfilme26 = new subtfilme26 ();
+         variablesToSubfile26 ();
+         subGxsf26.addElement(subtfilme26);
+         subtfilme26 = oAux;
       }
 
-      public bool isLoadAtStartup_flow27( )
+      public bool isLoadAtStartup_flow26( )
       {
          return false;
       }
 
-      public void autoRefresh_flow27( GXSubfile subfile ,
+      public void autoRefresh_flow26( GXSubfile subfile ,
                                       bool loadedFirstTime )
       {
       }
 
-      public bool getSearch_flow27( )
+      public bool getSearch_flow26( )
       {
          return false ;
       }
 
-      public void resetSubfileConditions_flow27( )
+      public void resetSubfileConditions_flow26( )
       {
       }
 
-      public void resetSearchConditions_flow27( bool defaults )
+      public void resetSearchConditions_flow26( bool defaults )
       {
       }
 
-      public GXSubfileElement getNewSubfileElement_flow27( )
+      public GXSubfileElement getNewSubfileElement_flow26( )
       {
-         if ( subGxsf27.getItemCount() > 0 )
+         if ( subGxsf26.getItemCount() > 0 )
          {
-            subtfilme27 = ( subtfilme27 ) subGxsf27.getElementAt(subGxsf27.getItemCount() -1);
-            subfileToVariables27 ();
+            subtfilme26 = ( subtfilme26 ) subGxsf26.getElementAt(subGxsf26.getItemCount() -1);
+            subfileToVariables26 ();
             /* Save values for previous() function. */
          }
-         subtfilme27 = new subtfilme27 ();
+         subtfilme26 = new subtfilme26 ();
          InitAll025( ) ;
          sMode5 = Gx_mode ;
          Gx_mode = "INS" ;
          standaloneModal025( ) ;
          Gx_mode = sMode5 ;
-         variablesToSubfile27 ();
-         return subtfilme27 ;
+         variablesToSubfile26 ();
+         return subtfilme26 ;
       }
 
-      public bool getSearch_flow27( GXSubfileElement subfileElement )
+      public bool getSearch_flow26( GXSubfileElement subfileElement )
       {
          return true;
       }
 
-      public void setConditionalColor_flow27( GUIObject comp ,
+      public void setConditionalColor_flow26( GUIObject comp ,
                                               GXSubfileElement element )
       {
 
       }
 
-      public bool getNoaccept_flow27( int col ,
+      public bool getNoaccept_flow26( int col ,
                                       GXSubfileElement element ,
                                       bool enabled )
       {
          String Gx_mode = element.getMode();
-         subtfilme27 subtfilme27  = ( subtfilme27 ) element;
+         subtfilme26 subtfilme26  = ( subtfilme26 ) element;
          if ( col == 0 )
          {
             return ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "UPD".TrimEnd(' ') ) == 0 )  || ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "DLT".TrimEnd(' ') ) == 0 )  );
@@ -708,47 +707,47 @@ namespace GeneXus.Programs {
          return !enabled;
       }
 
-      public void refresh_flow27( )
+      public void refresh_flow26( )
       {
       }
 
-      public class Filme_flow27 : GXSubfileFlow
+      public class Filme_flow26 : GXSubfileFlow
       {
          tfilme _sf ;
 
-         public Filme_flow27( tfilme uType ) : base()
+         public Filme_flow26( tfilme uType ) : base()
          {
             _sf = uType;
          }
          public bool isLoadAtStartup( )
          {
-            return _sf.isLoadAtStartup_flow27();
+            return _sf.isLoadAtStartup_flow26();
          }
 
          public void autoRefresh( GXSubfile subfile ,
                                   bool loadedFirstTime )
          {
-            _sf.autoRefresh_flow27(subfile, loadedFirstTime);
+            _sf.autoRefresh_flow26(subfile, loadedFirstTime);
          }
 
          public bool getSearch( )
          {
-            return _sf.getSearch_flow27();
+            return _sf.getSearch_flow26();
          }
 
          public void resetSubfileConditions( )
          {
-            _sf.resetSubfileConditions_flow27();
+            _sf.resetSubfileConditions_flow26();
          }
 
          public void resetSearchConditions( bool defaults )
          {
-            _sf.resetSearchConditions_flow27(defaults);
+            _sf.resetSearchConditions_flow26(defaults);
          }
 
          public GXSubfileElement getNewSubfileElement( )
          {
-            return _sf.getNewSubfileElement_flow27();
+            return _sf.getNewSubfileElement_flow26();
          }
 
          public void refreshScreen( )
@@ -758,25 +757,25 @@ namespace GeneXus.Programs {
 
          public bool getSearch( GXSubfileElement subfileElement )
          {
-            return _sf.getSearch_flow27(subfileElement);
+            return _sf.getSearch_flow26(subfileElement);
          }
 
          public void setConditionalColor( GUIObject comp ,
                                           GXSubfileElement element )
          {
-            _sf.setConditionalColor_flow27(comp, element);
+            _sf.setConditionalColor_flow26(comp, element);
          }
 
          public bool getNoaccept( int col ,
                                   GXSubfileElement element ,
                                   bool enabled )
          {
-            return _sf.getNoaccept_flow27(col, element, enabled);
+            return _sf.getNoaccept_flow26(col, element, enabled);
          }
 
          public void refresh( )
          {
-            _sf.refresh_flow27();
+            _sf.refresh_flow26();
          }
 
       }
@@ -815,11 +814,11 @@ namespace GeneXus.Programs {
             }
             return;
          }
-         if ( subGxsf22.isEventSource(eventSource) ) {
+         if ( subGxsf21.isEventSource(eventSource) ) {
             GXEnter( );
             return;
          }
-         if ( subGxsf27.isEventSource(eventSource) ) {
+         if ( subGxsf26.isEventSource(eventSource) ) {
             GXEnter( );
             return;
          }
@@ -888,49 +887,49 @@ namespace GeneXus.Programs {
             Valid_Filcodigo ();
             return;
          }
-         if ( subGxsf22.getColumn(0).isEventSource(eventSource) ) {
-            subtfilme22 = (subtfilme22)subGxsf22.cloneCurrentElement();
-            if ( ( subtfilme22.isDeleted() != 1 ) )
+         if ( subGxsf21.getColumn(0).isEventSource(eventSource) ) {
+            subtfilme21 = (subtfilme21)subGxsf21.cloneCurrentElement();
+            if ( ( subtfilme21.isDeleted() != 1 ) )
             {
-               subfileToVariables22 ();
+               subfileToVariables21 ();
                sMode4 = Gx_mode ;
-               Gx_mode = (String)(subtfilme22.getTrnMode()) ;
+               Gx_mode = (String)(subtfilme21.getTrnMode()) ;
                Valid_Fildircodigo ();
                Gx_mode = sMode4 ;
             }
             return;
          }
-         if ( subGxsf27.getColumn(0).isEventSource(eventSource) ) {
-            subtfilme27 = (subtfilme27)subGxsf27.cloneCurrentElement();
-            if ( ( subtfilme27.isDeleted() != 1 ) )
+         if ( subGxsf26.getColumn(0).isEventSource(eventSource) ) {
+            subtfilme26 = (subtfilme26)subGxsf26.cloneCurrentElement();
+            if ( ( subtfilme26.isDeleted() != 1 ) )
             {
-               subfileToVariables27 ();
+               subfileToVariables26 ();
                sMode5 = Gx_mode ;
-               Gx_mode = (String)(subtfilme27.getTrnMode()) ;
+               Gx_mode = (String)(subtfilme26.getTrnMode()) ;
                Valid_Filatocodigo ();
                Gx_mode = sMode5 ;
             }
             return;
          }
-         if ( subGxsf22.getColumn(1).isEventSource(eventSource) ) {
-            subtfilme22 = (subtfilme22)subGxsf22.cloneCurrentElement();
-            if ( ( subtfilme22.isDeleted() != 1 ) )
+         if ( subGxsf21.getColumn(1).isEventSource(eventSource) ) {
+            subtfilme21 = (subtfilme21)subGxsf21.cloneCurrentElement();
+            if ( ( subtfilme21.isDeleted() != 1 ) )
             {
-               subfileToVariables22 ();
+               subfileToVariables21 ();
                sMode4 = Gx_mode ;
-               Gx_mode = (String)(subtfilme22.getTrnMode()) ;
+               Gx_mode = (String)(subtfilme21.getTrnMode()) ;
                Valid_Fildirnome ();
                Gx_mode = sMode4 ;
             }
             return;
          }
-         if ( subGxsf27.getColumn(2).isEventSource(eventSource) ) {
-            subtfilme27 = (subtfilme27)subGxsf27.cloneCurrentElement();
-            if ( ( subtfilme27.isDeleted() != 1 ) )
+         if ( subGxsf26.getColumn(2).isEventSource(eventSource) ) {
+            subtfilme26 = (subtfilme26)subGxsf26.cloneCurrentElement();
+            if ( ( subtfilme26.isDeleted() != 1 ) )
             {
-               subfileToVariables27 ();
+               subfileToVariables26 ();
                sMode5 = Gx_mode ;
-               Gx_mode = (String)(subtfilme27.getTrnMode()) ;
+               Gx_mode = (String)(subtfilme26.getTrnMode()) ;
                Valid_Filatoprot ();
                Gx_mode = sMode5 ;
             }
@@ -1064,11 +1063,11 @@ namespace GeneXus.Programs {
          {
             return true;
          }
-         if (subGxsf22.elementsEventSource(eventSource))
+         if (subGxsf21.elementsEventSource(eventSource))
          {
             return true;
          }
-         if (subGxsf27.elementsEventSource(eventSource))
+         if (subGxsf26.elementsEventSource(eventSource))
          {
             return true;
          }
@@ -1101,13 +1100,13 @@ namespace GeneXus.Programs {
 
       public bool promptHandler( Object eventSource )
       {
-         if (( subGxsf27.getColumn(0).isEventSource(eventSource) ) && ( subGxsf27.getColumn(0).isEnabled() )) {
+         if (( subGxsf26.getColumn(0).isEventSource(eventSource) ) && ( subGxsf26.getColumn(0).isEnabled() )) {
             eventLevelContext( );
             prompt_77_5( ) ;
             eventLevelResetContext( );
             return true ;
          }
-         if (( subGxsf22.getColumn(0).isEventSource(eventSource) ) && ( subGxsf22.getColumn(0).isEnabled() )) {
+         if (( subGxsf21.getColumn(0).isEventSource(eventSource) ) && ( subGxsf21.getColumn(0).isEnabled() )) {
             eventLevelContext( );
             prompt_79_4( ) ;
             eventLevelResetContext( );
@@ -1123,16 +1122,16 @@ namespace GeneXus.Programs {
       public override void deleteLineHandler( Object eventSource ,
                                               int row )
       {
-         if ( subGxsf27 .isEventSource(eventSource)) {
+         if ( subGxsf26 .isEventSource(eventSource)) {
             if ( row < 0 ) {
-               subtfilme27 = ( subtfilme27 ) subGxsf27.getCurrentElement() ;
+               subtfilme26 = ( subtfilme26 ) subGxsf26.getCurrentElement() ;
             }
             else
             {
-               subtfilme27 = ( subtfilme27 ) subGxsf27.getElementAt(row) ;
+               subtfilme26 = ( subtfilme26 ) subGxsf26.getElementAt(row) ;
             }
-            subfileToVariables27 ();
-            if ( ( subtfilme27.isDeleted() == 1 ) )
+            subfileToVariables26 ();
+            if ( ( subtfilme26.isDeleted() == 1 ) )
             {
                sMode5 = Gx_mode ;
                Gx_mode = "DLT" ;
@@ -1145,16 +1144,16 @@ namespace GeneXus.Programs {
             validate_on_delete5 ();
             Gx_mode = sMode5 ;
          }
-         if ( subGxsf22 .isEventSource(eventSource)) {
+         if ( subGxsf21 .isEventSource(eventSource)) {
             if ( row < 0 ) {
-               subtfilme22 = ( subtfilme22 ) subGxsf22.getCurrentElement() ;
+               subtfilme21 = ( subtfilme21 ) subGxsf21.getCurrentElement() ;
             }
             else
             {
-               subtfilme22 = ( subtfilme22 ) subGxsf22.getElementAt(row) ;
+               subtfilme21 = ( subtfilme21 ) subGxsf21.getElementAt(row) ;
             }
-            subfileToVariables22 ();
-            if ( ( subtfilme22.isDeleted() == 1 ) )
+            subfileToVariables21 ();
+            if ( ( subtfilme21.isDeleted() == 1 ) )
             {
                sMode4 = Gx_mode ;
                Gx_mode = "DLT" ;
@@ -1197,33 +1196,33 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void variablesToSubfile22( )
+      protected void variablesToSubfile21( )
       {
-         subtfilme22.setFilDirCodigo(A79FilDirC);
-         subtfilme22.setFilDirNome(A80FilDirN);
+         subtfilme21.setFilDirCodigo(A79FilDirC);
+         subtfilme21.setFilDirNome(A80FilDirN);
       }
 
-      protected void subfileToVariables22( )
+      protected void subfileToVariables21( )
       {
-         A79FilDirC = subtfilme22.getFilDirCodigo();
-         A80FilDirN = subtfilme22.getFilDirNome();
+         A79FilDirC = subtfilme21.getFilDirCodigo();
+         A80FilDirN = subtfilme21.getFilDirNome();
       }
 
-      protected void variablesToSubfile27( )
+      protected void variablesToSubfile26( )
       {
-         subtfilme27.setFilAtoCodigo(A77FilAtoC);
-         subtfilme27.setFilAtoNome(A78FilAtoN);
-         subtfilme27.setFilAtoProt(A81FilAtoP);
-         subtfilme27.setZFilAtoProt(Z81FilAtoP);
+         subtfilme26.setFilAtoCodigo(A77FilAtoC);
+         subtfilme26.setFilAtoNome(A78FilAtoN);
+         subtfilme26.setFilAtoProt(A81FilAtoP);
+         subtfilme26.setZFilAtoProt(Z81FilAtoP);
       }
 
-      protected void subfileToVariables27( )
+      protected void subfileToVariables26( )
       {
-         A77FilAtoC = subtfilme27.getFilAtoCodigo();
-         A78FilAtoN = subtfilme27.getFilAtoNome();
-         A81FilAtoP = subtfilme27.getFilAtoProt();
+         A77FilAtoC = subtfilme26.getFilAtoCodigo();
+         A78FilAtoN = subtfilme26.getFilAtoNome();
+         A81FilAtoP = subtfilme26.getFilAtoProt();
          n81FilAtoP = (((0==A81FilAtoP)) ? true : false) ;
-         Z81FilAtoP = subtfilme27.getZFilAtoProt();
+         Z81FilAtoP = subtfilme26.getZFilAtoProt();
       }
 
       public override void VariablesToControls( )
@@ -1286,54 +1285,54 @@ namespace GeneXus.Programs {
       public override void eventLevelContext( )
       {
          ControlsToVariables();
-         if ( subGxsf22.inValidElement() )
+         if ( subGxsf21.inValidElement() )
          {
-            subtfilme22 = ( subtfilme22 ) subGxsf22.getCurrentElement() ;
+            subtfilme21 = ( subtfilme21 ) subGxsf21.getCurrentElement() ;
          }
          else
          {
-            subtfilme22 = new subtfilme22 ();
+            subtfilme21 = new subtfilme21 ();
          }
-         subfileToVariables22 ();
-         if ( subGxsf27.inValidElement() )
+         subfileToVariables21 ();
+         if ( subGxsf26.inValidElement() )
          {
-            subtfilme27 = ( subtfilme27 ) subGxsf27.getCurrentElement() ;
+            subtfilme26 = ( subtfilme26 ) subGxsf26.getCurrentElement() ;
          }
          else
          {
-            subtfilme27 = new subtfilme27 ();
+            subtfilme26 = new subtfilme26 ();
          }
-         subfileToVariables27 ();
+         subfileToVariables26 ();
       }
 
       protected void eventLevelResetContext( )
       {
-         variablesToSubfile22 ();
-         subGxsf22.refreshLineValue(subtfilme22);
-         variablesToSubfile27 ();
-         subGxsf27.refreshLineValue(subtfilme27);
+         variablesToSubfile21 ();
+         subGxsf21.refreshLineValue(subtfilme21);
+         variablesToSubfile26 ();
+         subGxsf26.refreshLineValue(subtfilme26);
       }
 
       protected void reloadGridRow( )
       {
-         if ( subGxsf22.inValidElement() )
+         if ( subGxsf21.inValidElement() )
          {
-            subtfilme22 = ( subtfilme22 ) subGxsf22.getCurrentElement() ;
+            subtfilme21 = ( subtfilme21 ) subGxsf21.getCurrentElement() ;
          }
          else
          {
-            subtfilme22 = new subtfilme22 ();
+            subtfilme21 = new subtfilme21 ();
          }
-         subfileToVariables22 ();
-         if ( subGxsf27.inValidElement() )
+         subfileToVariables21 ();
+         if ( subGxsf26.inValidElement() )
          {
-            subtfilme27 = ( subtfilme27 ) subGxsf27.getCurrentElement() ;
+            subtfilme26 = ( subtfilme26 ) subGxsf26.getCurrentElement() ;
          }
          else
          {
-            subtfilme27 = new subtfilme27 ();
+            subtfilme26 = new subtfilme26 ();
          }
-         subfileToVariables27 ();
+         subfileToVariables26 ();
       }
 
       protected void prompt_32_3( )
@@ -1348,18 +1347,18 @@ namespace GeneXus.Programs {
       protected void prompt_79_4( )
       {
          new wgx00a0(context, base.remoteHandle, base.context).execute( out  A79FilDirC) ;
-         ((subtfilme22)subGxsf22.getCurrentElement()).setFilDirCodigo(A79FilDirC);
-         subGxsf22.refreshLineValue(subGxsf22.getSelectedElement());
-         subGxsf22.repaint();
+         ((subtfilme21)subGxsf21.getCurrentElement()).setFilDirCodigo(A79FilDirC);
+         subGxsf21.refreshLineValue(subGxsf21.getSelectedElement());
+         subGxsf21.repaint();
          ResetCaption020( ) ;
       }
 
       protected void prompt_77_5( )
       {
          new wgx00a0(context, base.remoteHandle, base.context).execute( out  A77FilAtoC) ;
-         ((subtfilme27)subGxsf27.getCurrentElement()).setFilAtoCodigo(A77FilAtoC);
-         subGxsf27.refreshLineValue(subGxsf27.getSelectedElement());
-         subGxsf27.repaint();
+         ((subtfilme26)subGxsf26.getCurrentElement()).setFilAtoCodigo(A77FilAtoC);
+         subGxsf26.refreshLineValue(subGxsf26.getSelectedElement());
+         subGxsf26.repaint();
          ResetCaption020( ) ;
       }
 
@@ -1468,14 +1467,14 @@ namespace GeneXus.Programs {
             {
                GXutil.msg( me(), "Não existe 'Diretor do filme.'." );
                AnyError = 1 ;
-               subGxsf22.cancelSubfileMove();
+               subGxsf21.cancelSubfileMove();
             }
             A80FilDirN = T00023_A80FilDirN[0] ;
             n80FilDirN = T00023_n80FilDirN[0] ;
             pr_default.close(1);
-            ((subtfilme22)subGxsf22.getCurrentElement()).setFilDirNome(A80FilDirN);
-            subGxsf22.refreshLineValue(subGxsf22.getSelectedElement());
-            subGxsf22.repaint();
+            ((subtfilme21)subGxsf21.getCurrentElement()).setFilDirNome(A80FilDirN);
+            subGxsf21.refreshLineValue(subGxsf21.getSelectedElement());
+            subGxsf21.repaint();
             pr_default.close(1);
             if ( ( AnyError == 0 ) )
             {
@@ -1516,14 +1515,14 @@ namespace GeneXus.Programs {
             {
                GXutil.msg( me(), "Não existe 'Ator do filme.'." );
                AnyError = 1 ;
-               subGxsf27.cancelSubfileMove();
+               subGxsf26.cancelSubfileMove();
             }
             A78FilAtoN = T00024_A78FilAtoN[0] ;
             n78FilAtoN = T00024_n78FilAtoN[0] ;
             pr_default.close(2);
-            ((subtfilme27)subGxsf27.getCurrentElement()).setFilAtoNome(A78FilAtoN);
-            subGxsf27.refreshLineValue(subGxsf27.getSelectedElement());
-            subGxsf27.repaint();
+            ((subtfilme26)subGxsf26.getCurrentElement()).setFilAtoNome(A78FilAtoN);
+            subGxsf26.refreshLineValue(subGxsf26.getSelectedElement());
+            subGxsf26.repaint();
             pr_default.close(2);
             if ( ( AnyError == 0 ) )
             {
@@ -1583,16 +1582,16 @@ namespace GeneXus.Programs {
          else if ( GXCursor("A79FilDirC") )
          {
             new wconsastro(context, base.remoteHandle, base.context).execute( out  A79FilDirC) ;
-            ((subtfilme22)subGxsf22.getCurrentElement()).setFilDirCodigo(A79FilDirC);
-            subGxsf22.refreshLineValue(subGxsf22.getSelectedElement());
-            subGxsf22.repaint();
+            ((subtfilme21)subGxsf21.getCurrentElement()).setFilDirCodigo(A79FilDirC);
+            subGxsf21.refreshLineValue(subGxsf21.getSelectedElement());
+            subGxsf21.repaint();
          }
          else if ( GXCursor("A77FilAtoC") )
          {
             new wconsastro(context, base.remoteHandle, base.context).execute( out  A77FilAtoC) ;
-            ((subtfilme27)subGxsf27.getCurrentElement()).setFilAtoCodigo(A77FilAtoC);
-            subGxsf27.refreshLineValue(subGxsf27.getSelectedElement());
-            subGxsf27.repaint();
+            ((subtfilme26)subGxsf26.getCurrentElement()).setFilAtoCodigo(A77FilAtoC);
+            subGxsf26.refreshLineValue(subGxsf26.getSelectedElement());
+            subGxsf26.repaint();
          }
          eventLevelResetContext();
       }
@@ -1698,8 +1697,8 @@ namespace GeneXus.Programs {
          }
          if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "DLT".TrimEnd(' ') ) == 0 ) )
          {
-            subGxsf22.setEnabled(0);
-            subGxsf27.setEnabled(0);
+            subGxsf21.setEnabled(0);
+            subGxsf26.setEnabled(0);
          }
       }
 
@@ -1847,8 +1846,8 @@ namespace GeneXus.Programs {
          }
          K28FilCodi = A28FilCodi ;
          pr_default.close(8);
-         subGxsf22.startLoad();
-         subtfilme22 = new subtfilme22 ();
+         subGxsf21.startLoad();
+         subtfilme21 = new subtfilme21 ();
          if ( ( RcdFound3 == 1 ) )
          {
             ScanStart024( ) ;
@@ -1860,9 +1859,9 @@ namespace GeneXus.Programs {
             }
             ScanEnd024( ) ;
          }
-         subGxsf22.endLoad(new subtfilme22());
-         subGxsf27.startLoad();
-         subtfilme27 = new subtfilme27 ();
+         subGxsf21.endLoad(new subtfilme21());
+         subGxsf26.startLoad();
+         subtfilme26 = new subtfilme26 ();
          if ( ( RcdFound3 == 1 ) )
          {
             ScanStart025( ) ;
@@ -1874,7 +1873,7 @@ namespace GeneXus.Programs {
             }
             ScanEnd025( ) ;
          }
-         subGxsf27.endLoad(new subtfilme27());
+         subGxsf26.endLoad(new subtfilme26());
       }
 
       public override void getEqualNoModal( )
@@ -2243,15 +2242,15 @@ namespace GeneXus.Programs {
 
       protected void ProcessNestedLevel024( )
       {
-         nGXsfl_22_idx = 0 ;
-         while ( ( nGXsfl_22_idx < subGxsf22.getItemCount() ) )
+         nGXsfl_21_idx = 0 ;
+         while ( ( nGXsfl_21_idx < subGxsf21.getItemCount() ) )
          {
             ReadRow024( ) ;
-            if ( ( subtfilme22.isLoaded() != 0 ) || ( subtfilme22.isChanged() != 0 ) )
+            if ( ( subtfilme21.isLoaded() != 0 ) || ( subtfilme21.isChanged() != 0 ) )
             {
                standaloneNotModal024( ) ;
                GetKey024( ) ;
-               if ( ( subtfilme22.isLoaded() == 0 ) && ( subtfilme22.isDeleted() == 0 ) )
+               if ( ( subtfilme21.isLoaded() == 0 ) && ( subtfilme21.isDeleted() == 0 ) )
                {
                   if ( ( RcdFound4 == 0 ) )
                   {
@@ -2269,14 +2268,14 @@ namespace GeneXus.Programs {
                {
                   if ( ( RcdFound4 != 0 ) )
                   {
-                     if ( ( subtfilme22.isDeleted() != 0 ) && ( subtfilme22.isLoaded() != 0 ) )
+                     if ( ( subtfilme21.isDeleted() != 0 ) && ( subtfilme21.isLoaded() != 0 ) )
                      {
                         Gx_mode = "DLT" ;
                         Delete024( ) ;
                      }
                      else
                      {
-                        if ( ( subtfilme22.isChanged() != 0 ) && ( subtfilme22.isLoaded() != 0 ) )
+                        if ( ( subtfilme21.isChanged() != 0 ) && ( subtfilme21.isLoaded() != 0 ) )
                         {
                            Gx_mode = "UPD" ;
                            Update024( ) ;
@@ -2285,7 +2284,7 @@ namespace GeneXus.Programs {
                   }
                   else
                   {
-                     if ( ( subtfilme22.isDeleted() == 0 ) )
+                     if ( ( subtfilme21.isDeleted() == 0 ) )
                      {
                         pushError( GXResourceManager.GetMessage("recdeleted") );
                         AnyError = 1 ;
@@ -2295,22 +2294,22 @@ namespace GeneXus.Programs {
                }
             }
          }
-         subGxsf22.endLoad(new subtfilme22());
+         subGxsf21.endLoad(new subtfilme21());
          /* Start of After( level) rules */
          /* End of After( level) rules */
       }
 
       protected void ProcessNestedLevel025( )
       {
-         nGXsfl_27_idx = 0 ;
-         while ( ( nGXsfl_27_idx < subGxsf27.getItemCount() ) )
+         nGXsfl_26_idx = 0 ;
+         while ( ( nGXsfl_26_idx < subGxsf26.getItemCount() ) )
          {
             ReadRow025( ) ;
-            if ( ( subtfilme27.isLoaded() != 0 ) || ( subtfilme27.isChanged() != 0 ) )
+            if ( ( subtfilme26.isLoaded() != 0 ) || ( subtfilme26.isChanged() != 0 ) )
             {
                standaloneNotModal025( ) ;
                GetKey025( ) ;
-               if ( ( subtfilme27.isLoaded() == 0 ) && ( subtfilme27.isDeleted() == 0 ) )
+               if ( ( subtfilme26.isLoaded() == 0 ) && ( subtfilme26.isDeleted() == 0 ) )
                {
                   if ( ( RcdFound5 == 0 ) )
                   {
@@ -2328,14 +2327,14 @@ namespace GeneXus.Programs {
                {
                   if ( ( RcdFound5 != 0 ) )
                   {
-                     if ( ( subtfilme27.isDeleted() != 0 ) && ( subtfilme27.isLoaded() != 0 ) )
+                     if ( ( subtfilme26.isDeleted() != 0 ) && ( subtfilme26.isLoaded() != 0 ) )
                      {
                         Gx_mode = "DLT" ;
                         Delete025( ) ;
                      }
                      else
                      {
-                        if ( ( subtfilme27.isChanged() != 0 ) && ( subtfilme27.isLoaded() != 0 ) )
+                        if ( ( subtfilme26.isChanged() != 0 ) && ( subtfilme26.isLoaded() != 0 ) )
                         {
                            Gx_mode = "UPD" ;
                            Update025( ) ;
@@ -2344,7 +2343,7 @@ namespace GeneXus.Programs {
                   }
                   else
                   {
-                     if ( ( subtfilme27.isDeleted() == 0 ) )
+                     if ( ( subtfilme26.isDeleted() == 0 ) )
                      {
                         pushError( GXResourceManager.GetMessage("recdeleted") );
                         AnyError = 1 ;
@@ -2354,7 +2353,7 @@ namespace GeneXus.Programs {
                }
             }
          }
-         subGxsf27.endLoad(new subtfilme27());
+         subGxsf26.endLoad(new subtfilme26());
          /* Start of After( level) rules */
          /* End of After( level) rules */
       }
@@ -2413,8 +2412,8 @@ namespace GeneXus.Programs {
             pr_default.close(1);
             pr_default.close(2);
             context.RollbackDataStores("TFilme");
-            nGXsfl_22_idx = 0 ;
-            while ( ( nGXsfl_22_idx < subGxsf22.getItemCount() ) )
+            nGXsfl_21_idx = 0 ;
+            while ( ( nGXsfl_21_idx < subGxsf21.getItemCount() ) )
             {
                ReadRow024( ) ;
                /* Using cursor T00028 */
@@ -2427,7 +2426,7 @@ namespace GeneXus.Programs {
                   else
                   {
                   }
-                  variablesToSubfile22 ();
+                  variablesToSubfile21 ();
                }
                pr_default.close(6);
             }
@@ -2518,8 +2517,8 @@ namespace GeneXus.Programs {
       {
          if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "DLT".TrimEnd(' ') ) == 0 ) )
          {
-            subGxsf22.setEnabled(0);
-            subGxsf27.setEnabled(0);
+            subGxsf21.setEnabled(0);
+            subGxsf26.setEnabled(0);
          }
       }
 
@@ -2553,7 +2552,7 @@ namespace GeneXus.Programs {
          {
             pushError( "Não existe 'Diretor do filme.'." );
             AnyError = 1 ;
-            setNextFocus( new GXSubfileCell(subGxsf22, nGXsfl_22_idx - 1, 0) );
+            setNextFocus( new GXSubfileCell(subGxsf21, nGXsfl_21_idx - 1, 0) );
          }
          A80FilDirN = T00023_A80FilDirN[0] ;
          n80FilDirN = T00023_n80FilDirN[0] ;
@@ -2864,14 +2863,14 @@ namespace GeneXus.Programs {
 
       protected void AddRow024( )
       {
-         loadToBuffer22();
+         loadToBuffer21();
       }
 
       protected void ReadRow024( )
       {
-         subtfilme22 = ( subtfilme22 ) subGxsf22.getElementAt(nGXsfl_22_idx) ;
-         subfileToVariables22 ();
-         nGXsfl_22_idx = (short)(nGXsfl_22_idx+1) ;
+         subtfilme21 = ( subtfilme21 ) subGxsf21.getElementAt(nGXsfl_21_idx) ;
+         subfileToVariables21 ();
+         nGXsfl_21_idx = (short)(nGXsfl_21_idx+1) ;
       }
 
       protected void ZM025( int GX_JID )
@@ -2903,8 +2902,8 @@ namespace GeneXus.Programs {
       {
          if ( ( String.CompareOrdinal(Gx_mode.TrimEnd(' '), "DLT".TrimEnd(' ') ) == 0 ) )
          {
-            subGxsf22.setEnabled(0);
-            subGxsf27.setEnabled(0);
+            subGxsf21.setEnabled(0);
+            subGxsf26.setEnabled(0);
          }
       }
 
@@ -2940,7 +2939,7 @@ namespace GeneXus.Programs {
          {
             pushError( "Não existe 'Ator do filme.'." );
             AnyError = 1 ;
-            setNextFocus( new GXSubfileCell(subGxsf27, nGXsfl_27_idx - 1, 0) );
+            setNextFocus( new GXSubfileCell(subGxsf26, nGXsfl_26_idx - 1, 0) );
          }
          A78FilAtoN = T00024_A78FilAtoN[0] ;
          n78FilAtoN = T00024_n78FilAtoN[0] ;
@@ -3255,14 +3254,14 @@ namespace GeneXus.Programs {
 
       protected void AddRow025( )
       {
-         loadToBuffer27();
+         loadToBuffer26();
       }
 
       protected void ReadRow025( )
       {
-         subtfilme27 = ( subtfilme27 ) subGxsf27.getElementAt(nGXsfl_27_idx) ;
-         subfileToVariables27 ();
-         nGXsfl_27_idx = (short)(nGXsfl_27_idx+1) ;
+         subtfilme26 = ( subtfilme26 ) subGxsf26.getElementAt(nGXsfl_26_idx) ;
+         subfileToVariables26 ();
+         nGXsfl_26_idx = (short)(nGXsfl_26_idx+1) ;
       }
 
       protected void CONFIRM_020( )
@@ -3304,14 +3303,14 @@ namespace GeneXus.Programs {
 
       protected void CONFIRM_025( )
       {
-         nGXsfl_27_idx = 0 ;
-         while ( ( nGXsfl_27_idx < subGxsf27.getItemCount() ) )
+         nGXsfl_26_idx = 0 ;
+         while ( ( nGXsfl_26_idx < subGxsf26.getItemCount() ) )
          {
             ReadRow025( ) ;
-            if ( ( subtfilme27.isLoaded() != 0 ) || ( subtfilme27.isChanged() != 0 ) )
+            if ( ( subtfilme26.isLoaded() != 0 ) || ( subtfilme26.isChanged() != 0 ) )
             {
                GetKey025( ) ;
-               if ( ( subtfilme27.isLoaded() == 0 ) && ( subtfilme27.isDeleted() == 0 ) )
+               if ( ( subtfilme26.isLoaded() == 0 ) && ( subtfilme26.isDeleted() == 0 ) )
                {
                   if ( ( RcdFound5 == 0 ) )
                   {
@@ -3340,7 +3339,7 @@ namespace GeneXus.Programs {
                {
                   if ( ( RcdFound5 != 0 ) )
                   {
-                     if ( ( subtfilme27.isDeleted() != 0 ) )
+                     if ( ( subtfilme26.isDeleted() != 0 ) )
                      {
                         Gx_mode = "DLT" ;
                         getByPrimaryKey025( ) ;
@@ -3353,7 +3352,7 @@ namespace GeneXus.Programs {
                      }
                      else
                      {
-                        if ( ( subtfilme27.isChanged() != 0 ) )
+                        if ( ( subtfilme26.isChanged() != 0 ) )
                         {
                            Gx_mode = "UPD" ;
                            BeforeValidate025( ) ;
@@ -3373,7 +3372,7 @@ namespace GeneXus.Programs {
                   }
                   else
                   {
-                     if ( ( subtfilme27.isDeleted() == 0 ) )
+                     if ( ( subtfilme26.isDeleted() == 0 ) )
                      {
                         pushError( GXResourceManager.GetMessage("recdeleted") );
                         AnyError = 1 ;
@@ -3383,21 +3382,21 @@ namespace GeneXus.Programs {
                }
             }
          }
-         subGxsf27.endLoad();
+         subGxsf26.endLoad();
          /* Start of After( level) rules */
          /* End of After( level) rules */
       }
 
       protected void CONFIRM_024( )
       {
-         nGXsfl_22_idx = 0 ;
-         while ( ( nGXsfl_22_idx < subGxsf22.getItemCount() ) )
+         nGXsfl_21_idx = 0 ;
+         while ( ( nGXsfl_21_idx < subGxsf21.getItemCount() ) )
          {
             ReadRow024( ) ;
-            if ( ( subtfilme22.isLoaded() != 0 ) || ( subtfilme22.isChanged() != 0 ) )
+            if ( ( subtfilme21.isLoaded() != 0 ) || ( subtfilme21.isChanged() != 0 ) )
             {
                GetKey024( ) ;
-               if ( ( subtfilme22.isLoaded() == 0 ) && ( subtfilme22.isDeleted() == 0 ) )
+               if ( ( subtfilme21.isLoaded() == 0 ) && ( subtfilme21.isDeleted() == 0 ) )
                {
                   if ( ( RcdFound4 == 0 ) )
                   {
@@ -3426,7 +3425,7 @@ namespace GeneXus.Programs {
                {
                   if ( ( RcdFound4 != 0 ) )
                   {
-                     if ( ( subtfilme22.isDeleted() != 0 ) )
+                     if ( ( subtfilme21.isDeleted() != 0 ) )
                      {
                         Gx_mode = "DLT" ;
                         getByPrimaryKey024( ) ;
@@ -3439,7 +3438,7 @@ namespace GeneXus.Programs {
                      }
                      else
                      {
-                        if ( ( subtfilme22.isChanged() != 0 ) )
+                        if ( ( subtfilme21.isChanged() != 0 ) )
                         {
                            Gx_mode = "UPD" ;
                            BeforeValidate024( ) ;
@@ -3459,7 +3458,7 @@ namespace GeneXus.Programs {
                   }
                   else
                   {
-                     if ( ( subtfilme22.isDeleted() == 0 ) )
+                     if ( ( subtfilme21.isDeleted() == 0 ) )
                      {
                         pushError( GXResourceManager.GetMessage("recdeleted") );
                         AnyError = 1 ;
@@ -3469,7 +3468,7 @@ namespace GeneXus.Programs {
                }
             }
          }
-         subGxsf22.endLoad();
+         subGxsf21.endLoad();
          /* Start of After( level) rules */
          /* End of After( level) rules */
       }
@@ -3534,9 +3533,9 @@ namespace GeneXus.Programs {
          A78FilAtoN = "" ;
          n78FilAtoN = false ;
          K77FilAtoC = 0 ;
-         subtfilme22 = new subtfilme22();
+         subtfilme21 = new subtfilme21();
          sMode4 = "" ;
-         subtfilme27 = new subtfilme27();
+         subtfilme26 = new subtfilme26();
          sMode5 = "" ;
          lastAnyError = 0 ;
          Z81FilAtoP = 0 ;
@@ -3805,8 +3804,8 @@ namespace GeneXus.Programs {
       protected short Gx_BScreen ;
       protected short RcdFound4 ;
       protected short RcdFound5 ;
-      protected short nGXsfl_22_idx=1 ;
-      protected short nGXsfl_27_idx=1 ;
+      protected short nGXsfl_21_idx=1 ;
+      protected short nGXsfl_26_idx=1 ;
       protected int trnEnded ;
       protected int A32CatCodi ;
       protected int K28FilCodi ;
@@ -3870,17 +3869,16 @@ namespace GeneXus.Programs {
       protected ILabel lbllbl9 ;
       protected ILabel lbllbl7 ;
       protected ILabel lbllbl18 ;
-      protected ILabel lbllbl19 ;
       protected ILabel lbllbl11 ;
       protected ILabel lbllbl12 ;
-      protected GXTabPage tpagetpage20 ;
-      protected GXSubfileTRN subGxsf22 ;
-      protected ILabel lbllbl21 ;
-      protected GXTabPage tpagetpage25 ;
-      protected GXSubfileTRN subGxsf27 ;
-      protected ILabel lbllbl26 ;
-      protected subtfilme22 subtfilme22 ;
-      protected subtfilme27 subtfilme27 ;
+      protected GXTabPage tpagetpage19 ;
+      protected GXSubfileTRN subGxsf21 ;
+      protected ILabel lbllbl20 ;
+      protected GXTabPage tpagetpage24 ;
+      protected GXSubfileTRN subGxsf26 ;
+      protected ILabel lbllbl25 ;
+      protected subtfilme21 subtfilme21 ;
+      protected subtfilme26 subtfilme26 ;
       protected IDataReader T00022 ;
       protected IDataStoreProvider pr_default ;
       protected String[] T00022_A33CatNome ;

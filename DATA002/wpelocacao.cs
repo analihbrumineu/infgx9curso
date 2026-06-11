@@ -2,7 +2,7 @@
                File: PeLocacao
         Description: Cadastro de locação.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:25.44
+       Generated on: 6/11/2026 11:31:35.37
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -91,7 +91,7 @@ namespace GeneXus.Programs {
 
       public override int getFrmWidth( )
       {
-         return 910 ;
+         return 771 ;
       }
 
       public override int getFrmHeight( )
@@ -619,24 +619,20 @@ namespace GeneXus.Programs {
 
       public override void screen( )
       {
-         GXPanel1 = new GXPanel(this, 3 , 25 , 910 , 832 );
+         GXPanel1 = new GXPanel(this, 3 , 25 , 771 , 832 );
          this.setIBackground(UIFactory.getColor(15));
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         edtavLocclipescodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),65, 71, 78, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 65 , 71 , 78 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV5LocCliP" );
+         edtavLocclipescodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),65, 77, 78, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 65 , 77 , 78 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV5LocCliP" );
          ((GXEdit) edtavLocclipescodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavLocclipescodigo.addFocusListener(this);
          edtavLocclipescodigo.getGXComponent().setHelpId("HLP_WPeLocacao.htm");
-         edtavLocclipesnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),156, 71, 360, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 156 , 71 , 360 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6LocCliP" );
+         edtavLocclipesnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),161, 77, 206, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 161 , 77 , 206 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6LocCliP" );
          ((GXEdit) edtavLocclipesnome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavLocclipesnome.addFocusListener(this);
          edtavLocclipesnome.getGXComponent().setHelpId("HLP_WPeLocacao.htm");
-         edtavLocdatlocacao = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),65, 117, 80, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , GXPanel1 , 65 , 117 , 80 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7LocDatL" );
-         ((GXEdit) edtavLocdatlocacao.getGXComponent()).setAlignment(ILabelConstants.LEFT);
-         edtavLocdatlocacao.addFocusListener(this);
-         edtavLocdatlocacao.getGXComponent().setHelpId("HLP_WPeLocacao.htm");
-         cmbavLocsituacao = new GUIObjectShort ( new GXComboBox(GXPanel1) , GXPanel1 , 156 , 117 , 117 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV8LocSitu" );
+         cmbavLocsituacao = new GUIObjectShort ( new GXComboBox(GXPanel1) , GXPanel1 , 385 , 77 , 117 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV8LocSitu" );
          ((GXComboBox) cmbavLocsituacao.getGXComponent()).addItem( new java.lang.Short(0),"Todas");
          ((GXComboBox) cmbavLocsituacao.getGXComponent()).addItem( new java.lang.Short(1),"Digitada");
          ((GXComboBox) cmbavLocsituacao.getGXComponent()).addItem( new java.lang.Short(2),"Realizada");
@@ -645,6 +641,10 @@ namespace GeneXus.Programs {
          cmbavLocsituacao.addFocusListener(this);
          cmbavLocsituacao.addItemListener(this);
          cmbavLocsituacao.getGXComponent().setHelpId("HLP_WPeLocacao.htm");
+         edtavLocdatlocacao = new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),520, 77, 80, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.DATE, false, true, UIFactory.getColor(5), false) , GXPanel1 , 520 , 77 , 80 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7LocDatL" );
+         ((GXEdit) edtavLocdatlocacao.getGXComponent()).setAlignment(ILabelConstants.LEFT);
+         edtavLocdatlocacao.addFocusListener(this);
+         edtavLocdatlocacao.getGXComponent().setHelpId("HLP_WPeLocacao.htm");
          addSubfile ( subGxsf10  = new GXSubfile ( new PeLocacao_load10(this), new PeLocacao_flow10(this), false , new GXColumnDefinition[] {
           new GXColumnDefinition( new GUIObjectString ( new GXCheckBox(GXPanel1, "" , "S", "N") , null ,  0 , 0 , 26 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV9Marcado" ), ""  , UIFactory.getColor(18) , UIFactory.getColor(15) , 26 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , true , true )
          , new GXColumnDefinition( new GUIObjectString ( new SubfileImage() , null ,  0 , 0 , 25 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV16Visual" ), ""  , UIFactory.getColor(18) , UIFactory.getColor(15) , 25 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
@@ -652,9 +652,9 @@ namespace GeneXus.Programs {
          , new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 71, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 70 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A86LocCodi" ), "Código"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 70 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),0, 0, 78, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.DATE, false, false, 0, false) , null ,  0 , 0 , 77 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A88LocDatL" ), "Data"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 77 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 120, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 119 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A91LocCliP" ), "Código do locatário"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 119 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , false )
-         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 409, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 408 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A92LocCliP" ), "Locatário"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 408 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 273, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 272 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A92LocCliP" ), "Locatário"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 272 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectShort ( new GXComboBox(GXPanel1, false) , null ,  0 , 0 , 86 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A87LocSitu" ), "Situação"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 86 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         }, 33 , 18 , GXPanel1 , 65 , 169 , 780 , 611 ,  18 ));
+         }, 36 , 18 , GXPanel1 , 65 , 107 , 644 , 673 ,  18 ));
          ((GXComboBox) subGxsf10.getColumn(7).getGXComponent()).addItem( new java.lang.Short(1),"Digitada");
          ((GXComboBox) subGxsf10.getColumn(7).getGXComponent()).addItem( new java.lang.Short(2),"Realizada");
          ((GXComboBox) subGxsf10.getColumn(7).getGXComponent()).addItem( new java.lang.Short(3),"Devolvida");
@@ -666,35 +666,35 @@ namespace GeneXus.Programs {
          subGxsf10.getColumn(1).addItemListener( this);
          subGxsf10.getColumn(2).addActionListener( this);
          subGxsf10.getColumn(2).addItemListener( this);
-         bttbtt19 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  739 ,  115 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt19 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  618 ,  68 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt19.setTooltip("Novo");
          bttbtt19.addActionListener(this);
          bttbtt19.setFiresEvents(false);
-         bttbtt20 = UIFactory.getGXButton( GXPanel1 , "M" ,  117 ,  793 ,  26 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt20 = UIFactory.getGXButton( GXPanel1 , "M" ,  65 ,  784 ,  26 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt20.setTooltip("M");
          bttbtt20.addActionListener(this);
          bttbtt20.setFiresEvents(false);
-         bttbtt21 = UIFactory.getGXButton( GXPanel1 , "D" ,  156 ,  793 ,  26 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt21 = UIFactory.getGXButton( GXPanel1 , "D" ,  103 ,  784 ,  26 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt21.setTooltip("D");
          bttbtt21.addActionListener(this);
          bttbtt21.setFiresEvents(false);
-         bttbtt22 = UIFactory.getGXButton( GXPanel1 , "Realizar/Devolver" ,  598 ,  793 ,  104 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt22 = UIFactory.getGXButton( GXPanel1 , "Realizar/Devolver" ,  507 ,  784 ,  104 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt22.setTooltip("Realizar/Devolver");
          bttbtt22.addActionListener(this);
          bttbtt22.setFiresEvents(false);
-         bttbtt23 = UIFactory.getGXButton( GXPanel1 , "Cancelar/Excluir" ,  715 ,  793 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt23 = UIFactory.getGXButton( GXPanel1 , "Cancelar/Excluir" ,  618 ,  784 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt23.setTooltip("Cancelar/Excluir");
          bttbtt23.addActionListener(this);
          bttbtt23.setFiresEvents(false);
-         lbllbl6 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 52 , 40 , 13 );
-         lbllbl7 = UIFactory.getLabel(GXPanel1, "Nome", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 156 , 52 , 33 , 13 );
-         lbllbl8 = UIFactory.getLabel(GXPanel1, "Data", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 101 , 28 , 13 );
-         lbllbl9 = UIFactory.getLabel(GXPanel1, "Situação", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 156 , 101 , 51 , 13 );
+         lbllbl6 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 60 , 40 , 13 );
+         lbllbl7 = UIFactory.getLabel(GXPanel1, "Nome", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 161 , 60 , 33 , 13 );
+         lbllbl9 = UIFactory.getLabel(GXPanel1, "Situação", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 385 , 60 , 51 , 13 );
+         lbllbl8 = UIFactory.getLabel(GXPanel1, "Data", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 520 , 60 , 28 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavLocclipescodigo ,
                    edtavLocclipesnome ,
-                   edtavLocdatlocacao ,
                    cmbavLocsituacao ,
+                   edtavLocdatlocacao ,
                    subGxsf10 ,
                    bttbtt19 ,
                    bttbtt20 ,
@@ -1054,8 +1054,8 @@ namespace GeneXus.Programs {
       protected GXPanel GXPanel1 ;
       protected GUIObjectInt edtavLocclipescodigo ;
       protected GUIObjectString edtavLocclipesnome ;
-      protected GUIObjectDatetime edtavLocdatlocacao ;
       protected GUIObjectShort cmbavLocsituacao ;
+      protected GUIObjectDatetime edtavLocdatlocacao ;
       protected GXSubfile subGxsf10 ;
       protected IGXButton bttbtt19 ;
       protected IGXButton bttbtt20 ;
@@ -1064,8 +1064,8 @@ namespace GeneXus.Programs {
       protected IGXButton bttbtt23 ;
       protected ILabel lbllbl6 ;
       protected ILabel lbllbl7 ;
-      protected ILabel lbllbl8 ;
       protected ILabel lbllbl9 ;
+      protected ILabel lbllbl8 ;
    }
 
    public class wpelocacao__default : DataStoreHelperBase, IDataStoreHelper
@@ -1163,7 +1163,7 @@ namespace GeneXus.Programs {
           prmW00262 = new Object[] {
           } ;
           def= new GeneXus.Data.NTier.ADO.CursorDef[] {
-              new GeneXus.Data.NTier.ADO.CursorDef("W00262", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW00262,26,0,true,false )
+              new GeneXus.Data.NTier.ADO.CursorDef("W00262", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW00262,29,0,true,false )
           };
        }
     }

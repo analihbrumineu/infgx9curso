@@ -2,7 +2,7 @@
                File: Login
         Description: Tela de login.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:24.67
+       Generated on: 6/11/2026 11:31:34.61
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -310,7 +310,7 @@ namespace GeneXus.Programs {
          bttbtt6 = UIFactory.getGXButton( GXPanel1 , "Logar" ,  481 ,  342 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt6.setTooltip("Logar");
          bttbtt6.addActionListener(this);
-         lbllbl4 = UIFactory.getLabel(GXPanel1, "Login", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 403 , 277 , 32 , 13 );
+         lbllbl4 = UIFactory.getLabel(GXPanel1, "Login", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 408 , 277 , 32 , 13 );
          lbllbl5 = UIFactory.getLabel(GXPanel1, "Senha", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 403 , 303 , 37 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavPesfunlogin ,

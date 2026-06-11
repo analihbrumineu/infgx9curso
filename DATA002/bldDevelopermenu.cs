@@ -49,13 +49,13 @@ public class bldDevelopermenu : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\tcliente.cs" ))
             return true;
-         if (checkTime(obj, cs_path + @"\subtcliente39.cs" ))
+         if (checkTime(obj, cs_path + @"\subtcliente35.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\tfilme.cs" ))
             return true;
-         if (checkTime(obj, cs_path + @"\subtfilme22.cs" ))
+         if (checkTime(obj, cs_path + @"\subtfilme21.cs" ))
             return true;
-         if (checkTime(obj, cs_path + @"\subtfilme27.cs" ))
+         if (checkTime(obj, cs_path + @"\subtfilme26.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\tcategoria.cs" ))
             return true;
@@ -73,7 +73,7 @@ public class bldDevelopermenu : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\tlocacao.cs" ))
             return true;
-         if (checkTime(obj, cs_path + @"\subtlocacao30.cs" ))
+         if (checkTime(obj, cs_path + @"\subtlocacao26.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\wpeestado.cs" ))
             return true;
@@ -123,7 +123,7 @@ public class bldDevelopermenu : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\wpecliente.cs" ))
             return true;
-         if (checkTime(obj, cs_path + @"\subwpecliente11.cs" ))
+         if (checkTime(obj, cs_path + @"\subwpecliente10.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\wconsfuncionario.cs" ))
             return true;

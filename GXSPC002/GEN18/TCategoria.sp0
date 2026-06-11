@@ -18,10 +18,10 @@ las_i(6,[ [ 32,'Mode',33 ] ]).
 lac_i(6,[ [ 33 ] ]).
  
  
-lits_i('Código',2,9).
-lits_i('Categoria',3,9).
+lits_i('Código',2,13).
+lits_i('Categoria',3,11).
  
-cls_i([ 2,9 ],[ 3,69 ]).
+cls_i([ 2,11 ],[ 3,69 ]).
  
 pos_i(32,[ 2,2,20 ]).
 pos_i(33,[ 3,3,20 ]).
@@ -284,11 +284,11 @@ ppi_i([ 96,96 ]).
  
  
  
-lit_i(2,1,button('Enter'),[ id(2),title([ 'Enter' ]),ctlname('Btn_enter'),rect(390,130,478,155),font('MS Shell Dlg',8,[]) ]).
+lit_i(2,1,button('Enter'),[ id(2),title([ 'Enter' ]),ctlname('Btn_enter'),rect(217,130,305,155),font('MS Shell Dlg',8,[]) ]).
 lit_i(3,1,t(32,2),[ font('Courier New',9,[]),rect(143,61,215,81),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(32),ctrltype(edit,3),ispwd(0),e2n(1) ]).
-lit_i(4,1,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,65,104,77),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(5,1,t(33,2),[ font('Courier New',9,[]),rect(143,87,415,107),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(33),ctrltype(edit,5),ispwd(0),e2n(1) ]).
-lit_i(6,1,t('Categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,91,119,103),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(4,1,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(93,65,132,77),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(5,1,t(33,2),[ font('Courier New',9,[]),rect(143,87,305,107),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(33),ctrltype(edit,5),ispwd(0),e2n(1) ]).
+lit_i(6,1,t('Categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(78,91,132,103),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(1,1,window,[ title([ 'Cadastro de categorias' ]),rect(3,25,522,219),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).

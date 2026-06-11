@@ -21,7 +21,7 @@ lac_i(2,[ [ 'Catcodigo','Catnome' ] ]).
  
  
 lits_i('Código',2,9).
-lits_i('Categoria',2,22).
+lits_i('Categoria',2,24).
 lits_i('Código',4,18).
 lits_i('Categoria',4,28).
  
@@ -33,7 +33,7 @@ pos_i('Excluir',[ 5,30,15 ]).
 pos_i(32,[ 5,30,18 ]).
 pos_i(33,[ 5,30,28 ]).
 pos_i('Catcodigo',[ 2,2,9 ]).
-pos_i('Catnome',[ 2,2,22 ]).
+pos_i('Catnome',[ 2,2,24 ]).
  
 repeat_i(2,[ 5,30,[ 'Visualizar','Editar','Excluir',32,33 ],[] ]).
  
@@ -257,16 +257,16 @@ ppi_i([ 96,96 ]).
  
  
 lit_i(2,1,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,52,142,64),outstyle(none),align(left),fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(3,1,t('Categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(156,52,233,64),outstyle(none),align(left),fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(3,1,t('Categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(173,52,250,64),outstyle(none),align(left),fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(5,1,s(t('Visualizar',23),4),[ width(26),pos(0),title([ '' ]),ctlname('&Visualizar'),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,5) ]).
 lit_i(6,1,s(t('Editar',23),4),[ width(25),pos(1),title([ '' ]),ctlname('&Editar'),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,6) ]).
 lit_i(7,1,s(t('Excluir',23),4),[ width(26),pos(2),title([ '' ]),ctlname('&Excluir'),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,7) ]).
 lit_i(8,1,s(t(32,2),4),[ width(75),pos(3),title([ 'Código' ]),ctlname(32),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,8),e2n(1) ]).
-lit_i(9,1,s(t(33,2),4),[ width(308),pos(4),title([ 'Categoria' ]),ctlname(33),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,9),e2n(1) ]).
-lit_i(4,1,s(4),[ th(18),height(18),rect(65,117,585,766),back(rgb(240,240,240)),fore(gxcolor([]),rgb(0,0,0)),border(1),ctlname('Gxsf4'),font(font('Courier New',9,[])),titlefont(font('MS Sans Serif',8,[ bold ])),el([ t('Visualizar',23),t('Editar',23),t('Excluir',23),t(32,2),t(33,2) ]) ]).
-lit_i(10,1,button('''Novo'''),[ id(10),title([ 'Novo' ]),ctlname(''),rect(481,65,571,90),font('MS Shell Dlg',8,[]) ]).
+lit_i(9,1,s(t(33,2),4),[ width(182),pos(4),title([ 'Categoria' ]),ctlname(33),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,9),e2n(1) ]).
+lit_i(4,1,s(4),[ th(18),height(18),rect(65,100,459,766),back(rgb(240,240,240)),fore(gxcolor([]),rgb(0,0,0)),border(1),ctlname('Gxsf4'),font(font('Courier New',9,[])),titlefont(font('MS Sans Serif',8,[ bold ])),el([ t('Visualizar',23),t('Editar',23),t('Excluir',23),t(32,2),t(33,2) ]) ]).
+lit_i(10,1,button('''Novo'''),[ id(10),title([ 'Novo' ]),ctlname(''),rect(369,63,459,88),font('MS Shell Dlg',8,[]) ]).
 lit_i(11,1,t('Catcodigo',23),[ font('Courier New',9,[]),rect(65,67,137,87),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catcodigo'),ctrltype(edit,11),ispwd(0) ]).
-lit_i(12,1,t('Catnome',23),[ font('Courier New',9,[]),rect(156,67,441,87),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catnome'),ctrltype(edit,12),ispwd(0) ]).
+lit_i(12,1,t('Catnome',23),[ font('Courier New',9,[]),rect(173,67,333,87),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catnome'),ctrltype(edit,12),ispwd(0) ]).
 lit_i(1,1,window,[ title([ 'Categorias' ]),rect(3,25,652,804),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).

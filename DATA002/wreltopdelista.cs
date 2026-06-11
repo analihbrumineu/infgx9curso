@@ -2,7 +2,7 @@
                File: RelTopDeLista
         Description: Relatório de topo de lista.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:25.75
+       Generated on: 6/11/2026 11:31:35.68
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -337,15 +337,15 @@ namespace GeneXus.Programs {
          ((GXEdit) edtavSelecao.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavSelecao.addFocusListener(this);
          edtavSelecao.getGXComponent().setHelpId("HLP_WRelTopDeLista.htm");
-         bttbtt12 = UIFactory.getGXButton( GXPanel1 , "Imprimir" ,  442 ,  169 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt12 = UIFactory.getGXButton( GXPanel1 , "Imprimir" ,  381 ,  143 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt12.setTooltip("Imprimir");
          bttbtt12.addActionListener(this);
          bttbtt12.setFiresEvents(false);
-         lbllbl2 = UIFactory.getLabel(GXPanel1, "De", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 119 , 70 , 17 , 13 );
-         lbllbl4 = UIFactory.getLabel(GXPanel1, "até", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 316 , 70 , 19 , 13 );
-         lbllbl8 = UIFactory.getLabel(GXPanel1, "Assunto", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 119 , 95 , 46 , 13 );
-         lbllbl10 = UIFactory.getLabel(GXPanel1, "por", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 316 , 95 , 19 , 13 );
-         lbllbl6 = UIFactory.getLabel(GXPanel1, "Seleção", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 119 , 121 , 47 , 13 );
+         lbllbl2 = UIFactory.getLabel(GXPanel1, "De", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 158 , 69 , 17 , 13 );
+         lbllbl4 = UIFactory.getLabel(GXPanel1, "até", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 298 , 70 , 19 , 13 );
+         lbllbl8 = UIFactory.getLabel(GXPanel1, "Assunto", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 129 , 94 , 46 , 13 );
+         lbllbl10 = UIFactory.getLabel(GXPanel1, "por", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 317 , 95 , 19 , 13 );
+         lbllbl6 = UIFactory.getLabel(GXPanel1, "Seleção", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 128 , 120 , 47 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavDatinicial ,
                    edtavDatfinal ,

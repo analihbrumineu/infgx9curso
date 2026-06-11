@@ -8,7 +8,7 @@ called_tree_i(4,28,4,27).
  
  
  
-ij_object_dependency(wpecliente,[],[ subwpecliente11 ],[],28).
+ij_object_dependency(wpecliente,[],[ subwpecliente10 ],[],28).
  
  
 obj_parms_i([],[]).

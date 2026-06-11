@@ -2,7 +2,7 @@
                File: PeCategoria
         Description: Cadastro de categorias.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:24.92
+       Generated on: 6/11/2026 11:31:34.86
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -489,7 +489,7 @@ namespace GeneXus.Programs {
          ((GXEdit) edtavCatcodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavCatcodigo.addFocusListener(this);
          edtavCatcodigo.getGXComponent().setHelpId("HLP_WPeCategoria.htm");
-         edtavCatnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),156, 67, 286, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 156 , 67 , 286 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6CatNome" );
+         edtavCatnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),173, 67, 161, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 173 , 67 , 161 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6CatNome" );
          ((GXEdit) edtavCatnome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavCatnome.addFocusListener(this);
          edtavCatnome.getGXComponent().setHelpId("HLP_WPeCategoria.htm");
@@ -498,8 +498,8 @@ namespace GeneXus.Programs {
          , new GXColumnDefinition( new GUIObjectString ( new SubfileImage() , null ,  0 , 0 , 25 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV7Editar" ), ""  , UIFactory.getColor(18) , UIFactory.getColor(15) , 25 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectString ( new SubfileImage() , null ,  0 , 0 , 26 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV8Excluir" ), ""  , UIFactory.getColor(18) , UIFactory.getColor(15) , 26 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 76, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 75 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A32CatCodi" ), "Código"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 75 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 309, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 308 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A33CatNome" ), "Categoria"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 308 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         }, 35 , 18 , GXPanel1 , 65 , 117 , 521 , 650 ,  18 ));
+         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 183, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 182 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A33CatNome" ), "Categoria"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 182 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         }, 36 , 18 , GXPanel1 , 65 , 100 , 395 , 667 ,  18 ));
          subGxsf4.addActionListener(this);
          subGxsf4.addFocusListener(this);
          subGxsf4.setSortOnClick(true);
@@ -509,12 +509,12 @@ namespace GeneXus.Programs {
          subGxsf4.getColumn(1).addItemListener( this);
          subGxsf4.getColumn(2).addActionListener( this);
          subGxsf4.getColumn(2).addItemListener( this);
-         bttbtt10 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  481 ,  65 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt10 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  369 ,  63 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt10.setTooltip("Novo");
          bttbtt10.addActionListener(this);
          bttbtt10.setFiresEvents(false);
          lbllbl2 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 52 , 78 , 13 );
-         lbllbl3 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 156 , 52 , 78 , 13 );
+         lbllbl3 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 173 , 52 , 78 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavCatcodigo ,
                    edtavCatnome ,

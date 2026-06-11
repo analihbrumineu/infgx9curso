@@ -2,7 +2,7 @@
                File: MovDoCliente
         Description: Movimentos dos clientes e seus dependentes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:24.71
+       Generated on: 6/11/2026 11:31:34.66
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -86,7 +86,7 @@ namespace GeneXus.Programs {
 
       public override int getFrmWidth( )
       {
-         return 1027 ;
+         return 865 ;
       }
 
       public override int getFrmHeight( )
@@ -529,7 +529,7 @@ namespace GeneXus.Programs {
 
       public override void screen( )
       {
-         GXPanel1 = new GXPanel(this, 3 , 25 , 1027 , 806 );
+         GXPanel1 = new GXPanel(this, 3 , 25 , 865 , 806 );
          this.setIBackground(UIFactory.getColor(15));
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
@@ -545,14 +545,14 @@ namespace GeneXus.Programs {
          addSubfile ( subGxsf6  = new GXSubfile ( new MovDoCliente_load06(this), new MovDoCliente_flow06(this), false , new GXColumnDefinition[] {
           new GXColumnDefinition( new GUIObjectShort ( new GXCheckBox(GXPanel1, "" , new java.lang.Short(1), new java.lang.Short(0)) , null ,  0 , 0 , 78 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV15Depend" ), "Dependente"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 78 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 104, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 103 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV16PesCod" ), "Código"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 103 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 423, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 422 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV17PesNom" ), "Nome completo"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 422 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 287, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 286 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV17PesNom" ), "Nome completo"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 286 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectLong ( new GXEdit(10, "ZZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 108, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 107 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV13TotDev" ), "Devoluções"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 107 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectLong ( new GXEdit(10, "ZZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 102, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 101 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV14TotCan" ), "Cancelamentos"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 101 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         }, 36 , 18 , GXPanel1 , 78 , 122 , 872 , 671 ,  18 ));
+         }, 38 , 18 , GXPanel1 , 78 , 89 , 736 , 704 ,  18 ));
          subGxsf6.addActionListener(this);
          subGxsf6.addFocusListener(this);
          subGxsf6.setSortOnClick(true);
-         lbllbl2 = UIFactory.getLabel(GXPanel1, "De", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 79 , 63 , 17 , 13 );
+         lbllbl2 = UIFactory.getLabel(GXPanel1, "De", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 78 , 63 , 17 , 13 );
          lbllbl4 = UIFactory.getLabel(GXPanel1, "até", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 194 , 63 , 19 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavDatinicial ,
@@ -923,9 +923,9 @@ namespace GeneXus.Programs {
           } ;
           def= new GeneXus.Data.NTier.ADO.CursorDef[] {
               new GeneXus.Data.NTier.ADO.CursorDef("W002L2", "SELECT [PesCodigo], [PesNome] FROM [PESSOA] WITH (NOLOCK) WHERE [PesCodigo] = @AV16PesCod ORDER BY [PesCodigo] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW002L2,1,0,true,true )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("W002L3", "SELECT [LocCodigo], [LocCliPesCodigo], [LocDatLocacao], [LocDatDevolucao], [LocDatCancelamento] FROM [LOCACAO] WITH (NOLOCK) WHERE [LocCliPesCodigo] = @PesCodigo ORDER BY [LocCliPesCodigo] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW002L3,29,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("W002L4", "SELECT T1.[PesCodigo], T1.[PesDepCodigo] AS PesDepCodigo, T2.[PesNome] AS PesDepNome FROM ([CLIENTEDEPENDENTE] T1 WITH (NOLOCK) INNER JOIN [PESSOA] T2 WITH (NOLOCK) ON T2.[PesCodigo] = T1.[PesDepCodigo]) WHERE T1.[PesCodigo] = @PesCodigo ORDER BY T1.[PesCodigo] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW002L4,29,0,true,false )
-             ,new GeneXus.Data.NTier.ADO.CursorDef("W002L5", "SELECT [LocCodigo], [LocCliPesCodigo], [LocDatLocacao], [LocDatDevolucao], [LocDatCancelamento] FROM [LOCACAO] WITH (NOLOCK) WHERE [LocCliPesCodigo] = @PesDepCodigo ORDER BY [LocCliPesCodigo] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW002L5,29,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("W002L3", "SELECT [LocCodigo], [LocCliPesCodigo], [LocDatLocacao], [LocDatDevolucao], [LocDatCancelamento] FROM [LOCACAO] WITH (NOLOCK) WHERE [LocCliPesCodigo] = @PesCodigo ORDER BY [LocCliPesCodigo] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW002L3,31,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("W002L4", "SELECT T1.[PesCodigo], T1.[PesDepCodigo] AS PesDepCodigo, T2.[PesNome] AS PesDepNome FROM ([CLIENTEDEPENDENTE] T1 WITH (NOLOCK) INNER JOIN [PESSOA] T2 WITH (NOLOCK) ON T2.[PesCodigo] = T1.[PesDepCodigo]) WHERE T1.[PesCodigo] = @PesCodigo ORDER BY T1.[PesCodigo] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW002L4,31,0,true,false )
+             ,new GeneXus.Data.NTier.ADO.CursorDef("W002L5", "SELECT [LocCodigo], [LocCliPesCodigo], [LocDatLocacao], [LocDatDevolucao], [LocDatCancelamento] FROM [LOCACAO] WITH (NOLOCK) WHERE [LocCliPesCodigo] = @PesDepCodigo ORDER BY [LocCliPesCodigo] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW002L5,31,0,true,false )
           };
        }
     }

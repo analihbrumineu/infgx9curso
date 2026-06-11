@@ -2,7 +2,7 @@
                File: Estado
         Description: Cadastro de Estados.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:19.21
+       Generated on: 6/11/2026 11:31:29.19
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -128,7 +128,7 @@ namespace GeneXus.Programs {
 
       public override int getFrmWidth( )
       {
-         return 583 ;
+         return 422 ;
       }
 
       public override int getFrmHeight( )
@@ -231,7 +231,7 @@ namespace GeneXus.Programs {
 
       public override void screen( )
       {
-         GXPanel1 = new GXPanel(this, 3 , 25 , 583 , 256 );
+         GXPanel1 = new GXPanel(this, 3 , 25 , 422 , 256 );
          this.setIBackground(UIFactory.getColor(15));
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
@@ -244,15 +244,15 @@ namespace GeneXus.Programs {
          ((GXEdit) edtEstUF.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtEstUF.addFocusListener(this);
          edtEstUF.getGXComponent().setHelpId("HLP_TEstado.htm");
-         edtEstNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),119, 131, 360, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 119 , 131 , 360 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A12EstNome" );
+         edtEstNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),119, 131, 226, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 119 , 131 , 226 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A12EstNome" );
          ((GXEdit) edtEstNome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtEstNome.addFocusListener(this);
          edtEstNome.getGXComponent().setHelpId("HLP_TEstado.htm");
-         bttBtn_enter = UIFactory.getGXButton( GXPanel1 , "Enter" ,  455 ,  182 ,  89 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttBtn_enter = UIFactory.getGXButton( GXPanel1 , "Enter" ,  256 ,  182 ,  89 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttBtn_enter.setTooltip("Enter");
          bttBtn_enter.addActionListener(this);
          lbllbl4 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 63 , 82 , 40 , 13 );
-         lbllbl6 = UIFactory.getLabel(GXPanel1, "UF", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 63 , 108 , 17 , 13 );
+         lbllbl6 = UIFactory.getLabel(GXPanel1, "UF", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 86 , 108 , 17 , 13 );
          lbllbl8 = UIFactory.getLabel(GXPanel1, "Estado", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 63 , 133 , 40 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtEstCodigo ,

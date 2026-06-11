@@ -2,7 +2,7 @@
                File: RelCliComDependente
         Description: Impressão de relatório de clientes com dependentes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:25.70
+       Generated on: 6/11/2026 11:31:35.63
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -275,16 +275,16 @@ namespace GeneXus.Programs {
          ((GXEdit) edtavPescodinicial.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavPescodinicial.addFocusListener(this);
          edtavPescodinicial.getGXComponent().setHelpId("HLP_WRelCliComDependente.htm");
-         edtavPescodfinal = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),234, 65, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 234 , 65 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6PesCodF" );
+         edtavPescodfinal = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),239, 65, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 239 , 65 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6PesCodF" );
          ((GXEdit) edtavPescodfinal.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavPescodfinal.addFocusListener(this);
          edtavPescodfinal.getGXComponent().setHelpId("HLP_WRelCliComDependente.htm");
-         bttbtt6 = UIFactory.getGXButton( GXPanel1 , "Imprimir" ,  273 ,  117 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt6 = UIFactory.getGXButton( GXPanel1 , "Imprimir" ,  221 ,  117 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt6.setTooltip("Imprimir");
          bttbtt6.addActionListener(this);
          bttbtt6.setFiresEvents(false);
          lbllbl2 = UIFactory.getLabel(GXPanel1, "Cliente", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 78 , 69 , 73 , 13 );
-         lbllbl5 = UIFactory.getLabel(GXPanel1, "até", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 208 , 69 , 19 , 13 );
+         lbllbl5 = UIFactory.getLabel(GXPanel1, "até", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 212 , 69 , 19 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavPescodinicial ,
                    edtavPescodfinal ,

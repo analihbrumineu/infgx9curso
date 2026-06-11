@@ -21,10 +21,10 @@
 /r:bin\gxCommon.dll
 Developermenu.cs
 tcliente.cs
-subtcliente39.cs
+subtcliente35.cs
 tfilme.cs
-subtfilme22.cs
-subtfilme27.cs
+subtfilme21.cs
+subtfilme26.cs
 tcategoria.cs
 testado.cs
 tcidade.cs
@@ -33,7 +33,7 @@ tfuncionario.cs
 tastro.cs
 tconftipmidia.cs
 tlocacao.cs
-subtlocacao30.cs
+subtlocacao26.cs
 wpeestado.cs
 subwpeestado02.cs
 wpecidade.cs
@@ -58,7 +58,7 @@ wlogin.cs
 wconscliente.cs
 subwconscliente10.cs
 wpecliente.cs
-subwpecliente11.cs
+subwpecliente10.cs
 wconsfuncionario.cs
 subwconsfuncionario12.cs
 wpefuncionario.cs

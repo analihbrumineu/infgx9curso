@@ -2,7 +2,7 @@
                File: ConsCidade
         Description: Consulta de cidades.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:23.30
+       Generated on: 6/11/2026 11:31:33.24
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -509,27 +509,27 @@ namespace GeneXus.Programs {
          ((GXEdit) edtavCidcodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavCidcodigo.addFocusListener(this);
          edtavCidcodigo.getGXComponent().setHelpId("HLP_WConsCidade.htm");
-         edtavEstuf = new GUIObjectString ( new GXEdit(2, "XX", UIFactory.getFont( "Courier New", 0, 9),154, 83, 24, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.CHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 154 , 83 , 24 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6EstUF" );
+         edtavEstuf = new GUIObjectString ( new GXEdit(2, "XX", UIFactory.getFont( "Courier New", 0, 9),159, 83, 24, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.CHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 159 , 83 , 24 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6EstUF" );
          ((GXEdit) edtavEstuf.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavEstuf.addFocusListener(this);
          edtavEstuf.getGXComponent().setHelpId("HLP_WConsCidade.htm");
-         edtavCidnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),196, 83, 360, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 196 , 83 , 360 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7CidNome" );
+         edtavCidnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),205, 83, 238, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 205 , 83 , 238 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7CidNome" );
          ((GXEdit) edtavCidnome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavCidnome.addFocusListener(this);
          edtavCidnome.getGXComponent().setHelpId("HLP_WConsCidade.htm");
          addSubfile ( subGxsf2  = new GXSubfile ( new ConsCidade_load02(this), new ConsCidade_flow02(this), false , new GXColumnDefinition[] {
           new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 72, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 71 , 18 , UIFactory.getColor(5) , UIFactory.getColor(255, 0, 0) , UIFactory.getFont( "Courier New", 0, 9) , false , "A26CidCodi" ), "Código"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 71 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectString ( new GXEdit(2, "XX", UIFactory.getFont( "Courier New", 0, 9),0, 0, 39, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.CHAR, false, false, 0, false) , null ,  0 , 0 , 38 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A25EstUF" ), "UF"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 38 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 366, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 365 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A27CidNome" ), "Cidade"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 365 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         }, 36 , 18 , GXPanel1 , 65 , 143 , 533 , 665 ,  18 ));
+         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 211, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 210 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A27CidNome" ), "Cidade"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 210 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         }, 37 , 18 , GXPanel1 , 65 , 114 , 378 , 694 ,  18 ));
          subGxsf2.addActionListener(this);
          subGxsf2.addFocusListener(this);
          subGxsf2.setSortOnClick(true);
          subGxsf2.getColumn(0).addActionListener( this);
          subGxsf2.getColumn(0).addItemListener( this);
          lbllbl8 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 65 , 40 , 13 );
-         lbllbl6 = UIFactory.getLabel(GXPanel1, "UF", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 154 , 65 , 17 , 13 );
-         lbllbl10 = UIFactory.getLabel(GXPanel1, "Cidade", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 196 , 65 , 40 , 13 );
+         lbllbl6 = UIFactory.getLabel(GXPanel1, "UF", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 159 , 65 , 17 , 13 );
+         lbllbl10 = UIFactory.getLabel(GXPanel1, "Cidade", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 205 , 65 , 40 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavCidcodigo ,
                    edtavEstuf ,
@@ -899,7 +899,7 @@ namespace GeneXus.Programs {
           prmW000I2 = new Object[] {
           } ;
           def= new GeneXus.Data.NTier.ADO.CursorDef[] {
-              new GeneXus.Data.NTier.ADO.CursorDef("W000I2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW000I2,29,0,true,false )
+              new GeneXus.Data.NTier.ADO.CursorDef("W000I2", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmW000I2,30,0,true,false )
           };
        }
     }

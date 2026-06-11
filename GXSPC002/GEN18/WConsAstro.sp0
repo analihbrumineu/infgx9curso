@@ -21,21 +21,21 @@ lac_i(2,[ [ 'Astnome','Astdatfalecimento' ] ]).
  
  
 lits_i('Código',2,9).
-lits_i('Nome',2,22).
-lits_i('Código',5,9).
-lits_i('Nome completo',5,20).
-lits_i('Falecimento',5,71).
+lits_i('Nome',2,29).
+lits_i('Código',4,9).
+lits_i('Nome completo',4,20).
+lits_i('Falecimento',4,71).
  
 cls_i([ 2,9 ],[ 33,81 ]).
  
 pos_i('Astcodigoret',[ 3,3,9 ]).
-pos_i('Astnome',[ 3,3,22 ]).
-pos_i('Astdatfalecimento',[ 3,3,76 ]).
-pos_i(49,[ 6,33,9 ]).
-pos_i(50,[ 6,33,20 ]).
-pos_i(114,[ 6,33,71 ]).
+pos_i('Astnome',[ 3,3,29 ]).
+pos_i('Astdatfalecimento',[ 3,3,68 ]).
+pos_i(49,[ 5,33,9 ]).
+pos_i(50,[ 5,33,20 ]).
+pos_i(114,[ 5,33,71 ]).
  
-repeat_i(2,[ 6,33,[ 49,50,114 ],[] ]).
+repeat_i(2,[ 5,33,[ 49,50,114 ],[] ]).
  
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
@@ -260,15 +260,15 @@ ppi_i([ 96,96 ]).
  
 warn_gen_i(msg(spc0053,[ 'Conditional constraint "',[ att(2,114),<>,'ctod(','''0''',')' ],'" cannot be generated',[ ' in grid ''','Gxsf7','''' ],'. Changed to standard constraint.' ])).
  
-lit_i(2,1,t('Astcodigoret',23),[ font('Courier New',9,[]),rect(66,76,138,96),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Astcodigoret'),ctrltype(edit,2),ispwd(0) ]).
-lit_i(3,1,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(66,59,105,71),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(4,1,t('Nome',3),[ font('MS Sans Serif',8,[ bold ]),rect(156,59,188,71),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(5,1,t('Astnome',23),[ font('Courier New',9,[]),rect(156,76,515,96),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Astnome'),ctrltype(edit,5),ispwd(0) ]).
-lit_i(6,1,t('Astdatfalecimento',23),[ font('Courier New',9,[ bold ]),rect(533,78,616,94),outstyle('3d'),align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Astdatfalecimento'),ctrltype(checkbox,6) ]).
+lit_i(2,1,t('Astcodigoret',23),[ font('Courier New',9,[]),rect(65,76,137,96),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Astcodigoret'),ctrltype(edit,2),ispwd(0) ]).
+lit_i(3,1,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,59,104,71),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(4,1,t('Nome',3),[ font('MS Sans Serif',8,[ bold ]),rect(204,59,236,71),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(5,1,t('Astnome',23),[ font('Courier New',9,[]),rect(204,76,414,96),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Astnome'),ctrltype(edit,5),ispwd(0) ]).
+lit_i(6,1,t('Astdatfalecimento',23),[ font('Courier New',9,[ bold ]),rect(482,78,565,94),outstyle('3d'),align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Astdatfalecimento'),ctrltype(checkbox,6) ]).
 lit_i(8,1,s(t(49,2),7),[ width(78),pos(0),title([ 'Código' ]),ctlname(49),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(255,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,8),e2n(1) ]).
-lit_i(9,1,s(t(50,2),7),[ width(344),pos(1),title([ 'Nome completo' ]),ctlname(50),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,9),e2n(1) ]).
+lit_i(9,1,s(t(50,2),7),[ width(239),pos(1),title([ 'Nome completo' ]),ctlname(50),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,9),e2n(1) ]).
 lit_i(10,1,s(t(114,2),7),[ width(125),pos(2),title([ 'Falecimento' ]),ctlname(114),pic([]),titgxcolor([]),gxcolor([]),back(rgb(255,255,255)),fore(rgb(0,0,0)),tback(rgb(240,240,240)),tfore(rgb(0,0,0)),ctrltype(edit,10),e2n(1) ]).
-lit_i(7,1,s(7),[ th(18),height(18),rect(65,129,670,825),back(rgb(240,240,240)),fore(gxcolor([]),rgb(0,0,0)),border(1),ctlname('Gxsf7'),font(font('Courier New',9,[])),titlefont(font('MS Sans Serif',8,[ bold ])),el([ t(49,2),t(50,2),t(114,2) ]) ]).
+lit_i(7,1,s(7),[ th(18),height(18),rect(65,109,565,825),back(rgb(240,240,240)),fore(gxcolor([]),rgb(0,0,0)),border(1),ctlname('Gxsf7'),font(font('Courier New',9,[])),titlefont(font('MS Sans Serif',8,[ bold ])),el([ t(49,2),t(50,2),t(114,2) ]) ]).
 lit_i(1,1,window,[ title([ 'Consulta de astros' ]),rect(3,25,762,872),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).

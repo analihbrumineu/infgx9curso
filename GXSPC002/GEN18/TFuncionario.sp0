@@ -18,55 +18,51 @@ las_i(1,[ [ 'Erro',13,'Mode',38,'Today',14,15,111,24,25,17,12,26,27,18,19,20,21,
 lac_i(1,[ [ 14,15,111,17,26,18,19,20,21,22,23,39,42,41,43,44,40 ] ]).
  
  
-lits_i('Código',3,17).
-lits_i('Código do Estado',10,17).
-lits_i('Estado',11,17).
-lits_i('Código da cidade',12,17).
-lits_i('UF',10,103).
-lits_i('Cidade',13,17).
-lits_i('Bairro',14,17).
-lits_i('Telefone celular',20,17).
-lits_i('CPF',4,17).
-lits_i('Data de nascimento',6,17).
-lits_i('E-mail',21,17).
-lits_i('Endereço',15,17).
-lits_i('Nº',15,103).
-lits_i('Nome completo',5,17).
-lits_i('Situação',8,17).
-lits_i('Telefone residencial',19,17).
-lits_i('Tipo',7,17).
-lits_i('Cargo',24,17).
-lits_i('Data de demissão',27,17).
-lits_i('Data de admissão',26,17).
-lits_i('Login',30,18).
-lits_i('Senha',31,19).
-lits_i('Salário',25,17).
+lits_i('Código',2,26).
+lits_i('Estado',10,26).
+lits_i('Cidade',11,26).
+lits_i('Bairro',12,27).
+lits_i('Telefone celular',17,19).
+lits_i('CPF',4,29).
+lits_i('Data de nascimento',6,16).
+lits_i('E-mail',18,27).
+lits_i('Endereço',13,24).
+lits_i('Nome completo',5,20).
+lits_i('Situação',8,25).
+lits_i('Telefone residencial',15,16).
+lits_i('Tipo',7,28).
+lits_i('Cargo',20,27).
+lits_i('Data de demissão',23,18).
+lits_i('Data de admissão',22,18).
+lits_i('Login',26,28).
+lits_i('Salário',21,26).
+lits_i('Senha',27,27).
  
-cls_i([ 2,17 ],[ 31,136 ]).
+cls_i([ 2,16 ],[ 27,134 ]).
  
-pos_i(13,[ 2,2,37 ]).
-pos_i(24,[ 9,9,37 ]).
-pos_i(12,[ 11,11,37 ]).
-pos_i(26,[ 12,12,37 ]).
-pos_i(25,[ 9,9,108 ]).
-pos_i(27,[ 13,13,37 ]).
-pos_i(19,[ 14,14,37 ]).
-pos_i(22,[ 20,20,37 ]).
-pos_i(15,[ 3,3,37 ]).
-pos_i(111,[ 6,6,37 ]).
-pos_i(20,[ 21,21,37 ]).
-pos_i(17,[ 15,15,37 ]).
-pos_i(18,[ 15,15,108 ]).
-pos_i(14,[ 5,5,37 ]).
-pos_i(23,[ 8,8,37 ]).
-pos_i(21,[ 19,19,37 ]).
-pos_i(38,[ 7,7,37 ]).
-pos_i(39,[ 24,24,37 ]).
-pos_i(41,[ 27,27,37 ]).
-pos_i(42,[ 26,26,37 ]).
-pos_i(43,[ 29,29,25 ]).
-pos_i(44,[ 31,31,25 ]).
-pos_i(40,[ 25,25,37 ]).
+pos_i(13,[ 2,2,35 ]).
+pos_i(24,[ 10,10,35 ]).
+pos_i(12,[ 10,10,44 ]).
+pos_i(26,[ 11,11,35 ]).
+pos_i(25,[ 10,10,89 ]).
+pos_i(27,[ 11,11,44 ]).
+pos_i(19,[ 12,12,35 ]).
+pos_i(22,[ 16,16,35 ]).
+pos_i(15,[ 3,3,35 ]).
+pos_i(111,[ 6,6,35 ]).
+pos_i(20,[ 17,17,35 ]).
+pos_i(17,[ 13,13,35 ]).
+pos_i(18,[ 11,11,89 ]).
+pos_i(14,[ 5,5,35 ]).
+pos_i(23,[ 8,8,35 ]).
+pos_i(21,[ 15,15,35 ]).
+pos_i(38,[ 7,7,35 ]).
+pos_i(39,[ 20,20,35 ]).
+pos_i(41,[ 23,23,35 ]).
+pos_i(42,[ 22,22,35 ]).
+pos_i(44,[ 27,27,35 ]).
+pos_i(40,[ 21,21,35 ]).
+pos_i(43,[ 26,26,35 ]).
  
  
 default_i(e(13,3,1,13)).
@@ -263,7 +259,6 @@ rule_i(1,rule([ a(1,[ t('''A senha deve ser informada!''',3) ]) ],[ t('after(',1
 rule_i(1,rule([ a(1,[ t('''Data de nascimento inválida!''',3) ]) ],[ t('after(',1),t(111,2),t(')',4),t('.AND.',9),t(111,2),t(>,10),t('Today',23) ],[ insert,update,delete ],[ 111 ])).
 rule_i(1,rule([ a(1,[ t('''Data de admissão inválida!''',3) ]) ],[ t('after(',1),t(42,2),t(')',4),t('.AND.',9),t(42,2),t(>,10),t('Today',23) ],[ insert,update,delete ],[ 42 ])).
 rule_i(1,rule([ a(1,[ t('''Data de demissão inválida!''',3) ]) ],[ t('after(',1),t(41,2),t(')',4),t('.AND.',9),t(41,2),t(>,10),t('Today',23) ],[ insert,update,delete ],[ 41 ])).
-rule_i(1,rule([ a(1,[ t('''A data de demissão não pode ocorrer antes da admissão!''',3) ]) ],[ t('after(',1),t(41,2),t(')',4),t('.AND.',9),t(41,2),t(<,10),t(42,2) ],[ insert,update,delete ],[ 41 ])).
 rule_i(1,rule([ a(3,[ t(38,2) ]) ],[],[ insert,update,delete ],[ 38 ])).
 rule_i(1,rule([ a(3,[ t(13,2) ]) ],[ t('Mode',23),t(=,10),t('''UPD''',3) ],[ insert,update,delete ],[ 13,'Mode' ])).
 rule_i(1,rule([ a(3,[ t(43,2) ]) ],[ t('Mode',23),t(=,10),t('''UPD''',3) ],[ insert,update,delete ],[ 43,'Mode' ])).
@@ -297,18 +292,17 @@ a_i(18,1,b,13,[],[ [],[ a(1,[ t('''A senha deve ser informada!''',3) ]) ],[ t('a
 a_i(19,1,b,14,[],[ [],[ a(1,[ t('''Data de nascimento inválida!''',3) ]) ],[ t('after(',1),t(111,2),t(')',4),t('.AND.',9),t(111,2),t(>,10),t('Today',23) ] ]).
 a_i(20,1,b,15,[],[ [],[ a(1,[ t('''Data de admissão inválida!''',3) ]) ],[ t('after(',1),t(42,2),t(')',4),t('.AND.',9),t(42,2),t(>,10),t('Today',23) ] ]).
 a_i(21,1,b,16,[],[ [],[ a(1,[ t('''Data de demissão inválida!''',3) ]) ],[ t('after(',1),t(41,2),t(')',4),t('.AND.',9),t(41,2),t(>,10),t('Today',23) ] ]).
-a_i(22,1,b,17,[],[ [],[ a(1,[ t('''A data de demissão não pode ocorrer antes da admissão!''',3) ]) ],[ t('after(',1),t(41,2),t(')',4),t('.AND.',9),t(41,2),t(<,10),t(42,2) ] ]).
-a_i(23,1,b,19,[],[ [],[ a(3,[ t(13,2) ]) ],[ t('Mode',23),t(=,10),t('''UPD''',3) ] ]).
-a_i(24,1,b,20,[],[ [],[ a(3,[ t(43,2) ]) ],[ t('Mode',23),t(=,10),t('''UPD''',3) ] ]).
-a_i(25,1,b,21,[],[ [],[ a(4,[ t('''Bairro não informado!''',3) ]) ],[ t('after(',1),t(19,2),t(')',4),t('.AND.',9),t('null(',1),t(19,2),t(')',4) ] ]).
-a_i(26,1,b,22,[],[ [],[ a(4,[ t('''Endereço não informado!''',3) ]) ],[ t('after(',1),t(17,2),t(')',4),t('.AND.',9),t('null(',1),t(17,2),t(')',4) ] ]).
-a_i(27,1,b,23,[],[ [],[ a(4,[ t('''Número de endereço não informado!''',3) ]) ],[ t('after(',1),t(18,2),t(')',4),t('.AND.',9),t('null(',1),t(18,2),t(')',4) ] ]).
-a_i(28,1,b,24,[],[ [],[ a(4,[ t('''Número de telefone residencial não informado!''',3) ]) ],[ t('after(',1),t(21,2),t(')',4),t('.AND.',9),t('null(',1),t(21,2),t(')',4) ] ]).
-a_i(29,1,b,25,[],[ [],[ a(4,[ t('''Número de telefone celular não informado!''',3) ]) ],[ t('after(',1),t(22,2),t(')',4),t('.AND.',9),t('null(',1),t(22,2),t(')',4) ] ]).
-a_i(30,1,t,1,[],[ [ [ [],13,13 ] ],'ICLIENTE',[] ]).
-a_i(31,1,r,8,[],[ [ [ 1,26,26 ] ],'ICIDADE',[] ]).
-a_i(32,1,r,7,[],[ [ [ 8,24,24 ] ],'IESTADO',[] ]).
-a_i(33,1,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
+a_i(22,1,b,18,[],[ [],[ a(3,[ t(13,2) ]) ],[ t('Mode',23),t(=,10),t('''UPD''',3) ] ]).
+a_i(23,1,b,19,[],[ [],[ a(3,[ t(43,2) ]) ],[ t('Mode',23),t(=,10),t('''UPD''',3) ] ]).
+a_i(24,1,b,20,[],[ [],[ a(4,[ t('''Bairro não informado!''',3) ]) ],[ t('after(',1),t(19,2),t(')',4),t('.AND.',9),t('null(',1),t(19,2),t(')',4) ] ]).
+a_i(25,1,b,21,[],[ [],[ a(4,[ t('''Endereço não informado!''',3) ]) ],[ t('after(',1),t(17,2),t(')',4),t('.AND.',9),t('null(',1),t(17,2),t(')',4) ] ]).
+a_i(26,1,b,22,[],[ [],[ a(4,[ t('''Número de endereço não informado!''',3) ]) ],[ t('after(',1),t(18,2),t(')',4),t('.AND.',9),t('null(',1),t(18,2),t(')',4) ] ]).
+a_i(27,1,b,23,[],[ [],[ a(4,[ t('''Número de telefone residencial não informado!''',3) ]) ],[ t('after(',1),t(21,2),t(')',4),t('.AND.',9),t('null(',1),t(21,2),t(')',4) ] ]).
+a_i(28,1,b,24,[],[ [],[ a(4,[ t('''Número de telefone celular não informado!''',3) ]) ],[ t('after(',1),t(22,2),t(')',4),t('.AND.',9),t('null(',1),t(22,2),t(')',4) ] ]).
+a_i(29,1,t,1,[],[ [ [ [],13,13 ] ],'ICLIENTE',[] ]).
+a_i(30,1,r,8,[],[ [ [ 1,26,26 ] ],'ICIDADE',[] ]).
+a_i(31,1,r,7,[],[ [ [ 8,24,24 ] ],'IESTADO',[] ]).
+a_i(32,1,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
  
 v_i(b,i,1,111).
 v_i(b,o,1,[]).
@@ -352,49 +346,47 @@ v_i(b,i,20,42).
 v_i(b,o,20,[]).
 v_i(b,i,21,41).
 v_i(b,o,21,[]).
-v_i(b,i,22,41).
+v_i(b,i,22,'Mode').
 v_i(b,o,22,[]).
 v_i(b,i,23,'Mode').
 v_i(b,o,23,[]).
-v_i(b,i,24,'Mode').
+v_i(b,i,24,19).
 v_i(b,o,24,[]).
-v_i(b,i,25,19).
+v_i(b,i,25,17).
 v_i(b,o,25,[]).
-v_i(b,i,26,17).
+v_i(b,i,26,18).
 v_i(b,o,26,[]).
-v_i(b,i,27,18).
+v_i(b,i,27,21).
 v_i(b,o,27,[]).
-v_i(b,i,28,21).
+v_i(b,i,28,22).
 v_i(b,o,28,[]).
-v_i(b,i,29,22).
-v_i(b,o,29,[]).
-v_i(t,i,30,13).
-v_i(t,o,30,38).
-v_i(t,o,30,14).
-v_i(t,o,30,15).
-v_i(t,o,30,111).
-v_i(t,o,30,17).
-v_i(t,o,30,18).
-v_i(t,o,30,19).
-v_i(t,o,30,20).
-v_i(t,o,30,21).
-v_i(t,o,30,22).
-v_i(t,o,30,23).
-v_i(t,o,30,39).
-v_i(t,o,30,42).
-v_i(t,o,30,41).
-v_i(t,o,30,43).
-v_i(t,o,30,44).
-v_i(t,o,30,40).
-v_i(t,o,30,26).
-v_i(r,i,31,26).
-v_i(r,o,31,27).
-v_i(r,o,31,24).
-v_i(r,i,32,24).
-v_i(r,o,32,25).
-v_i(r,o,32,12).
-v_i(f,i,33,[]).
-v_i(f,o,33,'Today').
+v_i(t,i,29,13).
+v_i(t,o,29,38).
+v_i(t,o,29,14).
+v_i(t,o,29,15).
+v_i(t,o,29,111).
+v_i(t,o,29,17).
+v_i(t,o,29,18).
+v_i(t,o,29,19).
+v_i(t,o,29,20).
+v_i(t,o,29,21).
+v_i(t,o,29,22).
+v_i(t,o,29,23).
+v_i(t,o,29,39).
+v_i(t,o,29,42).
+v_i(t,o,29,41).
+v_i(t,o,29,43).
+v_i(t,o,29,44).
+v_i(t,o,29,40).
+v_i(t,o,29,26).
+v_i(r,i,30,26).
+v_i(r,o,30,27).
+v_i(r,o,30,24).
+v_i(r,i,31,24).
+v_i(r,o,31,25).
+v_i(r,o,31,12).
+v_i(f,i,32,[]).
+v_i(f,o,32,'Today').
  
 ca_i(4,38).
  
@@ -511,55 +503,51 @@ ppi_i([ 96,96 ]).
  
  
  
-lit_i(2,1,t(13,2),[ font('Courier New',9,[]),rect(264,67,336,87),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(13),ctrltype(edit,2),ispwd(0),e2n(1) ]).
-lit_i(3,1,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(120,72,159,84),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(4,1,t(24,2),[ font('Courier New',9,[]),rect(264,238,315,258),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(24),ctrltype(edit,4),ispwd(0),e2n(1) ]).
-lit_i(5,1,t('Código do Estado',3),[ font('MS Sans Serif',8,[ bold ]),rect(120,242,220,254),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(6,1,t(12,2),[ font('Courier New',9,[]),rect(264,266,562,286),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(12),ctrltype(edit,6),ispwd(0),e2n(1) ]).
-lit_i(7,1,t('Estado',3),[ font('MS Sans Serif',8,[ bold ]),rect(120,269,159,281),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(8,1,t(26,2),[ font('Courier New',9,[]),rect(264,294,315,314),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(26),ctrltype(edit,8),ispwd(0),e2n(1) ]).
-lit_i(9,1,t('Código da cidade',3),[ font('MS Sans Serif',8,[ bold ]),rect(120,297,219,309),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(10,1,t(25,2),[ font('Courier New',9,[]),rect(758,238,796,258),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(25),ctrltype(edit,10),ispwd(0),e2n(1) ]).
-lit_i(11,1,t('UF',3),[ font('MS Sans Serif',8,[ bold ]),rect(724,242,740,254),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(12,1,t(27,2),[ font('Courier New',9,[]),rect(264,323,562,343),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(27),ctrltype(edit,12),ispwd(0),e2n(1) ]).
-lit_i(13,1,t('Cidade',3),[ font('MS Sans Serif',8,[ bold ]),rect(120,325,159,337),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(14,1,t(19,2),[ font('Courier New',9,[]),rect(264,351,679,371),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(19),ctrltype(edit,14),ispwd(0),e2n(1) ]).
-lit_i(15,1,t('Bairro',3),[ font('MS Sans Serif',8,[ bold ]),rect(120,353,153,365),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(16,1,t(22,2),[ font('Courier New',9,[]),rect(264,493,380,513),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(22),ctrltype(edit,16),ispwd(0),e2n(1) ]).
-lit_i(17,1,t('Telefone celular',3),[ font('MS Sans Serif',8,[ bold ]),rect(120,497,212,509),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(18,1,t(15,2),[ font('Courier New',9,[]),rect(264,95,380,115),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(15),ctrltype(edit,18),ispwd(0),e2n(1) ]).
-lit_i(19,1,t('CPF',3),[ font('MS Sans Serif',8,[ bold ]),rect(120,100,143,112),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(20,1,t(111,2),[ font('Courier New',9,[]),rect(264,152,380,172),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(111),ctrltype(edit,20),ispwd(0),e2n(1) ]).
-lit_i(21,1,t('Data de nascimento',3),[ font('MS Sans Serif',8,[ bold ]),rect(120,156,233,168),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(22,1,t(20,2),[ font('Courier New',9,[]),rect(264,520,458,540),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(20),ctrltype(edit,22),ispwd(0),e2n(1) ]).
-lit_i(23,1,t('E-mail',3),[ font('MS Sans Serif',8,[ bold ]),rect(120,524,154,536),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(24,1,t(17,2),[ font('Courier New',9,[]),rect(264,379,679,399),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(17),ctrltype(edit,24),ispwd(0),e2n(1) ]).
-lit_i(25,1,t('Endereço',3),[ font('MS Sans Serif',8,[ bold ]),rect(120,383,174,395),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(26,1,t(18,2),[ font('Courier New',9,[]),rect(758,379,796,399),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(18),ctrltype(edit,26),ispwd(0),e2n(1) ]).
-lit_i(27,1,t('Nº',3),[ font('MS Sans Serif',8,[ bold ]),rect(724,383,738,395),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(28,1,t(14,2),[ font('Courier New',9,[]),rect(264,123,523,143),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(14),ctrltype(edit,28),ispwd(0),e2n(1) ]).
-lit_i(29,1,t('Nome completo',3),[ font('MS Sans Serif',8,[ bold ]),rect(120,128,207,140),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(30,1,t(23,2),[ font('Courier New',9,[]),rect(264,209,380,229),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(23),ctrltype(combo,30),e2n(1) ]).
-lit_i(31,1,t('Situação',3),[ font('MS Sans Serif',8,[ bold ]),rect(120,212,170,224),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(32,1,t(21,2),[ font('Courier New',9,[]),rect(264,466,380,486),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(21),ctrltype(edit,32),ispwd(0),e2n(1) ]).
-lit_i(33,1,t('Telefone residencial',3),[ font('MS Sans Serif',8,[ bold ]),rect(120,470,235,482),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(34,1,t(38,2),[ font('Courier New',9,[]),rect(264,180,380,200),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(38),ctrltype(combo,34),e2n(1) ]).
-lit_i(35,1,t('Tipo',3),[ font('MS Sans Serif',8,[ bold ]),rect(120,184,145,196),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(36,1,t(39,2),[ font('Courier New',9,[]),rect(264,583,345,603),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(39),ctrltype(combo,36),e2n(1) ]).
-lit_i(37,1,t('Cargo',3),[ font('MS Sans Serif',8,[ bold ]),rect(120,587,153,599),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(38,1,t(41,2),[ font('Courier New',9,[]),rect(264,662,354,682),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(41),ctrltype(edit,38),ispwd(0),e2n(1) ]).
-lit_i(39,1,t('Data de demissão',3),[ font('MS Sans Serif',8,[ bold ]),rect(119,664,220,676),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(40,1,t(42,2),[ font('Courier New',9,[]),rect(264,636,343,656),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(42),ctrltype(edit,40),ispwd(0),e2n(1) ]).
-lit_i(41,1,t('Data de admissão',3),[ font('MS Sans Serif',8,[ bold ]),rect(120,639,221,651),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(42,1,t(43,2),[ font('Courier New',9,[]),rect(176,719,325,739),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(43),ctrltype(edit,42),ispwd(0),e2n(1) ]).
-lit_i(43,1,t('Login',3),[ font('MS Sans Serif',8,[ bold ]),rect(132,723,163,735),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(44,1,t(44,2),[ font('Courier New',9,[]),rect(176,750,325,770),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(44),ctrltype(edit,44),ispwd(1),e2n(1) ]).
-lit_i(45,1,t('Senha',3),[ font('MS Sans Serif',8,[ bold ]),rect(133,754,169,766),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(46,1,t('Salário',3),[ font('MS Sans Serif',8,[ bold ]),rect(120,613,159,625),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(47,1,button('Enter'),[ id(47),title([ 'Enter' ]),ctlname(''),rect(734,805,824,830),font('MS Shell Dlg',8,[]) ]).
-lit_i(48,1,t(40,2),[ font('Courier New',9,[]),rect(264,609,354,629),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(40),ctrltype(edit,48),ispwd(0),e2n(1) ]).
-lit_i(49,1,rect(49),[ rect(119,706,340,784),outstyle(single),back(rgb(255,255,255)),fore(rgb(200,200,200)),border(1),ctlname(''),gxcolor([]) ]).
-lit_i(1,1,window,[ title([ 'Cadastro de funcionários' ]),rect(3,25,949,897),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(2,1,t(13,2),[ font('Courier New',9,[]),rect(246,65,318,85),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(13),ctrltype(edit,2),ispwd(0),e2n(1) ]).
+lit_i(3,1,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(188,69,227,81),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(4,1,t(24,2),[ font('Courier New',9,[]),rect(246,240,297,260),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(24),ctrltype(edit,4),ispwd(0),e2n(1) ]).
+lit_i(5,1,t('Estado',3),[ font('MS Sans Serif',8,[ bold ]),rect(188,244,227,256),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(6,1,t(12,2),[ font('Courier New',9,[]),rect(313,240,611,260),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(12),ctrltype(edit,6),ispwd(0),e2n(1) ]).
+lit_i(7,1,t(26,2),[ font('Courier New',9,[]),rect(246,271,297,291),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(26),ctrltype(edit,7),ispwd(0),e2n(1) ]).
+lit_i(8,1,t(25,2),[ font('Courier New',9,[]),rect(626,240,664,260),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(25),ctrltype(edit,8),ispwd(0),e2n(1) ]).
+lit_i(9,1,t(27,2),[ font('Courier New',9,[]),rect(313,271,611,291),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(27),ctrltype(edit,9),ispwd(0),e2n(1) ]).
+lit_i(10,1,t('Cidade',3),[ font('MS Sans Serif',8,[ bold ]),rect(188,274,227,286),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(11,1,t(19,2),[ font('Courier New',9,[]),rect(246,300,661,320),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(19),ctrltype(edit,11),ispwd(0),e2n(1) ]).
+lit_i(12,1,t('Bairro',3),[ font('MS Sans Serif',8,[ bold ]),rect(194,304,227,316),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(13,1,t(22,2),[ font('Courier New',9,[]),rect(246,404,362,424),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(22),ctrltype(edit,13),ispwd(0),e2n(1) ]).
+lit_i(14,1,t('Telefone celular',3),[ font('MS Sans Serif',8,[ bold ]),rect(135,408,227,420),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(15,1,t(15,2),[ font('Courier New',9,[]),rect(246,94,362,114),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(15),ctrltype(edit,15),ispwd(0),e2n(1) ]).
+lit_i(16,1,t('CPF',3),[ font('MS Sans Serif',8,[ bold ]),rect(204,99,227,111),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(17,1,t(111,2),[ font('Courier New',9,[]),rect(246,152,362,172),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(111),ctrltype(edit,17),ispwd(0),e2n(1) ]).
+lit_i(18,1,t('Data de nascimento',3),[ font('MS Sans Serif',8,[ bold ]),rect(114,156,227,168),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(19,1,t(20,2),[ font('Courier New',9,[]),rect(246,431,440,451),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(20),ctrltype(edit,19),ispwd(0),e2n(1) ]).
+lit_i(20,1,t('E-mail',3),[ font('MS Sans Serif',8,[ bold ]),rect(193,435,227,447),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(21,1,t(17,2),[ font('Courier New',9,[]),rect(246,329,661,349),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(17),ctrltype(edit,21),ispwd(0),e2n(1) ]).
+lit_i(22,1,t('Endereço',3),[ font('MS Sans Serif',8,[ bold ]),rect(173,333,227,345),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(23,1,t(18,2),[ font('Courier New',9,[]),rect(626,271,664,291),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(18),ctrltype(edit,23),ispwd(0),e2n(1) ]).
+lit_i(24,1,t(14,2),[ font('Courier New',9,[]),rect(246,123,505,143),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(14),ctrltype(edit,24),ispwd(0),e2n(1) ]).
+lit_i(25,1,t('Nome completo',3),[ font('MS Sans Serif',8,[ bold ]),rect(140,128,227,140),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(26,1,t(23,2),[ font('Courier New',9,[]),rect(246,211,362,231),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(23),ctrltype(combo,26),e2n(1) ]).
+lit_i(27,1,t('Situação',3),[ font('MS Sans Serif',8,[ bold ]),rect(177,215,227,227),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(28,1,t(21,2),[ font('Courier New',9,[]),rect(246,377,362,397),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(21),ctrltype(edit,28),ispwd(0),e2n(1) ]).
+lit_i(29,1,t('Telefone residencial',3),[ font('MS Sans Serif',8,[ bold ]),rect(112,381,227,393),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(30,1,t(38,2),[ font('Courier New',9,[]),rect(246,182,362,202),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(38),ctrltype(combo,30),e2n(1) ]).
+lit_i(31,1,t('Tipo',3),[ font('MS Sans Serif',8,[ bold ]),rect(202,186,227,198),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(32,1,t(39,2),[ font('Courier New',9,[]),rect(246,481,327,501),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(39),ctrltype(combo,32),e2n(1) ]).
+lit_i(33,1,t('Cargo',3),[ font('MS Sans Serif',8,[ bold ]),rect(194,485,227,497),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(34,1,t(41,2),[ font('Courier New',9,[]),rect(246,560,324,580),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(41),ctrltype(edit,34),ispwd(0),e2n(1) ]).
+lit_i(35,1,t('Data de demissão',3),[ font('MS Sans Serif',8,[ bold ]),rect(126,564,227,576),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(36,1,t(42,2),[ font('Courier New',9,[]),rect(246,534,325,554),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(42),ctrltype(edit,36),ispwd(0),e2n(1) ]).
+lit_i(37,1,t('Data de admissão',3),[ font('MS Sans Serif',8,[ bold ]),rect(126,538,227,550),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(38,1,t('Login',3),[ font('MS Sans Serif',8,[ bold ]),rect(196,628,227,640),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(39,1,t(44,2),[ font('Courier New',9,[]),rect(246,650,395,670),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(44),ctrltype(edit,39),ispwd(1),e2n(1) ]).
+lit_i(40,1,t('Salário',3),[ font('MS Sans Serif',8,[ bold ]),rect(188,512,227,524),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(41,1,button('Enter'),[ id(41),title([ 'Enter' ]),ctlname(''),rect(571,697,661,722),font('MS Shell Dlg',8,[]) ]).
+lit_i(42,1,t(40,2),[ font('Courier New',9,[]),rect(246,507,336,527),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(40),ctrltype(edit,42),ispwd(0),e2n(1) ]).
+lit_i(43,1,rect(43),[ rect(182,611,403,684),outstyle(single),back(rgb(255,255,255)),fore(rgb(200,200,200)),border(1),ctlname(''),gxcolor([]) ]).
+lit_i(44,1,t('Senha',3),[ font('MS Sans Serif',8,[ bold ]),rect(191,654,227,666),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(45,1,t(43,2),[ font('Courier New',9,[]),rect(246,624,395,644),outstyle('3d'),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(43),ctrltype(edit,45),ispwd(0),e2n(1) ]).
+lit_i(1,1,window,[ title([ 'Cadastro de funcionários' ]),rect(3,25,723,799),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).
  
@@ -576,30 +564,32 @@ std_color_i(4,fore,8).
 std_color_i(5,fore,8).
 std_color_i(6,back,5).
 std_color_i(6,fore,8).
+std_color_i(7,back,5).
 std_color_i(7,fore,8).
 std_color_i(8,back,5).
 std_color_i(8,fore,8).
+std_color_i(9,back,5).
 std_color_i(9,fore,8).
-std_color_i(10,back,5).
 std_color_i(10,fore,8).
+std_color_i(11,back,5).
 std_color_i(11,fore,8).
-std_color_i(12,back,5).
 std_color_i(12,fore,8).
+std_color_i(13,back,5).
 std_color_i(13,fore,8).
-std_color_i(14,back,5).
 std_color_i(14,fore,8).
+std_color_i(15,back,5).
 std_color_i(15,fore,8).
-std_color_i(16,back,5).
 std_color_i(16,fore,8).
+std_color_i(17,back,5).
 std_color_i(17,fore,8).
-std_color_i(18,back,5).
 std_color_i(18,fore,8).
+std_color_i(19,back,5).
 std_color_i(19,fore,8).
-std_color_i(20,back,5).
 std_color_i(20,fore,8).
+std_color_i(21,back,5).
 std_color_i(21,fore,8).
-std_color_i(22,back,5).
 std_color_i(22,fore,8).
+std_color_i(23,back,5).
 std_color_i(23,fore,8).
 std_color_i(24,back,5).
 std_color_i(24,fore,8).
@@ -622,29 +612,23 @@ std_color_i(35,fore,8).
 std_color_i(36,back,5).
 std_color_i(36,fore,8).
 std_color_i(37,fore,8).
-std_color_i(38,back,5).
 std_color_i(38,fore,8).
+std_color_i(39,back,5).
 std_color_i(39,fore,8).
-std_color_i(40,back,5).
 std_color_i(40,fore,8).
-std_color_i(41,fore,8).
 std_color_i(42,back,5).
 std_color_i(42,fore,8).
-std_color_i(43,fore,8).
-std_color_i(44,back,5).
+std_color_i(43,back,5).
+std_color_i(43,fore,0).
 std_color_i(44,fore,8).
+std_color_i(45,back,5).
 std_color_i(45,fore,8).
-std_color_i(46,fore,8).
-std_color_i(48,back,5).
-std_color_i(48,fore,8).
-std_color_i(49,back,5).
-std_color_i(49,fore,0).
 std_color_i(1,back,15).
 std_color_i(1,fore,6).
  
-ctrl_info_i(1,30,[ [ [ 'Ativo','1' ],[ 'Inativo','0' ] ],[ '' ] ]).
-ctrl_info_i(1,34,[ [ [ 'Cliente','1' ],[ 'Funcionário','2' ] ],[ '' ] ]).
-ctrl_info_i(1,36,[ [ [ 'Gerente','1' ],[ 'Vendedor','2' ] ],[ '' ] ]).
+ctrl_info_i(1,26,[ [ [ 'Ativo','1' ],[ 'Inativo','0' ] ],[ '' ] ]).
+ctrl_info_i(1,30,[ [ [ 'Cliente','1' ],[ 'Funcionário','2' ] ],[ '' ] ]).
+ctrl_info_i(1,32,[ [ [ 'Gerente','1' ],[ 'Vendedor','2' ] ],[ '' ] ]).
  
  
 calling_main_i(4,1).

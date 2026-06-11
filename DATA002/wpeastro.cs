@@ -2,7 +2,7 @@
                File: PeAstro
         Description: Cadastro de astros.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:24.85
+       Generated on: 6/11/2026 11:31:34.79
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -493,15 +493,15 @@ namespace GeneXus.Programs {
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         edtavAstcodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),65, 67, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 65 , 67 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV5AstCodi" );
+         edtavAstcodigo = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),65, 68, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 65 , 68 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV5AstCodi" );
          ((GXEdit) edtavAstcodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavAstcodigo.addFocusListener(this);
          edtavAstcodigo.getGXComponent().setHelpId("HLP_WPeAstro.htm");
-         edtavAstnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),156, 67, 286, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 156 , 67 , 286 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6AstNome" );
+         edtavAstnome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),169, 68, 183, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , GXPanel1 , 169 , 68 , 183 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6AstNome" );
          ((GXEdit) edtavAstnome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtavAstnome.addFocusListener(this);
          edtavAstnome.getGXComponent().setHelpId("HLP_WPeAstro.htm");
-         chkavAstdatfalecimento = new GUIObjectShort ( new GXCheckBox(GXPanel1, "Falecido?" , new java.lang.Short(1), new java.lang.Short(0)) , GXPanel1 , 455 , 69 , 84 , 17 , Integer.MAX_VALUE , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", IFontConstants.BOLD, 9) , true , "AV11AstDat" );
+         chkavAstdatfalecimento = new GUIObjectShort ( new GXCheckBox(GXPanel1, "Falecido?" , new java.lang.Short(1), new java.lang.Short(0)) , GXPanel1 , 383 , 70 , 84 , 17 , Integer.MAX_VALUE , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", IFontConstants.BOLD, 9) , true , "AV11AstDat" );
          chkavAstdatfalecimento.addFocusListener(this);
          chkavAstdatfalecimento.addItemListener(this);
          chkavAstdatfalecimento.getGXComponent().setHelpId("HLP_WPeAstro.htm");
@@ -510,9 +510,9 @@ namespace GeneXus.Programs {
          , new GXColumnDefinition( new GUIObjectString ( new SubfileImage() , null ,  0 , 0 , 26 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV9Editar" ), ""  , UIFactory.getColor(18) , UIFactory.getColor(15) , 26 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectString ( new SubfileImage() , null ,  0 , 0 , 25 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "AV8Excluir" ), ""  , UIFactory.getColor(18) , UIFactory.getColor(15) , 25 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
          , new GXColumnDefinition( new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),0, 0, 65, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.NUMERIC, false, false, 0, false) , null ,  0 , 0 , 64 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A49AstCodi" ), "Código"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 64 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 261, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 260 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A50AstNome" ), "Nome completo"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 260 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         , new GXColumnDefinition( new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),0, 0, 137, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.DATE, false, false, 0, false) , null ,  0 , 0 , 136 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A114AstDat" ), "Data de falecimento"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 136 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
-         }, 33 , 18 , GXPanel1 , 65 , 117 , 599 , 624 ,  18 ));
+         , new GXColumnDefinition( new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),0, 0, 197, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.VARCHAR, false, false, 0, false) , null ,  0 , 0 , 196 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A50AstNome" ), "Nome completo"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 196 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         , new GXColumnDefinition( new GUIObjectDatetime ( new GXEdit(8, "99/99/9999", UIFactory.getFont( "Courier New", 0, 9),0, 0, 126, 19, GXPanel1, false, ILabelConstants.BORDER_NONE, GXTypeConstants.DATE, false, false, 0, false) , null ,  0 , 0 , 125 , 18 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , false , "A114AstDat" ), "Data de falecimento"  , UIFactory.getColor(18) , UIFactory.getColor(15) , 125 , UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8) , false , true )
+         }, 34 , 18 , GXPanel1 , 65 , 101 , 524 , 640 ,  18 ));
          subGxsf7.addActionListener(this);
          subGxsf7.addFocusListener(this);
          subGxsf7.setSortOnClick(true);
@@ -522,12 +522,12 @@ namespace GeneXus.Programs {
          subGxsf7.getColumn(1).addItemListener( this);
          subGxsf7.getColumn(2).addActionListener( this);
          subGxsf7.getColumn(2).addItemListener( this);
-         bttbtt14 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  559 ,  65 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt14 = UIFactory.getGXButton( GXPanel1 , "Novo" ,  498 ,  66 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt14.setTooltip("Novo");
          bttbtt14.addActionListener(this);
          bttbtt14.setFiresEvents(false);
          lbllbl3 = UIFactory.getLabel(GXPanel1, "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 65 , 52 , 40 , 13 );
-         lbllbl4 = UIFactory.getLabel(GXPanel1, "Nome", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 156 , 52 , 33 , 13 );
+         lbllbl4 = UIFactory.getLabel(GXPanel1, "Nome", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 169 , 52 , 33 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavAstcodigo ,
                    edtavAstnome ,

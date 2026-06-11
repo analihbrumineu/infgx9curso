@@ -18,21 +18,20 @@ las_i(9,[ [ 37,'Mode',116,'GxBScreen',35,36,28,29 ] ]).
 lac_i(9,[ [ 35,28 ] ]).
  
  
-lits_i('Código',3,9).
-lits_i('Tipo',4,9).
-lits_i('Situação',4,39).
-lits_i('Código do filme',5,9).
-lits_i('Título',5,39).
-lits_i('Código de locação de mídia',7,11).
+lits_i('Código',3,16).
+lits_i('Formato',4,15).
+lits_i('Situação',5,14).
+lits_i('Filme',6,17).
+lits_i('Locação',8,14).
  
-cls_i([ 3,9 ],[ 7,97 ]).
+cls_i([ 3,14 ],[ 8,86 ]).
  
 pos_i(37,[ 3,3,24 ]).
 pos_i(35,[ 4,4,24 ]).
-pos_i(36,[ 4,4,48 ]).
-pos_i(28,[ 5,5,24 ]).
-pos_i(29,[ 5,5,48 ]).
-pos_i(116,[ 7,7,35 ]).
+pos_i(36,[ 5,5,24 ]).
+pos_i(28,[ 6,6,24 ]).
+pos_i(29,[ 6,6,37 ]).
+pos_i(116,[ 8,8,24 ]).
  
  
 default_i(e(37,3,1,37)).
@@ -383,22 +382,21 @@ ppi_i([ 96,96 ]).
  
  
  
-lit_i(2,1,button('Enter'),[ id(2),title([ 'Enter' ]),ctlname('Btn_enter'),rect(455,247,543,269),font('MS Shell Dlg',8,[]) ]).
-lit_i(3,1,t(37,2),[ font('Courier New',9,[]),rect(169,78,259,98),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(37),ctrltype(edit,3),ispwd(0),e2n(1) ]).
-lit_i(4,1,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,78,104,90),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(5,1,t(35,2),[ font('Courier New',9,[]),rect(169,104,259,124),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(35),ctrltype(combo,5),e2n(1) ]).
-lit_i(6,1,t('Tipo',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,108,90,120),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(7,1,t(36,2),[ font('Courier New',9,[]),rect(338,104,428,124),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(36),ctrltype(combo,7),e2n(1) ]).
-lit_i(8,1,t('Situação',3),[ font('MS Sans Serif',8,[ bold ]),rect(273,108,323,120),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(9,1,t(28,2),[ font('Courier New',9,[]),rect(169,130,259,150),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(28),ctrltype(edit,9),ispwd(0),e2n(1) ]).
-lit_i(10,1,t('Código do filme',3),[ font('MS Sans Serif',8,[ bold ]),rect(65,134,152,146),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(11,1,t(29,2),[ font('Courier New',9,[]),rect(338,130,558,150),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(29),ctrltype(edit,11),ispwd(0),e2n(1) ]).
-lit_i(12,1,t('Título',3),[ font('MS Sans Serif',8,[ bold ]),rect(273,134,307,146),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(13,1,t('Código de locação de mídia',3),[ font('MS Sans Serif',8,[ bold ]),rect(78,188,237,200),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(14,1,t(116,2),[ font('Courier New',9,[]),rect(247,184,319,204),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(116),ctrltype(edit,14),ispwd(0),e2n(1) ]).
-lit_i(15,1,rect(15),[ rect(65,169,559,221),outstyle(single),back(rgb(255,255,255)),fore(rgb(200,200,200)),border(1),ctlname(''),gxcolor([]) ]).
-lit_i(16,1,button('''VisualizarLocacao'''),[ id(16),title([ 'Visualizar' ]),ctlname('Vislocacao'),rect(455,182,545,207),font('MS Shell Dlg',8,[]) ]).
-lit_i(1,1,window,[ title([ 'Cadastro de mídias' ]),rect(3,25,613,310),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(2,1,button('Enter'),[ id(2),title([ 'Enter' ]),ctlname('Btn_enter'),rect(406,261,494,286),font('MS Shell Dlg',8,[]) ]).
+lit_i(3,1,t(37,2),[ font('Courier New',9,[]),rect(170,78,238,98),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(37),ctrltype(edit,3),ispwd(0),e2n(1) ]).
+lit_i(4,1,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(113,82,152,94),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(5,1,t(35,2),[ font('Courier New',9,[]),rect(170,104,260,124),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(35),ctrltype(combo,5),e2n(1) ]).
+lit_i(6,1,t('Formato',3),[ font('MS Sans Serif',8,[ bold ]),rect(107,108,152,120),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(7,1,t(36,2),[ font('Courier New',9,[]),rect(170,131,260,151),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(36),ctrltype(combo,7),e2n(1) ]).
+lit_i(8,1,t('Situação',3),[ font('MS Sans Serif',8,[ bold ]),rect(102,135,152,147),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(9,1,t(28,2),[ font('Courier New',9,[]),rect(170,159,239,179),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(28),ctrltype(edit,9),ispwd(0),e2n(1) ]).
+lit_i(10,1,t('Filme',3),[ font('MS Sans Serif',8,[ bold ]),rect(123,163,152,175),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(11,1,t(29,2),[ font('Courier New',9,[]),rect(264,159,484,179),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(29),ctrltype(edit,11),ispwd(0),e2n(1) ]).
+lit_i(12,1,t('Locação',3),[ font('MS Sans Serif',8,[ bold ]),rect(103,213,152,225),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(13,1,t(116,2),[ font('Courier New',9,[]),rect(170,209,242,229),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(116),ctrltype(edit,13),ispwd(0),e2n(1) ]).
+lit_i(14,1,rect(14),[ rect(96,194,494,246),outstyle(single),back(rgb(255,255,255)),fore(rgb(200,200,200)),border(1),ctlname(''),gxcolor([]) ]).
+lit_i(15,1,button('''VisualizarLocacao'''),[ id(15),title([ 'Visualizar' ]),ctlname('Vislocacao'),rect(394,207,484,232),font('MS Shell Dlg',8,[]) ]).
+lit_i(1,1,window,[ title([ 'Cadastro de mídias' ]),rect(3,25,613,466),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).
  
@@ -422,11 +420,10 @@ std_color_i(10,fore,8).
 std_color_i(11,back,5).
 std_color_i(11,fore,8).
 std_color_i(12,fore,8).
+std_color_i(13,back,5).
 std_color_i(13,fore,8).
 std_color_i(14,back,5).
-std_color_i(14,fore,8).
-std_color_i(15,back,5).
-std_color_i(15,fore,0).
+std_color_i(14,fore,0).
 std_color_i(1,back,15).
 std_color_i(1,fore,6).
  

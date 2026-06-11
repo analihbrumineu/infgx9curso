@@ -18,16 +18,16 @@ las_i(2,[ [ 'Relmidopcao','Catcodinicial','Catcodfinal','Midtipo' ] ]).
 lac_i(2,[ [ 'Relmidopcao','Catcodinicial','Catcodfinal','Midtipo' ] ]).
  
  
-lits_i('Tipo do relatório',2,9).
-lits_i('Categoria',5,9).
-lits_i(até,5,43).
-lits_i('Tipo da mídia',4,9).
+lits_i('Relatório',3,16).
+lits_i('Categoria',5,16).
+lits_i(até,5,39).
+lits_i('Formato',4,17).
  
-cls_i([ 2,9 ],[ 5,61 ]).
+cls_i([ 2,16 ],[ 5,53 ]).
  
 pos_i('Relmidopcao',[ 2,2,26 ]).
 pos_i('Catcodinicial',[ 5,5,26 ]).
-pos_i('Catcodfinal',[ 5,5,53 ]).
+pos_i('Catcodfinal',[ 5,5,45 ]).
 pos_i('Midtipo',[ 3,3,26 ]).
  
  
@@ -239,15 +239,15 @@ ppi_i([ 96,96 ]).
  
  
  
-lit_i(2,1,t('Relmidopcao',23),[ font('Courier New',9,[]),rect(182,67,362,87),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Relmidopcao'),ctrltype(combo,2) ]).
-lit_i(3,1,t('Tipo do relatório',3),[ font('MS Sans Serif',8,[ bold ]),rect(67,71,160,83),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(4,1,t('Categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(67,125,121,137),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(5,1,t('Catcodinicial',23),[ font('Courier New',9,[]),rect(182,121,254,141),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catcodinicial'),ctrltype(edit,5),ispwd(0) ]).
-lit_i(6,1,t('Catcodfinal',23),[ font('Courier New',9,[]),rect(373,121,445,141),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catcodfinal'),ctrltype(edit,6),ispwd(0) ]).
-lit_i(7,1,t(até,3),[ font('MS Sans Serif',8,[ bold ]),rect(301,125,319,137),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(8,1,t('Midtipo',23),[ font('Courier New',9,[]),rect(182,94,249,114),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Midtipo'),ctrltype(combo,8) ]).
-lit_i(9,1,t('Tipo da mídia',3),[ font('MS Sans Serif',8,[ bold ]),rect(67,98,145,110),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(10,1,button('''Imprimir'''),[ id(10),title([ 'Imprimir' ]),ctlname(''),rect(411,179,501,204),font('MS Shell Dlg',8,[]) ]).
+lit_i(2,1,t('Relmidopcao',23),[ font('Courier New',9,[]),rect(182,68,314,88),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Relmidopcao'),ctrltype(combo,2) ]).
+lit_i(3,1,t('Relatório',3),[ font('MS Sans Serif',8,[ bold ]),rect(116,72,167,84),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(4,1,t('Categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(113,124,167,136),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(5,1,t('Catcodinicial',23),[ font('Courier New',9,[]),rect(182,120,246,140),outstyle('3d'),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catcodinicial'),ctrltype(edit,5),ispwd(0) ]).
+lit_i(6,1,t('Catcodfinal',23),[ font('Courier New',9,[]),rect(321,120,393,140),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catcodfinal'),ctrltype(edit,6),ispwd(0) ]).
+lit_i(7,1,t(até,3),[ font('MS Sans Serif',8,[ bold ]),rect(275,124,293,136),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(8,1,t('Midtipo',23),[ font('Courier New',9,[]),rect(182,95,249,115),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Midtipo'),ctrltype(combo,8) ]).
+lit_i(9,1,t('Formato',3),[ font('MS Sans Serif',8,[ bold ]),rect(122,98,167,110),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(10,1,button('''Imprimir'''),[ id(10),title([ 'Imprimir' ]),ctlname(''),rect(303,169,393,194),font('MS Shell Dlg',8,[]) ]).
 lit_i(1,1,window,[ title([ 'Relatório sobre mídias' ]),rect(3,25,574,284),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).

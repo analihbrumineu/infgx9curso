@@ -14,7 +14,7 @@ called_tree_i(0,11,4,92).
  
  
  
-ij_object_dependency(tlocacao,[],[ subtlocacao30 ],[ type_SdtSDTFuncionario,'GxObjectCollection' ],11).
+ij_object_dependency(tlocacao,[],[ subtlocacao26 ],[ type_SdtSDTFuncionario,'GxObjectCollection' ],11).
  
  
 obj_parms_i([ 'int aP0_LocCodigo','String aP1_Gx_mode' ],[ [ 'Loccodigo',in ],[ 'Mode',in ] ]).

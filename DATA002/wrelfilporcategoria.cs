@@ -2,7 +2,7 @@
                File: RelFilPorCategoria
         Description: Impressão de relatório de filmes por categoria.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:25.72
+       Generated on: 6/11/2026 11:31:35.65
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -279,31 +279,31 @@ namespace GeneXus.Programs {
          ((GXEdit) edtavCatcodinicial.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavCatcodinicial.addFocusListener(this);
          edtavCatcodinicial.getGXComponent().setHelpId("HLP_WRelFilPorCategoria.htm");
-         edtavCatcodfinal = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),260, 65, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 260 , 65 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6CatCodF" );
+         edtavCatcodfinal = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),269, 65, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 269 , 65 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV6CatCodF" );
          ((GXEdit) edtavCatcodfinal.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavCatcodfinal.addFocusListener(this);
          edtavCatcodfinal.getGXComponent().setHelpId("HLP_WRelFilPorCategoria.htm");
+         edtavFilcodfinal = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),269, 90, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 269 , 90 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV8FilCodF" );
+         ((GXEdit) edtavFilcodfinal.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
+         edtavFilcodfinal.addFocusListener(this);
+         edtavFilcodfinal.getGXComponent().setHelpId("HLP_WRelFilPorCategoria.htm");
          edtavFilcodinicial = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),156, 91, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 156 , 91 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV7FilCodI" );
          ((GXEdit) edtavFilcodinicial.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtavFilcodinicial.addFocusListener(this);
          edtavFilcodinicial.getGXComponent().setHelpId("HLP_WRelFilPorCategoria.htm");
-         edtavFilcodfinal = new GUIObjectInt ( new GXEdit(9, "ZZZZZZZZ9", UIFactory.getFont( "Courier New", 0, 9),260, 91, 73, 21, GXPanel1, false, ILabelConstants.BORDER_3D, GXTypeConstants.NUMERIC, false, true, UIFactory.getColor(5), false) , GXPanel1 , 260 , 91 , 73 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "AV8FilCodF" );
-         ((GXEdit) edtavFilcodfinal.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
-         edtavFilcodfinal.addFocusListener(this);
-         edtavFilcodfinal.getGXComponent().setHelpId("HLP_WRelFilPorCategoria.htm");
-         bttbtt10 = UIFactory.getGXButton( GXPanel1 , "Imprimir" ,  299 ,  143 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt10 = UIFactory.getGXButton( GXPanel1 , "Imprimir" ,  251 ,  143 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt10.setTooltip("Imprimir");
          bttbtt10.addActionListener(this);
          bttbtt10.setFiresEvents(false);
-         lbllbl2 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 91 , 69 , 55 , 13 );
-         lbllbl3 = UIFactory.getLabel(GXPanel1, "até", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 234 , 69 , 19 , 13 );
-         lbllbl4 = UIFactory.getLabel(GXPanel1, "Filme", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 91 , 95 , 30 , 13 );
-         lbllbl5 = UIFactory.getLabel(GXPanel1, "até", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 234 , 95 , 19 , 13 );
+         lbllbl2 = UIFactory.getLabel(GXPanel1, "Categoria", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 93 , 69 , 55 , 13 );
+         lbllbl3 = UIFactory.getLabel(GXPanel1, "até", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 239 , 69 , 19 , 13 );
+         lbllbl4 = UIFactory.getLabel(GXPanel1, "Filme", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 118 , 95 , 30 , 13 );
+         lbllbl5 = UIFactory.getLabel(GXPanel1, "até", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 239 , 95 , 19 , 13 );
          focusManager.setControlList(new IFocusableControl[] {
                    edtavCatcodinicial ,
                    edtavCatcodfinal ,
-                   edtavFilcodinicial ,
                    edtavFilcodfinal ,
+                   edtavFilcodinicial ,
                    bttbtt10
          });
       }
@@ -491,8 +491,8 @@ namespace GeneXus.Programs {
       protected GXPanel GXPanel1 ;
       protected GUIObjectInt edtavCatcodinicial ;
       protected GUIObjectInt edtavCatcodfinal ;
-      protected GUIObjectInt edtavFilcodinicial ;
       protected GUIObjectInt edtavFilcodfinal ;
+      protected GUIObjectInt edtavFilcodinicial ;
       protected IGXButton bttbtt10 ;
       protected ILabel lbllbl2 ;
       protected ILabel lbllbl3 ;

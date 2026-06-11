@@ -13,7 +13,7 @@ called_tree_i(0,1,4,80).
  
  
  
-ij_object_dependency(tcliente,[],[ subtcliente39 ],[],1).
+ij_object_dependency(tcliente,[],[ subtcliente35 ],[],1).
  
  
 obj_parms_i([ 'int aP0_PesCodigo','String aP1_Gx_mode' ],[ [ 13,in ],[ 'Mode',in ] ]).

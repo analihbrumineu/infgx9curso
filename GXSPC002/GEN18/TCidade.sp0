@@ -18,19 +18,17 @@ las_i(8,[ [ 26,'Mode',27,24,25,12 ] ]).
 lac_i(8,[ [ 27,24 ] ]).
  
  
-lits_i('Código',2,9).
-lits_i('Cidade',2,43).
-lits_i('Código do Estado',3,9).
-lits_i('UF',5,9).
-lits_i('Estado',5,43).
+lits_i('Código',2,19).
+lits_i('Estado',5,19).
+lits_i('Cidade',3,19).
  
-cls_i([ 2,9 ],[ 5,99 ]).
+cls_i([ 2,19 ],[ 5,87 ]).
  
 pos_i(26,[ 2,2,27 ]).
-pos_i(27,[ 2,2,50 ]).
-pos_i(24,[ 3,3,27 ]).
-pos_i(25,[ 4,4,27 ]).
-pos_i(12,[ 4,4,50 ]).
+pos_i(27,[ 3,3,27 ]).
+pos_i(24,[ 4,4,27 ]).
+pos_i(25,[ 4,4,76 ]).
+pos_i(12,[ 4,4,38 ]).
  
  
 default_i(e(26,3,1,26)).
@@ -303,17 +301,15 @@ ppi_i([ 96,96 ]).
  
  
  
-lit_i(2,1,button('Enter'),[ id(2),title([ 'Enter' ]),ctlname('Btn_enter'),rect(585,169,673,194),font('MS Shell Dlg',8,[]) ]).
-lit_i(3,1,t(26,2),[ font('Courier New',9,[]),rect(192,64,264,84),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(26),ctrltype(edit,3),ispwd(0),e2n(1) ]).
-lit_i(4,1,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(67,68,106,80),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(5,1,t(27,2),[ font('Courier New',9,[]),rect(355,64,610,84),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(27),ctrltype(edit,5),ispwd(0),e2n(1) ]).
-lit_i(6,1,t('Cidade',3),[ font('MS Sans Serif',8,[ bold ]),rect(301,68,340,80),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(7,1,t(24,2),[ font('Courier New',9,[]),rect(192,91,264,111),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(24),ctrltype(edit,7),ispwd(0),e2n(1) ]).
-lit_i(8,1,t('Código do Estado',3),[ font('MS Sans Serif',8,[ bold ]),rect(67,95,167,107),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(9,1,t(25,2),[ font('Courier New',9,[]),rect(192,116,215,136),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(25),ctrltype(edit,9),ispwd(0),e2n(1) ]).
-lit_i(10,1,t('UF',3),[ font('MS Sans Serif',8,[ bold ]),rect(67,120,83,132),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(11,1,t(12,2),[ font('Courier New',9,[]),rect(355,116,610,136),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(12),ctrltype(edit,11),ispwd(0),e2n(1) ]).
-lit_i(12,1,t('Estado',3),[ font('MS Sans Serif',8,[ bold ]),rect(301,120,340,132),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(2,1,button('Enter'),[ id(2),title([ 'Enter' ]),ctlname('Btn_enter'),rect(469,169,557,194),font('MS Shell Dlg',8,[]) ]).
+lit_i(3,1,t(26,2),[ font('Courier New',9,[]),rect(191,64,263,84),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(26),ctrltype(edit,3),ispwd(0),e2n(1) ]).
+lit_i(4,1,t('Código',3),[ font('MS Sans Serif',8,[ bold ]),rect(134,67,173,79),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(5,1,t(27,2),[ font('Courier New',9,[]),rect(191,91,446,111),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(27),ctrltype(edit,5),ispwd(0),e2n(1) ]).
+lit_i(6,1,t(24,2),[ font('Courier New',9,[]),rect(191,117,263,137),outstyle('3d'),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(24),ctrltype(edit,6),ispwd(0),e2n(1) ]).
+lit_i(7,1,t(25,2),[ font('Courier New',9,[]),rect(534,117,557,137),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(25),ctrltype(edit,7),ispwd(0),e2n(1) ]).
+lit_i(8,1,t(12,2),[ font('Courier New',9,[]),rect(271,117,526,137),outstyle('3d'),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname(12),ctrltype(edit,8),ispwd(0),e2n(1) ]).
+lit_i(9,1,t('Estado',3),[ font('MS Sans Serif',8,[ bold ]),rect(134,120,173,132),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(10,1,t('Cidade',3),[ font('MS Sans Serif',8,[ bold ]),rect(134,93,173,105),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(1,1,window,[ title([ 'Cadastro de cidades' ]),rect(3,25,743,271),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(2),ctlname('Form'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,24).
@@ -328,16 +324,14 @@ std_color_i(3,fore,8).
 std_color_i(4,fore,8).
 std_color_i(5,back,5).
 std_color_i(5,fore,8).
+std_color_i(6,back,5).
 std_color_i(6,fore,8).
 std_color_i(7,back,5).
 std_color_i(7,fore,8).
+std_color_i(8,back,5).
 std_color_i(8,fore,8).
-std_color_i(9,back,5).
 std_color_i(9,fore,8).
 std_color_i(10,fore,8).
-std_color_i(11,back,5).
-std_color_i(11,fore,8).
-std_color_i(12,fore,8).
 std_color_i(1,back,15).
 std_color_i(1,fore,6).
  

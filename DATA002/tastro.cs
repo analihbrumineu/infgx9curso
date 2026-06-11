@@ -2,7 +2,7 @@
                File: Astro
         Description: Cadastro de astros.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:16.82
+       Generated on: 6/11/2026 11:31:26.82
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -242,7 +242,7 @@ namespace GeneXus.Programs {
          this.setIForeground(UIFactory.getColor(6));
          GXPanel1 .setPixelsPerInch( 96 , 96 );
          GXPanel1.refreshFrame();
-         bttbtt2 = UIFactory.getGXButton( GXPanel1 , "Enter" ,  442 ,  299 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
+         bttbtt2 = UIFactory.getGXButton( GXPanel1 , "Enter" ,  431 ,  299 ,  91 ,  26 , UIFactory.getFont( "MS Shell Dlg", 0, 8) );
          bttbtt2.setTooltip("Enter");
          bttbtt2.addActionListener(this);
          tctrltctrl3 = new GXTabControl (this,  GXPanel1 , 0 , 0 , 560 , 287 , UIFactory.getColor(5) , UIFactory.getColor(8) , 0, 0, 0, false );
@@ -251,7 +251,7 @@ namespace GeneXus.Programs {
          ((GXEdit) edtAstCodigo.getGXComponent()).setAlignment(ILabelConstants.RIGHT);
          edtAstCodigo.addFocusListener(this);
          edtAstCodigo.getGXComponent().setHelpId("HLP_TAstro.htm");
-         edtAstNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),169, 104, 312, 21, tpagetpage4.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage4.getGXPanel() , 169 , 104 , 312 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A50AstNome" );
+         edtAstNome = new GUIObjectString ( new GXEdit(50, "@!", UIFactory.getFont( "Courier New", 0, 9),169, 104, 187, 21, tpagetpage4.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.VARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage4.getGXPanel() , 169 , 104 , 187 , 21 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A50AstNome" );
          ((GXEdit) edtAstNome.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtAstNome.addFocusListener(this);
          edtAstNome.getGXComponent().setHelpId("HLP_TAstro.htm");
@@ -264,12 +264,12 @@ namespace GeneXus.Programs {
          edtAstDatFalecimento.addFocusListener(this);
          edtAstDatFalecimento.getGXComponent().setHelpId("HLP_TAstro.htm");
          lbllbl5 = UIFactory.getLabel(tpagetpage4.getGXPanel(), "Dados gerais", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 26 , 75 , 13 );
-         lbllbl7 = UIFactory.getLabel(tpagetpage4.getGXPanel(), "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 82 , 40 , 13 );
-         lbllbl9 = UIFactory.getLabel(tpagetpage4.getGXPanel(), "Nome completo", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 108 , 88 , 13 );
-         lbllbl10 = UIFactory.getLabel(tpagetpage4.getGXPanel(), "Data de nascimento", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 160 , 114 , 13 );
+         lbllbl7 = UIFactory.getLabel(tpagetpage4.getGXPanel(), "Código", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 114 , 82 , 40 , 13 );
+         lbllbl9 = UIFactory.getLabel(tpagetpage4.getGXPanel(), "Nome completo", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 66 , 108 , 88 , 13 );
+         lbllbl10 = UIFactory.getLabel(tpagetpage4.getGXPanel(), "Data de nascimento", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 40 , 160 , 114 , 13 );
          lbllbl11 = UIFactory.getLabel(tpagetpage4.getGXPanel(), "Data de falecimento", ILabelConstants.LEFT, Integer.MAX_VALUE, UIFactory.getColor(8), UIFactory.getFont( "MS Sans Serif", IFontConstants.BOLD, 8), false, ILabelConstants.BORDER_NONE , 39 , 186 , 115 , 13 );
          tpagetpage14 = new GXTabPage ( tctrltctrl3 , "Sobre" , 5 , 29 , 555 , 258 , UIFactory.getColor(15) , UIFactory.getColor(18) , 0, 0);
-         edtAstDescricao = new GUIObjectString ( new GXEdit(800, "@!", UIFactory.getFont( "Courier New", 0, 9),39, 65, 481, 169, tpagetpage14.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.LONGVARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage14.getGXPanel() , 39 , 65 , 481 , 169 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A53AstDesc" );
+         edtAstDescricao = new GUIObjectString ( new GXEdit(800, "@!", UIFactory.getFont( "Courier New", 0, 9),39, 55, 481, 179, tpagetpage14.getGXPanel(), false, ILabelConstants.BORDER_3D, GXTypeConstants.LONGVARCHAR, false, true, UIFactory.getColor(5), false) , tpagetpage14.getGXPanel() , 39 , 55 , 481 , 179 , UIFactory.getColor(5) , UIFactory.getColor(8) , UIFactory.getFont( "Courier New", 0, 9) , true , "A53AstDesc" );
          ((GXEdit) edtAstDescricao.getGXComponent()).setAlignment(ILabelConstants.LEFT);
          edtAstDescricao.addFocusListener(this);
          edtAstDescricao.getGXComponent().setHelpId("HLP_TAstro.htm");

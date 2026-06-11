@@ -2,7 +2,7 @@
                File: RelTopDeLisDevPorTipDeMidia
         Description: Relatório de topo de lista sobre o total de devoluções por formato de mídia.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 9:2:16.70
+       Generated on: 6/11/2026 11:35:18.98
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -232,18 +232,18 @@ namespace GeneXus.Programs {
                   }
                   H0R0( false, 39) ;
                   getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-                  getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV17LocMid, "@!")), 26, Gx_line+13, 207, Gx_line+28, 0) ;
+                  getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV17LocMid, "@!")), 52, Gx_line+12, 157, Gx_line+27, 0) ;
                   Gx_OldLine = Gx_line ;
                   Gx_line = (int)(Gx_line+39) ;
                   AV12TotDev = AV15Item.gxTpr_Midtipreltotal ;
-                  H0R0( false, 15) ;
-                  getPrinter().GxDrawLine(52, Gx_line+12, 650, Gx_line+12, 1, 200, 200, 200, 0) ;
+                  H0R0( false, 26) ;
+                  getPrinter().GxDrawLine(52, Gx_line+0, 650, Gx_line+0, 1, 200, 200, 200, 0) ;
                   getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-                  getPrinter().GxDrawText(StringUtil.Format( (decimal)(AV12TotDev), "ZZZZZZZZZ9"), 559, Gx_line+0, 628, Gx_line+15, 2+256) ;
+                  getPrinter().GxDrawText(StringUtil.Format( (decimal)(AV12TotDev), "ZZZZZZZZZ9"), 581, Gx_line+7, 650, Gx_line+22, 2+256) ;
                   getPrinter().GxAttris("MS Sans Serif", 8, true, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-                  getPrinter().GxDrawText("Total", 507, Gx_line+0, 536, Gx_line+13, 0+256) ;
+                  getPrinter().GxDrawText("Total", 539, Gx_line+8, 568, Gx_line+21, 0+256) ;
                   Gx_OldLine = Gx_line ;
-                  Gx_line = (int)(Gx_line+15) ;
+                  Gx_line = (int)(Gx_line+26) ;
                   AV16ContSe = (long)(AV16ContSe+1) ;
                }
                AV26GXV1 = (int)(AV26GXV1+1) ;
@@ -313,7 +313,7 @@ namespace GeneXus.Programs {
                getPrinter().GxDrawText(StringUtil.Format( AV9DatFina, "99/99/9999"), 169, Gx_line+91, 238, Gx_line+106, 0+256) ;
                getPrinter().GxDrawText(StringUtil.Format( (decimal)(AV10Seleca), "ZZZZZZZZZ9"), 91, Gx_line+117, 160, Gx_line+132, 2+256) ;
                getPrinter().GxDrawText(StringUtil.Format( (decimal)(Gx_page), "ZZZZZ9"), 606, Gx_line+26, 657, Gx_line+41, 2) ;
-               getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV21Pgmdes, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")), 91, Gx_line+52, 597, Gx_line+67, 0) ;
+               getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV21Pgmdes, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")), 81, Gx_line+52, 608, Gx_line+67, 0) ;
                getPrinter().GxDrawText(StringUtil.Format( Gx_date, "99/99/99"), 611, Gx_line+0, 666, Gx_line+15, 0+256) ;
                getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( Gx_time, "XXXXXXXX")), 611, Gx_line+13, 666, Gx_line+28, 0+256) ;
                getPrinter().GxAttris("MS Sans Serif", 8, true, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;

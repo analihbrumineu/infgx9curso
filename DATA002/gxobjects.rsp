@@ -37,7 +37,7 @@ subwgx009016.cs
 wconsfilme.cs
 subwconsfilme08.cs
 tlocacao.cs
-subtlocacao30.cs
+subtlocacao26.cs
 wgx0030.cs
 subwgx003010.cs
 tmidia.cs
@@ -55,8 +55,8 @@ subwgx005111.cs
 wgx00a0.cs
 subwgx00a008.cs
 tfilme.cs
-subtfilme22.cs
-subtfilme27.cs
+subtfilme21.cs
+subtfilme26.cs
 testado.cs
 wconscidade.cs
 subwconscidade02.cs
@@ -67,7 +67,7 @@ subwgx002110.cs
 wgx0010.cs
 subwgx001020.cs
 tcliente.cs
-subtcliente39.cs
+subtcliente35.cs
 wconscliente.cs
 subwconscliente10.cs
 wconsestado.cs
@@ -84,7 +84,7 @@ subwpecategoria04.cs
 wpecidade.cs
 subwpecidade02.cs
 wpecliente.cs
-subwpecliente11.cs
+subwpecliente10.cs
 wpeestado.cs
 subwpeestado02.cs
 wpefilme.cs
