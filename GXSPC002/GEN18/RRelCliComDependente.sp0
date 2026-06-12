@@ -51,7 +51,7 @@ rule_i(0,datastore(1,'CS_SCHEMA','')).
 rule_i(0,datastore(1,'CC_USER_PASS','')).
 rule_i(0,datastore(1,'CC_USER_ID','')).
 rule_i(0,datastore(1,'CC_SERVER','INF-ANALIH\SQLEXPRESS')).
-rule_i(0,datastore(1,'CC_DBNAME',xlm)).
+rule_i(0,datastore(1,'CC_DBNAME',kbcurso)).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -69,7 +69,7 @@ rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','')).
 rule_i(0,datastore(1,'CS_SERVER','INF-ANALIH\SQLEXPRESS')).
-rule_i(0,datastore(1,'CS_DBNAME',xlm)).
+rule_i(0,datastore(1,'CS_DBNAME',kbcurso)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -211,10 +211,10 @@ attri_i(83,[ 'Depende',int,1,0,'9',0,'Esse cliente é dependente de outro?','',0 
 attri_i(14,[ 'PesNome',svchar,50,0,'@!',0,'Nome da pessoa','',0 ]).
 attri_i(13,[ 'PesCodigo',int,9,0,'ZZZZZZZZ9',0,'Código da pessoa','',0 ]).
 attri_i(47,[ 'PesDepNome',svchar,50,0,'@!',0,'Nome do dependente','',0 ]).
-attri_i('Page',[ 'Gx_page',int,6,0,'ZZZZZ9',0,'Page number','',20 ]).
-attri_i('Time',[ 'Gx_time',char,8,0,'',1,'','',19 ]).
-attri_i('Today',[ 'Gx_date',date,8,0,'99/99/99',1,'','',18 ]).
-attri_i('Pgmdesc',[ 'Pgmdesc',char,30,0,'',1,'Program description','',17 ]).
+attri_i('Time',[ 'Gx_time',char,8,0,'',1,'','',20 ]).
+attri_i('Today',[ 'Gx_date',date,8,0,'99/99/99',1,'','',19 ]).
+attri_i('Pgmdesc',[ 'Pgmdesc',char,30,0,'',1,'Program description','',18 ]).
+attri_i('Page',[ 'Gx_page',int,6,0,'ZZZZZ9',0,'Page number','',17 ]).
 attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',16 ]).
 attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',15 ]).
 attri_i('Pesdepnome',[ 'PesDepNome',svchar,50,0,'@!',0,'Pes Dep Nome','',14 ]).
@@ -263,67 +263,68 @@ break_i(1,rpt,0,[],[ [],[],[] ]).
  
 b_group_i(1,1,lit,0,1,0).
 b_group_i(1,2,page,2,0,0).
-b_group_i(2,1,lit,0,1,10).
-b_group_i(1,3,lit,0,12,12).
+b_group_i(2,1,lit,0,1,11).
+b_group_i(1,3,lit,0,13,13).
 b_group_i(1,4,nvg,3,5,5).
-b_group_i(3,1,lit,0,14,15).
+b_group_i(3,1,lit,0,15,16).
 b_group_i(3,2,nvg,4,20,20).
-b_group_i(4,1,lit,0,29,30).
-b_group_i(3,3,lit,0,36,23).
-b_group_i(1,5,lit,0,42,43).
-b_group_i(1,6,foot,5,43,43).
-b_group_i(5,1,lit,0,47,49).
-b_group_i(1,7,lit,0,51,0).
+b_group_i(4,1,lit,0,30,31).
+b_group_i(3,3,lit,0,37,24).
+b_group_i(1,5,lit,0,43,44).
+b_group_i(1,6,foot,5,44,44).
+b_group_i(5,1,lit,0,48,51).
+b_group_i(1,7,lit,0,53,0).
  
 b_line_i(1,2,1,cmd,1,[]).
 b_line_i(2,2,1,pb,1,[ t(a,3,1,4) ]).
-b_line_i([ 2,0 ],2,1,line,1,[ t('Data:',3,0,79),t('Hora:',3,0,79),t('Time',23,0,85),t('Today',23,0,85) ]).
-b_line_i([ 2,1 ],2,1,line,2,[ t('Página:',3,1,78),t('Page',23,1,85) ]).
-b_line_i([ 2,2 ],2,1,line,3,[ t('Pgmdesc',23,2,3) ]).
-b_line_i([ 2,4 ],2,1,line,5,[ t('Clientes:',3,4,3),t('Pescodinicial',23,4,11),t(até,3,4,22),t('Pescodfinal',23,4,27) ]).
-b_line_i([ 2,8 ],2,1,line,9,[ t('Cliente',3,8,5),t('Dependente(s)',3,8,33) ]).
-b_line_i(3,2,1,cmd,10,[ t('',122,10,0) ]).
-b_line_i(4,1,3,cmd,12,[]).
-b_line_i(5,3,1,cmd,14,[ t('',121,5,0),t('ORDER',39,5,4),t(13,2,5,10) ]).
-b_line_i(7,3,1,cmd,14,[]).
-b_line_i(8,3,1,cmd,14,[ t('',112,14,0),t(48,2,14,15) ]).
-b_line_i(9,3,1,cmd,14,[]).
-b_line_i(10,3,1,cmd,14,[ t('',109,14,0),t(83,2,14,7),t(=,10,14,15),t('0',3,14,17),t('.AND.',9,14,19),t(48,2,14,23),t(<>,10,14,35),t('0',3,14,38) ]).
-b_line_i(11,3,1,cmd,14,[]).
-b_line_i(12,3,1,cmd,14,[ t('',141,14,0),t('''Acessando clientes...''',3,12,12),t(',',7,14,35),t('Status',3,14,37),t(')',4,14,43) ]).
-b_line_i(13,3,1,cmd,14,[]).
-b_line_i(14,3,1,cmd,14,[ t('',107,14,0),t('Pesnome',23,14,0),t(=,10,14,0),t(14,2,14,0) ]).
-b_line_i(15,3,1,cmd,14,[]).
-b_line_i(16,3,1,pb,14,[ t(a,3,14,8) ]).
-b_line_i([ 16,0 ],3,1,line,14,[ t('Pesnome',23,0,5) ]).
-b_line_i(17,3,1,cmd,15,[]).
-b_line_i(18,3,1,cmd,15,[ t('',107,15,0),t('Clipesdeptotal',23,15,0),t(=,10,15,0),t('0',3,15,0) ]).
-b_line_i(19,3,1,cmd,15,[]).
-b_line_i(20,4,1,cmd,29,[ t('',121,20,0),t('ORDER',39,20,12),t(47,2,20,18) ]).
-b_line_i(21,4,1,cmd,29,[]).
-b_line_i(22,4,1,cmd,29,[ t('',141,29,0),t('''Acessando dependentes...''',3,22,16),t(',',7,29,42),t('Status',3,29,44),t(')',4,29,50) ]).
-b_line_i(23,4,1,cmd,29,[]).
-b_line_i(24,4,1,cmd,29,[ t('',107,29,0),t('Pesdepnome',23,29,0),t(=,10,29,0),t(47,2,29,0) ]).
-b_line_i(25,4,1,cmd,29,[]).
-b_line_i(26,4,1,pb,29,[ t(a,3,29,12) ]).
-b_line_i([ 26,0 ],4,1,line,29,[ t('Pesdepnome',23,0,33) ]).
-b_line_i(27,4,1,cmd,30,[ t('',128,30,0) ]).
-b_line_i(28,3,3,cmd,23,[]).
-b_line_i(29,3,3,cmd,23,[ t('',107,23,0),t('Clipesdeptotal',23,23,0),t(=,10,23,0),t('Clipesdeptotal',23,23,0),t(+,5,23,0),t('1',3,23,0) ]).
-b_line_i(30,3,3,cmd,23,[]).
-b_line_i(31,3,3,cmd,23,[ t('',111,23,0) ]).
-b_line_i(32,3,3,cmd,23,[]).
-b_line_i(33,3,3,cmd,23,[ t('',128,23,0) ]).
-b_line_i(34,1,5,cmd,41,[]).
-b_line_i(35,1,5,pb,41,[ t(a,3,41,0) ]).
-b_line_i([ 35,0 ],1,5,line,41,[ t('Total de clientes',3,0,66),t('Clipesdeptotal',23,0,83) ]).
-b_line_i([ 35,1 ],1,5,line,42,[ t(' ',3,1,0) ]).
-b_line_i(36,1,5,cmd,43,[]).
-b_line_i(38,5,1,cmd,47,[]).
-b_line_i(39,5,1,pb,47,[ t(a,3,47,4) ]).
-b_line_i([ 39,0 ],5,1,line,47,[ t('Rodapé',3,0,44) ]).
-b_line_i([ 39,1 ],5,1,line,48,[ t(' ',3,1,0) ]).
-b_line_i(40,5,1,cmd,49,[ t('',122,49,0) ]).
+b_line_i([ 2,0 ],2,1,line,1,[ t('Data:',3,0,81),t('Hora:',3,0,81),t('Time',23,0,88),t('Today',23,0,88) ]).
+b_line_i([ 2,1 ],2,1,line,2,[ t('Página:',3,1,80),t('Page',23,1,87) ]).
+b_line_i([ 2,3 ],2,1,line,4,[ t('Pgmdesc',23,3,12) ]).
+b_line_i([ 2,5 ],2,1,line,6,[ t('Clientes',3,5,5),t('Pescodinicial',23,5,13),t(até,3,5,23),t('Pescodfinal',23,5,27) ]).
+b_line_i([ 2,9 ],2,1,line,10,[ t('Cliente',3,9,5),t('Dependente(s)',3,9,33) ]).
+b_line_i(3,2,1,cmd,11,[ t('',122,11,0) ]).
+b_line_i(4,1,3,cmd,13,[]).
+b_line_i(5,3,1,cmd,15,[ t('',121,5,0),t('ORDER',39,5,4),t(13,2,5,10) ]).
+b_line_i(7,3,1,cmd,15,[]).
+b_line_i(8,3,1,cmd,15,[ t('',112,15,0),t(48,2,15,15) ]).
+b_line_i(9,3,1,cmd,15,[]).
+b_line_i(10,3,1,cmd,15,[ t('',109,15,0),t(83,2,15,7),t(=,10,15,15),t('0',3,15,17),t('.AND.',9,15,19),t(48,2,15,23),t(<>,10,15,35),t('0',3,15,38) ]).
+b_line_i(11,3,1,cmd,15,[]).
+b_line_i(12,3,1,cmd,15,[ t('',141,15,0),t('''Acessando clientes...''',3,12,12),t(',',7,15,35),t('Status',3,15,37),t(')',4,15,43) ]).
+b_line_i(13,3,1,cmd,15,[]).
+b_line_i(14,3,1,cmd,15,[ t('',107,15,0),t('Pesnome',23,15,0),t(=,10,15,0),t(14,2,15,0) ]).
+b_line_i(15,3,1,cmd,15,[]).
+b_line_i(16,3,1,pb,15,[ t(a,3,15,8) ]).
+b_line_i([ 16,0 ],3,1,line,15,[ t('Pesnome',23,0,5) ]).
+b_line_i(17,3,1,cmd,16,[]).
+b_line_i(18,3,1,cmd,16,[ t('',107,16,0),t('Clipesdeptotal',23,16,0),t(=,10,16,0),t('0',3,16,0) ]).
+b_line_i(19,3,1,cmd,16,[]).
+b_line_i(20,4,1,cmd,30,[ t('',121,20,0),t('ORDER',39,20,12),t(47,2,20,18) ]).
+b_line_i(21,4,1,cmd,30,[]).
+b_line_i(22,4,1,cmd,30,[ t('',141,30,0),t('''Acessando dependentes...''',3,22,16),t(',',7,30,42),t('Status',3,30,44),t(')',4,30,50) ]).
+b_line_i(23,4,1,cmd,30,[]).
+b_line_i(24,4,1,cmd,30,[ t('',107,30,0),t('Pesdepnome',23,30,0),t(=,10,30,0),t(47,2,30,0) ]).
+b_line_i(25,4,1,cmd,30,[]).
+b_line_i(26,4,1,pb,30,[ t(a,3,30,12) ]).
+b_line_i([ 26,0 ],4,1,line,30,[ t('Pesdepnome',23,0,33) ]).
+b_line_i(27,4,1,cmd,31,[ t('',128,31,0) ]).
+b_line_i(28,3,3,cmd,24,[]).
+b_line_i(29,3,3,cmd,24,[ t('',107,24,0),t('Clipesdeptotal',23,24,0),t(=,10,24,0),t('Clipesdeptotal',23,24,0),t(+,5,24,0),t('1',3,24,0) ]).
+b_line_i(30,3,3,cmd,24,[]).
+b_line_i(31,3,3,cmd,24,[ t('',111,24,0) ]).
+b_line_i(32,3,3,cmd,24,[]).
+b_line_i(33,3,3,cmd,24,[ t('',128,24,0) ]).
+b_line_i(34,1,5,cmd,42,[]).
+b_line_i(35,1,5,pb,42,[ t(a,3,42,0) ]).
+b_line_i([ 35,0 ],1,5,line,42,[ t('Total de clientes',3,0,66),t('Clipesdeptotal',23,0,83) ]).
+b_line_i([ 35,1 ],1,5,line,43,[ t(' ',3,1,0) ]).
+b_line_i(36,1,5,cmd,44,[]).
+b_line_i(38,5,1,cmd,48,[]).
+b_line_i(39,5,1,pb,48,[ t(a,3,48,4) ]).
+b_line_i([ 39,0 ],5,1,line,48,[ t(' ',3,0,0) ]).
+b_line_i([ 39,1 ],5,1,line,49,[ t('Rodape',3,1,46) ]).
+b_line_i([ 39,2 ],5,1,line,50,[ t(' ',3,2,0) ]).
+b_line_i(40,5,1,cmd,51,[ t('',122,51,0) ]).
  
  
  
@@ -350,32 +351,32 @@ ppi_i([ 96,96 ]).
  
 warn_gen_i(msg(spc0038,[ 'There is no index for order ',[ att(2,47) ],'; poor performance may be noticed',[ ' in group starting at line ','21','' ],'.' ])).
  
-lit_i(2,2,t('Pgmdesc',23),[ font('Courier New',9,[]),rect(26,39,324,53),outstyle(none),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pgmdesc'),ctrltype(edit,2),ispwd(0) ]).
-lit_i(3,2,t('Today',23),[ font('Courier New',9,[]),rect(598,0,662,14),outstyle(none),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Today'),ctrltype(edit,3),ispwd(0) ]).
-lit_i(4,2,t('Time',23),[ font('Courier New',9,[]),rect(598,13,662,27),outstyle(none),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Time'),ctrltype(edit,4),ispwd(0) ]).
-lit_i(5,2,t('Page',23),[ font('Courier New',9,[]),rect(598,26,649,38),outstyle(none),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Page'),ctrltype(edit,5),ispwd(0) ]).
-lit_i(6,2,t('Data:',3),[ font('MS Sans Serif',8,[ bold ]),rect(559,0,590,12),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(7,2,t('Hora:',3),[ font('MS Sans Serif',8,[ bold ]),rect(559,13,590,25),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(8,2,t('Página:',3),[ font('MS Sans Serif',8,[ bold ]),rect(546,26,589,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(9,2,t('Pescodinicial',23),[ font('Courier New',9,[]),rect(78,65,140,79),outstyle(none),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pescodinicial'),ctrltype(edit,9),ispwd(0) ]).
-lit_i(10,2,t('Pescodfinal',23),[ font('Courier New',9,[]),rect(195,65,257,79),outstyle(none),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pescodfinal'),ctrltype(edit,10),ispwd(0) ]).
-lit_i(11,2,t(até,3),[ font('MS Sans Serif',8,[ bold ]),rect(156,67,174,79),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(12,2,t('Clientes:',3),[ font('MS Sans Serif',8,[ bold ]),rect(26,67,75,79),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(13,2,t('Cliente',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,130,78,142),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(14,2,t('Dependente(s)',3),[ font('MS Sans Serif',8,[ bold ]),rect(234,130,317,142),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(15,2,rect(15),[ rect(13,143,663,143),outstyle(none),fill,back(rgb(255,255,255)),fore(rgb(100,100,100)),border(1),ctlname(''),gxcolor([]) ]).
-lit_i(1,2,window,[ title([]),rect(71,2,743,145),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(1),ctlname('P_cabecalho'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(2,2,t('Pescodinicial',23),[ font('Courier New',9,[]),rect(94,78,156,92),outstyle(none),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pescodinicial'),ctrltype(edit,2),ispwd(0) ]).
+lit_i(3,2,t('Pescodfinal',23),[ font('Courier New',9,[]),rect(195,78,257,92),outstyle(none),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pescodfinal'),ctrltype(edit,3),ispwd(0) ]).
+lit_i(4,2,t(até,3),[ font('MS Sans Serif',8,[ bold ]),rect(166,80,184,92),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(5,2,t('Clientes',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,80,84,92),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(6,2,t('Cliente',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,142,78,154),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(7,2,t('Dependente(s)',3),[ font('MS Sans Serif',8,[ bold ]),rect(234,142,317,154),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(8,2,rect(8),[ rect(26,155,650,155),outstyle(none),fill,back(rgb(255,255,255)),fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor([]) ]).
+lit_i(9,2,t('Data:',3),[ font('MS Sans Serif',8,[ bold ]),rect(573,0,604,12),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(10,2,t('Hora:',3),[ font('MS Sans Serif',8,[ bold ]),rect(573,13,604,25),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(11,2,t('Página:',3),[ font('MS Sans Serif',8,[ bold ]),rect(560,26,603,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(12,2,t('Page',23),[ font('Courier New',9,[]),rect(612,26,663,40),outstyle(none),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Page'),ctrltype(edit,12),ispwd(0) ]).
+lit_i(13,2,t('Pgmdesc',23),[ font('Courier New',9,[]),rect(87,52,614,66),outstyle(none),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pgmdesc'),ctrltype(edit,13),ispwd(0) ]).
+lit_i(14,2,t('Today',23),[ font('Courier New',9,[]),rect(617,0,672,14),outstyle(none),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Today'),ctrltype(edit,14),ispwd(0) ]).
+lit_i(15,2,t('Time',23),[ font('Courier New',9,[]),rect(617,13,672,27),outstyle(none),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Time'),ctrltype(edit,15),ispwd(0) ]).
+lit_i(1,2,window,[ title([]),rect(71,2,743,157),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(1),ctlname('P_cabecalho'),gxcolor([]),defgxcolor('BLK','WHT') ]).
 lit_i(17,16,t('Pesnome',23),[ font('Courier New',9,[]),rect(39,13,285,25),outstyle(none),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pesnome'),ctrltype(edit,17),ispwd(0) ]).
-lit_i(16,16,window,[ title([]),rect(71,149,743,174),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(1),ctlname('P_cliente'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(16,16,window,[ title([]),rect(71,161,743,186),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(1),ctlname('P_cliente'),gxcolor([]),defgxcolor('BLK','WHT') ]).
 lit_i(19,26,t('Pesdepnome',23),[ font('Courier New',9,[]),rect(234,0,583,14),outstyle(none),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pesdepnome'),ctrltype(edit,19),ispwd(0) ]).
-lit_i(18,26,window,[ title([]),rect(71,178,743,203),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(1),ctlname('P_dependente'),gxcolor([]),defgxcolor('BLK','WHT') ]).
-lit_i(21,35,t('Clipesdeptotal',23),[ font('Courier New',9,[]),rect(585,13,654,25),outstyle(none),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Clipesdeptotal'),ctrltype(edit,21),ispwd(0) ]).
+lit_i(18,26,window,[ title([]),rect(71,190,743,215),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(1),ctlname('P_dependente'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(21,35,t('Clipesdeptotal',23),[ font('Courier New',9,[]),rect(581,13,650,25),outstyle(none),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Clipesdeptotal'),ctrltype(edit,21),ispwd(0) ]).
 lit_i(22,35,t('Total de clientes',3),[ font('MS Sans Serif',8,[ bold ]),rect(468,13,563,25),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(23,35,rect(23),[ rect(13,0,663,0),outstyle(none),fill,back(rgb(255,255,255)),fore(rgb(100,100,100)),border(1),ctlname(''),gxcolor([]) ]).
-lit_i(24,35,rect(24),[ rect(13,38,663,38),outstyle(none),fill,back(rgb(255,255,255)),fore(rgb(100,100,100)),border(1),ctlname(''),gxcolor([]) ]).
-lit_i(20,35,window,[ title([]),rect(71,207,743,245),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(1),ctlname('P_totcliente'),gxcolor([]),defgxcolor('BLK','WHT') ]).
-lit_i(26,39,t('Rodapé',3),[ font('MS Sans Serif',8,[ bold ]),rect(312,0,356,12),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(25,39,window,[ title([]),rect(71,249,743,287),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(1),ctlname('P_rodape'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(23,35,rect(23),[ rect(26,0,650,0),outstyle(none),fill,back(rgb(255,255,255)),fore(rgb(200,200,200)),border(1),ctlname(''),gxcolor([]) ]).
+lit_i(20,35,window,[ title([]),rect(71,219,743,257),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(1),ctlname('P_totcliente'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(25,39,t('Rodape',3),[ font('MS Sans Serif',8,[ bold ]),rect(325,26,369,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(26,39,rect(26),[ rect(26,13,650,13),outstyle(none),fill,back(rgb(255,255,255)),fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor([]) ]).
+lit_i(24,39,window,[ title([]),rect(71,261,743,312),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(1),ctlname('P_rodape'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,15).
  
@@ -389,6 +390,7 @@ std_color_i(4,fore,8).
 std_color_i(5,fore,8).
 std_color_i(6,fore,8).
 std_color_i(7,fore,8).
+std_color_i(8,back,5).
 std_color_i(8,fore,8).
 std_color_i(9,fore,8).
 std_color_i(10,fore,8).
@@ -396,8 +398,7 @@ std_color_i(11,fore,8).
 std_color_i(12,fore,8).
 std_color_i(13,fore,8).
 std_color_i(14,fore,8).
-std_color_i(15,back,5).
-std_color_i(15,fore,6).
+std_color_i(15,fore,8).
 std_color_i(1,back,15).
 std_color_i(1,fore,6).
 std_color_i(17,fore,8).
@@ -409,21 +410,21 @@ std_color_i(18,fore,6).
 std_color_i(21,fore,8).
 std_color_i(22,fore,8).
 std_color_i(23,back,5).
-std_color_i(23,fore,6).
-std_color_i(24,back,5).
-std_color_i(24,fore,6).
+std_color_i(23,fore,0).
 std_color_i(20,back,15).
 std_color_i(20,fore,6).
+std_color_i(25,fore,8).
+std_color_i(26,back,5).
 std_color_i(26,fore,8).
-std_color_i(25,back,15).
-std_color_i(25,fore,6).
+std_color_i(24,back,15).
+std_color_i(24,fore,6).
  
 ctrl_info_i(2,2,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
 ctrl_info_i(2,3,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
-ctrl_info_i(2,4,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
-ctrl_info_i(2,5,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
-ctrl_info_i(2,9,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
-ctrl_info_i(2,10,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
+ctrl_info_i(2,12,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
+ctrl_info_i(2,13,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
+ctrl_info_i(2,14,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
+ctrl_info_i(2,15,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
 ctrl_info_i(16,17,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
 ctrl_info_i(26,19,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
 ctrl_info_i(35,21,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).

@@ -2,7 +2,7 @@
                File: Midia
         Description: Cadastro de mídias.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 11:31:32.59
+       Generated on: 6/12/2026 11:52:35.87
        Program type: Callable routine
           Main DBMS: sqlserver
 */

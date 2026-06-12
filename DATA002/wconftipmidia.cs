@@ -2,7 +2,7 @@
                File: ConfTipMidia
         Description: Configurações tipo de mídia.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 11:31:33.4
+       Generated on: 6/12/2026 11:52:36.39
        Program type: Callable routine
           Main DBMS: sqlserver
 */

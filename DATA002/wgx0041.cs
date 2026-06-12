@@ -2,7 +2,7 @@
                File: Gx0041
         Description: Lista de Seleção Direção do filme
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 11:31:34.9
+       Generated on: 6/12/2026 11:52:37.46
        Program type: Callable routine
           Main DBMS: sqlserver
 */

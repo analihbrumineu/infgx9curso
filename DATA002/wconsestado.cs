@@ -2,7 +2,7 @@
                File: ConsEstado
         Description: Consulta de Estados.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 11:31:33.41
+       Generated on: 6/12/2026 11:52:36.78
        Program type: Callable routine
           Main DBMS: sqlserver
 */

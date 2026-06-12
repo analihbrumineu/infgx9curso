@@ -3,13 +3,6 @@
  
 pgm_main_i(scr,1,'WCONTROLEDELOCADORA',[ 18,'UCONTROLEDELOCADORA','Controle de locadora.','','','','' ]).
  
-pgm_prop_i(rpt,27,'RRELTOPDELISDEVPORTIPDEMIDIA','SOAP_NAMESPACE','AgoraVaiCurso').
-pgm_prop_i(rpt,27,'RRELTOPDELISDEVPORTIPDEMIDIA',idTRN_Type,idTRN_Type_CONTAINER).
-pgm_prop_i(rpt,27,'RRELTOPDELISDEVPORTIPDEMIDIA',idTRN_Attribute,idTRN_Attribute_REQUIRED).
-pgm_prop_i(rpt,27,'RRELTOPDELISDEVPORTIPDEMIDIA',idJNDI_Name,'ejb/aRelTopDeLisDevPorTipDeMidia').
-pgm_prop_i(rpt,27,'RRELTOPDELISDEVPORTIPDEMIDIA',idDEST_Type,idDEST_Type_QUEUE).
-pgm_prop_i(rpt,27,'RRELTOPDELISDEVPORTIPDEMIDIA',idCON_FACTORY_JNDI_Name,'').
-pgm_prop_i(rpt,27,'RRELTOPDELISDEVPORTIPDEMIDIA',idDEST_JNDI_Name,'').
 pgm_prop_i(trn,9,'TCONFTIPMIDIA','URLAccess','No').
 pgm_prop_i(trn,9,'TCONFTIPMIDIA',idTRN_Type,idTRN_Type_CONTAINER).
 pgm_prop_i(trn,9,'TCONFTIPMIDIA',idTRN_Attribute,idTRN_Attribute_REQUIRED).
@@ -171,6 +164,13 @@ pgm_prop_i(rpt,28,'RRELTOPDELISCANPORCLIENTE',idJNDI_Name,'ejb/aRelTopDeLisCanPo
 pgm_prop_i(rpt,28,'RRELTOPDELISCANPORCLIENTE',idDEST_Type,idDEST_Type_QUEUE).
 pgm_prop_i(rpt,28,'RRELTOPDELISCANPORCLIENTE',idCON_FACTORY_JNDI_Name,'').
 pgm_prop_i(rpt,28,'RRELTOPDELISCANPORCLIENTE',idDEST_JNDI_Name,'').
+pgm_prop_i(rpt,27,'RRELTOPDELISDEVPORTIPDEMIDIA','SOAP_NAMESPACE','AgoraVaiCurso').
+pgm_prop_i(rpt,27,'RRELTOPDELISDEVPORTIPDEMIDIA',idTRN_Type,idTRN_Type_CONTAINER).
+pgm_prop_i(rpt,27,'RRELTOPDELISDEVPORTIPDEMIDIA',idTRN_Attribute,idTRN_Attribute_REQUIRED).
+pgm_prop_i(rpt,27,'RRELTOPDELISDEVPORTIPDEMIDIA',idJNDI_Name,'ejb/aRelTopDeLisDevPorTipDeMidia').
+pgm_prop_i(rpt,27,'RRELTOPDELISDEVPORTIPDEMIDIA',idDEST_Type,idDEST_Type_QUEUE).
+pgm_prop_i(rpt,27,'RRELTOPDELISDEVPORTIPDEMIDIA',idCON_FACTORY_JNDI_Name,'').
+pgm_prop_i(rpt,27,'RRELTOPDELISDEVPORTIPDEMIDIA',idDEST_JNDI_Name,'').
 pgm_prop_i(rpt,26,'RRELTOPDELISDEVPORCATEGORIA','SOAP_NAMESPACE','AgoraVaiCurso').
 pgm_prop_i(rpt,26,'RRELTOPDELISDEVPORCATEGORIA',idTRN_Type,idTRN_Type_CONTAINER).
 pgm_prop_i(rpt,26,'RRELTOPDELISDEVPORCATEGORIA',idTRN_Attribute,idTRN_Attribute_REQUIRED).
@@ -262,7 +262,7 @@ datastore_i(1,'CS_SCHEMA','').
 datastore_i(1,'CC_USER_PASS','').
 datastore_i(1,'CC_USER_ID','').
 datastore_i(1,'CC_SERVER','INF-ANALIH\SQLEXPRESS').
-datastore_i(1,'CC_DBNAME',xlm).
+datastore_i(1,'CC_DBNAME',kbcurso).
 datastore_i(1,'RecycleRWMin','30').
 datastore_i(1,'RecycleRWType','1').
 datastore_i(1,'RecycleRW','-1').
@@ -280,7 +280,7 @@ datastore_i(1,'TRUSTED_CONNECTION','Yes').
 datastore_i(1,'CS_CONNECT','First').
 datastore_i(1,'DBMS_PORT','').
 datastore_i(1,'CS_SERVER','INF-ANALIH\SQLEXPRESS').
-datastore_i(1,'CS_DBNAME',xlm).
+datastore_i(1,'CS_DBNAME',kbcurso).
 datastore_i(1,'CS_FLEDSNAME','').
 datastore_i(1,'CS_DRVNAME','sql server').
 datastore_i(1,'CS_DSNAME','').
@@ -326,6 +326,7 @@ subtype_group_i(2,9,[ 'LocCodigo',[ [ 116,86 ] ] ]).
 subtype_group_i(2,10,[ 'LocMidMidLocCodigo',[ [ 102,37 ],[ 107,36 ] ] ]).
 subtype_group_i(2,11,[ 'LocMidCatCodigo',[ [ 105,32 ],[ 118,33 ] ] ]).
  
+forced_rebuild_i.
  
 culture_id_i(por).
  

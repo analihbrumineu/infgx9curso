@@ -19,7 +19,7 @@
 <Description>Nome do cliente locatário</Description></Attribute>
 <Token>; poor performance may be noticed</Token>
 <Token> in group starting at line </Token>
-<Token>11</Token>
+<Token>9</Token>
 <Token></Token>
 <Token>.</Token></Warning></Warnings>
 <Errors></Errors>
@@ -51,7 +51,7 @@
 <LevelNumber>3</LevelNumber>
 <Optimizations></Optimizations>
 <LevelType>For Each</LevelType>
-<LevelBeginRow>23</LevelBeginRow>
+<LevelBeginRow>21</LevelBeginRow>
 <BaseTable>
 <Table>
 <TableId>12</TableId>
@@ -147,7 +147,7 @@
 <LevelNumber>4</LevelNumber>
 <Optimizations></Optimizations>
 <LevelType>For Each</LevelType>
-<LevelBeginRow>65</LevelBeginRow>
+<LevelBeginRow>63</LevelBeginRow>
 <BaseTable>
 <Table>
 <TableId>12</TableId>

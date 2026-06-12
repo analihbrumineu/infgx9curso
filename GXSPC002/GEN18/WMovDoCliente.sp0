@@ -90,7 +90,7 @@ rule_i(0,datastore(1,'CS_SCHEMA','')).
 rule_i(0,datastore(1,'CC_USER_PASS','')).
 rule_i(0,datastore(1,'CC_USER_ID','')).
 rule_i(0,datastore(1,'CC_SERVER','INF-ANALIH\SQLEXPRESS')).
-rule_i(0,datastore(1,'CC_DBNAME',xlm)).
+rule_i(0,datastore(1,'CC_DBNAME',kbcurso)).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -108,7 +108,7 @@ rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','')).
 rule_i(0,datastore(1,'CS_SERVER','INF-ANALIH\SQLEXPRESS')).
-rule_i(0,datastore(1,'CS_DBNAME',xlm)).
+rule_i(0,datastore(1,'CS_DBNAME',kbcurso)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
 rule_i(0,datastore(1,'CS_DSNAME','')).

@@ -2,7 +2,7 @@
                File: PeMidia
         Description: Cadastro de mídias.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 11:31:35.47
+       Generated on: 6/12/2026 11:52:38.88
        Program type: Callable routine
           Main DBMS: sqlserver
 */

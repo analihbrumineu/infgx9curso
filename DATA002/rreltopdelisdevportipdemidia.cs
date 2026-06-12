@@ -2,7 +2,7 @@
                File: RelTopDeLisDevPorTipDeMidia
         Description: Relatório de topo de lista sobre o total de devoluções por formato de mídia.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 11:35:18.98
+       Generated on: 6/12/2026 11:52:29.76
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -232,7 +232,7 @@ namespace GeneXus.Programs {
                   }
                   H0R0( false, 39) ;
                   getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-                  getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV17LocMid, "@!")), 52, Gx_line+12, 157, Gx_line+27, 0) ;
+                  getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV17LocMid, "@!")), 39, Gx_line+12, 144, Gx_line+27, 0) ;
                   Gx_OldLine = Gx_line ;
                   Gx_line = (int)(Gx_line+39) ;
                   AV12TotDev = AV15Item.gxTpr_Midtipreltotal ;
@@ -320,7 +320,7 @@ namespace GeneXus.Programs {
                getPrinter().GxDrawText("De", 39, Gx_line+91, 55, Gx_line+104, 0+256) ;
                getPrinter().GxDrawText("até", 143, Gx_line+91, 161, Gx_line+104, 0+256) ;
                getPrinter().GxDrawText("Seleção", 39, Gx_line+117, 85, Gx_line+130, 0+256) ;
-               getPrinter().GxDrawText("Formato", 26, Gx_line+182, 71, Gx_line+195, 0+256) ;
+               getPrinter().GxDrawText("Formato", 39, Gx_line+182, 84, Gx_line+195, 0+256) ;
                getPrinter().GxDrawText("Data:", 567, Gx_line+0, 598, Gx_line+13, 0+256) ;
                getPrinter().GxDrawText("Hora:", 567, Gx_line+13, 598, Gx_line+26, 0+256) ;
                getPrinter().GxDrawText("Página:", 554, Gx_line+26, 597, Gx_line+39, 0+256) ;

@@ -2,7 +2,7 @@
                File: PeFilme
         Description: Cadastro de filmes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 11:31:35.18
+       Generated on: 6/12/2026 11:52:38.56
        Program type: Callable routine
           Main DBMS: sqlserver
 */

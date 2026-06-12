@@ -2,7 +2,7 @@
                File: ValPesFunLogin
         Description: Encontrar funcionário cadastrado.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 11:31:25.28
+       Generated on: 6/12/2026 11:52:28.33
        Program type: Callable routine
           Main DBMS: sqlserver
 */

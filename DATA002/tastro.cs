@@ -2,7 +2,7 @@
                File: Astro
         Description: Cadastro de astros.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 11:31:26.82
+       Generated on: 6/12/2026 11:52:29.88
        Program type: Callable routine
           Main DBMS: sqlserver
 */

@@ -1,0 +1,258 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>2</ObjCls>
+<ObjId>31</ObjId>
+<ObjName>RelTopDeLisCanPorCategoria</ObjName>
+<ObjDesc>Relatório de topo de lista sobre total de cancelamentos por categoria.</ObjDesc>
+<ObjPgmName>RRelTopDeLisCanPorCategoria</ObjPgmName>
+<ObjClsName>Report</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<OutputDevices>
+<Device>Screen</Device>
+<Device>Printer</Device></OutputDevices>
+<Generator>
+<GenId>0</GenId>
+<GenName>(Default)</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Datinicial</VarId>
+<VarName>&amp;DatInicial</VarName></Variable></Parameter>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Datfinal</VarId>
+<VarName>&amp;DatFinal</VarName></Variable></Parameter>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Selecao</VarId>
+<VarName>&amp;Selecao</VarName></Variable></Parameter></Parameters>
+<Levels>
+<Level>
+<LevelNumber>3</LevelNumber>
+<Optimizations></Optimizations>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>21</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>13</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Dados da mídia locada</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>ILOCACAOLOCACAOMIDIA1</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Token>FirstRecord</Token></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Token>NotEndOfTable</Token></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<Condition>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute>
+<Token>&gt;=</Token>
+<Variable>
+<VarId>Datinicial</VarId>
+<VarName>&amp;DatInicial</VarName></Variable>
+<Token>and</Token>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute>
+<Token>&lt;=</Token>
+<Variable>
+<VarId>Datfinal</VarId>
+<VarName>&amp;DatFinal</VarName></Variable>
+<Token>and</Token>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute>
+<Token>&lt;&gt;</Token>
+<Token>ctod(</Token>
+<Token>'0'</Token>
+<Token>)</Token></Condition></NonOptimizedWhere>
+<JoinLocation>0</JoinLocation>
+<NavigationTree>
+<Table>
+<TableId>13</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Dados da mídia locada</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute>
+<Attribute>
+<AttriId>102</AttriId>
+<AttriName>LocMidMidCodigo</AttriName>
+<Description>Código da mídia a ser locada</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute>
+<Attribute>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute></Into>
+<Tables>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute></Into>
+<Tables></Tables></Table>
+<Table>
+<TableId>6</TableId>
+<TableName>CATEGORIA</TableName>
+<Description>Cadastro de categorias.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>118</AttriId>
+<AttriName>LocMidCatNome</AttriName>
+<Description>Nome da categoria do filme a ser locado</Description></Attribute></Into>
+<JoinType>Outer</JoinType>
+<Tables></Tables></Table></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<Levels>
+<Level>
+<LevelNumber>4</LevelNumber>
+<Optimizations></Optimizations>
+<LevelType>Break</LevelType>
+<LevelBeginRow>42</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>13</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Dados da mídia locada</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>ILOCACAOLOCACAOMIDIA1</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Token>FirstRecord</Token></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Attribute>
+<AttriId>105</AttriId>
+<AttriName>LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute>
+<Token>=</Token>
+<Attribute>
+<AttriId>105</AttriId>
+<AttriName>@LocMidCatCodigo</AttriName>
+<Description>Código da categoria do filme a ser locado</Description></Attribute></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<Condition>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute>
+<Token>&gt;=</Token>
+<Variable>
+<VarId>Datinicial</VarId>
+<VarName>&amp;DatInicial</VarName></Variable>
+<Token>and</Token>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute>
+<Token>&lt;=</Token>
+<Variable>
+<VarId>Datfinal</VarId>
+<VarName>&amp;DatFinal</VarName></Variable>
+<Token>and</Token>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute>
+<Token>&lt;&gt;</Token>
+<Token>ctod(</Token>
+<Token>'0'</Token>
+<Token>)</Token></Condition></NonOptimizedWhere>
+<JoinLocation>0</JoinLocation>
+<NavigationTree>
+<Table>
+<TableId>13</TableId>
+<TableName>LOCACAOLOCACAOMIDIA</TableName>
+<Description>Dados da mídia locada</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute>
+<Attribute>
+<AttriId>102</AttriId>
+<AttriName>LocMidMidCodigo</AttriName>
+<Description>Código da mídia a ser locada</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></Into>
+<Tables>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute></Into>
+<Tables></Tables></Table></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<Levels></Levels></Level></Levels></Level></Levels></ObjectSpec>

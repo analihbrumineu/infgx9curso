@@ -19,7 +19,7 @@
 <Description>Nome do filme a ser locado</Description></Attribute>
 <Token>; poor performance may be noticed</Token>
 <Token> in group starting at line </Token>
-<Token>32</Token>
+<Token>30</Token>
 <Token></Token>
 <Token>.</Token></Warning></Warnings>
 <Errors></Errors>
@@ -51,7 +51,7 @@
 <LevelNumber>3</LevelNumber>
 <Optimizations></Optimizations>
 <LevelType>For Each</LevelType>
-<LevelBeginRow>23</LevelBeginRow>
+<LevelBeginRow>21</LevelBeginRow>
 <BaseTable>
 <Table>
 <TableId>13</TableId>
@@ -154,7 +154,7 @@
 <LevelNumber>4</LevelNumber>
 <Optimizations></Optimizations>
 <LevelType>Break</LevelType>
-<LevelBeginRow>44</LevelBeginRow>
+<LevelBeginRow>42</LevelBeginRow>
 <BaseTable>
 <Table>
 <TableId>13</TableId>

@@ -2,7 +2,7 @@
                File: RelCliComDependente
         Description: Relatório de clientes com dependentes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 11:31:25.41
+       Generated on: 6/12/2026 11:52:28.45
        Program type: Callable routine
           Main DBMS: sqlserver
 */
@@ -193,10 +193,9 @@ namespace GeneXus.Programs {
             }
             pr_default.close(0);
             H0A0( false, 39) ;
-            getPrinter().GxDrawLine(13, Gx_line+0, 663, Gx_line+0, 1, 100, 100, 100, 0) ;
-            getPrinter().GxDrawLine(13, Gx_line+38, 663, Gx_line+38, 1, 100, 100, 100, 0) ;
+            getPrinter().GxDrawLine(26, Gx_line+0, 650, Gx_line+0, 1, 200, 200, 200, 0) ;
             getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-            getPrinter().GxDrawText(StringUtil.Format( (decimal)(AV13CliPes), "ZZZZZZZZZ9"), 585, Gx_line+13, 654, Gx_line+26, 2) ;
+            getPrinter().GxDrawText(StringUtil.Format( (decimal)(AV13CliPes), "ZZZZZZZZZ9"), 581, Gx_line+13, 650, Gx_line+26, 2) ;
             getPrinter().GxAttris("MS Sans Serif", 8, true, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
             getPrinter().GxDrawText("Total de clientes", 468, Gx_line+13, 563, Gx_line+26, 0+256) ;
             Gx_OldLine = Gx_line ;
@@ -239,10 +238,11 @@ namespace GeneXus.Programs {
                {
                   /* Print footers */
                   Gx_line = P_lines ;
+                  getPrinter().GxDrawLine(26, Gx_line+13, 650, Gx_line+13, 1, 0, 0, 0, 0) ;
                   getPrinter().GxAttris("MS Sans Serif", 8, true, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-                  getPrinter().GxDrawText("Rodapé", 312, Gx_line+0, 356, Gx_line+13, 0+256) ;
+                  getPrinter().GxDrawText("Rodape", 325, Gx_line+26, 369, Gx_line+39, 0+256) ;
                   Gx_OldLine = Gx_line ;
-                  Gx_line = (int)(Gx_line+39) ;
+                  Gx_line = (int)(Gx_line+52) ;
                   if ( ! bFoot )
                   {
                      getPrinter().GxEndPage() ;
@@ -259,24 +259,24 @@ namespace GeneXus.Programs {
                Gx_line = (int)(Gx_line+(M_top*lineHeight)) ;
                /* Print headers */
                getPrinter().GxStartPage() ;
-               getPrinter().GxDrawLine(13, Gx_line+143, 663, Gx_line+143, 1, 100, 100, 100, 0) ;
+               getPrinter().GxDrawLine(26, Gx_line+155, 650, Gx_line+155, 1, 0, 0, 0, 0) ;
                getPrinter().GxAttris("Courier New", 9, false, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-               getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV17Pgmdes, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")), 26, Gx_line+39, 324, Gx_line+54, 0) ;
-               getPrinter().GxDrawText(StringUtil.Format( Gx_date, "99/99/99"), 598, Gx_line+0, 662, Gx_line+15, 0) ;
-               getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( Gx_time, "XXXXXXXX")), 598, Gx_line+13, 662, Gx_line+28, 0) ;
-               getPrinter().GxDrawText(StringUtil.Format( (decimal)(Gx_page), "ZZZZZ9"), 598, Gx_line+26, 649, Gx_line+39, 2) ;
-               getPrinter().GxDrawText(StringUtil.Format( (decimal)(AV9PesCodI), "ZZZZZZZZ9"), 78, Gx_line+65, 140, Gx_line+80, 2+256) ;
-               getPrinter().GxDrawText(StringUtil.Format( (decimal)(AV10PesCod), "ZZZZZZZZ9"), 195, Gx_line+65, 257, Gx_line+80, 2+256) ;
+               getPrinter().GxDrawText(StringUtil.Format( (decimal)(AV9PesCodI), "ZZZZZZZZ9"), 94, Gx_line+78, 156, Gx_line+93, 2+256) ;
+               getPrinter().GxDrawText(StringUtil.Format( (decimal)(AV10PesCod), "ZZZZZZZZ9"), 195, Gx_line+78, 257, Gx_line+93, 2+256) ;
+               getPrinter().GxDrawText(StringUtil.Format( (decimal)(Gx_page), "ZZZZZ9"), 612, Gx_line+26, 663, Gx_line+41, 2) ;
+               getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( AV18Pgmdes, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")), 87, Gx_line+52, 614, Gx_line+67, 0) ;
+               getPrinter().GxDrawText(StringUtil.Format( Gx_date, "99/99/99"), 617, Gx_line+0, 672, Gx_line+15, 0+256) ;
+               getPrinter().GxDrawText(StringUtil.RTrim( StringUtil.Format( Gx_time, "XXXXXXXX")), 617, Gx_line+13, 672, Gx_line+28, 0+256) ;
                getPrinter().GxAttris("MS Sans Serif", 8, true, false, false, false, 0, 0, 0, 0, 0, 255, 255, 255) ;
-               getPrinter().GxDrawText("Data:", 559, Gx_line+0, 590, Gx_line+13, 0+256) ;
-               getPrinter().GxDrawText("Hora:", 559, Gx_line+13, 590, Gx_line+26, 0+256) ;
-               getPrinter().GxDrawText("Página:", 546, Gx_line+26, 589, Gx_line+39, 0+256) ;
-               getPrinter().GxDrawText("até", 156, Gx_line+67, 174, Gx_line+80, 0+256) ;
-               getPrinter().GxDrawText("Clientes:", 26, Gx_line+67, 75, Gx_line+80, 0+256) ;
-               getPrinter().GxDrawText("Cliente", 39, Gx_line+130, 78, Gx_line+143, 0+256) ;
-               getPrinter().GxDrawText("Dependente(s)", 234, Gx_line+130, 317, Gx_line+143, 0+256) ;
+               getPrinter().GxDrawText("até", 166, Gx_line+80, 184, Gx_line+93, 0+256) ;
+               getPrinter().GxDrawText("Clientes", 39, Gx_line+80, 84, Gx_line+93, 0+256) ;
+               getPrinter().GxDrawText("Cliente", 39, Gx_line+142, 78, Gx_line+155, 0+256) ;
+               getPrinter().GxDrawText("Dependente(s)", 234, Gx_line+142, 317, Gx_line+155, 0+256) ;
+               getPrinter().GxDrawText("Data:", 573, Gx_line+0, 604, Gx_line+13, 0+256) ;
+               getPrinter().GxDrawText("Hora:", 573, Gx_line+13, 604, Gx_line+26, 0+256) ;
+               getPrinter().GxDrawText("Página:", 560, Gx_line+26, 603, Gx_line+39, 0+256) ;
                Gx_OldLine = Gx_line ;
-               Gx_line = (int)(Gx_line+144) ;
+               Gx_line = (int)(Gx_line+156) ;
                if (true) break;
             }
             else
@@ -360,7 +360,7 @@ namespace GeneXus.Programs {
          A47PesDepN = "" ;
          n47PesDepN = false ;
          AV14PesDep = "" ;
-         AV17Pgmdes = "" ;
+         AV18Pgmdes = "" ;
          Gx_date = (DateTime)(DateTime.MinValue) ;
          Gx_time = "" ;
          Gx_cnt = 0 ;
@@ -383,7 +383,7 @@ namespace GeneXus.Programs {
          Gx_line = 0 ;
          Gx_time = DateTimeUtil.Time( ) ;
          Gx_date = DateTimeUtil.Today( ) ;
-         AV17Pgmdes = "Relatório de clientes com dependentes." ;
+         AV18Pgmdes = "Relatório de clientes com dependentes." ;
          context.Gx_err = 0 ;
          if ( ( String.CompareOrdinal(Gx_dev.TrimEnd(' '), "S".TrimEnd(' ') ) == 0 ) )
          {
@@ -412,7 +412,7 @@ namespace GeneXus.Programs {
       private int E13PesCodi ;
       private long AV13CliPes ;
       private String scmdbuf ;
-      private String AV17Pgmdes ;
+      private String AV18Pgmdes ;
       private String Gx_time ;
       private DateTime Gx_date ;
       private bool askCanceled ;

@@ -2,7 +2,7 @@
                File: Gx0051
         Description: Lista de Seleção Elenco do filme
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 11:31:34.13
+       Generated on: 6/12/2026 11:52:37.50
        Program type: Callable routine
           Main DBMS: sqlserver
 */

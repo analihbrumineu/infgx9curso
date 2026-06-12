@@ -33,9 +33,9 @@ lac_i(4,[ [] ]).
  
 default_i(e('Output',2,2,'''SCR''')).
 default_i(e('Outdev',2,2,'''N''')).
-default_i(e('Pgmdesc',2,2,'"Relatório do total de mídias por categoria"')).
 default_i(e('Time',2,2,'systime(')).
 default_i(e('Today',2,2,'''today''')).
+default_i(e('Pgmdesc',2,2,'"Relatório do total de mídias por categoria"')).
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
 rule_i(0,datastore(1,'LOCK_RETRY','10')).
@@ -52,7 +52,7 @@ rule_i(0,datastore(1,'CS_SCHEMA','')).
 rule_i(0,datastore(1,'CC_USER_PASS','')).
 rule_i(0,datastore(1,'CC_USER_ID','')).
 rule_i(0,datastore(1,'CC_SERVER','INF-ANALIH\SQLEXPRESS')).
-rule_i(0,datastore(1,'CC_DBNAME',xlm)).
+rule_i(0,datastore(1,'CC_DBNAME',kbcurso)).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -70,7 +70,7 @@ rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','')).
 rule_i(0,datastore(1,'CS_SERVER','INF-ANALIH\SQLEXPRESS')).
-rule_i(0,datastore(1,'CS_DBNAME',xlm)).
+rule_i(0,datastore(1,'CS_DBNAME',kbcurso)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -159,9 +159,9 @@ rule_i(0,output('ASK')).
  
 a_i(1,1,f,'Line',[],[ [],[ t(0,3) ] ]).
 a_i(2,2,f,'Page',[],[ [],[ t('Page',23),t(+,5),t('1',3) ] ]).
-a_i(3,1,f,'Pgmdesc',[],[ [],[ t('"Relatório do total de mídias por categoria"',3) ] ]).
-a_i(4,1,f,'Time',[],[ [],[ t('systime(',1),t(')',4) ] ]).
-a_i(5,1,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
+a_i(3,1,f,'Time',[],[ [],[ t('systime(',1),t(')',4) ] ]).
+a_i(4,1,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
+a_i(5,1,f,'Pgmdesc',[],[ [],[ t('"Relatório do total de mídias por categoria"',3) ] ]).
 a_i(6,1,f,'Err',[],[ [],[ t('0',3) ] ]).
 a_i(7,4,t,9,[],[ [ [ [],33,33 ],[ [],32,32 ] ],'',[] ]).
 a_i(8,4,r,3,[],[ [ [ 9,28,28 ] ],'IFILME',[] ]).
@@ -177,11 +177,11 @@ v_i(f,o,1,'Line').
 v_i(f,i,2,'Page').
 v_i(f,o,2,'Page').
 v_i(f,i,3,[]).
-v_i(f,o,3,'Pgmdesc').
+v_i(f,o,3,'Time').
 v_i(f,i,4,[]).
-v_i(f,o,4,'Time').
+v_i(f,o,4,'Today').
 v_i(f,i,5,[]).
-v_i(f,o,5,'Today').
+v_i(f,o,5,'Pgmdesc').
 v_i(f,i,6,[]).
 v_i(f,o,6,'Err').
 v_i(t,i,7,33).
@@ -219,10 +219,10 @@ attri_i(28,[ 'FilCodigo',int,9,0,'ZZZZZZZZ9',0,'Código do filme','',0 ]).
 attri_i(32,[ 'CatCodigo',int,9,0,'ZZZZZZZZ9',0,'Código da categoria do filme','',0 ]).
 attri_i(33,[ 'CatNome',svchar,50,0,'@!',0,'Nome da categoria do filme','',0 ]).
 attri_i(36,[ 'MidSituacao',int,1,0,'9',0,'Situação da mídia','',0 ]).
-attri_i('Pgmdesc',[ 'Pgmdesc',char,30,0,'',1,'Program description','',22 ]).
-attri_i('Page',[ 'Gx_page',int,6,0,'ZZZZZ9',0,'Page number','',21 ]).
-attri_i('Time',[ 'Gx_time',char,8,0,'',1,'','',20 ]).
-attri_i('Today',[ 'Gx_date',date,8,0,'99/99/99',1,'','',19 ]).
+attri_i('Time',[ 'Gx_time',char,8,0,'',1,'','',22 ]).
+attri_i('Today',[ 'Gx_date',date,8,0,'99/99/99',1,'','',21 ]).
+attri_i('Pgmdesc',[ 'Pgmdesc',char,30,0,'',1,'Program description','',20 ]).
+attri_i('Page',[ 'Gx_page',int,6,0,'ZZZZZ9',0,'Page number','',19 ]).
 attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',18 ]).
 attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',17 ]).
 attri_i('Catcodigo',[ 'CatCodigo',int,9,0,'ZZZZZZZZ9',0,'Cat Codigo','',16 ]).
@@ -272,11 +272,11 @@ b_group_i(1,4,nvg,3,24,24).
 b_group_i(3,1,lit,0,35,35).
 b_group_i(3,2,nvg,4,35,35).
 b_group_i(4,1,lit,0,46,46).
-b_group_i(3,3,lit,0,51,42).
-b_group_i(1,5,lit,0,54,34).
-b_group_i(1,6,foot,5,34,34).
-b_group_i(5,1,lit,0,56,59).
-b_group_i(1,7,lit,0,61,0).
+b_group_i(3,3,lit,0,51,43).
+b_group_i(1,5,lit,0,55,35).
+b_group_i(1,6,foot,5,35,35).
+b_group_i(5,1,lit,0,57,60).
+b_group_i(1,7,lit,0,62,0).
  
 b_line_i(0,1,1,cmd,0,[ t('',152,0,0) ]).
 b_line_i(1,1,1,cmd,0,[]).
@@ -299,11 +299,12 @@ b_line_i(17,1,1,cmd,0,[ t('',154,0,0) ]).
 b_line_i(18,1,1,cmd,0,[]).
 b_line_i(20,2,1,cmd,20,[]).
 b_line_i(21,2,1,pb,20,[ t(a,3,20,4) ]).
-b_line_i([ 21,0 ],2,1,line,20,[ t('Data:',3,0,79),t('Hora:',3,0,79),t('Time',23,0,85),t('Today',23,0,85) ]).
-b_line_i([ 21,1 ],2,1,line,21,[ t('Pgmdesc',23,1,24),t('Página:',3,1,78),t('Page',23,1,85) ]).
-b_line_i([ 21,4 ],2,1,line,24,[ t('Categoria',3,4,3),t('Catcodinicial',23,4,13),t(até,3,4,26),t('Catcodfinal',23,4,31) ]).
-b_line_i([ 21,5 ],2,1,line,25,[ t('Total de mídias em',3,5,3),t('Midtipdescricao',23,5,20) ]).
-b_line_i([ 21,10 ],2,1,line,30,[ t('Categoria',3,10,3),t('Total de mídias',3,10,59) ]).
+b_line_i([ 21,0 ],2,1,line,20,[ t('Data:',3,0,81),t('Hora:',3,0,81),t('Time',23,0,88),t('Today',23,0,88) ]).
+b_line_i([ 21,1 ],2,1,line,21,[ t('Página:',3,1,80),t('Page',23,1,87) ]).
+b_line_i([ 21,3 ],2,1,line,23,[ t('Pgmdesc',23,3,12) ]).
+b_line_i([ 21,5 ],2,1,line,25,[ t('Categoria',3,5,5),t('Catcodinicial',23,5,14),t(até,3,5,27),t('Catcodfinal',23,5,31) ]).
+b_line_i([ 21,6 ],2,1,line,26,[ t('Total de mídias em',3,6,5),t('Midtipdescricao',23,6,22) ]).
+b_line_i([ 21,10 ],2,1,line,30,[ t('Categoria',3,10,5),t('Total de mídias',3,10,80) ]).
 b_line_i(22,2,1,cmd,31,[ t('',122,31,0) ]).
 b_line_i(23,1,3,cmd,14,[]).
 b_line_i(24,3,1,cmd,35,[ t('',121,24,0),t('ORDER',39,24,4),t(33,2,24,10),t(32,2,24,18) ]).
@@ -323,15 +324,16 @@ b_line_i(39,4,1,cmd,46,[]).
 b_line_i(40,4,1,cmd,46,[ t('',128,46,0) ]).
 b_line_i(41,3,3,cmd,41,[]).
 b_line_i(42,3,3,pb,41,[ t(a,3,41,4) ]).
-b_line_i([ 42,0 ],3,3,line,41,[ t('Catnome',23,0,5),t('Totmidia',23,0,59) ]).
-b_line_i(43,3,3,cmd,42,[ t('',128,42,0) ]).
-b_line_i(44,1,5,cmd,34,[]).
-b_line_i(46,5,1,cmd,56,[]).
-b_line_i(47,5,1,pb,56,[ t(a,3,56,4) ]).
-b_line_i([ 47,0 ],5,1,line,56,[ t(' ',3,0,0) ]).
-b_line_i([ 47,1 ],5,1,line,57,[ t('Rodape',3,1,46) ]).
-b_line_i([ 47,2 ],5,1,line,58,[ t(' ',3,2,0) ]).
-b_line_i(48,5,1,cmd,59,[ t('',122,59,0) ]).
+b_line_i([ 42,0 ],3,3,line,41,[ t('Catnome',23,0,5),t('Totmidia',23,0,83) ]).
+b_line_i([ 42,1 ],3,3,line,42,[ t(' ',3,1,0) ]).
+b_line_i(43,3,3,cmd,43,[ t('',128,43,0) ]).
+b_line_i(44,1,5,cmd,35,[]).
+b_line_i(46,5,1,cmd,57,[]).
+b_line_i(47,5,1,pb,57,[ t(a,3,57,4) ]).
+b_line_i([ 47,0 ],5,1,line,57,[ t(' ',3,0,0) ]).
+b_line_i([ 47,1 ],5,1,line,58,[ t('Rodape',3,1,46) ]).
+b_line_i([ 47,2 ],5,1,line,59,[ t(' ',3,2,0) ]).
+b_line_i(48,5,1,cmd,60,[ t('',122,60,0) ]).
  
  
  
@@ -358,29 +360,29 @@ ppi_i([ 96,96 ]).
  
 warn_gen_i(msg(spc0038,[ 'There is no index for order ',[ att(2,33),', ',att(2,32) ],'; poor performance may be noticed',[ ' in group starting at line ','36','' ],'.' ])).
  
-lit_i(2,21,t('Data:',3),[ font('MS Sans Serif',8,[ bold ]),rect(559,0,590,12),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(3,21,t('Today',23),[ font('Courier New',9,[]),rect(598,0,662,14),outstyle(none),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Today'),ctrltype(edit,3),ispwd(0) ]).
-lit_i(4,21,t('Hora:',3),[ font('MS Sans Serif',8,[ bold ]),rect(559,13,590,25),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(5,21,t('Página:',3),[ font('MS Sans Serif',8,[ bold ]),rect(546,26,589,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(6,21,t('Time',23),[ font('Courier New',9,[]),rect(598,13,662,27),outstyle(none),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Time'),ctrltype(edit,6),ispwd(0) ]).
-lit_i(7,21,t('Page',23),[ font('Courier New',9,[]),rect(598,26,649,40),outstyle(none),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Page'),ctrltype(edit,7),ispwd(0) ]).
-lit_i(8,21,t('Pgmdesc',23),[ font('Courier New',9,[]),rect(171,27,495,41),outstyle(none),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pgmdesc'),ctrltype(edit,8),ispwd(0) ]).
-lit_i(9,21,t('Categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(26,67,80,79),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(10,21,t('Catcodinicial',23),[ font('Courier New',9,[]),rect(91,65,166,79),outstyle(none),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catcodinicial'),ctrltype(edit,10),ispwd(0) ]).
-lit_i(11,21,t(até,3),[ font('MS Sans Serif',8,[ bold ]),rect(182,67,200,79),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(12,21,t('Catcodfinal',23),[ font('Courier New',9,[]),rect(221,65,298,79),outstyle(none),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catcodfinal'),ctrltype(edit,12),ispwd(0) ]).
-lit_i(13,21,t('Categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(26,151,80,163),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(14,21,t('Total de mídias em',3),[ font('MS Sans Serif',8,[ bold ]),rect(26,78,134,90),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(15,21,t('Midtipdescricao',23),[ font('Courier New',9,[]),rect(143,78,194,92),outstyle(none),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Midtipdescricao'),ctrltype(edit,15),ispwd(0) ]).
-lit_i(16,21,t('Total de mídias',3),[ font('MS Sans Serif',8,[ bold ]),rect(416,151,504,163),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
-lit_i(17,21,rect(17),[ rect(26,163,650,163),outstyle(none),fill,back(rgb(255,255,255)),fore(rgb(100,100,100)),border(1),ctlname(''),gxcolor([]) ]).
+lit_i(2,21,t('Categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,80,93,92),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(3,21,t('Catcodinicial',23),[ font('Courier New',9,[]),rect(104,78,179,92),outstyle(none),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catcodinicial'),ctrltype(edit,3),ispwd(0) ]).
+lit_i(4,21,t(até,3),[ font('MS Sans Serif',8,[ bold ]),rect(191,80,209,92),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(5,21,t('Catcodfinal',23),[ font('Courier New',9,[]),rect(221,78,298,92),outstyle(none),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catcodfinal'),ctrltype(edit,5),ispwd(0) ]).
+lit_i(6,21,t('Categoria',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,151,93,163),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(7,21,t('Midtipdescricao',23),[ font('Courier New',9,[]),rect(156,95,207,109),outstyle(none),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Midtipdescricao'),ctrltype(edit,7),ispwd(0) ]).
+lit_i(8,21,t('Total de mídias',3),[ font('MS Sans Serif',8,[ bold ]),rect(562,151,650,163),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(9,21,rect(9),[ rect(26,163,650,163),outstyle(none),fill,back(rgb(255,255,255)),fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor([]) ]).
+lit_i(10,21,t('Total de mídias em',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,96,147,108),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(11,21,t('Data:',3),[ font('MS Sans Serif',8,[ bold ]),rect(573,0,604,12),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(12,21,t('Hora:',3),[ font('MS Sans Serif',8,[ bold ]),rect(573,13,604,25),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(13,21,t('Página:',3),[ font('MS Sans Serif',8,[ bold ]),rect(560,26,603,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(14,21,t('Page',23),[ font('Courier New',9,[]),rect(612,26,663,40),outstyle(none),fill,align(right),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Page'),ctrltype(edit,14),ispwd(0) ]).
+lit_i(15,21,t('Pgmdesc',23),[ font('Courier New',9,[]),rect(87,52,614,66),outstyle(none),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Pgmdesc'),ctrltype(edit,15),ispwd(0) ]).
+lit_i(16,21,t('Today',23),[ font('Courier New',9,[]),rect(617,0,672,14),outstyle(none),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Today'),ctrltype(edit,16),ispwd(0) ]).
+lit_i(17,21,t('Time',23),[ font('Courier New',9,[]),rect(617,13,672,27),outstyle(none),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Time'),ctrltype(edit,17),ispwd(0) ]).
 lit_i(1,21,window,[ title([]),rect(71,2,743,165),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(1),ctlname('P_cabecalho'),gxcolor([]),defgxcolor('BLK','WHT') ]).
-lit_i(19,42,t('Catnome',23),[ font('Courier New',9,[]),rect(39,2,272,16),outstyle(none),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catnome'),ctrltype(edit,19),ispwd(0) ]).
-lit_i(20,42,t('Totmidia',23),[ font('Courier New',9,[]),rect(416,0,485,14),outstyle(none),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Totmidia'),ctrltype(edit,20),ispwd(0) ]).
-lit_i(18,42,window,[ title([]),rect(71,169,743,186),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(1),ctlname('P_categoria'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(19,42,t('Catnome',23),[ font('Courier New',9,[]),rect(39,13,272,27),outstyle(none),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Catnome'),ctrltype(edit,19),ispwd(0) ]).
+lit_i(20,42,t('Totmidia',23),[ font('Courier New',9,[]),rect(581,11,650,25),outstyle(none),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Totmidia'),ctrltype(edit,20),ispwd(0) ]).
+lit_i(18,42,window,[ title([]),rect(71,169,743,200),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(1),ctlname('P_categoria'),gxcolor([]),defgxcolor('BLK','WHT') ]).
 lit_i(22,47,t('Rodape',3),[ font('MS Sans Serif',8,[ bold ]),rect(325,26,369,38),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(23,47,rect(23),[ rect(26,13,650,13),outstyle(none),fill,back(rgb(255,255,255)),fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor([]) ]).
-lit_i(21,47,window,[ title([]),rect(71,193,743,244),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(1),ctlname('P_rodape'),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(21,47,window,[ title([]),rect(71,204,743,255),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(1),ctlname('P_rodape'),gxcolor([]),defgxcolor('BLK','WHT') ]).
  
 grid_i(7,15).
  
@@ -395,6 +397,7 @@ std_color_i(5,fore,8).
 std_color_i(6,fore,8).
 std_color_i(7,fore,8).
 std_color_i(8,fore,8).
+std_color_i(9,back,5).
 std_color_i(9,fore,8).
 std_color_i(10,fore,8).
 std_color_i(11,fore,8).
@@ -403,8 +406,7 @@ std_color_i(13,fore,8).
 std_color_i(14,fore,8).
 std_color_i(15,fore,8).
 std_color_i(16,fore,8).
-std_color_i(17,back,5).
-std_color_i(17,fore,6).
+std_color_i(17,fore,8).
 std_color_i(1,back,15).
 std_color_i(1,fore,6).
 std_color_i(19,fore,8).
@@ -418,12 +420,12 @@ std_color_i(21,back,15).
 std_color_i(21,fore,6).
  
 ctrl_info_i(21,3,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
-ctrl_info_i(21,6,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
+ctrl_info_i(21,5,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
 ctrl_info_i(21,7,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
-ctrl_info_i(21,8,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
-ctrl_info_i(21,10,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
-ctrl_info_i(21,12,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
+ctrl_info_i(21,14,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
 ctrl_info_i(21,15,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
+ctrl_info_i(21,16,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
+ctrl_info_i(21,17,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
 ctrl_info_i(42,19,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
 ctrl_info_i(42,20,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
  

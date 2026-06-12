@@ -52,7 +52,7 @@ rule_i(0,datastore(1,'CS_SCHEMA','')).
 rule_i(0,datastore(1,'CC_USER_PASS','')).
 rule_i(0,datastore(1,'CC_USER_ID','')).
 rule_i(0,datastore(1,'CC_SERVER','INF-ANALIH\SQLEXPRESS')).
-rule_i(0,datastore(1,'CC_DBNAME',xlm)).
+rule_i(0,datastore(1,'CC_DBNAME',kbcurso)).
 rule_i(0,datastore(1,'RecycleRWMin','30')).
 rule_i(0,datastore(1,'RecycleRWType','1')).
 rule_i(0,datastore(1,'RecycleRW','-1')).
@@ -70,7 +70,7 @@ rule_i(0,datastore(1,'TRUSTED_CONNECTION','Yes')).
 rule_i(0,datastore(1,'CS_CONNECT','First')).
 rule_i(0,datastore(1,'DBMS_PORT','')).
 rule_i(0,datastore(1,'CS_SERVER','INF-ANALIH\SQLEXPRESS')).
-rule_i(0,datastore(1,'CS_DBNAME',xlm)).
+rule_i(0,datastore(1,'CS_DBNAME',kbcurso)).
 rule_i(0,datastore(1,'CS_FLEDSNAME','')).
 rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
 rule_i(0,datastore(1,'CS_DSNAME','')).
@@ -282,7 +282,7 @@ b_line_i([ 2,1 ],2,1,line,2,[ t('Página:',3,1,79),t('Page',23,1,86) ]).
 b_line_i([ 2,3 ],2,1,line,4,[ t('Pgmdesc',23,3,11) ]).
 b_line_i([ 2,6 ],2,1,line,7,[ t('De',3,6,5),t('Datinicial',23,6,9),t(até,3,6,20),t('Datfinal',23,6,24) ]).
 b_line_i([ 2,7 ],2,1,line,8,[ t('Seleção',3,7,5),t('Selecao',23,7,13) ]).
-b_line_i([ 2,12 ],2,1,line,13,[ t('Formato',3,12,3) ]).
+b_line_i([ 2,12 ],2,1,line,13,[ t('Formato',3,12,5) ]).
 b_line_i(3,2,1,cmd,14,[ t('',122,14,0) ]).
 b_line_i(4,1,3,cmd,16,[]).
 b_line_i(5,1,3,cmd,16,[ t('',107,16,0),t('Auxlocmidmidtipo',23,16,0),t(=,10,16,0),t('0',3,16,0) ]).
@@ -348,7 +348,7 @@ b_line_i(64,1,5,cmd,45,[ t('',107,45,0),t('Locmidmidtipdescricao',23,45,0),t(=,1
 b_line_i(65,1,5,cmd,45,[ t('',154,45,0) ]).
 b_line_i(66,1,5,cmd,45,[]).
 b_line_i(67,1,5,pb,45,[ t(a,3,45,8) ]).
-b_line_i([ 67,0 ],1,5,line,45,[ t('Locmidmidtipdescricao',23,0,7) ]).
+b_line_i([ 67,0 ],1,5,line,45,[ t('Locmidmidtipdescricao',23,0,5) ]).
 b_line_i([ 67,1 ],1,5,line,46,[ t(' ',3,1,0) ]).
 b_line_i(68,1,5,cmd,47,[]).
 b_line_i(69,1,5,cmd,47,[ t('',107,47,0),t('Totdevolucao',23,47,0),t(=,10,47,0),t([ t('Item',23,47,0),t('Midtipreltotal',3,47,0) ],29,47,0) ]).
@@ -401,7 +401,7 @@ lit_i(4,2,t(até,3),[ font('MS Sans Serif',8,[ bold ]),rect(143,91,161,103),outst
 lit_i(5,2,t('Datfinal',23),[ font('Courier New',9,[]),rect(169,91,238,105),outstyle(none),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Datfinal'),ctrltype(edit,5),ispwd(0) ]).
 lit_i(6,2,t('Seleção',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,117,85,129),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(7,2,t('Selecao',23),[ font('Courier New',9,[]),rect(91,117,160,131),outstyle(none),fill,align(right),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Selecao'),ctrltype(edit,7),ispwd(0) ]).
-lit_i(8,2,t('Formato',3),[ font('MS Sans Serif',8,[ bold ]),rect(26,182,71,194),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
+lit_i(8,2,t('Formato',3),[ font('MS Sans Serif',8,[ bold ]),rect(39,182,84,194),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(9,2,rect(9),[ rect(26,194,650,194),outstyle(none),fill,back(rgb(255,255,255)),fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor([]) ]).
 lit_i(10,2,t('Data:',3),[ font('MS Sans Serif',8,[ bold ]),rect(567,0,598,12),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(11,2,t('Hora:',3),[ font('MS Sans Serif',8,[ bold ]),rect(567,13,598,25),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
@@ -411,7 +411,7 @@ lit_i(14,2,t('Pgmdesc',23),[ font('Courier New',9,[]),rect(81,52,608,66),outstyl
 lit_i(15,2,t('Today',23),[ font('Courier New',9,[]),rect(611,0,666,14),outstyle(none),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Today'),ctrltype(edit,15),ispwd(0) ]).
 lit_i(16,2,t('Time',23),[ font('Courier New',9,[]),rect(611,13,666,27),outstyle(none),fill,align(left),noclip,back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Time'),ctrltype(edit,16),ispwd(0) ]).
 lit_i(1,2,window,[ title([]),rect(71,2,743,196),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(1),ctlname('P_cabecalho'),gxcolor([]),defgxcolor('BLK','WHT') ]).
-lit_i(18,67,t('Locmidmidtipdescricao',23),[ font('Courier New',9,[]),rect(52,12,157,26),outstyle(none),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Locmidmidtipdescricao'),ctrltype(edit,18),ispwd(0) ]).
+lit_i(18,67,t('Locmidmidtipdescricao',23),[ font('Courier New',9,[]),rect(39,12,144,26),outstyle(none),fill,align(left),back(rgb(255,255,255)),fore(rgb(0,0,0)),gxcolor('BLK','WHT+'),border(1),ctlname('&Locmidmidtipdescricao'),ctrltype(edit,18),ispwd(0) ]).
 lit_i(17,67,window,[ title([]),rect(71,200,743,238),outstyle(single),fill,graph,back(rgb(240,240,240)),fore(rgb(100,100,100)),border(1),ctlname('P_formato'),gxcolor([]),defgxcolor('BLK','WHT') ]).
 lit_i(20,71,t('Total',3),[ font('MS Sans Serif',8,[ bold ]),rect(539,8,568,20),outstyle(none),align(left),noclip,fore(rgb(0,0,0)),border(1),ctlname(''),gxcolor('BLK','WHT+') ]).
 lit_i(21,71,rect(21),[ rect(52,0,650,0),outstyle(none),fill,back(rgb(255,255,255)),fore(rgb(200,200,200)),border(1),ctlname(''),gxcolor([]) ]).

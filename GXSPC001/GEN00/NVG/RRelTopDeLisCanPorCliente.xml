@@ -1,0 +1,267 @@
+
+<ObjectSpec>
+<SpecVersion>9_0_6-009</SpecVersion>
+<Object>
+<ObjCls>2</ObjCls>
+<ObjId>28</ObjId>
+<ObjName>RelTopDeLisCanPorCliente</ObjName>
+<ObjDesc>Relatório de topo de lista sobre total de cancelamentos por cliente.</ObjDesc>
+<ObjPgmName>RRelTopDeLisCanPorCliente</ObjPgmName>
+<ObjClsName>Report</ObjClsName></Object>
+<Result>specfailed</Result>
+<Warnings>
+<Warning>
+<MsgCode>spc0038</MsgCode>
+<Token>There is no index for order </Token>
+<Attribute>
+<AttriId>92</AttriId>
+<AttriName>LocCliPesNome</AttriName>
+<Description>Nome do cliente locatário</Description></Attribute>
+<Token>; poor performance may be noticed</Token>
+<Token> in group starting at line </Token>
+<Token>9</Token>
+<Token></Token>
+<Token>.</Token></Warning></Warnings>
+<Errors>
+<Error>
+<MsgCode>spc0116</MsgCode>
+<Token>Group cannot be ordered by </Token>
+<Attribute>
+<AttriId>92</AttriId>
+<AttriName>LocCliPesNome</AttriName>
+<Description>Nome do cliente locatário</Description></Attribute>
+<Token></Token>
+<Token> in group starting at line </Token>
+<Token>9</Token>
+<Token></Token>
+<Token>.</Token></Error></Errors>
+<OutputDevices>
+<Device>Screen</Device>
+<Device>Printer</Device></OutputDevices>
+<Generator>
+<GenId>0</GenId>
+<GenName>(Default)</GenName></Generator>
+<FormClass>Graphic</FormClass>
+<Parameters>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Datinicial</VarId>
+<VarName>&amp;DatInicial</VarName></Variable></Parameter>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Datfinal</VarId>
+<VarName>&amp;DatFinal</VarName></Variable></Parameter>
+<Parameter>
+<IO>in</IO>
+<Variable>
+<VarId>Selecao</VarId>
+<VarName>&amp;Selecao</VarName></Variable></Parameter></Parameters>
+<Levels>
+<Level>
+<LevelNumber>3</LevelNumber>
+<Optimizations></Optimizations>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>21</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>92</AttriId>
+<AttriName>LocCliPesNome</AttriName>
+<Description>Nome do cliente locatário</Description></Attribute></Order>
+<Condition></Condition>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Token>FirstRecord</Token></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Token>NotEndOfTable</Token></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<Condition>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute>
+<Token>&gt;=</Token>
+<Variable>
+<VarId>Datinicial</VarId>
+<VarName>&amp;DatInicial</VarName></Variable>
+<Token>and</Token>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute>
+<Token>&lt;=</Token>
+<Variable>
+<VarId>Datfinal</VarId>
+<VarName>&amp;DatFinal</VarName></Variable>
+<Token>and</Token>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute>
+<Token>&lt;&gt;</Token>
+<Token>ctod(</Token>
+<Token>'0'</Token>
+<Token>)</Token></Condition></NonOptimizedWhere>
+<JoinLocation>0</JoinLocation>
+<NavigationTree>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute></Into>
+<Tables>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>92</AttriId>
+<AttriName>LocCliPesNome</AttriName>
+<Description>Nome do cliente locatário</Description></Attribute></Into>
+<JoinType>Outer</JoinType>
+<Tables></Tables></Table></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<Levels></Levels></Level>
+<Level>
+<LevelNumber>4</LevelNumber>
+<Optimizations></Optimizations>
+<LevelType>For Each</LevelType>
+<LevelBeginRow>63</LevelBeginRow>
+<BaseTable>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description></Table></BaseTable>
+<Order>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></Order>
+<Condition></Condition>
+<IndexName>ILOCACAO</IndexName>
+<LevelOptions></LevelOptions>
+<OptimizedWhere>
+<StartFrom>
+<Condition>
+<Token>FirstRecord</Token></Condition></StartFrom>
+<LoopWhile>
+<Condition>
+<Token>NotEndOfTable</Token></Condition></LoopWhile></OptimizedWhere>
+<NonOptimizedWhere>
+<Condition>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute>
+<Token>&gt;=</Token>
+<Variable>
+<VarId>Datinicial</VarId>
+<VarName>&amp;DatInicial</VarName></Variable>
+<Token>and</Token>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute>
+<Token>&lt;=</Token>
+<Variable>
+<VarId>Datfinal</VarId>
+<VarName>&amp;DatFinal</VarName></Variable>
+<Token>and</Token>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute>
+<Token>&lt;&gt;</Token>
+<Token>ctod(</Token>
+<Token>'0'</Token>
+<Token>)</Token></Condition>
+<Condition>
+<Attribute>
+<AttriId>92</AttriId>
+<AttriName>LocCliPesNome</AttriName>
+<Description>Nome do cliente locatário</Description></Attribute>
+<Token>=</Token>
+<Variable>
+<VarId>Locclipesnome</VarId>
+<VarName>&amp;LocCliPesNome</VarName></Variable></Condition></NonOptimizedWhere>
+<JoinLocation>0</JoinLocation>
+<NavigationTree>
+<Table>
+<TableId>12</TableId>
+<TableName>LOCACAO</TableName>
+<Description>Cadastro de locações.</Description>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute>
+<Attribute>
+<AttriId>90</AttriId>
+<AttriName>LocDatCancelamento</AttriName>
+<Description>Data de cancelamento</Description></Attribute>
+<Attribute>
+<AttriId>86</AttriId>
+<AttriName>LocCodigo</AttriName>
+<Description>Código da locação</Description></Attribute></Into>
+<Tables>
+<Table>
+<TableId>1</TableId>
+<TableName>PESSOA</TableName>
+<Description>Cadastro de pessoas.</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>91</AttriId>
+<AttriName>LocCliPesCodigo</AttriName>
+<Description>Código do cliente locatário</Description></Attribute></KeyAttributes>
+<Into>
+<Attribute>
+<AttriId>92</AttriId>
+<AttriName>LocCliPesNome</AttriName>
+<Description>Nome do cliente locatário</Description></Attribute></Into>
+<JoinType>Outer</JoinType>
+<Tables></Tables></Table></Tables></Table></NavigationTree>
+<TablesToUpdate></TablesToUpdate>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<Levels></Levels></Level></Levels></ObjectSpec>

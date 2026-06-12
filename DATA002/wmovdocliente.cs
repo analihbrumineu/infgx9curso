@@ -2,7 +2,7 @@
                File: MovDoCliente
         Description: Movimentos dos clientes e seus dependentes.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 11:31:34.66
+       Generated on: 6/12/2026 11:52:38.4
        Program type: Callable routine
           Main DBMS: sqlserver
 */

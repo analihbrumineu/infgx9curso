@@ -2,7 +2,7 @@
                File: VerCliDependente
         Description: Verificar cliente dependente.
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 11:31:25.33
+       Generated on: 6/12/2026 11:52:28.37
        Program type: Callable routine
           Main DBMS: sqlserver
 */

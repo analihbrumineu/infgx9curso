@@ -2,7 +2,7 @@
                File: AtzLocacao
         Description: Atualizar locação
              Author: GeneXus C# Generator version 9_0_7-910
-       Generated on: 6/11/2026 11:31:24.76
+       Generated on: 6/12/2026 11:52:27.80
        Program type: Callable routine
           Main DBMS: sqlserver
 */
